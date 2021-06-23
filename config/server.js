@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const maintenance = require('nodejs-server-maintenance');
-maintenance(app, true);
+maintenance(app);
 
 let port = process.env.PORT
 if (port == null || port == ""){ 

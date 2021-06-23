@@ -16,4 +16,8 @@ function setupRoutes(app){
     app.get('/blog1', (req, res) => {
         res.render('blogposts/blogpost1.ejs')
     })
+
+    app.get('/about', (req, res) => {
+        res.render('about.ejs')
+    })
 }
