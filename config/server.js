@@ -13,6 +13,10 @@ const setupRoutes = require('../app/routes.js')
 setupRoutes(app)
 
 app.use(morgan('dev')); // use morgan middleware
+
+app.use('/css', express.static('node_modules/bootstrap/dist/css')) //access our bootstrap files
+app.use('/js', express.static('node_modules/bootstrap/dist/js'))
+
 app.use(express.static('public')) //access files inside our public folder
 
 app.set('view engine', 'ejs') // set up ejs for templating

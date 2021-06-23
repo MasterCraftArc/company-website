@@ -8,11 +8,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Defense Unicorns</title>
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <h1>Hello unicorns!</h1>
-    <img src="/img/DU_logo.png" alt="defense unicorns logo">
-    <script type="text/javascript" src="js/main.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Defense Unicorns</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog">Blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="row hero">
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <img class="img-fluid" src="../img/logo.png" alt="defense unicorns logo">
+            </div>
+            
+            <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                <h1>Defense Unicorns</h1>
+                <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid ducimus inventore velit</h2>
+                <a class="btn btn-outline-dark mt-3" href="#battle">Train for battle</a>
+            </div>
+        </div>
+
+        <h2 class="text-center" id="battle">Let us Train you for Battle</h2>
+
+        <div class="container mt-2">
+
+
+              <div class="mb-3 row d-flex justify-content-between">
+                
+                <div id="card1" class="col-md-3 col-sm-6 item" onclick="redirect()">
+                    <div class="card item-card card-block">
+                        <h4 class="item-card-title text-right"><i class="material-icons"></i></h4>
+                        <img src="https://static.pexels.com/photos/7357/startup-photos.jpg" alt="Photo of sunset">
+                        <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
+                        <p class="card-text">This is a company that builds websites, web .</p> 
+                        </div>
+                </div>
+
+                <div id="card2" class="col-md-3 col-sm-6 item" onclick="redirect()">
+                  <div class="card item-card card-block">
+                  <h4 class="item-card-title text-right"><i class="material-icons"></i></h4>
+                    <img src="https://static.pexels.com/photos/262550/pexels-photo-262550.jpeg" alt="Photo of sunset">
+                    <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
+                    <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
+              </div>
+                </div>
+
+                <div id="card3" class="col-md-3 col-sm-6 item" onclick="redirect()">
+                  <div class="card item-card card-block">
+                  <h4 class="item-card-title text-right"><i class="material-icons"></i></h4>
+                <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
+                    <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
+                    <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
+              </div>
+                </div>    
+
+              </div>
+              
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 banner d-flex justify-content-center align-items-center">
+                    <h3>Before you embark</h3>
+                </div>
+
+                <div class="mt-4 mb-4 col-12 h-100 d-flex justify-content-around align-items-center">
+                    <a href="/blog" class="btn btn-outline-dark">People</a>
+                    <a href="/blog" class="btn btn-outline-dark">Culture</a>
+                    <a href="/blog" class="btn btn-outline-dark">Process</a>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="mt-3">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <h3>Copyright (c) Defense Unicorns</h3>
+            </div>
+
+        </footer>
+
+        <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
