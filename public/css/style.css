@@ -176,6 +176,14 @@
   color: black;
 }
 
+.header h2{
+ font-size: xx-large;
+}
+
+.header p{
+  padding-right: 20%;
+  font-size: x-large;
+}
 
 
   footer {
