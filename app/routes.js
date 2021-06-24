@@ -6,18 +6,24 @@ function setupRoutes(app){
     app.get('/', (req, res) => {
         res.render('index.ejs')
     })
-
-    //load blog page
+    
     app.get('/blog', (req, res) => {
         res.render('blog.ejs')
     })
 
-    //load blog page
     app.get('/blog1', (req, res) => {
         res.render('blogposts/blogpost1.ejs')
     })
 
     app.get('/about', (req, res) => {
         res.render('about.ejs')
+    })
+
+    app.get('/approach', (req, res) => {
+        res.render('approach.ejs')
+    })
+
+    app.get('/contact', (req, res) => {
+        res.render('contact.ejs')
     })
 }
