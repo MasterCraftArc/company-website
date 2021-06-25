@@ -16,16 +16,21 @@
 
   <%- include("partials/header.ejs") %>
 
-        <h2 class="title text-center pt-5" id="battle">Our engineering approach.</h2>
+      <h2 class="title text-center pt-5" id="battle">Our Approach.</h2>
+      <p class="text-center fs-3 mt-5 desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, magni. Odit, et suscipit nesciunt neque magnam ut animi officiis natus accusamus fugit blanditiis beatae, dignissimos error, delectus nemo qui! Amet?</p>
+      <div class="mt-5 w-100 d-flex justify-content-center align-items-center ">
+        <div class="approach-links d-flex justify-content-between align-items-center">
+  
+          <a class="btn btn-outline-dark engineering" href="#engineering">Engineering</a>
+  
+          <a class="btn btn-outline-dark values" href="#values">Values</a>
+  
+        </div>
 
-       <!-- <ul class="list-group">
-        <li class="list-group-item active" aria-current="true">Platform One</li>
-        <li class="list-group-item">Product two</li>
-        <li class="list-group-item">Products three</li>
-        <li class="list-group-item">Product four</li>
-        <li class="list-group-item">Product five</li>
-      </ul> -->
-      <div class="flexcontainer">
+      </div>
+
+      <h2 class="text-center title">Engineering</h2>
+      <div id="#engineering" class="flexcontainer">
           
         <div>
           <ul class="list">
@@ -36,13 +41,17 @@
             <li>Product</li>
           </ul>
         </div>
+
         <div>
             <img src="../img/videoicon.png" />
         </div>
+
       </div>
 
-        <h2 class="title text-center">Core Values</h2>
-      <div class="values p-4 d-flex justify-content-around align-items-center">
+        
+      <h2 class="title text-center">Core Values</h2>
+
+      <div id="values" class="values p-4 d-flex justify-content-around align-items-center">
           <div class="border d-flex justify-content-center align-items-center">
                 <h3>IMAGE</h3>
           </div>
@@ -53,14 +62,9 @@
       </div>
       <a href="/blog" class="btn btn-outline-dark btn-lg why">Why Now?</a>
 
-      <footer class="">
-      
-            <div class="col-12 d-flex justify-content-center align-items-center">
-                <h5>Copyright (c) Defense Unicorns</h5>
-            </div>
+      <%- include("partials/footer.ejs") %>
 
-        </footer>
-
-        <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

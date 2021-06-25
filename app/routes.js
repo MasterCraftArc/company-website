@@ -26,4 +26,8 @@ function setupRoutes(app){
     app.get('/contact', (req, res) => {
         res.render('contact.ejs')
     })
+
+    app.get('/products', (req, res) => {
+        res.render('products.ejs')
+    })
 }
