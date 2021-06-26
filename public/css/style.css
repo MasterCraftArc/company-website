@@ -36,6 +36,14 @@
   
   }
 
+  .socials a{
+    color: white;
+  }
+
+  .socials a:hover{
+    cursor: pointer;
+    color: blue;
+  }
   .approach-links{
     height: 50vh;
     width: 60vw;

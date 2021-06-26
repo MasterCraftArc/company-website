@@ -43,6 +43,7 @@ app.use(morgan('dev')); // use morgan middleware
 
 app.use('/css', express.static('node_modules/bootstrap/dist/css')) //access our bootstrap files
 app.use('/js', express.static('node_modules/bootstrap/dist/js'))
+app.use('/icons', express.static('node_modules/bootstrap-icons/font'))
 
 app.use(express.static('public')) //access files inside our public folder
 
