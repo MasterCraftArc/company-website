@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/leapfrogai/website#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^5.0.1",
     "bootstrap-icons": "^1.5.0",
     "ejs": "^3.1.6",
