@@ -58,21 +58,6 @@ Node JS should be implemented to build out the Defense Unicorns website back-end
 ##### Disadvantages
 - NPM packages may be of poor quality and compromise security
 - Unstable API - updates may reduce compatibility with old codebases
- 
----
-##### AWS Document DB
-
-DocumentDB is an optimal choice for storing our blog data securely to generate thought leadership on the Defense Unicorns website. It is a database service that is built for JSON data management at a scale, fully managed and integrated with AWS, and enterprise-ready with high durability. 
-
-MongoDb may have been an alternative but when we compare MongoDB, it is severely limited in server side javascript functions.
-
-##### Benefits of Document DB
-
-- storage scales automatically up to 64TiB without any impact to your application.
-- supports millions of requests per second with up to 15 low latency read replicas in minutes, without any application downtime, regardless of the size of your data.
-
-##### Disadvantages
-- Primarily constrained to a single region with only up to 15 replicas
 
 ---
 
