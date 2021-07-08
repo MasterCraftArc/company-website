@@ -1,4 +1,5 @@
 import * as React from "react"
+import Application from "../components/duHelmet"
 
 // styles
 const pageStyles = {
@@ -21,6 +22,7 @@ const headingAccentStyles = {
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
+      <Application> </Application>
       <title>Home Page</title>
       <h1 style={headingStyles}>
         <span style={headingAccentStyles}>— Hello world</span>

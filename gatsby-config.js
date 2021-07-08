@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Defense Unicorns",
   },
-  plugins: [],
+  plugins: [`gatsby-plugin-react-helmet`]
 };
