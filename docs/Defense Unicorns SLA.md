@@ -32,7 +32,7 @@ Management of the Defense Unicorns Company Website
 
 ### Table of Contents
 
-1.	[Agreement Overview](#Agreement%20Overview)
+1.	[Agreement Overview](#Agreement-Overview)
 2.	Goals & Objectives
 3.	Stakeholders
 4.	Periodic Review	
@@ -46,7 +46,7 @@ Management of the Defense Unicorns Company Website
     * 6.2	Responsibility for Action on Notifications
     * 6.3.	Service Requests	
     * 6.4	Routine Maintenance Scheduling
-    * [6.5	Metrics](#6.5+Metrics)
+    * [6.5	Metrics](#6.5-Metrics)
 
 #### Agreement Overview
 
