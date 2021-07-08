@@ -32,11 +32,11 @@ Management of the Defense Unicorns Company Website
 
 ### Table of Contents
 
-1.	[1. Agreement Overview](#1-Agreement-Overview)
-2.	[2. Goals & Objectives](#2-Goals--Objectives)
-3.	[3. Stakeholders](#3-Stakeholders)
-4.	[4. Periodic Review](#4-Periodic-Review)
-5.	[5. Service Agreement](#5-Service-Agreement)
+1.	[Agreement Overview](#1-Agreement-Overview)
+2.	[Goals & Objectives](#2-Goals--Objectives)
+3.	[Stakeholders](#3-Stakeholders)
+4.	[Periodic Review](#4-Periodic-Review)
+5.	[Service Agreement](#5-Service-Agreement)
     * [5.1.	Service Scope](#51-Service-Scope)
     * [5.2.	Customer Requirements](#52-Customer-Requirements)
     * [5.3.	Service Provider Requirements](#53-Service-Provider-Requirements)
@@ -63,7 +63,7 @@ The purpose of this Agreement is to ensure that the proper elements and commitme
 The goal of this Agreement is to obtain mutual agreement for web application support services between the Service Provider(s) and Customer(s).
 
 
-### 3. The objectives of this Agreement are to:
+The objectives of this Agreement are to:
 
 * Provide a clear outline of service ownership, accountability, roles and/or responsibilities.
 
@@ -72,7 +72,7 @@ The goal of this Agreement is to obtain mutual agreement for web application sup
 * Match perceptions of expected service provision with actual service support & delivery.
 
 
-### 4. Stakeholders
+### 3. Stakeholders
 
 The following Service Provider(s) and Customer(s) will be used as the basis of the Agreement and represent the primary stakeholders associated with this SLA:
 
@@ -81,7 +81,8 @@ The following Service Provider(s) and Customer(s) will be used as the basis of t
 
 ###### Customer(s): 
 >Internal business development/sales/thought leadership personnel; external users  
-Periodic Review
+
+### 4. Periodic Review
 
 This Agreement is valid from the Effective Date outlined herein and is valid until further notice. This Agreement should be reviewed at a minimum once per fiscal year; however, in lieu of a review during any period specified, the current Agreement will remain in effect. 
 
