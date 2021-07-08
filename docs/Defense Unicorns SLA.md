@@ -32,23 +32,23 @@ Management of the Defense Unicorns Company Website
 
 ### Table of Contents
 
-1.	[Agreement Overview](#Agreement-Overview)
-2.	[Goals & Objectives](#Goals-&-Objectives)
-3.	[Stakeholders](#Stakeholders)
-4.	[Periodic Review](#Periodic-Review)
-5.	[Service Agreement](#Service-Agreement)
+1.	[1. Agreement Overview](#1-Agreement-Overview)
+2.	[2. Goals & Objectives](#2-Goals--Objectives)
+3.	[3. Stakeholders](#3-Stakeholders)
+4.	[4. Periodic Review](#4-Periodic-Review)
+5.	[5. Service Agreement](#5-Service-Agreement)
     * [5.1.	Service Scope](#51-Service-Scope)
     * [5.2.	Customer Requirements](#52-Customer-Requirements)
     * [5.3.	Service Provider Requirements](#53-Service-Provider-Requirements)
     * [5.4.	Service Assumptions](#54-Service-Assumptions)
-6.	[Service Management](#Service-Management)
+6.	[Service Management](#6-Service-Management)
     * [6.1.	Service Availability](#61-Service-Availability)
     * [6.2.	Responsibility for Action on Notifications](#62-Responsibility-for-Action-on-Notifications)
     * [6.3.	Service Requests](#63--Service-Requests)
     * [6.4.	Routine Maintenance Scheduling](#64-Routine-Maintenance/Update-Scheduling)
-    * [6.5.	Metrics & Reporting](#65-Metrics-&-Reporting)
+    * [6.5.	Metrics & Reporting](#65-Metrics--Reporting)
 
-#### Agreement Overview
+### 1. Agreement Overview
 
 This Agreement represents a Service Level Agreement (“SLA” or “Agreement”) between the Defense Unicorns Website Product Team and the broader Defense Unicorns business development and operations teams for services required to support and sustain the Defense Unicorns company website.  
 
@@ -56,14 +56,14 @@ This Agreement remains valid until superseded by a revised agreement mutually en
 
 This Agreement outlines the parameters of all services covered as they are mutually understood by the primary stakeholders. The processes and parameters outlined herein are effective upon initial deployment of a minimum viable/launch product for the website.
 
-#### Goals & Objectives
+### 2. Goals & Objectives
 
 The purpose of this Agreement is to ensure that the proper elements and commitments are in place to provide consistent web application support and delivery to the customers outlined under Section 3, Stakeholders, below for the Defense Unicorns website. 
 
 The goal of this Agreement is to obtain mutual agreement for web application support services between the Service Provider(s) and Customer(s).
 
 
-#### The objectives of this Agreement are to:
+### 3. The objectives of this Agreement are to:
 
 * Provide a clear outline of service ownership, accountability, roles and/or responsibilities.
 
@@ -72,7 +72,7 @@ The goal of this Agreement is to obtain mutual agreement for web application sup
 * Match perceptions of expected service provision with actual service support & delivery.
 
 
-#### Stakeholders
+### 4. Stakeholders
 
 The following Service Provider(s) and Customer(s) will be used as the basis of the Agreement and represent the primary stakeholders associated with this SLA:
 
@@ -112,7 +112,7 @@ The Business Relationship Manager (“Document Owner”) is responsible for faci
 
 
 
-### Service Agreement
+### 5. Service Agreement
 
 The following detailed service parameters are the responsibility of the Service Provider in the ongoing support of this Agreement. 
 
