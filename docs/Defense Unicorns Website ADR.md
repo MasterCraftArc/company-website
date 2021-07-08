@@ -42,22 +42,6 @@ Gatsby Provides development teams an open source frontend framework for creati
 
 ##### Disadvantages
 - May take longer to generate larger sites
----
-#### BACK-END
-
-##### Node JS
-
-Node JS should be implemented to build out the Defense Unicorns website back-end in order to take advantage of its large library of modules and event loop driven behavior. Node JS is an Asynchronous Javascript runtime that comes with a built in package manager, NPM or Node Package Manager. This allows users to have access to an extensive set of tools that they can utilize when creating their web applications.
-
-##### Benefits of Node JS
-
-- High performance due to single threaded and event-driven nature linked with Chrome’s V8 engine
-- Various dev tools available as modules
-- Free and open source
-
-##### Disadvantages
-- NPM packages may be of poor quality and compromise security
-- Unstable API - updates may reduce compatibility with old codebases
 
 ---
 
