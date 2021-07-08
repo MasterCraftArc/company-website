@@ -45,7 +45,7 @@ Management of the Defense Unicorns Company Website
     * [6.1.	Service Availability](#61-Service-Availability)
     * [6.2.	Responsibility for Action on Notifications](#62-Responsibility-for-Action-on-Notifications)
     * [6.3.	Service Requests](#63--Service-Requests)
-    * [6.4.	Routine Maintenance Scheduling](#64-Routine-Maintenance/Update-Scheduling)
+    * [6.4.	Routine Maintenance Scheduling](#64-Routine-MaintenanceUpdate-Scheduling)
     * [6.5.	Metrics & Reporting](#65-Metrics--Reporting)
 
 ### 1. Agreement Overview
