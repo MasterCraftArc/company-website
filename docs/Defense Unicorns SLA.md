@@ -33,20 +33,20 @@ Management of the Defense Unicorns Company Website
 ### Table of Contents
 
 1.	[Agreement Overview](#Agreement-Overview)
-2.	Goals & Objectives
-3.	Stakeholders
-4.	Periodic Review	
-5.	Service Agreement	
-    * 5.1.	Service Scope	
-    * 5.2.	Customer Requirements	
-    * 5.3.	Service Provider Requirements	
-    * 5.4.	Service Assumptions	
-6.	Service Management	
-    * 6.1.	Service Availability	
-    * 6.2	Responsibility for Action on Notifications
-    * 6.3.	Service Requests	
-    * 6.4	Routine Maintenance Scheduling
-    * [6.5	Metrics](#6.5-Metrics)
+2.	[Goals & Objectives](#Goals-&-Objectives)
+3.	[Stakeholders](#Stakeholders)
+4.	[Periodic Review](#Periodic-Review)
+5.	[Service Agreement](#Service-Agreement)
+    * [5.1.	Service Scope](#51--Service-Scope)
+    * [5.2.	Customer Requirements](#52--Customer-Requirements)
+    * [5.3.	Service Provider Requirements](#53--Service-Provider-Requirements)
+    * [5.4.	Service Assumptions](#54--Service-Assumptions)
+6.	[Service Management](#Service-Management)
+    * [6.1.	Service Availability](#61--Service-Availability)
+    * [6.2	Responsibility for Action on Notifications](#62-Responsibility-for-Action-on-Notifications)
+    * [6.3.	Service Requests](#63--Service-Requests)
+    * [6.4.	Routine Maintenance Scheduling](#6.4--Routine-Maintenance-Scheduling)
+    * [6.5.	Metrics](#65--Metrics)
 
 #### Agreement Overview
 
@@ -181,25 +181,25 @@ When notifications are received during office hours, the notification flow shoul
 * During office hours M-F Wade Desir and Eden Gebrezgi will action requests received. 
 
 When notifications are received outside of office hours, requests should be routed as follows:
-The following team members should be notified via the company collaboration tool* (e.g., Slack):
-Wade Desir
-Eden Gebrezgi
-Courtney Barno
+* The following team members should be notified via the company collaboration tool* (e.g., Slack):
+    * Wade Desir
+    * Eden Gebrezgi
+    * Courtney Barno
 
-**For maximum coverage and redundancy, initial notification on requests received outside of normal operating hours should be sent via the #website company channel in Slack. This ensures the broader company engineering team is notified.*
+*For maximum coverage and redundancy, initial notification on requests received outside of normal operating hours should be sent via the #website company channel in Slack. This ensures the broader company engineering team is notified.*
 
 [For Medium and High Priority requests] received outside of office hours, a second, targeted notification should be made to all of the following individuals via text/call:
 
-**Wade Desir (857-207-8798)**
++ **Wade Desir (857-207-8798)**
 
-**Eden Gebrezgi (781-521-6707)**
+* **Eden Gebrezgi (781-521-6707)**
 
-**Courtney Barno (203-583-2097)**
+* **Courtney Barno (203-583-2097)**
 
 [*For Medium and High Priority requests*] 
 received outside of office hours the request will be actioned by the next engineer available - Wade or Eden. In the case of extenuating circumstances, or if neither engineer is available within the required timeframe (for required response timeframes, see section 6.3, below), additional engineering support will be contacted by Courtney. 
 
-Requests received on Sundays will be actioned by Eden Gebrezgi. In the event Eden is unavailable or unreachable, additional engineering support will be contacted by Courtney. 
+* Requests received on Sundays will be actioned by Eden Gebrezgi. In the event Eden is unavailable or unreachable, additional engineering support will be contacted by Courtney. 
 
 
 
@@ -246,12 +246,12 @@ Off- hours support will be provided in-line with the above timescales dependent 
  * -
 
 
-### **6.4. Routine Maintenance/Update Scheduling**
+#### 6.4. Routine Maintenance/Update Scheduling
 The Service Provider commits that routine maintenance of the Defense Unicorn website, to include low priority requests/issues, shall be conducted at times that minimize disruption to the user or user traffic. 
 
 The Service Provider shall give the customer sufficient warning of any scheduled downtime as a result of routine maintenance. 
 
-### **6.5 Metrics & Reporting**
+#### 6.5. Metrics & Reporting
 
 Metric | Target | Reporting
 --- | --- | ---
