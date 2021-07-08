@@ -88,16 +88,17 @@ This Agreement is valid from the Effective Date outlined herein and is valid unt
 
 The Business Relationship Manager (“Document Owner”) is responsible for facilitating regular reviews of this document. Contents of this document may be amended as required, provided mutual agreement is obtained from the primary stakeholders and communicated to all affected parties. The Document Owner will incorporate all subsequent revisions and obtain mutual agreements / approvals as required. 
 
-###### Business Relationship Manager: 
+##### Business Relationship Manager:
+
 > Courtney Barno
 
-###### Review Period: 
+##### Review Period: 
 > Bi-Yearly (6 months)
 
-###### Previous Review Date: 
+##### Previous Review Date: 
 > 08/01/2021
 
-###### Next Review Date: 
+##### Next Review Date: 
 > 02/01/2022
 
 
