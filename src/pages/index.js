@@ -1,5 +1,6 @@
 import * as React from "react"
-import Application from "../components/duHelmet"
+import Helmet from "react-helmet"
+import siteHead from "../components/duHelmet"
 
 // styles
 const pageStyles = {
@@ -19,10 +20,13 @@ const headingAccentStyles = {
 
 
 // markup
-const IndexPage = () => {
+const Train = () => {
   return (
     <main style={pageStyles}>
-      <Application> </Application>
+      <siteHead></siteHead>
+      <Helmet>
+
+      </Helmet>
       <title>Home Page</title>
       <h1 style={headingStyles}>
         <span style={headingAccentStyles}>— Hello world</span>
@@ -31,4 +35,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Train
