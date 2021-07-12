@@ -92,14 +92,24 @@ The Business Relationship Manager (“Document Owner”) is responsible for faci
 
 > Courtney Barno
 
+<<<<<<< HEAD
 ##### Review Period: 
 > Bi-Yearly (6 months)
+=======
+###### Review Period: 
+> Quarterly (3 months)
+>>>>>>> 5bcdfdf547d80aad65ecfb74892e510aa87de6ff
 
 ##### Previous Review Date: 
 > 08/01/2021
 
+<<<<<<< HEAD
 ##### Next Review Date: 
 > 02/01/2022
+=======
+###### Next Review Date: 
+> 11/01/2021
+>>>>>>> 5bcdfdf547d80aad65ecfb74892e510aa87de6ff
 
 
 
