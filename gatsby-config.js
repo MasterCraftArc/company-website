@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.defenseunicorns.com",
     title: "Defense Unicorns",
   },
   plugins: [`gatsby-plugin-react-helmet`]

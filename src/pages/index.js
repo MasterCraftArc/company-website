@@ -1,6 +1,6 @@
 import * as React from "react"
-import Helmet from "react-helmet"
-import siteHead from "../components/duHelmet"
+import SiteHelmet from "../components/duHelmet"
+import Header from "../components/header"
 
 // styles
 const pageStyles = {
@@ -18,16 +18,12 @@ const headingAccentStyles = {
 }
 
 
-
 // markup
 const Train = () => {
   return (
     <main style={pageStyles}>
-      <siteHead></siteHead>
-      <Helmet>
-
-      </Helmet>
-      <title>Home Page</title>
+      <SiteHelmet title="Home" />
+      <Header></Header>
       <h1 style={headingStyles}>
         <span style={headingAccentStyles}>— Hello world</span>
       </h1>

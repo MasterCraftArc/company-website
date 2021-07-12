@@ -1,15 +1,19 @@
 import * as React from "react";
+import {Link} from "gatsby"
 
-function header(props) {
+function Header(props) {
     return (
-        <div className="Application">
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>{props.title}</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
-        </div>
+        <header className="mainHeader navbar navbar-expand{-sm|-md|-lg|-xl|-xxl}">
+            <div className="container-fluid">
+            <Link to="/" className="navbar-brand"><img className="img-fluid" src="../images/logo.png"></img></Link>
+            <div>
+            <Link to="/"><button className="btn btn-primary">Train</button></Link>
+            <Link to="/equip"><button className="btn btn-primary">Equip</button></Link>
+            <Link to="/contact"><button className="btn btn-primary">Contact</button></Link>
+            </div>
+            </div>
+        </header>
     );
 };
 
-export default Application;
+export default Header;
