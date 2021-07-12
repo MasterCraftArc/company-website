@@ -5,14 +5,16 @@ import Header from "../components/header"
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  // background: "#121C2A"
 }
+
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
   maxWidth: 320,
 }
+
 const headingAccentStyles = {
   color: "#663399",
 }
