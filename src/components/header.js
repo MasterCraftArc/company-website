@@ -3,7 +3,7 @@ import {Link} from "gatsby"
 import logo from "../images/logo.png"
 
 const logoStyle = {
-    maxWidth: "80%"
+    maxWidth: "15vh"
 }
 
 const navStyle = {
@@ -16,34 +16,7 @@ const navLinkStyle = {
 
 function Header(props) {
     return (
-        // <nav className="mainHeader navbar navbar-expand{-sm|-md|-lg|-xl|-xxl}" style={navStyle}>
-        //     <div className="container-fluid">
-        //         <div className="col-2">
-        //             <Link to="/" className="">
-        //                 <img className="img-fluid" src={logo} alt="Defense Unicorns Logo" style={logoStyle}/>
-        //             </Link>
-        //         </div>
-        //         <div className="col-10 border" style={navLinkStyle}>
-        //             <div className="collapse navbar-collapse">
-        //                 <ul className="navbar-nav">
-        //                     <li className="nav-item">
-        //                     <Link to="/"><button className="btn">Train</button></Link>
-
-        //                     </li>
-        //                     <li>
-        //                     <Link to="/equip"><button className="btn">Equip</button></Link>
-                                
-        //                         </li>
-        //                     <li>
-        //                         <Link to="/contact"><button className="btn ">Contact</button></Link>
-        //                     </li>
-        //                 </ul>
-
-        //             </div>
-        //         </div>
-        //     </div>
-        // </nav>
-        <nav className="navbar navbar-expand-lg px-5">
+        <nav className="navbar navbar-expand-lg px-5 mx-5">
             <div className="container-fluid">
                 <div className="col-2">
                     <Link to="/" className="">
@@ -59,20 +32,19 @@ function Header(props) {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul className="navbar-nav text-end">
                     <li className="nav-item">
-                        <Link to="/"><button className="btn">Train</button></Link>
+                        <Link to="/"><button className="btn navLink">TRAIN</button></Link>
                     </li>
                     <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Equip
+                    <a className="nav-link dropdown-toggle navLink" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        EQUIP
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">Action</a></li>
-                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                        <li><Link to="/info"><button className="btn .navLink-drop">info</button></Link></li>
+                        <li><Link to="/equip"><button className="btn .navLink-drop">equip</button></Link></li>
                     </ul>
                     </li>
                     <li className="nav-item">
-                        <Link to="/contact"><button className="btn ">Contact</button></Link>
+                        <Link to="/contact"><button className="btn navLink">CONTACT</button></Link>
                     </li>
                 </ul>
                 </div>

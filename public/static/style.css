@@ -1,0 +1,101 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html{
+    font-size: 12px;
+}
+
+body {
+    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    color: white;
+}
+
+
+/******************************************
+/* GLOBAL LAYOUT
+/*******************************************/
+
+.navLink{
+    color: white;
+    font-size: 0.7vw;
+}
+
+.navLink-drop{
+    color: black;
+}
+
+.navLink:hover,
+.navLink:active{
+    color: salmon;
+}
+
+/* Home */
+.home{
+    /* background: url(../../src/images/bgBlankHD.png) no-repeat fixed;  */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.background{
+    z-index: -5;
+}
+
+/* NAV BAR */
+
+/* HERO */
+.hero{
+    height:90vh;
+    width: 100vw;
+    background: transparent;
+}
+
+.hero h1{
+    color: white;
+    font-size: 50px;
+    padding-left: 5vw;
+}
+
+/* Train for Battle */
+.trainForBattle{
+    margin-top: 20px;
+    height: 90vh;
+    width: 100vw;
+    background-color: transparent;
+}
+/* WHO WE ARE */
+
+/* FOOTER */
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

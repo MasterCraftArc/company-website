@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import Application from '../components/duHelmet';
+import SiteHelmet from '../components/SiteHelmet';
 
 const blog = () => {
   return (
     <div>
-      <Application title="Blog" /> 
+      <SiteHelmet title="Blog" /> 
       <h1>This is the blog page</h1>
       <button className="btn btn-primary">Home</button>
       

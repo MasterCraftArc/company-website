@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import SiteHelmet from '../components/duHelmet';
+import SiteHelmet from '../components/SiteHelmet';
 import Footer from '../components/footer';
 
 const equip = () => {
