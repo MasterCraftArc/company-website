@@ -11,7 +11,12 @@ function Footer() {
         <div className="container">
           <span className="text-muted">Place sticky footer content here.</span>
         </div>
-        <div></div>
+        <div className= "border">
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </footer>
 
     )

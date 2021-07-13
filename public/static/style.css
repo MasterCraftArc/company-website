@@ -3,6 +3,20 @@
     box-sizing: border-box;
 }
 
+.flexThisBox {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.main {
+    flex: 1 0 auto;
+
+}
+
+
+
 /* Clear fix hack */
 .clearfix:after {
     content: ".";
@@ -99,3 +113,7 @@ body {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+
+
+

@@ -1,10 +1,12 @@
 import * as React from "react"
 import SiteHelmet from "../components/SiteHelmet"
 import Header from "../components/header"
+import {Link} from "gatsby"
 import background from "../images/bgBlankHD.png"
 import heroes from "../images/card1.png"
 import aquisitions from "../images/card2.png"
 import devsecops from "../images/card3.png"
+import cardPin from "../images/cardPin.png"
 
 // styles
 const pageStyles = {
@@ -36,9 +38,31 @@ const battleText = {
 }
 
 const cardStyle = {
-  width: "300px",
-  height: "450px",
-  borderRadius: "25px"
+  width: "250px",
+  height: "400px",
+  borderRadius: "25px",
+  backgroundColor: "rgba(65, 255, 255, 0.6)",
+  boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
+}
+
+const pinStyle = {
+  width: "45%"
+}
+
+const cardText = {
+  color: 'white',
+  fontSize: '15px',
+}
+
+const cardTitle = {
+  color: 'white',
+  fontSize: "23px"
+}
+
+
+const cardImg = {
+  maxWidth: '95%',
+  paddingLeft: '20%',
 }
 
 // markup
@@ -56,18 +80,90 @@ const Train = () => {
       </section>
 
       <section className="trainForBattle border">
-        <h2 className="text-center" style={battleText}>Let us train you for battle</h2>
-        <div className="container">
+        <h2 className="text-center" style={battleText}>Let us Train you for Battle</h2>
 
-          <div className="card" style={cardStyle}>
-            <div>
-              <img src={heroes} className="card-img-top" alt="..."/>
+        <div className="border container h-75 w-50 mt-5 align-self-start">
+          <div className="row h-100 d-flex justify-content-around align-items-center">
+
+            <div className="card col-4 align-self-end" style={cardStyle}>
+              <div className="d-flex justify-content-center align-items-center w-100">
+                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+              </div>
+              <div className="card-body text-center">
+                <span className="card-text" style={cardText}>Case Studies</span>
+                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
+                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+              </div>
             </div>
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" className="btn btn-primary">Go somewhere</a>
+
+            <div className="card col-4" style={cardStyle}>
+              <div className="d-flex justify-content-center align-items-center w-100">
+                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+              </div>
+              <div className="card-body text-center">
+                <span className="card-text" style={cardText}>Explore Learning</span>
+                <p style={cardText}>Part 1:</p>
+                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Aquisitions</h5>
+                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+              </div>
             </div>
+
+            <div className="card col-4 align-self-start" style={cardStyle}>
+              <div className="d-flex justify-content-center align-items-center w-100">
+                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+              </div>
+              <div className="card-body text-center">
+                <span className="card-text" style={cardText}>Explore Learning</span>
+                <p style={cardText}>Part 1:</p>
+                <h5 className="card-title mt-3 mb-5" style={cardTitle}>DevSecOps</h5>
+                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section className="trainForBattle border">
+        <h2 className="text-center" style={battleText}>Our latest trained.</h2>
+
+        <div className="border container h-75 w-50 mt-5 align-self-start">
+          <div className="row h-100 d-flex justify-content-around align-items-center">
+
+            <div className="card col-4" style={cardStyle}>
+              <div className="d-flex justify-content-center align-items-center w-100">
+                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+              </div>
+              <div className="card-body text-center">
+                <span className="card-text" style={cardText}>Case Studies</span>
+                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
+                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+              </div>
+            </div>
+
+            <div className="card col-4" style={cardStyle}>
+              <div className="d-flex justify-content-center align-items-center w-100">
+                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+              </div>
+              <div className="card-body text-center">
+                <span className="card-text" style={cardText}>Case Studies</span>
+                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
+                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+              </div>
+            </div>
+
+            <div className="card col-4" style={cardStyle}>
+              <div className="d-flex justify-content-center align-items-center w-100">
+                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+              </div>
+              <div className="card-body text-center">
+                <span className="card-text" style={cardText}>Case Studies</span>
+                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
+                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+              </div>
+            </div>
+
           </div>
 
         </div>
