@@ -3,7 +3,7 @@ import {Link} from "gatsby"
 import logo from "../images/logo.png"
 
 const logoStyle = {
-    width: "80%"
+    maxWidth: "80%"
 }
 
 const navStyle = {
@@ -43,8 +43,8 @@ function Header(props) {
         //         </div>
         //     </div>
         // </nav>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-            <div class="container-fluid">
+        <nav className="navbar navbar-expand-lg px-5">
+            <div className="container-fluid">
                 <div className="col-2">
                     <Link to="/" className="">
                          <img className="img-fluid" src={logo} alt="Defense Unicorns Logo" style={logoStyle}/>
@@ -52,32 +52,30 @@ function Header(props) {
                 </div>
 
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
                 </button>
-                {/* <div className="d-flex justify-content-end"> */}
 
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav justify-content-end">
-                    <li class="nav-item">
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul className="navbar-nav text-end">
+                    <li className="nav-item">
                         <Link to="/"><button className="btn">Train</button></Link>
                     </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Equip
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a className="dropdown-item" href="#">Action</a></li>
+                        <li><a className="dropdown-item" href="#">Another action</a></li>
+                        <li><a className="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/contact"><button className="btn ">Contact</button></Link>
                     </li>
                 </ul>
                 </div>
-                {/* </div> */}
             </div>
         </nav>
     );
