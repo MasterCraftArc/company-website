@@ -7,6 +7,7 @@ import heroes from "../images/card1.png"
 import aquisitions from "../images/card2.png"
 import devsecops from "../images/card3.png"
 import cardPin from "../images/cardPin.png"
+import whoWeAre from "../images/whoWeare.png"
 
 // styles
 const pageStyles = {
@@ -61,8 +62,36 @@ const cardTitle = {
 
 
 const cardImg = {
+  maxWidth: '90%',
+  paddingTop: '2%'
+}
+
+const magnifierStyle = {
   maxWidth: '95%',
   paddingLeft: '20%',
+}
+// 14498f button blue
+
+const WhoWeAreStyle = {
+  maxWidth: '80%',
+}
+
+const altTitle = {
+  color: "#589af0",
+  fontSize: "50px"
+}
+
+const whoWeAreText = {
+  color: 'white',
+  fontSize: '18px',
+  padding: '25px 150px 50px 0',
+}
+
+const buttonStyle = {
+  borderRadius: '0',
+  height: '50px',
+  width: '150px',
+  fontSize: '15px'
 }
 
 // markup
@@ -79,49 +108,67 @@ const Train = () => {
       <img className="img-fluid background" src={background} alt="background image" style={bgStyle}/>
       </section>
 
-      <section className="trainForBattle border">
+      <section className="trainForBattle">
         <h2 className="text-center" style={battleText}>Let us Train you for Battle</h2>
 
-        <div className="border container h-75 w-50 mt-5 align-self-start">
+        <div className="container h-75 w-50 mt-5 align-self-start">
           <div className="row h-100 d-flex justify-content-around align-items-center">
 
             <div className="card col-4 align-self-end" style={cardStyle}>
               <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+                <img src={heroes} style={magnifierStyle} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
               </div>
               <div className="card-body text-center">
                 <span className="card-text" style={cardText}>Case Studies</span>
                 <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
               </div>
             </div>
 
             <div className="card col-4" style={cardStyle}>
               <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+                <img src={aquisitions} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
               </div>
               <div className="card-body text-center">
                 <span className="card-text" style={cardText}>Explore Learning</span>
                 <p style={cardText}>Part 1:</p>
                 <h5 className="card-title mt-3 mb-5" style={cardTitle}>Aquisitions</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
               </div>
             </div>
 
             <div className="card col-4 align-self-start" style={cardStyle}>
               <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+                <img src={devsecops} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
               </div>
               <div className="card-body text-center">
                 <span className="card-text" style={cardText}>Explore Learning</span>
                 <p style={cardText}>Part 1:</p>
                 <h5 className="card-title mt-3 mb-5" style={cardTitle}>DevSecOps</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
               </div>
             </div>
 
           </div>
 
+        </div>
+      </section>
+
+
+      <section className="whoWeAre container">
+        <div className="row px-5">
+          <div className="col-6">
+            <h2 style={altTitle}>Who we are</h2>
+            <p className="" style={whoWeAreText}>We are defense innovators, software engineers, and veterans that believe the future wil belong to mission-driven organizations that can securely and continuously deploy new software solutions.</p>
+            
+            <div className="border">
+              <Link to="/equip"><button className="btn btn-primary me-5" style={buttonStyle}>LEARN MORE</button></Link>
+              <Link to="/contact"><button className="btn btn-primary ms-5" style={buttonStyle}>CONTACT US</button></Link>
+            </div>
+          </div>
+          <div className="col-6">
+            <img src={whoWeAre} style={WhoWeAreStyle} className="img-fluid" alt="unicorn under magnifying glass"/>
+          </div>
         </div>
       </section>
 
@@ -138,7 +185,7 @@ const Train = () => {
               <div className="card-body text-center">
                 <span className="card-text" style={cardText}>Case Studies</span>
                 <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
               </div>
             </div>
 
@@ -149,7 +196,7 @@ const Train = () => {
               <div className="card-body text-center">
                 <span className="card-text" style={cardText}>Case Studies</span>
                 <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
               </div>
             </div>
 
@@ -160,7 +207,7 @@ const Train = () => {
               <div className="card-body text-center">
                 <span className="card-text" style={cardText}>Case Studies</span>
                 <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle}/></Link>
+                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
               </div>
             </div>
 
