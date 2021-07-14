@@ -7,7 +7,7 @@ import heroes from "../images/card1.png"
 import aquisitions from "../images/card2.png"
 import devsecops from "../images/card3.png"
 import cardPin from "../images/cardPin.png"
-import whoWeAre from "../images/whoWeare.png"
+import whoWeAre from "../images/whoWeAre.png"
 import caseStudies from "../images/caseStudies.png"
 import keyPoints from "../images/keyPoints.png"
 
