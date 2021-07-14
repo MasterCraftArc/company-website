@@ -8,6 +8,8 @@ import aquisitions from "../images/card2.png"
 import devsecops from "../images/card3.png"
 import cardPin from "../images/cardPin.png"
 import whoWeAre from "../images/whoWeare.png"
+import caseStudies from "../images/caseStudies.png"
+import keyPoints from "../images/keyPoints.png"
 
 // styles
 const pageStyles = {
@@ -35,12 +37,12 @@ const heroTextBold = {
 
 const battleText = {
   color: "#84b9ff",
-  fontSize: "40px"
+  fontSize: "45px"
 }
 
 const cardStyle = {
-  width: "250px",
-  height: "400px",
+  width: "245px",
+  height: "380px",
   borderRadius: "25px",
   backgroundColor: "rgba(65, 255, 255, 0.6)",
   boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
@@ -60,7 +62,6 @@ const cardTitle = {
   fontSize: "23px"
 }
 
-
 const cardImg = {
   maxWidth: '90%',
   paddingTop: '2%'
@@ -70,7 +71,6 @@ const magnifierStyle = {
   maxWidth: '95%',
   paddingLeft: '20%',
 }
-// 14498f button blue
 
 const WhoWeAreStyle = {
   maxWidth: '80%',
@@ -87,12 +87,43 @@ const whoWeAreText = {
   padding: '25px 150px 50px 0',
 }
 
+// 14498f button blue
 const buttonStyle = {
   borderRadius: '0',
-  height: '50px',
+  height: '45px',
   width: '150px',
-  fontSize: '15px'
+  fontSize: '15px',
 }
+
+const caseStudyText = {
+  color: 'white',
+  fontSize: '18px',
+  padding: '25px 150px 0px 0',
+}
+
+const trainedCardStyle = {
+  width: "245px",
+  height: "380px",
+  borderRadius: "25px",
+  backgroundColor: "rgba(65, 255, 255, 0.6)",
+  boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
+}
+
+const trainedCardText = {
+  color: 'white',
+  fontSize: '15px',
+}
+
+const trainedCardTitle = {
+  color: 'white',
+  fontSize: "23px"
+}
+
+const trainedCardImg = {
+  maxWidth: '90%',
+  paddingTop: '2%'
+}
+
 
 // markup
 const Train = () => {
@@ -161,9 +192,9 @@ const Train = () => {
             <h2 style={altTitle}>Who we are</h2>
             <p className="" style={whoWeAreText}>We are defense innovators, software engineers, and veterans that believe the future wil belong to mission-driven organizations that can securely and continuously deploy new software solutions.</p>
             
-            <div className="border">
+            <div className="">
               <Link to="/equip"><button className="btn btn-primary me-5" style={buttonStyle}>LEARN MORE</button></Link>
-              <Link to="/contact"><button className="btn btn-primary ms-5" style={buttonStyle}>CONTACT US</button></Link>
+              <Link to="/contact"><button className="btn btn-danger ms-5" style={buttonStyle}>CONTACT US</button></Link>
             </div>
           </div>
           <div className="col-6">
@@ -172,7 +203,26 @@ const Train = () => {
         </div>
       </section>
 
-      <section className="trainForBattle border">
+
+      <section className="caseStudies container">
+        <div className="row px-5">
+          <div className="col-6">
+            <img src={caseStudies} style={WhoWeAreStyle} className="img-fluid" alt="unicorn under magnifying glass"/>
+          </div>
+
+          <div className="col-6">
+            <h2 style={altTitle}>Case Studies</h2>
+            <p className="" style={caseStudyText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
+            <img className="img-fluid w-50 py-5" src={keyPoints} alt="Case Study Icons for Objectives solutions and results"></img>
+
+            <div className="">
+              <Link to="/equip"><button className="btn btn-primary me-5" style={buttonStyle}>LEARN MORE</button></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="latestTrained border">
         <h2 className="text-center" style={battleText}>Our latest trained.</h2>
 
         <div className="border container h-75 w-50 mt-5 align-self-start">
