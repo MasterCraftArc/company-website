@@ -2,14 +2,18 @@ import * as React from "react"
 import SiteHelmet from "../components/SiteHelmet"
 import Header from "../components/header"
 import {Link} from "gatsby"
-import background from "../images/bgBlankHD.png"
+import background from "../images/bgWhite.png"
 import heroes from "../images/card1.png"
 import aquisitions from "../images/card2.png"
 import devsecops from "../images/card3.png"
 import cardPin from "../images/cardPin.png"
 import whoWeAre from "../images/whoWeAre.png"
 import caseStudies from "../images/caseStudies.png"
-import keyPoints from "../images/keyPoints.png"
+import keyPoints from "../images/keyPointsLight.png"
+import pc from "../images/pc.png"
+import pcGear from "../images/pcGear.png"
+import tech from "../images/tech.png"
+import Footer from "../components/footer"
 
 // styles
 const pageStyles = {
@@ -36,7 +40,8 @@ const heroTextBold = {
 }
 
 const battleText = {
-  color: "#84b9ff",
+  // color: "#84b9ff", //for black background
+  color: '#14498e',
   fontSize: "45px"
 }
 
@@ -77,12 +82,11 @@ const WhoWeAreStyle = {
 }
 
 const altTitle = {
-  color: "#589af0",
+  // color: "#589af0", //dark color
   fontSize: "50px"
 }
 
 const whoWeAreText = {
-  color: 'white',
   fontSize: '18px',
   padding: '25px 150px 50px 0',
 }
@@ -96,32 +100,29 @@ const buttonStyle = {
 }
 
 const caseStudyText = {
-  color: 'white',
+  // color: 'white',
   fontSize: '18px',
   padding: '25px 150px 0px 0',
 }
 
 const trainedCardStyle = {
-  width: "245px",
+  width: "255px",
   height: "380px",
-  borderRadius: "25px",
-  backgroundColor: "rgba(65, 255, 255, 0.6)",
-  boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
+  borderRadius: 0,
+  // boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
 }
 
 const trainedCardText = {
-  color: 'white',
   fontSize: '15px',
 }
 
 const trainedCardTitle = {
-  color: 'white',
-  fontSize: "23px"
+  fontSize: "23px",
 }
 
-const trainedCardImg = {
-  maxWidth: '90%',
-  paddingTop: '2%'
+const trainedCardLink = {
+  color: 'red',
+  textDecoration: 'underline'
 }
 
 
@@ -134,15 +135,15 @@ const Train = () => {
 
       <section className="hero d-flex flex-column justify-content-center">
           <h1>The World Needs a Hero</h1>
-          <h1 style={heroTextThin}>We think</h1>
-          <h1 style={heroTextBold} >that hero is you</h1>
-      <img className="img-fluid background" src={background} alt="background image" style={bgStyle}/>
+          <h1 style={heroTextBold} >That hero is you.</h1>
+          {/* <img className="img-fluid background" src={background} alt="background image" style={bgStyle}/> */}
       </section>
 
       <section className="trainForBattle">
         <h2 className="text-center" style={battleText}>Let us Train you for Battle</h2>
 
-        <div className="container h-75 w-50 mt-5 align-self-start">
+        <div className="container h-75 mt-5">
+
           <div className="row h-100 d-flex justify-content-around align-items-center">
 
             <div className="card col-4 align-self-end" style={cardStyle}>
@@ -222,42 +223,37 @@ const Train = () => {
         </div>
       </section>
 
-      <section className="latestTrained border">
+      <section className="latestTrained">
         <h2 className="text-center" style={battleText}>Our latest trained.</h2>
 
-        <div className="border container h-75 w-50 mt-5 align-self-start">
-          <div className="row h-100 d-flex justify-content-around align-items-center">
+        <div className="container h-75 mt-5">
+          <div className="row h-100 d-flex justify-content-evenly align-items-center">
 
-            <div className="card col-4" style={cardStyle}>
-              <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
-              </div>
+            <div className="card col-4" style={trainedCardStyle}>
+              <img src={pc} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
-                <span className="card-text" style={cardText}>Case Studies</span>
-                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
+                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
+                <p className="card-text" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
+                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
-            <div className="card col-4" style={cardStyle}>
-              <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
-              </div>
+            <div className="card col-4" style={trainedCardStyle}>
+              <img src={pcGear} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
-                <span className="card-text" style={cardText}>Case Studies</span>
-                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
+                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
+                <p className="card-text" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
+
+                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
-            <div className="card col-4" style={cardStyle}>
-              <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={heroes} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
-              </div>
+            <div className="card col-4" style={trainedCardStyle}>
+              <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
-                <span className="card-text" style={cardText}>Case Studies</span>
-                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
+                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
+                <p className="card-text" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
+                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
@@ -265,6 +261,7 @@ const Train = () => {
 
         </div>
       </section>
+    <Footer></Footer>
     </main>
   )
 }

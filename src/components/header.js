@@ -16,7 +16,7 @@ const navLinkStyle = {
 
 function Header(props) {
     return (
-        <nav className="navbar navbar-expand-lg px-5 mx-5">
+        <nav className="navbar sticky-top navbar-expand-lg px-5 mx-5">
             <div className="container-fluid">
                 <div className="col-2">
                     <Link to="/" className="">

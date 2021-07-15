@@ -55,8 +55,8 @@ body {
 /*******************************************/
 
 .navLink{
-    color: white;
-    font-size: 0.7vw;
+    color: #86baff;
+    font-size: 0.9vw;
 }
 
 .navLink-drop{
@@ -70,12 +70,12 @@ body {
 
 /* Home */
 .home{
-    /* background: url(../../src/images/bgBlankHD.png) no-repeat fixed;  */
+    background: url(../../src/images/bgWhite.png) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: local, scroll;
 }
 
 .background{
@@ -92,7 +92,7 @@ body {
 }
 
 .hero h1{
-    color: white;
+    /* color: white; */
     font-size: 50px;
     padding-left: 5vw;
 }
@@ -125,6 +125,13 @@ body {
 }
 
 /* FOOTER */
+ .socialsBox a {
+    color: white;
+ }
+
+ .socialsBox a:hover {
+     color: aqua;
+ }
 
 
 
