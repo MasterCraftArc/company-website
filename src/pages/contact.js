@@ -5,7 +5,7 @@ import SiteHelmet from '../components/SiteHelmet';
 const contact = () => {
   return (
     <main>
-      <SiteHelmet title="Contact" />>
+      <SiteHelmet title="Contact" />
       {/* <section>
 
         <div>

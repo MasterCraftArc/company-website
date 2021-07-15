@@ -13,8 +13,10 @@ import keyPoints from "../images/keyPointsLight.png"
 import pc from "../images/pc.png"
 import pcGear from "../images/pcGear.png"
 import tech from "../images/tech.png"
+import loadingBG from "../images/loading.png"
 import Footer from "../components/footer"
-
+import Flip from "../components/textFlip"
+import { motion } from "framer-motion"
 // styles
 const pageStyles = {
   color: "#232129",
@@ -125,6 +127,33 @@ const trainedCardLink = {
   textDecoration: 'underline'
 }
 
+const sentenceAnim = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.1,
+      staggerChildren: 0.8,
+    },
+  },
+}
+
+const letter = {
+  hidden: { opacity: 0, y: 50},
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+}
+
+const loadingStyle = {
+  background: {loadingBG},
+  position: 'fixed',
+  left: '60%',
+  top: '22%'
+}
+
+const tagLine = "That hero is you."
 
 // markup
 const Train = () => {
@@ -132,10 +161,34 @@ const Train = () => {
     <main style={pageStyles} className="home">
       <SiteHelmet title="Train" description="Become a DevSecOps Hero with Defense Unicorns"/>
       <Header></Header>
-
+      <motion.div 
+      initial={ {opacity: 1, scale: 5} }
+      animate={ {scale: 0, opacity: 0} }
+      transition={
+        {
+          type: 'spring',
+          stiffness: 260,
+          damping: 20,
+          delay: 4
+        }
+      }
+      style={loadingStyle} 
+      className="loading w-50 h-50"
+      />
       <section className="hero d-flex flex-column justify-content-center">
-          <h1>The World Needs a Hero</h1>
-          <h1 style={heroTextBold} >That hero is you.</h1>
+          <h1>The World Needs a Hero...</h1>
+        {/* <Flip initial="Hero" change="Friend, Developer, DevSecOps Engineer"/> */}
+
+          <motion.h1 variants={sentenceAnim} initial='hidden' animate='visible' style={heroTextBold}>{
+            tagLine.split('').map((char, index) => {
+              return (
+                <motion.span key={char + '-' + index} variants={letter}>
+                  {char}
+                </motion.span>
+              )
+            })
+          }</motion.h1>
+          
           {/* <img className="img-fluid background" src={background} alt="background image" style={bgStyle}/> */}
       </section>
 

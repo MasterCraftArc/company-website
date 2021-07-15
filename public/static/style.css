@@ -68,6 +68,31 @@ body {
     color: salmon;
 }
 
+.loading{
+    height: 400px;
+    width: 400px;
+    border-top-left-radius: 180px 250px;
+    margin: 100px 200px;
+    box-shadow: -15px -15px 60px -20px lightgreen,
+     inset 10px 10px 15px -10px lightblue;
+     background: linear-gradient(-45deg, #6839B0, #332E94, #D324CF, #10ADDC);
+     background-size: 400% 400%;
+     animation: gradient 3s ease infinite;
+     z-index: 5
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Home */
 .home{
     background: url(../../src/images/bgWhite.png) no-repeat fixed; 
