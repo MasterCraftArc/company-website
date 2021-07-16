@@ -10,8 +10,9 @@ const navStyle = {
     paddingRight: "5%",
     paddingLeft: "5%"
 }
-const navLinkStyle = {
- color: ""
+const buttonStyles = {
+ color: "white",
+ border: '2px solid black'
 }
 
 function Header(props) {
@@ -25,8 +26,8 @@ function Header(props) {
                 </div>
 
 
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <button style={buttonStyles} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -40,7 +41,7 @@ function Header(props) {
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><Link to="/info"><button className="btn .navLink-drop">info</button></Link></li>
-                        <li><Link to="/equip"><button className="btn .navLink-drop">equip</button></Link></li>
+                        <li><Link to="/blog"><button className="btn .navLink-drop">equip</button></Link></li>
                     </ul>
                     </li>
                     <li className="nav-item">

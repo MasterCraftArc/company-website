@@ -19,7 +19,6 @@ const footerBox = {
 
 const logoBox = {
     height: "50%",
-    border: "1px solid black",
     width: "100%",
     display: "flex",
     justifyContent: "center",
@@ -32,41 +31,51 @@ const logoStyle = {
 }
 
 const middleBox = {
-    height: "40%",
-    border: "1px solid black",
+    height: "35%",
     width: "100%",
+    display: 'flex',
 
 }
 
 const socialsBox = {
     height: "10%",
-    border: "1px solid black",
     width: "100%",
     color: 'white',
     fontSize: '20px',
+    paddingLeft: '10%',
 }
 
 const addressBox = {
     height: "100%",
     width: "60%",
-    border: "1px solid black",
-}
-
-const addressFont = {
     color: 'white',
+    lineHeight: '0.7%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    paddingLeft: '10%',
 }
 
 const menuBox = {
     height: "100%",
     width: "40%",
-    border: "1px solid black",
+    lineHeight: '5%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    paddingLeft: '5%'
+,    
 }
 
 const linkColor = {
     color: 'white',
-    fontSize: '11px',
-    fontFamily: ''
+    fontSize: '14px',
+    fontFamily: '',
+}
 
+const menu = {
+    display: 'flex',
+    justifyContent: 'right',
 }
 
 function Footer() {
@@ -79,23 +88,20 @@ function Footer() {
           </div>
 
           <div style = {middleBox}>
-            <div style = {addressFont}>
+            <div style= {addressBox}>
                 <p>Defense Unicorns</p>
                 <p>555 E Pikes Peak Ave</p>
                 <p>Colorado Springs, Co 80903</p>
             </div>
-            <div>
-                <Link to="/train" style={linkColor}>
-                    <p>Train</p>
-
+            <div style= {menuBox}>
+                <Link to="/train" className='footerLink' style={linkColor}>
+                    <p style= {menu}>Train</p>
                 </Link>
-                <Link to="/equip" style={linkColor}>
-                    <p>Equip</p>
-                    
+                <Link to="/equip" className='footerLink' style={linkColor}>
+                    <p style= {menu}>Equip</p>
                 </Link>
-                <Link to="/train" style={linkColor}>
-                
-                    <p>Contact</p>
+                <Link to="/contact" className='footerLink' style={linkColor}>
+                    <p style= {menu}>Contact</p>
                 </Link>
             </div>
           </div>

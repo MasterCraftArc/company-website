@@ -17,6 +17,9 @@ import loadingBG from "../images/loading.png"
 import Footer from "../components/footer"
 import Flip from "../components/textFlip"
 import { motion } from "framer-motion"
+import TextLoop from "react-text-loop";
+// import { BodyText } from "./ui";
+
 // styles
 const pageStyles = {
   color: "#232129",
@@ -133,7 +136,7 @@ const sentenceAnim = {
     opacity: 1,
     transition: {
       delay: 0.1,
-      staggerChildren: 0.8,
+      staggerChildren: 0.2,
     },
   },
 }
@@ -146,6 +149,9 @@ const letter = {
   },
 }
 
+const tagLine = "That hero is "
+
+
 const loadingStyle = {
   background: {loadingBG},
   position: 'fixed',
@@ -153,15 +159,16 @@ const loadingStyle = {
   top: '22%'
 }
 
-const tagLine = "That hero is you."
 
+function testScroll(){
+  console.log('yay')
+}
 // markup
 const Train = () => {
   return (
-    <main style={pageStyles} className="home">
+    <main style={pageStyles} className="home" onScroll={ testScroll()}>
       <SiteHelmet title="Train" description="Become a DevSecOps Hero with Defense Unicorns"/>
-      <Header></Header>
-      <motion.div 
+      {/* <motion.div 
       initial={ {opacity: 1, scale: 5} }
       animate={ {scale: 0, opacity: 0} }
       transition={
@@ -169,12 +176,13 @@ const Train = () => {
           type: 'spring',
           stiffness: 260,
           damping: 20,
-          delay: 4
+          delay: 2
         }
       }
       style={loadingStyle} 
       className="loading w-50 h-50"
-      />
+      /> */}
+      <Header></Header>
       <section className="hero d-flex flex-column justify-content-center">
           <h1>The World Needs a Hero...</h1>
         {/* <Flip initial="Hero" change="Friend, Developer, DevSecOps Engineer"/> */}
@@ -187,10 +195,31 @@ const Train = () => {
                 </motion.span>
               )
             })
-          }</motion.h1>
+          }
+          <motion.span 
+              initial={ {opacity: 0} }
+              animate={ {opacity: 1} }
+              transition={
+                {
+                  delay: 2.5
+                }
+              }
+          > 
+                <TextLoop interval='1000' springConfig={{ stiffness: 180, damping: 8 }} delay='2000'>
+                    <span> You.</span>
+                    <Link to="/"> a Developer.</Link>
+                    <span> a Frog &#128056;</span>
+                    <Link to="/"> a Unicorn.</Link>
+                </TextLoop>{" "}
+            </motion.span>
+          </motion.h1>
           
           {/* <img className="img-fluid background" src={background} alt="background image" style={bgStyle}/> */}
+          
       </section>
+
+
+
 
       <section className="trainForBattle">
         <h2 className="text-center" style={battleText}>Let us Train you for Battle</h2>

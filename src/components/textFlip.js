@@ -41,15 +41,8 @@ function Flip(props) {
     // render(){
   
     return ( 
-                // <span>{this.state.message}</span> 
-                <motion.div
-                whileHover={{ scale: 1.2, rotate: 90 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: -90,
-                  borderRadius: "100%"
-                }}
-              ><div className="border w-50 h-50"></div></motion.div>
+            <span>{this.state.message}</span> 
+
             )
     // }
 }

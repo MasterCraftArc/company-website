@@ -15,7 +15,9 @@
 
 }
 
-
+.hideCard{
+    display: none;
+}
 
 /* Clear fix hack */
 .clearfix:after {
@@ -78,7 +80,7 @@ body {
      background: linear-gradient(-45deg, #6839B0, #332E94, #D324CF, #10ADDC);
      background-size: 400% 400%;
      animation: gradient 3s ease infinite;
-     z-index: 5
+     z-index: 10
 }
 
 @keyframes gradient {
@@ -103,6 +105,15 @@ body {
     background-attachment: local, scroll;
 }
 
+.blog{
+    background: url(../../src/images/Segmented\ Background\ Images/Top_W.jpg) no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: local, scroll;
+}
+
 .background{
     z-index: -5;
 }
@@ -116,11 +127,14 @@ body {
     background: transparent;
 }
 
-.hero h1{
+.hero h1,
+.heroText{
     /* color: white; */
     font-size: 50px;
     padding-left: 5vw;
 }
+
+
 
 /* Train for Battle */
 .trainForBattle{
@@ -150,11 +164,13 @@ body {
 }
 
 /* FOOTER */
- .socialsBox a {
+ .socialsBox a ,
+ .footerLink{
     color: white;
  }
 
- .socialsBox a:hover {
+ .socialsBox a:hover,
+ .footerLink:hover{
      color: aqua;
  }
 
