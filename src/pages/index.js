@@ -135,7 +135,7 @@ const sentenceAnim = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.1,
+      delay: 0.3,
       staggerChildren: 0.2,
     },
   },
@@ -166,7 +166,7 @@ function testScroll(){
 // markup
 const Train = () => {
   return (
-    <main style={pageStyles} className="home" onScroll={ testScroll()}>
+    <main style={pageStyles} className="container-fluid home" onScroll={ testScroll()}>
       <SiteHelmet title="Train" description="Become a DevSecOps Hero with Defense Unicorns"/>
       {/* <motion.div 
       initial={ {opacity: 1, scale: 5} }
@@ -206,10 +206,10 @@ const Train = () => {
               }
           > 
                 <TextLoop interval='1000' springConfig={{ stiffness: 180, damping: 8 }} delay='2000'>
-                    <span> You.</span>
+                    <span sty> You.</span>
                     <Link to="/"> a Developer.</Link>
                     <span> a Frog &#128056;</span>
-                    <Link to="/"> a Unicorn.</Link>
+                    <Link to="/"> a Unicorn. &#129412;</Link>
                 </TextLoop>{" "}
             </motion.span>
           </motion.h1>

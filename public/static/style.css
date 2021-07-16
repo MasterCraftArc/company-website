@@ -112,6 +112,47 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-attachment: local, scroll;
+    /* background-position:  */
+}
+
+.contact{
+    background: url(../../src/images/Segmented\ Background\ Images/bottom_W.jpg) no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: local, scroll;
+    /* background-position:  */
+}
+
+.contact input{
+    height: 45px;
+    font-size: 15px;
+
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 0;
+}
+
+.contact .names input{
+    width: 47%;
+}
+
+.contact select{
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 0;
+    font-size: 15px;
+}
+
+.contact textarea{
+    height: 45px;
+    /* border: 1px solid lightgray; */
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 0;
+    font-size: 15px;
 }
 
 .background{
@@ -161,6 +202,14 @@ body {
     height: 90vh;
     width: 100vw;
     background-color: transparent;
+
+    background: url(../../src/images/Segmented\ Background\ Images/bottom_W.jpg) no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
 }
 
 /* FOOTER */
