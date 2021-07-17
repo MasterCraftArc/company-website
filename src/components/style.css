@@ -106,7 +106,7 @@ body {
 }
 
 .blog{
-    background: url(../images/Segmented\ Background\ Images/Top_W.jpg) no-repeat fixed; 
+    background: url(../images/segmentedImages/Top_W.jpg) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -116,7 +116,7 @@ body {
 }
 
 .contact{
-    background: url(../images/Segmented\ Background\ Images/bottom_W.jpg) no-repeat fixed; 
+    background: url(../images/segmentedImages/bottom_W.jpg) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -202,14 +202,16 @@ body {
     height: 90vh;
     width: 100vw;
     background-color: transparent;
+}
 
-    background: url(../images/Segmented\ Background\ Images/bottom_W.jpg) no-repeat fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: scroll;
-    background-position: center;
+.equip .latestTrained{
+        background: url(../images/segmentedImages/bottom_W.jpg) no-repeat fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center;
 }
 
 /* FOOTER */

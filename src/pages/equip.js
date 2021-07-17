@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import SiteHelmet from '../components/SiteHelmet';
 import Header from '../components/header'
 import Footer from '../components/footer'
-import topBG from '../images/Segmented Background Images/Top_W.jpg'
+import topBG from '../images/segmentedImages/Top_W.jpg'
 import heroes from "../images/card1.png"
 import aquisitions from "../images/card2.png"
 import devsecops from "../images/card3.png"
