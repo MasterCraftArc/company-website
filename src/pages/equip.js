@@ -94,27 +94,27 @@ const selectStyles = {
 
 const Equip = () => {
   let cardRefs = []
-  
+  let selectRef = React.createRef();
   for (let i = 1; i < 7; i++){
     cardRefs[i] = React.createRef();
   }
   
-  function updateCards(evt){
-    if (evt.target.value == 'All Categories'){
-      cardRefs.forEach( card => {
-        card.current.style.display = 'block'
-      })
-    }
-    else{
-      for (let i = 1; i < 7; i++){
-        console.log(cardRefs[i].current)
-        if (cardRefs[i].current.dataset.category == evt.target.value){
-          cardRefs[i].current.style.display = 'block'
-        }else{
-          cardRefs[i].current.style.display = 'none'
-        }
-      }
-    }
+  function updateCards(){
+    // if (selectRef.current.value == 'All Categories'){
+    //   cardRefs.forEach( card => {
+    //     card.current.style.display = 'block'
+    //   })
+    // }
+    // else{
+    //   for (let i = 1; i < 7; i++){
+    //     console.log(cardRefs[i].current)
+    //     if (cardRefs[i].current.dataset.category == selectRef.current.value){
+    //       cardRefs[i].current.style.display = 'block'
+    //     }else{
+    //       cardRefs[i].current.style.display = 'none'
+    //     }
+    //   }
+    // }
 
   }
 
@@ -142,7 +142,7 @@ const Equip = () => {
         
         <div className='position-relative'>
         <h2 className="text-center" style={battleText}>Our latest trained.</h2>
-        <select className="form-select" aria-label="Default select example" style={selectStyles} onChange={(evt) => updateCards(evt)}>
+        <select className="form-select" aria-label="Default select example" style={selectStyles} ref={selectRef} onChange={() => updateCards()}>
           <option defaultValue>All Categories</option>
           <option value="aquisition">Aquisition</option>
           <option value="devSecOps">DevSecOps</option>
@@ -150,7 +150,7 @@ const Equip = () => {
         </select>
         </div>
 
-        <div className="container h-75 mt-5 d-flex justify-content-center ">
+        <div className="container h-75 mt-5 d-flex justify-content-center">
           
           <div className="row h-100 w-75 d-flex justify-content-between">
 
