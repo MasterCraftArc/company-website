@@ -18,6 +18,11 @@ const buttonStyles = {
  outline: 'none'
 }
 
+const linkStyles = {
+    // color: 'white',
+    fontSize: '0.9vw'
+}
+
 function Header(props) {
     return (
         <div style={ { background: props.background }}>
@@ -37,10 +42,10 @@ function Header(props) {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul className="navbar-nav text-end">
                         <li className="nav-item">
-                            <Link to="/"><button className="btn navLink">TRAIN</button></Link>
+                            <Link to="/"><button className="btn navLink" styles={linkStyles}>TRAIN</button></Link>
                         </li>
                         <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle navLink" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a styles={linkStyles} className="nav-link dropdown-toggle navLink" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             EQUIP
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

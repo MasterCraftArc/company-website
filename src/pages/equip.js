@@ -100,21 +100,21 @@ const Equip = () => {
   }
   
   function updateCards(){
-    // if (selectRef.current.value == 'All Categories'){
-    //   cardRefs.forEach( card => {
-    //     card.current.style.display = 'block'
-    //   })
-    // }
-    // else{
-    //   for (let i = 1; i < 7; i++){
-    //     console.log(cardRefs[i].current)
-    //     if (cardRefs[i].current.dataset.category == selectRef.current.value){
-    //       cardRefs[i].current.style.display = 'block'
-    //     }else{
-    //       cardRefs[i].current.style.display = 'none'
-    //     }
-    //   }
-    // }
+    if (selectRef.current.value == 'All Categories'){
+      cardRefs.forEach( card => {
+        card.current.style.display = 'block'
+      })
+    }
+    else{
+      for (let i = 1; i < 7; i++){
+        console.log(cardRefs[i].current)
+        if (cardRefs[i].current.dataset.category == selectRef.current.value){
+          cardRefs[i].current.style.display = 'block'
+        }else{
+          cardRefs[i].current.style.display = 'none'
+        }
+      }
+    }
 
   }
 
