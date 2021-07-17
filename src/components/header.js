@@ -31,7 +31,7 @@ function Header(props) {
 
 
                     <button style={buttonStyles} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="bi bi-list"></i>
+                        <i className="bi bi-list"></i>
                     </button>
 
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">

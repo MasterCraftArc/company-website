@@ -14,6 +14,7 @@ import keyPoints from "../images/keyPointsLight.png"
 import pc from "../images/pc.png"
 import pcGear from "../images/pcGear.png"
 import tech from "../images/tech.png"
+import {useRef} from 'react'
 
 const pageStyles = {
   color: 'black',
@@ -91,26 +92,32 @@ const selectStyles = {
   fontSize: '15px'
 }
 
-function updateCards(evt){
-  console.log(evt.target.value)
+const Equip = () => {
+  let cardRefs = []
   
-  if (evt.target.value == 'All Categories'){
-    document.querySelectorAll('.card').forEach( card => {
-        card.style.display = 'block'
-    })
-  }else{
-    document.querySelectorAll('.card').forEach( card => {
-      console.log(card.dataset.value)
-      if (card.dataset.category == evt.target.value){
-        card.style.display = 'block'
-      }else{
-        card.style.display = 'none'
-      }
-    })
+  for (let i = 1; i < 7; i++){
+    cardRefs[i] = React.createRef();
   }
-}
+  
+  function updateCards(evt){
+    if (evt.target.value == 'All Categories'){
+      cardRefs.forEach( card => {
+        card.current.style.display = 'block'
+      })
+    }
+    else{
+      for (let i = 1; i < 7; i++){
+        console.log(cardRefs[i].current)
+        if (cardRefs[i].current.dataset.category == evt.target.value){
+          cardRefs[i].current.style.display = 'block'
+        }else{
+          cardRefs[i].current.style.display = 'none'
+        }
+      }
+    }
 
-const equip = () => {
+  }
+
   return (
     <div className="container-fluid equip blog" style={pageStyles}>
       <SiteHelmet title="Blog" /> 
@@ -147,7 +154,7 @@ const equip = () => {
           
           <div className="row h-100 w-75 d-flex justify-content-between">
 
-            <div className="card rounded-3" style={trainedCardStyle} data-category='aquisition'>
+            <div className="card rounded-3" style={trainedCardStyle} data-category='aquisition' ref={cardRefs[1]}>
               <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Aquisition 1</h5>
@@ -156,7 +163,7 @@ const equip = () => {
               </div>
             </div>
 
-            <div className="card rounded-3" style={trainedCardStyle} data-category='devSecOps'>
+            <div className="card rounded-3" style={trainedCardStyle} data-category='devSecOps' ref={cardRefs[2]}>
               <img src={pcGear} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>DevSecOps 1</h5>
@@ -167,7 +174,7 @@ const equip = () => {
             </div>
 
 
-            <div className="card rounded-3" style={trainedCardStyle} data-category='case-studies'>
+            <div className="card rounded-3" style={trainedCardStyle} data-category='case-studies' ref={cardRefs[3]}>
               <img src={pc} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Case-Studies 1</h5>
@@ -176,7 +183,7 @@ const equip = () => {
               </div>
             </div>
 
-            <div className="card rounded-3" style={trainedCardStyle} data-category='case-studies'>
+            <div className="card rounded-3" style={trainedCardStyle} data-category='case-studies' ref={cardRefs[4]}>
               <img src={pc} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Case-Studies 2</h5>
@@ -185,7 +192,7 @@ const equip = () => {
               </div>
             </div>
 
-            <div className="card rounded-3" style={trainedCardStyle} data-category='aquisition'>
+            <div className="card rounded-3" style={trainedCardStyle} data-category='aquisition' ref={cardRefs[5]}>
               <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Aquisition 2</h5>
@@ -194,7 +201,7 @@ const equip = () => {
               </div>
             </div>
 
-            <div className="card rounded-3" style={trainedCardStyle} data-category='devSecOps'>
+            <div className="card rounded-3" style={trainedCardStyle} data-category='devSecOps' ref={cardRefs[6]}>
               <img src={pcGear} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>DevSecOps 2</h5>
@@ -218,5 +225,4 @@ const equip = () => {
     </div>
   );
 }
-
-export default equip;
+export default Equip;
