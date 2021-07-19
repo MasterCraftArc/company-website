@@ -16,4 +16,4 @@
 ## Usage
 
 1. run `npm run start`
-2. Navigate to `localhost:8080`
+2. Navigate to `localhost:8000`
