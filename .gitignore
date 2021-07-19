@@ -1,9 +1,3 @@
 node_modules
 extras
 .cache
-
-# exclude everything in public
-public/*
-
-# exception to the rule
-!public/.gitkeep 
