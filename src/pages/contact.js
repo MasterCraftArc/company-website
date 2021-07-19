@@ -160,7 +160,7 @@ const contact = () => {
         </div>
 
         <div className="col-6 h-100 border-dark d-flex align-items-center justify-content-center ">
-          <form className='w-75'>
+          <form className='w-75' method="POST" name='contact-form' netlify>
             <div className='d-flex justify-content-between names'>
               <input className='form-control' placeholder="What's your first name?"></input>
               <input className='form-control' placeholder='and your Last?'></input>
@@ -175,7 +175,7 @@ const contact = () => {
               <option value="individual">Individual</option>
             </select>
             <textarea placeholder="Hi Defense Unicorns I'm really excited to talk..." className='mt-3 w-100 form-control' style={textAreaStyle}></textarea >
-            <Link to="/equip"><button className="btn btn-danger me-5 mt-5" style={buttonStyle}>SUBMIT</button></Link>
+            <button type='submit' className="btn btn-danger me-5 mt-5" style={buttonStyle}>SUBMIT</button>
           </form>
         </div>
       </section>
