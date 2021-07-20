@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Box Model Hack */
 * {
     box-sizing: border-box;
@@ -55,6 +59,23 @@ body {
 /******************************************
 /* GLOBAL LAYOUT
 /*******************************************/
+
+/** NAV **/
+
+@media only screen and (min-width: 768px){
+    .parent:hover .child {
+        opacity:1;
+        height:auto;
+        overflow:none;
+        transform: translateY(0);
+    }
+    .child {
+        opacity:0;
+        height:0;
+        overflow:hidden;
+        transform: translateY(-10%);
+    }
+}
 
 .navLink{
     color: #86baff !important;
@@ -132,6 +153,8 @@ body {
     border: none;
     border-bottom: 2px solid red;
     border-radius: 0;
+    outline: none;
+    background-color: transparent;
 }
 
 .contact .names input{
@@ -153,6 +176,7 @@ body {
     border-bottom: 2px solid red;
     border-radius: 0;
     font-size: 15px;
+    outline: none;
 }
 
 .background{
@@ -162,6 +186,17 @@ body {
 /* NAV BAR */
 
 /* HERO */
+
+.heroContainer{
+    background: url(../images/Top.png) no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+}
+
 .hero{
     height:90vh;
     width: 100vw;
@@ -184,6 +219,9 @@ body {
     width: 100vw;
     background-color: transparent;
 }
+.card{
+    background-color: white;
+}
 
 /* WHO WE ARE */
 .whoWeAre{
@@ -199,8 +237,8 @@ body {
 /* Latest Trained */
 .latestTrained{
     margin-top: 210px;
-    height: 90vh;
-    width: 100vw;
+    /* height: 90vh; */
+    /* width: 100vw; */
     background-color: transparent;
 }
 

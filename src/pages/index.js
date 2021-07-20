@@ -55,7 +55,8 @@ const cardStyle = {
   height: "380px",
   borderRadius: "25px",
   backgroundColor: "rgba(65, 255, 255, 0.6)",
-  boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
+  boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)",
+  border: '1px solid black'
 }
 
 const pinStyle = {
@@ -183,96 +184,94 @@ const Train = () => {
       style={loadingStyle} 
       className="loading w-50 h-50"
       /> */}
-      <Header></Header>
-      <section className="hero d-flex flex-column justify-content-center">
-          <h1>The World Needs a Hero...</h1>
-        {/* <Flip initial="Hero" change="Friend, Developer, DevSecOps Engineer"/> */}
+      <div className="heroContainer container-fluid">
+        <Header></Header>
+        <section className="hero border-solid min-h-screen border-2 flex flex-col justify-center">
+            <h1>The World Needs a Hero...</h1>
+          {/* <Flip initial="Hero" change="Friend, Developer, DevSecOps Engineer"/> */}
 
-          <motion.h1 variants={sentenceAnim} initial='hidden' animate='visible' style={heroTextBold}>{
-            tagLine.split('').map((char, index) => {
-              return (
-                <motion.span key={char + '-' + index} variants={letter}>
-                  {char}
-                </motion.span>
-              )
-            })
-          }
-          <motion.span 
-              initial={ {opacity: 0} }
-              animate={ {opacity: 1} }
-              transition={
-                {
-                  delay: 2.5
+            <motion.h1 variants={sentenceAnim} initial='hidden' animate='visible' style={heroTextBold}>{
+              tagLine.split('').map((char, index) => {
+                return (
+                  <motion.span key={char + '-' + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                )
+              })
+            }
+            <motion.span 
+                initial={ {opacity: 0} }
+                animate={ {opacity: 1} }
+                transition={
+                  {
+                    delay: 2.5
+                  }
                 }
-              }
-          > 
-                <TextLoop interval='1000' springConfig={{ stiffness: 180, damping: 8 }} delay='2000'>
-                    <span sty> You.</span>
-                    <Link to="/"> a Developer.</Link>
-                    <span> a Frog &#128056;</span>
-                    <Link to="/"> a Unicorn. &#129412;</Link>
-                </TextLoop>{" "}
-            </motion.span>
-          </motion.h1>
-          
-          {/* <img className="img-fluid background" src={background} alt="background image" style={bgStyle}/> */}
-          
-      </section>
+            > 
+                  <TextLoop interval='1000' springConfig={{ stiffness: 180, damping: 8 }} delay='2000'>
+                      <span sty> You.</span>
+                      <Link to="/"> a Developer.</Link>
+                      <span> a Frog &#128056;</span>
+                      <Link to="/"> a Unicorn. &#129412;</Link>
+                  </TextLoop>{" "}
+              </motion.span>
+            </motion.h1>
+            
+            {/* <img className="img-fluid background" src={background} alt="background image" style={bgStyle}/> */}
+            
+        </section>
+      </div>
 
 
 
 
-      <section className="trainForBattle">
+      <section className="container-fluid trainForBattle">
         <h2 className="text-center" style={battleText}>Let us Train you for Battle</h2>
 
-        <div className="container h-75 mt-5">
+      <div className="grid grid-rows-3 md:grid-rows-3 flex-initial justify-center items-center mt-5 min-h-screen border-2 border-solid mx-auto w-3/">
 
-          <div className="row h-100 d-flex justify-content-around align-items-center">
-
-            <div className="card col-4 align-self-end" style={cardStyle}>
-              <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={heroes} style={magnifierStyle} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
-              </div>
-              <div className="card-body text-center">
-                <span className="card-text" style={cardText}>Case Studies</span>
-                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
-              </div>
+          <div className="card col-span-1 place-self-end border-2 border-solid border-red-500" style={cardStyle}>
+            <div className="flex justify-center items-center w-full">
+              <img src={heroes} style={magnifierStyle} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
             </div>
-
-            <div className="card col-4" style={cardStyle}>
-              <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={aquisitions} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
-              </div>
-              <div className="card-body text-center">
-                <span className="card-text" style={cardText}>Explore Learning</span>
-                <p style={cardText}>Part 1:</p>
-                <h5 className="card-title mt-3 mb-5" style={cardTitle}>Aquisitions</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
-              </div>
+            <div className="card-body text-center">
+              <span className="card-text" style={cardText}>Case Studies</span>
+              <h5 className="card-title mt-3 mb-5" style={cardTitle}>Heroes Like You</h5>
+              <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
             </div>
-
-            <div className="card col-4 align-self-start" style={cardStyle}>
-              <div className="d-flex justify-content-center align-items-center w-100">
-                <img src={devsecops} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
-              </div>
-              <div className="card-body text-center">
-                <span className="card-text" style={cardText}>Explore Learning</span>
-                <p style={cardText}>Part 1:</p>
-                <h5 className="card-title mt-3 mb-5" style={cardTitle}>DevSecOps</h5>
-                <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
-              </div>
-            </div>
-
           </div>
+
+          <div className="card" style={cardStyle}>
+            <div className="flex justify-center items-center w-full">
+              <img src={aquisitions} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+            </div>
+            <div className="card-body text-center">
+              <span className="card-text" style={cardText}>Explore Learning</span>
+              <p style={cardText}>Part 1:</p>
+              <h5 className="card-title mt-3 mb-5" style={cardTitle}>Aquisitions</h5>
+              <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
+            </div>
+          </div>
+
+          <div className="card place-self-start" style={cardStyle}>
+            <div className="flex justify-center items-center w-full">
+              <img src={devsecops} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
+            </div>
+            <div className="card-body text-center">
+              <span className="card-text" style={cardText}>Explore Learning</span>
+              <p style={cardText}>Part 1:</p>
+              <h5 className="card-title mt-3 mb-5" style={cardTitle}>DevSecOps</h5>
+              <Link to="/contact"><img src={cardPin} style={pinStyle} alt="defense unicorns circular pin"/></Link>
+            </div>
+        </div>
 
         </div>
       </section>
 
 
       <section className="whoWeAre container">
-        <div className="row px-5">
-          <div className="col-6">
+        <div className="grid-rows-1 px-5">
+          <div className="col-span-6">
             <h2 style={altTitle}>Who we are</h2>
             <p className="" style={whoWeAreText}>We are defense innovators, software engineers, and veterans that believe the future wil belong to mission-driven organizations that can securely and continuously deploy new software solutions.</p>
             
@@ -281,7 +280,7 @@ const Train = () => {
               <Link to="/contact"><button className="btn btn-danger ms-5" style={buttonStyle}>CONTACT US</button></Link>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-span-6">
             <img src={whoWeAre} style={WhoWeAreStyle} className="img-fluid" alt="unicorn under magnifying glass"/>
           </div>
         </div>
@@ -290,11 +289,11 @@ const Train = () => {
 
       <section className="caseStudies container">
         <div className="row px-5">
-          <div className="col-6">
+          <div className="col-span-6">
             <img src={caseStudies} style={WhoWeAreStyle} className="img-fluid" alt="unicorn under magnifying glass"/>
           </div>
 
-          <div className="col-6">
+          <div className="col-span-6">
             <h2 style={altTitle}>Case Studies</h2>
             <p className="" style={caseStudyText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
             <img className="img-fluid w-50 py-5" src={keyPoints} alt="Case Study Icons for Objectives solutions and results"></img>
@@ -306,13 +305,13 @@ const Train = () => {
         </div>
       </section>
 
-      <section className="latestTrained">
+      <section className="latestTrained min-h-screen">
         <h2 className="text-center" style={battleText}>Our latest trained.</h2>
 
-        <div className="container h-75 mt-5">
-          <div className="row h-100 d-flex justify-content-evenly align-items-center">
+        <div className="container h-full mt-5">
+          <div className="h-full grid grid-cols-3 place-items-center">
 
-            <div className="card col-4" style={trainedCardStyle}>
+            <div className="card" style={trainedCardStyle}>
               <img src={pc} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
@@ -321,7 +320,7 @@ const Train = () => {
               </div>
             </div>
 
-            <div className="card col-4" style={trainedCardStyle}>
+            <div className="card " style={trainedCardStyle}>
               <img src={pcGear} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
@@ -331,7 +330,7 @@ const Train = () => {
               </div>
             </div>
 
-            <div className="card col-4" style={trainedCardStyle}>
+            <div className="card" style={trainedCardStyle}>
               <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
