@@ -19,6 +19,7 @@ import {useRef} from 'react'
 const pageStyles = {
   color: 'black',
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  width: '100vw'
   // background: {topBG}
 }
 
@@ -124,16 +125,16 @@ const Equip = () => {
       
       <Header />
       <section className="hero flex flex-col justify-center">
-          <h1>
+          <h1 className='pl-12'>
             <p style={showcase}>Showcase your thought</p>
             <p style={topic}>provoking topic and</p>
             <p style={textBold}>ideas</p>
           </h1>
 
-          <p className = 'heroText' style={heroText}>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consecutar adijecps temper test incidunt kibore; Lorem ipsum dolor sit amet, consecutar adijecps temper test incidunt kibore.</p>
+          <p className = 'heroText pl-12 ' style={heroText}>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consecutar adijecps temper test incidunt kibore; Lorem ipsum dolor sit amet, consecutar adijecps temper test incidunt kibore.</p>
           
-          <div>
-            <Link to="/contact" className='mt-3 heroText w-50'><button className="bg-red-500 text-white hover:bg-red-700" style={buttonStyle}>LEARN MORE</button></Link>
+          <div className="mt-8">
+            <Link to="/contact" className='heroText w-50 pl-12'><button className="bg-red-500 text-white hover:bg-red-700" style={buttonStyle}>LEARN MORE</button></Link>
           </div>
 
       </section>
@@ -152,7 +153,7 @@ const Equip = () => {
 
         <div className="container h-75 mt-5 mx-auto">
           
-          <div className="grid grid-cols-3 auto-rows-auto place-items-center w-100 gap-y-3.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-auto place-items-center w-100 gap-y-3.5">
 
             <div className="card rounded-3" style={trainedCardStyle} data-category='aquisition' ref={cardRefs[1]}>
               <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>

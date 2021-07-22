@@ -16,11 +16,6 @@
 
 .main {
     flex: 1 0 auto;
-
-}
-
-.hideCard{
-    display: none;
 }
 
 /* Clear fix hack */
@@ -131,7 +126,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: 100%;
     background-attachment: local, scroll;
     /* background-position:  */
 }
@@ -188,13 +183,13 @@ body {
 /* HERO */
 
 .heroContainer{
-    background: url(../images/Top.png) no-repeat fixed; 
+    /* background: url(../images/Top.png) no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-attachment: scroll;
-    background-position: center;
+    background-position: center; */
 }
 
 .hero{
@@ -206,16 +201,26 @@ body {
 .hero h1,
 .heroText{
     /* color: white; */
-    font-size: 50px;
-    padding-left: 5vw;
+    /* @apply text-7xl; */
+    /* font-size: 5vw; */
+    /* padding-left: 5vw; */
 }
 
-
+/* MID */
+.mid{
+    /* background: url(../images/Mid.png) no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: local, scroll;
+    background-position: center; */
+}
 
 /* Train for Battle */
 .trainForBattle{
-    margin-top: 100px;
-    height: 90vh;
+    /* margin-top: 100px; */
+    /* height: 90vh; */
     width: 100vw;
     background-color: transparent;
 }
@@ -225,19 +230,22 @@ body {
 
 /* WHO WE ARE */
 .whoWeAre{
-    margin-top: 27%;
 
 }
 
 /* Case Studies */
 .caseStudies{
-    margin-top: 20%;
+
+}
+
+.border{
+    /* border: 2px solid black; */
 }
 
 /* Latest Trained */
 .latestTrained{
     margin-top: 210px;
-    /* height: 90vh; */
+    height: 70vh;
     /* width: 100vw; */
     background-color: transparent;
 }
@@ -258,9 +266,16 @@ body {
     color: white;
  }
 
+ .contact .socialsBox a{
+     color: 'red'
+ }
+ .socialsBox a {
+     margin-right: 2%;
+ }
+
  .socialsBox a:hover,
  .footerLink:hover{
-     color: aqua;
+     color: rgb(33, 149, 243);
  }
 
 
