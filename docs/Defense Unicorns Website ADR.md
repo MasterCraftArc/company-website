@@ -11,14 +11,14 @@ This document outlines the tools and frameworks that will be used to deliver the
 > GatsbyJS
 Node JS
 Netlify
-Bootstrap
+Tailwind CSS
 
 Prepared by: Defense Unicorns Website Team
-Updated July 6, 2021
+Updated July 23, 2021
 
 #### FRONT-END
 
-#### Bootstrap
+#### Tailwind CSS
 
 Tailwind will be key in orchestrating the development of individual web pages for the Defense Unicorns site and will allow us to put together any design very efficiently which will contribute to a quicker development time. Tailwind offers utility classes and containers that allows pages to be scaled dynamically according to screen size. This is important as we believe one of our primary customer acquisition channels will be mobile users who are interacting with our thought leadership content first on social media sites such as LinkedIn before navigating to our website.
 
@@ -28,9 +28,8 @@ Tailwind will be key in orchestrating the development of individual web pages fo
 - Quick prototyping. Tailwind allows you create responsive designs in a minimal amount of time due to its library of responsive containers and blocks.
 - When compared to bootstrap Tailwind has more complex utility classes and allows for more variability.
 
-##### Disadvantages
-- We may be loading additional content from the bootstrap library which may not be used in this project
 ---
+
 #### GATSBY JS
 
 Gatsby Provides development teams an open source frontend framework for creating dynamic, optimized websites and a cloud platform for delivering them on a blazing fast network. As a web framework, Gatsby relies on modern tools such as react and javascript and also wraps concepts such as CI/CD, GIT, and APIs to make building web apps intuitive. We will use Gatsby to improve SEO as the loading of static web pages is dramatically better when compared with alternatives.
