@@ -118,8 +118,8 @@ const caseStudyText = {
 const trainedCardStyle = {
   // width: "56%",
   // height: "100%",
-  maxWidth: "235px",
-  maxHeight: "370px",
+  width: "235px",
+  height: "370px",
   borderRadius: 0,
   // boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
 }
@@ -311,13 +311,16 @@ const Train = () => {
         </div>
       </section>
 
+
+
+
       <section className="latestTrained">
         <h2 className="text-center" style={battleText}>Our latest trained.</h2>
 
         <div className="h-full mt-1">
-          <div className="h-full w-3/4 mx-auto mt-10 grid grid-cols-3 place-items-center">
+          <div className="h-3/4 w-full lg:w-3/4 mx-auto mt-10 grid grid-cols-3 place-items-center">
 
-            <div className="card h-3/6 md:w-4/5 md:h-4/6 lg:w-5/6 lg:h-4/6 xl:h-4/5 xl:w-4/6 2xl:h-3/5" style={trainedCardStyle}>
+            <div className="card " style={trainedCardStyle}>
               <img src={pc} className="card-img-top self-start" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
@@ -326,7 +329,7 @@ const Train = () => {
               </div>
             </div>
 
-            <div className="card h-3/6 md:w-4/5 md:h-4/6 lg:w-5/6 lg:h-4/6 xl:h-4/5 xl:w-4/6 2xl:h-3/5" style={trainedCardStyle}>
+            <div className="card " style={trainedCardStyle}>
               <img src={pcGear} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
@@ -336,7 +339,7 @@ const Train = () => {
               </div>
             </div>
 
-            <div className="card h-3/6 md:w-4/5 md:h-4/6 lg:w-5/6 lg:h-4/6 xl:h-4/5 xl:w-4/6 2xl:h-3/5" style={trainedCardStyle}>
+            <div className="card " style={trainedCardStyle}>
               <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
@@ -353,5 +356,5 @@ const Train = () => {
     </main>
   )
 }
-
+//h-3/6 md:w-4/5 md:h-4/6 lg:w-5/6 lg:h-4/6 xl:h-4/5 xl:w-4/6 2xl:h-3/5
 export default Train
