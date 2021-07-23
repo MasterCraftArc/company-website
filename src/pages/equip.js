@@ -19,6 +19,7 @@ import {useRef} from 'react'
 const pageStyles = {
   color: 'black',
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  width: '100vw'
   // background: {topBG}
 }
 
@@ -79,7 +80,7 @@ const trainedCardLink = {
 }
 
 const latestTrained = {
-  height: '110vh'
+  // height: '110vh'
 }
 
 const selectStyles = {
@@ -121,26 +122,26 @@ const Equip = () => {
   return (
     <div className="container-fluid equip blog" style={pageStyles}>
       <SiteHelmet title="Blog" /> 
-      <Header />
-
-      <section className="hero d-flex flex-column justify-content-center">
-          <h1>
+      
+      <Header textColor="white"/>
+      <section className="hero flex flex-col justify-center">
+          <h1 className='pl-12'>
             <p style={showcase}>Showcase your thought</p>
             <p style={topic}>provoking topic and</p>
             <p style={textBold}>ideas</p>
           </h1>
 
-          <p className = 'heroText' style={heroText}>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consecutar adijecps temper test incidunt kibore; Lorem ipsum dolor sit amet, consecutar adijecps temper test incidunt kibore.</p>
+          <p className = 'heroText pl-12 ' style={heroText}>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consecutar adijecps temper test incidunt kibore; Lorem ipsum dolor sit amet, consecutar adijecps temper test incidunt kibore.</p>
           
-          <div>
-            <Link to="/contact" className='mt-3 heroText w-50'><button className="btn btn-primary" style={buttonStyle}>LEARN MORE</button></Link>
+          <div className="mt-8">
+            <Link to="/contact" className='heroText w-50 pl-12'><button className="bg-red-500 text-white hover:bg-red-700" style={buttonStyle}>LEARN MORE</button></Link>
           </div>
 
       </section>
 
-      <section className="latestTrained" style={latestTrained}>
+      <section className="latestTrained min-h-screen" style={latestTrained}>
         
-        <div className='position-relative'>
+        <div className='relative'>
         <h2 className="text-center" style={battleText}>Our latest trained.</h2>
         <select className="form-select" aria-label="Default select example" style={selectStyles} ref={selectRef} onChange={() => updateCards()}>
           <option defaultValue>All Categories</option>
@@ -150,9 +151,9 @@ const Equip = () => {
         </select>
         </div>
 
-        <div className="container h-75 mt-5 d-flex justify-content-center">
+        <div className="container h-75 mt-5 mx-auto">
           
-          <div className="row h-100 w-75 d-flex justify-content-between">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-auto place-items-center w-100 gap-y-3.5">
 
             <div className="card rounded-3" style={trainedCardStyle} data-category='aquisition' ref={cardRefs[1]}>
               <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
@@ -210,6 +211,7 @@ const Equip = () => {
                 <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
+
           </div>
 
           {/* <div className="row mt-5 d-flex justify-content-evenly align-items-center">

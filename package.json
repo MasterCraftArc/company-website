@@ -15,7 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "bootstrap": "^5.0.2",
+    "axios": "^0.21.1",
     "bootstrap-icons": "^1.5.0",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.8.1",
@@ -23,9 +23,18 @@
     "gatsby-plugin-react-helmet": "^4.9.0",
     "gatsby-plugin-sharp": "^3.9.0",
     "gatsby-transformer-sharp": "^3.9.0",
+    "query-string": "^7.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-text-loop": "^2.3.0"
+    "react-rotating-text": "^1.4.1",
+    "react-text-loop": "^2.3.0",
+    "react-typist": "^2.0.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "gatsby-plugin-postcss": "^4.9.0",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
   }
 }

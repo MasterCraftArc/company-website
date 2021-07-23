@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+.flexThisBox {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.main {
+    flex: 1 0 auto;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html{
+    font-size: 12px;
+}
+
+body {
+    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    color: white;
+}
+
+
+/******************************************
+/* GLOBAL LAYOUT
+/*******************************************/
+
+/** NAV **/
+
+@media only screen and (min-width: 768px){
+    .parent:hover .child {
+        opacity:1;
+        height:auto;
+        overflow:none;
+        transform: translateY(0);
+    }
+    .child {
+        opacity:0;
+        height:0;
+        overflow:hidden;
+        transform: translateY(-10%);
+    }
+}
+
+.navLink{
+    color: black !important;
+}
+
+.navLink-drop{
+    color: black;
+}
+
+.navLink:hover,
+.navLink:active{
+    color: salmon;
+}
+
+.loading{
+    height: 400px;
+    width: 400px;
+    border-top-left-radius: 180px 250px;
+    margin: 100px 200px;
+    box-shadow: -15px -15px 60px -20px lightgreen,
+     inset 10px 10px 15px -10px lightblue;
+     background: linear-gradient(-45deg, #6839B0, #332E94, #D324CF, #10ADDC);
+     background-size: 400% 400%;
+     animation: gradient 3s ease infinite;
+     z-index: 10
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Home */
+.home{
+    background: url(../images/bgWhite.png) no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: local;
+}
+
+.react-rotating-text-cursor {
+    animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+    color: black;
+  }
+  
+  @keyframes blinking-cursor {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.blog{
+    background: url(../images/segmentedImages/Top_W.jpg) no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100%;
+    background-attachment: local, scroll;
+    background-position-x: 150%;
+}
+
+.contact{
+    background: url(../images/contact.png) no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: local, scroll;
+    /* background-position:  */
+}
+
+.contact input{
+    height: 45px;
+    font-size: 15px;
+
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+}
+
+.contact .names input{
+    width: 47%;
+}
+
+.contact select{
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 0;
+    font-size: 15px;
+}
+
+.contact textarea{
+    height: 45px;
+    /* border: 1px solid lightgray; */
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 0;
+    font-size: 15px;
+    outline: none;
+}
+
+.background{
+    z-index: -5;
+}
+
+/* NAV BAR */
+
+/* HERO */
+
+.heroContainer{
+    /* background: url(../images/Top.png) no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center; */
+}
+
+.hero{
+    height:90vh;
+    width: 100vw;
+    background: transparent;
+}
+
+.hero h1,
+.heroText{
+    /* color: white; */
+    /* @apply text-7xl; */
+    /* font-size: 5vw; */
+    /* padding-left: 5vw; */
+}
+
+/* MID */
+.mid{
+    /* background: url(../images/Mid.png) no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: local, scroll;
+    background-position: center; */
+}
+
+/* Train for Battle */
+.trainForBattle{
+    /* margin-top: 100px; */
+    height: 70vh;
+    /* width: 100vw; */
+    background-color: transparent;
+}
+.card{
+    background-color: white;
+}
+
+/* WHO WE ARE */
+.whoWeAre{
+    height: 90vh;
+}
+
+/* Case Studies */
+.caseStudies{
+
+}
+
+.border{
+    /* border: 2px solid black; */
+}
+
+/* Latest Trained */
+.latestTrained{
+    margin-top: 210px;
+    height: 70vh;
+    width: 100vw;
+    background-color: transparent;
+}
+
+.equip .latestTrained{
+        background: url(../images/segmentedImages/Bottom_W.jpg) no-repeat fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center;
+}
+
+/* FOOTER */
+ .socialsBox a ,
+ .footerLink{
+    color: red;
+ }
+
+ .contact .socialsBox a{
+     color: 'red'
+ }
+ .socialsBox a {
+     margin-right: 2%;
+ }
+
+ .socialsBox a:hover,
+ .footerLink:hover{
+     color: rgb(33, 149, 243);
+ }
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+

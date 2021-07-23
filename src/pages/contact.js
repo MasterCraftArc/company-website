@@ -3,12 +3,9 @@ import { Link } from 'gatsby';
 import SiteHelmet from '../components/SiteHelmet';
 import Header from '../components/header'
 import verticalLogo from "../images/logo-vertical.png";
-
-
-
-const formContainerStyles = {
-  height: '90vh'
-}
+import { navigate } from "gatsby";
+import axios from "axios"
+import * as qs from "query-string"
 
 const textAreaStyle = {
   height: '200px'
@@ -22,8 +19,7 @@ const buttonStyle = {
 }
 
 const footerStyles = {
-  height: "100vh",
-  width: '100vw'
+
 }
 
 const footerBox = {
@@ -61,19 +57,20 @@ const socialsBox = {
   color: 'black',
   fontSize: '20px',
   paddingLeft: '10%',
-  paddingTop: '5%'
+  paddingTop: '1%'
 }
 
 const addressBox = {
   height: "100%",
   width: "100%",
   color: 'black',
-  lineHeight: '0.5',
+  lineHeight: '1',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  paddingLeft: '10%',
-  fontSize: '20px'
+  paddingLeft: '5%',
+  fontSize: '20px',
+  // color: 'white'
 }
 
 const menuBox = {
@@ -98,10 +95,6 @@ const menu = {
   justifyContent: 'right',
 }
 
-const selectStyles = {
-
-}
-
 const labelStyles = {
   color: 'black',
   fontSize: '18px',
@@ -110,77 +103,102 @@ const labelStyles = {
 
 }
 
-const contact = () => {
-  return (
-    <main className='container-fluid contact' style={ footerStyles }>
-      <SiteHelmet title="Contact" />
-      <Header background="transparent" />
+class Contact extends React.Component {
 
-    <section className="formContainer row flex-wrap" style={formContainerStyles}>
-        <div className="col-6 h-100 border-primary d-flex align-items-center justify-content-center">
-      <div className="container" style = {footerBox}>
+  constructor(props) {
+    super(props)
+    this.domRef = React.createRef()
+    this.state = { feedbackMsg: null }
+  }
 
-      <div style = {logoBox} className=''>
-        <h1 style={mainText} className='ms-5'>Get In Touch.</h1>
-      </div>
+  handleSubmit(event){
+    event.preventDefault()
+    
+    const formData = {}
+    Object.keys(this.refs).map(key => (formData[key] = this.refs[key].value))
 
-      <div className="" style = {middleBox}>
-        <div style= {addressBox}>
-            <p>Defense Unicorns</p>
-            <p>555 E Pikes Peak Ave</p>
-            <p>Colorado Springs, Co 80903</p>
-        </div>
-        {/* <div style= {menuBox}>
-            <Link to="/train" className='footerLink' style={linkColor}>
-                <p style= {menu}>Train</p>
-            </Link>
-            <Link to="/equip" className='footerLink' style={linkColor}>
-                <p style= {menu}>Equip</p>
-            </Link>
-            <Link to="/contact" className='footerLink' style={linkColor}>
-                <p style= {menu}>Contact</p>
-            </Link>
-        </div> */}
-      </div>
+    const axiosOptions = {
+      url: this.props.location.pathname,
+      method: "post",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      data: qs.stringify(formData),
+    }
 
-      <div style = {socialsBox} className= 'socialsBox'>
-        <a href= 'https://www.linkedin.com/company/leapfrog-ai/about/'>
-            <i className="bi bi-linkedin ms-1 me-3"></i>
-        </a>
-        <a href= '#'>
-            <i className="bi bi-twitter me-3"></i>
-        </a>
-        <a href= '#'>
-            <i className="bi bi-facebook me-3"></i>
-        </a> 
-      </div>
+    axios(axiosOptions)
+      .then(response => {
+        navigate("/thankyou")
+      })
+      .catch(err =>
+        this.setState({
+          feedbackMsg: "Form could not be submitted.",
+        })
+      )
+  }
 
-      </div>
+  render() {
 
-        </div>
-
-        <div className="col-6 h-100 border-dark d-flex align-items-center justify-content-center ">
-          <form className='w-75' method="POST" name='contact-form' netlify>
-            <div className='d-flex justify-content-between names'>
-              <input className='form-control' placeholder="What's your first name?"></input>
-              <input className='form-control' placeholder='and your Last?'></input>
+    return (
+      <main className='contact mx-auto p-0 m-0' style={ footerStyles }>
+        <SiteHelmet title="Contact" />
+        <Header textColor="black"/>
+  
+        <section className="formContainer flex flex-col flex-wrap min-h-screen m-0 sm:flex-row ">
+          <div className="w-full sm:w-1/2 h-full border-primary flex items-center justify-center">
+            <div className="container" style = {footerBox}>
+  
+              <div style = {logoBox} className=''>
+                <h1 style={mainText} className='ms-5'>Get In Touch.</h1>
+              </div>
+  
+              <div className="" style = {middleBox}>
+                <div style= {addressBox}>
+                    <p>Defense Unicorns</p>
+                    <p>555 E Pikes Peak Ave</p>
+                    <p>Colorado Springs, Co 80903</p>
+                </div>
+              </div>
+  
+              <div style = {socialsBox} className= 'socialsBox'>
+                <a href= 'https://www.linkedin.com/company/leapfrog-ai/about/'>
+                    <i className="bi bi-linkedin ms-1 me-3"></i>
+                </a>
+                <a href= '#'>
+                    <i className="bi bi-twitter me-3"></i>
+                </a>
+                <a href= '#'>
+                    <i className="bi bi-facebook me-3"></i>
+                </a> 
+              </div>
+  
             </div>
-            <div className="mt-2 mb-3">
-              <input placeholder='Now where can we reach you? (email)' type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-            </div>
-            <label for="textBox" className="form-label mt-4 ms-1" style={labelStyles}>Who are you?</label>
-            <select id='textBox' className="form-select mb-3" aria-label="Default select example" style={selectStyles}>
-              <option defaultValue>Private Company</option>
-              <option value="government">Government</option>
-              <option value="individual">Individual</option>
-            </select>
-            <textarea placeholder="Hi Defense Unicorns I'm really excited to talk..." className='mt-3 w-100 form-control' style={textAreaStyle}></textarea >
-            <button type='submit' className="btn btn-danger me-5 mt-5" style={buttonStyle}>SUBMIT</button>
-          </form>
-        </div>
-      </section>
-    </main>
-  );
+  
+          </div>
+  
+          <div className="w-full sm:w-1/2 pt-6 sm:pt-0 border-dark flex items-center justify-center text-white sm:text-black">
+            <form red={this.domRef} data-netlify="true" className='w-3/4 flex flex-col ' name='Contact' onSubmit={event => this.handleSubmit(event)}>
+            <input ref="form-name" type="hidden" name="form-name" value="Contact" />
+              <div className='flex justify-between names '>
+                <input ref="firstName" name="firstName" className='form-control' placeholder="What's your first name?"></input>
+                <input ref="lastName" name="lastName" className='form-control' placeholder='and your Last?'></input>
+              </div>
+              <div className="mt-2 mb-3 w-100">
+                <input ref="emailAddress" name="emailAddress" placeholder='Now where can we reach you? (email)' type="email" className="form-control w-full " id="exampleInputEmail1"/>
+              </div>
+              <label className="form-label mt-4 ms-1" style={labelStyles}>Who are you?</label>
+              <select ref="submissionFrom" name="submissionFrom" id='textBox' className="form-select mb-3 text-gray-500 bg-gray-50" aria-label="Default select example">
+                <option defaultValue>Private Company</option>
+                <option value="government">Government</option>
+                <option value="individual">Individual</option>
+              </select>
+              <textarea ref="message" name="message" placeholder="Hi Defense Unicorns I'm really excited to talk..." className='mt-3 w-100 form-control bg-transparent' style={textAreaStyle}></textarea >
+              <button type='submit' className="bg-red-500 hover:bg-red-700 text-white me-5 mt-5" style={buttonStyle}>SUBMIT</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    );
+
+  };
 }
 
-export default contact;
+export default Contact;

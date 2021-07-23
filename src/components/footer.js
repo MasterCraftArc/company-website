@@ -4,7 +4,7 @@ import verticalLogo from "../images/logo-vertical.png";
 
 
 const footerStyle = {
-    height: "80vh",
+    height: "100vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -49,7 +49,7 @@ const addressBox = {
     height: "100%",
     width: "60%",
     color: 'white',
-    lineHeight: '0.7%',
+    lineHeight: '1',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -59,7 +59,7 @@ const addressBox = {
 const menuBox = {
     height: "100%",
     width: "40%",
-    lineHeight: '5%',
+    lineHeight: '1',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
