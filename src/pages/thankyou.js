@@ -18,8 +18,8 @@ const Thankyou = () => {
       <SiteHelmet title="Thank You" /> 
    
       <img src={logo} alt="Defense Unicorns Logo" className="w-1/4"></img>
-      <h1 className="mt-16 text-5xl text-black text-center">Thank you for sending us a message!</h1>
-      <h1 className="mt-6 mb-10 text-5xl text-black text-center">We will reach out at our first convenience.</h1>
+      <h1 className="mt-16 text-5xl text-black text-center">Thank you for contacting us!</h1>
+      <h1 className="mt-6 mb-10 text-5xl text-black text-center">We'll be in touch shortly.</h1>
       <Link to="/"><button className="bg-blue-500 hover:bg-blue-400 text-white mr-5 mb-5" style={buttonStyle}>Home</button></Link>
 
     </div>
