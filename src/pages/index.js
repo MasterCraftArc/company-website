@@ -314,7 +314,7 @@ const Train = () => {
       <section className="latestTrained">
         <h2 className="text-center" style={battleText}>Our latest trained.</h2>
 
-        <div className="h-full mt-5">
+        <div className="h-full mt-1">
           <div className="h-full w-3/4 mx-auto mt-10 grid grid-cols-3 place-items-center">
 
             <div className="card h-3/6 md:w-4/5 md:h-4/6 lg:w-5/6 lg:h-4/6 xl:h-4/5 xl:w-4/6 2xl:h-3/5" style={trainedCardStyle}>
