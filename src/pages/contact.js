@@ -126,7 +126,7 @@ class Contact extends React.Component {
 
     axios(axiosOptions)
       .then(response => {
-        navigate("/")
+        navigate("/thankyou")
       })
       .catch(err =>
         this.setState({
