@@ -20,7 +20,7 @@ const buttonStyles = {
 
 const linkStyles = {
     // color: 'white',
-    fontSize: '0.9vw'
+    fontSize: '3vw'
 }
 
 function Header(props) {
@@ -62,16 +62,16 @@ function Header(props) {
         //     </nav>
 
         // </div>
-        <div className="bg-transparent sticky top-0">
-            <nav className="flex px-4 md:shadow-lg items-center relative text-blue-400">
+        <div className="px-24 p-1">
+            <nav style={ {color: props.textColor} } className="flex px-4 items-center relative font-normal text-xl">
                 <div className="md:py-0 py-4">
-                <Link to="/" className="">
-                        <img className="img-fluid" src={logo} alt="Defense Unicorns Logo" style={logoStyle}/>
-                </Link>
+                    <Link to="/" className="">
+                            <img className="img-fluid" src={logo} alt="Defense Unicorns Logo" style={logoStyle}/>
+                    </Link>
                 </div>
                 <ul className="md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0">
                     <li>
-                        <Link to='/' className="flex md:inline-flex p-4 items-center hover:bg-gray-50">
+                        <Link to='/' className="flex md:inline-flex p-4 items-center hover:text-red-300">
                             <span>Train</span>
                         </Link>
                     </li>
@@ -81,30 +81,30 @@ function Header(props) {
                         </Link>
                     </li> */}
                     <li className="relative parent">
-                        <Link to='/equip' className="flex justify-between md:inline-flex p-4 items-center hover:bg-gray-50 space-x-2">
+                        <Link to='/equip' className="flex justify-between md:inline-flex p-4 items-center space-x-2 hover:text-red-300">
                             <span>Equip</span>
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 fill-current pt-1" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
                         </Link>
-                        <ul className="child transition duration-300 md:absolute top-full right-0 md:w-48 bg-white md:shadow-lg md:rounded-b ">
+                        <ul className="child transition duration-300 md:absolute top-full right-0 md:w-48 bg-white md:shadow-lg md:rounded-b text-black ">
                             <li>
-                                <Link href="#" className="flex px-4 py-3 hover:bg-gray-50">
+                                <Link href="#" className="flex px-4 py-3 hover:bg-gray-100">
                                     Web Design
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/equip" className="flex px-4 py-3 hover:bg-gray-50">
+                                <Link to="/equip" className="flex px-4 py-3 hover:bg-gray-100">
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="flex px-4 py-3 hover:bg-gray-50">
+                                <Link href="#" className="flex px-4 py-3 hover:bg-gray-100">
                                     Machine Learning
                                 </Link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <Link to="/contact" className="flex md:inline-flex p-4 items-center hover:bg-gray-50">
+                        <Link to="/contact" className="flex md:inline-flex p-4 items-center hover:text-red-300">
                             <span>Contact</span>
                         </Link>
                     </li>

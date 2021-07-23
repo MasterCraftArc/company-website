@@ -73,8 +73,7 @@ body {
 }
 
 .navLink{
-    color: #86baff !important;
-    font-size: 0.9vw !important;
+    color: black !important;
 }
 
 .navLink-drop{
@@ -118,8 +117,25 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment: local, scroll;
+    background-attachment: local;
 }
+
+.react-rotating-text-cursor {
+    animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+    color: black;
+  }
+  
+  @keyframes blinking-cursor {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 .blog{
     background: url(../images/segmentedImages/Top_W.jpg) no-repeat fixed; 
@@ -128,11 +144,11 @@ body {
     -o-background-size: cover;
     background-size: 100%;
     background-attachment: local, scroll;
-    /* background-position:  */
+    background-position-x: 150%;
 }
 
 .contact{
-    background: url(../images/segmentedImages/Bottom_W.jpg) no-repeat fixed; 
+    background: url(../images/contact.png) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -220,8 +236,8 @@ body {
 /* Train for Battle */
 .trainForBattle{
     /* margin-top: 100px; */
-    /* height: 90vh; */
-    width: 100vw;
+    height: 70vh;
+    /* width: 100vw; */
     background-color: transparent;
 }
 .card{
@@ -230,7 +246,7 @@ body {
 
 /* WHO WE ARE */
 .whoWeAre{
-
+    height: 90vh;
 }
 
 /* Case Studies */
@@ -246,7 +262,7 @@ body {
 .latestTrained{
     margin-top: 210px;
     height: 70vh;
-    /* width: 100vw; */
+    width: 100vw;
     background-color: transparent;
 }
 
@@ -263,7 +279,7 @@ body {
 /* FOOTER */
  .socialsBox a ,
  .footerLink{
-    color: white;
+    color: red;
  }
 
  .contact .socialsBox a{

@@ -18,6 +18,9 @@ import Footer from "../components/footer"
 import Flip from "../components/textFlip"
 import { motion } from "framer-motion"
 import TextLoop from "react-text-loop";
+import Typist from "react-typist"
+import ReactRotatingText from 'react-rotating-text' //https://reactjsexample.com/a-simple-component-to-create-a-typewriter-effect/
+
 // import { BodyText } from "./ui";
 
 // styles
@@ -53,8 +56,8 @@ const battleText = {
 }
 
 const cardStyle = {
-  maxWidth: "235px",
-  maxHeight: "370px",
+  width: "235px",
+  height: "370px",
   borderRadius: "25px",
   backgroundColor: "rgba(65, 255, 255, 0.6)",
   boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)",
@@ -109,12 +112,14 @@ const buttonStyle = {
 const caseStudyText = {
   // color: 'white',
   // fontSize: '18px',
-  padding: '25px 150px 0px 0',
+  // padding: '25px 150px 0px 0',
 }
 
 const trainedCardStyle = {
   // width: "56%",
   // height: "100%",
+  maxWidth: "235px",
+  maxHeight: "370px",
   borderRadius: 0,
   // boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
 }
@@ -188,9 +193,10 @@ const Train = () => {
       className="loading w-50 h-50"
       /> */}
       {/* <div className="heroContainer w-full"> */}
-        <Header></Header>
+        <Header textColor="white"/>
         <section className="hero min-h-screen flex flex-col justify-center border">
             <h1 className='text-5xl md:text-5xl xl:text-5xl 2xl:text-6xl pl-24'>The World Needs a Hero...</h1>
+
           {/* <Flip initial="Hero" change="Friend, Developer, DevSecOps Engineer"/> */}
 
             <motion.h1 variants={sentenceAnim} initial='hidden' animate='visible' className="pl-24 lg:text-6xl xl:pl-24 xl:text-6xl 2xl:text-7xl text-red-500 font-bold" style={heroTextBold}>{
@@ -202,6 +208,7 @@ const Train = () => {
                 )
               })
             }
+            
             <motion.span 
                 initial={ {opacity: 0} }
                 animate={ {opacity: 1} }
@@ -211,12 +218,7 @@ const Train = () => {
                   }
                 }
             > 
-                  <TextLoop interval='1000' springConfig={{ stiffness: 180, damping: 8 }} delay='2000'>
-                      <span sty> You.</span>
-                      <Link to="/"> a Developer.</Link>
-                      <span> a Frog &#128056;</span>
-                      <Link to="/"> a Unicorn. &#129412;</Link>
-                  </TextLoop>{" "}
+                <ReactRotatingText items={[' You', ' a Developer', ' a Unicorn']} />
               </motion.span>
             </motion.h1>
             
@@ -227,12 +229,12 @@ const Train = () => {
 
       {/* <div className="mid border-2 border-red-50 m-0"> */}
         <section className="trainForBattle h-screen border">
-          <h2 className="text-center lg:mt-44" style={battleText}>Let us Train you for Battle</h2>
+          <h2 className="text-center lg:mt-16" style={battleText}>Let us Train you for Battle</h2>
 
-        <div className="grid grid-cols-3 place-items-center mt-5 mx-auto lg:w-4/5 h-3/4 p-20 m:p-0">
+        <div className="flex justify-evenly mt-16 mx-auto h-1/2 w-4/5">
 
             
-            <div className="card place-self-end md:p-15 md:w-4/5 md:h-3/4 lg:p-5 lg:w-full lg:h-full flex flex-col justify-evenly" style={cardStyle}>
+            <div className="card lg:p-5 lg:w-full lg:h-full flex flex-col justify-evenly" style={cardStyle}>
               <div className="flex justify-center items-center w-full">
                 <img src={heroes} style={magnifierStyle} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
               </div>
@@ -243,7 +245,7 @@ const Train = () => {
               </div>
             </div>
 
-            <div className="card place-self-center md:p-15 md:w-4/5 md:h-3/4 lg:p-5 lg:w-full lg:h-full flex flex-col justify-evenly" style={cardStyle}>
+            <div className="card lg:p-5 lg:w-full lg:h-full flex flex-col justify-evenly" style={cardStyle}>
               <div className="flex justify-center items-center w-full">
                 <img src={aquisitions} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
               </div>
@@ -255,7 +257,7 @@ const Train = () => {
               </div>
             </div>
 
-            <div className="card place-self-start md:p-15 md:w-4/5 md:h-3/4 lg:p-5 lg:w-full lg:h-full flex flex-col justify-evenly" style={cardStyle}>
+            <div className="card lg:p-5 flex flex-col justify-evenly" style={cardStyle}>
               <div className="flex justify-center items-center w-full">
                 <img src={devsecops} style={cardImg} className="card-img-top img-fluid" alt="unicorn under magnifying glass"/>
               </div>
@@ -271,19 +273,18 @@ const Train = () => {
         </section>
 
 
-        <section className="whoWeAre pl-56 pt-56 lg:pl-44 lg:pt-64 lg:pr-0 xl:pr-20 xl:pb-20 border">
-          <div className="px-5 lg:pl-44 grid grid-cols-2">
-            <div className="">
+        <section className="whoWeAre md:pl-30 md:pt-30 lg:pl-44 lg:pt-64 lg:pr-0 xl:pr-20 xl:pb-20 border">
+          <div className="px-5 lg:pl-44 grid p-56 grid-cols-2">
+            <div className="pr-10 p-16 2xl:p-32">
+              <img src={whoWeAre} className="object-cover lg:w-full" alt="unicorn under magnifying glass"/>
+            </div>
+            <div className="flex flex-col justify-center px-10">
               <h2 style={altTitle}>Who we are</h2>
-              <p className="lg:pt-10 lg:pb-32 lg:pr-40 xl:pr-8 text-3xl xl:pb-16 font-light" style={whoWeAreText}>We are defense innovators, software engineers, and veterans that believe the future wil belong to mission-driven organizations that can securely and continuously deploy new software solutions.</p>
-              
+              <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-8 text-3xl xl:pb-16 font-light" style={whoWeAreText}>We are defense innovators, software engineers, and veterans that believe the future wil belong to mission-driven organizations that can securely and continuously deploy new software solutions.</p>
               <div className="">
                 <Link to="/equip"><button className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5" style={buttonStyle}>LEARN MORE</button></Link>
-                <Link to="/contact"><button className="bg-blue-500 hover:bg-blue-700 text-white lg:ml-5" style={buttonStyle}>CONTACT US</button></Link>
+                <Link to="/contact"><button className="bg-blue-500 hover:bg-blue-700 text-white xl:ml-5" style={buttonStyle}>CONTACT US</button></Link>
               </div>
-            </div>
-            <div className="object-cover">
-              <img src={whoWeAre} style={WhoWeAreStyle} className="" alt="unicorn under magnifying glass"/>
             </div>
           </div>
         </section>
@@ -293,20 +294,19 @@ const Train = () => {
 
 
 
-      <section className="caseStudies border mt-32 xl:p-10">
+      <section className="caseStudies border mt-72 xl:p-10">
         <div className="grid grid-cols-2 px-5">
-          <div className="p-16 pt-0 object-cover">
-            <img src={caseStudies} style={WhoWeAreStyle} className="img-fluid" alt="unicorn under magnifying glass"/>
-          </div>
-
-          <div className="">
+          <div className="flex flex-col justify-center px-10">
             <h2 style={altTitle}>Case Studies</h2>
-            <p className="2xl:pr-56 text-3xl" style={caseStudyText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
-            <img className="w-1/2 py-5 pt-10" src={keyPoints} alt="Case Study Icons for Objectives solutions and results"></img>
+            <p className="p-0 sm:pt-10 xl:pr-44 text-3xl" style={caseStudyText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
+            <img className="md:w-full xl:w-1/2 py-5 pt-10" src={keyPoints} alt="Case Study Icons for Objectives solutions and results"></img>
 
             <div className="pt-7">
               <Link to="/equip"><button className="bg-blue-500 hover:bg-blue-700 text-white" style={buttonStyle}>LEARN MORE</button></Link>
             </div>
+          </div>
+          <div className="p-16 pt-0 xl:w-3/4 object-cover">
+            <img src={caseStudies} style={WhoWeAreStyle} className="" alt="unicorn under magnifying glass"/>
           </div>
         </div>
       </section>

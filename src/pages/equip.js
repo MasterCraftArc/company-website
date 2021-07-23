@@ -123,7 +123,7 @@ const Equip = () => {
     <div className="container-fluid equip blog" style={pageStyles}>
       <SiteHelmet title="Blog" /> 
       
-      <Header />
+      <Header textColor="white"/>
       <section className="hero flex flex-col justify-center">
           <h1 className='pl-12'>
             <p style={showcase}>Showcase your thought</p>

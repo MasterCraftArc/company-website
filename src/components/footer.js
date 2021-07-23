@@ -4,7 +4,7 @@ import verticalLogo from "../images/logo-vertical.png";
 
 
 const footerStyle = {
-    height: "80vh",
+    height: "100vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
