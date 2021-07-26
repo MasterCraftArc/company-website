@@ -176,7 +176,7 @@ function testScroll(){
 // markup
 const Train = () => {
   return (
-    <main style={pageStyles} className="home flex flex-col" onScroll={ testScroll()}>
+    <main style={pageStyles} className="home flex flex-col" onScroll={ () => testScroll()}>
       <SiteHelmet title="Train" description="Become a DevSecOps Hero with Defense Unicorns"/>
       {/* <motion.div 
       initial={ {opacity: 1, scale: 5} }

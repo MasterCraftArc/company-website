@@ -3,7 +3,8 @@ import {Link} from "gatsby"
 import logo from "../images/logo.png"
 
 const logoStyle = {
-    maxWidth: "15vh"
+    maxWidth: "15vh",
+    filter: 'drop-shadow(1px 1px 2px lightgray)'
 }
 
 const navStyle = {
@@ -62,7 +63,7 @@ function Header(props) {
         //     </nav>
 
         // </div>
-        <div className="px-24 p-1">
+        <div className="px-24 p-1 text-white">
             <nav style={ {color: props.textColor} } className="flex px-4 items-center relative font-normal text-xl">
                 <div className="md:py-0 py-4">
                     <Link to="/" className="">

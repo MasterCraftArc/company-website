@@ -11,8 +11,8 @@ const footerStyle = {
 }
 
 const footerBox = {
-    height: "50%",
-    width: "30%",
+    height: "30%",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
 }
@@ -21,7 +21,9 @@ const logoBox = {
     height: "50%",
     width: "100%",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "front-end",
+    alignItems: "baseline",
+    
 
 }
 
