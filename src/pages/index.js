@@ -17,8 +17,8 @@ import loadingBG from "../images/loading.png"
 import Footer from "../components/footer"
 import Flip from "../components/textFlip"
 import { motion } from "framer-motion"
-import TextLoop from "react-text-loop";
-import Typist from "react-typist"
+// import TextLoop from "react-text-loop";
+// import Typist from "react-typist"
 import ReactRotatingText from 'react-rotating-text' //https://reactjsexample.com/a-simple-component-to-create-a-typewriter-effect/
 
 // import { BodyText } from "./ui";
