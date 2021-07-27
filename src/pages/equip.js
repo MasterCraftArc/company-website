@@ -199,6 +199,7 @@ const Equip = () => {
             </div>
 
 
+
             <div className="card border-2 border-solid border-blue-400" style={trainedCardStyle} data-category='Culture' ref={cardRefs[3]}>
               <img src={pc} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
@@ -257,11 +258,13 @@ const Equip = () => {
         </div>
 
         <div className="h-3/4 px-16 md:px-56 w-full">
-          <img src={videos} className="xl:w-5/6 mx-auto"></img>
+          {/* <img src={videos} className="xl:w-5/6 mx-auto"></img> */}
+          <h1 className="text-center text-3xl font-bold text-blue-400">Coming Soon!</h1>
         </div>
 
       </section>
-
+      
+      {/* <Footer/> */}
     </div>
   );
 }

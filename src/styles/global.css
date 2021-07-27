@@ -317,6 +317,35 @@ body {
 /* ADDITIONAL STYLES
 /*******************************************/
 
+.card{
 
+}
 
+.trainForBattle .card:hover{
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.50);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    /* font-weight: bold; */
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(-45deg, #3f3d56, #9441fa, #12cbc4, #e92efb);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    cursor: pointer;
+  }
+
+.latestTrained .card:hover{
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.40);
+  }
 
