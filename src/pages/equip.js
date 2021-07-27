@@ -17,7 +17,7 @@ import tech from "../images/tech.png"
 import {useRef} from 'react'
 import Card from "../components/card"
 import videos from "../images/videos.png"
-
+import monolithic from '../images/blog1.png';
 
 const pageStyles = {
   color: 'black',
@@ -183,18 +183,18 @@ const Equip = () => {
                 <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">People</div>
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Aquisition 1</h5>
                 <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
-                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
+                <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div> 
 
             <div className="card border-2 border-solid border-blue-400" style={trainedCardStyle} data-category='Process' ref={cardRefs[2]}>
-              <img src={pcGear} className="card-img-top" alt="unicorn under magnifying glass"/>
+              <img src={monolithic} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
               <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">Process</div>
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>DevSecOps 1</h5>
-                <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
+                <h5 className="card-title text-lg px-1 mt-3 mb-5" style={trainedCardTitle}>Key Terms Cloud-Native Software Delivery: A Fact Sheet</h5>
+                <p className="card-text mb-3" style={trainedCardText}>Modern software is moving fast. While the associated lexicon is continuously changing...</p>
 
-                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
+                <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
@@ -205,7 +205,7 @@ const Equip = () => {
               <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">Culture</div>
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Case-Studies 1</h5>
                 <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
-                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
+                <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
@@ -215,7 +215,7 @@ const Equip = () => {
               <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">Culture</div>
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Case-Studies 2</h5>
                 <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
-                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
+                <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
@@ -225,7 +225,7 @@ const Equip = () => {
               <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">People</div>
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Aquisition 2</h5>
                 <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
-                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
+                <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
@@ -236,7 +236,7 @@ const Equip = () => {
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>DevSecOps 2</h5>
                 <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
 
-                <Link to="/blog" style={trainedCardLink} >READ MORE</Link>
+                <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
