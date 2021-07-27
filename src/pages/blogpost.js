@@ -37,10 +37,21 @@ const BlogPost = () => {
             Modern software is moving fast. While the associated lexicon is continuously changing, there are a number of core concepts and key terms that one must be familiar with in order to effectively drive digital transformation in their organization. Often it's difficult to find these terms in concepts in one place; even more frequently, it's challenging to determine the connections and interrelationships among these concepts. The below is intended to serve as a living guide for those embarking on their own software transformation journey - especially those with a need for cloud-native capabilities. 
           </p>
 
-          <h3 className="mt-16 text-2xl md:text-3xl font-bold underline">Containers</h3>
+          <h3 className="mt-16 text-xl sm:text-2xl md:text-3xl font-bold underline">Containers</h3>
           <p className="text-xl sm:text-2xl md:text-3xl font-normal">
             Containers are packages of software that wrap all code, dependencies, and settings for a given application into a single, fully executable unit. Containerization allows for a single application and all of the components needed to run it (e.g., databases, configurations, default settings, etc) to be isolated and abstracted from the computing environment. This provides flexibility to leverage and deploy applications enterprise-wide, on any infrastructure (i.e., on-premise, cloud, or hybrid), and reduces the risk of vendor-lock with a single cloud service provider. Scaling the use of containers across the Department of Defense can increase software reuse across Components and significantly reduce the overhead burden on developers deploying the applications into production.
           </p>
+
+          <h3 className="mt-16 text-xl sm:text-2xl md:text-3xl font-bold underline">Microservices</h3>
+          <p className="text-xl sm:text-2xl md:text-3xl font-normal">
+          In a microservice-based approach to software system architecture, the system is decomposed into many individual software applications that each perform discrete tasks or processes. The individual applications communicate via well-defined application programming interfaces (APIs). Known as “microservices,” each application is fully abstractable from the rest of the system. For example, each microservice has its own, isolated business process flow, logic, data access layer, and codebase. Microservices represent an alternative approach to traditional, monolithic architectures for software systems. By decomposing complex software systems into smaller, self-contained functional units, microservices architectures enhance system reliability and limit the scope and scale of impact when an issue is detected. In this same manner, microservices architectures enable wide, cost-effective scalability and limit the amount of overhead or institutional knowledge required by individual developers. Rather than needing to learn the entire system and its dependencies, developers can work more efficiently, on smaller teams, and focus on ensuring the dependability of an individual microservice.
+          </p>
+            <img></img>
+          <h3 className="mt-16 text-xl sm:text-2xl md:text-3xl font-bold underline">Microservices</h3>
+          <p className="text-xl sm:text-2xl md:text-3xl font-normal">
+            
+          </p>
+
         </main>
       </article>
 
