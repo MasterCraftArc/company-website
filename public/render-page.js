@@ -5,23 +5,15 @@
 /*!**********************************!*\
   !*** ./.cache/api-runner-ssr.js ***!
   \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "apiRunner": () => (/* binding */ apiRunner),
-/* harmony export */   "apiRunnerAsync": () => (/* binding */ apiRunnerAsync)
-/* harmony export */ });
 var plugins = [{
   name: 'gatsby-plugin-react-helmet',
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr */ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js"),
   options: {
     "plugins": []
   }
-}];
-/* global plugins */
-// During bootstrap, we write requires at top of this file which looks like:
+}]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
 //     plugin: require("/path/to/plugin1/gatsby-ssr.js"),
@@ -33,88 +25,51 @@ var plugins = [{
 //   },
 // ]
 
-const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js");
+const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js"); // Run the specified API in any plugins that have implemented it
 
-function augmentErrorWithPlugin(plugin, err) {
-  if (plugin.name !== `default-site-plugin`) {
-    // default-site-plugin is user code and will print proper stack trace,
-    // so no point in annotating error message pointing out which plugin is root of the problem
-    err.message += ` (from plugin: ${plugin.name})`;
-  }
 
-  throw err;
-}
-
-function apiRunner(api, args, defaultReturn, argTransform) {
+module.exports = (api, args, defaultReturn, argTransform) => {
   if (!apis[api]) {
     console.log(`This API doesn't exist`, api);
-  }
+  } // Run each plugin in series.
+  // eslint-disable-next-line no-undef
 
-  const results = [];
-  plugins.forEach(plugin => {
-    const apiFn = plugin.plugin[api];
 
-    if (!apiFn) {
-      return;
+  let results = plugins.map(plugin => {
+    if (!plugin.plugin[api]) {
+      return undefined;
     }
 
     try {
-      const result = apiFn(args, plugin.options);
+      const result = plugin.plugin[api](args, plugin.options);
 
       if (result && argTransform) {
         args = argTransform({
           args,
           result
         });
-      } // This if case keeps behaviour as before, we should allow undefined here as the api is defined
-      // TODO V4
-
-
-      if (typeof result !== `undefined`) {
-        results.push(result);
       }
+
+      return result;
     } catch (e) {
-      augmentErrorWithPlugin(plugin, e);
-    }
-  });
-  return results.length ? results : [defaultReturn];
-}
-async function apiRunnerAsync(api, args, defaultReturn, argTransform) {
-  if (!apis[api]) {
-    console.log(`This API doesn't exist`, api);
-  }
-
-  const results = [];
-
-  for (const plugin of plugins) {
-    const apiFn = plugin.plugin[api];
-
-    if (!apiFn) {
-      continue;
-    }
-
-    try {
-      const result = await apiFn(args, plugin.options);
-
-      if (result && argTransform) {
-        args = argTransform({
-          args,
-          result
-        });
-      } // This if case keeps behaviour as before, we should allow undefined here as the api is defined
-      // TODO V4
-
-
-      if (typeof result !== `undefined`) {
-        results.push(result);
+      if (plugin.name !== `default-site-plugin`) {
+        // default-site-plugin is user code and will print proper stack trace,
+        // so no point in annotating error message pointing out which plugin is root of the problem
+        e.message += ` (from plugin: ${plugin.name})`;
       }
-    } catch (e) {
-      augmentErrorWithPlugin(plugin, e);
-    }
-  }
 
-  return results.length ? results : [defaultReturn];
-}
+      throw e;
+    }
+  }); // Filter out undefined results.
+
+  results = results.filter(result => typeof result !== `undefined`);
+
+  if (results.length > 0) {
+    return results;
+  } else {
+    return [defaultReturn];
+  }
+};
 
 /***/ }),
 
@@ -6204,9 +6159,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom/server */ "react-dom/server");
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-runner-ssr */ "./.cache/api-runner-ssr.js");
+/* harmony import */ var _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__);
 
-
-/* global BROWSER_ESM_ONLY */
 
 
  // import testRequireError from "./test-require-error"
@@ -6291,7 +6245,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
     postBodyComponents = components;
   };
 
-  (0,_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__.apiRunner)(`onRenderBody`, {
+  _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3___default()(`onRenderBody`, {
     setHeadComponents,
     setHtmlAttributes,
     setBodyAttributes,
@@ -6300,7 +6254,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
     setBodyProps,
     pathname: pagePath
   });
-  (0,_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__.apiRunner)(`onPreRenderHTML`, {
+  _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3___default()(`onPreRenderHTML`, {
     getHeadComponents,
     replaceHeadComponents,
     getPreBodyComponents,
@@ -6322,7 +6276,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
     htmlAttributes,
     bodyAttributes,
     preBodyComponents,
-    postBodyComponents: postBodyComponents.concat([ true && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
+    postBodyComponents: postBodyComponents.concat([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
       key: `polyfill`,
       src: "/polyfill.js",
       noModule: true
@@ -6332,7 +6286,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
       key: `commons`,
       src: "/commons.js"
-    })].filter(Boolean))
+    })])
   });
   htmlStr = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_2__.renderToStaticMarkup)(htmlElement);
   htmlStr = `<!DOCTYPE html>${htmlStr}`;
