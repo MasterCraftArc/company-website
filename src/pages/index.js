@@ -176,7 +176,7 @@ function testScroll(){
 // markup
 const Train = () => {
   return (
-    <main style={pageStyles} className="home flex flex-col" onScroll={ testScroll()}>
+    <main style={pageStyles} className="home flex flex-col" onScroll={ () => testScroll()}>
       <SiteHelmet title="Train" description="Become a DevSecOps Hero with Defense Unicorns"/>
       {/* <motion.div 
       initial={ {opacity: 1, scale: 5} }
@@ -194,7 +194,7 @@ const Train = () => {
       /> */}
       {/* <div className="heroContainer w-full"> */}
         <Header textColor="white"/>
-        <section className="hero min-h-screen flex flex-col justify-center border">
+        <section className="hero min-h-screen flex flex-col justify-center ">
             <h1 className='text-5xl md:text-5xl xl:text-5xl 2xl:text-6xl pl-24'>The World Needs a Hero...</h1>
 
           {/* <Flip initial="Hero" change="Friend, Developer, DevSecOps Engineer"/> */}
@@ -228,7 +228,7 @@ const Train = () => {
       {/* </div> */}
 
       {/* <div className="mid border-2 border-red-50 m-0"> */}
-        <section className="trainForBattle h-screen border">
+        <section className="trainForBattle h-screen ">
           <h2 className="text-center lg:mt-16" style={battleText}>Let us Train you for Battle</h2>
 
         <div className="flex justify-evenly mt-16 mx-auto h-1/2 w-4/5">
@@ -273,7 +273,7 @@ const Train = () => {
         </section>
 
 
-        <section className="whoWeAre md:pl-30 md:pt-30 lg:pl-44 lg:pt-64 lg:pr-0 xl:pr-20 xl:pb-20 border">
+        <section className="whoWeAre md:pl-30 md:pt-30 lg:pl-44 lg:pt-64 lg:pr-0 xl:pr-20 xl:pb-20 ">
           <div className="px-5 lg:pl-44 grid p-56 grid-cols-2">
             <div className="pr-10 p-16 2xl:p-32">
               <img src={whoWeAre} className="object-cover lg:w-full" alt="unicorn under magnifying glass"/>
@@ -294,7 +294,7 @@ const Train = () => {
 
 
 
-      <section className="caseStudies border mt-72 xl:p-10">
+      <section className="caseStudies  mt-72 xl:p-10">
         <div className="grid grid-cols-2 px-5">
           <div className="flex flex-col justify-center px-10">
             <h2 style={altTitle}>Case Studies</h2>

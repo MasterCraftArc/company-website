@@ -32,14 +32,15 @@
     clear: both;
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 /******************************************
 /* BASE STYLES
 /*******************************************/
 
-html{
+html {
     font-size: 12px;
 }
 
@@ -47,7 +48,7 @@ body {
     line-height: 1.4;
     font-family: Helvetica, Arial, sans-serif;
     background-color: transparent;
-    color: black;
+    /* color: white; */
 }
 
 
@@ -57,62 +58,65 @@ body {
 
 /** NAV **/
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
     .parent:hover .child {
-        opacity:1;
-        height:auto;
-        overflow:none;
+        opacity: 1;
+        height: auto;
+        overflow: none;
         transform: translateY(0);
     }
+
     .child {
-        opacity:0;
-        height:0;
-        overflow:hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
         transform: translateY(-10%);
     }
 }
 
-.navLink{
+.navLink {
     color: black !important;
 }
 
-.navLink-drop{
+.navLink-drop {
     color: black;
 }
 
 .navLink:hover,
-.navLink:active{
+.navLink:active {
     color: salmon;
 }
 
-.loading{
+.loading {
     height: 400px;
     width: 400px;
     border-top-left-radius: 180px 250px;
     margin: 100px 200px;
     box-shadow: -15px -15px 60px -20px lightgreen,
-     inset 10px 10px 15px -10px lightblue;
-     background: linear-gradient(-45deg, #6839B0, #332E94, #D324CF, #10ADDC);
-     background-size: 400% 400%;
-     animation: gradient 3s ease infinite;
-     z-index: 10
+        inset 10px 10px 15px -10px lightblue;
+    background: linear-gradient(-45deg, #6839B0, #332E94, #D324CF, #10ADDC);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+    z-index: 10
 }
 
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
 /* Home */
-.home{
-    background: url(../images/bgWhite.png) no-repeat fixed; 
+.home {
+    background: url(../images/bgWhite.png) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -123,32 +127,34 @@ body {
 .react-rotating-text-cursor {
     animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
     color: black;
-  }
-  
-  @keyframes blinking-cursor {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
+}
 
-.blog{
-    background: url(../images/segmentedImages/Top_W.jpg) no-repeat fixed; 
+@keyframes blinking-cursor {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.blog {
+    background: url(../images/blogBG.png) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: local, scroll;
-    background-position-x: 150%;
+    /* background-position-x: 150%; */
 }
 
-.contact{
-    background: url(../images/contact.png) no-repeat fixed; 
+.contact {
+    background: url(../images/contact.png) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -157,7 +163,7 @@ body {
     /* background-position:  */
 }
 
-.contact input{
+.contact input {
     height: 45px;
     font-size: 15px;
 
@@ -168,11 +174,11 @@ body {
     background-color: transparent;
 }
 
-.contact .names input{
+.contact .names input {
     width: 47%;
 }
 
-.contact select{
+.contact select {
     height: 40px;
     border: none;
     border-bottom: 2px solid red;
@@ -180,7 +186,7 @@ body {
     font-size: 15px;
 }
 
-.contact textarea{
+.contact textarea {
     height: 45px;
     /* border: 1px solid lightgray; */
     border: none;
@@ -190,7 +196,7 @@ body {
     outline: none;
 }
 
-.background{
+.background {
     z-index: -5;
 }
 
@@ -198,7 +204,7 @@ body {
 
 /* HERO */
 
-.heroContainer{
+.heroContainer {
     /* background: url(../images/Top.png) no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -208,14 +214,14 @@ body {
     background-position: center; */
 }
 
-.hero{
-    height:90vh;
+.hero {
+    height: 90vh;
     width: 100vw;
     background: transparent;
 }
 
 .hero h1,
-.heroText{
+.heroText {
     /* color: white; */
     /* @apply text-7xl; */
     /* font-size: 5vw; */
@@ -223,7 +229,7 @@ body {
 }
 
 /* MID */
-.mid{
+.mid {
     /* background: url(../images/Mid.png) no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -234,65 +240,82 @@ body {
 }
 
 /* Train for Battle */
-.trainForBattle{
+.trainForBattle {
     /* margin-top: 100px; */
     height: 70vh;
     /* width: 100vw; */
     background-color: transparent;
 }
-.card{
+
+.card {
     background-color: white;
 }
 
 /* WHO WE ARE */
-.whoWeAre{
+.whoWeAre {
     height: 90vh;
 }
 
 /* Case Studies */
-.caseStudies{
+.caseStudies {}
 
-}
-
-.border{
-    /* border: 2px solid black; */
+.border {
+    border: 2px solid black;
 }
 
 /* Latest Trained */
-.latestTrained{
+.latestTrained {
     margin-top: 210px;
     height: 70vh;
     width: 100vw;
     background-color: transparent;
 }
 
-.equip .latestTrained{
-        background: url(../images/segmentedImages/Bottom_W.jpg) no-repeat fixed; 
+.equip .latestTrained {
+    /* background: url(../images/segmentedImages/Bottom_W.jpg) no-repeat fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         background-attachment: scroll;
-        background-position: center;
+        background-position: center; */
+}
+
+/*** Blog Posts **/
+.postHeader {
+    height: 40vh;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, transparent 100%);
+}
+
+.postHeaderContainer {
+    height: 100%;
+    background: url(../images/postBanner.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
 }
 
 /* FOOTER */
- .socialsBox a ,
- .footerLink{
+.socialsBox a,
+.footerLink {
     color: red;
- }
+}
 
- .contact .socialsBox a{
-     color: 'red'
- }
- .socialsBox a {
-     margin-right: 2%;
- }
+.contact .socialsBox a {
+    color: 'red'
+}
 
- .socialsBox a:hover,
- .footerLink:hover{
-     color: rgb(33, 149, 243);
- }
+.socialsBox a {
+    margin-right: 2%;
+}
+
+.socialsBox a:hover,
+.footerLink:hover {
+    color: rgb(33, 149, 243);
+}
 
 
 
@@ -301,6 +324,32 @@ body {
 /* ADDITIONAL STYLES
 /*******************************************/
 
+.card {}
 
+.trainForBattle .card:hover {
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.50);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    /* font-weight: bold; */
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(-45deg, #3f3d56, #9441fa, #12cbc4, #e92efb);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    cursor: pointer;
+}
 
-
+.latestTrained .card:hover {
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.40);
+}

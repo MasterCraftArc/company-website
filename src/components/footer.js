@@ -6,22 +6,27 @@ import verticalLogo from "../images/logo-vertical.png";
 const footerStyle = {
     height: "100vh",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
 }
 
 const footerBox = {
-    height: "50%",
-    width: "30%",
+    height: "30%",
+    width: "100%",
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
+    
+
+
 }
 
 const logoBox = {
     height: "50%",
     width: "100%",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "front-end",
+    alignItems: "baseline",
+    
 
 }
 

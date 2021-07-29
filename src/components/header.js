@@ -1,9 +1,11 @@
 import * as React from "react";
 import {Link} from "gatsby"
 import logo from "../images/logo.png"
+import { Menu } from '@headlessui/react'
 
 const logoStyle = {
-    maxWidth: "15vh"
+    maxWidth: "15vh",
+    filter: 'drop-shadow(1px 1px 2px lightgray)'
 }
 
 const navStyle = {
@@ -23,98 +25,119 @@ const linkStyles = {
     fontSize: '3vw'
 }
 
-function Header(props) {
+const menuStyle = {
+    height: '50px'
+}
+
+function Header({ fixed }) {
+    const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
-        // <div style={ { background: props.background }}>
-        //     <nav className="navbar sticky-top navbar-expand-lg px-5 mx-5">
-        //         <div className="container-fluid">
-        //             <div className="col-2">
-                        // <Link to="/" className="">
-                        //     <img className="img-fluid" src={logo} alt="Defense Unicorns Logo" style={logoStyle}/>
-                        // </Link>
-        //             </div>
+        //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
+        <>
+            <nav className="relative flex flex-wrap items-center justify-between">
+            <div className="container mx-auto flex flex-wrap items-center justify-between">
+                <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                <Link
+                    className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                    to="/"
+                >
+                    <img className="img-fluid" src={logo} alt="Defense Unicorns Logo" style={logoStyle}/>
+                </Link>
+                <button
+                    className="text-white cursor-pointer text-4xl leading-none px-1 py-0 outline-none rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                    type="button"
+                    onClick={() => setNavbarOpen(!navbarOpen)}
+                >
+                    <i className="bi bi-list"></i>
+                </button>
+            </div>
+            <div
+              className={
+                "lg:flex flex-grow items-center bg-white rounded-xl lg:bg-transparent py-2" +
+                (navbarOpen ? " flex" : " hidden")
+              }
+              id="example-navbar-danger"
+            >
+              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+                <li className="nav-item">
+                  <Link
+                    className="px-3  text-lg  uppercase text-black lg:text-white hover:text-red-400"
+                    to="/"
+                  >
+                    <span className="ml-2">Train</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                   <div className="hidden lg:inline-block relative parent">
+                       <Link to='/equip' className="text-lg flex uppercase text-black lg:text-white hover:text-red-400 border-1 border-solid border-red-300">
+                           <span className="ml-5">Equip <i class="bi bi-chevron-down"></i></span>
+                       </Link>
+                       <ul className=" hidden lg:inline-block child transition duration-300 md:absolute top-full left-0 md:w-48 bg-white md:shadow-lg md:rounded-b text-black ">
+                           <li>
+                               <Link href="#" className="flex px-4 py-3 hover:bg-gray-100">
+                                   Web Design
+                               </Link>
+                           </li>
+                           <li>
+                               <Link to="/equip" className="flex px-4 py-3 hover:bg-gray-100">
+                                   Blog
+                               </Link>
+                           </li>
+                           <li>
+                               <Link href="#" className="flex px-4 py-3 hover:bg-gray-100">
+                                   Machine Learning
+                               </Link>
+                           </li>
+                       </ul>
+                   </div>
+                   <div className="lg:hidden">
+                    <Menu>
+                        <Menu.Button className="text-xl flex uppercase text-black ml-5">More <i class="bi bi-chevron-down"></i></Menu.Button>
+                        
+                        <Menu.Items 
+                            className="flex flex-col ml-10" 
 
+                        >
+                            <Menu.Item disabled>
+                                <Link href="#" className="text-blue-500 font-bold uppercase flex px-4 py-3 hover:bg-gray-100">
+                                   Web Design
+                               </Link>
+                            </Menu.Item>
 
-        //             <button style={buttonStyles} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        //                 <i className="bi bi-list"></i>
-        //             </button>
-
-        //             <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        //             <ul className="navbar-nav text-end">
-        //                 <li className="nav-item">
-        //                     <Link to="/"><button className="btn navLink" styles={linkStyles}>TRAIN</button></Link>
-        //                 </li>
-        //                 <li className="nav-item dropdown">
-        //                 <a styles={linkStyles} className="nav-link dropdown-toggle navLink" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        //                     EQUIP
-        //                 </a>
-        //                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        //                     <li><Link to="/info"><button className="btn .navLink-drop">info</button></Link></li>
-        //                     <li><Link to="/equip"><button className="btn .navLink-drop">equip</button></Link></li>
-        //                 </ul>
-        //                 </li>
-        //                 <li className="nav-item">
-        //                     <Link to="/contact"><button className="btn navLink">CONTACT</button></Link>
-        //                 </li>
-        //             </ul>
-        //             </div>
-        //         </div>
-        //     </nav>
-
-        // </div>
-        <div className="px-24 p-1">
-            <nav style={ {color: props.textColor} } className="flex px-4 items-center relative font-normal text-xl">
-                <div className="md:py-0 py-4">
-                    <Link to="/" className="">
-                            <img className="img-fluid" src={logo} alt="Defense Unicorns Logo" style={logoStyle}/>
-                    </Link>
-                </div>
-                <ul className="md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0">
-                    <li>
-                        <Link to='/' className="flex md:inline-flex p-4 items-center hover:text-red-300">
-                            <span>Train</span>
-                        </Link>
-                    </li>
-                    {/* <li>
-                        <Link to='/equip' className="flex md:inline-flex p-4 items-center hover:bg-gray-50">
-                            <span>Equip</span>
-                        </Link>
-                    </li> */}
-                    <li className="relative parent">
-                        <Link to='/equip' className="flex justify-between md:inline-flex p-4 items-center space-x-2 hover:text-red-300">
-                            <span>Equip</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 fill-current pt-1" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-                        </Link>
-                        <ul className="child transition duration-300 md:absolute top-full right-0 md:w-48 bg-white md:shadow-lg md:rounded-b text-black ">
-                            <li>
-                                <Link href="#" className="flex px-4 py-3 hover:bg-gray-100">
-                                    Web Design
+                            <Menu.Item>
+                            {({ active }) => (
+                                <Link to="/equip" className="text-blue-500 font-bold uppercase flex px-4 py-3 hover:bg-gray-100">
+                                Blog
                                 </Link>
-                            </li>
-                            <li>
-                                <Link to="/equip" className="flex px-4 py-3 hover:bg-gray-100">
-                                    Blog
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="flex px-4 py-3 hover:bg-gray-100">
-                                    Machine Learning
-                                </Link>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <Link to="/contact" className="flex md:inline-flex p-4 items-center hover:text-red-300">
-                            <span>Contact</span>
-                        </Link>
-                    </li>
-                </ul>
-                <div className="ml-auto md:hidden text-gray-500 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
-                </div>
-            </nav>
-        </div>
+                            )}
+                            </Menu.Item>
 
+                            <Menu.Item>
+                            {({ active }) => (
+                                <Link href="#" className="text-blue-500 font-bold flex px-4 py-3 hover:bg-gray-100">
+                                    OUR APPROACH
+                                </Link>
+                            )}
+                            </Menu.Item>
+
+                        </Menu.Items>
+                    </Menu>
+                   </div>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="px-3  text-lg  uppercase text-black lg:text-white hover:text-red-400"
+                    to="/contact"
+                  >
+                    <span className="ml-2">Contact</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </>
+    
     );
 };
 

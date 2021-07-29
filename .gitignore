@@ -2,3 +2,4 @@ node_modules
 extras
 .cache
 .history
+.DS_Store
