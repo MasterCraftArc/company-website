@@ -1,6 +1,6 @@
 ---
 title: "DevOps 101"
-published: false
+published: true
 description: >-
   DevOps, DevSecOps, et al are some of the most commonly misunderstood terms in the industry. While their usage has become ubiquitous over the past 6 years or so, their meaning frequently gets lost and implementation suffers...
 date: '2021-07-15'
