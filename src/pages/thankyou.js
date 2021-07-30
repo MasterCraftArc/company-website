@@ -22,6 +22,7 @@ const Thankyou = () => {
       <h1 className="mt-6 mb-10 text-5xl text-black text-center">We'll be in touch shortly.</h1>
       <Link to="/"><button className="bg-blue-500 hover:bg-blue-400 text-white mr-5 mb-5" style={buttonStyle}>Home</button></Link>
 
+      <Footer/>
     </div>
   );
 }
