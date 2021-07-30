@@ -68,7 +68,12 @@ function Header({ fixed }) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                   <div className="hidden lg:inline-block relative parent">
+                        <Link to='/equip' className="text-lg flex uppercase text-black lg:text-white hover:text-red-400 border-1 border-solid border-red-300">
+                           <span className="ml-5">Equip</span>
+                       </Link>
+
+                    {/* Here lies the menus for additional options under equip */}
+                   {/* <div className="hidden lg:inline-block relative parent">
                        <Link to='/equip' className="text-lg flex uppercase text-black lg:text-white hover:text-red-400 border-1 border-solid border-red-300">
                            <span className="ml-5">Equip <i class="bi bi-chevron-down"></i></span>
                        </Link>
@@ -89,10 +94,10 @@ function Header({ fixed }) {
                                </Link>
                            </li>
                        </ul>
-                   </div>
-                   <div className="lg:hidden">
+                   </div> */}
+                   {/* <div className="lg:hidden">
                     <Menu>
-                        <Menu.Button className="text-xl flex uppercase text-black ml-5">More <i class="bi bi-chevron-down"></i></Menu.Button>
+                        <Menu.Button className="text-xl flex uppercase text-black ml-5">Equip <i class="bi bi-chevron-down"></i></Menu.Button>
                         
                         <Menu.Items 
                             className="flex flex-col ml-10" 
@@ -122,8 +127,8 @@ function Header({ fixed }) {
 
                         </Menu.Items>
                     </Menu>
-                   </div>
-                </li>
+                   </div> */}
+                </li> 
                 <li className="nav-item">
                   <Link
                     className="px-3  text-lg  uppercase text-black lg:text-white hover:text-red-400"

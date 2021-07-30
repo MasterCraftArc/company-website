@@ -177,13 +177,13 @@ const Train = () => {
       className="loading w-50 h-50"
       /> */}
       {/* <div className="heroContainer w-full"> */}
+        <Header textColor="white" className=""/>
         <section className="hero min-h-screen flex flex-col justify-center relative">
-        {/* <Header textColor="white" className="absolute top-0"/> */}
-            <h1 className='text-5xl md:text-5xl xl:text-5xl 2xl:text-6xl pl-24'>The World Needs a Hero...</h1>
+          <h1 className='text-4xl md:text-4xl xl:text-5xl 2xl:text-6xl pl-8'>The World Needs a Hero...</h1>
 
           {/* <Flip initial="Hero" change="Friend, Developer, DevSecOps Engineer"/> */}
 
-            <motion.h1 variants={sentenceAnim} initial='hidden' animate='visible' className="pl-24 lg:text-6xl xl:pl-24 xl:text-6xl 2xl:text-7xl text-red-500 font-bold" style={heroTextBold}>{
+            <motion.h1 variants={sentenceAnim} initial='hidden' animate='visible' className="p-8 text-4xl lg:text-5xl xl:pl-8 xl:text-5xl 2xl:text-6xl text-red-500 font-bold" style={heroTextBold}>{
               tagLine.split('').map((char, index) => {
                 return (
                   <motion.span key={char + '-' + index} variants={letter}>
