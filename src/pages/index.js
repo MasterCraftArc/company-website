@@ -211,7 +211,7 @@ const Train = () => {
         </section>
 
         <section className="trainForBattle min-h-screen md:h-screen">
-          <h2 className="text-center lg:mt-16" style={battleText}>Let us Train you for Battle</h2>
+          <h2 className="text-center lg:mt-16 font-bold" style={battleText}>Let us Train you for Battle</h2>
 
           <div className="flex justify-evenly mt-16 mx-auto h-1/2 lg:w-4/5">
 
@@ -258,14 +258,14 @@ const Train = () => {
 
 
 
-        <section className="whoWeAre min-h-screen lg:pr-0 xl:pr-20 xl:pb-20 w-full">
-          <div className="flex px-0 md:px-5  w-full">
+        <section className="whoWeAre min-h-screen mt-16 lg:pr-0 xl:pr-20 xl:pb-20 w-full">
+          <div className="flex w-full px-0 sm:px-8 md:px-24 lg:px-44 lg:pl-8 lg:pt-32 lg:pr-16 xl:pr-0 2xl:px-56">
             <div className="2xl:p-5 w-2/6 xl:w-3/6">
               <img src={whoWeAre} className="object-cover sm:w-full lg:w-full xl:p-16 " alt="unicorn under magnifying glass"/>
             </div>
             <div className="flex flex-col justify-center px-5 w-4/6">
               <h2 className="text-5xl md:text-6xl lg:text-7xl ">Who we are</h2>
-              <p className="pt-5 pb-5 lg:pt-10 lg:pb-16 lg:pr-5 xl:pr-8 text-2xl md:text-3xl lg:text-4xl 2xl:pb-16 font-light" >We are innovators, software engineers, and veterans with decades of experience delivering technology programs across DoD and the broader federal market. Defense Unicorns exists to accelerate the impact of digital warriors inside and outside the government -- enabling their transformation from unicorn to hero.</p>
+              <p className="pt-5 pb-5 lg:pt-10 lg:pb-16 lg:pr-5 xl:pr-8 text-2xl md:text-3xl lg:text-4xl 2xl:pb-16 font-light" >We are innovators, software engineers, and veterans with decades of experience delivering technology programs across DoD and the broader federal market. Defense Unicorns exists to accelerate the impact of digital warriors inside and outside the government - enabling their transformation from unicorn to hero.</p>
               <div className="">
                 <Link to="/equip"><button className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5" style={buttonStyle}>LEARN MORE</button></Link>
                 <Link to="/contact"><button className="bg-blue-500 hover:bg-blue-700 text-white xl:ml-5" style={buttonStyle}>CONTACT US</button></Link>
@@ -278,8 +278,8 @@ const Train = () => {
 
 
 
-      <section className="caseStudies min-h-screen lg:pt-44 xl:p-10 ">
-        <div className="w-full flex 2xl:px-56">
+      <section className="caseStudies min-h-screen xl:pt-44 xl:p-10 ">
+        <div className="w-full flex sm:px-8 md:px-24 lg:px-44 lg:pl-8 lg:pt-44 2xl:px-56">
           <div className="flex flex-col justify-center px-10 w-4/6">
             <h2 className="text-5xl md:text-6xl lg:text-7xl ">What We Do</h2>
             <p className="pt-5 pb-5 lg:pt-10 lg:pb-16 lg:pr-5 xl:pr-8 text-2xl md:text-3xl lg:text-4xl 2xl:pb-16 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
@@ -296,60 +296,13 @@ const Train = () => {
       </section>
 
 
-
-
-
-
-
-
-
-
-      {/* <section className="latestTrained">
-        <h2 className="text-center" style={battleText}>Our latest trained.</h2>
-
-        <div className="h-full mt-1">
-          <div className="h-3/4 w-full lg:w-3/4 mx-auto mt-10 grid grid-cols-3 place-items-center">
-
-            <div className="card " style={trainedCardStyle}>
-              <img src={pc} className="card-img-top self-start" alt="unicorn under magnifying glass"/>
-              <div className="card-body text-center">
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
-                <p className="card-text mb-5 p-1" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
-                <Link to="/blog" className="" style={trainedCardLink} >READ MORE</Link>
-              </div>
-            </div>
-
-            <div className="card " style={trainedCardStyle}>
-              <img src={pcGear} className="card-img-top" alt="unicorn under magnifying glass"/>
-              <div className="card-body text-center">
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
-                <p className="card-text mb-5 p-1" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
-
-                <Link to="/blog" className="" style={trainedCardLink} >READ MORE</Link>
-              </div>
-            </div>
-
-            <div className="card " style={trainedCardStyle}>
-              <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
-              <div className="card-body text-center">
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Card Title</h5>
-                <p className="card-text mb-5 p-1" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
-                <Link to="/blog" className="" style={trainedCardLink} >READ MORE</Link>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section> */}
-
       {/* <section className="min-h-screen"> */}
         <Footer ></Footer>
       {/* </section> */}
     </main>
   )
 }
-//h-3/6 md:w-4/5 md:h-4/6 lg:w-5/6 lg:h-4/6 xl:h-4/5 xl:w-4/6 2xl:h-3/5
+
 export default Train
 
 
