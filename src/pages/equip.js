@@ -97,7 +97,7 @@ const Equip = () => {
     }
 
     categoriesRef.current.childNodes.forEach( child => {
-      console.log(child)
+      // console.log(child)
       child.style.color = '#9CA3AF'
       child.style.fontWeight = 'normal'
     })
@@ -132,10 +132,10 @@ const Equip = () => {
         <div className="px-16 sticky top-0 bg-white">
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={battleText}>Latest Posts</h2>
             <div ref={categoriesRef} className="font-black md:pl-20 text-2xl text-bold w-full border-b-2 border-solid border-gray-400 mt-16 mb-16">
-              <span className="pr-4 md:pr-16 text-red-500 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>All</span>
-              <span className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>People</span>
-              <span className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>Culture</span>
-              <span className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>Process</span>
+              <button className="pr-4 md:pr-16 text-red-500 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>All</button>
+              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>People</button>
+              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>Culture</button>
+              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>Process</button>
             </div>
         </div>
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-auto place-items-center w-full gap-y-3.5">

@@ -5,17 +5,10 @@ import { navigate } from "gatsby";
 import axios from "axios"
 import * as qs from "query-string"
 import StyledBackgroundSection from '../components/contactBg'
+import Button from '../components/button'
 
 const textAreaStyle = {
   height: '200px'
-}
-
-const buttonStyle = {
-  borderRadius: '0',
-  height: '45px',
-  width: '100%',
-  fontSize: '15px',
-  borderRadius: '10px'
 }
 
 const formContainer = {
@@ -73,7 +66,7 @@ class Contact extends React.Component {
                   <input ref="emailAddress" name="emailAddress" className="form-control w-full"placeholder='Email?' type="email"  id="exampleInputEmail1"/>
                 </div>
                 <textarea ref="message" name="message" className='m-0 w-100 mt-2 form-control bg-transparent' placeholder="Hi Defense Unicorns I'm really excited to talk..."  style={textAreaStyle}></textarea >
-                <button type='submit' className="bg-red-500 hover:bg-red-700 text-white mt-3 w-full" style={buttonStyle}>SUBMIT</button>
+                <Button type="submit" className="bg-red-500 hover:bg-red-700 text-white mt-3 w-full" text="Submit" />
               </form>
             </div>
           </section>

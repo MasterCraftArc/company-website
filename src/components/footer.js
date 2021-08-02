@@ -86,7 +86,7 @@ function Footer() {
         <div className="container" style = {footerBox}>
 
           <div style = {logoBox}>
-            <img src = {verticalLogo} style = {logoStyle}/>
+            <img src = {verticalLogo} style = {logoStyle} alt="Defense Unicorns Logo"/>
           </div>
 
           <div style = {middleBox}>

@@ -181,6 +181,10 @@ body {
     outline: none;
 }
 
+.contact input:focus, .contact textarea:focus{
+    @apply border-2 border-solid border-blue-900
+}
+
   /* Blog */
 .blog {
     background: url(../images/blogBG.png) no-repeat fixed;

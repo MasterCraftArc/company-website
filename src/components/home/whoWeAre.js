@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
 import whoWeAre from "../../images/whoWeAre.png";
-import { buttonStyle, TITLE_TEXT } from "./homeStyles";
+import { TITLE_TEXT } from "./homeStyles";
+import Button from "../button"
 
 const WhoWeAre = () => {
   return (
@@ -24,22 +24,16 @@ const WhoWeAre = () => {
             transformation from unicorn to hero.
           </p>
           <div className="">
-            <Link to="/equip">
-              <button
-                className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5"
-                style={buttonStyle}
-              >
-                LEARN MORE
-              </button>
-            </Link>
-            <Link to="/contact">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white xl:ml-5"
-                style={buttonStyle}
-              >
-                CONTACT US
-              </button>
-            </Link>
+            <Button
+              linkTo="/contact"
+              className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5" 
+              text="Contact Us"
+              />
+            <Button
+            linkTo="/equip"
+              className="bg-transparent border-blue-900 border-2 border-solid hover:bg-blue-900 text-blue-900 hover:text-white mr-5 mb-5" 
+              text="Learn More"
+              />
           </div>
         </div>
       </div>
