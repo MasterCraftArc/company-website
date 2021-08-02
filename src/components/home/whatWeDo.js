@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
-import { buttonStyle, TITLE_TEXT } from "./homeStyles";
+import { TITLE_TEXT } from "./homeStyles";
 import whatWeDoPng from "../../images/caseStudies.png";
 import keyPoints from "../../images/keyPointsLight.png";
+import Button from "../button"
 
 const CaseStudies = () => {
   return (
@@ -25,14 +25,11 @@ const CaseStudies = () => {
           ></img>
 
           <div className="pt-7">
-            <Link to="/equip">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white"
-                style={buttonStyle}
-              >
-                LEARN MORE
-              </button>
-            </Link>
+            <Button 
+              linkTo='/equip' 
+              className='bg-transparent border-blue-900 border-2 border-solid hover:bg-blue-900 text-blue-900 hover:text-white' 
+              text="Learn More"
+              />
           </div>
         </div>
         <div className="p-16 pt-0 lg:block hidden object-cover">

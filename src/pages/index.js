@@ -6,6 +6,7 @@ import SiteHelmet from "../components/SiteHelmet";
 import WhoWeAre from "../components/home/whoWeAre";
 import CaseStudies from "../components/home/whatWeDo";
 import TrainForBattle from "../components/home/trainForBattle";
+import BackgroundSection from "../components/home/background";
 
 const pageStyles = {
   color: "#232129",
@@ -15,7 +16,7 @@ const pageStyles = {
 // markup
 const Train = () => {
   return (
-    <main style={pageStyles} className="home flex flex-col">
+    <BackgroundSection style={pageStyles} className="home flex flex-col bg-top">
       <SiteHelmet
         title="Train"
         description="Become a DevSecOps Hero with Defense Unicorns"
@@ -26,7 +27,7 @@ const Train = () => {
       <WhoWeAre />
       <CaseStudies />
       <Footer></Footer>
-    </main>
+    </BackgroundSection>
   );
 };
 

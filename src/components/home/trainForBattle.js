@@ -45,9 +45,9 @@ const TrainForBattle = () => {
         Let us Train you for Battle
       </h2>
 
-      <div className="flex lg:flex-row xs:flex-col justify-evenly mt-16 lg:h-1/2 lg:w-4/5 mx-auto lg:items-stretch	 xs:items-center">
+      <div className="flex lg:flex-row flex-col justify-evenly mt-16 lg:h-1/2 lg:w-4/5 mx-auto lg:items-stretch	 items-center">
         <div
-          className="card lg:p-5 lg:w-full lg:h-full flex flex-col justify-evenly lg:my-0 xs:my-8"
+          className="card lg:p-5 lg:w-full lg:h-full flex flex-col justify-evenly lg:my-0 my-8"
           style={cardStyle}
         >
           <div className="flex justify-center items-center w-full">
@@ -78,7 +78,7 @@ const TrainForBattle = () => {
         </div>
 
         <div
-          className="card p-5 lg:w-full lg:h-full flex flex-col justify-evenly lg:my-0 xs:my-8"
+          className="card p-5 lg:w-full lg:h-full flex flex-col justify-evenly lg:my-0 my-8"
           style={cardStyle}
         >
           <div className="flex justify-center items-center w-full">
@@ -109,7 +109,7 @@ const TrainForBattle = () => {
         </div>
 
         <div
-          className="card p-5 flex flex-col justify-evenly lg:my-0 xs:my-8"
+          className="card p-5 flex flex-col justify-evenly lg:my-0 my-8"
           style={cardStyle}
         >
           <div className="flex justify-center items-center w-full">

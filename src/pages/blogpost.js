@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import SiteHelmet from '../components/SiteHelmet';
-import Footer from '../components/footer';
+// import Footer from '../components/footer';
 import Header from '../components/header';
 import unicorn from "../images/unicornStars.png"
 import monolithic from '../images/blog1.png';
@@ -70,9 +70,7 @@ const BlogPost = () => {
         </main>
       </article>
 
-      {/* <img src={logo} alt="Defense Unicorns Logo" className="w-1/4"></img> */}
-      {/* <h1 className="mt-16 text-5xl text-black text-center">Thank you for contacting us!</h1> */}
-      <img className="w-1/6 mx-auto mt-24 pr-24" src={unicorn} alt="Picture of unicorn with star multicolored star trail"></img>
+      <img className="w-1/6 mx-auto mt-24 pr-24" src={unicorn} alt="Unicorn with multicolored star trail"></img>
       <Link to="/equip" className="mx-auto"><button className=" bg-red-500 hover:bg-red-700 text-white mr-5 mb-5" style={buttonStyle}>SEE MORE</button></Link>
 
     </div>
