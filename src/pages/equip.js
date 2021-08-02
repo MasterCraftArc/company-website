@@ -2,21 +2,10 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import SiteHelmet from '../components/SiteHelmet';
 import Header from '../components/header'
-import Footer from '../components/footer'
-import topBG from '../images/segmentedImages/Top_W.jpg'
-import heroes from "../images/card1.png"
-import aquisitions from "../images/card2.png"
-import devsecops from "../images/card3.png"
-import cardPin from "../images/cardPin.png"
-import whoWeAre from "../images/whoWeAre.png"
-import caseStudies from "../images/caseStudies.png"
-import keyPoints from "../images/keyPointsLight.png"
+// import Footer from '../components/footer'
 import pc from "../images/pc.png"
 import pcGear from "../images/pcGear.png"
 import tech from "../images/tech.png"
-import {useRef} from 'react'
-import Card from "../components/card"
-import videos from "../images/videos.png"
 import monolithic from '../images/blog1.png';
 
 const pageStyles = {
@@ -82,36 +71,16 @@ const trainedCardLink = {
   textDecoration: 'underline',
 }
 
-const latestTrained = {
-  // height: '110vh'
-}
-
-const selectStyles = {
-  color: 'black',
-  position: 'absolute',
-  right: 375,
-  top: 5,
-  width: '200px',
-  height: '40px',
-  fontSize: '15px'
-}
-
 const Equip = () => {
   let cardRefs = []
-  let selectRef = React.createRef();
   let categoriesRef = React.createRef();
   for (let i = 1; i < 7; i++){
     cardRefs[i] = React.createRef();
   }
   
   function updateCards(event){
-    // if (selectRef.current.value == 'All Categories'){
-    //   cardRefs.forEach( card => {
-    //     card.current.style.display = 'block'
-    //   })
-    // }
     console.log(event, 'event')
-    if (event.target.innerText == "All"){
+    if (event.target.innerText === "All"){
       cardRefs.forEach( card => {
         card.current.style.display = 'block'
       })
@@ -119,7 +88,7 @@ const Equip = () => {
     else{
       for (let i = 1; i < 7; i++){
         // console.log('test', categoriesRef.current.childNodes)
-        if (cardRefs[i].current.dataset.category == event.target.innerText){
+        if (cardRefs[i].current.dataset.category === event.target.innerText){
           cardRefs[i].current.style.display = 'block'
         }else{
           cardRefs[i].current.style.display = 'none'
@@ -157,7 +126,7 @@ const Equip = () => {
 
       </section>
 
-      <section className="latestTrained min-h-screen overflow-x-scroll md:overflow-auto" style={latestTrained}>
+      <section className="latestTrained min-h-screen overflow-x-scroll md:overflow-auto">
 
         <div className="container h-75 mt-16 mx-auto relative">
         <div className="px-16 sticky top-0 bg-white">

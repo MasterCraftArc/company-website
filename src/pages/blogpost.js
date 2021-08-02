@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import SiteHelmet from '../components/SiteHelmet';
-import Footer from '../components/footer';
+// import Footer from '../components/footer';
 import Header from '../components/header';
 import unicorn from "../images/unicornStars.png"
 import monolithic from '../images/blog1.png';
