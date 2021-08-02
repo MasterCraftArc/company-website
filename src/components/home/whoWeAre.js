@@ -5,8 +5,8 @@ import { buttonStyle, TITLE_TEXT } from "./homeStyles";
 
 const WhoWeAre = () => {
   return (
-    <section className="pt-16 min-h-screen flex flex-col justify-center lg:ml-auto w-full xl:w-4/5 ">
-      <div className="px-5 lg:pl-44 grid p-56 lg:grid-cols-2 grid-cols-1">
+    <section className="pt-16 min-h-screen flex flex-col justify-center lg:ml-auto w-full xl:w-4/5 xl:mx-auto">
+      <div className="px-5 p-56  lg:pl-44 xl:pl-32 2xl:pl-0 grid lg:grid-cols-2 grid-cols-1">
         <div className="px-10 p-16">
           <img
             src={whoWeAre}

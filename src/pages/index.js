@@ -16,7 +16,7 @@ const pageStyles = {
 // markup
 const Train = () => {
   return (
-    <BackgroundSection style={pageStyles} className="home flex flex-col">
+    <BackgroundSection style={pageStyles} className="home flex flex-col bg-top">
       <SiteHelmet
         title="Train"
         description="Become a DevSecOps Hero with Defense Unicorns"

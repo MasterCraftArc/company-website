@@ -176,7 +176,6 @@ body {
 }
   
 .contact textarea {
-    /* border: 1px solid lightgray; */
     @apply pt-3 pl-3 bg-white rounded-xl;
     font-size: 15px;
     outline: none;
