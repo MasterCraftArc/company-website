@@ -14,34 +14,11 @@ const pageStyles = {
   // background: {topBG}
 };
 
-const textBold = {
-  color: "red",
-  fontWeight: "bold",
-  fontSize: "60px",
-};
-
 const buttonStyle = {
   borderRadius: "0",
   height: "45px",
   width: "150px",
   fontSize: "15px",
-};
-
-const showcase = {
-  fontSize: "35px",
-  fontWeight: "200",
-};
-
-const topic = {
-  fontSize: "65px",
-  fontWeight: "100",
-  color: "red",
-};
-
-const heroText = {
-  fontSize: "20px",
-  paddingRight: "45%",
-  marginTop: "1%",
 };
 
 const battleText = {
@@ -107,19 +84,23 @@ const Equip = () => {
 
       <Header textColor="white" />
       <section className="hero flex flex-col justify-center">
-        <h1 className="pl-12">
-          <p style={showcase} className="text-white">
-            Showcase your thought
+        <div className="pl-12 pb-8" style={{ color: "red" }}>
+          <p className="pb-8 text-white md:text-6xl text-5xl">
+            The Defense Unicorns Blog
           </p>
-          <p style={topic}>provoking topic and</p>
-          <p style={textBold}>ideas</p>
-        </h1>
-
-        <p className="heroText pl-12 text-white" style={heroText}>
-          Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consecutar
-          adijecps temper test incidunt kibore; Lorem ipsum dolor sit amet,
-          consecutar adijecps temper test incidunt kibore.
-        </p>
+          <div className="flex md:flex-row flex-col md:text-5xl text-4xl">
+            <p className="pb-8">Translating thoughts into&nbsp;</p>
+            <p className="pb-8 font-bold">action</p>
+          </div>
+          <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white">
+            We believe every organization has the capacity for digital
+            transformation and that continuous learning delivers improved
+            outcomes when we feel comfortable applying what we’ve learned. This
+            blog is your source for context-first guides, stories, and news on
+            the people, process, and technology necessary to accelerate your
+            mission.
+          </p>
+        </div>
 
         <div className="mt-8">
           <Link to="/contact" className="heroText w-50 pl-12">
