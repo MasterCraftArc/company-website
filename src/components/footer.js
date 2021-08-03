@@ -126,7 +126,7 @@ function Footer() {
         {/* <div className='border' style = {middleBox}> */}
 
         <div
-          className="w-1/5 flex flex-col justify-center items-center pb-8 self-start text-white mx-auto mt-12"
+          className="text-3xl border-black w-1/5 flex flex-col justify-center items-center pb-8 self-start text-white mx-auto mt-12"
           style={menuBox}
         >
           <Link to="/train" className="footerLink" style={linkColor}>
@@ -141,17 +141,17 @@ function Footer() {
         </div>
         {/* </div> */}
 
-        <div style={socialsBox} className="socialsBox w-1/5 flex text-3xl ">
-          <a className="mt-14 h-10 ml-12" href="#">
+        <div style={socialsBox} className="socialsBox w-1/6 flex text-3xl">
+          <a className="mt-14 h-5 ml-12" href="#">
             <i className="bi bi-twitter me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
           </a>
           <a
-            className="mt-14 h-10"
+            className="mt-14 h-5"
             href="https://www.linkedin.com/company/leapfrog-ai/about/"
           >
             <i className="bi bi-linkedin ms-1 me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
           </a>
-          <a className="mt-14 h-10" href="#">
+          <a className="mt-14 h-5" href="#">
             <i className="bi bi-facebook me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
           </a>
         </div>
