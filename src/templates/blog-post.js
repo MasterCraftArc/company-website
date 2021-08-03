@@ -2,12 +2,14 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 // import SiteHelmet from "../components/SiteHelmet"
 import Bio from "../components/bio"
-import Layout from "../components/layout"
+import Layout from "../components/blogLayout"
 import Seo from "../components/seo"
 import bg from '../images/Hero.jpg'
+
 // import '../normalize.css'
 // import "../styles/blogStyles.css"
-import * as blogStyles from "../styles/blogStyles.css"
+// import * as blogStyles from "../styles/blogStyles.css"
+// import {createGlobalStyle } from "styled-components"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -15,8 +17,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle} className="blogPage">
-      
+    <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

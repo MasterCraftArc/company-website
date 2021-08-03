@@ -3,7 +3,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
+import Layout from "../components/blogLayout"
 import Seo from "../components/seo"
 
 
@@ -34,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
+            <li key={`/blog${post.fields.slug}`}>
               <article
                 className="post-list-item"
                 itemScope
@@ -42,7 +42,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={`/blog${post.fields.slug}`} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
