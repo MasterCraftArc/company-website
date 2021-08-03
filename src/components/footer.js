@@ -1,28 +1,25 @@
-import * as React from 'react';
-import { Link } from 'gatsby';
+import * as React from "react";
+import { Link } from "gatsby";
 import verticalLogo from "../images/logo-vertical.png";
 
-
 const footerStyle = {
-    height: "100vh",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-}
+  height: "100vh",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+};
 
 const footerBox = {
-    marginTop: '54vh'
-
-}
+  marginTop: "54vh",
+};
 
 const logoBox = {
-    // height: "50%",
-    // width: "100%",
-    // display: "flex",
-    // justifyContent: "front-end",
-    // alignItems: "baseline",
-    
-}
+  // height: "50%",
+  // width: "100%",
+  // display: "flex",
+  // justifyContent: "front-end",
+  // alignItems: "baseline",
+};
 
 const logoStyle = {
     width: '37%',
@@ -30,11 +27,10 @@ const logoStyle = {
 }
 
 const middleBox = {
-    // height: "35%",
-    // width: "100%",
-    // display: 'flex',
-
-}
+  // height: "35%",
+  // width: "100%",
+  // display: 'flex',
+};
 
 const socialsBox = {
     marginRight: '23%',
@@ -49,36 +45,31 @@ const socialsBox = {
 }
 
 const addressBox = {
-    // height: "100%",
-    // width: "60%",
-    // color: 'white',
-    // lineHeight: '1',
-    // display: 'flex',
-    // flexDirection: 'column',
-    // justifyContent: 'center',
-    // paddingLeft: '10%',
-}
+  // height: "100%",
+  // width: "60%",
+  // color: 'white',
+  // lineHeight: '1',
+  // display: 'flex',
+  // flexDirection: 'column',
+  // justifyContent: 'center',
+  // paddingLeft: '10%',
+};
 
 const menuBox = {
     marginLeft: 'initial',   
 }
 
 const linkColor = {
-    color: 'white',
-    fontSize: '14px',
-    fontFamily: '',
-}
+  color: "white",
+  fontSize: "14px",
+  fontFamily: "",
+};
 
 const menu = {
-    display: 'flex',
-    justifyContent: 'right',
-    marginTop: '10px'
-}
-
-
-
-
-
+  display: "flex",
+  justifyContent: "right",
+  marginTop: "10px",
+};
 
 function Footer() {
     return (
@@ -106,7 +97,7 @@ function Footer() {
 
           {/* <div className='border' style = {middleBox}> */}
            
-            <div className='text-3xl border-black w-1/5 flex flex-col justify-center items-center pb-8 self-start text-white mx-auto mt-12' style={menuBox}>
+            {/* <div className='text-3xl border-black w-1/5 flex flex-col justify-center items-center pb-8 self-start text-white mx-auto mt-12' style={menuBox}>
                 <Link to="/train" className='footerLink' style={linkColor}>
                     <p style= {menu}>Train</p>
                 </Link>
@@ -116,10 +107,10 @@ function Footer() {
                 <Link to="/contact" className='footerLink' style={linkColor}>
                     <p style= {menu}>Contact</p>
                 </Link>
-            </div>
+            </div> */}
           {/* </div> */}
 
-          <div style = {socialsBox} className= 'socialsBox w-1/6 flex text-3xl'>
+          {/* <div style = {socialsBox} className= 'socialsBox w-1/6 flex text-3xl'>
           <a className='mt-14 h-5 ml-12' href= '#'>
                 <i className="bi bi-twitter me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
             </a>
@@ -130,14 +121,43 @@ function Footer() {
                 <i className="bi bi-facebook me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
             </a> 
           </div>
+        </div> */}
 
+        {/* <div className='border' style = {middleBox}> */}
+
+        <div
+          className="w-1/5 flex flex-col justify-center items-center pb-8 self-start text-white mx-auto mt-12"
+          style={menuBox}
+        >
+          <Link to="/train" className="footerLink" style={linkColor}>
+            <p style={menu}>Train</p>
+          </Link>
+          <Link to="/equip" className="footerLink" style={linkColor}>
+            <p style={menu}>Equip</p>
+          </Link>
+          <Link to="/contact" className="footerLink" style={linkColor}>
+            <p style={menu}>Contact</p>
+          </Link>
         </div>
+        {/* </div> */}
 
+        <div style={socialsBox} className="socialsBox w-1/5 flex text-3xl ">
+          <a className="mt-14 h-10 ml-12" href="#">
+            <i className="bi bi-twitter me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
+          </a>
+          <a
+            className="mt-14 h-10"
+            href="https://www.linkedin.com/company/leapfrog-ai/about/"
+          >
+            <i className="bi bi-linkedin ms-1 me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
+          </a>
+          <a className="mt-14 h-10" href="#">
+            <i className="bi bi-facebook me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
+          </a>
+        </div>
+      </div>
     </footer>
-
-    )
+  );
 }
 
-export default Footer
-
-
+export default Footer;
