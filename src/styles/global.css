@@ -128,7 +128,6 @@ body {
   }
 }
 
-
 /* HERO */
 
 .hero {
@@ -149,102 +148,101 @@ body {
   background-color: white;
 }
 
-
 /* Latest Trained */
 .latestTrained {
-    margin-top: 210px;
-    height: 70vh;
-    width: 100vw;
-    background-color: transparent;
+  height: 70vh;
+  width: 100vw;
+  background-color: transparent;
 }
-  
-  /* Contact */
-  
+
+/* Contact */
+
 .contact input {
-    height: 48px;
-    font-size: 15px;
-    outline: none;
-    background-color: transparent;
-    @apply pl-3 bg-white rounded-xl;
+  height: 48px;
+  font-size: 15px;
+  outline: none;
+  background-color: transparent;
+  @apply pl-3 bg-white rounded-xl;
 }
-  
+
 .contact select {
-    height: 40px;
-    border: none;
-    border-bottom: 2px solid red;
-    border-radius: 0;
-    font-size: 15px;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid red;
+  border-radius: 0;
+  font-size: 15px;
 }
-  
+
 .contact textarea {
-    @apply pt-3 pl-3 bg-white rounded-xl;
-    font-size: 15px;
-    outline: none;
+  @apply pt-3 pl-3 bg-white rounded-xl;
+  font-size: 15px;
+  outline: none;
 }
 
-.contact input:focus, .contact textarea:focus{
-    @apply border-2 border-solid border-blue-900
+.contact input:focus,
+.contact textarea:focus {
+  @apply border-2 border-solid border-blue-900;
 }
 
-  /* Blog */
+/* Blog */
 .blog {
-    background: url(../images/blogBG.png) no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: local, scroll;
-    /* background-position-x: 150%; */
+  background: url(../images/blogBG.png) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: local, scroll;
+  /* background-position-x: 150%; */
 }
 
 /*** Blog Posts **/
 .postHeader {
-    height: 40vh;
-    mask-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 1) 60%,
-        transparent 100%
-        );
+  height: 40vh;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 60%,
+    transparent 100%
+  );
 }
 .postHeaderContainer {
-    height: 100%;
-    background: url(../images/postBanner.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: scroll;
-    background-position: center;
+  height: 100%;
+  background: url(../images/postBanner.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
 }
-    
+
 /* FOOTER */
 .socialsBox a,
 .footerLink {
-    color: red;
+  color: red;
 }
 
 .contact .socialsBox a {
-    color: "red";
+  color: "red";
 }
 .socialsBox a {
-    margin-right: 2%;
+  margin-right: 2%;
 }
 
 .socialsBox a:hover,
 .footerLink:hover {
-    color: rgb(33, 149, 243);
+  color: rgb(33, 149, 243);
 }
-    
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-    
+
 .border {
-    border: 2px solid black;
+  border: 2px solid black;
 }
-    
+
 .trainForBattle .card {
-    background: linear-gradient(-45deg, #12cbc4, #9441fa);
+  background: linear-gradient(-45deg, #12cbc4, #9441fa);
 }
 
 .trainForBattle .card:hover {
