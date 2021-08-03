@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+.flexThisBox {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+  font-size: 12px;
+}
+
+body {
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: transparent;
+  /* color: white; */
+}
+
+/******************************************
+/* GLOBAL LAYOUT
+/*******************************************/
+
+/** NAV **/
+
+@media only screen and (min-width: 768px) {
+  .parent:hover .child {
+    opacity: 1;
+    height: auto;
+    overflow: none;
+    transform: translateY(0);
+  }
+  .child {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transform: translateY(-10%);
+  }
+}
+
+.navLink {
+  color: black !important;
+}
+
+.navLink-drop {
+  color: black;
+}
+
+.navLink:hover,
+.navLink:active {
+  color: salmon;
+}
+
+.loading {
+  height: 400px;
+  width: 400px;
+  border-top-left-radius: 180px 250px;
+  margin: 100px 200px;
+  box-shadow: -15px -15px 60px -20px lightgreen,
+    inset 10px 10px 15px -10px lightblue;
+  background: linear-gradient(-45deg, #6839b0, #332e94, #d324cf, #10addc);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+  z-index: 10;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Home */
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
+    infinite;
+  color: black;
+}
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* HERO */
+
+.hero {
+  height: 90vh;
+  width: 100vw;
+  background: transparent;
+}
+
+.hero h1,
+.heroText {
+  /* color: white; */
+  /* @apply text-7xl; */
+  /* font-size: 5vw; */
+  /* padding-left: 5vw; */
+}
+
+.card {
+  background-color: white;
+}
+
+/* Latest Trained */
+.latestTrained {
+  height: 70vh;
+  width: 100vw;
+  background-color: transparent;
+}
+
+/* Contact */
+
+.contact input {
+  height: 48px;
+  font-size: 15px;
+  outline: none;
+  background-color: transparent;
+  @apply pl-3 bg-white rounded-xl;
+}
+
+.contact select {
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid red;
+  border-radius: 0;
+  font-size: 15px;
+}
+
+.contact textarea {
+  @apply pt-3 pl-3 bg-white rounded-xl;
+  font-size: 15px;
+  outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  @apply border-2 border-solid border-blue-900;
+}
+
+/* Blog */
+.blog {
+  background: url(../images/blogBG.png) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: local, scroll;
+  /* background-position-x: 150%; */
+}
+
+/*** Blog Posts **/
+.postHeader {
+  height: 40vh;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 60%,
+    transparent 100%
+  );
+}
+.postHeaderContainer {
+  height: 100%;
+  background: url(../images/postBanner.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+}
+
+/* FOOTER */
+.socialsBox a,
+.footerLink {
+  color: red;
+}
+
+.contact .socialsBox a {
+  color: "red";
+}
+.socialsBox a {
+  margin-right: 2%;
+}
+
+.socialsBox a:hover,
+.footerLink:hover {
+  color: rgb(33, 149, 243);
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.border {
+  border: 2px solid black;
+}
+
+.trainForBattle .card {
+  background: linear-gradient(-45deg, #12cbc4, #9441fa);
+}
+
+.trainForBattle .card:hover {
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  /* font-weight: bold; */
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(-45deg, #3f3d56, #9441fa, #12cbc4, #e92efb);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  cursor: pointer;
+}
+
+.latestTrained .card:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
