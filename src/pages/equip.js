@@ -71,7 +71,8 @@ const trainedCardLink = {
   textDecoration: 'underline',
 }
 
-const Equip = () => {
+const Equip = ({ data, location }) => {
+  const posts = data.allMarkdownRemark.nodes
   let cardRefs = []
   let categoriesRef = React.createRef();
   for (let i = 1; i < 7; i++){
@@ -109,7 +110,7 @@ const Equip = () => {
   return (
     <div className="h-screen equip blog" style={pageStyles}>
       <SiteHelmet title="Blog" /> 
-      
+
       <Header textColor="white"/>
       <section className="hero flex flex-col justify-center">
           <h1 className='pl-12'>

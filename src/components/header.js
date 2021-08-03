@@ -12,7 +12,7 @@ function Header() {
     return (
         //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
         <>
-            <nav className="relative flex flex-wrap items-center justify-between">
+            <nav className="relative flex flex-wrap items-center justify-between font-sans font-medium">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                 <Link

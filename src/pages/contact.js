@@ -53,7 +53,7 @@ class Contact extends React.Component {
       <StyledBackgroundSection>
         <main className='contact min-h-screen w-full'>
           <SiteHelmet title="Contact" />
-          <Header textColor="black"/>
+          <Header/>
     
           <section className="rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mx-auto mt-24 bg-white bg-opacity-70" style={formContainer}>
             <h1 className='text-center pt-5 sm:pt-7 md:pt-10 mb-3 font-bold text-5xl text-red-500'>Get in touch!</h1>

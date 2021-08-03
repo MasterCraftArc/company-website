@@ -1,15 +1,12 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-// import SiteHelmet from "../components/SiteHelmet"
 import Bio from "../components/bio"
 import Layout from "../components/blogLayout"
 import Seo from "../components/seo"
-import bg from '../images/Hero.jpg'
 
-// import '../normalize.css'
-// import "../styles/blogStyles.css"
-// import * as blogStyles from "../styles/blogStyles.css"
-// import {createGlobalStyle } from "styled-components"
+const metaStyles = {
+  lineHeight: '0.5'
+}
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -17,37 +14,29 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} post={post}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <div className="" style={{
-        height: '50vh',
-        width: '100vw',
-        background: 'skyblue'
-      }}>
-
-      </div>
       <article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header >
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
+        <div className="metaData" style={metaStyles}>
+          <p className="text-xl mb-2"><span className="font-bold">AUTHOR:</span> Defense Unicorns Staff</p>
+          <p className="text-xl mb-2"><span className="font-bold">DATE:</span> {post.frontmatter.date}</p>
+          <p className="text-xl"><span className="font-bold">TAGS:</span> People, Culture, Technology</p>
+        </div>
+
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav className="blog-post-nav mb-16 pt-5">
         <ul
           style={{
             display: `flex`,
@@ -59,14 +48,14 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={`/blog${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={`/blog${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
