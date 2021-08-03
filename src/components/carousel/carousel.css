@@ -1,0 +1,28 @@
+.carousel .slick-track {
+  padding-bottom: 75px !important;
+}
+
+.carousel .slick-next::before {
+  color: rgba(65, 255, 255);
+}
+
+.carousel .slick-prev::before {
+  color: rgba(65, 255, 255);
+}
+
+.carousel .slick-arrow {
+  transform: scale(2);
+}
+
+.carousel .slick-dots li button {
+  transform: scale(3);
+}
+.carousel .slick-dots li button::before {
+  color: white;
+}
+.carousel .slick-dots li.slick-active button {
+  transform: scale(3);
+}
+.carousel .slick-dots li.slick-active button::before {
+  color: rgb(130, 64, 238) !important;
+}
