@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `Defense Unicorns`,
@@ -12,7 +14,12 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`, 
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`, 
     'gatsby-plugin-postcss',
+    'gatsby-background-image',
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-image`,
     {

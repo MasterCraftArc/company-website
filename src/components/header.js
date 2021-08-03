@@ -1,35 +1,13 @@
 import * as React from "react";
 import {Link} from "gatsby"
 import logo from "../images/logo.png"
-import { Menu } from '@headlessui/react'
 
 const logoStyle = {
     maxWidth: "15vh",
     filter: 'drop-shadow(1px 1px 2px lightgray)'
 }
 
-const navStyle = {
-    paddingRight: "5%",
-    paddingLeft: "5%"
-}
-
-const buttonStyles = {
-    fontSize: '30px',
-//  color: "blue",
- border: '1px solid black',
- outline: 'none'
-}
-
-const linkStyles = {
-    // color: 'white',
-    fontSize: '3vw'
-}
-
-const menuStyle = {
-    height: '50px'
-}
-
-function Header({ fixed }) {
+function Header() {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
         //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
@@ -68,62 +46,10 @@ function Header({ fixed }) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                   <div className="hidden lg:inline-block relative parent">
-                       <Link to='/equip' className="text-lg flex uppercase text-black lg:text-white hover:text-red-400 border-1 border-solid border-red-300">
-                           <span className="ml-5">Equip <i class="bi bi-chevron-down"></i></span>
+                        <Link to='/equip' className="text-lg flex uppercase text-black lg:text-white hover:text-red-400 border-1 border-solid border-red-300">
+                           <span className="ml-5">Equip</span>
                        </Link>
-                       <ul className=" hidden lg:inline-block child transition duration-300 md:absolute top-full left-0 md:w-48 bg-white md:shadow-lg md:rounded-b text-black ">
-                           <li>
-                               <Link href="#" className="flex px-4 py-3 hover:bg-gray-100">
-                                   Web Design
-                               </Link>
-                           </li>
-                           <li>
-                               <Link to="/equip" className="flex px-4 py-3 hover:bg-gray-100">
-                                   Blog
-                               </Link>
-                           </li>
-                           <li>
-                               <Link href="#" className="flex px-4 py-3 hover:bg-gray-100">
-                                   Machine Learning
-                               </Link>
-                           </li>
-                       </ul>
-                   </div>
-                   <div className="lg:hidden">
-                    <Menu>
-                        <Menu.Button className="text-xl flex uppercase text-black ml-5">More <i class="bi bi-chevron-down"></i></Menu.Button>
-                        
-                        <Menu.Items 
-                            className="flex flex-col ml-10" 
-
-                        >
-                            <Menu.Item disabled>
-                                <Link href="#" className="text-blue-500 font-bold uppercase flex px-4 py-3 hover:bg-gray-100">
-                                   Web Design
-                               </Link>
-                            </Menu.Item>
-
-                            <Menu.Item>
-                            {({ active }) => (
-                                <Link to="/equip" className="text-blue-500 font-bold uppercase flex px-4 py-3 hover:bg-gray-100">
-                                Blog
-                                </Link>
-                            )}
-                            </Menu.Item>
-
-                            <Menu.Item>
-                            {({ active }) => (
-                                <Link href="#" className="text-blue-500 font-bold flex px-4 py-3 hover:bg-gray-100">
-                                    OUR APPROACH
-                                </Link>
-                            )}
-                            </Menu.Item>
-
-                        </Menu.Items>
-                    </Menu>
-                   </div>
-                </li>
+                </li> 
                 <li className="nav-item">
                   <Link
                     className="px-3  text-lg  uppercase text-black lg:text-white hover:text-red-400"

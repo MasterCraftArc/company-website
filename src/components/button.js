@@ -1,22 +1,19 @@
-import '../styles/reset.css'
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import '../styles/global.css'
 import * as React from "react";
-import { Helmet } from "react-helmet";
 import { Link } from 'gatsby';
 
-function Layout(props) {
+function Button(props) {
     const buttonStyle = {
-        borderRadius: '0',
+        borderRadius: '12px',
         height: '45px',
-        width: '150px',
+        minWidth: '150px',
         fontSize: '15px',
+        fontWeight: '600'
       }
 
     return (
-        <Link to="/train"><button className="bg-blue-500 hover:bg-blue-400 text-white mr-5 mb-5" style={buttonStyle}>Home</button></Link>
+        <Link to={props.linkTo} className={props.linkStyles}><button style={buttonStyle} className={props.className} >{props.text}</button></Link>
     );
 };
 
-export default Layout;
+export default Button;
 

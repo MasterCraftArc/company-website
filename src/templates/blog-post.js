@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 import bg from '../images/Hero.jpg'
 // import '../normalize.css'
 // import "../styles/blogStyles.css"
-// import * as blogStyles from "../styles/blogStyles.module.css"
+import * as blogStyles from "../styles/blogStyles.css"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -15,7 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} className="blogPage">
       
       <Seo
         title={post.frontmatter.title}
