@@ -53,19 +53,22 @@ const Equip = () => {
   for (let i = 1; i < 7; i++) {
     cardRefs[i] = React.createRef();
   }
+  
+  function updateCards(event){
+    console.log(event, 'event')
+    if (event.target.innerText === "All"){
+      cardRefs.forEach( card => {
+        card.current.style.display = 'block'
+      })
+    }
 
-  function updateCards(event) {
-    console.log(event, "event");
-    if (event.target.innerText === "All") {
-      cardRefs.forEach((card) => {
-        card.current.style.display = "block";
-      });
-    } else {
-      for (let i = 1; i < 7; i++) {
-        if (cardRefs[i].current.dataset.category === event.target.innerText) {
-          cardRefs[i].current.style.display = "block";
-        } else {
-          cardRefs[i].current.style.display = "none";
+    else{
+      for (let i = 1; i < 7; i++){
+        // console.log('test', categoriesRef.current.childNodes)
+        if (cardRefs[i].current.dataset.category === event.target.innerText){
+          cardRefs[i].current.style.display = 'block'
+        }else{
+          cardRefs[i].current.style.display = 'none'
         }
       }
     }
@@ -116,41 +119,13 @@ const Equip = () => {
 
       <section className="latestTrained min-h-screen mt-8 overflow-x-scroll md:overflow-auto">
         <div className="container h-75 mt-16 mx-auto relative">
-          <div className="px-16 sticky top-0 bg-white">
-            <h2
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-              style={battleText}
-            >
-              Latest Posts
-            </h2>
-            <div
-              ref={categoriesRef}
-              className="font-black md:pl-20 text-2xl text-bold w-full border-b-2 border-solid border-gray-400 mt-16 mb-16"
-            >
-              <button
-                className="pr-4 md:pr-16 text-red-500 cursor-pointer hover:text-red-500"
-                onClick={(event) => updateCards(event)}
-              >
-                All
-              </button>
-              <button
-                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
-                onClick={(event) => updateCards(event)}
-              >
-                People
-              </button>
-              <button
-                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
-                onClick={(event) => updateCards(event)}
-              >
-                Culture
-              </button>
-              <button
-                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
-                onClick={(event) => updateCards(event)}
-              >
-                Process
-              </button>
+        <div className="px-16 sticky top-0 bg-white">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={battleText}>Latest Posts</h2>
+            <div ref={categoriesRef} className="font-black md:pl-20 text-2xl text-bold w-full border-b-2 border-solid border-gray-400 mt-16 mb-16">
+              <button className="pr-4 md:pr-16 text-red-500 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>All</button>
+              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>Agile Acquisitions</button>
+              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>DevSecOps</button>
+              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>Case Studies</button>
             </div>
           </div>
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-auto place-items-center w-full gap-y-3.5">
@@ -159,39 +134,21 @@ const Equip = () => {
             <Card imgDisplay={tech} ref={cardRefs[2]} data-category='Process' category="devSecOps" title="dev New" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit."/>
 
             <Card imgDisplay={tech} ref={cardRefs[3]} data-category='Culture' category="case-studies" title="other New" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit."/> */}
-
-            <div
-              className="card border-2 border-solid border-blue-400"
-              style={trainedCardStyle}
-              ref={cardRefs[1]}
-              data-category="People"
-            >
-              <img
-                src={tech}
-                className="card-img-top"
-                alt="unicorn under magnifying glass"
-              />
+            
+            <div className="card border-2 border-solid border-blue-400" style={trainedCardStyle} ref={cardRefs[1]} data-category='Agile Acquisitions'>
+              <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
-                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  People
-                </div>
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
-                  Aquisition 1
-                </h5>
-                <p className="card-text mb-3" style={trainedCardText}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do. Lorem ipsum dolor sit.
-                </p>
-                <Link to="/blogpost" style={trainedCardLink}>
-                  READ MORE
-                </Link>
+                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white"> Agile Acquisitions</div>
+                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Agile Acquisition 1</h5>
+                <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
+                <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
               </div>
             </div>
 
             <div
               className="card border-2 border-solid border-blue-400"
               style={trainedCardStyle}
-              data-category="Process"
+              data-category="DevSecOps"
               ref={cardRefs[2]}
             >
               <img
@@ -201,7 +158,7 @@ const Equip = () => {
               />
               <div className="card-body text-center">
                 <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  Process
+                  DevSecOps
                 </div>
                 <h5
                   className="card-title text-lg px-1 mt-3 mb-5"
@@ -223,7 +180,7 @@ const Equip = () => {
             <div
               className="card border-2 border-solid border-blue-400"
               style={trainedCardStyle}
-              data-category="Culture"
+              data-category="Case Studies"
               ref={cardRefs[3]}
             >
               <img
@@ -233,7 +190,7 @@ const Equip = () => {
               />
               <div className="card-body text-center">
                 <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  Culture
+                  Case Studies
                 </div>
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
                   Case-Studies 1
@@ -251,7 +208,7 @@ const Equip = () => {
             <div
               className="card border-2 border-solid border-blue-400"
               style={trainedCardStyle}
-              data-category="Culture"
+              data-category="Case Studies"
               ref={cardRefs[4]}
             >
               <img
@@ -261,7 +218,7 @@ const Equip = () => {
               />
               <div className="card-body text-center">
                 <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  Culture
+                  Case Studies
                 </div>
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
                   Case-Studies 2
@@ -279,7 +236,7 @@ const Equip = () => {
             <div
               className="card border-2 border-solid border-blue-400"
               style={trainedCardStyle}
-              data-category="People"
+              data-category="Agile Acquisitions"
               ref={cardRefs[5]}
             >
               <img
@@ -289,10 +246,10 @@ const Equip = () => {
               />
               <div className="card-body text-center">
                 <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  People
+                  Agile Acquisitions
                 </div>
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
-                  Aquisition 2
+                  Acquisition 2
                 </h5>
                 <p className="card-text mb-3" style={trainedCardText}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -307,7 +264,7 @@ const Equip = () => {
             <div
               className="card border-2 border-solid border-blue-400"
               style={trainedCardStyle}
-              data-category="Process"
+              data-category="DevSecOps"
               ref={cardRefs[6]}
             >
               <img
@@ -317,7 +274,7 @@ const Equip = () => {
               />
               <div className="card-body text-center">
                 <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  Process
+                  DevSecOps
                 </div>
                 <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
                   DevSecOps 2
