@@ -147,11 +147,11 @@ const Equip = () => {
 
             <Card imgDisplay={tech} ref={cardRefs[3]} data-category='Culture' category="case-studies" title="other New" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit."/> */}
             
-            <div className="card border-2 border-solid border-blue-400" style={trainedCardStyle} ref={cardRefs[1]} data-category='People'>
+            <div className="card border-2 border-solid border-blue-400" style={trainedCardStyle} ref={cardRefs[1]} data-category='Acquisition'>
               <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
               <div className="card-body text-center">
-                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">People</div>
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Aquisition 1</h5>
+                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">Acquisition</div>
+                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Acquisition 1</h5>
                 <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
                 <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
               </div>
