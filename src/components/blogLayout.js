@@ -32,8 +32,8 @@ const Layout = ({ location, title, post, children }) => {
       {/* <header className="global-header blogPage">{header}</header> */}
       <header className="postHeader">
         <div className="postHeaderContainer">
-          <Header className=""/>
-          <div className="w-3/4 mt-10 mx-auto flex items-center">
+          <Header/>
+          <div className="w-3/4 mx-auto flex items-center">
             <h1 className="text-3xl sm:text-3xl md:text-5xl align-middle xl:text-6xl font-bold text-white sm:pr-10">{post.frontmatter.title}</h1>
           </div>
         </div>
