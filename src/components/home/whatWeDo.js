@@ -27,7 +27,7 @@ const CaseStudies = () => {
             alt="Case Study Icons for Objectives solutions and results"
           ></img>
 
-          <div className="pt-7">
+          <div className="py-7">
             <Button
               linkTo="/equip"
               className="bg-transparent border-blue-900 border-2 border-solid hover:bg-blue-900 text-blue-900 hover:text-white"
