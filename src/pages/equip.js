@@ -3,9 +3,10 @@ import { Link, graphql } from "gatsby"
 import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
 // import pc from "../images/pc.png";
-// import pcGear from "../images/pcGear.png";
-import tech from "../images/tech.png";
-// import monolithic from "../images/blog1.png";
+import pcGear from "../images/pcGear.png";
+// import tech from "../images/tech.png";
+
+
 import Card from "../components/card"
 import Footer
  from "../components/footer";
@@ -29,23 +30,6 @@ const battleText = {
   fontWeight: "normal",
 };
 
-// const trainedCardStyle = {
-//   width: "255px",
-//   height: "380px",
-// };
-
-// const trainedCardText = {
-//   fontSize: "15px",
-// };
-
-// const trainedCardTitle = {
-//   fontSize: "23px",
-// };
-
-// const trainedCardLink = {
-//   color: "red",
-//   textDecoration: "underline",
-// };
 
 const Equip = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
@@ -132,41 +116,10 @@ const Equip = ({ data, location }) => {
             
             {posts.map((post, i) => {
               return (
-                  <Card imgDisplay={tech} ref={cardRefs[i]} category={post.frontmatter.category} title={post.frontmatter.title} description={post.excerpt} blogLink={`/blog${post.fields.slug}`}/>
+                  <Card imgDisplay={post.frontmatter.image || pcGear} ref={cardRefs[i]} category={post.frontmatter.category} title={post.frontmatter.title} description={post.description} blogLink={`/blog${post.fields.slug}`}/>
               )
             })}
             
-            {/* <div
-              className="card border-2 border-solid border-blue-400"
-              style={trainedCardStyle}
-              data-category="DevSecOps"
-              // ref={cardRefs[6]}
-            >
-              <img
-                src={monolithic}
-                className="card-img-top"
-                alt="unicorn under magnifying glass"
-              />
-              <div className="card-body text-center">
-                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  DevSecOps
-                </div>
-                <h5
-                  className="card-title text-lg px-1 mt-3 mb-5"
-                  style={trainedCardTitle}
-                >
-                  Key Terms Cloud-Native Software Delivery: A Fact Sheet
-                </h5>
-                <p className="card-text mb-3" style={trainedCardText}>
-                  Modern software is moving fast. While the associated lexicon
-                  is continuously changing...
-                </p>
-
-                <Link to="/blogpost" style={trainedCardLink}>
-                  READ MORE
-                </Link>
-              </div>
-            </div> */}
 
           </div>
 

@@ -8,6 +8,7 @@ description: Modern software is moving fast. While the associated lexicon is
   in their organization
 tags: Continuous Delivery
 image: monolithic-vs-microservices.png
+published: true
 ---
 Modern software is moving fast. While the associated lexicon is continuously changing, there are a number of core concepts and key terms that one must be familiar with in order to effectively drive digital transformation in their organization. Often it's difficult to find these terms in concepts in one place; even more frequently, it's challenging to determine the connections and interrelationships among these concepts. The below is intended to serve as a living guide for those embarking on their own software transformation journey - especially those with a need for cloud-native capabilities.
 
