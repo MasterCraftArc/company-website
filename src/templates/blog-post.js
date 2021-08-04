@@ -1,8 +1,9 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Bio from "../components/bio"
 import Layout from "../components/blogLayout"
 import Seo from "../components/seo"
+import unicorn from "../images/unicornStars.png"
+import Button from "../components/button"
 
 const metaStyles = {
   lineHeight: '0.5'
@@ -36,7 +37,12 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
       </article>
-      <nav className="blog-post-nav mb-16 pt-5">
+      <div className="flex flex-col justify-center items-center">
+        <img className="w-1/6 mx-auto mt-24 pr-12" src={unicorn} alt="Unicorn with multicolored star trail"></img>
+        <Button linkTo="/equip" className=" bg-red-500 hover:bg-red-700 text-white mr-5 mb-5" text="See More" />
+      </div>
+
+      <nav className="blog-post-nav mb-16 pt-5 font-black">
         <ul
           style={{
             display: `flex`,
@@ -62,6 +68,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
+
     </Layout>
   )
 }

@@ -1,11 +1,12 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby"
 import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
 import pc from "../images/pc.png";
 import pcGear from "../images/pcGear.png";
 import tech from "../images/tech.png";
 import monolithic from "../images/blog1.png";
+import Card from "../components/card"
 
 const pageStyles = {
   color: "black",
@@ -30,8 +31,6 @@ const battleText = {
 const trainedCardStyle = {
   width: "255px",
   height: "380px",
-  // borderRadius: '5px',
-  // boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)"
 };
 
 const trainedCardText = {
@@ -49,14 +48,14 @@ const trainedCardLink = {
 
 const Equip = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
+  console.log(posts.length)
   let cardRefs = []
   let categoriesRef = React.createRef();
-  for (let i = 1; i < 7; i++) {
+  for (let i = 0; i < posts.length; i++) {
     cardRefs[i] = React.createRef();
   }
   
   function updateCards(event){
-    console.log(event, 'event')
     if (event.target.innerText === "All"){
       cardRefs.forEach( card => {
         card.current.style.display = 'block'
@@ -64,8 +63,7 @@ const Equip = ({ data, location }) => {
     }
 
     else{
-      for (let i = 1; i < 7; i++){
-        // console.log('test', categoriesRef.current.childNodes)
+      for (let i = 0; i < posts.length ; i++){
         if (cardRefs[i].current.dataset.category === event.target.innerText){
           cardRefs[i].current.style.display = 'block'
         }else{
@@ -130,27 +128,18 @@ const Equip = ({ data, location }) => {
             </div>
           </div>
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-auto place-items-center w-full gap-y-3.5">
-            {/* <Card imgDisplay={tech} ref={cardRefs[1]} data-category='People' category="aquisition" title="Aquisition New" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit."/>
             
-            <Card imgDisplay={tech} ref={cardRefs[2]} data-category='Process' category="devSecOps" title="dev New" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit."/>
-
-            <Card imgDisplay={tech} ref={cardRefs[3]} data-category='Culture' category="case-studies" title="other New" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit."/> */}
+            {posts.map((post, i) => {
+              return (
+                  <Card imgDisplay={tech} ref={cardRefs[i]} category='DevSecOps' title={post.frontmatter.title} description={post.excerpt} blogLink={`/blog${post.fields.slug}`}/>
+              )
+            })}
             
-            <div className="card border-2 border-solid border-blue-400" style={trainedCardStyle} ref={cardRefs[1]} data-category='Agile Acquisitions'>
-              <img src={tech} className="card-img-top" alt="unicorn under magnifying glass"/>
-              <div className="card-body text-center">
-                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white"> Agile Acquisitions</div>
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>Agile Acquisition 1</h5>
-                <p className="card-text mb-3" style={trainedCardText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit.</p>
-                <Link to="/blogpost" style={trainedCardLink} >READ MORE</Link>
-              </div>
-            </div>
-
             <div
               className="card border-2 border-solid border-blue-400"
               style={trainedCardStyle}
               data-category="DevSecOps"
-              ref={cardRefs[2]}
+              // ref={cardRefs[6]}
             >
               <img
                 src={monolithic}
@@ -178,118 +167,6 @@ const Equip = ({ data, location }) => {
               </div>
             </div>
 
-            <div
-              className="card border-2 border-solid border-blue-400"
-              style={trainedCardStyle}
-              data-category="Case Studies"
-              ref={cardRefs[3]}
-            >
-              <img
-                src={pc}
-                className="card-img-top"
-                alt="unicorn under magnifying glass"
-              />
-              <div className="card-body text-center">
-                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  Case Studies
-                </div>
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
-                  Case-Studies 1
-                </h5>
-                <p className="card-text mb-3" style={trainedCardText}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do. Lorem ipsum dolor sit.
-                </p>
-                <Link to="/blogpost" style={trainedCardLink}>
-                  READ MORE
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className="card border-2 border-solid border-blue-400"
-              style={trainedCardStyle}
-              data-category="Case Studies"
-              ref={cardRefs[4]}
-            >
-              <img
-                src={pc}
-                className="card-img-top"
-                alt="unicorn under magnifying glass"
-              />
-              <div className="card-body text-center">
-                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  Case Studies
-                </div>
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
-                  Case-Studies 2
-                </h5>
-                <p className="card-text mb-3" style={trainedCardText}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do. Lorem ipsum dolor sit.
-                </p>
-                <Link to="/blogpost" style={trainedCardLink}>
-                  READ MORE
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className="card border-2 border-solid border-blue-400"
-              style={trainedCardStyle}
-              data-category="Agile Acquisitions"
-              ref={cardRefs[5]}
-            >
-              <img
-                src={tech}
-                className="card-img-top"
-                alt="unicorn under magnifying glass"
-              />
-              <div className="card-body text-center">
-                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  Agile Acquisitions
-                </div>
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
-                  Acquisition 2
-                </h5>
-                <p className="card-text mb-3" style={trainedCardText}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do. Lorem ipsum dolor sit.
-                </p>
-                <Link to="/blogpost" style={trainedCardLink}>
-                  READ MORE
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className="card border-2 border-solid border-blue-400"
-              style={trainedCardStyle}
-              data-category="DevSecOps"
-              ref={cardRefs[6]}
-            >
-              <img
-                src={pcGear}
-                className="card-img-top"
-                alt="unicorn under magnifying glass"
-              />
-              <div className="card-body text-center">
-                <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
-                  DevSecOps
-                </div>
-                <h5 className="card-title mt-3 mb-5" style={trainedCardTitle}>
-                  DevSecOps 2
-                </h5>
-                <p className="card-text mb-3" style={trainedCardText}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do. Lorem ipsum dolor sit.
-                </p>
-
-                <Link to="/blogpost" style={trainedCardLink}>
-                  READ MORE
-                </Link>
-              </div>
-            </div>
           </div>
 
           {/* <div className="row mt-5 d-flex justify-content-evenly align-items-center"> 
@@ -323,3 +200,29 @@ const Equip = ({ data, location }) => {
   );
 };
 export default Equip;
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {published: {eq: true}}}
+      ) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
+      }
+    }
+  }
+`

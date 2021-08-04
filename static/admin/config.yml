@@ -18,6 +18,19 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Post Excerpt', name: 'excerpt', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options: ["DevSecOps", "Agile Acquisitions", "Case Studies"]
+        default: ["DevSecOps"]
+      - label: 'Cover Image'
+        name: 'image'
+        widget: 'image'
+        required: false
+        tagname: ''
       - { label: 'Body', name: 'body', widget: 'markdown' }
