@@ -61,11 +61,11 @@ class Contact extends React.Component {
               <form red={this.domRef} data-netlify="true" className='w-full h-5/6 flex flex-col justify-evenly' name='Contact' onSubmit={event => this.handleSubmit(event)}>
                 <input ref="form-name" type="hidden" name="form-name" value="Contact" />
                 <div className="m-0">
-                  <input ref="firstName" name="firstName" className='form-control w-full mb-5' placeholder="What's your first name?"></input>
-                  <input ref="lastName" name="lastName" className='form-control w-full mb-5' placeholder='and your Last?'></input>
-                  <input ref="emailAddress" name="emailAddress" className="form-control w-full"placeholder='Email?' type="email"  id="exampleInputEmail1"/>
+                  <input ref="firstName" name="firstName" className='form-control w-full mb-5' placeholder="First Name"></input>
+                  <input ref="lastName" name="lastName" className='form-control w-full mb-5' placeholder='Last Name'></input>
+                  <input ref="emailAddress" name="emailAddress" className="form-control w-full"placeholder='Email' type="email"  id="exampleInputEmail1"/>
                 </div>
-                <textarea ref="message" name="message" className='m-0 w-100 mt-2 form-control bg-transparent' placeholder="Hi Defense Unicorns I'm really excited to talk..."  style={textAreaStyle}></textarea >
+                <textarea ref="message" name="message" className='m-0 w-100 mt-2 form-control bg-transparent' placeholder="Hi, fellow unicorn here! I'm really excited to talk about..."  style={textAreaStyle}></textarea >
                 <Button type="submit" className="bg-red-500 hover:bg-red-700 text-white mt-3 w-full" text="Submit" />
               </form>
             </div>
