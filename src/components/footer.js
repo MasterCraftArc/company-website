@@ -1,12 +1,13 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import verticalLogo from "../images/logo-vertical.png";
-
+import footerBackground from "../images/footerClean.png";
 const footerStyle = {
   height: "100vh",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  background: `url(${footerBackground}) 100% 100% fixed`,
 };
 
 const footerBox = {
@@ -41,7 +42,7 @@ const menu = {
 
 function Footer() {
   return (
-    <footer className="footer md:mt-64" style={footerStyle}>
+    <footer className="footer min-h-screen" style={footerStyle}>
       <div
         className="container md:h-2/6 w-full flex md:flex-row flex-col mx-auto mr-7"
         style={footerBox}

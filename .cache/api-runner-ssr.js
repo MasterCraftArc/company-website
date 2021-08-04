@@ -1,22 +1,22 @@
 var plugins = [{
       name: 'gatsby-plugin-styled-components',
-      plugin: require('/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false},
     },{
       name: 'gatsby-plugin-react-helmet',
-      plugin: require('/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-image',
-      plugin: require('/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-image/gatsby-ssr'),
+      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-feed',
-      plugin: require('/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-feed/gatsby-ssr'),
+      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-feed/gatsby-ssr'),
       options: {"plugins":[],"query":"\n          {\n            site {\n              siteMetadata {\n                title\n                description\n                siteUrl\n                site_url: siteUrl\n              }\n            }\n          }\n        ","feeds":[{"query":"\n              {\n                allMarkdownRemark(\n                  sort: { order: DESC, fields: [frontmatter___date] },\n                ) {\n                  nodes {\n                    excerpt\n                    html\n                    fields {\n                      slug\n                    }\n                    frontmatter {\n                      title\n                      date\n                    }\n                  }\n                }\n              }\n            ","output":"/rss.xml"}]},
     },{
       name: 'gatsby-plugin-manifest',
-      plugin: require('/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Gatsby Starter Blog","short_name":"GatsbyJS","start_url":"/","background_color":"#ffffff","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"b578616b0a0f6f238b578929256ccd11"},
     }]
 /* global plugins */

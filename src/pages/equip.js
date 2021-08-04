@@ -1,13 +1,10 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby"
+import { Link, graphql } from "gatsby";
 import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
-import pc from "../images/pc.png";
-import pcGear from "../images/pcGear.png";
 import tech from "../images/tech.png";
-import monolithic from "../images/blog1.png";
-import Card from "../components/card"
-
+import Card from "../components/card";
+import Footer from "../components/footer";
 const pageStyles = {
   color: "black",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -47,27 +44,25 @@ const trainedCardLink = {
 };
 
 const Equip = ({ data, location }) => {
-  const posts = data.allMarkdownRemark.nodes
-  console.log(posts.length)
-  let cardRefs = []
+  const posts = data.allMarkdownRemark.nodes;
+  console.log(posts.length);
+  let cardRefs = [];
   let categoriesRef = React.createRef();
   for (let i = 0; i < posts.length; i++) {
     cardRefs[i] = React.createRef();
   }
-  
-  function updateCards(event){
-    if (event.target.innerText === "All"){
-      cardRefs.forEach( card => {
-        card.current.style.display = 'block'
-      })
-    }
 
-    else{
-      for (let i = 0; i < posts.length ; i++){
-        if (cardRefs[i].current.dataset.category === event.target.innerText){
-          cardRefs[i].current.style.display = 'block'
-        }else{
-          cardRefs[i].current.style.display = 'none'
+  function updateCards(event) {
+    if (event.target.innerText === "All") {
+      cardRefs.forEach((card) => {
+        card.current.style.display = "block";
+      });
+    } else {
+      for (let i = 0; i < posts.length; i++) {
+        if (cardRefs[i].current.dataset.category === event.target.innerText) {
+          cardRefs[i].current.style.display = "block";
+        } else {
+          cardRefs[i].current.style.display = "none";
         }
       }
     }
@@ -81,11 +76,11 @@ const Equip = ({ data, location }) => {
   }
 
   return (
-    <div className="h-screen equip blog" style={pageStyles}>
+    <div className="equip flex flex-col" style={pageStyles}>
+      <Header textColor="white" />
       <SiteHelmet title="Blog" />
 
-      <Header textColor="white" />
-      <section className="hero flex flex-col justify-center">
+      <section className="blog hero flex flex-col justify-center min-h-screen ">
         <div className="pl-12 pb-8" style={{ color: "red" }}>
           <p className="pb-8 text-white md:text-6xl text-5xl">
             The Defense Unicorns Blog
@@ -118,23 +113,57 @@ const Equip = ({ data, location }) => {
 
       <section className="latestTrained min-h-screen mt-8 overflow-x-scroll md:overflow-auto">
         <div className="container h-75 mt-16 mx-auto relative">
-        <div className="px-16 sticky top-0 bg-white">
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={battleText}>Latest Posts</h2>
-            <div ref={categoriesRef} className="font-black md:pl-20 text-2xl text-bold w-full border-b-2 border-solid border-gray-400 mt-16 mb-16">
-              <button className="pr-4 md:pr-16 text-red-500 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>All</button>
-              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>Agile Acquisitions</button>
-              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>DevSecOps</button>
-              <button className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500" onClick={ (event) => updateCards(event) }>Case Studies</button>
+          <div className="px-16 sticky top-0 bg-white z-10">
+            <h2
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+              style={battleText}
+            >
+              Latest Posts
+            </h2>
+            <div
+              ref={categoriesRef}
+              className="font-black md:pl-20 text-2xl text-bold w-full border-b-2 border-solid border-gray-400 mt-16 mb-16"
+            >
+              <button
+                className="pr-4 md:pr-16 text-red-500 cursor-pointer hover:text-red-500"
+                onClick={(event) => updateCards(event)}
+              >
+                All
+              </button>
+              <button
+                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
+                onClick={(event) => updateCards(event)}
+              >
+                Agile Acquisitions
+              </button>
+              <button
+                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
+                onClick={(event) => updateCards(event)}
+              >
+                DevSecOps
+              </button>
+              <button
+                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
+                onClick={(event) => updateCards(event)}
+              >
+                Case Studies
+              </button>
             </div>
           </div>
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-auto place-items-center w-full gap-y-3.5">
-            
             {posts.map((post, i) => {
               return (
-                  <Card imgDisplay={tech} ref={cardRefs[i]} category='DevSecOps' title={post.frontmatter.title} description={post.excerpt} blogLink={`/blog${post.fields.slug}`}/>
-              )
+                <Card
+                  imgDisplay={tech}
+                  ref={cardRefs[i]}
+                  category="DevSecOps"
+                  title={post.frontmatter.title}
+                  description={post.excerpt}
+                  blogLink={`/blog${post.fields.slug}`}
+                />
+              );
             })}
-            
+
             {/* <div
               className="card border-2 border-solid border-blue-400"
               style={trainedCardStyle}
@@ -166,9 +195,7 @@ const Equip = ({ data, location }) => {
                 </Link>
               </div>
             </div> */}
-
           </div>
-
         </div>
       </section>
 
@@ -190,7 +217,7 @@ const Equip = ({ data, location }) => {
         </div>
       </section>
 
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 };
@@ -205,8 +232,8 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {frontmatter: {published: {eq: true}}}
-      ) {
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
       nodes {
         excerpt
         fields {
@@ -220,4 +247,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
