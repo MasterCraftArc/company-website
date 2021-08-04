@@ -74,7 +74,6 @@ module.exports = {
               siteMetadata {
                 title
                 description
-                category
                 siteUrl
                 site_url: siteUrl
               }
@@ -88,7 +87,6 @@ module.exports = {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
-                  category: node.frontmatter.category,
                   image: node.frontmatter.image,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
@@ -111,7 +109,6 @@ module.exports = {
                       title
                       date
                       description
-                      category
                     }
                   }
                 }

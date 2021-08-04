@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
 // import pc from "../images/pc.png";
-import pcGear from "../images/pcGear.png";
 // import tech from "../images/tech.png";
 
 
