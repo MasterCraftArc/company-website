@@ -3,7 +3,7 @@ import * as React from 'react';
 
 const trainedCardStyle = {
     width: "255px",
-    height: "380px",
+    minHeight: "380px",
   }
   
   const trainedCardText = {
@@ -18,6 +18,7 @@ const trainedCardStyle = {
     color: 'red',
     textDecoration: 'underline'
   }
+
 
 const Card = React.forwardRef((props, ref) => (
         <div ref={ref} className="card border-2 border-solid border-blue-400" style={trainedCardStyle} data-category={props.category}>

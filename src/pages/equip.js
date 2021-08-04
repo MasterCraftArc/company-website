@@ -115,8 +115,9 @@ const Equip = ({ data, location }) => {
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-auto place-items-center w-full gap-y-3.5">
             
             {posts.map((post, i) => {
+              console.log(post)
               return (
-                  <Card imgDisplay={post.frontmatter.image || pcGear} ref={cardRefs[i]} category={post.frontmatter.category} title={post.frontmatter.title} description={post.description} blogLink={`/blog${post.fields.slug}`}/>
+                  <Card imgDisplay={post.image || pcGear} ref={cardRefs[i]} category={post.frontmatter.category} title={post.frontmatter.title} description={post.frontmatter.description} blogLink={`/blog${post.fields.slug}`}/>
               )
             })}
             
@@ -169,6 +170,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          category
         }
       }
     }

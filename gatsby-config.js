@@ -24,6 +24,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/static/img`,
+        name: `blogImages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -67,6 +74,7 @@ module.exports = {
               siteMetadata {
                 title
                 description
+                category
                 siteUrl
                 site_url: siteUrl
               }
@@ -80,6 +88,7 @@ module.exports = {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
+                  category: node.frontmatter.category,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
@@ -100,6 +109,7 @@ module.exports = {
                     frontmatter {
                       title
                       date
+                      category
                     }
                   }
                 }
