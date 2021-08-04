@@ -135,7 +135,7 @@ const Equip = ({ data, location }) => {
               )
             })}
             
-            <div
+            {/* <div
               className="card border-2 border-solid border-blue-400"
               style={trainedCardStyle}
               data-category="DevSecOps"
@@ -165,7 +165,7 @@ const Equip = ({ data, location }) => {
                   READ MORE
                 </Link>
               </div>
-            </div>
+            </div> */}
 
           </div>
 
