@@ -1,20 +1,18 @@
 ---
-title: "DevOps 101"
-published: true
-description: >-
-  DevOps, DevSecOps, et al are some of the most commonly misunderstood terms in the industry. While their usage has become ubiquitous over the past 6 years or so, their meaning frequently gets lost and implementation suffers...
-date: '2021-07-15'
 authors:
   - bfinster
   - mlyon
   - cbarno
-tags:
-  - culture
-  - automation
-  - lean
-  - metrics
-  - sharing
+author: Defense Unicorns Staff
 slug: devops-101
+published: true
+title: DevOps 101
+date: 2021-07-15
+description: DevOps, DevSecOps, et al are some of the most commonly
+  misunderstood terms in the industry. While their usage has become ubiquitous
+  over the past 6 years or so, their meaning frequently gets lost and
+  implementation suffers...
+tags: DevSecOps
 ---
 
 DevOps, DevSecOps, et al are some of the most commonly misunderstood terms in the industry. While their usage has become
