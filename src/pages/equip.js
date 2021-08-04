@@ -2,10 +2,10 @@ import * as React from "react";
 import { Link, graphql } from "gatsby"
 import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
-import pc from "../images/pc.png";
-import pcGear from "../images/pcGear.png";
+// import pc from "../images/pc.png";
+// import pcGear from "../images/pcGear.png";
 import tech from "../images/tech.png";
-import monolithic from "../images/blog1.png";
+// import monolithic from "../images/blog1.png";
 import Card from "../components/card"
 
 const pageStyles = {
@@ -28,23 +28,23 @@ const battleText = {
   fontWeight: "normal",
 };
 
-const trainedCardStyle = {
-  width: "255px",
-  height: "380px",
-};
+// const trainedCardStyle = {
+//   width: "255px",
+//   height: "380px",
+// };
 
-const trainedCardText = {
-  fontSize: "15px",
-};
+// const trainedCardText = {
+//   fontSize: "15px",
+// };
 
-const trainedCardTitle = {
-  fontSize: "23px",
-};
+// const trainedCardTitle = {
+//   fontSize: "23px",
+// };
 
-const trainedCardLink = {
-  color: "red",
-  textDecoration: "underline",
-};
+// const trainedCardLink = {
+//   color: "red",
+//   textDecoration: "underline",
+// };
 
 const Equip = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes

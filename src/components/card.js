@@ -19,13 +19,6 @@ const trainedCardStyle = {
     textDecoration: 'underline'
   }
 
-  const buttonStyle = {
-      borderRadius: '0',
-      height: '45px',
-      width: '150px',
-      fontSize: '15px',
-    }
-
 const Card = React.forwardRef((props, ref) => (
         <div ref={ref} className="card border-2 border-solid border-blue-400" style={trainedCardStyle} data-category={props.category}>
             <img src={props.imgDisplay} className="card-img-top" alt="blogpost thumbnail"/>
