@@ -169,11 +169,6 @@ const Equip = ({ data, location }) => {
 
           </div>
 
-          {/* <div className="row mt-5 d-flex justify-content-evenly align-items-center"> 
-
-
-      <Footer />
-          </div> */}
         </div>
       </section>
 
