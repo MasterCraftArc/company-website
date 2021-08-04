@@ -3,15 +3,7 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: `Defense Unicorns`,
-    author: {
-      name: `placeholder`,
-      summary: `placeholder`,
-    },
-    description: `palceholder`,
     siteUrl: `https://defenseunicorns.com`,
-    social: {
-      twitter: `kylemathews`,
-    },
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -121,8 +113,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Defense Unicorns`,
+        short_name: `DU`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

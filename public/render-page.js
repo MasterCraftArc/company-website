@@ -3863,8 +3863,8 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "Gatsby Starter Blog",
-    "short_name": "GatsbyJS",
+    "name": "Defense Unicorns",
+    "short_name": "DU",
     "start_url": "/",
     "background_color": "#ffffff",
     "theme_color": "#663399",

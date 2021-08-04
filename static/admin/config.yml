@@ -10,7 +10,7 @@ collections:
     label: 'Blog'
     folder: 'content/blog'
     create: true
-    slug: 'index'
+    slug: "/blog{{slug}}"
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'
@@ -22,14 +22,14 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       # - { label: 'Post Excerpt', name: 'excerpt', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - label: "Tags"
-        name: "tags"
+      - label: "Category"
+        name: "category"
         widget: "select"
         options: ["DevSecOps", "Agile Acquisitions", "Continuous Delivery"]
         default: ["DevSecOps"]
       - label: 'Cover Image'
         name: 'image'
         widget: 'image'
-        required: false
+        required: true
         tagname: ''
       - { label: 'Body', name: 'body', widget: 'markdown' }

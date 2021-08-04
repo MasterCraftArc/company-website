@@ -132,7 +132,7 @@ const Equip = ({ data, location }) => {
             
             {posts.map((post, i) => {
               return (
-                  <Card imgDisplay={tech} ref={cardRefs[i]} category='DevSecOps' title={post.frontmatter.title} description={post.excerpt} blogLink={`/blog${post.fields.slug}`}/>
+                  <Card imgDisplay={tech} ref={cardRefs[i]} category={post.frontmatter.category} title={post.frontmatter.title} description={post.excerpt} blogLink={`/blog${post.fields.slug}`}/>
               )
             })}
             

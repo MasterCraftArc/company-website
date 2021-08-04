@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import verticalLogo from "../images/logo-vertical.png";
-import background from "../images/footerFull.png"
 
 
 const footerStyle = {
