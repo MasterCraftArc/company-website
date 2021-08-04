@@ -10,7 +10,7 @@ description: Modern software is moving fast. While the associated lexicon is
 tags: Continuous Delivery
 image: monolithic-vs-microservices.png
 ---
-Modern software is moving fast. While the associated lexicon is continuously changing, there are a number of core concepts and key terms that one must be familiar with in order to effectively drive digital transformation in their organization. Often it's difficult to find these terms in concepts in one place; even more frequently, it's challenging to determine the connections and interrelationships among these concepts. The below is intended to serve as a living guide for those embarking on their own software transformation journey - especially those with a need for cloud-native capabilities.
+Modern software is moving fast. While the associated lexicon is continuously changing, there are a number of core concepts and key terms that one must be familiar with in order to effectively drive digital transformation in their organization. Often it's difficult to find these terms in concepts in one place; even more frequently, it's challenging to determine the connections and interrelationships among these concepts. The below is intended to serve as a living guide for those embarking on their own software transformation journey - especially those with a need for cloud-native  
 
 ### Containers
 
@@ -22,13 +22,7 @@ In a microservice-based approach to software system architecture, the system is 
 
 ![Figure I: A visual comparison of monolithic vs. microservices architectures.](monolithic-vs-microservices.png "Figure I: A visual comparison of monolithic vs. microservices architectures.")
 
-
-
-
-
 sdsfsfsf
-
-
 
 ![Figure I: A visual comparison of monolithic vs. microservices architectures.](http://localhost:8000/static/blog1-3cd8ac0d43565f64e77ce12562358c15.png)
 
