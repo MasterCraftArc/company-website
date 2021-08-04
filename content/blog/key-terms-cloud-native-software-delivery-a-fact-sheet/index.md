@@ -23,9 +23,9 @@ In a microservice-based approach to software system architecture, the system is 
 
 ![Monolithic vs Microservices](monolithic-vs-microservices.png "Figure I: A visual comparison of monolithic vs. microservices architectures.")
 
-![Figure I: A visual comparison of monolithic vs. microservices architectures.](https://wonderful-poitras-cfd346.netlify.app/static/blog1-3cd8ac0d43565f64e77ce12562358c15.png)
+*Figure I: A visual comparison of monolithic vs. microservices architectures.*
 
-Figure I: A visual comparison of monolithic vs. microservices architectures.
+
 
 Within the Department of Defense, enterprise-wide availability of pre-approved, containerized microservices can significantly accelerate software development efforts by making the building blocks of software systems discoverable, available on-demand, and deployable in any computing environment. Given their decoupled nature (i.e., independent of a single system or workflow), microservices are highly composable. They can be configured with other, independent microservices to support workflows and applications tailored to any unique mission. Moreover, microservices that arecontainerized, configured and managed as a carefully chosen suite of services and functions can serve as pre-assembled software development pipelines that are infinitely scalable. This paper discusses this concept in greater detail under the section titled “Why Big Bang?”
 
