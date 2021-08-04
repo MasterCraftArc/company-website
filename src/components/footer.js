@@ -54,6 +54,7 @@ function Footer() {
                 className="mx-auto mt-12 justify-self-start"
                 src={verticalLogo}
                 style={logoStyle}
+                alt="Defense Unicorns logo"
               />
             </div>
             <div className="flex w-full mx-auto">

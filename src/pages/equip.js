@@ -5,6 +5,7 @@ import Header from "../components/header";
 import tech from "../images/tech.png";
 import Card from "../components/card";
 import Footer from "../components/footer";
+
 const pageStyles = {
   color: "black",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -25,23 +26,23 @@ const battleText = {
   fontWeight: "normal",
 };
 
-const trainedCardStyle = {
-  width: "255px",
-  height: "380px",
-};
+// const trainedCardStyle = {
+//   width: "255px",
+//   height: "380px",
+// };
 
-const trainedCardText = {
-  fontSize: "15px",
-};
+// const trainedCardText = {
+//   fontSize: "15px",
+// };
 
-const trainedCardTitle = {
-  fontSize: "23px",
-};
+// const trainedCardTitle = {
+//   fontSize: "23px",
+// };
 
-const trainedCardLink = {
-  color: "red",
-  textDecoration: "underline",
-};
+// const trainedCardLink = {
+//   color: "red",
+//   textDecoration: "underline",
+// };
 
 const Equip = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes;
