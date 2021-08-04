@@ -25,23 +25,23 @@ const battleText = {
   fontWeight: "normal",
 };
 
-const trainedCardStyle = {
-  width: "255px",
-  height: "380px",
-};
+// const trainedCardStyle = {
+//   width: "255px",
+//   height: "380px",
+// };
 
-const trainedCardText = {
-  fontSize: "15px",
-};
+// const trainedCardText = {
+//   fontSize: "15px",
+// };
 
-const trainedCardTitle = {
-  fontSize: "23px",
-};
+// const trainedCardTitle = {
+//   fontSize: "23px",
+// };
 
-const trainedCardLink = {
-  color: "red",
-  textDecoration: "underline",
-};
+// const trainedCardLink = {
+//   color: "red",
+//   textDecoration: "underline",
+// };
 
 const Equip = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes;
