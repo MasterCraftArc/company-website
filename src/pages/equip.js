@@ -171,6 +171,7 @@ export const pageQuery = graphql`
           title
           description
           category
+          author
         }
       }
     }
