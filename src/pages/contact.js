@@ -6,7 +6,7 @@ import axios from "axios"
 import * as qs from "query-string"
 import StyledBackgroundSection from '../components/contactBg'
 import Button from '../components/button'
-
+import Footer from "../components/footer"
 const textAreaStyle = {
   height: '200px'
 }
@@ -54,8 +54,7 @@ class Contact extends React.Component {
         <main className='contact min-h-screen w-full'>
           <SiteHelmet title="Contact" />
           <Header/>
-    
-          <section className="rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mx-auto mt-24 bg-white bg-opacity-70" style={formContainer}>
+          <section className="rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mx-auto mt-10 bg-white bg-opacity-70" style={formContainer}>
             <h1 className='text-center pt-5 sm:pt-7 md:pt-10 mb-3 font-bold text-5xl text-red-500'>Get in touch!</h1>
             <div className=" w-9/12 h-full mx-auto py-2 sm:pt-0 border-dark flex justify-between">
               <form red={this.domRef} data-netlify="true" className='w-full h-5/6 flex flex-col justify-evenly' name='Contact' onSubmit={event => this.handleSubmit(event)}>
@@ -70,7 +69,11 @@ class Contact extends React.Component {
               </form>
             </div>
           </section>
+          <div className="">
+            <Footer contact={true}/>
+          </div>
         </main>
+        
       </StyledBackgroundSection>
     );
 

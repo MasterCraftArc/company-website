@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"
 import { createGlobalStyle } from "styled-components"
-
+import Footer from "./footer"
 
 const Layout = ({ location, title, post, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -37,11 +37,7 @@ const Layout = ({ location, title, post, children }) => {
         </div>
       </header>
       <main className="w-3/4 mx-auto">{children}</main>
-      {/* <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer> */}
+      < Footer background/>
     </div>
   )
 }
@@ -122,14 +118,17 @@ const GlobalStyle = createGlobalStyle`
 } */
 
 html {
-  line-height: var(--lineHeight-normal);
-  font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+article{
+  line-height: var(--lineHeight-normal);
+  font-size: var(--fontSize-root);
   font-family: var(--font-body);
+}
+
+body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
 }

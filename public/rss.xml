@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Defense Unicorns]]></title><description><![CDATA[palceholder]]></description><link>https://defenseunicorns.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 04 Aug 2021 14:41:25 GMT</lastBuildDate><item><title><![CDATA[What is CD Really?]]></title><description><![CDATA[There are many misconceptions about continuous delivery. There are also many things about CD that are not obvious on the
+surface. If you are…]]></description><link>https://defenseunicorns.com/20210729-what-is-cd/</link><guid isPermaLink="false">https://defenseunicorns.com/20210729-what-is-cd/</guid><pubDate>Thu, 29 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;There are many misconceptions about continuous delivery. There are also many things about CD that are not obvious on the
+surface. If you are “CD curious”, perhaps this will help.&lt;/p&gt;
+&lt;h2&gt;What is CD?&lt;/h2&gt;
+&lt;p&gt;Continuous delivery is the ability to deploy the latest changes on demand. It is common for a single team skilled at CD
+to deliver production changes several times per day or week. In a highly optimized delivery system, we can even achieve
+“continuous deploy” where the pipeline validates individual changes and deploy them directly to production instead of
+being batched with other changes in a release. Large batches of work are slow to give feedback and contain more defects,
+so anything we can do to reduce batch size and accelerate feedback will improve quality.&lt;/p&gt;
+&lt;p&gt;For people accustomed to legacy delivery methods this can sound terrifying. “How can we possibly get our quality
+processes done that quickly? We’ll be breaking things constantly!” We can’t use the same quality processes. We need to
+use better quality processes. CD is not only safer, but also reduces the cost of change and total cost of ownership for
+product development.&lt;/p&gt;
+&lt;h2&gt;What are the goals of CD?&lt;/h2&gt;
+&lt;p&gt;It is important to understand the underlying concepts behind agile delivery in general. Several methods were developed
+in the late 1990s to overcome some common problems with development. XP, Scrum, et al were all focused on addressing the
+reality of software delivery is that one or more of the following is true:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The requirements aren’t what the end-users need&lt;/li&gt;
+&lt;li&gt;We have misunderstood the requirements&lt;/li&gt;
+&lt;li&gt;The end-users’ needs change before we can deliver&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This is the underlying problem that agile development methods are trying to solve.&lt;/p&gt;
+&lt;p&gt;Operational stability is another primary concern. It’s very common for organizations to establish a delivery method that
+has layers of process and approvals to “ensure quality”. However, when there is a production incident, that process is
+discarded because it takes too much time. Instead, we are left inventing a “hotfix” process on the fly where all of our
+carefully designed quality checks are ignored for the sake of speed.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8b23adda6ef7909e882c554c87079cc1/b4294/the-secret-of-cd.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAcNOU8VChP/EAB0QAAECBwAAAAAAAAAAAAAAAAECAwASExQiMUH/2gAIAQEAAQUCQZC48LepCDlxW//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFX/8QAGBABAAMBAAAAAAAAAAAAAAAAAQAQIUH/2gAIAQEABj8CGY72i//EABwQAQACAgMBAAAAAAAAAAAAAAEAESFBMVFhkf/aAAgBAQABPyFBuSIsC8U1L9Rm7ONkXx8idp//2gAMAwEAAgADAAAAEBs//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QiH//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPxCqf//EABoQAQEAAwEBAAAAAAAAAAAAAAERACExQVH/2gAIAQEAAT8QcmIwmHTsEtp8mKzWzfe4wwl2DjigddDgtFz7n//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Always an emergency&quot;
+        title=&quot;Always an emergency&quot;
+        src=&quot;/static/8b23adda6ef7909e882c554c87079cc1/b4294/the-secret-of-cd.jpg&quot;
+        srcset=&quot;/static/8b23adda6ef7909e882c554c87079cc1/ff44c/the-secret-of-cd.jpg 158w,
+/static/8b23adda6ef7909e882c554c87079cc1/a6688/the-secret-of-cd.jpg 315w,
+/static/8b23adda6ef7909e882c554c87079cc1/b4294/the-secret-of-cd.jpg 600w&quot;
+        sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The goal of CD is to solve both of these problems. The secret of CD is that we treat every change as an emergency change
+and design a delivery flow optimized for operational support. We should always use our safest delivery method in an
+emergency to prevent making a bad problem worse. We need that delivery method to also be fast so that we can meet our
+operational goals.&lt;/p&gt;
+&lt;p&gt;For development, it is critical that we can get rapid feedback on stability and usefulness of what we are creating. We
+need quality gates that can efficiently and effectively identify known issues. This gives us confidence that we are not
+breaking things and allows us to deliver only what is needed and to make sure that what we deliver meets the actual
+needs of the end-user. When it does not, we have the ability to rapidly change course.&lt;/p&gt;
+&lt;h2&gt;What does a CD workflow look like?&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e6b044024c804217bf4786253738bde9/996b2/CD_Pipeline_Full_transparent.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACvUlEQVQozz2Ra0hTcRjG353tzG1nc+ycTZbTTROqeUmdzmW6FAuXU7cCL6kTclpewlzemNtM85Zi3qpFRVIqFpQas7RtJWlJZhEE9cEQJD/YhwgilfLbP866fHh4ed8Xfjw8D5gcEZzOWa2lc1Y73OJKqQqwj4vYtgV//+ZZIeHwCgmbW0jUTQgFbS+FeKyeAgBaUlZ4Cikc2cS5pU4G4fACYff4BLm14UEd0+rFtodq1D4VvZLbbxCDHDEU7aNswvoYFzg/s/g7CBMghMHAGgYALADgsFSZfvwLC/6E3U0Sdg/vPxAA/PYPLCl0/e2Hky9PmMQJRo60+ibAyTuQhBD9V7CZjCguzlTiTGwf7Y4+slSZwO96A4R1hgaJCLuH+w/Iju5xt0f1vuiIaHtkC0g5LhZlnQaZ+ijtBnAcF3M4nFQej6sT8YlEjVJKoLUGbGSyiFk83sLMuXURi+1/hgkcHmrP0BKAESHYXWyLVA3MjQEAN+36PUgQkRAfroE4pQacHRaay/krxspoGax7zfBksQzOuepAd20IInufAqNpjgdnXThYtz75jESbC9NTu2zlymMZwTGR8dLQwBByryKCPFWQJS8sOURNNJlDv3Y2ZKzdLTese83ZM/Nmg2XKYjhyZdCouuTRhzVP7pL3vRKCUEwxJTIZ3RznQH1Fkba19nyO0ZRvSi/KLTGWFjg7z9TeH69rnO+uqdnssX7/Mlm1/eN15db8u8rtRk/Tln7k9i/1jbcbB68+zy6c/hgHZGAgyBK1QAXx4NufEnBCIsKTYpKJ+KhYPr2b8tMIevblZVO24lRy0JZOOVp1pL46k9JUlFFKUyOVZCpn13zYwUAkEYM4WAaisBBACAF6j4ABwOiu7PEVJiHl2MbqMCjz1AzkHQM0ZwWE+ny5bqKfcMLtAt0ygvpVBKYHy/AbD7rhtCNsu70AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;CD workfloe&quot;
+        title=&quot;CD workfloe&quot;
+        src=&quot;/static/e6b044024c804217bf4786253738bde9/f058b/CD_Pipeline_Full_transparent.png&quot;
+        srcset=&quot;/static/e6b044024c804217bf4786253738bde9/c26ae/CD_Pipeline_Full_transparent.png 158w,
+/static/e6b044024c804217bf4786253738bde9/6bdcf/CD_Pipeline_Full_transparent.png 315w,
+/static/e6b044024c804217bf4786253738bde9/f058b/CD_Pipeline_Full_transparent.png 630w,
+/static/e6b044024c804217bf4786253738bde9/40601/CD_Pipeline_Full_transparent.png 945w,
+/static/e6b044024c804217bf4786253738bde9/78612/CD_Pipeline_Full_transparent.png 1260w,
+/static/e6b044024c804217bf4786253738bde9/996b2/CD_Pipeline_Full_transparent.png 3077w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;CD isn’t automation. CD uses automation to enable small batches of work. However, how we use that automation is key. We
+need the correct processes to convert ideas we think are valuable to small changes we can deliver to the end-user to get
+feedback on the value so we can adjust our ideas. The faster we can close that loop and the more waste we can drive out
+the more successful we will be at value delivery.&lt;/p&gt;
+&lt;h2&gt;Is it CI/CD or CD?&lt;/h2&gt;
+&lt;p&gt;It’s just “CD”. Just as DevOps encompasses security, business, compliance, user experience, etc., CD encompasses the
+entire development process. Continuous integration is the team behavior where all changes on the team are integrated
+very rapidly and at a minimum daily. It’s required behavior for a CD workflow, so saying “CD” includes CI.&lt;/p&gt;
+&lt;h2&gt;What are some common ways to get it wrong?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;“We will focus on CD after we have a working application.”&lt;/strong&gt; If doing greenfield development, the ability to deliver is feature zero. If we cannot deliver, we cannot verify quality and every change we make is only waste. We risk developing things that cannot be delivered at all if we don’t start with delivery first.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“We automated the build. We are doing CD.”&lt;/strong&gt; CD is how we use the tools. Automating the build is only step 1. How do we continuously harden the flow by adding better quality gates? How can we shorten the cycle time from commit to delivery? How can we reduce the lead time from request to delivery? How can we get more certainty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;about what needs to be delivered? These are all design and process problems that must be solved for CD.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;“Our users don’t want changes that often”&lt;/strong&gt; They do when things are broken. CD is about operational stability first and feature delivery second. We need to know we can fix things quickly. We do that with constant practice. The best thing we have to practice with is the features we are delivering daily. Also, there is a big difference between generally exposing new features daily and just delivering changes daily to verify they do not break. Again, this is a quality process, not a feature delivery process. We need quality feedback from continuous testing in production instead of hoping our next big release doesn’t break anything. Your next big release will break something.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Do we need smarter people?&lt;/h2&gt;
+&lt;p&gt;No. You have smart people. However, CD is the tool that helps those smart people grow into more effective teams. Solving
+the problem of “why can’t we deliver this change safely to production today?” is an engineering problem that takes
+teamwork and disciplined development. We need to solve the problems of feature flagging, continuous integration,
+developer-driven testing, effective monitoring and alerting, etc. It also improves morale due to the reduced toil, less
+Fear Driven Development, improved quality, and improved teamwork.&lt;/p&gt;
+&lt;h2&gt;CD is the most effective tool for digital transformation&lt;/h2&gt;
+&lt;p&gt;We don’t need scaling frameworks or standardized processes. CD acts as the engine for broader organizational
+improvement. It exposes improvement opportunities in team workflow, but it also exposes problems that are external to
+teams that prevent frequent delivery. Testing teams, external change approvals, external design approvals, etc. cease to
+be features and quickly become recognized for what they are, wasteful defects, and bandages for poor quality process
+that give us the illusion of safety. By putting our efforts towards enabling teams to deliver more efficiently,
+effectively, and sustainably, we discover how to realign the entire organization around customer value. The organization
+is delivering today at the highest level it can with the given structure and goals. Only by discovering what the
+roadblocks are can we improve. “Why can’t every team deliver daily?” informs that.&lt;/p&gt;
+&lt;p&gt;Continuous delivery is the ultimate expession of agile development and is the reason for a DevOps operating model. If
+you are on the DevOps journey or want to deliver with more agility, focus on continuous delivery.&lt;/p&gt;
+&lt;p&gt;Want to hear more? We are eager to help your organization accelerate value delivery. Let us know hoe we can help.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DevOps 101]]></title><description><![CDATA[DevOps, DevSecOps, et al are some of the most commonly misunderstood terms in the industry. While their usage has become
+ubiquitous over the…]]></description><link>https://defenseunicorns.com/20210715-devops-101/</link><guid isPermaLink="false">https://defenseunicorns.com/20210715-devops-101/</guid><pubDate>Thu, 15 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;DevOps, DevSecOps, et al are some of the most commonly misunderstood terms in the industry. While their usage has become
+ubiquitous over the past 6 years or so, their meaning frequently gets lost and implementation suffers because of this.
+If we are clear on where DevOps came from, how it’s evolved, where it is going, we can better apply it to realize
+improved outcomes.&lt;/p&gt;
+&lt;p&gt;Let’s start at the beginning. Why DevOps? (and don’t worry…we’ll get to DevSecOps)&lt;/p&gt;
+&lt;p&gt;As in any design process, it would be wrong to jump straight to the solution and decide that DevOps is the answer if we
+have not yet identified the problems we are trying to solve. We should never blindly follow trends. The goal is to
+improve our ability to deliver what the user needs; to be more efficient, more effective, and more sustainable. We are
+working to apply some of the best practices from lean manufacturing to the problem of software delivery. If you don’t
+need to be more efficient, more effective, or more sustainable then DevOps is the wrong answer. However, the reality is
+that software is now core to everything we do and the era of short-term projects instead of long term product management
+is long past. Focusing on how we can more sustainably deliver changes with lower cost and higher delivered value while
+making sure the results are stable and available is critical. A correctly conceptualized DevOps approach enables this.&lt;/p&gt;
+&lt;p&gt;“DevOps” has been applied to tools, teams, and job titles. Too frequently we hear phrases like “our DevOps engineers are
+using Azure DevOps to build pipelines for the DevOps teams”. This misrepresents the reality of DevOps.. Tools are
+required in DevOps, but there are no DevOps tools. Teams need DevOps, but labeling a team “DevOps” doesn’t make it so.
+“DevOps Engineer” is a title with no clear definition which frequently equates to release management, but  having a
+handoff for deploying changes is a DevOps anti-pattern. If we do not have the correct mental model then we will struggle
+to implement correctly.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;So, what is DevOps really?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In 2015, Microsoft’s Donovan Brown described DevOps as “the union of people, processes, and products to enable the
+continuous delivery of value to the end-user.” This definition places the focus on where it belongs - on the continuous
+delivery of value to the end-user. If we are not working daily to improve the ability of our organization to
+continuously deliver value to the end-user so that we can get feedback, then it doesn’t matter what we call it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Isn’t it just “Dev” and “Ops” on the same team?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It hasn’t been “Dev” and “Ops” for a long time. In 2008, Patrick Debois was trying to solve the problem of how to
+deliver better. Development teams were “agile” but the overall flow of delivery was not. Development teams and
+operations teams had different goals. Development teams were focused on shipping features and operations teams were
+focused on system stability. The handoff between the groups generated conflict, delays, and waste because of misaligned
+goals. Debois brought these groups together to align goals and improve the flow of delivery. While the origin of DevOps
+is the harmonization of two teams with seemingly incompatible goals, DevOps has evolved greatly in the past 13 years. As
+DevOps adopters shared successes and failures, it became apparent that value delivery is greatly enabled or greatly
+impeded by broader organizational culture and practices. After some time a consensus emerged that it is ineffective to
+focus on improving the efficiency of a single team if the surrounding organization does not adapt as well.&lt;/p&gt;
+&lt;p&gt;To help describe how organizations should behave to support DevOps approaches and improve outcomes, John Willis and Jez
+Humble developed the acronym CALMS.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(C)ulture of Learning and Improving&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We need the right culture. Output is not our goal; better outcomes are. We need a culture of trust, feedback, and learning. We need to trust each other and have the psychological safety to bring new ideas. We need to assume that we are wrong about most of our ideas and approach everything as an opportunity to get feedback on the idea. We need to build better feedback loops into every process so we don’t succumb to the sunk cost fallacy where we are too invested in the idea to throw it away. We need to share and celebrate success. We need to share and celebrate failure because now we can help others not waste their time on a poor idea.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(A)utomation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Humans should do creative work. Robots should do everything else. If there are rules to follow, that is where robots excel. Efficiencies gained from implementing technology such as robotic process automation should free up humans for higher-level cognitive tasks.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(L)ean&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We need lean processes. We should constantly strive to identify and reduce waste in the system of delivery. This goes far beyond development. We must look at the whole system from ideas to sustainable operations of the outcomes of those ideas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(M)etrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We need to measure the right things the right way to know where we are and what and how to improve next. We need measurable goals and appropriate metrics to track the health of the delivery system and our progress towards those goals. Metrics are a double edged sword. The act of measuring changes behaviors and we need to design metrics carefully to encourage the outcomes we want. We’ll dive deeper into this in upcoming posts, but it’s very important to understand your goals before selecting measures towards them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(S)haring&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We share what we have learned. We help people understand what and why something works or doesn’t work so that they can extend our successes and avoid repeating our mistakes.&lt;/p&gt;
+&lt;p&gt;In future posts, we will be diving deeper into culture, automation, lean, metrics, and sharing. These are the
+touchstones of any DevOps improvement.&lt;/p&gt;
+&lt;h2&gt;DevSecOps&lt;/h2&gt;
+&lt;p&gt;Circa 2017, a new term began to appear, “DevSecOps”. DevOps should be secure! This term is often debated in the
+community. As we said, DevOps isn’t Dev and Ops working together. DevOps is how we align the organization to
+continuously deliver value to the end-user. It requires every capability in the value stream to accomplish this: product
+knowledge, coding, user experience, quality, compliance, security, infrastructure, etc. None of these are more or less
+important. All of those capabilities must exist in the value stream for something to be valuable. To continuously
+deliver value to the end-user, everyone working on those capabilities needs to align on the most important goal, working
+together to reduce waste, toil, delays, and conflict to optimize the entire system of value delivery. Each of these
+capabilities should be enabled as a service, not a roadblock.&lt;/p&gt;
+&lt;h2&gt;Value Stream Management&lt;/h2&gt;
+&lt;p&gt;This is where DevOps is today. We know that it requires organizational cooperation to deliver at the pace we need. We
+need product teams leveraging services from Security, Compliance, User eXperience, and other disciplines. We need agile
+budgets if we want agile outcomes. Product funding instead of annual budgets that incentivize waste. We need product
+roadmaps aligned to organizational goals and customer needs. We need operations organized in a way so that product teams
+own the outcomes of their technical and quality decisions and that product owners can get rapid feedback on the quality
+of the underlying ideas. We need to look at what our products are and relentlessly improve the constraints in the flow
+of value for those products. Ultimately, we need to internalize that our goal is to deliver value to our end-users.
+Anything we are doing at an organizational level that is hindering that goal must be improved.  DevOps isn’t a tool,
+team, or role. DevOps is a holistic operating model focused on improving value delivery. It cannot be bought. It must be
+lived.&lt;/p&gt;
+&lt;p&gt;We’ll be sharing here often. We hope you’ll follow along and we would love feedback on how we can help you succeed!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://defenseunicorns.com/new-beginnings/</link><guid isPermaLink="false">https://defenseunicorns.com/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+right at the coast of the Semantics, a large language ocean. A small river named
+Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
+&lt;h2&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
+&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This however showed weasel&lt;/li&gt;
+&lt;li&gt;Well uncritical so misled
+&lt;ul&gt;
+&lt;li&gt;this is very interesting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Goodness much until that fluid owl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When she reached the first hills of the &lt;strong&gt;Italic Mountains&lt;/strong&gt;, she had a last
+view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, the headline of
+&lt;a href=&quot;http://google.com&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
+Lane. Pityful a rhetoric question ran over her cheek, then she continued her
+way. On her way she met a copy.&lt;/p&gt;
+&lt;h3&gt;Overlaid the jeepers uselessly much excluding&lt;/h3&gt;
+&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
+few insidious Copy Writers ambushed her, made her drunk with
+&lt;a href=&quot;http://google.com&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
+they abused her for their projects again and again. And if she hasn’t been
+rewritten, then they are still using her.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+right at the coast of the Semantics, a large language ocean.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It is a paradisematic country, in which roasted parts of sentences fly into your
+mouth. Even the all-powerful Pointing has no control about the blind texts it is
+an almost unorthographic life One day however a small line of blind text by the
+name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
+&lt;h3&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h3&gt;
+&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;So baboon this&lt;/li&gt;
+&lt;li&gt;Mounted militant weasel gregariously admonishingly straightly hey&lt;/li&gt;
+&lt;li&gt;Dear foresaw hungry and much some overhung&lt;/li&gt;
+&lt;li&gt;Rash opossum less because less some amid besides yikes jeepers frenetic
+impassive fruitlessly shut&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When she reached the first hills of the Italic Mountains, she had a last view
+back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
+Village and the subline of her own road, the Line Lane. Pityful a rhetoric
+question ran over her cheek, then she continued her way. On her way she met a
+copy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
+been rewritten a thousand times and everything that was left from its origin
+would be the word “and” and the Little Blind Text should turn around and
+return to its own, safe country.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
+few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
+and dragged her into their agency, where they abused her for their projects
+again and again. And if she hasn’t been rewritten, then they are still using
+her. Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts.&lt;/p&gt;
+&lt;h4&gt;Silent delightfully including because before one up barring chameleon&lt;/h4&gt;
+&lt;p&gt;Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+large language ocean. A small river named Duden flows by their place and
+supplies it with the necessary regelialia. It is a paradisematic country, in
+which roasted parts of sentences fly into your mouth.&lt;/p&gt;
+&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an
+almost unorthographic life One day however a small line of blind text by the
+name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
+advised her not to do so, because there were thousands of bad Commas, wild
+Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.&lt;/p&gt;
+&lt;h5&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h5&gt;
+&lt;p&gt;She packed her seven versalia, put her initial into the belt and made herself on
+the way. When she reached the first hills of the Italic Mountains, she had a
+last view back on the skyline of her hometown Bookmarksgrove, the headline of
+Alphabet Village and the subline of her own road, the Line Lane. Pityful a
+rhetoric question ran over her cheek, then she continued her way. On her way she
+met a copy.&lt;/p&gt;
+&lt;h6&gt;Slapped cozy a that lightheartedly and far&lt;/h6&gt;
+&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
+been rewritten a thousand times and everything that was left from its origin
+would be the word “and” and the Little Blind Text should turn around and return
+to its own, safe country. But nothing the copy said could convince her and so it
+didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
+with Longe and Parole and dragged her into their agency, where they abused her
+for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://defenseunicorns.com/hello-world/</link><guid isPermaLink="false">https://defenseunicorns.com/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
+&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
+eggs in brine, or packing each egg in damp, salted charcoal. In Asian
+supermarkets, these eggs are sometimes sold covered in a thick layer of salted
+charcoal paste. The eggs may also be sold with the salted paste removed,
+wrapped in plastic, and vacuum packed. From the salt curing process, the
+salted duck eggs have a briny aroma, a gelatin-like egg white and a
+firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dWC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACERJC/9oACAEBAAEFAkqW7B5Zovtvk//EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAESL/2gAIAQIBAT8BjT//xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhQYGx/9oACAEBAAE/IXOrA43oOyg9wgU86OZMfwZKypT/2gAMAwEAAgADAAAAEMjv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxARwyusv//EABcRAQEBAQAAAAAAAAAAAAAAAAEAIVH/2gAIAQIBAT8QOoVoX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERADFhgSFB0eH/2gAIAQEAAT8QSpwaGjrBSrtHyF9iY8RpUnGRBGqtOcsiDE6fM3AgiXf5M//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Chinese Salty Egg&quot;
+        title=&quot;Chinese Salty Egg&quot;
+        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
+        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
+/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
+/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
+/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
+/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
+/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;You can also write code blocks here!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; saltyDuckEgg &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;chinese preserved food product&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Number&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Title&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;Year&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;1&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Harry Potter and the Philosopher’s Stone&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;2001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;2&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Harry Potter and the Chamber of Secrets&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;2002&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;3&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Harry Potter and the Prisoner of Azkaban&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;2004&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href=&quot;https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md&quot;&gt;View raw (TEST.md)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is a paragraph.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Header 1
+========
+
+Header 2
+--------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;h3&gt;Header 3&lt;/h3&gt;
+&lt;h4&gt;Header 4&lt;/h4&gt;
+&lt;h5&gt;Header 5&lt;/h5&gt;
+&lt;h6&gt;Header 6&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;h3&gt;Header 3&lt;/h3&gt;
+&lt;h4&gt;Header 4&lt;/h4&gt;
+&lt;h5&gt;Header 5&lt;/h5&gt;
+&lt;h6&gt;Header 6&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1 #
+## Header 2 ##
+### Header 3 ###
+#### Header 4 ####
+##### Header 5 #####
+###### Header 6 ######&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;h2&gt;This is a header.&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;This is the first list item.&lt;/li&gt;
+&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here’s some example code:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; ## This is a header.
+&gt; 1. This is the first list item.
+&gt; 2. This is the second list item.
+&gt;
+&gt; Here&apos;s some example code:
+&gt;
+&gt;     Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue
+
+&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Red
+&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Green
+&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Blue
+
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Buy flour and salt&lt;/li&gt;
+&lt;li&gt;Mix together with water&lt;/li&gt;
+&lt;li&gt;Bake&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Buy flour and salt
+&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Mix together with water
+&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Bake&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
+&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Paragraph:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- --&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Paragraph:
+
+    Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Example&quot;&gt;an example&lt;/a&gt; link.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://example.com&quot;&gt;This link&lt;/a&gt; has no title attr.&lt;/p&gt;
+&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is [an example](http://example.com &quot;Example&quot;) link.
+
+[This link](http://example.com) has no title attr.
+
+This is [an example] [id] reference-style link.
+
+[id]: http://example.com &quot;Optional Title&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This paragraph has some &lt;code class=&quot;language-text&quot;&gt;code&lt;/code&gt; in it.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This paragraph has some `code` in it.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://placehold.it/200x50&quot; alt=&quot;Alt Text&quot; title=&quot;Image Title&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;![Alt Text](https://placehold.it/200x50 &quot;Image Title&quot;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>

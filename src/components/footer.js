@@ -5,7 +5,6 @@ import background from "../images/footerFull.png"
 
 
 const footerStyle = {
-  height: "100vh",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -42,12 +41,12 @@ const menu = {
 };
 
 
-function Footer({background}) {
+function Footer({background, contact}) {
   return (
-    <footer className={`footer ${background ? 'footerBg' : 'md:mt-64'}`} style={footerStyle}>
+    <footer className={`footer ${background ? 'footerBg h-screen' : contact ? 'pl-16' : 'min-h-screen'}`} style={footerStyle}>
 
       <div
-        className="z-10 container md:h-2/6 w-full flex md:flex-row flex-col mx-auto mr-7"
+        className="container md:h-2/6 flex md:flex-row flex-col mr-7 mx-auto"
         style={footerBox}
       >
         <div className="flex flex-col md:w-2/5 xs:w-full">
@@ -69,9 +68,9 @@ function Footer({background}) {
               </div>
             </div>
           </div>
-          <div className="w-full md:text-left text-center flex-grow h-2/6 text-gray-400 text-lg">
+          <div className="w-full md:text-left text-center flex-grow h-2/6 text-gray-300 text-lg">
             <p className="border-solid border-danger md:border-t-2 mt-12 md:ml-32">
-              Copyright ©2021. All rights reserved.
+              Copyright © {new Date().getFullYear()} Defense Unicorns. All rights reserved.
             </p>
           </div>
         </div>

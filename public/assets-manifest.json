@@ -1,0 +1,17 @@
+{
+  "main.js": "render-page.js",
+  "render-page.js.map": "render-page.js.map",
+  "static/blog1.png": "static/blog1-3cd8ac0d43565f64e77ce12562358c15.png",
+  "static/card1.png": "static/card1-109fdc65abaddeaa0eb75c5331ba2ff2.png",
+  "static/card2.png": "static/card2-b519586f2b9735c6ffe910834213953b.png",
+  "static/card3.png": "static/card3-3c3d8d3354bfea182ca8b243b1eb2ac0.png",
+  "static/cardPin.png": "static/cardPin-045e24906a180dae819fe64ab0d1bb6d.png",
+  "static/caseStudies.png": "static/caseStudies-e55f35f83eaeeb46b0f35d298f4ae0c7.png",
+  "static/footerFull.png": "static/footerFull-fe080d1b909a85c4fbac083ef5eac893.png",
+  "static/keyPointsLight.png": "static/keyPointsLight-45eb147294260436c744f720e81f2d4e.png",
+  "static/logo-vertical.png": "static/logo-vertical-34cdd80bb9aed35d9cf40f76184f3d85.png",
+  "static/logo.png": "static/logo-9f4349e43285b25b4721fd8c158242cb.png",
+  "static/tech.png": "static/tech-0e496d7347531a81876cf727fb24d196.png",
+  "static/unicornStars.png": "static/unicornStars-2421439ac6e728a38897b03f5cacd759.png",
+  "static/whoWeAre.png": "static/whoWeAre-161a2a3e783f4b8d4188f71d62fdb500.png"
+}
