@@ -27,10 +27,10 @@ collections:
         widget: "select"
         options: ["DevSecOps", "Agile Acquisitions", "Continuous Delivery"]
         default: ["DevSecOps"]
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true }
       - label: 'Cover Image'
         name: 'image'
         widget: 'image'
         required: true
         tagname: ''
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Published', name: 'published', widget: 'boolean', default: true }
