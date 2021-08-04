@@ -26,9 +26,9 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <div className="metaData" style={metaStyles}>
-          <p className="text-2xl mb-2"><span className="font-bold">AUTHOR: </span> Defense Unicorns Staff</p>
+          <p className="text-2xl mb-2"><span className="font-bold">AUTHOR: </span> {post.frontmatter.author}</p>
           <p className="text-2xl mb-2"><span className="font-bold">DATE: </span> {post.frontmatter.date}</p>
-          <p className="text-2xl"><span className="font-bold">CATEGORY: </span> People, Culture, Technology</p>
+          <p className="text-2xl"><span className="font-bold">CATEGORY: </span> {post.frontmatter.category}</p>
         </div>
 
         <section
@@ -96,6 +96,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         category
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

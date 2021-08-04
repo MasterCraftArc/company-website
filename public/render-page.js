@@ -3854,7 +3854,7 @@ var plugins = [{
     "plugins": [],
     "query": "\n          {\n            site {\n              siteMetadata {\n                title\n                description\n                category\n                siteUrl\n                site_url: siteUrl\n              }\n            }\n          }\n        ",
     "feeds": [{
-      "query": "\n              {\n                allMarkdownRemark(\n                  sort: { order: DESC, fields: [frontmatter___date] },\n                ) {\n                  nodes {\n                    excerpt\n                    html\n                    fields {\n                      slug\n                    }\n                    frontmatter {\n                      title\n                      date\n                      category\n                    }\n                  }\n                }\n              }\n            ",
+      "query": "\n              {\n                allMarkdownRemark(\n                  sort: { order: DESC, fields: [frontmatter___date] },\n                ) {\n                  nodes {\n                    excerpt\n                    html\n                    fields {\n                      slug\n                    }\n                    frontmatter {\n                      title\n                      date\n                      description\n                      category\n                    }\n                  }\n                }\n              }\n            ",
       "output": "/rss.xml"
     }]
   }

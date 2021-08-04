@@ -117,7 +117,7 @@ const Equip = ({ data, location }) => {
             {posts.map((post, i) => {
               console.log(post)
               return (
-                  <Card imgDisplay={post.image || pcGear} ref={cardRefs[i]} category={post.frontmatter.category} title={post.frontmatter.title} description={post.frontmatter.description} blogLink={`/blog${post.fields.slug}`}/>
+                  <Card imgDisplay={post.frontmatter.image.childImageSharp.fluid.src} ref={cardRefs[i]} category={post.frontmatter.category} title={post.frontmatter.title} description={post.frontmatter.description} blogLink={`/blog${post.fields.slug}`}/>
               )
             })}
             
@@ -172,6 +172,13 @@ export const pageQuery = graphql`
           description
           category
           author
+          image {
+            childImageSharp {
+              fluid(quality: 90, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
     }

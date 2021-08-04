@@ -3,7 +3,7 @@ import * as React from 'react';
 
 const trainedCardStyle = {
     width: "255px",
-    minHeight: "380px",
+    Height: "380px",
   }
   
   const trainedCardText = {
@@ -22,7 +22,7 @@ const trainedCardStyle = {
 
 const Card = React.forwardRef((props, ref) => (
         <div ref={ref} className="card border-2 border-solid border-blue-400" style={trainedCardStyle} data-category={props.category}>
-            <img src={props.imgDisplay} className="card-img-top" alt="blogpost thumbnail"/>
+            <img src={props.imgDisplay} className="card-img-top mx-auto" alt="blogpost thumbnail" style={ {maxHeight: '200px'}}/>
             <div className="card-body text-center">
             <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">{props.category}</div>
             <h5 className="card-title mt-1 mb-3" style={trainedCardTitle}>{props.title}</h5>
