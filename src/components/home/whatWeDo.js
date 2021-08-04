@@ -6,10 +6,10 @@ import Button from "../button";
 
 const CaseStudies = () => {
   return (
-    <section className="min-h-screen flex flex-col lg:justify-center lg:ml-auto justify-start w-full lg:w-4/5 ">
-      <div className="grid lg:grid-cols-2 grid-cols-1 px-5 lg:bg-transparent bg-white">
+    <section className="h-screen flex items-center justify-center w-full md:my-0 my-16">
+      <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="p-16 pt-0 lg:hidden block object-cover">
-          <img src={whatWeDoPng} className="w-4/5" alt="Who we are" />
+          <img src={whatWeDoPng} className="w-4/5 mx-auto" alt="Who we are" />
         </div>
         <div className="flex flex-col justify-center px-10">
           <h2 className={TITLE_TEXT}>What We Do</h2>
@@ -27,7 +27,7 @@ const CaseStudies = () => {
             alt="Case Study Icons for Objectives solutions and results"
           ></img>
 
-          <div className="py-7">
+          <div className="pt-7">
             <Button
               linkTo="/equip"
               className="bg-transparent border-blue-900 border-2 border-solid hover:bg-blue-900 text-blue-900 hover:text-white"
@@ -36,7 +36,7 @@ const CaseStudies = () => {
           </div>
         </div>
         <div className="p-16 pt-0 lg:block hidden object-cover">
-          <img src={whatWeDoPng} className="w-4/5" alt="Who we are" />
+          <img src={whatWeDoPng} className="" alt="Who we are" />
         </div>
       </div>
     </section>

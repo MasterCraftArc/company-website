@@ -33,8 +33,8 @@ const tagLineItems = [
 
 const HomeHero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center ">
-      <h1 className={`${TITLE_TEXT} lg:ml-24 md:ml-16 sm:ml-8 ml-4`}>
+    <section className="min-h-screen flex flex-col justify-center">
+      <h1 className={`${TITLE_TEXT} text-white lg:ml-24 md:ml-16 sm:ml-8 ml-4`}>
         The World Needs a Hero...
       </h1>
       <motion.h1
