@@ -2,14 +2,12 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"
 import { createGlobalStyle } from "styled-components"
-// import * as blogStyles from "../styles/blogStyles.css"
 
 
 const Layout = ({ location, title, post, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
-  
   
   if (isRootPath) {
     header = (

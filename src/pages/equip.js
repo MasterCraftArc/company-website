@@ -7,7 +7,8 @@ import Header from "../components/header";
 import tech from "../images/tech.png";
 // import monolithic from "../images/blog1.png";
 import Card from "../components/card"
-
+import Footer
+ from "../components/footer";
 const pageStyles = {
   color: "black",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -172,7 +173,7 @@ const Equip = ({ data, location }) => {
         </div>
       </section>
 
-      <section className="min-h-screen ">
+      {/* <section className="min-h-screen ">
         <div className="h-1/4 px-16 md:px-32 lg:px-44 xl:px-56  mt-16 mb-16">
           <h2
             className="border-b-2 border-solid border-gray-400 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
@@ -183,14 +184,13 @@ const Equip = ({ data, location }) => {
         </div>
 
         <div className="h-3/4 px-16 md:px-56 w-full">
-          {/* <img src={videos} className="xl:w-5/6 mx-auto"></img> */}
           <h1 className="text-center text-3xl font-bold text-blue-400">
             Coming Soon!
           </h1>
         </div>
-      </section>
+      </section> */}
 
-      {/* <Footer/> */}
+      <Footer background={true}/>
     </div>
   );
 };

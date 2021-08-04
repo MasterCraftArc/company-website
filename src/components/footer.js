@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import verticalLogo from "../images/logo-vertical.png";
+import background from "../images/footerFull.png"
+
 
 const footerStyle = {
   height: "100vh",
@@ -39,11 +41,13 @@ const menu = {
   marginTop: "10px",
 };
 
-function Footer() {
+
+function Footer({background}) {
   return (
-    <footer className="footer md:mt-64" style={footerStyle}>
+    <footer className={`footer ${background ? 'footerBg' : 'md:mt-64'}`} style={footerStyle}>
+
       <div
-        className="container md:h-2/6 w-full flex md:flex-row flex-col mx-auto mr-7"
+        className="z-10 container md:h-2/6 w-full flex md:flex-row flex-col mx-auto mr-7"
         style={footerBox}
       >
         <div className="flex flex-col md:w-2/5 xs:w-full">
@@ -58,7 +62,7 @@ function Footer() {
             </div>
             <div className="flex w-full mx-auto">
               <div className="mx-auto md:text-left text-center text-2xl mt-16 text-white">
-                <i class="bi bi-house-door-fill text-red-600 inline-block"></i>
+                <i className="bi bi-house-door-fill text-red-600 inline-block"></i>
                 <p className="mt-2 inline-block ml-2">Defense Unicorns</p>
                 <p className="mt-2 ml-6">555 E Pikes Peak Ave</p>
                 <p className="mt-2 ml-6">Colorado Springs, Co 80903</p>
