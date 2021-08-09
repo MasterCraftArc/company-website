@@ -5,6 +5,7 @@ import Header from "../components/header";
 import tech from "../images/tech.png";
 import Card from "../components/card";
 import Footer from "../components/footer";
+
 const pageStyles = {
   color: "black",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
