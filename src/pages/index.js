@@ -6,31 +6,33 @@ import SiteHelmet from "../components/SiteHelmet";
 import WhoWeAre from "../components/home/whoWeAre";
 import CaseStudies from "../components/home/whatWeDo";
 import TrainForBattle from "../components/home/trainForBattle";
-import BackgroundSection from "../components/home/background";
-
+import headerBackground from "../images/BG_Banner.jpg";
 const pageStyles = {
   color: "#232129",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   width: "100vw",
 };
+
+const headerStyle = {
+  background: `url(${headerBackground}) 100% 100% fixed`,
+};
 // markup
 const Train = () => {
   return (
-    <BackgroundSection
-      style={pageStyles}
-      className="home flex flex-col bg-top z-0"
-    >
+    <div style={pageStyles} className="home flex flex-col bg-top">
       <SiteHelmet
         title="Train"
         description="Become a DevSecOps Hero with Defense Unicorns"
       />
       <Header textColor="white" className="" />
-      <HomeHero />
+      <div style={headerStyle}>
+        <HomeHero />
+      </div>
       <TrainForBattle />
       <WhoWeAre />
       <CaseStudies />
       <Footer></Footer>
-    </BackgroundSection>
+    </div>
   );
 };
 

@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import verticalLogo from "../images/logo-vertical.png";
-
-
+import footerBackground from "../images/footerClean.png";
 const footerStyle = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  background: `url(${footerBackground}) 100% 100% fixed`,
 };
 
 const footerBox = {
@@ -39,11 +39,18 @@ const menu = {
   marginTop: "10px",
 };
 
-
-function Footer({background, contact}) {
+function Footer({ background, contact }) {
   return (
-    <footer className={`footer ${background ? 'footerBg h-screen' : contact ? 'pl-16' : 'min-h-screen'}`} style={footerStyle}>
-
+    <footer
+      className={`footer ${
+        background
+          ? "footerBg min-h-screen"
+          : contact
+          ? "pl-16"
+          : "min-h-screen"
+      }`}
+      style={footerStyle}
+    >
       <div
         className="container md:h-2/6 flex md:flex-row flex-col mr-7 mx-auto"
         style={footerBox}
@@ -69,7 +76,8 @@ function Footer({background, contact}) {
           </div>
           <div className="w-full md:text-left text-center flex-grow h-2/6 text-gray-300 text-lg">
             <p className="border-solid border-danger md:border-t-2 mt-12 md:ml-32">
-              Copyright © {new Date().getFullYear()} Defense Unicorns. All rights reserved.
+              Copyright © {new Date().getFullYear()} Defense Unicorns. All
+              rights reserved.
             </p>
           </div>
         </div>
