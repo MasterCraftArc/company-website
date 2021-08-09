@@ -2,8 +2,8 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
-// import pc from "../images/pc.png";
-// import tech from "../images/tech.png";
+import Card from "../components/card";
+import Footer from "../components/footer";
 
 import Card from "../components/card";
 import Footer from "../components/footer";
@@ -97,7 +97,7 @@ const Equip = ({ data, location }) => {
 
       <section className="latestTrained min-h-screen mt-8 overflow-x-scroll md:overflow-auto">
         <div className="container h-75 mt-16 mx-auto relative">
-          <div className="px-16 sticky top-0 bg-white">
+          <div className="px-16 sticky top-0 bg-white z-10">
             <h2
               className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
               style={battleText}
@@ -151,23 +151,6 @@ const Equip = ({ data, location }) => {
           </div>
         </div>
       </section>
-
-      {/* <section className="min-h-screen ">
-        <div className="h-1/4 px-16 md:px-32 lg:px-44 xl:px-56  mt-16 mb-16">
-          <h2
-            className="border-b-2 border-solid border-gray-400 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-            style={battleText}
-          >
-            Defense Unicorns Learning Videos
-          </h2>
-        </div>
-
-        <div className="h-3/4 px-16 md:px-56 w-full">
-          <h1 className="text-center text-3xl font-bold text-blue-400">
-            Coming Soon!
-          </h1>
-        </div>
-      </section> */}
 
       <Footer background={true} />
     </div>

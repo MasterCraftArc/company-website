@@ -1,24 +1,65 @@
-var plugins = [{
-      name: 'gatsby-plugin-styled-components',
-      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
-      options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false},
-    },{
-      name: 'gatsby-plugin-react-helmet',
-      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
-      options: {"plugins":[]},
-    },{
-      name: 'gatsby-plugin-image',
-      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-image/gatsby-ssr'),
-      options: {"plugins":[]},
-    },{
-      name: 'gatsby-plugin-feed',
-      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-feed/gatsby-ssr'),
-      options: {"plugins":[],"query":"\n          {\n            site {\n              siteMetadata {\n                title\n                description\n                siteUrl\n                site_url: siteUrl\n              }\n            }\n          }\n        ","feeds":[{"query":"\n              {\n                allMarkdownRemark(\n                  sort: { order: DESC, fields: [frontmatter___date] },\n                ) {\n                  nodes {\n                    excerpt\n                    html\n                    fields {\n                      slug\n                    }\n                    frontmatter {\n                      title\n                      date\n                      description\n                    }\n                  }\n                }\n              }\n            ","output":"/rss.xml"}]},
-    },{
-      name: 'gatsby-plugin-manifest',
-      plugin: require('/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Defense Unicorns","short_name":"DU","start_url":"/","background_color":"#ffffff","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"b578616b0a0f6f238b578929256ccd11"},
-    }]
+var plugins = [
+  {
+    name: "gatsby-plugin-styled-components",
+    plugin: require("/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-styled-components/gatsby-ssr"),
+    options: {
+      plugins: [],
+      displayName: true,
+      fileName: true,
+      minify: true,
+      namespace: "",
+      transpileTemplateLiterals: true,
+      topLevelImportPaths: [],
+      pure: false,
+    },
+  },
+  {
+    name: "gatsby-plugin-react-helmet",
+    plugin: require("/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr"),
+    options: { plugins: [] },
+  },
+  {
+    name: "gatsby-plugin-image",
+    plugin: require("/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-image/gatsby-ssr"),
+    options: { plugins: [] },
+  },
+  {
+    name: "gatsby-plugin-feed",
+    plugin: require("/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-feed/gatsby-ssr"),
+    options: {
+      plugins: [],
+      query:
+        "\n          {\n            site {\n              siteMetadata {\n                title\n                description\n                siteUrl\n                site_url: siteUrl\n              }\n            }\n          }\n        ",
+      feeds: [
+        {
+          query:
+            "\n              {\n                allMarkdownRemark(\n                  sort: { order: DESC, fields: [frontmatter___date] },\n                ) {\n                  nodes {\n                    excerpt\n                    html\n                    fields {\n                      slug\n                    }\n                    frontmatter {\n                      title\n                      date\n                      description\n                    }\n                  }\n                }\n              }\n            ",
+          output: "/rss.xml",
+        },
+      ],
+    },
+  },
+  {
+    name: "gatsby-plugin-manifest",
+    plugin: require("/Users/mikewinberry/leapfrog/website/node_modules/gatsby-plugin-manifest/gatsby-ssr"),
+    options: {
+      plugins: [],
+      name: "Defense Unicorns",
+      short_name: "DU",
+      start_url: "/",
+      background_color: "#ffffff",
+      theme_color: "#663399",
+      display: "minimal-ui",
+      icon: "src/images/gatsby-icon.png",
+      legacy: true,
+      theme_color_in_head: true,
+      cache_busting_mode: "query",
+      crossOrigin: "anonymous",
+      include_favicon: true,
+      cacheDigest: "b578616b0a0f6f238b578929256ccd11",
+    },
+  },
+];
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
@@ -32,78 +73,78 @@ var plugins = [{
 //   },
 // ]
 
-const apis = require(`./api-ssr-docs`)
+const apis = require(`./api-ssr-docs`);
 
 function augmentErrorWithPlugin(plugin, err) {
   if (plugin.name !== `default-site-plugin`) {
     // default-site-plugin is user code and will print proper stack trace,
     // so no point in annotating error message pointing out which plugin is root of the problem
-    err.message += ` (from plugin: ${plugin.name})`
+    err.message += ` (from plugin: ${plugin.name})`;
   }
 
-  throw err
+  throw err;
 }
 
 export function apiRunner(api, args, defaultReturn, argTransform) {
   if (!apis[api]) {
-    console.log(`This API doesn't exist`, api)
+    console.log(`This API doesn't exist`, api);
   }
 
-  const results = []
-  plugins.forEach(plugin => {
-    const apiFn = plugin.plugin[api]
+  const results = [];
+  plugins.forEach((plugin) => {
+    const apiFn = plugin.plugin[api];
     if (!apiFn) {
-      return
+      return;
     }
 
     try {
-      const result = apiFn(args, plugin.options)
+      const result = apiFn(args, plugin.options);
 
       if (result && argTransform) {
-        args = argTransform({ args, result })
+        args = argTransform({ args, result });
       }
 
       // This if case keeps behaviour as before, we should allow undefined here as the api is defined
       // TODO V4
       if (typeof result !== `undefined`) {
-        results.push(result)
+        results.push(result);
       }
     } catch (e) {
-      augmentErrorWithPlugin(plugin, e)
+      augmentErrorWithPlugin(plugin, e);
     }
-  })
+  });
 
-  return results.length ? results : [defaultReturn]
+  return results.length ? results : [defaultReturn];
 }
 
 export async function apiRunnerAsync(api, args, defaultReturn, argTransform) {
   if (!apis[api]) {
-    console.log(`This API doesn't exist`, api)
+    console.log(`This API doesn't exist`, api);
   }
 
-  const results = []
+  const results = [];
   for (const plugin of plugins) {
-    const apiFn = plugin.plugin[api]
+    const apiFn = plugin.plugin[api];
     if (!apiFn) {
-      continue
+      continue;
     }
 
     try {
-      const result = await apiFn(args, plugin.options)
+      const result = await apiFn(args, plugin.options);
 
       if (result && argTransform) {
-        args = argTransform({ args, result })
+        args = argTransform({ args, result });
       }
 
       // This if case keeps behaviour as before, we should allow undefined here as the api is defined
       // TODO V4
       if (typeof result !== `undefined`) {
-        results.push(result)
+        results.push(result);
       }
     } catch (e) {
-      augmentErrorWithPlugin(plugin, e)
+      augmentErrorWithPlugin(plugin, e);
     }
   }
 
-  return results.length ? results : [defaultReturn]
+  return results.length ? results : [defaultReturn];
 }
