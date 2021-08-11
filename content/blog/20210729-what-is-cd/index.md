@@ -16,7 +16,7 @@ description: There are many misconceptions about CD. There are also many things
   about CD that are not obvious on the surface. If you are "CD curious", perhaps
   this will help.
 category: Continuous Delivery
-image: du_logo_rgb_for-blue-bg_stacked.png
+image: static/img/du_logo_rgb_for-blue-bg_stacked.png
 ---
 There are many misconceptions about continuous delivery. There are also many things about CD that are not obvious on the
 surface. If you are "CD curious", perhaps this will help.
