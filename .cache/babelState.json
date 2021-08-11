@@ -22,6 +22,7 @@
           }
         },
         {
+<<<<<<< HEAD
           "name": "/Users/eden/website/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
             "cacheDir": "/Users/eden/website/.cache/caches/gatsby-plugin-image"
@@ -29,20 +30,29 @@
         },
         {
           "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+=======
+          "name": "/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/Users/wadedesir/Documents/website/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+>>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
           "options": {}
         },
         {
-          "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/eden/website/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -63,6 +73,7 @@
           "options": {}
         },
         {
+<<<<<<< HEAD
           "name": "/Users/eden/website/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
             "cacheDir": "/Users/eden/website/.cache/caches/gatsby-plugin-image"
@@ -70,14 +81,23 @@
         },
         {
           "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+=======
+          "name": "/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/Users/wadedesir/Documents/website/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+>>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
           "options": {}
         },
         {
-          "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -98,7 +118,7 @@
       ],
       "presets": [
         {
-          "name": "/Users/eden/website/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -119,6 +139,7 @@
           "options": {}
         },
         {
+<<<<<<< HEAD
           "name": "/Users/eden/website/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
             "cacheDir": "/Users/eden/website/.cache/caches/gatsby-plugin-image"
@@ -126,14 +147,23 @@
         },
         {
           "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+=======
+          "name": "/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/Users/wadedesir/Documents/website/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+>>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
           "options": {}
         },
         {
-          "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -154,7 +184,7 @@
       ],
       "presets": [
         {
-          "name": "/Users/eden/website/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -175,6 +205,7 @@
           "options": {}
         },
         {
+<<<<<<< HEAD
           "name": "/Users/eden/website/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
             "cacheDir": "/Users/eden/website/.cache/caches/gatsby-plugin-image"
@@ -182,14 +213,23 @@
         },
         {
           "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+=======
+          "name": "/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/Users/wadedesir/Documents/website/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+>>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
           "options": {}
         },
         {
-          "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/eden/website/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -210,7 +250,7 @@
       ],
       "presets": [
         {
-          "name": "/Users/eden/website/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/wadedesir/Documents/website/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
