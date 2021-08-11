@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      # - { label: 'Post Excerpt', name: 'excerpt', widget: 'string' }
+      - { label: 'Card Excerpt', name: 'description', widget: 'string' }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["DevSecOps", "Agile Acquisitions", "Continuous Delivery"]
+        default: ["DevSecOps"]
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true }
+      - label: 'Cover Image'
+        name: 'image'
+        widget: 'image'
+        required: true
+        tagname: ''
+      - { label: 'Body', name: 'body', widget: 'markdown' }

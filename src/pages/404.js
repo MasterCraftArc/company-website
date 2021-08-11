@@ -1,54 +1,37 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import SiteHelmet from '../components/SiteHelmet';
+import logo from "../images/logo.png"
+import StyledBackgroundSection from '../components/contactBg'
+import Button from '../components/button'
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+const NotFoundPage = ({ data, location }) => {
+  // const siteTitle = data.site.siteMetadata.title
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <StyledBackgroundSection className="min-h-screen flex flex-col md:pt-24 xl:pt-0 justify-center items-center">
+        <SiteHelmet title="404"/> 
+        <img src={logo} alt="Defense Unicorns Logo" className="w-3/4 md:w-1/4 bg-white rounded-xl"></img>
+        <h1 className="mt-16 text-7xl text-black text-center font-bold text-white"><span className="text-red-500">404 - Page not found</span></h1>
+        <h1 className="mt-6 mb-10 text-4xl text-black text-center font-bold text-white">Check the link or try again later.</h1>
+        <Button 
+          linkTo="/" 
+          className="bg-blue-500 hover:bg-blue-400 text-white mr-5 mb-5"
+          text="Home"
+        />
+        {/* <Footer/> */}
+    </StyledBackgroundSection>
   )
 }
 
 export default NotFoundPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

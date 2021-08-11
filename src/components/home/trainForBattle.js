@@ -41,7 +41,7 @@ const magnifierStyle = {
 
 const TrainForBattle = () => {
   return (
-    <section className="trainForBattle min-h-screen">
+    <section className="trainForBattle flex min-h-screen items-center">
       <div className="xl:w-4/5 lg:w-full w-3/4 mx-auto mt-10">
         <h2
           className={`${TITLE_TEXT} text-center font-bold mb-32`}

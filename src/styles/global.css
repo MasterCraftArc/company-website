@@ -34,6 +34,7 @@
 a {
   text-decoration: none;
 }
+
 /******************************************
 /* BASE STYLES
 /*******************************************/
@@ -215,6 +216,16 @@ body {
 }
 
 /* FOOTER */
+
+.footerBg{
+  background: url(../images/BG_Footer.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+}
 .socialsBox a,
 .footerLink {
   color: red;

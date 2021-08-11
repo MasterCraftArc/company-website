@@ -8,6 +8,7 @@ exports.components = {
   "component---src-pages-contact-js": () => import("./../../../src/pages/contact.js" /* webpackChunkName: "component---src-pages-contact-js" */),
   "component---src-pages-equip-js": () => import("./../../../src/pages/equip.js" /* webpackChunkName: "component---src-pages-equip-js" */),
   "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
-  "component---src-pages-thankyou-js": () => import("./../../../src/pages/thankyou.js" /* webpackChunkName: "component---src-pages-thankyou-js" */)
+  "component---src-pages-thankyou-js": () => import("./../../../src/pages/thankyou.js" /* webpackChunkName: "component---src-pages-thankyou-js" */),
+  "component---src-templates-blog-post-js": () => import("./../../../src/templates/blog-post.js" /* webpackChunkName: "component---src-templates-blog-post-js" */)
 }
 

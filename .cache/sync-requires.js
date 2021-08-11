@@ -10,6 +10,7 @@ exports.components = {
   "component---src-pages-contact-js": preferDefault(require("/Users/eden/website/src/pages/contact.js")),
   "component---src-pages-equip-js": preferDefault(require("/Users/eden/website/src/pages/equip.js")),
   "component---src-pages-index-js": preferDefault(require("/Users/eden/website/src/pages/index.js")),
-  "component---src-pages-thankyou-js": preferDefault(require("/Users/eden/website/src/pages/thankyou.js"))
+  "component---src-pages-thankyou-js": preferDefault(require("/Users/eden/website/src/pages/thankyou.js")),
+  "component---src-templates-blog-post-js": preferDefault(require("/Users/eden/website/src/templates/blog-post.js"))
 }
 
