@@ -8,8 +8,8 @@ const sentenceAnim = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.3,
-      staggerChildren: 0.2,
+      delay: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -25,10 +25,10 @@ const letter = {
 const tagLine = "That hero is ";
 const tagLineItems = [
   " You.",
-  " a Program Manager",
-  " an Entrepreneur",
   " an Innovator",
+  " a Manager",
   " an Operator",
+  " a Startup",
 ];
 
 const HomeHero = () => {
@@ -55,10 +55,10 @@ const HomeHero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            delay: 2.5,
+            delay: 2,
           }}
         >
-          <ReactRotatingText items={tagLineItems} />
+          <ReactRotatingText items={tagLineItems} pause='700' />
         </motion.span>
       </motion.h1>
     </section>
