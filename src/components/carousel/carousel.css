@@ -16,12 +16,14 @@
 
 .carousel .slick-dots li button {
   transform: scale(3);
+  
 }
 .carousel .slick-dots li button::before {
-  color: white;
+  color: rgb(202, 195, 195);
 }
 .carousel .slick-dots li.slick-active button {
   transform: scale(3);
+
 }
 .carousel .slick-dots li.slick-active button::before {
   color: rgb(130, 64, 238) !important;
