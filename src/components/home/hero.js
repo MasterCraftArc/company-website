@@ -28,7 +28,7 @@ const tagLineItems = [
   " an Innovator",
   " a Manager",
   " an Operator",
-  " a Startup",
+  " a Founder",
 ];
 
 const HomeHero = () => {
@@ -58,7 +58,7 @@ const HomeHero = () => {
             delay: 2,
           }}
         >
-          <ReactRotatingText items={tagLineItems} pause='700' />
+          <ReactRotatingText items={tagLineItems} typingInterval="30"/>
         </motion.span>
       </motion.h1>
     </section>
