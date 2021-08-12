@@ -34,6 +34,7 @@ const TrainForBattle = () => {
             title="Explore Learning" 
             subtitle="Path 2:" 
             mainText="Attend DevSecOps Training"
+            cardLink="/training"
           />
 
           <BattleCard 

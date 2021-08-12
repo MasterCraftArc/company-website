@@ -16,7 +16,7 @@ const formContainer = {
   height: "63vh",
 };
 
-class Contact extends React.Component {
+class Training extends React.Component {
   constructor(props) {
     super(props);
     this.domRef = React.createRef();
@@ -38,7 +38,7 @@ class Contact extends React.Component {
 
     axios(axiosOptions)
       .then((response) => {
-        navigate("/thankyou");
+        navigate("/thankyoutraining");
       })
       .catch((err) =>
         this.setState({
@@ -52,7 +52,7 @@ class Contact extends React.Component {
       <>
         <StyledBackgroundSection>
           <main className="contact min-h-screen w-full ">
-            <SiteHelmet title="Contact" />
+            <SiteHelmet title="Training" />
             <Header />
             <section
               className="rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mx-auto mt-10 bg-white bg-opacity-70"
@@ -129,4 +129,4 @@ class Contact extends React.Component {
   }
 }
 
-export default Contact;
+export default Training;
