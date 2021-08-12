@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 import cardPin from "../../images/cardPin.png";
 
 const cardStyle = {
@@ -32,7 +32,7 @@ const cardStyle = {
   
 const BattleCard = (props) => {
     return(
-        <div>
+        <div onClick={ () => {navigate(props.cardLink)} }>
             <h3 className="text-center mb-3 font-bold text-red-500 text-3xl">{props.heading}</h3>
             <div
             className="card flex flex-col justify-evenly mx-auto p-5"
@@ -55,16 +55,13 @@ const BattleCard = (props) => {
                 <h5 className="card-title mt-3 mb-5" style={cardTitle}>
                     {props.mainText}
                 </h5>
-                <Link to={props.cardLink}>
-                    <img
-                        className="mx-auto"
-                        src={cardPin}
-                        style={pinStyle}
-                        alt="defense unicorns circular pin"
-                    />
-                </Link>
+                <img
+                    className="mx-auto"
+                    src={cardPin}
+                    style={pinStyle}
+                    alt="defense unicorns circular pin"
+                />
             </div>
-
         </div>
       </div>
     )

@@ -25,6 +25,7 @@ const TrainForBattle = () => {
             title="Explore Learning" 
             subtitle="Path 1:" 
             mainText="Get support on DoD 21.3 SBIR/STTR"
+            cardLink="/contact"
           />
 
           <BattleCard 
@@ -41,6 +42,7 @@ const TrainForBattle = () => {
             title="Explore Learning" 
             subtitle="Path 3:" 
             mainText="Explore DevSecOps Content"
+            cardLink="/equip"
           />   
 
         </Carousel>
