@@ -33,7 +33,7 @@ const cardStyle = {
 const BattleCard = (props) => {
     return(
         <div onClick={ () => {navigate(props.cardLink)} }>
-            <h3 className="text-center mb-3 font-bold text-red-500 text-3xl">{props.heading}</h3>
+            <h3 className="text-center mb-8 font-bold text-red-500 text-3xl">{props.heading}</h3>
             <div
             className="card flex flex-col justify-evenly mx-auto p-5"
             style={cardStyle}
