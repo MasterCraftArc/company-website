@@ -2842,11 +2842,7 @@ module.exports = netlifyIdentity;
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-<<<<<<< HEAD
 /******/ 		__webpack_require__.h = function() { return "373f1951a356136c57de"; }
-=======
-/******/ 		__webpack_require__.h = function() { return "8d34096fa8c4887f7c13"; }
->>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

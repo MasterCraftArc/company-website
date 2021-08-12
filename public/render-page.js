@@ -6094,7 +6094,6 @@ var RouterImpl = function (_React$PureComponent) {
           element = match.route.value;
 
       // remove the /* from the end for child routes relative paths
-<<<<<<< HEAD
 
       basepath = route.default ? basepath : route.path.replace(/\*$/, "");
 
@@ -6149,62 +6148,6 @@ var RouterImpl = function (_React$PureComponent) {
   return RouterImpl;
 }((react__WEBPACK_IMPORTED_MODULE_0___default().PureComponent));
 
-=======
-
-      basepath = route.default ? basepath : route.path.replace(/\*$/, "");
-
-      var props = _extends({}, params, {
-        uri: uri,
-        location: location,
-        navigate: function navigate(to, options) {
-          return _navigate2((0,_lib_utils__WEBPACK_IMPORTED_MODULE_4__.resolve)(to, uri), options);
-        }
-      });
-
-      var clone = react__WEBPACK_IMPORTED_MODULE_0___default().cloneElement(element, props, element.props.children ? react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-        Router,
-        { location: location, primary: primary },
-        element.props.children
-      ) : undefined);
-
-      // using 'div' for < 16.3 support
-      var FocusWrapper = primary ? FocusHandler : component;
-      // don't pass any props to 'div'
-      var wrapperProps = primary ? _extends({ uri: uri, location: location, component: component }, domProps) : domProps;
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-        BaseContext.Provider,
-        {
-          value: { baseuri: uri, basepath: basepath, navigate: props.navigate }
-        },
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-          FocusWrapper,
-          wrapperProps,
-          clone
-        )
-      );
-    } else {
-      // Not sure if we want this, would require index routes at every level
-      // warning(
-      //   false,
-      //   `<Router basepath="${basepath}">\n\nNothing matched:\n\t${
-      //     location.pathname
-      //   }\n\nPaths checked: \n\t${routes
-      //     .map(route => route.path)
-      //     .join(
-      //       "\n\t"
-      //     )}\n\nTo get rid of this warning, add a default NotFound component as child of Router:
-      //   \n\tlet NotFound = () => <div>Not Found!</div>
-      //   \n\t<Router>\n\t  <NotFound default/>\n\t  {/* ... */}\n\t</Router>`
-      // );
-      return null;
-    }
-  };
-
-  return RouterImpl;
-}((react__WEBPACK_IMPORTED_MODULE_0___default().PureComponent));
-
->>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
 RouterImpl.defaultProps = {
   primary: true
 };
@@ -6539,7 +6482,6 @@ var Match = function Match(_ref8) {
 
 var useLocation = function useLocation() {
   var context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(LocationContext);
-<<<<<<< HEAD
 
   if (!context) {
     throw new Error("useLocation hook was used but a LocationContext.Provider was not found in the parent tree. Make sure this is used in a component that is a child of Router");
@@ -6567,35 +6509,6 @@ var useParams = function useParams() {
 
   var location = useLocation();
 
-=======
-
-  if (!context) {
-    throw new Error("useLocation hook was used but a LocationContext.Provider was not found in the parent tree. Make sure this is used in a component that is a child of Router");
-  }
-
-  return context.location;
-};
-
-var useNavigate = function useNavigate() {
-  var context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(BaseContext);
-
-  if (!context) {
-    throw new Error("useNavigate hook was used but a BaseContext.Provider was not found in the parent tree. Make sure this is used in a component that is a child of Router");
-  }
-
-  return context.navigate;
-};
-
-var useParams = function useParams() {
-  var context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(BaseContext);
-
-  if (!context) {
-    throw new Error("useParams hook was used but a LocationContext.Provider was not found in the parent tree. Make sure this is used in a component that is a child of Router");
-  }
-
-  var location = useLocation();
-
->>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
   var results = (0,_lib_utils__WEBPACK_IMPORTED_MODULE_4__.match)(context.basepath, location.pathname);
 
   return results ? results.params : null;
@@ -12691,46 +12604,24 @@ function v(){return(v=Object.assign||function(e){for(var t=1;t<arguments.length;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!**************************************************************************************!*\
-  !*** external "/Users/wadedesir/Documents/website/node_modules/react-dom/server.js" ***!
-  \**************************************************************************************/
+/*!***********************************************************************!*\
+  !*** external "/Users/eden/website/node_modules/react-dom/server.js" ***!
+  \***********************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/Users/wadedesir/Documents/website/node_modules/react-dom/server.js");
+module.exports = require("/Users/eden/website/node_modules/react-dom/server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!*********************************************************************************!*\
-  !*** external "/Users/wadedesir/Documents/website/node_modules/react/index.js" ***!
-  \*********************************************************************************/
+/*!******************************************************************!*\
+  !*** external "/Users/eden/website/node_modules/react/index.js" ***!
+  \******************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/Users/wadedesir/Documents/website/node_modules/react/index.js");
-
-/***/ }),
-
-/***/ "path":
-/*!***********************!*\
-  !*** external "path" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("path");
-
-/***/ }),
-
-/***/ "stream":
-/*!*************************!*\
-  !*** external "stream" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("stream");
+module.exports = require("/Users/eden/website/node_modules/react/index.js");
 
 /***/ }),
 
