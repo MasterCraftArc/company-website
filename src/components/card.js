@@ -22,7 +22,7 @@ const trainedCardLink = {
 const Card = React.forwardRef((props, ref) => (
   <div
     ref={ref}
-    className="card border-2 border-solid border-blue-400"
+    className="card border-2 border-solid border-blue-400 rounded-lg"
     style={trainedCardStyle}
     data-category={props.category}
   >
