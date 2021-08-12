@@ -134,7 +134,7 @@ const Equip = ({ data, location }) => {
               </button>
             </div>
           </div>
-          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-auto place-items-center w-full gap-y-3.5">
+          <div className="flex justify-around">
             {posts.map((post, i) => {
               console.log(post);
               return (
@@ -147,7 +147,7 @@ const Equip = ({ data, location }) => {
                   blogLink={`/blog${post.fields.slug}`}
                 />
               );
-            })}
+            })} 
           </div>
         </div>
       </section>

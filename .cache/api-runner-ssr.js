@@ -1,6 +1,10 @@
 var plugins = [{
       name: 'gatsby-plugin-styled-components',
+<<<<<<< HEAD
+      plugin: require('/Users/eden/website/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+=======
       plugin: require('/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+>>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false},
     },{
       name: 'gatsby-plugin-react-helmet',
@@ -8,6 +12,17 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-image',
+<<<<<<< HEAD
+      plugin: require('/Users/eden/website/node_modules/gatsby-plugin-image/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      name: 'gatsby-plugin-feed',
+      plugin: require('/Users/eden/website/node_modules/gatsby-plugin-feed/gatsby-ssr'),
+      options: {"plugins":[],"query":"\n          {\n            site {\n              siteMetadata {\n                title\n                description\n                siteUrl\n                site_url: siteUrl\n              }\n            }\n          }\n        ","feeds":[{"query":"\n              {\n                allMarkdownRemark(\n                  sort: { order: DESC, fields: [frontmatter___date] },\n                ) {\n                  nodes {\n                    excerpt\n                    html\n                    fields {\n                      slug\n                    }\n                    frontmatter {\n                      title\n                      date\n                      description\n                    }\n                  }\n                }\n              }\n            ","output":"/rss.xml"}]},
+    },{
+      name: 'gatsby-plugin-manifest',
+      plugin: require('/Users/eden/website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+=======
       plugin: require('/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
@@ -17,6 +32,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/wadedesir/Documents/website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+>>>>>>> 6a5c9eb7238e4ae15c549e06887f75fa52cb7d4f
       options: {"plugins":[],"name":"Defense Unicorns","short_name":"DU","start_url":"/","background_color":"#ffffff","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"b578616b0a0f6f238b578929256ccd11"},
     }]
 /* global plugins */
