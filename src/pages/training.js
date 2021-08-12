@@ -66,14 +66,14 @@ class Training extends React.Component {
                   red={this.domRef}
                   data-netlify="true"
                   className="w-full h-5/6 flex flex-col justify-evenly"
-                  name="Contact"
+                  name="Training"
                   onSubmit={(event) => this.handleSubmit(event)}
                 >
                   <input
                     ref="form-name"
                     type="hidden"
                     name="form-name"
-                    value="Contact"
+                    value="Training"
                   />
                   <div className="m-0">
                     <input
