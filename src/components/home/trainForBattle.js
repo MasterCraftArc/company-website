@@ -9,7 +9,7 @@ import BattleCard from "./card";
 
 const TrainForBattle = () => {
   return (
-    <section className="trainForBattle flex min-h-screen items-center">
+    <section id="trainForBattle" className="trainForBattle flex min-h-screen items-center">
       <div className="xl:w-4/5 lg:w-full w-3/4 mx-auto mt-10">
         
         <h2
@@ -18,7 +18,7 @@ const TrainForBattle = () => {
         >
           Let us Train you for Battle
         </h2>
-        <h3 className="mt-0 mb-32 text-center text-blue-900 text-3xl">
+        <h3 className="mt-0 mb-32 text-center italic text-blue-900 text-3xl">
           Whatever your mission, we have resources to help solve your software challenge.
         </h3>
 

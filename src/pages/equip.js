@@ -81,21 +81,14 @@ const Equip = ({ data, location }) => {
             the people, process, and technology necessary to accelerate your
             mission.
           </p>
+          <div className="mt-8">
+            <a href="#latestPosts" className={`xl:text-6xl text-5xl heroText text-white hover:text-blue-800 cursor-pointer`}><i className="bi bi-arrow-down-circle-fill"></i></a>
+          </div>
         </div>
 
-        <div className="mt-8">
-          <Link to="/contact" className="heroText w-50 pl-12">
-            <button
-              className="bg-blue-600 text-white hover:bg-blue-700"
-              style={buttonStyle}
-            >
-              LEARN MORE
-            </button>
-          </Link>
-        </div>
       </section>
 
-      <section className="latestTrained min-h-screen mt-8 overflow-x-scroll md:overflow-auto">
+      <section id="latestPosts" className="latestTrained min-h-screen mt-8 overflow-x-scroll md:overflow-auto">
         <div className="container h-75 mt-16 mx-auto relative">
           <div className="px-16 sticky top-0 bg-white">
             <h2
