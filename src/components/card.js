@@ -22,7 +22,8 @@ const trainedCardLink = {
 const Card = React.forwardRef((props, ref) => (
   <div
     ref={ref}
-    className="card border-2 border-solid border-blue-400 rounded-lg"
+    className="card --tw-border-opacity: 1;
+    border-color: rgba(80, 249, 255, var(--tw-border-opacity))"
     style={trainedCardStyle}
     data-category={props.category}
   >
@@ -30,7 +31,7 @@ const Card = React.forwardRef((props, ref) => (
       src={props.imgDisplay}
       className="card-img-top mx-auto"
       alt="blogpost thumbnail"
-      style={{ maxHeight: "200px" }}
+      style={{ maxHeight: "170px" }}
     />
     <div className="card-body text-center">
       <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">

@@ -11,6 +11,8 @@ exports.components = {
   "component---src-pages-equip-js": preferDefault(require("/Users/eden/website/src/pages/equip.js")),
   "component---src-pages-index-js": preferDefault(require("/Users/eden/website/src/pages/index.js")),
   "component---src-pages-thankyou-js": preferDefault(require("/Users/eden/website/src/pages/thankyou.js")),
+  "component---src-pages-thankyoutraining-js": preferDefault(require("/Users/eden/website/src/pages/thankyoutraining.js")),
+  "component---src-pages-training-js": preferDefault(require("/Users/eden/website/src/pages/training.js")),
   "component---src-templates-blog-post-js": preferDefault(require("/Users/eden/website/src/templates/blog-post.js"))
 }
 

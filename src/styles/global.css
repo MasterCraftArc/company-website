@@ -146,6 +146,21 @@ body {
 
 .card {
   background-color: white;
+  border: 1px solid rgb(80, 249, 255);
+  border-radius: 30px;
+}
+
+
+.card-img-top {
+    border-radius: 30px;
+    border-bottom-left-radius: initial;
+    border-bottom-right-radius: initial;
+
+}
+
+.w-1\/2 {
+  width: 41%;
+  text-align: center;
 }
 
 /* Latest Trained */
@@ -154,6 +169,36 @@ body {
   width: 100vw;
   background-color: transparent;
 }
+
+h5 {
+  font-size: 18px;
+  margin-left: -1%;
+  margin-top: 7%;
+}
+
+.text-center {
+  text-align: initial;
+  margin-left: 10%;
+  font: caption;
+  color: slategrey;
+  margin-bottom: 15%;
+}
+
+.mt-1 {
+  margin-top: 2.25rem;
+}
+
+.pb-2 {
+  padding-bottom: 1.5rem;
+
+  }
+
+  a.pt-2 {
+    font-size: small;
+  }
+
+
+
 
 /* Contact */
 
