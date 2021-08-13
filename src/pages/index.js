@@ -7,10 +7,6 @@ import WhoWeAre from "../components/home/whoWeAre";
 import CaseStudies from "../components/home/whatWeDo";
 import TrainForBattle from "../components/home/trainForBattle";
 import headerBackground from "../images/BG_Banner.jpg";
-<<<<<<< HEAD
-=======
-
->>>>>>> 4cb78dee83330241a7239934f5b4c315b36676bd
 const pageStyles = {
   color: "#232129",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",

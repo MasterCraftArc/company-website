@@ -170,7 +170,7 @@ body {
   width: 100vw;
   background-color: transparent;
 }
-
+/* Blog Tiles/Blog Page */
 h5 {
   font-size: 18px;
   margin-left: -1%;
@@ -196,6 +196,15 @@ h5 {
 
   a.pt-2 {
     font-size: small;
+  }
+
+  .min-h-screen {
+    min-height: 119vh;
+  }
+
+  .h5.card-title.mt-1.mb-3 {
+    font-size: 19px;
+    color: black;
   }
 
 
@@ -238,7 +247,7 @@ h5 {
   -o-background-size: cover;
   background-size: cover;
   background-attachment: local, scroll;
-  /* background-position-x: 150%; */
+  background-position: bottom;
 }
 
 /*** Blog Posts **/
@@ -263,15 +272,15 @@ h5 {
 
 /* FOOTER */
 
-.footerBg{
+/* .footerBg{
   background: url(../images/BG_Footer.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-attachment: scroll;
-  background-position: center;
-}
+} */
+
 .socialsBox a,
 .footerLink {
   color: red;

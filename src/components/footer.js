@@ -6,7 +6,9 @@ const footerStyle = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  background: `url(${footerBackground}) 100% 100% fixed`,
+  background: `url(${footerBackground}) no-repeat`,
+  backgroundSize: 'cover',
+//   backgroundPosition: "top"
 };
 
 const footerBox = {

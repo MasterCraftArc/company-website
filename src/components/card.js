@@ -3,15 +3,18 @@ import * as React from "react";
 
 const trainedCardStyle = {
   width: "255px",
-  Height: "380px",
+  Height: "412px",
 };
 
 const trainedCardText = {
-  fontSize: "15px",
+  fontSize: "13px",
+  width: "87%",
+  paddingTop: "9%",
 };
 
 const trainedCardTitle = {
-  fontSize: "23px",
+  fontSize: "18px",
+  color: "black",
 };
 
 const trainedCardLink = {

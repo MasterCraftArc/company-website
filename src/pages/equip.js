@@ -122,7 +122,7 @@ const Equip = ({ data, location }) => {
               console.log(post);
               return (
                 <Card
-                  imgDisplay={post.frontmatter.image.childImageSharp.fluid.src}
+                  imgDisplay={post.frontmatter.image?.childImageSharp.fluid.src}
                   ref={cardRefs[i]}
                   category={post.frontmatter.category}
                   title={post.frontmatter.title}
