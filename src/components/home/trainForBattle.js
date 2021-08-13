@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import heroes from "../../images/unicornHeroes.png";
 import devSecOps from "../../images/card3.png";
 import aquisitions from "../../images/card2.png";
@@ -9,14 +8,18 @@ import BattleCard from "./card";
 
 const TrainForBattle = () => {
   return (
-    <section className="trainForBattle flex min-h-screen items-center">
+    <section id="trainForBattle" className="trainForBattle flex min-h-screen items-center">
       <div className="xl:w-4/5 lg:w-full w-3/4 mx-auto mt-10">
+        
         <h2
-          className={`${TITLE_TEXT} text-center font-bold mb-32`}
+          className={`${TITLE_TEXT} text-center font-bold mb-5`}
           style={battleText}
         >
           Let us Train you for Battle
         </h2>
+        <h3 className="mt-0 mb-32 text-center italic text-blue-900 text-3xl">
+          Whatever your mission, we have resources to help solve your software challenge.
+        </h3>
 
         <Carousel>
           <BattleCard 
