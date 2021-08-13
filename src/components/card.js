@@ -25,8 +25,7 @@ const trainedCardLink = {
 const Card = React.forwardRef((props, ref) => (
   <div
     ref={ref}
-    className="card --tw-border-opacity: 1;
-    border-color: rgba(80, 249, 255, var(--tw-border-opacity))"
+    className="card border-2 border-solid border-blue-400 rounded-lg"
     style={trainedCardStyle}
     data-category={props.category}
   >

@@ -8,7 +8,8 @@ const footerStyle = {
   alignItems: "center",
   background: `url(${footerBackground}) no-repeat`,
   backgroundSize: 'cover',
-//   backgroundPosition: "top"
+  // backgroundColor: '#5F41A8',
+  // backgroundPosition: "top"
 };
 
 const footerBox = {

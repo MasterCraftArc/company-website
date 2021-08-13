@@ -82,7 +82,7 @@ const Equip = ({ data, location }) => {
         <div className="container h-75 mt-16 mx-auto relative">
           <div className="px-16 sticky top-0 bg-white">
             <h2
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+              className=" text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
               style={battleText}
             >
               Latest Posts
