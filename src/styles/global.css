@@ -137,13 +137,13 @@ body {
   background: transparent;
 }
 
-.hero h1,
+/* .hero h1,
 .heroText {
   /* color: white; */
   /* @apply text-7xl; */
   /* font-size: 5vw; */
   /* padding-left: 5vw; */
-}
+/* }  */
 
 .card {
   background-color: white;
@@ -217,7 +217,7 @@ h5 {
   font-size: 15px;
   outline: none;
   background-color: transparent;
-  @apply pl-3 bg-white rounded-xl;
+  /* @apply pl-3 bg-white rounded-xl; */
 }
 
 .contact select {
@@ -229,15 +229,15 @@ h5 {
 }
 
 .contact textarea {
-  @apply pt-3 pl-3 bg-white rounded-xl;
+  /* @apply pt-3 pl-3 bg-white rounded-xl; */
   font-size: 15px;
   outline: none;
 }
 
-.contact input:focus,
+/* .contact input:focus,
 .contact textarea:focus {
   @apply border-2 border-solid border-blue-900;
-}
+} */
 
 /* Blog */
 .blog {
