@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "Defense Unicorns",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Defense Unicorns",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Defense Unicorns",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/leapfrogai/website/issues"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.0",
@@ -56,16 +56,10 @@
     "prettier": "2.3.2",
     "tailwindcss": "^2.2.7"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/leapfrogai/website#readme",
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
