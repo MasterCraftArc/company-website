@@ -67,7 +67,7 @@ const HomeHero = () => {
         <p>Maintaining competitive advantage in today's constantly evolving software ecosystem requires more than a unicorn...a hero.</p> 
         <p>We grow heroes across sectors to continuously deliver software without compromising security.</p>
       </h3>
-      <a href="#trainForBattle" className={`${TITLE_TEXT} lg:ml-24 md:ml-16 sm:ml-8 ml-4 mt-8 text-white hover:text-blue-900 cursor-pointer`}><i className="bi bi-arrow-down-circle-fill"></i></a>
+      <a aria-hidden="true" href="#trainForBattle" className={`${TITLE_TEXT} lg:ml-24 md:ml-16 sm:ml-8 ml-4 mt-8 text-white hover:text-blue-900 cursor-pointer`}><i className="bi bi-arrow-down-circle-fill"></i></a>
     </section>
   );
 };

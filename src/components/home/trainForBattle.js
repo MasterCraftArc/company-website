@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import heroes from "../../images/unicornHeroes.png";
 import devSecOps from "../../images/card3.png";
 import aquisitions from "../../images/card2.png";

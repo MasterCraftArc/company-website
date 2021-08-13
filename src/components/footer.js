@@ -97,18 +97,19 @@ function Footer({ background, contact }) {
             </Link>
           </div>
           <div style={socialsBox} className="socialsBox w-1/6 flex text-3xl">
-            <a className="mt-14 h-5 ml-12" href="#">
+            <button aria-hidden="true" className="mt-14 h-5 ml-12">
               <i className="bi bi-twitter me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
-            </a>
+            </button>
             <a
+              aria-hidden="true"
               className="mt-14 h-5"
               href="https://www.linkedin.com/company/leapfrog-ai/about/"
             >
               <i className="bi bi-linkedin ms-1 me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
             </a>
-            <a className="mt-14 h-5" href="#">
+            <button className="mt-14 h-5">
               <i className="bi bi-facebook me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>

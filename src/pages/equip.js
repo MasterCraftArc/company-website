@@ -1,9 +1,7 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
-// import pc from "../images/pc.png";
-// import tech from "../images/tech.png";
 
 import Card from "../components/card";
 import Footer from "../components/footer";
@@ -11,14 +9,6 @@ const pageStyles = {
   color: "black",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   width: "100vw",
-  // background: {topBG}
-};
-
-const buttonStyle = {
-  borderRadius: "0",
-  height: "45px",
-  width: "150px",
-  fontSize: "15px",
 };
 
 const battleText = {
@@ -82,7 +72,7 @@ const Equip = ({ data, location }) => {
             mission.
           </p>
           <div className="mt-8">
-            <a href="#latestPosts" className={`xl:text-6xl text-5xl heroText text-white hover:text-blue-800 cursor-pointer`}><i className="bi bi-arrow-down-circle-fill"></i></a>
+            <a aria-hidden="true" href="#latestPosts" className={`xl:text-6xl text-5xl heroText text-white hover:text-blue-800 cursor-pointer`}><i className="bi bi-arrow-down-circle-fill"></i></a>
           </div>
         </div>
 
