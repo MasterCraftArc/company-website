@@ -10,7 +10,7 @@ import Button from "../button";
 const TrainForBattle = () => {
   return (
     <section id="trainForBattle" className="trainForBattle flex flex-col min-h-screen justify-center">
-      <div className="xl:w-4/5 lg:w-full w-3/4 mx-auto mt-10">
+      <div className="w-3/4 md:w-full mx-auto mt-10">
         
         <h2
           className={`${TITLE_TEXT} text-center font-bold mb-5`}
@@ -52,7 +52,7 @@ const TrainForBattle = () => {
 
         </Carousel>
       </div>
-      <div className="pt-7 mx-auto">
+      <div className="pt-16 mx-auto">
             <Button
               linkTo="/contact"
               className="bg-transparent border-blue-900 border-2 border-solid hover:bg-blue-900 text-blue-900 hover:text-white"

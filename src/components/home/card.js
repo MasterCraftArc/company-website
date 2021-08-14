@@ -25,7 +25,8 @@ const cardStyle = {
   };
   
   const cardImg = {
-    maxWidth: "90%",
+    maxWidth: "100%",
+    // maxHeight: "120px",
     paddingTop: "2%",
   };
   
@@ -33,7 +34,7 @@ const cardStyle = {
 const BattleCard = (props) => {
     return(
         <div aria-hidden="true" onClick={ () => {navigate(props.cardLink)} } onKeyDown={ () => {navigate(props.cardLink)} }>
-            <h3 className="text-center mb-8 font-bold text-red-500 text-3xl">{props.heading}</h3>
+            
             <div
             className="card flex flex-col justify-evenly mx-auto p-5"
             style={cardStyle}
@@ -47,11 +48,8 @@ const BattleCard = (props) => {
                 />
             </div>
             
-            <div className="card-body text-center">
-                <span className="card-text" style={cardText}>
-                    {props.title}
-                </span>
-                <p style={cardText}>{props.subtitle}</p>
+            <div className="card-body text-center ">
+                <h3 className="text-center mt-8 font-bold text-white text-3xl">{props.heading}</h3>
                 <h5 className="card-title mt-3 mb-5" style={cardTitle}>
                     {props.mainText}
                 </h5>
