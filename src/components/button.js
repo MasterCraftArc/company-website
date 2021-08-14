@@ -4,9 +4,9 @@ import { Link } from 'gatsby';
 function Button(props) {
     const buttonStyle = {
         borderRadius: '12px',
-        height: '45px',
-        minWidth: '150px',
-        fontSize: '15px',
+        height: '55px',
+        minWidth: '165px',
+        fontSize: '18px',
         fontWeight: '600'
       }
 

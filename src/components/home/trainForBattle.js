@@ -5,10 +5,11 @@ import aquisitions from "../../images/card2.png";
 import { battleText, TITLE_TEXT } from "./homeStyles";
 import Carousel from "../carousel/carousel";
 import BattleCard from "./card";
+import Button from "../button";
 
 const TrainForBattle = () => {
   return (
-    <section id="trainForBattle" className="trainForBattle flex min-h-screen items-center">
+    <section id="trainForBattle" className="trainForBattle flex flex-col min-h-screen justify-center">
       <div className="xl:w-4/5 lg:w-full w-3/4 mx-auto mt-10">
         
         <h2
@@ -50,6 +51,13 @@ const TrainForBattle = () => {
           />   
 
         </Carousel>
+      </div>
+      <div className="pt-7 mx-auto">
+            <Button
+              linkTo="/contact"
+              className="bg-transparent border-blue-900 border-2 border-solid hover:bg-blue-900 text-blue-900 hover:text-white"
+              text="Contact Us"
+            />
       </div>
     </section>
   );

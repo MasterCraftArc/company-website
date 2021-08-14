@@ -33,11 +33,6 @@ const WhoWeAre = () => {
               className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5"
               text="Contact Us"
             />
-            <Button
-              linkTo="/equip"
-              className="hover:bg-transparent border-blue-900 border-2 border-solid bg-blue-900 hover:text-blue-900 text-white mr-5 mb-5"
-              text="Learn More"
-            />
           </div>
         </div>
       </div>

@@ -29,9 +29,9 @@ const CaseStudies = () => {
 
           <div className="pt-7">
             <Button
-              linkTo="/equip"
+              linkTo="/contact"
               className="bg-transparent border-blue-900 border-2 border-solid hover:bg-blue-900 text-blue-900 hover:text-white"
-              text="Learn More"
+              text="Contact Us"
             />
           </div>
         </div>
