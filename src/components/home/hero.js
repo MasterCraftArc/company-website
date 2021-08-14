@@ -33,7 +33,7 @@ const tagLineItems = [
 
 const HomeHero = () => {
   return (
-    <section className="hero py-12 flex flex-col justify-center relative">
+    <section className="homeHero py-12 flex flex-col justify-center relative">
     <div className="mb-24">
           <h1 className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl text-white lg:ml-24 md:ml-16 sm:ml-8 ml-4`}>
             <p>The World</p> 
