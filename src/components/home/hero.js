@@ -33,9 +33,9 @@ const tagLineItems = [
 
 const HomeHero = () => {
   return (
-    <section className="homeHero py-12 flex flex-col justify-center relative">
+    <section className="homeHero py-24 flex flex-col justify-center relative">
     <div className="mb-24">
-          <h1 className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl text-white lg:ml-24 md:ml-16 sm:ml-8 ml-4`}>
+          <h1 className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl text-white lg:ml-24 md:ml-16 sm:ml-8 ml-4 mt-10`}>
             <p>The World</p> 
             Needs a Hero...
           </h1>
@@ -64,7 +64,7 @@ const HomeHero = () => {
             </motion.span>
           </motion.h1>
     </div>
-      <h3 className="border-red-500 text-white border-l-4 ml-4 sm:border-l-8 pl-3 text-2xl md:text-3xl lg:text-4xl font-normal sm:text-left lg:ml-24 md:ml-16 sm:ml-8  text-center pr-2 sm:pr-24 mb-8">
+      <h3 className="border-red-500 text-white border-l-4 ml-4 sm:border-l-8 pl-3 text-2xl md:text-3xl font-normal sm:text-left lg:ml-24 md:ml-16 sm:ml-8  text-center pr-2 sm:pr-24 mb-8">
         <p className="text-left">Maintaining competitive advantage in today's constantly evolving software ecosystem requires more than a unicorn...a hero.</p> 
         <p className="text-left">We grow heroes across sectors to continuously deliver software without compromising security.</p>
       </h3>

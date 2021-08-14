@@ -58,7 +58,7 @@ function Header(props) {
               <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                 <li className="nav-item">
                   <Link
-                    className="px-3  text-lg  uppercase text-black lg:text-white hover:text-red-400"
+                    className="px-3  text-xl  uppercase text-black lg:text-white hover:text-red-400"
                     to="/"
                   >
                     <span className="ml-2">Train</span>
@@ -67,14 +67,14 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/equip"
-                    className="text-lg flex uppercase text-black lg:text-white hover:text-red-400 border-1 border-solid border-red-300"
+                    className="text-xl flex uppercase text-black lg:text-white hover:text-red-400 border-1 border-solid border-red-300"
                   >
                     <span className="ml-5">Equip</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3  text-lg  uppercase text-black lg:text-white hover:text-red-400"
+                    className="px-3  text-xl  uppercase text-black lg:text-white hover:text-red-400"
                     to="/contact"
                   >
                     <span className="ml-2">Contact</span>
