@@ -15,7 +15,8 @@ const pageStyles = {
 };
 
 const headerStyle = {
-  background: `url(${headerBackground}) 100% 100% fixed`,
+  background: `url(${headerBackground}) fixed no-repeat`,
+  backgroundSize: 'cover'
 };
 
 // markup

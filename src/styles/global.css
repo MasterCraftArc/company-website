@@ -46,7 +46,7 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Brush Script MT", "Garamond";
   background-color: transparent;
   /* color: white; */
 }
@@ -136,6 +136,22 @@ body {
   width: 100vw;
   background: transparent;
 }
+
+/* .homeHero a i:hover{
+  animation: slide 3s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+    padding-top: 2%;
+  }
+  50% {
+    padding-top: 5%;
+  }
+  100% {
+    padding-top: 12%;
+  }
+} */
 
 /* .hero h1,
 .heroText {
@@ -272,14 +288,6 @@ body {
 
 /* FOOTER */
 
-/* .footerBg{
-  background: url(../images/BG_Footer.jpg) no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: scroll;
-} */
 
 .socialsBox a,
 .footerLink {

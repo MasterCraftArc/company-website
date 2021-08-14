@@ -1,10 +1,11 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import { motion } from "framer-motion";
 import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
-
 import Card from "../components/card";
 import Footer from "../components/footer";
+
 const pageStyles = {
   color: "black",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -55,7 +56,7 @@ const Equip = ({ data, location }) => {
 
       <Header textColor="white" />
       <section className="hero flex flex-col justify-center">
-        <div className="pl-12 pb-8" style={{ color: "red" }}>
+        <div className="pl-12 pb-8 h-full flex flex-col justify-center" style={{ color: "red" }}>
           <p className="pb-8 text-white md:text-6xl text-5xl">
             The Defense Unicorns Blog
           </p>
@@ -71,9 +72,25 @@ const Equip = ({ data, location }) => {
             the people, process, and technology necessary to accelerate your
             mission.
           </p>
-          <div className="mt-8">
-            <a aria-hidden="true" href="#latestPosts" className={`xl:text-6xl text-5xl heroText text-white hover:text-blue-800 cursor-pointer`}><i className="bi bi-arrow-down-circle-fill"></i></a>
-          </div>
+
+          <a 
+            aria-hidden="true" 
+            href="#latestPosts" 
+            className={`text-5xl xl:text-6xl 2xl:text-7xl w-1/12 absolute bottom-0 animate-bounce`}
+            style={ {left: '50%'} }  
+          >
+            <motion.i
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                type: "spring",
+                delay: 0.5,
+                default: {duration: 2.5}
+              }}
+              className=" bi bi-chevron-down hover:text-blue-700 cursor-pointer">
+
+            </motion.i>
+          </a>
         </div>
 
       </section>
@@ -134,23 +151,6 @@ const Equip = ({ data, location }) => {
           </div>
         </div>
       </section>
-
-      {/* <section className="min-h-screen ">
-        <div className="h-1/4 px-16 md:px-32 lg:px-44 xl:px-56  mt-16 mb-16">
-          <h2
-            className="border-b-2 border-solid border-gray-400 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-            style={battleText}
-          >
-            Defense Unicorns Learning Videos
-          </h2>
-        </div>
-
-        <div className="h-3/4 px-16 md:px-56 w-full">
-          <h1 className="text-center text-3xl font-bold text-blue-400">
-            Coming Soon!
-          </h1>
-        </div>
-      </section> */}
 
       <Footer background={true} />
     </div>
