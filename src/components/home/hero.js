@@ -22,7 +22,7 @@ const letter = {
   },
 };
 
-const tagLine = "That hero is ";
+const tagLine = "That Hero is ";
 const tagLineItems = [
   " You.",
   " an Innovator",
