@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 /* Box Model Hack */
 * {
@@ -46,8 +47,8 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: "Brush Script MT", "Garamond";
-  background-color: transparent;
+  font-family: "Lato", "Brush Script MT", "Garamond";
+  /* background-color: blue; */
   /* color: white; */
 }
 
@@ -56,6 +57,16 @@ body {
 /*******************************************/
 
 /** NAV **/
+nav{
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 80%,
+    transparent 100%
+  );
+  /* background-color: inherit; */
+  /* mask-image: image(url("../images/BG_Banner.jpg"), transparent 100%) */
+  background-image: url("../images/BG_Banner.jpg");
+}
 
 @media only screen and (min-width: 768px) {
   .parent:hover .child {
@@ -115,6 +126,7 @@ body {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
     infinite;
   color: black;
+  font-weight: 200;
 }
 
 @keyframes blinking-cursor {
@@ -131,27 +143,18 @@ body {
 
 /* HERO */
 
-.hero {
-  height: 90vh;
+.homeHero{
+  height: 70vh;
   width: 100vw;
   background: transparent;
+  margin-bottom: '25%';
 }
-
-/* .homeHero a i:hover{
-  animation: slide 3s ease infinite;
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+  margin-bottom: '25%';
 }
-
-@keyframes slide {
-  0% {
-    padding-top: 2%;
-  }
-  50% {
-    padding-top: 5%;
-  }
-  100% {
-    padding-top: 12%;
-  }
-} */
 
 /* .hero h1,
 .heroText {

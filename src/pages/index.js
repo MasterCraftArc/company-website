@@ -10,7 +10,7 @@ import headerBackground from "../images/BG_Banner.jpg";
 
 const pageStyles = {
   color: "#232129",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  fontFamily: "Poppins, Roboto, sans-serif, serif",
   width: "100vw",
 };
 

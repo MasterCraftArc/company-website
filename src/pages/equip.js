@@ -52,9 +52,8 @@ const Equip = ({ data, location }) => {
 
   return (
     <div className="h-screen equip blog" style={pageStyles}>
-      <SiteHelmet title="Blog" />
-
-      <Header textColor="white" />
+      <SiteHelmet title="Equip" description="Defense Unicorns Blog"/>
+      <Header />
       <section className="hero flex flex-col justify-center">
         <div className="pl-12 pb-8 h-full flex flex-col justify-center" style={{ color: "red" }}>
           <p className="pb-8 text-white md:text-6xl text-5xl">

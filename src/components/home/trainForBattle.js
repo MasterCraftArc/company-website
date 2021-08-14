@@ -26,8 +26,6 @@ const TrainForBattle = () => {
           <BattleCard 
             heading="Small Business" 
             image={heroes} 
-            title="Explore Learning" 
-            subtitle="Path 1:" 
             mainText="Get support on DoD 21.3 SBIR/STTR"
             cardLink="/contact"
           />
@@ -35,8 +33,6 @@ const TrainForBattle = () => {
           <BattleCard 
             heading="Government" 
             image={aquisitions} 
-            title="Explore Learning" 
-            subtitle="Path 2:" 
             mainText="Attend DevSecOps Training"
             cardLink="/training"
           />
@@ -44,8 +40,6 @@ const TrainForBattle = () => {
           <BattleCard 
             heading="All Heroes" 
             image={devSecOps} 
-            title="Explore Learning" 
-            subtitle="Path 3:" 
             mainText="Explore DevSecOps Content"
             cardLink="/equip"
           />   

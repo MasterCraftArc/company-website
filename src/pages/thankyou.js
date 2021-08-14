@@ -4,6 +4,7 @@ import SiteHelmet from '../components/SiteHelmet';
 import logo from "../images/logo.png"
 import StyledBackgroundSection from '../components/contactBg'
 import Button from '../components/button'
+import contactBg from "../images/contact.png"
 
 const Thankyou = () => {
   return (

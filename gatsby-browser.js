@@ -9,4 +9,4 @@ import "prismjs/themes/prism.css"
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // import "typeface-montserrat"
-import "typeface-poppins"
+import "typeface-merriweather"

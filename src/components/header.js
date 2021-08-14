@@ -4,26 +4,25 @@ import logo from "../images/logo.png";
 import background from "../images/BG_Banner.jpg";
 
 const logoStyle = {
-  maxWidth: "15vh",
-  filter: "drop-shadow(1px 1px 2px lightgray)",
+  maxWidth: "16vh",
+  filter: "drop-shadow(2px 2px 2px black)",
 };
 
 const navbarStyle = {
-  // backgroundColor: "rgba(65, 255, 255, 0.6)",
-  boxShadow: "0 0 20px rgba(65, 255, 255, 0.6)",
-  background:
-    "linear-gradient(-45deg, rgba(148, 65, 250, 1), rgb(18, 203, 196))",
+  // boxShadow: "0 0 20px rgba(38, 18, 117, 0.2)",       
 };
 
-function Header() {
+function Header(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
     <>
       <nav
-        className="sticky top-0 z-100"
+        className="fixed top-0 z-100 w-full"
         style={{
-          background: `url(${background})`,
+          background: `url(${props.background ? props.background : background}) no-repeat fixed`,
+          backgroundSize: 'cover',
+          backgroundPosition: '0% 1%',
           zIndex: 100,
         }}
       >
