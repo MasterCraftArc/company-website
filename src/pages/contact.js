@@ -55,7 +55,6 @@ class Contact extends React.Component {
             <SiteHelmet title="Contact" />
             <Header background={contactBg}/>
           <main className="contact min-h-screen w-full flex items-center justify-center">
-
               <section
                 className="rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mt-10 bg-white bg-opacity-70"
                 style={formContainer }

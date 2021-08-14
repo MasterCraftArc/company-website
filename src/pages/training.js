@@ -52,7 +52,7 @@ class Training extends React.Component {
     return (
       <>
         <StyledBackgroundSection>
-          <main className="contact min-h-screen w-full ">
+          <main className="contact min-h-screen w-full flex items-center justify-center">
             <SiteHelmet title="Training" />
             <Header background={contactBg}/>
             <section
