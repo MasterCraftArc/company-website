@@ -5,6 +5,7 @@ import SiteHelmet from "../components/SiteHelmet";
 import Header from "../components/header";
 import Card from "../components/card";
 import Footer from "../components/footer";
+import pin from "../images/pin.png";
 
 const pageStyles = {
   color: "black",
@@ -55,15 +56,15 @@ const Equip = ({ data, location }) => {
       <SiteHelmet title="Equip" description="Defense Unicorns Blog"/>
       <Header />
       <section className="hero flex flex-col justify-center">
-        <div className="pl-12 pb-8 h-full flex flex-col justify-center" style={{ color: "red" }}>
-        <p className="pb-8 text-white md:text-6xl text-5xl flex">
-           <img src={pin} className="w-1/12"/> The Defense Unicorns Blog
+        <div className="pb-8 h-full flex flex-col justify-center" style={{ color: "red" }}>
+        <p className="pinGlow pb-8 text-white md:text-6xl text-5xl flex items-end align-bottom font-bold">
+           <img src={pin} className="w-32 pt-12"/> The Defense Unicorns Blog
           </p>
           <div className="flex md:flex-row flex-col md:text-5xl text-4xl">
-            <p className="pb-8">Translating thoughts into&nbsp;</p>
+            <p className="pb-8 pl-16">Translating thoughts into&nbsp;</p>
             <p className="pb-8 font-bold">action</p>
           </div>
-          <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white">
+          <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-16">
             We believe every organization has the capacity for digital
             transformation and that continuous learning delivers improved
             outcomes when we feel comfortable applying what we’ve learned. This

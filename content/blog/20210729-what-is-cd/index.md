@@ -6,12 +6,6 @@ slug: what-is-cd
 title: What is CD Really?
 date: 2021-07-29
 published: false
-tags:
-  - culture
-  - automation
-  - lean
-  - metrics
-  - sharing
 description: There are many misconceptions about CD. There are also many things
   about CD that are not obvious on the surface. If you are "CD curious", perhaps
   this will help.
