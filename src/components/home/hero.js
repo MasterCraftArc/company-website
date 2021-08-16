@@ -65,8 +65,7 @@ const HomeHero = () => {
           </motion.h1>
     </div>
       <h3 className="border-red-500 text-white border-l-4 ml-4 sm:border-l-8 pl-3 text-2xl md:text-3xl font-normal sm:text-left lg:ml-24 md:ml-16 sm:ml-8  text-center pr-2 sm:pr-24 mb-8">
-        <p className="text-left">Maintaining competitive advantage in today's constantly evolving software ecosystem requires more than a unicorn...a hero.</p> 
-        <p className="text-left">We grow heroes across sectors to continuously deliver software without compromising security.</p>
+        <p className="text-left">We help mission focused heroes connect and integrate the modern software products they require for mission success.</p> 
       </h3>
       <a 
         aria-hidden="true" 

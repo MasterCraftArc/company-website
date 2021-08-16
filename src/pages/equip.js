@@ -6,6 +6,7 @@ import Header from "../components/header";
 import Card from "../components/card";
 import Footer from "../components/footer";
 import pin from "../images/pin.png";
+import unicornStars from "../images/unicornStars.png";
 
 const pageStyles = {
   color: "black",
@@ -94,8 +95,11 @@ const Equip = ({ data, location }) => {
         </div>
 
       </section>
-
-      <section id="latestPosts" className="latestTrained min-h-screen mt-16 pt-24 overflow-x-scroll md:overflow-auto">
+      <section 
+      id="latestPosts"  
+      className="latestTrained min-h-screen mt-16 pt-24 overflow-x-scroll md:overflow-auto"
+      style={{background:{unicornStars}}}
+      >
         <div className="container h-75 mt-16 mx-auto relative">
           <div className="px-16 sticky top-0 bg-white">
             <h2
@@ -151,6 +155,7 @@ const Equip = ({ data, location }) => {
           </div>
         </div>
       </section>
+      <img src={pin} className="w-2/12 ml-auto"/>
 
       <Footer background={true} />
     </div>
