@@ -56,8 +56,8 @@ const Equip = ({ data, location }) => {
       <Header />
       <section className="hero flex flex-col justify-center">
         <div className="pl-12 pb-8 h-full flex flex-col justify-center" style={{ color: "red" }}>
-          <p className="pb-8 text-white md:text-6xl text-5xl">
-            The Defense Unicorns Blog
+        <p className="pb-8 text-white md:text-6xl text-5xl flex">
+           <img src={pin} className="w-1/12"/> The Defense Unicorns Blog
           </p>
           <div className="flex md:flex-row flex-col md:text-5xl text-4xl">
             <p className="pb-8">Translating thoughts into&nbsp;</p>
