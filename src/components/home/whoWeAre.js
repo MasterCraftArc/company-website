@@ -11,13 +11,6 @@ const WhoWeAre = () => {
       style={{ background: `url(${whoBackground}) 100% 100% fixed` }}
     >
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
-        <div className="px-10 p-16">
-          <img
-            src={whoWeAre}
-            className=""
-            alt="unicorn under magnifying glass"
-          />
-        </div>
         <div className="flex flex-col justify-center px-10 text-white">
           <h2 className={TITLE_TEXT}>Who we are</h2>
           <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-8 text-3xl xl:pb-16 font-light">
@@ -34,6 +27,13 @@ const WhoWeAre = () => {
               text="Contact Us"
             />
           </div>
+        </div>
+        <div className="px-10 p-16">
+          <img
+            src={whoWeAre}
+            className=""
+            alt="unicorn under magnifying glass"
+          />
         </div>
       </div>
     </section>
