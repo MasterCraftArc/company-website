@@ -11,11 +11,12 @@ const trainedCardText = {
   fontSize: "13px",
   width: "87%",
   paddingTop: "5%",
-  marginTop: "auto"
+  marginTop: "auto",
+  marginBottom: "4%",
 };
 
 const trainedCardTitle = {
-  fontSize: "18px",
+  fontSize: "14px",
   color: "black",
 };
 
