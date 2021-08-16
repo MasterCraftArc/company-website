@@ -254,12 +254,21 @@ nav{
 
 .borderRadius {
   border-radius: 37px;
+  border: 2px solid #8ff3f3;
 }
 
 .card-img-top {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   width: fit-content;
+}
+
+.readLink {
+  margin-right: 44%;
+}
+
+.blogCard {
+  padding-bottom: 15%;
 }
 
 

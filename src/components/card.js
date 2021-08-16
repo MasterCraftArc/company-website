@@ -4,6 +4,7 @@ import * as React from "react";
 const trainedCardStyle = {
   width: "274px",
   Height: "412px",
+  border: "2px solid #8ff3f3",
 };
 
 const trainedCardText = {
@@ -36,8 +37,8 @@ const Card = React.forwardRef((props, ref) => (
       alt="blogpost thumbnail"
       style={{ maxHeight: "170px" }}
     />
-    <div className="card-body text-center">
-      <div className="w-1/2 mx-auto bg-red-500 mr-0 text-white">
+    <div className="blogCard card-body text-center">
+      <div className="w-1/3 mx-auto bg-red-500 mr-0 text-white">
         {props.category}
       </div>
       <h5 className="card-title mt-3 mb-3 text-left ml-8" style={trainedCardTitle}>
@@ -46,7 +47,7 @@ const Card = React.forwardRef((props, ref) => (
       <p className="card-text pb-2 text-gray-500 text-left ml-8 mt-8" style={trainedCardText}>
         {props.description}
       </p>
-      <Link to={props.blogLink} style={trainedCardLink} className="pt-2 text-left pr-10">
+      <Link to={props.blogLink} style={trainedCardLink} className="readLink pt-2 text-left pr-10">
         READ MORE
       </Link>
     </div>
