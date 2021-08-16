@@ -58,7 +58,7 @@ const Equip = ({ data, location }) => {
       <Header />
       <section className="hero flex flex-col justify-center">
         <div className="pb-8 h-full flex flex-col justify-center" style={{ color: "red" }}>
-        <p className="pinGlow pb-8 text-white md:text-6xl text-5xl flex items-end align-bottom font-bold">
+        <p className="pinGlow  pb-8 text-white md:text-6xl text-5xl flex items-end align-bottom font-bold">
            <img src={pin} className="w-32 pt-12"/> The Defense Unicorns Blog
           </p>
           <div className="flex md:flex-row flex-col md:text-5xl text-4xl">
@@ -103,14 +103,14 @@ const Equip = ({ data, location }) => {
         <div className="container h-75 mt-16 mx-auto relative">
           <div className="px-16 sticky top-0 bg-white">
             <h2
-              className=" text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+              className="fontTitle text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
               style={battleText}
             >
               Latest Posts
             </h2>
             <div
               ref={categoriesRef}
-              className="font-black md:pl-20 text-2xl text-bold w-full border-b-2 border-solid border-gray-400 mt-16 mb-16"
+              className="borderBottom textTab font-black md:pl-20 text-2xl text-bold w-full border-b-2 border-blue-900 mt-16 mb-16"
             >
               <button
                 className="pr-4 md:pr-16 text-red-500 cursor-pointer hover:text-red-500"
@@ -119,26 +119,26 @@ const Equip = ({ data, location }) => {
                 All
               </button>
               <button
-                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
+                className="tabButton pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
                 onClick={(event) => updateCards(event)}
               >
-                Agile Acquisitions
+                AGILE ACQUISITIONS 
               </button>
               <button
-                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
+                className="tabButton pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
                 onClick={(event) => updateCards(event)}
               >
-                DevSecOps
+                DEVSECOPS
               </button>
               <button
-                className="pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
+                className="tabButton pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
                 onClick={(event) => updateCards(event)}
               >
-                Continuous Delivery
+                CONTINUOUS DELIVERY
               </button>
             </div>
           </div>
-          <div className="flex justify-around">
+          <div className="flex justify-evenly">
             {posts.map((post, i) => {
               console.log(post);
               return (

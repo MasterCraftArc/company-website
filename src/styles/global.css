@@ -232,7 +232,35 @@ nav{
   color: rgba(64, 238, 244, 0.7);
 }
 
+.tabTitles {
+  color: rgb(157, 181, 205);
+}
 
+.tabButton {
+  color: rgb(157, 181, 205);
+}
+
+.textTab {
+  font-size: 100%;
+}
+
+.borderBottom {
+  border-bottom-width: 1px;
+}
+
+.fontTitle {
+  font-family: Poppins;
+}
+
+.borderRadius {
+  border-radius: 37px;
+}
+
+.card-img-top {
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  width: fit-content;
+}
 
 
 /* Contact */
