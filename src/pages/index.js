@@ -6,7 +6,7 @@ import SiteHelmet from "../components/SiteHelmet";
 import WhoWeAre from "../components/home/whoWeAre";
 import CaseStudies from "../components/home/whatWeDo";
 import TrainForBattle from "../components/home/trainForBattle";
-import headerBackground from "../images/BG_Banner.jpg";
+import headerBackground from "../images/darkMain.jpg";
 
 const pageStyles = {
   color: "#232129",
@@ -37,7 +37,7 @@ class Train extends React.Component {
           title="Train"
           description="Become a DevSecOps Hero with Defense Unicorns"
         />
-        <Header textColor="white" className="" />
+        <Header className="" background={headerBackground}/>
         <div style={headerStyle}>
           <HomeHero />
         </div>

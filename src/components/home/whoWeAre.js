@@ -2,7 +2,7 @@ import React from "react";
 import whoWeAre from "../../images/whoWeAre.png";
 import { TITLE_TEXT } from "./homeStyles";
 import Button from "../button";
-import whoBackground from "../../images/Hero.jpg";
+import whoBackground from "../../images/contact.png";
 
 const WhoWeAre = () => {
   return (
