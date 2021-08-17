@@ -12,12 +12,12 @@ const TrainForBattle = () => {
       <div className="w-3/4 md:w-full mx-auto mt-10">
         
         <h2
-          className={`${TITLE_TEXT} text-center font-bold mb-5`}
+          className={`${TITLE_TEXT} font-bold mb-5 pl-4 md:pl-16 lg:pl-32 2xl:pl-44`}
           style={battleText}
         >
           Let us Train you for Battle
         </h2>
-        <h3 className="mt-0 mb-32 text-center italic text-blue-900 text-3xl">
+        <h3 className="mt-0 mb-32 text-blue-900 text-3xl pl-4 md:pl-16 lg:pl-32 2xl:pl-44">
           Whatever your mission, we the have resources to help solve your software challenge.
         </h3>
 
