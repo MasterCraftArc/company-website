@@ -7,13 +7,13 @@ author: Defense Unicorns Staff
 slug: devops-101
 title: DevOps 101
 date: 2021-07-15
+published: true
+tags: DevSecOps
 description: DevOps, DevSecOps, et al are some of the most commonly
   misunderstood terms in the industry. While their usage has become
   ubiquitous...
 category: DevSecOps
-image: card3.png
-published: true
-tags: DevSecOps
+image: computer.png
 ---
 
 DevOps, DevSecOps, et al are some of the most commonly misunderstood terms in the industry. While their usage has become
