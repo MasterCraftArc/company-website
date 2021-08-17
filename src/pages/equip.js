@@ -7,6 +7,7 @@ import Card from "../components/card";
 import Footer from "../components/footer";
 import pin from "../images/pin.png";
 import unicornStars from "../images/unicornStars.png";
+import pinBlue from "../images/pinBlue.png";
 
 const pageStyles = {
   color: "black",
@@ -19,6 +20,27 @@ const battleText = {
   color: "#14498e",
   fontWeight: "normal",
 };
+
+const unicornStarStyle = {
+  width: '15%',
+  position: 'absolute',
+  right: '0',
+  top: '300px',
+
+}
+
+const pinBlueStyle = {
+  width:'5%',
+  position: 'absolute',
+  right: '52px',
+
+}
+const pinBlueStyleTwo = {
+  width: '5%',
+  position: 'absolute',
+  left: '130px',
+  top: '185px',
+}
 
 const Equip = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -97,9 +119,11 @@ const Equip = ({ data, location }) => {
       </section>
       <section 
       id="latestPosts"  
-      className="latestTrained min-h-screen mt-16 pt-24 overflow-x-scroll md:overflow-auto"
-      style={{background:{unicornStars}, backgroundSize: '50%'}}
+      className="latestTrained min-h-screen mt-16 pt-24 overflow-x-scroll md:overflow-auto relative"
       >
+        <img className="" src={pinBlue} style={pinBlueStyleTwo}/>
+        <img className="" src={unicornStars} style={unicornStarStyle}
+        />
         <div className="container h-75 mt-16 mx-auto relative">
           <div className="px-16 sticky top-0 bg-white">
             <h2
@@ -110,10 +134,10 @@ const Equip = ({ data, location }) => {
             </h2>
             <div
               ref={categoriesRef}
-              className="borderBottom textTab font-black md:pl-20 text-2xl text-bold w-full border-b-2 border-blue-900 mt-16 mb-16"
+              className="borderBottom textTab font-black md:pl-0 text-2xl text-bold w-full border-b-2 border-blue-900 mt-16 mb-16"
             >
               <button
-                className="pr-4 md:pr-16 text-red-500 cursor-pointer hover:text-red-500"
+                className="pr-4 md:pr-8 text-red-500 cursor-pointer hover:text-red-500"
                 onClick={(event) => updateCards(event)}
               >
                 All
@@ -155,8 +179,7 @@ const Equip = ({ data, location }) => {
           </div>
         </div>
       </section>
-      <img src={pin} className="w-2/12 ml-auto"/>
-
+      <img src={pinBlue} style={pinBlueStyle} className=""/>
       <Footer background={true} />
     </div>
   );
