@@ -8,7 +8,7 @@ const WhoWeAre = () => {
   return (
     <section
       className="min-h-screen flex items-center justify-center w-full md:my-0 my-16"
-      style={{ background: `url(${whoBackground}) 100% 100% fixed` }}
+      style={{ background: `url(${whoBackground}) fixed no-repeat`, backgroundSize: 'cover' }}
     >
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="px-10 p-16">
