@@ -14,20 +14,15 @@ const cardStyle = {
     width: "45%",
   };
   
-  const cardText = {
-    color: "white",
-    fontSize: "15px",
-  };
   
   const cardTitle = {
     color: "white",
-    fontSize: "20px",
+    fontSize: "19px",
   };
   
   const cardImg = {
-    maxWidth: "100%",
-    // maxHeight: "120px",
-    paddingTop: "2%",
+    maxWidth: "98%",
+    paddingTop: "3%",
   };
   
   
@@ -49,8 +44,8 @@ const BattleCard = (props) => {
             </div>
             
             <div className="card-body text-center ">
-                <h3 className="text-center mt-8 font-bold text-white text-3xl">{props.heading}</h3>
-                <h5 className="card-title mt-3 mb-5" style={cardTitle}>
+                <h3 className="text-center mt-8 text-white text-3xl">{props.heading}</h3>
+                <h5 className="card-title mt-3 mb-5 font-bold" style={cardTitle}>
                     {props.mainText}
                 </h5>
                 <img

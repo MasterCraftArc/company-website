@@ -20,23 +20,34 @@ const headerStyle = {
 };
 
 // markup
-const Train = () => {
-  return (
-    <div style={pageStyles} className="home flex flex-col bg-top">
-      <SiteHelmet
-        title="Train"
-        description="Become a DevSecOps Hero with Defense Unicorns"
-      />
-      <Header textColor="white" className="" />
-      <div style={headerStyle}>
-        <HomeHero />
+class Train extends React.Component {
+
+  handleScroll(e) {
+    console.log('scrolling')
+    const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+    if (bottom) { 
+      console.log('bottom!')
+     }
+  }
+
+  render(){
+    return (
+      <div style={pageStyles} className="home flex flex-col bg-top" onScroll={(e) => this.handleScroll(e)}>
+        <SiteHelmet
+          title="Train"
+          description="Become a DevSecOps Hero with Defense Unicorns"
+        />
+        <Header textColor="white" className="" />
+        <div style={headerStyle}>
+          <HomeHero />
+        </div>
+        <TrainForBattle />
+        <WhoWeAre />
+        <CaseStudies />
+        <Footer></Footer>
       </div>
-      <TrainForBattle />
-      <WhoWeAre />
-      <CaseStudies />
-      <Footer></Footer>
-    </div>
-  );
+    );
+  }
 };
 
 export default Train;

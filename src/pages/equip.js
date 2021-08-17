@@ -98,7 +98,7 @@ const Equip = ({ data, location }) => {
       <section 
       id="latestPosts"  
       className="latestTrained min-h-screen mt-16 pt-24 overflow-x-scroll md:overflow-auto"
-      style={{background:{unicornStars}}}
+      style={{background:{unicornStars}, backgroundSize: '50%'}}
       >
         <div className="container h-75 mt-16 mx-auto relative">
           <div className="px-16 sticky top-0 bg-white">
