@@ -1,13 +1,15 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import verticalLogo from "../images/logo-vertical.png";
-import footerBackground from "../images/footerClean.png";
+import footerBackground from "../images/darkFooter.jpg";
+
 const footerStyle = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   background: `url(${footerBackground}) no-repeat`,
   backgroundSize: 'cover',
+  height: '40vh',
   // backgroundColor: '#5F41A8',
   // backgroundPosition: "top"
 };
@@ -31,9 +33,8 @@ const menuBox = {
 };
 
 const linkColor = {
-  color: "white",
   fontSize: "14px",
-  fontFamily: "",
+  fontWeight: "bold",
 };
 
 const menu = {
@@ -45,24 +46,18 @@ const menu = {
 function Footer({ background, contact }) {
   return (
     <footer
-      className={`footer ${
-        background
-          ? "footerBg min-h-screen"
-          : contact
-          ? "pl-16"
-          : "min-h-screen"
-      }`}
+      className={`${ background ? "footerBg" : contact ? "pl-16" : "" }`}
       style={footerStyle}
     >
       <div
-        className="container md:h-2/6 flex md:flex-row flex-col mr-7 mx-auto"
+        className="container md:h-3/6 flex md:flex-row flex-col mr-7 mx-auto"
         style={footerBox}
       >
         <div className="flex flex-col md:w-2/5 xs:w-full">
           <div className="flex md:flex-row flex-col h-4/6 xs:w-full">
             <div className="w-full">
               <img
-                className="mx-auto mt-12 justify-self-start"
+                className="mx-auto"
                 src={verticalLogo}
                 style={logoStyle}
                 alt="Defense Unicorns logo"
@@ -78,7 +73,7 @@ function Footer({ background, contact }) {
             </div>
           </div>
           <div className="w-full md:text-left text-center flex-grow h-2/6 text-gray-300 text-lg">
-            <p className="border-solid border-danger md:border-t-2 mt-12 md:ml-32">
+            <p className="border-solid md:border-t-2 mt-12 md:ml-32">
               Copyright © {new Date().getFullYear()} Defense Unicorns. All
               rights reserved.
             </p>
@@ -86,7 +81,7 @@ function Footer({ background, contact }) {
         </div>
         <div className="flex flex-row md:mx-12 mx-auto">
           <div
-            className="text-3xl border-black w-1/5 flex flex-col justify-center items-center self-start text-white mx-auto mt-12"
+            className="text-3xl border-black w-1/5 flex flex-col justify-center items-center self-start text-blue-900 mx-auto mt-12"
             style={menuBox}
           >
             <Link to="/train" className="footerLink" style={linkColor}>
