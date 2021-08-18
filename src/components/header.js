@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
-import background from "../images/BG_Banner.jpg";
 
 const logoStyle = {
   maxWidth: "16vh",

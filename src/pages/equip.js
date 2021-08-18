@@ -11,7 +11,7 @@ import pinBlue from "../images/pinBlue.png";
 
 const pageStyles = {
   color: "black",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  // fontFamily: "-apple-system, Roboto, sans-serif, serif",
   width: "100vw",
 };
 
