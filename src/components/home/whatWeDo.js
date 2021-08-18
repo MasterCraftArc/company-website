@@ -4,10 +4,11 @@ import whatWeDoPng from "../../images/home/caseStudies.png";
 import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
 import pin from "../../images/locationPin.png"
+import unicornStars from "../../images/unicornStars.png"
 
 const CaseStudies = () => {
   return (
-    <section className="h-screen flex items-center justify-center w-full md:my-0 my-16">
+    <section className="h-screen flex items-center justify-center w-full md:my-0 my-16 relative">
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="p-16 pt-0 lg:hidden block relative">
           <div className="tk-blob mx-auto">
@@ -53,6 +54,8 @@ const CaseStudies = () => {
           <img src={whatWeDoPng} className="absolute top-10" alt="Who we are" />
         </div>
       </div>
+
+      <img className="absolute bottom-11  invisible md:visible" src={unicornStars} alt="Unicorn standing on card" style={ {right: '8%', width: '200px', zIndex: '-2'} }/>
     </section>
   );
 };

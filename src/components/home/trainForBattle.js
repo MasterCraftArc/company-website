@@ -5,19 +5,31 @@ import aquisitions from "../../images/home/card2.png";
 import { battleText, TITLE_TEXT } from "./homeStyles";
 import Carousel from "../carousel/carousel";
 import BattleCard from "./card";
-// import unicorn from "../../images/unicornSingle.png"
+import unicorn from "../../images/unicornSingle.png"
+
 import pin from "../../images/locationPin.png"
 
 const TrainForBattle = () => {
   return (
-    <section id="trainForBattle" className="trainForBattle flex flex-col min-h-screen justify-center py-44">
-      <div className="w-5/6  md:w-full mx-auto mt-10">
-        
+    <section id="trainForBattle" className="trainForBattle flex flex-col min-h-screen justify-center py-44 relative"
+    // style={{
+    //   backgroundImage: {unicorn},
+    //   backgroundPosition: 'center',
+    //   backgroundSize: 'cover'
+    // }} 
+    >
+      <img className="absolute top-11  invisible md:visible" src={unicorn} alt="Unicorn standing on card" style={ {right: '8%', width: '150px', zIndex: '-2'} }/>
+
+      <div 
+        className="w-5/6  md:w-full mx-auto mt-10 " 
+      >
+        <div>
+
+        </div>
         <h2
           className={`${TITLE_TEXT} font-bold mb-5 sm:pl-4 md:pl-16 lg:pl-32 2xl:pl-44 flex items-center`}
           style={battleText}
         >
-          {/* <img className="w-1/12" src={unicorn} alt="Unicorn standing on card"/> */}
           <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/>
           Let us Train you for Battle
         </h2>
