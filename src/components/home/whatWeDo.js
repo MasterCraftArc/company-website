@@ -18,7 +18,7 @@ const CaseStudies = () => {
         </div>
         <div className="flex flex-col justify-center px-10">
           <h2 className={`${TITLE_TEXT} font-bold text-blue-900`}>What We Do</h2>
-          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-8 text-3xl xl:pb-16 font-light">
+          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-3xl xl:pb-16 font-light">
             We make it easier for mission-driven organizations to buy, accredit,
             and integrate software solutions. We provide a secure, open source
             and infrastructure agnostic DevSecOps platform while continuously

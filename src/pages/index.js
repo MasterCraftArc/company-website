@@ -21,19 +21,9 @@ const headerStyle = {
 };
 
 // markup
-class Train extends React.Component {
-
-  handleScroll(e) {
-    console.log('scrolling')
-    const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-    if (bottom) { 
-      console.log('bottom!')
-     }
-  }
-
-  render(){
+const Train = () => {
     return (
-      <div style={pageStyles} className="home flex flex-col bg-top" onScroll={(e) => this.handleScroll(e)}>
+      <div style={pageStyles} className="home flex flex-col bg-top">
         <SiteHelmet
           title="Train"
           description="Become a DevSecOps Hero with Defense Unicorns"
@@ -48,7 +38,7 @@ class Train extends React.Component {
         <Footer></Footer>
       </div>
     );
-  }
+
 };
 
 export default Train;

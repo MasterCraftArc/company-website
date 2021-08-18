@@ -44,9 +44,8 @@ const pinBlueStyleTwo = {
 
 const Equip = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes;
-  console.log(posts.length);
   let cardRefs = [];
-  let categoriesRef = React.createRef();
+  const categoriesRef = React.createRef();
   for (let i = 0; i < posts.length; i++) {
     cardRefs[i] = React.createRef();
   }
@@ -164,7 +163,6 @@ const Equip = ({ data, location }) => {
           </div>
           <div className="flex justify-evenly">
             {posts.map((post, i) => {
-              console.log(post);
               return (
                 <Card
                   imgDisplay={post.frontmatter.image.childImageSharp.fluid.src}

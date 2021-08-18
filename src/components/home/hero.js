@@ -61,7 +61,7 @@ const HomeHero = () => {
                 delay: 2,
               }}
             >
-              <ReactRotatingText items={tagLineItems} typingInterval="30"/>
+              <ReactRotatingText items={tagLineItems} />
             </motion.span>
           </motion.h1>
 
