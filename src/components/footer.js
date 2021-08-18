@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import verticalLogo from "../images/logo-vertical.png";
-import footerBackground from "../images/darkFooter.jpg";
+import footerBackground from "../images/footer.png";
 
 const footerStyle = {
   display: "flex",
@@ -9,13 +9,7 @@ const footerStyle = {
   alignItems: "center",
   background: `url(${footerBackground}) no-repeat`,
   backgroundSize: 'cover',
-  height: '40vh',
-  // backgroundColor: '#5F41A8',
-  // backgroundPosition: "top"
-};
-
-const footerBox = {
-  // marginTop: "35vh",
+  height: '50vh',
 };
 
 const logoStyle = {
@@ -51,7 +45,6 @@ function Footer({ background, contact }) {
     >
       <div
         className="container md:h-3/6 flex md:flex-row flex-col mr-7 mx-auto"
-        style={footerBox}
       >
         <div className="flex flex-col md:w-2/5 xs:w-full">
           <div className="flex md:flex-row flex-col h-4/6 xs:w-full">

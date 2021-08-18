@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
 import background from "../images/BG_Banner.jpg";
@@ -12,17 +12,17 @@ function Header(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const stickyHeader = React.createRef();
   const logoRef = React.createRef();
-
+  
   useEffect(() => {
     window.addEventListener("scroll", () => handleScroll());
   })
 
   function handleScroll() {
     if(window.scrollY < 50){
-      stickyHeader.current.className = "text-white"
+      stickyHeader.current.className = "text-white navClear"
       logoRef.current.style.filter = "drop-shadow(2px 2px 2px black)"
     }else{
-      stickyHeader.current.className = "navBg"
+      stickyHeader.current.className = "navBg md:px-24"
       logoRef.current.style.filter = "none"
     }
   }
@@ -31,6 +31,7 @@ function Header(props) {
     //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
     <>
       <nav
+        className="text-white"
         ref={stickyHeader}
         style={{
           background: `url(${props.background ? props.background : background}) no-repeat fixed`,
@@ -50,7 +51,7 @@ function Header(props) {
                 to="/"
               >
                 <img
-                  className="img-fluid"
+                  className="logoShadow"
                   src={logo}
                   alt="Defense Unicorns Logo"
                   style={logoStyle}

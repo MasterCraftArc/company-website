@@ -58,13 +58,15 @@ body {
 
 /** NAV **/
 
-nav{
+.navClear{
+  transition: all 0.5s ease-in;
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 80%,
     transparent 100%
     );
     background-image: url("../images/BG_Banner.jpg");
+    color: 'white';
   }
   
 .navBg{
@@ -72,6 +74,11 @@ nav{
   background: white !important;
   mask-image: none;
   border-bottom: 3px solid red;
+}
+
+
+.logoShadow{
+  filter: drop-shadow(2px 2px 2px black);
 }
 
 @media only screen and (min-width: 768px) {
