@@ -18,11 +18,16 @@ function Header(props) {
   })
 
   function handleScroll() {
-    if(window.scrollY < 50){
+    if(props.background){
+      stickyHeader.current.className = "navBg md:px-24 text-blue-900"
+      logoRef.current.style.filter = "none"
+    }
+    else if(window.scrollY < 50){
       stickyHeader.current.className = "text-white navClear"
       logoRef.current.style.filter = "drop-shadow(2px 2px 2px black)"
-    }else{
-      stickyHeader.current.className = "navBg md:px-24"
+    }
+    else{
+      stickyHeader.current.className = "navBg md:px-24 text-blue-900"
       logoRef.current.style.filter = "none"
     }
   }
@@ -34,9 +39,9 @@ function Header(props) {
         className="text-white"
         ref={stickyHeader}
         style={{
-          background: `url(${props.background ? props.background : background}) no-repeat fixed`,
-          backgroundSize: 'cover',
-          backgroundPosition: '0% 1%',
+          // background: `url(${props.background ? props.background : background}) no-repeat fixed`,
+          // backgroundSize: 'cover',
+          // backgroundPosition: '0% 1%',
           zIndex: '100',
           width: "100%",
           top: '0',

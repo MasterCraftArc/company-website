@@ -28,7 +28,7 @@ const Train = () => {
           title="Train"
           description="Become a DevSecOps Hero with Defense Unicorns"
         />
-        <Header className="" background={headerBackground}/>
+        <Header />
         <div style={headerStyle}>
           <HomeHero />
         </div>

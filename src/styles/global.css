@@ -65,7 +65,7 @@ body {
     rgba(0, 0, 0, 1) 80%,
     transparent 100%
     );
-    background-image: url("../images/BG_Banner.jpg");
+    /* background-image: url("../images/BG_Banner.jpg"); */
     color: 'white';
   }
   
