@@ -32,14 +32,14 @@ const TrainForBattle = () => {
           <BattleCard 
             heading="Government" 
             image={aquisitions} 
-            mainText="Intro to DevSecOps"
+            mainText="Attend DevSecOps Training Course"
             cardLink="/training"
           />
 
           <BattleCard 
             heading="All Heroes" 
             image={devSecOps} 
-            mainText="Digital Transformation Content"
+            mainText="Explore Digital Transformation Content"
             cardLink="/equip"
           />   
 
