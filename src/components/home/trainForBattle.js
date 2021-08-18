@@ -1,7 +1,7 @@
 import React from "react";
 import heroes from "../../images/unicornHeroes.png";
-import devSecOps from "../../images/card3.png";
-import aquisitions from "../../images/card2.png";
+import devSecOps from "../../images/home/card3.png";
+import aquisitions from "../../images/home/card2.png";
 import { battleText, TITLE_TEXT } from "./homeStyles";
 import Carousel from "../carousel/carousel";
 import BattleCard from "./card";

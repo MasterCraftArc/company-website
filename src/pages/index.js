@@ -6,7 +6,7 @@ import SiteHelmet from "../components/SiteHelmet";
 import WhoWeAre from "../components/home/whoWeAre";
 import CaseStudies from "../components/home/whatWeDo";
 import TrainForBattle from "../components/home/trainForBattle";
-import headerBackground from "../images/darkMain.jpg";
+import headerBackground from "../images/home/hero.jpg";
 import "../styles/blobz.min.css"
 
 const pageStyles = {

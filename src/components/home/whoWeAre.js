@@ -1,5 +1,5 @@
 import React from "react";
-import whoWeAre from "../../images/whoWeAre.png";
+import whoWeAre from "../../images/home/whoWeAre.png";
 import { TITLE_TEXT } from "./homeStyles";
 import Button from "../button";
 import whoBackground from "../../images/contact.png";

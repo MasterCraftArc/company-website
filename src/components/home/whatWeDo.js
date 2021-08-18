@@ -1,7 +1,7 @@
 import React from "react";
 import { TITLE_TEXT } from "./homeStyles";
-import whatWeDoPng from "../../images/caseStudies.png";
-import keyPoints from "../../images/keyPointsLight.png";
+import whatWeDoPng from "../../images/home/caseStudies.png";
+import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
 
 const CaseStudies = () => {
