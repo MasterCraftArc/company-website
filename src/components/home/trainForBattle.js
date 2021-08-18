@@ -5,16 +5,20 @@ import aquisitions from "../../images/home/card2.png";
 import { battleText, TITLE_TEXT } from "./homeStyles";
 import Carousel from "../carousel/carousel";
 import BattleCard from "./card";
+// import unicorn from "../../images/unicornSingle.png"
+import pin from "../../images/locationPin.png"
 
 const TrainForBattle = () => {
   return (
     <section id="trainForBattle" className="trainForBattle flex flex-col min-h-screen justify-center py-44">
-      <div className="w-3/4 md:w-full mx-auto mt-10">
+      <div className="w-5/6  md:w-full mx-auto mt-10">
         
         <h2
-          className={`${TITLE_TEXT} font-bold mb-5 pl-4 md:pl-16 lg:pl-32 2xl:pl-44`}
+          className={`${TITLE_TEXT} font-bold mb-5 sm:pl-4 md:pl-16 lg:pl-32 2xl:pl-44 flex items-center`}
           style={battleText}
         >
+          {/* <img className="w-1/12" src={unicorn} alt="Unicorn standing on card"/> */}
+          <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/>
           Let us Train you for Battle
         </h2>
         <h3 className="mt-0 mb-32 text-blue-900 text-3xl pl-4 md:pl-16 lg:pl-32 2xl:pl-44">

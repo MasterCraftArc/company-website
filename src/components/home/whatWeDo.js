@@ -3,6 +3,7 @@ import { TITLE_TEXT } from "./homeStyles";
 import whatWeDoPng from "../../images/home/caseStudies.png";
 import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
+import pin from "../../images/locationPin.png"
 
 const CaseStudies = () => {
   return (
@@ -17,7 +18,10 @@ const CaseStudies = () => {
           <img src={whatWeDoPng} className="w-4/5 mx-auto absolute top-10" alt="What we do" />
         </div>
         <div className="flex flex-col justify-center px-10">
-          <h2 className={`${TITLE_TEXT} font-bold text-blue-900`}>What We Do</h2>
+          <h2 className={`${TITLE_TEXT} font-bold text-blue-900 flex items-center`}>
+            <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/> 
+            What We Do
+          </h2>
           <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-3xl xl:pb-16 font-light">
             We make it easier for mission-driven organizations to buy, accredit,
             and integrate software solutions. We provide a secure, open source
