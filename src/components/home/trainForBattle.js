@@ -18,7 +18,7 @@ const TrainForBattle = () => {
     //   backgroundSize: 'cover'
     // }} 
     >
-      <img className="absolute top-11  invisible md:visible" src={unicorn} alt="Unicorn standing on card" style={ {right: '8%', width: '150px', zIndex: '-2'} }/>
+      <img className="absolute top-11  invisible md:visible" src={unicorn} alt="Unicorn standing on card" style={ {right: '14%', width: '150px', zIndex: '-2', paddingTop: '6%'} }/>
 
       <div 
         className="w-5/6  md:w-full mx-auto mt-10 " 
@@ -33,7 +33,7 @@ const TrainForBattle = () => {
           <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/>
           Let us train you for battle
         </h2>
-        <h3 className="mt-0 mb-32 text-blue-900 text-3xl pl-4 md:pl-16 lg:pl-32 2xl:pl-44">
+        <h3 className="mt-0 mb-12 text-blue-900 text-3xl pl-4 md:pl-16 lg:pl-32 2xl:pl-44">
           Whatever your mission, we the have resources to help <br></br>solve your software challenge.
         </h3>
 
