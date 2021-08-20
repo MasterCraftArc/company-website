@@ -25,7 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <div className="metaData" style={metaStyles}>
+        <div className="metaData mt-10" style={metaStyles}>
           <p className="text-2xl mb-2"><span className="font-bold">AUTHOR: </span> {post.frontmatter.author}</p>
           <p className="text-2xl mb-2"><span className="font-bold">DATE: </span> {post.frontmatter.date}</p>
           <p className="text-2xl"><span className="font-bold">CATEGORY: </span> {post.frontmatter.category}</p>

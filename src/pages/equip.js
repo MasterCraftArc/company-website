@@ -16,14 +16,14 @@ const pageStyles = {
 
 const battleText = {
   color: "#14498e",
-  fontWeight: "normal",
+  fontWeight: "500",
 };
 
 const unicornStarStyle = {
   width: '15%',
   position: 'absolute',
   right: '0',
-  top: '300px',
+  top: '250px',
 }
 
 const pinBlueStyle = {
@@ -34,9 +34,10 @@ const pinBlueStyle = {
 }
 const pinBlueStyleTwo = {
   width: '5%',
+  // maxWidth: '10%',
   position: 'absolute',
-  left: '130px',
-  top: '185px',
+  left: '50px',
+  top: '195px',
 }
 
 const Equip = ({ data, location }) => {
@@ -115,50 +116,23 @@ const Equip = ({ data, location }) => {
       </section>
       <section 
       id="latestPosts"  
-      className="latestTrained min-h-screen mt-16 pt-24 overflow-x-scroll md:overflow-auto relative"
+      className="latestTrained min-h-screen mt-16 pt-24 relative"
       >
-        <img className="" src={pinBlue} style={pinBlueStyleTwo}/>
+        <img className="z-10 invisible md:visible" src={pinBlue} style={pinBlueStyleTwo}/>
         <img className="" src={unicornStars} style={unicornStarStyle}
         />
-        <div className="container h-75 mt-16 mx-auto relative">
-          <div className="px-16 sticky top-0 bg-white">
+        <div className="mt-16 mx-auto relative py-16">
+          <div className="md:px-16 sticky top-0 bg-white">
             <h2
-              className="fontTitle text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+              className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16"
               style={battleText}
             >
               Latest Posts
             </h2>
-            <div
-              ref={categoriesRef}
-              className="borderBottom textTab font-black md:pl-0 text-2xl text-bold w-full border-b-2 border-blue-900 mt-16 mb-16"
-            >
-              <button
-                className="pr-4 md:pr-8 text-red-500 cursor-pointer hover:text-red-500"
-                onClick={(event) => updateCards(event)}
-              >
-                All
-              </button>
-              <button
-                className="tabButton pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
-                onClick={(event) => updateCards(event)}
-              >
-                AGILE ACQUISITIONS 
-              </button>
-              <button
-                className="tabButton pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
-                onClick={(event) => updateCards(event)}
-              >
-                DEVSECOPS
-              </button>
-              <button
-                className="tabButton pr-4 md:pr-16 text-gray-400 cursor-pointer hover:text-red-500"
-                onClick={(event) => updateCards(event)}
-              >
-                CONTINUOUS DELIVERY
-              </button>
-            </div>
-          </div>
-          <div className="flex justify-evenly">
+    
+          </div> 
+          
+          <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-11 overflow-x-scroll sm::overflow-auto pb-10">
             {posts.map((post, i) => {
               return (
                 <Card
@@ -167,7 +141,8 @@ const Equip = ({ data, location }) => {
                   category={post.frontmatter.category}
                   title={post.frontmatter.title}
                   description={post.frontmatter.description}
-                  blogLink={`/blog${post.fields.slug}`}
+                  cardLink={`/blog${post.fields.slug}`}
+                  date={post.frontmatter.date}
                 />
               );
             })} 

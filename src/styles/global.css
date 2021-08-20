@@ -57,7 +57,13 @@ body {
 /*******************************************/
 
 /** NAV **/
-
+.navMenu{
+  display: flex;
+  color: white;
+}
+.nav-item li{
+  /* color: white !important; */
+}
 .navClear{
   transition: all 0.5s ease-in;
   mask-image: linear-gradient(
@@ -65,8 +71,7 @@ body {
     rgba(0, 0, 0, 1) 80%,
     transparent 100%
     );
-    /* background-image: url("../images/BG_Banner.jpg"); */
-    color: 'white';
+    color: white !important;
   }
   
 .navBg{
@@ -74,6 +79,7 @@ body {
   background: white !important;
   mask-image: none;
   border-bottom: 3px solid red;
+  color: ring-blue-900 !important;
 }
 
 
@@ -170,7 +176,7 @@ body {
 }
 
 .card {
-  background-color: white;
+  /* background-color: white; */
   /* border: 1px solid rgb(80, 249, 255);
   border-radius: 30px; */
 }
@@ -189,7 +195,7 @@ body {
 
 /* Latest Trained */
 .latestTrained {
-  height: 70vh;
+  min-height: 70vh;
   width: 100vw;
   background-color: transparent;
   padding-left: 15%;
@@ -275,11 +281,6 @@ body {
   font-family: Poppins;
 }
 
-.borderRadius {
-  border-radius: 37px;
-  border: 2px solid #8ff3f3;
-}
-
 .card-img-top {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
@@ -288,8 +289,12 @@ body {
 
 .readLink {
   margin-right: 44%;
+  color: #f8f6f6;
 }
 
+.cardImg{
+
+}
 .blogCard {
   padding-bottom: 15%;
 }
@@ -359,12 +364,8 @@ body {
 /*** Blog Posts **/
 .postHeader {
   height: 40vh;
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 60%,
-    transparent 100%
-  );
 }
+
 .postHeaderContainer {
   height: 100%;
   background: url(../images/postBanner.jpg) no-repeat;
@@ -374,6 +375,7 @@ body {
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
+
 }
 
 /* FOOTER */
@@ -400,7 +402,7 @@ body {
 /* ADDITIONAL STYLES
 /*******************************************/
 
-.border {
+.blackBorder {
   border: 2px solid black;
 }
 

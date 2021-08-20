@@ -1,14 +1,14 @@
-import { Link } from "gatsby";
+import { navigate } from "gatsby";
 import * as React from "react";
 
 const trainedCardStyle = {
-  width: "274px",
-  Height: "412px",
-  border: "2px solid #8ff3f3",
+  width: "305px",
+  height: "420px",
+  backgroundColor: "#F3F3F3",
 };
 
 const trainedCardText = {
-  fontSize: "13px",
+  fontSize: "12px",
   width: "87%",
   paddingTop: "5%",
   marginTop: "auto",
@@ -16,41 +16,40 @@ const trainedCardText = {
 };
 
 const trainedCardTitle = {
-  fontSize: "14px",
-  color: "black",
-};
-
-const trainedCardLink = {
-  color: "red",
-  textDecoration: "underline",
+  fontSize: "15px",
 };
 
 const Card = React.forwardRef((props, ref) => (
   <div
     ref={ref}
-    className="borderRadius card border-2 border-solid border rounded-lg"
+    className="borderRadius card rounded-2xl md:mx-16 mt-10 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
     style={trainedCardStyle}
     data-category={props.category}
+    onClick={ () => {navigate(props.cardLink)} } onKeyDown={ () => {navigate(props.cardLink)} }
   >
-    <img
-      src={props.imgDisplay}
-      className="card-img-top mx-auto"
-      alt="blogpost thumbnail"
-      style={{ maxHeight: "170px" }}
-    />
-    <div className="blogCard card-body text-center">
-      <div className="w-1/3 mx-auto bg-red-500 mr-0 text-white">
+    <div 
+      className="h-3/6 bg-gray-50"
+    >
+      <img
+        src={props.imgDisplay}
+        className="card-img-top mx-auto h-full"
+        alt="blogpost thumbnail"
+        // style={{ maxHeight: "170px" }}
+      />
+    </div>
+    <div className="h-2/6 card-body text-center p-5">
+      <div className="w-3/5 mx-auto bg-blue-900 mr-0 text-white">
         {props.category}
       </div>
-      <h5 className="card-title mt-3 mb-3 text-left ml-8" style={trainedCardTitle}>
+      <h3 className="card-title mt-2 mb-3 text-left ml-8 font-bold text-blue-900" style={trainedCardTitle}>
         {props.title}
-      </h5>
-      <p className="card-text pb-2 text-gray-500 text-left ml-8 mt-8" style={trainedCardText}>
+      </h3>
+      <h4 className="mt-2 mb-3 text-left ml-8 text-gray-500">
+        {props.date}
+      </h4>
+      <p className="card-text pb-2 text-gray-500 text-left ml-8 md:mt-5" style={trainedCardText}>
         {props.description}
       </p>
-      <Link to={props.blogLink} style={trainedCardLink} className="readLink pt-2 text-left pr-10">
-        READ MORE
-      </Link>
     </div>
   </div>
 ));

@@ -27,12 +27,11 @@ const Layout = ({ location, title, post, children }) => {
   return (
     <div className="blogPage w-full" data-is-root-path={isRootPath}>
       <GlobalStyle />
-      {/* <header className="global-header blogPage">{header}</header> */}
-      <header className="postHeader">
-        <div className="postHeaderContainer">
+      <header className="postHeader ">
+        <div className="postHeaderContainer flex items-end pb-16">
           <Header/>
-          <div className="w-3/4 mx-auto flex items-center">
-            <h1 className="text-3xl sm:text-3xl md:text-5xl align-middle xl:text-6xl font-bold text-white sm:pr-10">{post.frontmatter.title}</h1>
+          <div className="w-3/4 mx-auto flex">
+            <h1 className="text-3xl sm:text-3xl md:text-5xl align-bottom xl:text-6xl font-bold text-white sm:pr-10 m-0 mt-10">{post.frontmatter.title}</h1>
           </div>
         </div>
       </header>
@@ -280,7 +279,7 @@ table thead tr th {
 /* Link */
 
 a {
-  color: var(--color-primary);
+
 }
 
 a:hover,

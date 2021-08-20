@@ -18,15 +18,15 @@ function Header(props) {
 
   function handleScroll() {
     if(props.background){
-      stickyHeader.current.className = "navBg md:px-24 text-blue-900"
+      stickyHeader.current.className = "navBg md:px-24"
       logoRef.current.style.filter = "none"
     }
     else if(window.scrollY < 50){
-      stickyHeader.current.className = "text-white navClear"
+      stickyHeader.current.className = "navClear"
       logoRef.current.style.filter = "drop-shadow(2px 2px 2px black)"
     }
     else{
-      stickyHeader.current.className = "navBg md:px-24 text-blue-900"
+      stickyHeader.current.className = "navBg md:px-24"
       logoRef.current.style.filter = "none"
     }
   }
@@ -38,9 +38,6 @@ function Header(props) {
         className="text-white"
         ref={stickyHeader}
         style={{
-          // background: `url(${props.background ? props.background : background}) no-repeat fixed`,
-          // backgroundSize: 'cover',
-          // backgroundPosition: '0% 1%',
           zIndex: '100',
           width: "100%",
           top: '0',
@@ -77,7 +74,7 @@ function Header(props) {
               }
               id="example-navbar-danger"
             >
-              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+              <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 text-blue-900">
                 <li className="nav-item">
                   <Link
                     className="px-3 text-xl uppercase hover:text-red-600"

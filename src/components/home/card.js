@@ -6,6 +6,7 @@ const cardStyle = {
     height: "450px",
     borderRadius: "25px",
     backgroundColor: "#F3F3F3",
+  
   };
   
   const cardTitle = {
@@ -23,7 +24,8 @@ const BattleCard = (props) => {
         <div className="flex" aria-hidden="true" onClick={ () => {navigate(props.cardLink)} } onKeyDown={ () => {navigate(props.cardLink)} }>
             
           <div
-          className="card flex flex-col justify-evenly mx-auto p-12"
+          className="card 
+          flex flex-col justify-evenly mx-auto p-12"
           style={cardStyle}
           >
             <div className="flex justify-center items-center w-full">
