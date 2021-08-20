@@ -22,7 +22,7 @@ const CaseStudies = () => {
         <div className="flex flex-col justify-center px-10">
           <h2 className={`${TITLE_TEXT} font-bold text-blue-900 flex items-center`}>
             <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/> 
-            What We Do
+            What we do
           </h2>
           <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-xl xl:pb-16 font-light">
             We make it easier for mission-driven organizations to buy, accredit,
