@@ -6,7 +6,8 @@ import SiteHelmet from "../components/SiteHelmet";
 import WhoWeAre from "../components/home/whoWeAre";
 import CaseStudies from "../components/home/whatWeDo";
 import TrainForBattle from "../components/home/trainForBattle";
-import headerBackground from "../images/BG_Banner.jpg";
+import headerBackground from "../images/home/hero.jpg";
+import "../styles/blobz.min.css"
 
 const pageStyles = {
   color: "#232129",
@@ -20,24 +21,14 @@ const headerStyle = {
 };
 
 // markup
-class Train extends React.Component {
-
-  handleScroll(e) {
-    console.log('scrolling')
-    const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-    if (bottom) { 
-      console.log('bottom!')
-     }
-  }
-
-  render(){
+const Train = () => {
     return (
-      <div style={pageStyles} className="home flex flex-col bg-top" onScroll={(e) => this.handleScroll(e)}>
+      <div style={pageStyles} className="home flex flex-col bg-top">
         <SiteHelmet
           title="Train"
           description="Become a DevSecOps Hero with Defense Unicorns"
         />
-        <Header textColor="white" className="" />
+        <Header />
         <div style={headerStyle}>
           <HomeHero />
         </div>
@@ -47,7 +38,7 @@ class Train extends React.Component {
         <Footer></Footer>
       </div>
     );
-  }
+
 };
 
 export default Train;

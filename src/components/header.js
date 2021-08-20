@@ -1,32 +1,53 @@
-import * as React from "react";
+import React, { useEffect } from 'react';
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
-import background from "../images/BG_Banner.jpg";
 
 const logoStyle = {
   maxWidth: "16vh",
-  filter: "drop-shadow(2px 2px 2px black)",
 };
 
-const navbarStyle = {
-  // boxShadow: "0 0 20px rgba(38, 18, 117, 0.2)",       
-};
 
 function Header(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const stickyHeader = React.createRef();
+  const logoRef = React.createRef();
+  
+  useEffect(() => {
+    window.addEventListener("scroll", () => handleScroll());
+  })
+
+  function handleScroll() {
+    if(props.background){
+      stickyHeader.current.className = "navBg md:px-24 text-blue-900"
+      logoRef.current.style.filter = "none"
+    }
+    else if(window.scrollY < 50){
+      stickyHeader.current.className = "text-white navClear"
+      logoRef.current.style.filter = "drop-shadow(2px 2px 2px black)"
+    }
+    else{
+      stickyHeader.current.className = "navBg md:px-24 text-blue-900"
+      logoRef.current.style.filter = "none"
+    }
+  }
+
   return (
     //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
     <>
       <nav
-        className="fixed top-0 z-100 w-full"
+        className="text-white"
+        ref={stickyHeader}
         style={{
-          background: `url(${props.background ? props.background : background}) no-repeat fixed`,
-          backgroundSize: 'cover',
-          backgroundPosition: '0% 1%',
-          zIndex: 100,
+          // background: `url(${props.background ? props.background : background}) no-repeat fixed`,
+          // backgroundSize: 'cover',
+          // backgroundPosition: '0% 1%',
+          zIndex: '100',
+          width: "100%",
+          top: '0',
+          position: 'fixed',
         }}
       >
-        <div className="w-full" style={navbarStyle}>
+        <div className="w-full">
           <div className="flex flex-wrap items-center justify-between mx-16">
             <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
               <Link
@@ -34,14 +55,15 @@ function Header(props) {
                 to="/"
               >
                 <img
-                  className="img-fluid"
+                  className="logoShadow"
                   src={logo}
                   alt="Defense Unicorns Logo"
                   style={logoStyle}
+                  ref={logoRef}
                 />
               </Link>
               <button
-                className="text-white cursor-pointer text-4xl leading-none px-1 py-0 outline-none rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                className="text-white cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                 type="button"
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
@@ -58,7 +80,7 @@ function Header(props) {
               <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                 <li className="nav-item">
                   <Link
-                    className="px-3  text-xl  uppercase text-black lg:text-white hover:text-red-600"
+                    className="px-3 text-xl uppercase hover:text-red-600"
                     to="/"
                   >
                     <span className="ml-2">Train</span>
@@ -67,14 +89,14 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/equip"
-                    className="text-xl flex uppercase text-black lg:text-white hover:text-red-600"
+                    className="text-xl flex uppercase hover:text-red-600"
                   >
                     <span className="ml-5">Equip</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3  text-xl  uppercase text-black lg:text-white hover:text-red-600"
+                    className="px-3 text-xl uppercase hover:text-red-600"
                     to="/contact"
                   >
                     <span className="ml-2">Contact</span>

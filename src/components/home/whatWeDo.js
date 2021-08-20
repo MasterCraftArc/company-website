@@ -1,19 +1,25 @@
 import React from "react";
 import { TITLE_TEXT } from "./homeStyles";
-import whatWeDoPng from "../../images/caseStudies.png";
-import keyPoints from "../../images/keyPointsLight.png";
+import whatWeDoPng from "../../images/home/caseStudies.png";
+import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
+
 
 const CaseStudies = () => {
   return (
-    <section className="h-screen flex items-center justify-center w-full md:my-0 my-16">
+    <section className="whoWeAre h-screen flex items-center justify-center w-full md:my-0 my-16">
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
-        <div className="p-16 pt-0 lg:hidden block object-cover">
-          <img src={whatWeDoPng} className="w-4/5 mx-auto" alt="Who we are" />
+        <div className="p-16 pt-0 lg:hidden block relative">
+          <div className="tk-blob mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317.5 353.7">
+              <path d="M291.8 55.3c30.4 39.9 30.7 102 17 160.4-13.8 58.3-41.6 112.9-84 130.9s-99.3-.6-137-30C50.2 287.1 32 246.9 17 200.5 2.1 154.1-9.6 101.4 11.5 63.6 32.6 25.8 86.6 2.8 143.8.2c57.2-2.6 117.6 15.2 148 55.1z"></path>
+            </svg>
+          </div>
+          <img src={whatWeDoPng} className="w-4/5 mx-auto absolute top-10" alt="What we do" />
         </div>
         <div className="flex flex-col justify-center px-10">
-          <h2 className={TITLE_TEXT}>What We Do</h2>
-          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-8 text-3xl xl:pb-16 font-light">
+          <h2 className={`${TITLE_TEXT} font-bold text-blue-900`}>What We Do</h2>
+          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-3xl xl:pb-16 font-light">
             We make it easier for mission-driven organizations to buy, accredit,
             and integrate software solutions. We provide a secure, open source
             and infrastructure agnostic DevSecOps platform while continuously
@@ -30,13 +36,18 @@ const CaseStudies = () => {
           <div className="pt-7">
             <Button
               linkTo="/contact"
-              className="bg-transparent border-blue-900 border-2 border-solid hover:bg-blue-900 text-blue-900 hover:text-white"
+              className="bg-red-500 text-white hover:text-white hover:font-bold hover:bg-red-700"
               text="Contact Us"
             />
           </div>
         </div>
-        <div className="p-16 pt-0 lg:block hidden object-cover">
-          <img src={whatWeDoPng} className="" alt="Who we are" />
+        <div className="p-16 pt-0 lg:block hidden relative">
+          <div className="blob tk-blob heavy">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317.5 353.7">
+              <path d="M291.8 55.3c30.4 39.9 30.7 102 17 160.4-13.8 58.3-41.6 112.9-84 130.9s-99.3-.6-137-30C50.2 287.1 32 246.9 17 200.5 2.1 154.1-9.6 101.4 11.5 63.6 32.6 25.8 86.6 2.8 143.8.2c57.2-2.6 117.6 15.2 148 55.1z"></path>
+            </svg>
+          </div>
+          <img src={whatWeDoPng} className="absolute top-10" alt="Who we are" />
         </div>
       </div>
     </section>

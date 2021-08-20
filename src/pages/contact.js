@@ -11,6 +11,7 @@ import contactBg from "../images/contact.png"
 
 const textAreaStyle = {
   height: "200px",
+  color: "rgb(94,110,129)",
 };
 
 const formContainer = {
@@ -56,17 +57,17 @@ class Contact extends React.Component {
             <Header background={contactBg}/>
           <main className="contact min-h-screen w-full flex items-center justify-center">
               <section
-                className="rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mt-10 bg-white bg-opacity-70"
+                className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mt-10 opacity-90"
                 style={formContainer }
               >
-                <h1 className="text-center pt-5 sm:pt-7 md:pt-10 mb-3 font-bold text-5xl text-red-500">
+                <h1 className="text-center pt-5 sm:pt-7 md:pt-10 mb-3 font-black text-5xl text-white">
                   Get in touch!
                 </h1>
                 <div className=" w-9/12 h-full mx-auto py-2 sm:pt-0 border-dark flex justify-between">
                   <form
                     red={this.domRef}
                     data-netlify="true"
-                    className="w-full h-5/6 flex flex-col justify-evenly"
+                    className="contactHeight w-full flex flex-col justify-evenly"
                     name="Contact"
                     onSubmit={(event) => this.handleSubmit(event)}
                   >
@@ -80,19 +81,19 @@ class Contact extends React.Component {
                       <input
                         ref="firstName"
                         name="firstName"
-                        className="form-control w-full mb-5"
+                        className="form-control w-full mb-5 text-gray-500"
                         placeholder="First Name"
                       ></input>
                       <input
                         ref="lastName"
                         name="lastName"
-                        className="form-control w-full mb-5"
+                        className="form-control w-full mb-5 text-gray-500"
                         placeholder="Last Name"
                       ></input>
                       <input
                         ref="emailAddress"
                         name="emailAddress"
-                        className="form-control w-full"
+                        className="form-control w-full text-gray-500"
                         placeholder="Email"
                         type="email"
                         id="exampleInputEmail1"
@@ -101,7 +102,7 @@ class Contact extends React.Component {
                     <textarea
                       ref="message"
                       name="message"
-                      className="m-0 w-100 mt-2 form-control bg-transparent"
+                      className="m-0 w-100 mt-2 form-control bg-transparent text-gray-500"
                       placeholder="Hi, fellow unicorn here! I'm really excited to talk about..."
                       style={textAreaStyle}
                     ></textarea>

@@ -57,15 +57,28 @@ body {
 /*******************************************/
 
 /** NAV **/
-nav{
+
+.navClear{
+  transition: all 0.5s ease-in;
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 80%,
     transparent 100%
-  );
-  /* background-color: inherit; */
-  /* mask-image: image(url("../images/BG_Banner.jpg"), transparent 100%) */
-  background-image: url("../images/BG_Banner.jpg");
+    );
+    /* background-image: url("../images/BG_Banner.jpg"); */
+    color: 'white';
+  }
+  
+.navBg{
+  transition: all 0.5s ease-in;
+  background: white !important;
+  mask-image: none;
+  border-bottom: 3px solid red;
+}
+
+
+.logoShadow{
+  filter: drop-shadow(2px 2px 2px black);
 }
 
 @media only screen and (min-width: 768px) {
@@ -156,14 +169,6 @@ nav{
   margin-bottom: '25%';
 }
 
-/* .hero h1,
-.heroText {
-  /* color: white; */
-  /* @apply text-7xl; */
-  /* font-size: 5vw; */
-  /* padding-left: 5vw; */
-/* }  */
-
 .card {
   background-color: white;
   /* border: 1px solid rgb(80, 249, 255);
@@ -171,11 +176,11 @@ nav{
 }
 
 
-.card-img-top {
+/* .card-img-top { */
     /* border-radius: 30px;
     border-bottom-left-radius: initial;
     border-bottom-right-radius: initial; */
-}
+/* } */
 
 /* .w-1\/2 {
   width: 41%;
@@ -189,6 +194,18 @@ nav{
   background-color: transparent;
   padding-left: 15%;
   padding-right: 15%;
+}
+
+
+/* WHO WE ARE SECTION */
+
+.blog {
+  color: rgb(25,76,142);
+}
+
+.whoWeAre {
+  padding-top: 22%;
+  padding-bottom: 15%;
 }
 
 /* Blog Tiles/Blog Page */
@@ -279,8 +296,23 @@ nav{
   margin-top: 10%;
 }
 
+/* .uniCorn {
+  position: absolute;
+    left: 86%;
+    top: 240%;
+    width: 12%;
+} */
+
 
 /* Contact */
+
+.contactCard {
+  background-color: rgb(13,51,100);
+}
+
+.contactHeight {
+  height: "90%"
+}
 
 .contact input {
   height: 48px;
@@ -368,24 +400,11 @@ nav{
   border: 2px solid black;
 }
 
-.trainForBattle .card {
-  background: linear-gradient(-45deg, #12cbc4, #9441fa);
-}
-
 .trainForBattle .card:hover {
   background: #fff;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  /* font-weight: bold; */
+  box-shadow: 0px 0px 10px rgba(218, 163, 163, 0.5);
   color: white;
   font-weight: bold;
-  background: linear-gradient(-45deg, #3f3d56, #9441fa, #12cbc4, #e92efb);
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
   cursor: pointer;
 }
 

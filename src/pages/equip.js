@@ -11,12 +11,10 @@ import pinBlue from "../images/pinBlue.png";
 
 const pageStyles = {
   color: "black",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
   width: "100vw",
 };
 
 const battleText = {
-  // color: "#84b9ff", //for black background
   color: "#14498e",
   fontWeight: "normal",
 };
@@ -26,7 +24,6 @@ const unicornStarStyle = {
   position: 'absolute',
   right: '0',
   top: '300px',
-
 }
 
 const pinBlueStyle = {
@@ -44,9 +41,8 @@ const pinBlueStyleTwo = {
 
 const Equip = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes;
-  console.log(posts.length);
   let cardRefs = [];
-  let categoriesRef = React.createRef();
+  const categoriesRef = React.createRef();
   for (let i = 0; i < posts.length; i++) {
     cardRefs[i] = React.createRef();
   }
@@ -164,7 +160,6 @@ const Equip = ({ data, location }) => {
           </div>
           <div className="flex justify-evenly">
             {posts.map((post, i) => {
-              console.log(post);
               return (
                 <Card
                   imgDisplay={post.frontmatter.image.childImageSharp.fluid.src}
