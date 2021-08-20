@@ -197,7 +197,7 @@ body {
 }
 
 
-/* WHO WE ARE SECTION */
+/* WHAT WE DO SECTION */
 
 .blog {
   color: rgb(25,76,142);
@@ -205,12 +205,9 @@ body {
 
 .whatWeDo {
   padding-top: 35%;
-  padding-bottom: 35%;
+  padding-bottom: 30%;
 }
 
-.imagePlain {
-  padding-top: 50%;
-}
 
 /* Blog Tiles/Blog Page */
 /* h5 {
