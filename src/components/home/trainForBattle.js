@@ -34,7 +34,7 @@ const TrainForBattle = () => {
           Let us train you for battle
         </h2>
         <h3 className="mt-0 mb-32 text-blue-900 text-3xl pl-4 md:pl-16 lg:pl-32 2xl:pl-44">
-          Whatever your mission, we the have resources to help solve your software challenge.
+          Whatever your mission, we the have resources to help <br></br>solve your software challenge.
         </h3>
 
         <Carousel>
