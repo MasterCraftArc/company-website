@@ -1,13 +1,15 @@
 import React from "react";
 import { TITLE_TEXT } from "./homeStyles";
-import whatWeDoPng from "../../images/home/caseStudies.png";
+import whatWeDoPng from "../../images/home/whatWeDo.png";
 import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
+import pin from "../../images/locationPin.png"
+import unicornStars from "../../images/unicornStars.png"
 
 
 const CaseStudies = () => {
   return (
-    <section className="whoWeAre h-screen flex items-center justify-center w-full md:my-0 my-16">
+    <section className="whatWeDo h-screen flex items-center justify-center w-full md:my-0 my-16 relative">
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="p-16 pt-0 lg:hidden block relative">
           <div className="tk-blob mx-auto">
@@ -15,10 +17,13 @@ const CaseStudies = () => {
               <path d="M291.8 55.3c30.4 39.9 30.7 102 17 160.4-13.8 58.3-41.6 112.9-84 130.9s-99.3-.6-137-30C50.2 287.1 32 246.9 17 200.5 2.1 154.1-9.6 101.4 11.5 63.6 32.6 25.8 86.6 2.8 143.8.2c57.2-2.6 117.6 15.2 148 55.1z"></path>
             </svg>
           </div>
-          <img src={whatWeDoPng} className="w-4/5 mx-auto absolute top-10" alt="What we do" />
+          <img src={whatWeDoPng} className="imagePlain w-4/5 mx-auto absolute top-10" alt="What we do" />
         </div>
         <div className="flex flex-col justify-center px-10">
-          <h2 className={`${TITLE_TEXT} font-bold text-blue-900`}>What We Do</h2>
+          <h2 className={`${TITLE_TEXT} font-bold text-blue-900 flex items-center`}>
+            <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/> 
+            What We Do
+          </h2>
           <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-3xl xl:pb-16 font-light">
             We make it easier for mission-driven organizations to buy, accredit,
             and integrate software solutions. We provide a secure, open source
@@ -50,6 +55,8 @@ const CaseStudies = () => {
           <img src={whatWeDoPng} className="absolute top-10" alt="Who we are" />
         </div>
       </div>
+
+      <img className="absolute bottom-11  invisible md:visible" src={unicornStars} alt="Unicorn standing on card" style={ {right: '8%', width: '200px', zIndex: '-2'} }/>
     </section>
   );
 };
