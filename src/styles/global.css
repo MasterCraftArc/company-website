@@ -59,10 +59,14 @@ body {
 /** NAV **/
 .navMenu{
   display: flex;
-  color: white;
+  color: inherit;
 }
-.nav-item li{
-  /* color: white !important; */
+
+.nav-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 .navClear{
   transition: all 0.5s ease-in;
@@ -71,7 +75,7 @@ body {
     rgba(0, 0, 0, 1) 80%,
     transparent 100%
     );
-    color: white !important;
+    color: white;
   }
   
 .navBg{
@@ -79,7 +83,6 @@ body {
   background: white !important;
   mask-image: none;
   border-bottom: 3px solid red;
-  color: ring-blue-900 !important;
 }
 
 

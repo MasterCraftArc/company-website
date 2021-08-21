@@ -13,6 +13,7 @@ function Header(props) {
   const logoRef = React.createRef();
   
   useEffect(() => {
+    stickyHeader.current.className = "navClear"
     window.addEventListener("scroll", () => handleScroll());
   })
 
@@ -35,8 +36,8 @@ function Header(props) {
     //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
     <>
       <nav
-        className="text-white"
-        ref={stickyHeader}
+        className=""
+        
         style={{
           zIndex: '100',
           width: "100%",
@@ -44,7 +45,7 @@ function Header(props) {
           position: 'fixed',
         }}
       >
-        <div className="w-full">
+        <div className="w-full" ref={stickyHeader}>
           <div className="flex flex-wrap items-center justify-between mx-16">
             <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
               <Link
@@ -74,13 +75,13 @@ function Header(props) {
               }
               id="example-navbar-danger"
             >
-              <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 text-blue-900">
+              <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 ">
                 <li className="nav-item">
                   <Link
                     className="px-3 text-xl uppercase hover:text-red-600"
                     to="/"
                   >
-                    <span className="ml-2">Train</span>
+                    <span className="mt-2 ml-2 ">Train</span>
                   </Link>
                 </li>
                 <li className="nav-item">

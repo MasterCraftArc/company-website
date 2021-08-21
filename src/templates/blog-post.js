@@ -38,7 +38,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <hr />
       </article>
       <div className="flex flex-col justify-center items-center">
-        <img className="w-1/6 mx-auto mt-24 pr-12" src={unicorn} alt="Unicorn with multicolored star trail"></img>
+        <img className="w-1/6 mx-auto mt-24" src={unicorn} alt="Unicorn with multicolored star trail"></img>
         <Button linkTo="/equip" className=" bg-red-500 hover:bg-red-700 text-white mr-5 mb-5" text="See More" />
       </div>
 

@@ -132,7 +132,7 @@ const Equip = ({ data, location }) => {
     
           </div> 
           
-          <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-11 overflow-x-scroll sm::overflow-auto pb-10">
+          <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-11 pb-10">
             {posts.map((post, i) => {
               return (
                 <Card
