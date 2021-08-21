@@ -24,12 +24,12 @@ const WhoWeAre = () => {
             alt="unicorn under magnifying glass"
           />
         </div>
-        <div className="flex flex-col justify-center px-10 text-white ">
+        <div className="flex flex-col justify-center px-20 text-white">
           <h2 className={`${TITLE_TEXT} font-bold flex items-center`}>
             <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/>
             Who we are
           </h2>
-          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-5 text-3xl xl:pb-16 font-light">
+          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-5 text-xl xl:pb-16 font-light">
             We are innovators, software engineers, and veterans with decades of
             experience delivering technology programs across DoD and the broader
             federal market. Defense Unicorns exists to accelerate the impact of
