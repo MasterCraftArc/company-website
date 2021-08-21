@@ -12,12 +12,12 @@ const CaseStudies = () => {
     <section className="py-48 flex items-center justify-center w-full md:my-0 my-16 relative">
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="order-2 p-16 pt-0 relative">
-          <div className="tk-blob mx-auto">
+          <div className="tk-blob">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317.5 353.7">
               <path d="M291.8 55.3c30.4 39.9 30.7 102 17 160.4-13.8 58.3-41.6 112.9-84 130.9s-99.3-.6-137-30C50.2 287.1 32 246.9 17 200.5 2.1 154.1-9.6 101.4 11.5 63.6 32.6 25.8 86.6 2.8 143.8.2c57.2-2.6 117.6 15.2 148 55.1z"></path>
             </svg>
           </div>
-          <img src={whatWeDoPng} className="object-contain object-center max-w-full mx-auto absolute -top-5" alt="What we do"/>
+          <img src={whatWeDoPng} className="blobTop max-w-full pb-24" alt="What we do"/>
         </div>
         <div className="flex flex-col justify-center px-10">
           <h2 className={`${TITLE_TEXT} font-bold text-blue-900 flex items-center`}>
