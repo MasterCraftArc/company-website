@@ -8,7 +8,7 @@ import pin from "../../images/locationPin.png"
 const WhoWeAre = () => {
   return (
     <section
-      className="min-h-screen flex items-center justify-center w-full md:my-0 my-16"
+      className="min-h-screen flex items-center justify-center w-full md:my-0 my-16 py-10 md:py-0"
       style={{ background: `url(${whoBackground}) fixed no-repeat`, backgroundSize: 'cover' }}
     >
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
@@ -25,7 +25,7 @@ const WhoWeAre = () => {
           />
         </div>
         <div className="flex flex-col justify-center px-20 text-white">
-          <h2 className={`${TITLE_TEXT} font-bold flex items-center`}>
+          <h2 className={`text-4xl md:text-5xl xl:text-6xl font-bold flex items-center`}>
             <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/>
             Who we are
           </h2>

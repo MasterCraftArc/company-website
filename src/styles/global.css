@@ -288,8 +288,6 @@ body {
 }
 
 .card-img-top {
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
   width: fit-content;
 }
 

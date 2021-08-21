@@ -28,11 +28,11 @@ const Card = React.forwardRef((props, ref) => (
     onClick={ () => {navigate(props.cardLink)} } onKeyDown={ () => {navigate(props.cardLink)} }
   >
     <div 
-      className="h-3/6 bg-gray-50"
+      className="h-3/6 bg-gray-50 overscroll-auto"
     >
       <img
         src={props.imgDisplay}
-        className="card-img-top mx-auto h-full"
+        className="card-img-top mx-auto h-full w-full py-2"
         alt="blogpost thumbnail"
         // style={{ maxHeight: "170px" }}
       />

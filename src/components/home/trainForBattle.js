@@ -18,7 +18,7 @@ const TrainForBattle = () => {
     //   backgroundSize: 'cover'
     // }} 
     >
-      <img className="absolute top-11  invisible md:visible" src={unicorn} alt="Unicorn standing on card" style={ {right: '14%', width: '150px', zIndex: '-2', paddingTop: '6%'} }/>
+      <img className="absolute top-7  invisible md:visible" src={unicorn} alt="Unicorn standing on card" style={ {right: '14%', width: '150px', zIndex: '-2', paddingTop: '6%'} }/>
 
       <div 
         className="w-5/6  md:w-full mx-auto mt-10 " 
