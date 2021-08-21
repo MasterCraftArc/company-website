@@ -28,7 +28,7 @@ const Card = React.forwardRef((props, ref) => (
     onClick={ () => {navigate(props.cardLink)} } onKeyDown={ () => {navigate(props.cardLink)} }
   >
     <div 
-      className="h-3/6 bg-gray-50 overscroll-auto"
+      className="h-3/6 bg-gray-50 w-full"
     >
       <img
         src={props.imgDisplay}
