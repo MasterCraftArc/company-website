@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import verticalLogo from "../images/logo-vertical.png";
 import footerBackground from "../images/footer.png";
@@ -8,8 +8,8 @@ const footerStyle = {
   justifyContent: "space-between",
   alignItems: "center",
   background: `url(${footerBackground}) no-repeat`,
-  backgroundSize: 'cover',
-  height: '50vh',
+  backgroundSize: "cover",
+  height: "50vh",
 };
 
 const logoStyle = {
@@ -37,15 +37,17 @@ const menu = {
   marginTop: "10px",
 };
 
-function Footer({ background, contact }) {
+function Footer({ background }) {
+  const showBackground = background === undefined ? true : background;
+
   return (
     <footer
-      className={`${ background ? "footerBg" : contact ? "pl-16" : "" }`}
-      style={footerStyle}
+      style={{
+        ...footerStyle,
+        background: showBackground ? footerStyle.background : "",
+      }}
     >
-      <div
-        className="container md:h-3/6 flex md:flex-row flex-col mr-7 mx-auto"
-      >
+      <div className="container md:h-3/6 flex md:flex-row flex-col mr-7 mx-auto">
         <div className="flex flex-col md:w-2/5 xs:w-full">
           <div className="flex md:flex-row flex-col h-4/6 xs:w-full">
             <div className="w-full">

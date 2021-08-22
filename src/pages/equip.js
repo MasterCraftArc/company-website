@@ -1,13 +1,13 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { motion } from "framer-motion";
-import SiteHelmet from "../components/SiteHelmet";
-import Header from "../components/header";
-import Card from "../components/card";
-import Footer from "../components/footer";
 import pin from "../images/pin.png";
-import unicornStars from "../images/unicornStars.png";
+import Card from "../components/card";
+import { motion } from "framer-motion";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import pinBlue from "../images/pinBlue.png";
+import SiteHelmet from "../components/SiteHelmet";
+import unicornStars from "../images/unicornStars.png";
 
 const pageStyles = {
   color: "black",
@@ -20,65 +20,41 @@ const battleText = {
 };
 
 const unicornStarStyle = {
-  width: '15%',
-  position: 'absolute',
-  right: '0',
-  top: '250px',
-}
+  width: "15%",
+  position: "absolute",
+  right: "0",
+  top: "250px",
+};
 
 const pinBlueStyle = {
-  width:'5%',
-  position: 'absolute',
-  right: '52px',
-
-}
+  width: "5%",
+  position: "absolute",
+  right: "52px",
+};
 const pinBlueStyleTwo = {
-  width: '5%',
+  width: "5%",
   // maxWidth: '10%',
-  position: 'absolute',
-  left: '50px',
-  top: '195px',
-}
+  position: "absolute",
+  left: "50px",
+  top: "195px",
+};
 
-const Equip = ({ data, location }) => {
+const Equip = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
-  let cardRefs = [];
-  const categoriesRef = React.createRef();
-  for (let i = 0; i < posts.length; i++) {
-    cardRefs[i] = React.createRef();
-  }
-
-  function updateCards(event) {
-    if (event.target.innerText === "All") {
-      cardRefs.forEach((card) => {
-        card.current.style.display = "block";
-      });
-    } else {
-      for (let i = 0; i < posts.length; i++) {
-        if (cardRefs[i].current.dataset.category === event.target.innerText) {
-          cardRefs[i].current.style.display = "block";
-        } else {
-          cardRefs[i].current.style.display = "none";
-        }
-      }
-    }
-
-    categoriesRef.current.childNodes.forEach((child) => {
-      child.style.color = "#9CA3AF";
-      child.style.fontWeight = "normal";
-    });
-    event.target.style.color = "#EF4444";
-    event.target.style.fontWeight = "bold";
-  }
+  const cardRefs = posts.map(() => React.createRef());
 
   return (
     <div className="h-screen equip blog" style={pageStyles}>
-      <SiteHelmet title="Equip" description="Defense Unicorns Blog"/>
+      <SiteHelmet title="Equip" description="Defense Unicorns Blog" />
       <Header />
       <section className="hero flex flex-col justify-center">
-        <div className="pb-8 h-full flex flex-col justify-center" style={{ color: "red" }}>
-        <p className="pinGlow  pb-8 text-white md:text-6xl text-5xl flex items-end align-bottom font-bold">
-           <img src={pin} className="w-32 pt-12"/> The Defense Unicorns Blog
+        <div
+          className="pb-8 h-full flex flex-col justify-center"
+          style={{ color: "red" }}
+        >
+          <p className="pinGlow  pb-8 text-white md:text-6xl text-5xl flex items-end align-bottom font-bold">
+            <img alt="Doug Pin" src={pin} className="w-32 pt-12" /> The Defense
+            Unicorns Blog
           </p>
           <div className="flex md:flex-row flex-col md:text-5xl text-4xl">
             <p className="pb-8 pl-16">Translating thoughts into&nbsp;</p>
@@ -93,11 +69,11 @@ const Equip = ({ data, location }) => {
             mission.
           </p>
 
-          <a 
-            aria-hidden="true" 
-            href="#latestPosts" 
+          <a
+            aria-hidden="true"
+            href="#latestPosts"
             className={`text-5xl xl:text-6xl 2xl:text-7xl w-1/12 absolute bottom-0 animate-bounce`}
-            style={ {left: '50%'} }  
+            style={{ left: "50%" }}
           >
             <motion.i
               initial={{ opacity: 0 }}
@@ -105,21 +81,27 @@ const Equip = ({ data, location }) => {
               transition={{
                 type: "spring",
                 delay: 0.5,
-                default: {duration: 2.5}
+                default: { duration: 2.5 },
               }}
-              className=" bi bi-chevron-down hover:text-blue-700 cursor-pointer">
-
-            </motion.i>
+              className=" bi bi-chevron-down hover:text-blue-700 cursor-pointer"
+            ></motion.i>
           </a>
         </div>
-
       </section>
-      <section 
-      id="latestPosts"  
-      className="latestTrained min-h-screen mt-16 pt-24 relative"
+      <section
+        id="latestPosts"
+        className="latestTrained min-h-screen mt-16 pt-24 relative"
       >
-        <img className="z-10 invisible md:visible" src={pinBlue} style={pinBlueStyleTwo}/>
-        <img className="" src={unicornStars} style={unicornStarStyle}
+        <img
+          alt="Doug Pin"
+          className="z-10 invisible md:visible"
+          src={pinBlue}
+          style={pinBlueStyleTwo}
+        />
+        <img
+          alt="Doug with stars"
+          src={unicornStars}
+          style={unicornStarStyle}
         />
         <div className="mt-16 mx-auto relative py-16">
           <div className="md:px-16 sticky top-0 bg-white">
@@ -129,13 +111,13 @@ const Equip = ({ data, location }) => {
             >
               Latest Posts
             </h2>
-    
-          </div> 
-          
+          </div>
+
           <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-11 pb-10">
             {posts.map((post, i) => {
               return (
                 <Card
+                  key={`${post.fields.slug}-${i}`}
                   imgDisplay={post.frontmatter.image.childImageSharp.fluid.src}
                   ref={cardRefs[i]}
                   category={post.frontmatter.category}
@@ -145,12 +127,12 @@ const Equip = ({ data, location }) => {
                   date={post.frontmatter.date}
                 />
               );
-            })} 
+            })}
           </div>
         </div>
       </section>
-      <img src={pinBlue} style={pinBlueStyle} className=""/>
-      <Footer background={true} />
+      <img alt="Doug Pin" src={pinBlue} style={pinBlueStyle} className="" />
+      <Footer />
     </div>
   );
 };

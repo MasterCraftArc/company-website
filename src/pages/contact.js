@@ -7,15 +7,11 @@ import * as qs from "query-string";
 import StyledBackgroundSection from "../components/contactBg";
 import Button from "../components/button";
 import Footer from "../components/footer";
-import contactBg from "../images/contact.png"
+import contactBg from "../images/contact.png";
 
 const textAreaStyle = {
   height: "200px",
   color: "rgb(94,110,129)",
-};
-
-const formContainer = {
-  height: "63vh",
 };
 
 class Contact extends React.Component {
@@ -53,72 +49,67 @@ class Contact extends React.Component {
     return (
       <>
         <StyledBackgroundSection>
-            <SiteHelmet title="Contact" />
-            <Header background={contactBg}/>
+          <SiteHelmet title="Contact" />
+          <Header background={contactBg} />
           <main className="contact min-h-screen w-full flex items-center justify-center">
-              <section
-                className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mt-10 opacity-90"
-                style={formContainer }
-              >
-                <h1 className="text-center pt-5 sm:pt-7 md:pt-10 mb-3 font-black text-5xl text-white">
-                  Get in touch!
-                </h1>
-                <div className=" w-9/12 h-full mx-auto py-2 sm:pt-0 border-dark flex justify-between">
-                  <form
-                    red={this.domRef}
-                    data-netlify="true"
-                    className="contactHeight w-full flex flex-col justify-evenly"
-                    name="Contact"
-                    onSubmit={(event) => this.handleSubmit(event)}
-                  >
+            <section className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 mt-10 opacity-90">
+              <h1 className="text-center font-black text-5xl text-white pt-12 pb-6">
+                Get in touch!
+              </h1>
+              <div className=" w-9/12 h-full mx-auto py-6  border-dark flex justify-between">
+                <form
+                  red={this.domRef}
+                  data-netlify="true"
+                  className="contactHeight w-full flex flex-col justify-evenly"
+                  name="Contact"
+                  onSubmit={(event) => this.handleSubmit(event)}
+                >
+                  <input
+                    ref="form-name"
+                    type="hidden"
+                    name="form-name"
+                    value="Contact"
+                  />
+                  <div className="m-0">
                     <input
-                      ref="form-name"
-                      type="hidden"
-                      name="form-name"
-                      value="Contact"
+                      ref="firstName"
+                      name="firstName"
+                      className="form-control w-full mb-6 text-gray-500"
+                      placeholder="First Name"
                     />
-                    <div className="m-0">
-                      <input
-                        ref="firstName"
-                        name="firstName"
-                        className="form-control w-full mb-5 text-gray-500"
-                        placeholder="First Name"
-                      ></input>
-                      <input
-                        ref="lastName"
-                        name="lastName"
-                        className="form-control w-full mb-5 text-gray-500"
-                        placeholder="Last Name"
-                      ></input>
-                      <input
-                        ref="emailAddress"
-                        name="emailAddress"
-                        className="form-control w-full text-gray-500"
-                        placeholder="Email"
-                        type="email"
-                        id="exampleInputEmail1"
-                      />
-                    </div>
-                    <textarea
-                      ref="message"
-                      name="message"
-                      className="m-0 w-100 mt-2 form-control bg-transparent text-gray-500"
-                      placeholder="Hi, fellow unicorn here! I'm really excited to talk about..."
-                      style={textAreaStyle}
-                    ></textarea>
-                    <Button
-                      type="submit"
-                      className="bg-red-500 hover:bg-red-700 text-white mt-3 w-full"
-                      text="Submit"
+                    <input
+                      ref="lastName"
+                      name="lastName"
+                      className="form-control w-full mb-6 text-gray-500"
+                      placeholder="Last Name"
+                    ></input>
+                    <input
+                      ref="emailAddress"
+                      name="emailAddress"
+                      className="form-control w-full text-gray-500 mb-6"
+                      placeholder="Email"
+                      type="email"
+                      id="exampleInputEmail1"
                     />
-                  </form>
-                </div>
-              </section>
+                  </div>
+                  <textarea
+                    ref="message"
+                    name="message"
+                    className="m-0 w-100 form-control bg-transparent text-gray-500"
+                    placeholder="Hi, fellow unicorn here! I'm really excited to talk about..."
+                    style={textAreaStyle}
+                  ></textarea>
+                  <Button
+                    type="submit"
+                    className="bg-red-500 hover:bg-red-700 text-white my-6 w-full"
+                    text="Submit"
+                  />
+                </form>
+              </div>
+            </section>
           </main>
+          <Footer background={false} />
         </StyledBackgroundSection>
-        <div className="">
-          <Footer />
-        </div>
       </>
     );
   }

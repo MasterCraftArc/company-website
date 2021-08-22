@@ -1,11 +1,9 @@
 import React from "react";
-import { TITLE_TEXT } from "./homeStyles";
 import whatWeDoPng from "../../images/home/whatWeDo.png";
 import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
-import pin from "../../images/locationPin.png"
-import unicornStars from "../../images/unicornStars.png"
-
+import pin from "../../images/locationPin.png";
+import unicornStars from "../../images/unicornStars.png";
 
 const CaseStudies = () => {
   return (
@@ -17,11 +15,22 @@ const CaseStudies = () => {
               <path d="M291.8 55.3c30.4 39.9 30.7 102 17 160.4-13.8 58.3-41.6 112.9-84 130.9s-99.3-.6-137-30C50.2 287.1 32 246.9 17 200.5 2.1 154.1-9.6 101.4 11.5 63.6 32.6 25.8 86.6 2.8 143.8.2c57.2-2.6 117.6 15.2 148 55.1z"></path>
             </svg>
           </div>
-          <img src={whatWeDoPng} className="blobTop max-w-full pb-24" alt="What we do"/>
+          <img
+            src={whatWeDoPng}
+            className="blobTop max-w-full pb-24"
+            alt="What we do"
+          />
         </div>
         <div className="flex flex-col justify-center px-10">
-          <h2 className={` text-4xl md:text-5xl xl:text-6xl font-bold text-blue-900 flex items-center`}>
-            <img className="justify-self-bottom" style={ {maxWidth:"60px"} } src={pin} alt="Unicorn standing on card"/> 
+          <h2
+            className={` text-4xl md:text-5xl xl:text-6xl font-bold text-blue-900 flex items-center`}
+          >
+            <img
+              className="justify-self-bottom"
+              style={{ maxWidth: "60px" }}
+              src={pin}
+              alt="Unicorn standing on card"
+            />
             What we do
           </h2>
           <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-xl xl:pb-16 font-light">
@@ -56,7 +65,12 @@ const CaseStudies = () => {
         </div> */}
       </div>
 
-      <img className="absolute bottom-11 right-24 invisible md:visible" src={unicornStars} alt="Unicorn standing on card" style={ {right: '0%', width: '200px', zIndex: '-2'} }/>
+      <img
+        className="absolute bottom-11 right-24 invisible md:visible"
+        src={unicornStars}
+        alt="Unicorn standing on card"
+        style={{ right: "0%", width: "200px", zIndex: "-2" }}
+      />
     </section>
   );
 };

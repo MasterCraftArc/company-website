@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
 
@@ -6,43 +6,48 @@ const logoStyle = {
   maxWidth: "16vh",
 };
 
+const setRefFilter = (ref, filter) => {
+  if (ref.current) {
+    ref.current.style.filter = filter;
+  }
+};
+
+const setRefClassName = (ref, className) => {
+  if (ref.current) {
+    ref.current.className = className;
+  }
+};
 
 function Header(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const stickyHeader = React.createRef();
   const logoRef = React.createRef();
-  
-  useEffect(() => {
-    stickyHeader.current.className = "navClear"
-    window.addEventListener("scroll", () => handleScroll());
-  })
 
-  function handleScroll() {
-    if(props.background){
-      stickyHeader.current.className = "navBg md:px-24"
-      logoRef.current.style.filter = "none"
+  const handleScroll = () => {
+    if (!props.background && window.scrollY < 50) {
+      setRefClassName(stickyHeader, "navClear");
+      setRefFilter(logoRef, "drop-shadow(2px 2px 2px black)");
+    } else {
+      setRefClassName(stickyHeader, "navBg md:px-24");
+      setRefFilter(logoRef, "none");
     }
-    else if(window.scrollY < 50){
-      stickyHeader.current.className = "navClear"
-      logoRef.current.style.filter = "drop-shadow(2px 2px 2px black)"
-    }
-    else{
-      stickyHeader.current.className = "navBg md:px-24"
-      logoRef.current.style.filter = "none"
-    }
-  }
+  };
+
+  useEffect(() => {
+    setRefClassName(stickyHeader, "navClear");
+    window.addEventListener("scroll", () => handleScroll());
+  });
 
   return (
     //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
     <>
       <nav
         className=""
-        
         style={{
-          zIndex: '100',
+          zIndex: "100",
           width: "100%",
-          top: '0',
-          position: 'fixed',
+          top: "0",
+          position: "fixed",
         }}
       >
         <div className="w-full" ref={stickyHeader}>

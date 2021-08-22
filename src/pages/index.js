@@ -7,7 +7,7 @@ import WhoWeAre from "../components/home/whoWeAre";
 import CaseStudies from "../components/home/whatWeDo";
 import TrainForBattle from "../components/home/trainForBattle";
 import headerBackground from "../images/home/hero.jpg";
-import "../styles/blobz.min.css"
+import "../styles/blobz.min.css";
 
 const pageStyles = {
   color: "#232129",
@@ -17,28 +17,27 @@ const pageStyles = {
 
 const headerStyle = {
   background: `url(${headerBackground}) fixed no-repeat`,
-  backgroundSize: 'cover'
+  backgroundSize: "cover",
 };
 
 // markup
 const Train = () => {
-    return (
-      <div style={pageStyles} className="home flex flex-col bg-top">
-        <SiteHelmet
-          title="Train"
-          description="Become a DevSecOps Hero with Defense Unicorns"
-        />
-        <Header />
-        <div style={headerStyle}>
-          <HomeHero />
-        </div>
-        <TrainForBattle />
-        <WhoWeAre />
-        <CaseStudies />
-        <Footer></Footer>
+  return (
+    <div style={pageStyles} className="home flex flex-col bg-top">
+      <SiteHelmet
+        title="Train"
+        description="Become a DevSecOps Hero with Defense Unicorns"
+      />
+      <Header />
+      <div style={headerStyle}>
+        <HomeHero />
       </div>
-    );
-
+      <TrainForBattle />
+      <WhoWeAre />
+      <CaseStudies />
+      <Footer />
+    </div>
+  );
 };
 
 export default Train;
