@@ -48,8 +48,6 @@ html {
 body {
   line-height: 1.4;
   font-family: "Lato", "Brush Script MT", "Garamond";
-  /* background-color: blue; */
-  /* color: white; */
 }
 
 /******************************************
@@ -117,19 +115,6 @@ body {
   color: salmon;
 }
 
-.loading {
-  height: 400px;
-  width: 400px;
-  border-top-left-radius: 180px 250px;
-  margin: 100px 200px;
-  box-shadow: -15px -15px 60px -20px lightgreen,
-    inset 10px 10px 15px -10px lightblue;
-  background: linear-gradient(-45deg, #6839b0, #332e94, #d324cf, #10addc);
-  background-size: 400% 400%;
-  animation: gradient 3s ease infinite;
-  z-index: 10;
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -166,13 +151,14 @@ body {
 
 .homeHero {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: transparent;
   margin-bottom: "25%";
 }
+
 .hero {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: transparent;
   margin-bottom: "25%";
 }
@@ -208,9 +194,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.pinGlow {
-  color: rgba(64, 238, 244, 0.7);
-}
 
 .tabTitles {
   color: rgb(157, 181, 205);
@@ -291,15 +274,6 @@ body {
 }
 
 /* Blog */
-.blog {
-  background: url(../images/blogBG.png) no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: local, scroll;
-  background-position: bottom;
-}
 
 /*** Blog Posts **/
 .postHeader {
@@ -339,9 +313,6 @@ body {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-#cardContainer{
-  margin-top: 500px !important;
-}
 .blackBorder {
   border: 2px solid black;
 }
