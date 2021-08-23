@@ -58,10 +58,10 @@ const Equip = ({ data }) => {
               <p className="">
                 The Defense Unicorns Blog
               </p>
-              <p className="mt-5 text-5xl md:text-6xl  lg:text-7xl xl:text-7xl text-red-600">
+              <p className="mt-5  text-red-600">
                 Translating thoughts 
               </p>
-              <p className="text-5xl md:text-6xl  lg:text-7xl xl:text-7xl text-red-600">
+              <p className=" text-red-600">
               into action 
               </p>
             </div>
