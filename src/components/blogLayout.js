@@ -27,11 +27,11 @@ const Layout = ({ location, title, post, children }) => {
   return (
     <div className="blogPage w-full" data-is-root-path={isRootPath}>
       <GlobalStyle />
-      <header className="postHeader ">
+      <header className="postHeader">
         <div className="postHeaderContainer flex items-end pb-16">
           <Header/>
           <div className="w-3/4 mx-auto flex">
-            <h1 className="text-3xl sm:text-3xl md:text-5xl align-bottom xl:text-6xl font-bold text-white sm:pr-10 m-0 mt-10">{post.frontmatter.title}</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl align-bottom xl:text-7xl 2xl:text-8xl font-bold text-white sm:pr-10 m-0 mt-10">{post.frontmatter.title}</h1>
           </div>
         </div>
       </header>
@@ -103,7 +103,8 @@ const GlobalStyle = createGlobalStyle`
   --color-primary: #005b99;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-heading: #1E3A8A;
+  //#1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
 }
@@ -162,7 +163,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--fontWeight-bold);
+  font-weight: var(--fontWeight-extrabold);
   color: var(--color-heading);
 }
 
