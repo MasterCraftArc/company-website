@@ -178,23 +178,8 @@ body {
   margin-bottom: '25%';
 }
 
-.card {
-  /* background-color: white; */
-  /* border: 1px solid rgb(80, 249, 255);
-  border-radius: 30px; */
-}
 
-
-/* .card-img-top { */
-    /* border-radius: 30px;
-    border-bottom-left-radius: initial;
-    border-bottom-right-radius: initial; */
-/* } */
-
-/* .w-1\/2 {
-  width: 41%;
-  text-align: center;
-} */
+/* /////////////////////////// */
 
 /* Latest Trained */
 .latestTrained {
@@ -205,6 +190,7 @@ body {
   padding-right: 15%;
 }
 
+/* ///////////////////////////////////// */
 
 /* WHAT WE DO SECTION */
 
@@ -223,14 +209,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* Blog Tiles/Blog Page */
-/* h5 {
-  font-size: 18px;
-  margin-left: -1%;
-  margin-top: 7%;
-}
-
 
 
 .text-center {
@@ -296,9 +274,6 @@ body {
   color: #f8f6f6;
 }
 
-.cardImg{
-
-}
 .blogCard {
   padding-bottom: 15%;
 }
@@ -316,6 +291,7 @@ body {
     width: 12%;
 } */
 
+/* ////////////////////////// */
 
 /* Contact */
 
