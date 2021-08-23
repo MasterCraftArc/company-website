@@ -211,36 +211,6 @@ body {
 }
 
 
-/* .text-center {
-  text-align: initial;
-  margin-left: 10%;
-  font: caption;
-  color: slategrey;
-  margin-bottom: 15%;
-}  */
-
-/* .mt-1 {
-  margin-top: 2.25rem;
-}
-
-.pb-2 {
-  padding-bottom: 1.5rem;
-
-  }
-
-  a.pt-2 {
-    font-size: small;
-  }
-
-.min-h-screen {
-  min-height: 119vh;
-}
-
-  .h5.card-title.mt-1.mb-3 {
-    font-size: 19px;
-    color: black;
-  } */
-
 .pinGlow {
   color: rgba(64, 238, 244, 0.7);
 }
@@ -284,12 +254,7 @@ body {
   margin-top: 10%;
 }
 
-/* .uniCorn {
-  position: absolute;
-    left: 86%;
-    top: 240%;
-    width: 12%;
-} */
+
 
 /* ////////////////////////// */
 
