@@ -1,8 +1,8 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
-const BackgroundSection = ({className, children}) => {
+const BackgroundSection = ({ className, children }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -15,10 +15,10 @@ const BackgroundSection = ({className, children}) => {
         }
       }
     `
-  )
+  );
 
   // Set ImageData.
-  const imageData = data.desktop.childImageSharp.fluid
+  const imageData = data.desktop.childImageSharp.fluid;
 
   return (
     <BackgroundImage
@@ -29,7 +29,7 @@ const BackgroundSection = ({className, children}) => {
     >
       {children}
     </BackgroundImage>
-  )
-}
+  );
+};
 
-export default BackgroundSection
+export default BackgroundSection;

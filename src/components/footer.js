@@ -14,7 +14,6 @@ const footerStyle = {
 
 const logoStyle = {
   width: "67%",
-
 };
 
 const socialsBox = {
@@ -51,7 +50,6 @@ function Footer({ background }) {
       <div className="container md:h-3/6 flex md:flex-row flex-col mr-7 mx-auto">
         <div className="flex flex-col md:w-2/5 xs:w-full">
           <div className="flex md:flex-row flex-col h-4/6 xs:w-full">
-            
             <div className="flex w-full mx-auto">
               <div className="mx-auto md:text-left text-center text-2xl mt-16 text-white">
                 <i className="bi bi-house-door-fill text-red-600 inline-block"></i>
@@ -99,13 +97,13 @@ function Footer({ background }) {
             </button>
           </div>
           <div className="w-full">
-              <img
-                className="w-full bg-no-repeat bg-cover "
-                src={verticalLogo}
-                style={logoStyle}
-                alt="Defense Unicorns logo"
-              />
-            </div>
+            <img
+              className="w-full bg-no-repeat bg-cover "
+              src={verticalLogo}
+              style={logoStyle}
+              alt="Defense Unicorns logo"
+            />
+          </div>
         </div>
       </div>
     </footer>

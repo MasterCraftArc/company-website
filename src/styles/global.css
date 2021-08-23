@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 /* Box Model Hack */
 * {
@@ -57,36 +57,35 @@ body {
 /*******************************************/
 
 /** NAV **/
-.navMenu{
+.navMenu {
   display: flex;
   color: inherit;
 }
 
-.nav-item{
+.nav-item {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
-.navClear{
+.navClear {
   transition: all 0.5s ease-in;
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 80%,
     transparent 100%
-    );
-    color: white;
-  }
-  
-.navBg{
+  );
+  color: white;
+}
+
+.navBg {
   transition: all 0.5s ease-in;
   background: white !important;
   mask-image: none;
   border-bottom: 3px solid red;
 }
 
-
-.logoShadow{
+.logoShadow {
   filter: drop-shadow(2px 2px 2px black);
 }
 
@@ -165,19 +164,18 @@ body {
 
 /* HERO */
 
-.homeHero{
+.homeHero {
   height: 100vh;
   width: 100vw;
   background: transparent;
-  margin-bottom: '25%';
+  margin-bottom: "25%";
 }
 .hero {
   height: 100vh;
   width: 100vw;
   background: transparent;
-  margin-bottom: '25%';
+  margin-bottom: "25%";
 }
-
 
 /* /////////////////////////// */
 
@@ -195,7 +193,7 @@ body {
 /* WHAT WE DO SECTION */
 
 .blog {
-  color: rgb(25,76,142);
+  color: rgb(25, 76, 142);
 }
 
 .whatWeDo {
@@ -203,13 +201,12 @@ body {
   padding-bottom: 30%;
 }
 
-.blobTop{
+.blobTop {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 .pinGlow {
   color: rgba(64, 238, 244, 0.7);
@@ -254,18 +251,16 @@ body {
   margin-top: 10%;
 }
 
-
-
 /* ////////////////////////// */
 
 /* Contact */
 
 .contactCard {
-  background-color: rgb(13,51,100);
+  background-color: rgb(13, 51, 100);
 }
 
 .contactHeight {
-  height: "90%"
+  height: "90%";
 }
 
 .contact input {
@@ -320,11 +315,9 @@ body {
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
-
 }
 
 /* FOOTER */
-
 
 .socialsBox a,
 .footerLink {
@@ -346,7 +339,9 @@ body {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
+#cardContainer{
+  margin-top: 500px !important;
+}
 .blackBorder {
   border: 2px solid black;
 }

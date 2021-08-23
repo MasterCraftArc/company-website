@@ -20,11 +20,11 @@ const battleText = {
 };
 
 const unicornStarStyle = {
-  width: '15%',
-  position: 'absolute',
-  right: '0',
-  top: '250px',
-}
+  width: "15%",
+  position: "absolute",
+  right: "0",
+  top: "250px",
+};
 
 const pinBlueStyle = {
   width: "5%",
@@ -32,12 +32,12 @@ const pinBlueStyle = {
   right: "52px",
 };
 const pinBlueStyleTwo = {
-  width: '5%',
+  width: "5%",
   // maxWidth: '10%',
-  position: 'absolute',
-  left: '50px',
-  top: '195px',
-}
+  position: "absolute",
+  left: "50px",
+  top: "195px",
+};
 
 const Equip = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -88,13 +88,16 @@ const Equip = ({ data }) => {
           </a>
         </div>
       </section>
-      <section 
-      id="latestPosts"  
-      className="latestTrained min-h-screen mt-16 pt-24 relative"
+      <section
+        id="latestPosts"
+        className="latestTrained min-h-screen mt-16 pt-24 relative"
       >
-        <img className="z-10 invisible md:visible" src={pinBlue} style={pinBlueStyleTwo}/>
-        <img className="" src={unicornStars} style={unicornStarStyle}
+        <img
+          className="z-10 invisible md:visible"
+          src={pinBlue}
+          style={pinBlueStyleTwo}
         />
+        <img className="" src={unicornStars} style={unicornStarStyle} />
         <div className="mt-16 mx-auto relative py-16">
           <div className="md:px-16 sticky top-0 bg-white">
             <h2
@@ -103,9 +106,8 @@ const Equip = ({ data }) => {
             >
               Latest Posts
             </h2>
-    
-          </div> 
-          
+          </div>
+
           <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-11 pb-10">
             {posts.map((post, i) => {
               return (
