@@ -343,12 +343,12 @@ body {
 
 /*** Blog Posts **/
 .postHeader {
-  height: 40vh;
+  height: 35vh;
 }
 
 .postHeaderContainer {
   height: 100%;
-  background: url(../images/postBanner.jpg) no-repeat;
+  background: url(../images/blog/postHero.png) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
