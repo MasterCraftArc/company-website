@@ -3,9 +3,19 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
+@layer utilities {
+  @variants responsive {
+    .cardPadding {
+      padding-left: 18%;
+      padding-right: 18%;
+    }
+  }
+}
+
 /* Box Model Hack */
 * {
   box-sizing: border-box;
+
 }
 
 .flexThisBox {
@@ -170,9 +180,8 @@ body {
   min-height: 70vh;
   width: 100vw;
   background-color: transparent;
-  padding-left: 15%;
-  padding-right: 15%;
 }
+
 
 /* ///////////////////////////////////// */
 
