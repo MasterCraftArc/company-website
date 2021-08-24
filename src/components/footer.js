@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import verticalLogo from "../images/home/logoV.png";
 import footerBackground from "../images/footer.png";
@@ -26,8 +26,8 @@ const socialsBox = {
   marginTop: '-18%',
 };
 
-const menuBox = {
-};
+// const menuBox = {
+// };
 
 const linkColor = {
   fontSize: "14px",
@@ -43,9 +43,9 @@ const addressBox = {
   marginTop: '43%',
 }
 
-const copyRight = {
-  top: '81%',
-}
+// const copyRight = {
+//   top: '81%',
+// }
 
 function Footer({ background }) {
   const showBackground = background === undefined ? true : background;
