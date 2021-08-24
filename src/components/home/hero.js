@@ -57,13 +57,14 @@ const HomeHero = () => {
                 </motion.span>
               );
             })}
-
+            
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
                 delay: 2,
               }}
+              className="block sm:inline-block"
             >
               <ReactRotatingText items={tagLineItems} />
             </motion.span>
@@ -89,8 +90,7 @@ const HomeHero = () => {
         <a
           aria-hidden="true"
           href="#trainForBattle"
-          className={`${TITLE_TEXT} 2xl:text-7xl w-1/12 absolute bottom-0 animate-bounce`}
-          style={{ left: "50%" }}
+          className={`${TITLE_TEXT} 2xl:text-7xl absolute bottom-2 animate-bounce w-full text-center`}
         >
           <motion.i
             initial={{ opacity: 0 }}

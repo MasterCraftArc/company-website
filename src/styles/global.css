@@ -9,8 +9,22 @@
       padding-left: 18%;
       padding-right: 18%;
     }
+    .centerLogo {
+      position: absolute;
+      /* top: 50%; */
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .rightLogo {
+      position: absolute;
+      right: 13%;
+      transform: none;
+      left: unset;
+    }
   }
 }
+
+
 
 /* Box Model Hack */
 * {

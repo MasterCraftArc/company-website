@@ -49,22 +49,22 @@ function Footer({ background }) {
       }}
       >
         <img
-        className="bg-no-repeat bg-cover absolute bottom-5 lg:right-44 blobTop "
+        className="bg-no-repeat bg-cover absolute bottom-32 centerLogo sm:rightLogo"
         src={verticalLogo}
         style={logoStyle}
         alt="Defense Unicorns logo"
       />
       <div 
-        className="h-full md:h-2/5 flex md:flex-row flex-col mx-auto content-start w-6/12 mt-16"
+        className="h-full md:h-2/5 flex md:flex-row flex-col mx-auto content-end items-start w-6/12 mt-16"
       >
-            <div className="flex flex-col w-full mx-auto">
+            <div className="flex flex-col w-full mx-auto order-last sm:order-first">
               <div className="md:text-left text-center text-xl text-white"
                     style={addressBox}>
                 <p className="mt-2">Defense Unicorns</p>
                 <p className="mt-2">555 E Pikes Peak Ave</p>
                 <p className="mt-2">Colorado Springs, Co 80903</p>
               </div>
-              <div style={socialsBox} className="socialsBox mt-6 flex justify-items-center text-2xl md:justify-items-start">
+              <div style={socialsBox} className="socialsBox mt-6 flex justify-center text-2xl  sm:justify-start">
             <button aria-hidden="true" className="">
               <i className="bi bi-twitter mr-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
             </button>
@@ -82,7 +82,7 @@ function Footer({ background }) {
             </div>
           
         
-        <div className="flex flex-row md:mx-12 mx-auto text-white text-2xl w-full justify-around">
+        <div className="flex flex-row md:mx-12 mx-auto text-white text-2xl w-full justify-around sm:mt-10">
               <Link to="/train" className="footerLink" style={linkColor}>
                 <p style={menu}>Train</p>
               </Link>
