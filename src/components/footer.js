@@ -66,16 +66,15 @@ function Footer({ background }) {
       />
       <div 
         className="h-full md:h-3/6 flex md:flex-row flex-col mx-auto"
-      >
+      />
         <div className="flex flex-col md:w-2/5 xs:w-full">
           <div className="flex md:flex-row flex-col h-4/6 xs:w-full">
-            
-            <div className="flex flex-col w-full mx-auto mt-2 ml-6">
-              <div className="md:text-left text-center text-xl mt-9 text-white"
-                    style={addressBox}>
-                <p className="mt-2">Defense Unicorns</p>
-                <p className="mt-2">555 E Pikes Peak Ave</p>
-                <p className="mt-2">Colorado Springs, Co 80903</p>
+            <div className="flex w-full mx-auto">
+              <div className="mx-auto md:text-left text-center text-2xl mt-16 text-white">
+                <i className="bi bi-house-door-fill text-red-600 inline-block"></i>
+                <p className="mt-2 inline-block ml-2">Defense Unicorns</p>
+                <p className="mt-2 ml-6">555 E Pikes Peak Ave</p>
+                <p className="mt-2 ml-6">Colorado Springs, Co 80903</p>
               </div>
               <div style={socialsBox} className="socialsBox w-1/5 flex justify-items-center text-3xl">
             <button aria-hidden="true" className="mt-14 h-5 ml-12">
@@ -92,25 +91,21 @@ function Footer({ background }) {
               <i className="bi bi-facebook me-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
             </button>
           </div>
-            </div>
+          <div className="w-full">
+            <img
+              className="w-full bg-no-repeat bg-cover "
+              src={verticalLogo}
+              style={logoStyle}
+              alt="Defense Unicorns logo"
+            />
           </div>
-        </div>
-        <div className="flex flex-row md:mx-12 mx-auto text-white items-center text-2xl w-full justify-around top-15">
-              <Link to="/train" className="footerLink" style={linkColor}>
-                <p style={menu}>Train</p>
-              </Link>
-              <Link to="/equip" className="footerLink" style={linkColor}>
-                <p style={menu}>Equip</p>
-              </Link>
-              <Link to="/contact" className="footerLink" style={linkColor}>
-                <p style={menu}>Contact</p>
-              </Link>
         </div>
       </div>
       <p className="mt-12 text-center absolute w-full text-white bottom-7">
               Copyright © {new Date().getFullYear()} Defense Unicorns. All
               rights reserved.
             </p>
+            </div>
     </footer>
   );
 }

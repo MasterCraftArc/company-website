@@ -9,10 +9,10 @@ const BackgroundSection = ({ className, children }) => {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "contact.png" }) {
+        placeholderImage: file(relativePath: { eq: "blog/hero.png" }) {
           childImageSharp {
             gatsbyImageData(
-              width: 2725
+              width: 3840
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )

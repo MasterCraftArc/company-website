@@ -1,17 +1,21 @@
 # DEFENSE UNICORNS
+
 ### Website Architectural Design Review
 
 ---
 
 ### About
+
 This document outlines the tools and frameworks that will be used to deliver the Defense Unicorns website. As the team continues to conduct user interviews and customer discovery to refine the feature list for the site, updates and additional content will be added to this ADR document. The final ADR will reflect the complete toolset and frameworks leveraged to build the site.
 
 ##### Featuring:
+
 ---
+
 > GatsbyJS
-Node JS
-Netlify
-Tailwind CSS
+> Node JS
+> Netlify
+> Tailwind CSS
 
 Prepared by: Defense Unicorns Website Team
 Updated July 23, 2021
@@ -40,6 +44,7 @@ Gatsby Provides development teams an open source frontend framework for creati
 - Large library of plugins and community to back
 
 ##### Disadvantages
+
 - May take longer to generate larger sites
 
 ---
@@ -51,10 +56,12 @@ Gatsby Provides development teams an open source frontend framework for creati
 This platform should be used to host the Defense Unicorns website because it simplifies the usage of various toolsets into one robust and reliable web platform. CI/CD, scaling, and deployment are some of the examples of the available services that are integrated into Netlify which will help to bring this project to completion. Netlify starts free with an option to go pro at $19/month which will support 3 team members and access to 400GB bandwidth and 1000 build minutes monthly along with several additional features.
 
 ##### Why Netlify?
+
 - Free SSL support
 - Automatic builds from GitHub with access to individual branch deployment
 
 ##### Disadvantages
+
 - No easy access to raw error logs
 
 ---
@@ -62,7 +69,9 @@ This platform should be used to host the Defense Unicorns website because it sim
 ### Alternatives
 
 #### Heroku
+
 Heroku is a PaaS that runs on top of AWS. It offers support for several programming languages and allows users to run web applications on Heroku “Dynos” which support horizontal or vertical scaling. Heroku offers an initial production plan starting at $25/month. When compared to Heroku, Netlify is more developer friendly, cheaper, and provides additional features.
 
 #### AWS Elastic Beanstalk
-Elastic Beanstalk as a platform allows deployment of web applications in several languages. Unlike Heroku and Netlify, Elastic Beanstalk relies on other AWS services such as code-pipeline and route53 to provide features offered as a single service through Netlify and Heroku. Elastic Beanstalk as a service is completely free and all charges will be based on utilized EC2 instances. 
+
+Elastic Beanstalk as a platform allows deployment of web applications in several languages. Unlike Heroku and Netlify, Elastic Beanstalk relies on other AWS services such as code-pipeline and route53 to provide features offered as a single service through Netlify and Heroku. Elastic Beanstalk as a service is completely free and all charges will be based on utilized EC2 instances.

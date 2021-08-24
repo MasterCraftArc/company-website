@@ -1,18 +1,18 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/blogLayout"
-import Seo from "../components/seo"
-import unicorn from "../images/unicornStars.png"
-import Button from "../components/button"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/blogLayout";
+import Seo from "../components/seo";
+import unicorn from "../images/unicornStars.png";
+import Button from "../components/button";
 
 const metaStyles = {
-  lineHeight: '0.5'
-}
+  lineHeight: "0.5",
+};
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
 
   return (
     <Layout location={location} title={siteTitle} post={post}>
@@ -26,9 +26,18 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <div className="metaData mt-10 font-sans" style={metaStyles}>
-          <p className="text-2xl mb-2"><span className="font-black text-blue-900">AUTHOR: </span> {post.frontmatter.author}</p>
-          <p className="text-2xl mb-2"><span className="font-black text-blue-900">DATE: </span> {post.frontmatter.date}</p>
-          <p className="text-2xl"><span className="font-black text-blue-900">CATEGORY: </span> {post.frontmatter.category}</p>
+          <p className="text-2xl mb-2">
+            <span className="font-black text-blue-900">AUTHOR: </span>{" "}
+            {post.frontmatter.author}
+          </p>
+          <p className="text-2xl mb-2">
+            <span className="font-black text-blue-900">DATE: </span>{" "}
+            {post.frontmatter.date}
+          </p>
+          <p className="text-2xl">
+            <span className="font-black text-blue-900">CATEGORY: </span>{" "}
+            {post.frontmatter.category}
+          </p>
         </div>
 
         <section
@@ -37,9 +46,17 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
       </article>
-      <div className="flex flex-col justify-center items-center">
-        <img className="w-1/6 mx-auto mt-24" src={unicorn} alt="Unicorn with multicolored star trail"></img>
-        <Button linkTo="/equip" className=" bg-red-500 hover:bg-red-700 text-white mr-5 mb-5" text="See More" />
+      <div className="flex flex-col justify-center items-center mt-24 mb-5">
+        <img
+          className="w-2/6 xl:w-1/6 mx-auto"
+          src={unicorn}
+          alt="Unicorn with star trail"
+        ></img>
+        <Button
+          linkTo="/equip"
+          className=" bg-red-500 hover:bg-red-700 text-white"
+          text="See More"
+        />
       </div>
 
       <nav className="blog-post-nav mb-16 pt-5 font-black text-lg sm:text-3xl">
@@ -68,12 +85,11 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
-
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -122,4 +138,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

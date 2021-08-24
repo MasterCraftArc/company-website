@@ -9,6 +9,7 @@ tags: Continuous Delivery
 category: DevSecOps
 image: monolithic-vs-microservices.png
 ---
+
 Modern software is moving fast. While the associated lexicon is continuously changing, there are a number of core concepts and key terms that one must be familiar with in order to effectively drive digital transformation in their organization. Often it's difficult to find these terms in concepts in one place; even more frequently, it's challenging to determine the connections and interrelationships among these concepts. The below is intended to serve as a living guide for those embarking on their own software transformation journey - especially those with a need for cloud-native capabilities.
 
 ### Containers
@@ -21,7 +22,7 @@ In a microservice-based approach to software system architecture, the system is 
 
 ![Monolithic vs Microservices](monolithic-vs-microservices.png "Figure I: A visual comparison of monolithic vs. microservices architectures")
 
- *Figure I: A visual comparison of monolithic vs. microservices architectures.*
+_Figure I: A visual comparison of monolithic vs. microservices architectures._
 
 Within the Department of Defense, enterprise-wide availability of pre-approved, containerized microservices can significantly accelerate software development efforts by making the building blocks of software systems discoverable, available on-demand, and deployable in any computing environment. Given their decoupled nature (i.e., independent of a single system or workflow), microservices are highly composable. They can be configured with other, independent microservices to support workflows and applications tailored to any unique mission. Moreover, microservices that are containerized, configured and managed as a carefully chosen suite of services and functions can serve as pre-assembled software development pipelines that are infinitely scalable. This paper discusses this concept in greater detail under the section titled “Why Big Bang?”
 
