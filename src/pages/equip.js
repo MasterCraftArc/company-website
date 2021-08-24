@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import pin from "../images/pin.png";
 import Card from "../components/card";
 import { motion } from "framer-motion";
 import Header from "../components/header";
@@ -32,13 +31,6 @@ const pinBlueStyle = {
   position: "absolute",
   right: "52px",
 };
-const pinBlueStyleTwo = {
-  width: "5%",
-  // maxWidth: '10%',
-  position: "absolute",
-  left: "50px",
-  top: "195px",
-};
 
 const Equip = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -46,7 +38,7 @@ const Equip = ({ data }) => {
 
   return (
     <BackgroundSection className="" >
-      <div className="h-screen equip blog" style={pageStyles}>
+      <div className="h-screen equip blog fontTitle" style={pageStyles}>
         <SiteHelmet title="Equip" description="Defense Unicorns Blog" />
         <Header />
         <section className="hero flex flex-col justify-center">
@@ -54,18 +46,18 @@ const Equip = ({ data }) => {
             className="pb-8 h-full flex flex-col justify-center"
             style={{ color: "red" }}
           >
-            <div className="pl-16 pb-8 text-white text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-bold">
+            <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-bold">
               <p className="">
                 The Defense Unicorns Blog
               </p>
-              <p className="mt-5  text-red-600">
-                Translating thoughts 
+              <p className="mt-5 text-red-600">
+                translating thoughts 
               </p>
-              <p className="text-red-600">
-              into action 
+              <p className="mt-5 text-red-600">
+                into action 
               </p>
             </div>
-            <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-16">
+            <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
               We believe every organization has the capacity for digital
               transformation and that continuous learning delivers improved
               outcomes when we feel comfortable applying what we’ve learned. This
@@ -95,20 +87,21 @@ const Equip = ({ data }) => {
         </section>
         <section
           id="latestPosts"
-          className="latestTrained min-h-screen mt-16 pt-24 relative"
+          className="latestTrained min-h-screen mt-4 relative px-8 sm:px-16 md:px-24 2xl:cardPadding"
         >
-          <img
-            className="z-10 invisible md:visible"
-            src={pinBlue}
-            style={pinBlueStyleTwo}
-          />
-          <img className="" src={unicornStars} style={unicornStarStyle} />
+          <img className="" src={unicornStars} style={unicornStarStyle} alt="unicorn with star trail"/>
           <div className="mt-16 mx-auto relative py-16">
             <div className="md:px-16 sticky top-0 bg-white">
               <h2
-                className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16"
+                className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex items-center"
                 style={battleText}
               >
+                <img
+                  className="justify-self-bottom"
+                  style={{ maxWidth: "70px" }}
+                  src={pinBlue}
+                  alt="Unicorn standing on card"
+                />
                 Latest Posts
               </h2>
             </div>
