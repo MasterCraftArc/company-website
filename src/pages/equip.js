@@ -46,7 +46,7 @@ const Equip = ({ data }) => {
             className="pb-8 h-full flex flex-col justify-center"
             style={{ color: "red" }}
           >
-            <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-bold">
+            <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-bold">
               <p className="">
                 The Defense Unicorns Blog
               </p>
@@ -69,8 +69,8 @@ const Equip = ({ data }) => {
             <a
               aria-hidden="true"
               href="#latestPosts"
-              className={`text-5xl xl:text-6xl 2xl:text-7xl w-1/12 absolute bottom-0 animate-bounce`}
-              style={{ left: "50%" }}
+              className={`text-5xl xl:text-6xl 2xl:text-7xl w-1/12 absolute bottom-5 animate-bounce text-center w-full`}
+              // style={{ left: "50%" }}
             >
               <motion.i
                 initial={{ opacity: 0 }}
