@@ -61,7 +61,7 @@ const Equip = ({ data }) => {
               <p className="mt-5  text-red-600">
                 Translating thoughts 
               </p>
-              <p className=" text-red-600">
+              <p className="text-red-600">
               into action 
               </p>
             </div>
