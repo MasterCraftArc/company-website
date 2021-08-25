@@ -9,13 +9,12 @@ import Button from "../components/button";
 import Footer from "../components/footer";
 import contactBg from "../images/contact.png";
 
+
 const textAreaStyle = {
   height: "200px",
+  color: "rgb(94,110,129)",
 };
 
-const formContainer = {
-  height: "63vh",
-};
 
 class Training extends React.Component {
   constructor(props) {
@@ -51,18 +50,16 @@ class Training extends React.Component {
   render() {
     return (
       <>
-        <StyledBackgroundSection>
-          <main className="contact min-h-screen w-full flex items-center justify-center">
+        <StyledBackgroundSection className="min-h-screen">
+          <main className="contact w-full flex items-center justify-center">
             <SiteHelmet title="Training" />
             <Header background={contactBg} />
             <section
-              className="rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4  mx-auto mt-10 bg-white bg-opacity-70"
-              style={formContainer}
-            >
-              <h1 className="text-center pt-5 sm:pt-7 md:pt-10 mb-3 font-bold text-4xl text-red-500">
+              className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 mt-10 opacity-90">
+              <h1 className="text-center font-black text-5xl text-white pt-12 pb-6">
                 DevSecOps Training Signup
               </h1>
-              <div className=" w-9/12 h-full mx-auto py-2 sm:pt-0 border-dark flex justify-between">
+              <div className="w-9/12 h-full mx-auto py-6  border-dark flex justify-between">
                 <form
                   red={this.domRef}
                   data-netlify="true"
@@ -121,10 +118,8 @@ class Training extends React.Component {
               </div>
             </section>
           </main>
+          <Footer background={false}/>
         </StyledBackgroundSection>
-        <div className="">
-          <Footer />
-        </div>
       </>
     );
   }
