@@ -17,7 +17,7 @@ const CaseStudies = () => {
           </div>
           <img
             src={whatWeDoPng}
-            className="blobTop max-w-full pb-24"
+            className="absolute blobTop max-w-full pb-24"
             alt="What we do"
           />
         </div>

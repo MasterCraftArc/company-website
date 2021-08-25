@@ -65,6 +65,7 @@ body {
 /*******************************************/
 
 /** NAV **/
+
 .navMenu {
   display: flex;
   color: inherit;
@@ -97,6 +98,14 @@ body {
   filter: drop-shadow(2px 2px 2px black);
 }
 
+.navMobile{
+  position: fixed !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  background-color: white;
+  bottom: 0;
+  right: 0;
+}
 @media only screen and (min-width: 768px) {
   .parent:hover .child {
     opacity: 1;
@@ -197,7 +206,6 @@ body {
 }
 
 .blobTop {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

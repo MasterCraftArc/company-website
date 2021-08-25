@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
+import { motion } from "framer-motion";
 
 const logoStyle = {
   maxWidth: "16vh",
 };
+
+const popUpStyle = {
+}
+
 
 const setRefFilter = (ref, filter) => {
   if (ref.current) {
@@ -66,7 +71,7 @@ function Header(props) {
                 />
               </Link>
               <button
-                className="text-white cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                className="text-white cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none z-20"
                 type="button"
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
@@ -75,10 +80,11 @@ function Header(props) {
             </div>
             <div
               className={
-                "lg:flex flex-grow items-center bg-white rounded-xl lg:bg-transparent py-2" +
-                (navbarOpen ? " flex" : " hidden")
+                "hidden lg:flex flex-grow items-center bg-white rounded-xl lg:bg-transparent py-2" 
+                
               }
               id="example-navbar-danger"
+              style={popUpStyle}
             >
               <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 ">
                 <li className="nav-item">
@@ -109,6 +115,20 @@ function Header(props) {
             </div>
           </div>
         </div>
+
+        {/* <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            type: "spring",
+            delay: 0.5,
+            default: { duration: 2.5 },
+          }}
+          className={"z-10 min-h-screen w-screen bg-blue-900 float-left absolute mt-0" }
+          // + (navbarOpen ? " flex" : " hidden")}
+        >
+
+        </motion.div> */}
       </nav>
     </>
   );
