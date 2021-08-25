@@ -17,7 +17,7 @@ const pageStyles = {
 // markup
 const Train = () => {
   return (
-    <div style={pageStyles} className="home flex flex-col bg-top w-full">
+    <div style={pageStyles} className="home flex flex-col bg-top max-w-screen">
       <SiteHelmet
         title="Train"
         description="Become a DevSecOps Hero with Defense Unicorns"

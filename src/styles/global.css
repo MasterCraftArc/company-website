@@ -74,7 +74,7 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: "Lato", "Brush Script MT", "Garamond";
+  font-family: "Poppins", "Lato", "Garamond";
 }
 
 /******************************************
@@ -184,7 +184,6 @@ body {
 /* HERO */
 
 .homeHero {
-  height: 100vh;
   background: transparent;
   margin-bottom: "25%";
 }

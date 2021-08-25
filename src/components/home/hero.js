@@ -36,7 +36,7 @@ const tagLineItems = [
 const HomeHero = () => {
   return (
     <BackgroundSection className="bg-cover bg-center">
-      <section className="homeHero py-24 flex flex-col justify-center max-w-full">
+      <section className="homeHero min-h-screen py-24 flex flex-col justify-center max-w-full">
         <div className="mb-24 ">
           <h1
             className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl text-white lg:ml-24 md:ml-16 sm:ml-8 ml-4 mt-10`}
@@ -91,7 +91,7 @@ const HomeHero = () => {
         <a
           aria-hidden="true"
           href="#trainForBattle"
-          className={`${TITLE_TEXT} 2xl:text-7xl absolute bottom-2 animate-bounce w-full text-center`}
+          className={`${TITLE_TEXT} 2xl:text-7xl absolute bottom-2 animate-bounce w-full text-center hidden md:block`}
         >
           <motion.i
             initial={{ opacity: 0 }}

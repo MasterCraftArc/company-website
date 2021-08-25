@@ -12,7 +12,7 @@ const TrainForBattle = () => {
   return (
     <section
       id="trainForBattle"
-      className="trainForBattle flex flex-col min-h-screen justify-center py-44 relative"
+      className="trainForBattle flex flex-col md:min-h-screen md:justify-center md:py-44 relative"
     >
       <img
         className="absolute top-7  invisible md:visible"
@@ -21,15 +21,14 @@ const TrainForBattle = () => {
         style={{ right: "14%", width: "150px", zIndex: "-2", paddingTop: "6%" }}
       />
 
-      <div className="w-5/6  md:w-full mx-auto mt-10 ">
+      <div className="w-11/12 sm:w-5/6  md:w-full mx-auto mt-16 md:mt-10">
         <h2
           className={`xl:text-6xl text-3xl sm:text-4xl font-bold mb-5 sm:pl-4 md:pl-16 lg:pl-32 2xl:pl-44 flex items-center text-blue-900`}
         >
           <img
             className="justify-self-bottom w-1/12 md:pinSize"
-            // style={{ maxWidth: "60px" }}
             src={pin}
-            alt="Unicorn standing on card"
+            alt="Unicorn pin"
           />
           Let us train you for battle
         </h2>
