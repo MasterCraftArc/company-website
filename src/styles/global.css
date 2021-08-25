@@ -270,10 +270,11 @@ body {
 
 .contactCard {
   background-color: rgb(13, 51, 100);
+  margin-top: 15%;
 }
 
 .contactHeight {
-  height: "90%";
+  /* height: "110vh"; */
 }
 
 .contact input {
