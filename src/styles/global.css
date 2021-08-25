@@ -112,13 +112,11 @@ body {
   filter: drop-shadow(2px 2px 2px black);
 }
 
-.navMobile{
-  position: fixed !important;
-  height: 100vh !important;
+.mobileNav{
+  height: 110vh !important;
   width: 100vw !important;
-  background-color: white;
-  bottom: 0;
-  right: 0;
+  background-color: blue;
+  flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
   .parent:hover .child {
@@ -184,7 +182,6 @@ body {
 
 .homeHero {
   height: 100vh;
-  width: 100%;
   background: transparent;
   margin-bottom: "25%";
 }
