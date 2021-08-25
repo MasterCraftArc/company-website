@@ -1,17 +1,22 @@
+.carousel{
+  margin-right: 20px;
+  margin-left: 20px;
+}
 .carousel .slick-track {
-  padding-bottom: 75px !important;
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
 }
 
 .carousel .slick-next::before {
-  color: rgba(65, 255, 255);
+  color: rgba(30, 58, 138, 1);
 }
 
 .carousel .slick-prev::before {
-  color: rgba(65, 255, 255);
+  color: rgba(30, 58, 138, 1);
 }
 
 .carousel .slick-arrow {
-  transform: scale(2);
+  transform: scale(1.8);
 }
 
 .carousel .slick-dots li button {
@@ -24,5 +29,5 @@
   transform: scale(3);
 }
 .carousel .slick-dots li.slick-active button::before {
-  color: rgb(130, 64, 238) !important;
+  color: rgba(30, 58, 138, 1);
 }

@@ -21,6 +21,9 @@
       transform: none;
       left: unset;
     }
+    .pinSize{
+      max-width: 60px;
+    }
   }
 }
 
