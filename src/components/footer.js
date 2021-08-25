@@ -20,8 +20,6 @@ const socialsBox = {
   color: 'white',
 };
 
-// const menuBox = {
-// };
 
 const linkColor = {
   fontSize: "14px",
@@ -33,9 +31,6 @@ const menu = {
 const addressBox = {
 }
 
-// const copyRight = {
-//   top: '81%',
-// }
 
 function Footer({ background }) {
   const showBackground = background === undefined ? true : background;

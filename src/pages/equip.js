@@ -58,12 +58,9 @@ const Equip = ({ data }) => {
               </p>
             </div>
             <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
-              We believe every organization has the capacity for digital
-              transformation and that continuous learning delivers improved
-              outcomes when we feel comfortable applying what we’ve learned. This
-              blog is your source for context-first guides, stories, and news on
-              the people, process, and technology necessary to accelerate your
-              mission.
+              This blog is your source for context-first guides, 
+              stories and news on the people, 
+              process and technology necessary to accelerate your mission.
             </p>
 
             <a
