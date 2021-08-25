@@ -83,7 +83,7 @@ function Footer({ background }) {
           
         
         <div className="flex flex-row md:mx-12 mx-auto text-white text-2xl w-full justify-around sm:mt-10">
-              <Link to="/index" className="footerLink" style={linkColor}>
+              <Link to="/" className="footerLink" style={linkColor}>
                 <p style={menu}>Train</p>
               </Link>
               <Link to="/equip" className="footerLink" style={linkColor}>
