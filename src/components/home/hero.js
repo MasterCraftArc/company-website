@@ -65,7 +65,7 @@ const HomeHero = () => {
               transition={{
                 delay: 2,
               }}
-              className="block sm:inline-block text-white"
+              className="block sm:inline-block"
             >
               <ReactRotatingText items={tagLineItems} />
             </motion.span>
