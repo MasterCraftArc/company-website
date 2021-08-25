@@ -21,6 +21,9 @@
       transform: none;
       left: unset;
     }
+    .pinSize{
+      max-width: 60px;
+    }
   }
 }
 
@@ -79,6 +82,7 @@ body {
 /*******************************************/
 
 /** NAV **/
+
 .navMenu {
   display: flex;
   color: inherit;
@@ -111,6 +115,12 @@ body {
   filter: drop-shadow(2px 2px 2px black);
 }
 
+.mobileNav{
+  height: 110vh !important;
+  width: 100vw !important;
+  background-color: blue;
+  flex-direction: column;
+}
 @media only screen and (min-width: 768px) {
   .parent:hover .child {
     opacity: 1;
@@ -175,7 +185,6 @@ body {
 
 .homeHero {
   height: 100vh;
-  width: 100%;
   background: transparent;
   margin-bottom: "25%";
 }
@@ -211,7 +220,6 @@ body {
 }
 
 .blobTop {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

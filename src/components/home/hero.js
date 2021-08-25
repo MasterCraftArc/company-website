@@ -36,8 +36,8 @@ const tagLineItems = [
 const HomeHero = () => {
   return (
     <BackgroundSection className="bg-cover bg-center">
-      <section className="homeHero py-24 flex flex-col justify-center relative">
-        <div className="mb-24">
+      <section className="homeHero py-24 flex flex-col justify-center max-w-full">
+        <div className="mb-24 ">
           <h1
             className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl text-white lg:ml-24 md:ml-16 sm:ml-8 ml-4 mt-10`}
           >
@@ -48,7 +48,8 @@ const HomeHero = () => {
             variants={sentenceAnim}
             initial="hidden"
             animate="visible"
-            className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl lg:ml-24 md:ml-16 sm:ml-8 ml-4 text-red-500 font-bold`}
+            className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl lg:ml-24 md:ml-16 sm:ml-8 ml-4 text-red-500 font-bold ` }
+            
           >
             {tagLine.split("").map((char, index) => {
               return (

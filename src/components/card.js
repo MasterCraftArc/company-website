@@ -36,9 +36,8 @@ const Card = React.forwardRef((props, ref) => (
     <div className="h-3/6 bg-gray-50 w-full">
       <img
         src={props.imgDisplay}
-        className="card-img-top mx-auto h-full w-full py-2"
+        className="card-img-top mx-auto h-full w-auto py-2"
         alt="blogpost thumbnail"
-        // style={{ maxHeight: "170px" }}
       />
     </div>
     <div className="h-2/6 card-body text-center p-5">
