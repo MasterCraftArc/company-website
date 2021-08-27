@@ -127,8 +127,7 @@ function Header(props) {
               initial={{ x: -1000 }}
               animate={{ x: 0 }}
               transition={{
-                type: "spring",
-                stiffness: 70,
+                type: "tween",
               }}
               exit={{ x: -1000 }}
               className={
