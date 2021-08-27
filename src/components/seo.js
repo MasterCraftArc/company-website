@@ -21,7 +21,6 @@ const Seo = ({ description, lang, meta, title, route }) => {
         site {
           siteMetadata {
             title
-            image
             siteUrl
             keywords
             description
@@ -32,7 +31,6 @@ const Seo = ({ description, lang, meta, title, route }) => {
   );
 
   const keywords = site.siteMetadata.keywords;
-  const image = site.siteMetadata.image;
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = title || site.siteMetadata.title;
 
@@ -65,16 +63,8 @@ const Seo = ({ description, lang, meta, title, route }) => {
           content: `website`,
         },
         {
-          property: `og:image`,
-          content: image,
-        },
-        {
           name: `twitter:card`,
           content: `summary`,
-        },
-        {
-          name: `twitter:image`,
-          content: image,
         },
         {
           name: `twitter:creator`,
