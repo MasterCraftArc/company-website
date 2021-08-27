@@ -3,8 +3,10 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: `Defense Unicorns`,
+    image: `/img/SocialPreview.png`,
+    description: `Become a DevSecOps Hero with Defense Unicorns`,
     siteUrl: `https://defenseunicorns.com`,
-    keywords: `DevSecOps, DevOps, DefenseUnicorns, Kubernetes`,
+    keywords: `DevSecOps, DevOps, DefenseUnicorns, Kubernetes, Cloud Native`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
