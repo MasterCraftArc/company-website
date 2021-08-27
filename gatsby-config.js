@@ -3,7 +3,6 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: `Defense Unicorns`,
-    image: `/img/du_logo_rgb_for-blue-bg_stacked.png`,
     siteUrl: `https://defenseunicorns.com`,
     keywords: `DevSecOps, DevOps, DefenseUnicorns, Kubernetes`,
   },
