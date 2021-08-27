@@ -151,8 +151,8 @@ function Header(props) {
               />
 
               <ul
-                className=" text-white w-full flex flex-col justify-around list-none my-auto text-center font-bold"
-                style={{ height: "50vh" }}
+                className=" text-white w-full flex flex-col justify-around list-none my-auto text-center font-bold pb-44"
+                style={{ height: "45vh" }}
               >
                 <li className="nav-item">
                   <Link
