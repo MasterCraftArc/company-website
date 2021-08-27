@@ -7,9 +7,7 @@ const logoStyle = {
   maxWidth: "16vh",
 };
 
-const popUpStyle = {
-}
-
+const popUpStyle = {};
 
 const setRefFilter = (ref, filter) => {
   if (ref.current) {
@@ -24,7 +22,7 @@ const setRefClassName = (ref, className) => {
 };
 
 function Header(props) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navDrawerOpen, setNavDrawerOpen] = React.useState(false);
   const stickyHeader = React.createRef();
   const logoRef = React.createRef();
   const mobileRef = React.createRef();
@@ -33,11 +31,11 @@ function Header(props) {
     if (!props.background && window.scrollY < 50) {
       setRefClassName(stickyHeader, "navClear");
       setRefFilter(logoRef, "drop-shadow(2px 2px 2px black)");
-      setRefClassName(mobileRef, "bi bi-list")
+      setRefClassName(mobileRef, "bi bi-list");
     } else {
       setRefClassName(stickyHeader, "navBg md:px-24");
       setRefFilter(logoRef, "none");
-      setRefClassName(mobileRef, "bi bi-list text-black")
+      setRefClassName(mobileRef, "bi bi-list text-black");
     }
   };
 
@@ -45,6 +43,11 @@ function Header(props) {
     setRefClassName(stickyHeader, "navClear");
     window.addEventListener("scroll", () => handleScroll());
   });
+
+  useEffect(() => {
+    if (navDrawerOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+  }, [navDrawerOpen]);
 
   return (
     //https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars
@@ -55,7 +58,7 @@ function Header(props) {
           zIndex: "15",
           width: "100%",
           top: "0",
-          position: "fixed"
+          position: "fixed",
         }}
       >
         <div className="w-full" ref={stickyHeader}>
@@ -76,7 +79,7 @@ function Header(props) {
               <button
                 className="text-white cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                 type="button"
-                onClick={() => setNavbarOpen(!navbarOpen)}
+                onClick={() => setNavDrawerOpen(!navDrawerOpen)}
               >
                 <i className="bi bi-list" ref={mobileRef}></i>
               </button>
@@ -119,66 +122,67 @@ function Header(props) {
         </div>
 
         <AnimatePresence>
-          {navbarOpen && (
+          {navDrawerOpen && (
             <motion.div
-            initial={{ x: -1000 }}
-            animate={{ x: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 70,
-            }}
-            exit={ {x: -1000}}
-            className={"z-20 min-h-screen w-screen bg-white fixed top-0 left-0 overflow-y-hidden" 
-            + (navbarOpen ? " flex flex-col" : " hidden")}
-          >
-            <button
+              initial={{ x: -1000 }}
+              animate={{ x: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 70,
+              }}
+              exit={{ x: -1000 }}
+              className={
+                "z-20 min-h-screen w-screen bg-white fixed top-0 left-0 overflow-y-hidden" +
+                (navDrawerOpen ? " flex flex-col" : " hidden")
+              }
+            >
+              <button
                 className="text-blue-900 cursor-pointer text-3xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none z-30 absolute top-10 right-10"
                 type="button"
-                onClick={() => setNavbarOpen(!navbarOpen)}
+                onClick={() => setNavDrawerOpen(!navDrawerOpen)}
               >
                 <i className="bi bi-x-lg"></i>
-            </button>
-            <img
-                  className="mt-4 ml-16"
-                  src={logo}
-                  alt="Defense Unicorns Logo"
-                  style={logoStyle}
-                  // ref={logoRef}
-            />
-  
-            <ul className=" text-white w-full flex flex-col justify-around list-none my-auto text-center font-bold" style={ {height: '50vh'} }>
-        
-         
-              <li className="nav-item">
-                <Link
-                  className="px-3 text-4xl uppercase text-blue-900"
-                  to="/"
-                >
-                  Train
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/equip"
-                  className="text-4xl flex uppercase text-blue-900"
-                >
-                  Equip
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 text-4xl uppercase text-blue-900"
-                  to="/contact"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
+              </button>
+              <img
+                className="mt-4 ml-16"
+                src={logo}
+                alt="Defense Unicorns Logo"
+                style={logoStyle}
+                // ref={logoRef}
+              />
+
+              <ul
+                className=" text-white w-full flex flex-col justify-around list-none my-auto text-center font-bold"
+                style={{ height: "50vh" }}
+              >
+                <li className="nav-item">
+                  <Link
+                    className="px-3 text-4xl uppercase text-blue-900"
+                    to="/"
+                  >
+                    Train
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/equip"
+                    className="text-4xl flex uppercase text-blue-900"
+                  >
+                    Equip
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="px-3 text-4xl uppercase text-blue-900"
+                    to="/contact"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
           )}
         </AnimatePresence>
-
-        
       </nav>
     </>
   );
