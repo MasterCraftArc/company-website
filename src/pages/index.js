@@ -19,7 +19,7 @@ const Train = () => {
   return (
     <div style={pageStyles} className="home flex flex-col bg-top max-w-screen">
       <SiteHelmet
-        title="Train"
+        route="Train"
         description="Become a DevSecOps Hero with Defense Unicorns"
       />
       <Header />
@@ -29,7 +29,6 @@ const Train = () => {
       <CaseStudies />
       <Footer />
     </div>
-
   );
 };
 
