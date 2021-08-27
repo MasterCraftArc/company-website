@@ -29,7 +29,6 @@ const Train = () => {
       <CaseStudies />
       <Footer />
     </div>
-
   );
 };
 

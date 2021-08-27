@@ -21,6 +21,7 @@ const WhoWeAre = () => {
             </svg>
           </div>
           <img
+            loading="lazy"
             src={whoWeAre}
             className="absolute blobTop z-10 p-16 lg:p-5"
             alt="unicorn under magnifying glass"

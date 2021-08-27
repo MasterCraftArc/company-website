@@ -16,6 +16,7 @@ const CaseStudies = () => {
             </svg>
           </div>
           <img
+            loading="lazy"
             src={whatWeDoPng}
             className="absolute blobTop max-w-full pb-24"
             alt="What we do"
@@ -41,6 +42,7 @@ const CaseStudies = () => {
             software integration.
           </p>
           <img
+            loading="lazy"
             className="caseStudies md:w-full py-5 pt-10"
             src={keyPoints}
             alt="Case Study Icons for Objectives solutions and results"
@@ -54,14 +56,6 @@ const CaseStudies = () => {
             />
           </div>
         </div>
-        {/* <div className="p-16 pt-0 lg:block hidden relative">
-          <div className="blob tk-blob heavy">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317.5 353.7">
-              <path d="M291.8 55.3c30.4 39.9 30.7 102 17 160.4-13.8 58.3-41.6 112.9-84 130.9s-99.3-.6-137-30C50.2 287.1 32 246.9 17 200.5 2.1 154.1-9.6 101.4 11.5 63.6 32.6 25.8 86.6 2.8 143.8.2c57.2-2.6 117.6 15.2 148 55.1z"></path>
-            </svg>
-          </div>
-          <img src={whatWeDoPng} className="absolute top-10" alt="Who we are" />
-        </div> */}
       </div>
 
       <img

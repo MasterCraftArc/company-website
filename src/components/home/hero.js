@@ -48,8 +48,7 @@ const HomeHero = () => {
             variants={sentenceAnim}
             initial="hidden"
             animate="visible"
-            className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl lg:ml-24 md:ml-16 sm:ml-8 ml-4 text-red-500 font-bold ` }
-            
+            className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl lg:ml-24 md:ml-16 sm:ml-8 ml-4 text-red-500 font-bold `}
           >
             {tagLine.split("").map((char, index) => {
               return (
@@ -58,7 +57,7 @@ const HomeHero = () => {
                 </motion.span>
               );
             })}
-            
+
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
