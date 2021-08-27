@@ -9,12 +9,10 @@ import Button from "../components/button";
 import Footer from "../components/footer";
 import contactBg from "../images/contact.png";
 
-
 const textAreaStyle = {
   height: "200px",
   color: "rgb(94,110,129)",
 };
-
 
 class Training extends React.Component {
   constructor(props) {
@@ -52,10 +50,9 @@ class Training extends React.Component {
       <>
         <StyledBackgroundSection className="min-h-screen">
           <main className="contact w-full flex items-center justify-center">
-            <SiteHelmet title="Training" />
+            <SiteHelmet route="Training" />
             <Header background={contactBg} />
-            <section
-              className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 mt-10 opacity-90">
+            <section className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 mt-10 opacity-90">
               <h1 className="text-center font-black text-5xl text-white pt-12 pb-6">
                 DevSecOps Training Signup
               </h1>
@@ -118,7 +115,7 @@ class Training extends React.Component {
               </div>
             </section>
           </main>
-          <Footer background={false}/>
+          <Footer background={false} />
         </StyledBackgroundSection>
       </>
     );
