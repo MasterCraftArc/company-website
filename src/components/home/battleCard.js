@@ -3,7 +3,7 @@ import { navigate } from "gatsby";
 
 const cardStyle = {
   maxWidth: "355px",
-  height: "450px",
+  maxHeight: "450px",
   borderRadius: "25px",
   backgroundColor: "#F3F3F3",
 };
