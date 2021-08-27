@@ -45,8 +45,8 @@ function Header(props) {
   });
 
   useEffect(() => {
-    if (navDrawerOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "auto";
+    if (navDrawerOpen) document.body.style.overflowY = "hidden";
+    else document.body.style.overflowY = "auto";
   }, [navDrawerOpen]);
 
   return (
