@@ -7,7 +7,7 @@ import Button from "../components/button";
 const Thankyou = () => {
   return (
     <StyledBackgroundSection className="min-h-screen flex flex-col md:pt-24 xl:pt-0 justify-center items-center">
-      <SiteHelmet title="Thank You" />
+      <SiteHelmet route="Thank You" />
       <img
         src={logo}
         alt="Defense Unicorns Logo"

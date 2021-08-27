@@ -5,7 +5,6 @@ import aquisitions from "../../images/home/card2.png";
 import Carousel from "../carousel/carousel";
 import BattleCard from "./battleCard";
 import unicorn from "../../images/unicornSingle.png";
-
 import pin from "../../images/locationPin.png";
 
 const TrainForBattle = () => {

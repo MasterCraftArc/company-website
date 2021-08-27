@@ -1,18 +1,14 @@
-.carousel{
-  margin-right: 35px;
-  margin-left: 35px;
-}
 .carousel .slick-track {
   padding-top: 25px !important;
   padding-bottom: 25px !important;
 }
 
 .carousel .slick-next::before {
-  color: rgba(30, 58, 138, 1);
+  display: none;
 }
 
 .carousel .slick-prev::before {
-  color: rgba(30, 58, 138, 1);
+  display: none;
 }
 
 .carousel .slick-arrow {

@@ -37,9 +37,9 @@ const Equip = ({ data }) => {
   const cardRefs = posts.map(() => React.createRef());
 
   return (
-    <BackgroundSection className="" >
+    <BackgroundSection className="">
       <div className="h-screen equip blog fontTitle" style={pageStyles}>
-        <SiteHelmet title="Equip" description="Defense Unicorns Blog" />
+        <SiteHelmet route="Equip" description="Defense Unicorns Blog" />
         <Header />
         <section className="hero flex flex-col justify-center">
           <div
@@ -47,20 +47,14 @@ const Equip = ({ data }) => {
             style={{ color: "red" }}
           >
             <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-bold">
-              <p className="">
-                The Defense Unicorns Blog
-              </p>
-              <p className="mt-5 text-red-600">
-                translating thoughts 
-              </p>
-              <p className="mt-5 text-red-600">
-                into action 
-              </p>
+              <p className="">The Defense Unicorns Blog</p>
+              <p className="mt-5 text-red-600">translating thoughts</p>
+              <p className="mt-5 text-red-600">into action</p>
             </div>
             <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
-              This blog is your source for context-first guides, 
-              stories and news on the people, 
-              process and technology necessary to accelerate your mission.
+              This blog is your source for context-first guides, stories and
+              news on the people, process and technology necessary to accelerate
+              your mission.
             </p>
 
             <a
@@ -86,7 +80,12 @@ const Equip = ({ data }) => {
           id="latestPosts"
           className="latestTrained min-h-screen mt-4 relative px-8 sm:px-16 md:px-24 2xl:cardPadding"
         >
-          <img className="" src={unicornStars} style={unicornStarStyle} alt="unicorn with star trail"/>
+          <img
+            className=""
+            src={unicornStars}
+            style={unicornStarStyle}
+            alt="unicorn with star trail"
+          />
           <div className="mt-16 mx-auto relative py-16">
             <div className="md:px-16 sticky top-0 bg-white">
               <h2
@@ -108,7 +107,9 @@ const Equip = ({ data }) => {
                 return (
                   <Card
                     key={`${post.fields.slug}-${i}`}
-                    imgDisplay={post.frontmatter.image.childImageSharp.fluid.src}
+                    imgDisplay={
+                      post.frontmatter.image.childImageSharp.fluid.src
+                    }
                     ref={cardRefs[i]}
                     category={post.frontmatter.category}
                     title={post.frontmatter.title}
@@ -125,7 +126,6 @@ const Equip = ({ data }) => {
         <Footer />
       </div>
     </BackgroundSection>
-
   );
 };
 export default Equip;

@@ -16,7 +16,7 @@ const buttonStyle = {
 const BlogPost = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <SiteHelmet title="Key Terms Cloud-Native Software Delivery: A Fact Sheet" />
+      <SiteHelmet route="Key Terms Cloud-Native Software Delivery: A Fact Sheet" />
       <header className="postHeader">
         <div className="postHeaderContainer">
           <Header />
