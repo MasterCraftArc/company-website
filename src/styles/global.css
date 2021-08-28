@@ -21,8 +21,11 @@
       transform: none;
       left: unset;
     }
-    .pinSize{
+    .pinDesktop{
       max-width: 60px;
+    }
+    .pinMobile{
+      max-width: 40px;
     }
   }
 }
@@ -347,7 +350,7 @@ body {
   background: #fff;
   box-shadow: 0px 0px 10px rgba(218, 163, 163, 0.5);
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 
