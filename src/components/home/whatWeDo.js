@@ -26,7 +26,7 @@ const WhatWeDo = () => {
             className={`text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium md:font-bold text-blue-900 flex items-center`}
           >
           <img
-            className="justify-self-bottom pinMobile md:pinDesktop mr-2 md:mr-0"
+            className="pinMobile md:pinDesktop mr-2 md:mr-0"
             src={pin}
             alt="Unicorn pin"
           />
