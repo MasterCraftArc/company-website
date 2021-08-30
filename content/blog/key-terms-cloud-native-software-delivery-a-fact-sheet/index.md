@@ -1,7 +1,7 @@
 ---
-title: "Key Terms Cloud-Native Software Delivery: A Fact Sheet"
+title: "Key Terms in Cloud-Native Software Delivery: A Fact Sheet"
 author: Defense Unicorns Staff
-date: 2021-08-04T16:23:03.717Z
+date: 2021-08-30T16:23:03.717Z
 description: Modern software is moving fast. While the associated lexicon is
   continuously changing, there are a number of core concepts and...
 published: true
