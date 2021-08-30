@@ -1,4 +1,4 @@
-const { G_4_TAG } = require("./env.js");
+const { G_4_TAG, G_UNIVERSAL } = require("./env.js");
 
 module.exports = {
   siteMetadata: {
@@ -69,6 +69,15 @@ module.exports = {
         pluginConfig: {
           head: true,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: G_UNIVERSAL,
+        head: true,
+        anonymize: true,
+        respectDNT: true,
       },
     },
     {
