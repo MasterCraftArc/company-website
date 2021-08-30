@@ -35,24 +35,25 @@ Container orchestrators automate the deployment and management of containers on 
 
 Within the DoD context, containerized microservices and container orchestration can be used to provide a common, but extensible, platform that mission applications can be developed and run on top of. A common, secure platform would allow for better alignment between platform teams and mission application teams. In other words, creating greater standardization among platforms, while preserving the ability to quickly adapt and integrate new products or capabilities, would create a positive feedback loop between mission application teams and platform teams.
 
-### Infrastructure as Code 
+### Infrastructure as Code
 
 Infrastructure as Code (IaC) is an approach to managing the technical infrastructure required to run containerized applications. Instead of traditional methods to document procedures, infrastructure as code automates and source controls the configuration of infrastructure. The end result creates a declarative, repeatable configuration that automates the infrastructure provisioning effectively managing it as a single piece of software.
 
-### Configuration as Code 
+### Configuration as Code
 
 Configuration as Code (CaC) is an approach to managing the configuration of applications’ initial state. Like infrastructure as code, this practice results in a declarative state that can be automated, repeated and managed as a single piece of software.
 
-### \
-Kubernetes
+### Kubernetes
 
-Containers are deployed using container orchestration tools, such as Kubernetes. Kubernetes is an open source container orchestration platform that automates the deployment, scaling, and management of containerized software.Kubernetes is “infrastructure” agnostic meaning it can be deployed and executed regardless of hardware specifications (i.e., in the cloud, on your laptop, or an air gapped server). IaC and CaC can provide automated provisioning of this infrastructure and the deployment of Kubernetes.
+Containers are deployed using container orchestration tools, such as Kubernetes. Kubernetes is an open source container orchestration platform that automates the deployment, scaling, and management of containerized software.
 
-### Declarative State 
+Kubernetes is “infrastructure” agnostic meaning it can be deployed and executed regardless of hardware specifications (i.e., in the cloud, on your laptop, or an air gapped server). IaC and CaC can provide automated provisioning of this infrastructure and the deployment of Kubernetes.
+
+### Declarative State
 
 The combination of Infrastructure as Code, Configuration as Code, and containerized software provide a declarative state. Declarative state is the future of continuous delivery. Kubernetes is among the largest growing ecosystems and its services, support, and tools are widely available.
 
-### Continuous Integration/Continuous Delievery 
+### Continuous Integration/Continuous Delievery
 
 Continuous delivery (CD) means we have the capability of releasing the latest changes validated by the pipeline to production on demand. Continuous deployment means that every change we make will flow directly to production unless the CD pipeline invalidates the delivery. In either case, a true CD flow will have no human intervention between when code is accepted into the trunk and when it is delivered. Very high performing teams will deliver changes as rapidly as possible. Depending on the delivery context, this could be several times an hour, day, or week. The goal of CD is to minimize risk and cost of change by relentlessly driving down the size of change to expose and correct inefficiencies in the process and improve quality feedback loops. CD is not a technology or tool. CD is how we use the tools to improve quality, organizational efficiency, and customer outcomes.
 
@@ -76,29 +77,26 @@ DevOps is neither a tool, a team, nor a role, but is a way of operating where th
 
 There is no real difference between DevOps and DevSecOps. DevOps is focused on improving the flow of value to the end-user. Insecure software is not valuable because it puts the end-user at risk. DevSecOps was coined in an effort to emphasize that security was core to DevOps.
 
-### Air Gapped Systems 
+### Air Gapped Systems
 
 An “air gap” is a cyber security practice commonly employed to enhance a system’s security or defense against cyber events. Air gapped systems are disconnected from the internet and untrusted networks. Critical sectors such as national defense, payments and banking, energy, and aerospace use air gapped systems to improve their cyber security posture for highly sensitive data or transactions. However, air gapped systems present a challenge when they must connect with lower classification systems or servers to exchange data. Most air gapped systems lack run-time monitoring, making it difficult to verify whether a system is adherent to cyber security controls during the data transfer.
 
-### \
-GitOps
+### GitOps
 
 GitOps automates infrastructure provisioning for DevOps teams by dynamically updating infrastructure as code configuration files based on events in the DevOps workflow (i.e., version control, collaboration, merge requests, etc.). In this way, GitOps changes the declarative state of the infrastructure based on the activity of the real-time system or application and allows elastic infrastructure management based on demand. This level of automation reduces the traditional manual workload of provisioning infrastructure and integrates infrastructure operations into the DevOps cycle.
 
-### \
-DevSecOps within the Department of Defense- a mini guide 
+### DevSecOps within the Department of Defense- a mini guide 
 
 *For our partners within DoD, below you’ll find a list of common terms and products within the DevSecOps ecosystem. We’ll be adding to this list over time.*
 
-### \
-DoD Iron Bank 
+### DoD Iron Bank 
 
 DoD’s Iron Bank repository contains fully accredited container images that are deployable on any infrastructure. Iron Bank makes available industry-leading free and open source software and commercial off the shelf software for DoD customers.
 
-### DoD Platform One Big Bang 
+### DoD Platform One Big Bang
 
 Big Bang provides DoD software teams or programs with secure DevSecOps environments that can be customized. Big Bang leverages Infrastructure as Code and Configuration as Code to enable deployment of a declarative platform environment. This consolidates and codifies best security practices into a product that is reliably deployable in a variety of environments.
 
-### Platform One Party Bus 
+### Platform One Party Bus
 
 Party Bus is a deployment of core Big Bang for development, testing, and production environments. Party Bus is a declarative state and Party Bus environments benefit from the Platform One continuous authority to operate.
