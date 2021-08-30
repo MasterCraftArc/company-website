@@ -42,19 +42,20 @@ function Footer({ background }) {
                 <p className="mt-2">Colorado Springs, Co 80903</p>
               </div>
               <div className="socialsBox text-white flex justify-center text-2xl  md:justify-start mt-12 sm:mt-6">
-            <button aria-hidden="true" className="">
-              <i className="bi bi-twitter mr-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
-            </button>
-            <a
+              <a
               aria-hidden="true"
               className=""
-              href="https://www.linkedin.com/company/leapfrog-ai/about/"
+              href="https://www.linkedin.com/company/defense-unicorns"
             >
               <i className="bi bi-linkedin ml-1 mr-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
             </a>
-            <button className="">
-              <i className="bi bi-facebook mr-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
-            </button>
+            <a
+              aria-hidden="true"
+              className=""
+              href="https://github.com/defenseunicorns/zarf"
+            >
+              <i className="bi bi-github mr-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
+            </a>
           </div>
             </div>
           
