@@ -49,7 +49,7 @@ class Contact extends React.Component {
     return (
       <>
         <StyledBackgroundSection className="min-h-screen">
-          <SiteHelmet title="Contact" />
+          <SiteHelmet route="Contact" />
           <Header background={contactBg} />
           <main className="contact w-full flex items-center justify-center">
             <section className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 mt-10 opacity-90">

@@ -10,7 +10,7 @@ const NotFoundPage = ({ data, location }) => {
 
   return (
     <StyledBackgroundSection className="min-h-screen flex flex-col md:pt-24 xl:pt-0 justify-center items-center">
-      <SiteHelmet title="404" />
+      <SiteHelmet route="404" />
       <img
         src={logo}
         alt="Defense Unicorns Logo"

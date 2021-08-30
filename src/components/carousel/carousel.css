@@ -3,14 +3,6 @@
   padding-bottom: 25px !important;
 }
 
-.carousel .slick-next::before {
-  display: none;
-}
-
-.carousel .slick-prev::before {
-  display: none;
-}
-
 .carousel .slick-arrow {
   transform: scale(1.8);
 }

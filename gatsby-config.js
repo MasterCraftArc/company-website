@@ -3,7 +3,10 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: `Defense Unicorns`,
+    image: `/img/SocialPreview.png`,
+    description: `Become a DevSecOps Hero with Defense Unicorns`,
     siteUrl: `https://defenseunicorns.com`,
+    keywords: `DevSecOps, DevOps, DefenseUnicorns, Kubernetes, Cloud Native`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -124,11 +127,11 @@ module.exports = {
       options: {
         name: `Defense Unicorns`,
         short_name: `DU`,
-        start_url: `/`,
+        start_url: `/*`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/unicornSingle.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

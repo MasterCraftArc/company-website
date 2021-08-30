@@ -50,16 +50,16 @@ function Footer({ background }) {
         alt="Defense Unicorns logo"
       />
       <div 
-        className="h-full md:h-2/5 flex md:flex-row flex-col mx-auto content-end items-start w-6/12 mt-16"
+        className="h-5/6 md:h-2/5 flex md:flex-row flex-col mx-auto content-end items-start w-6/12 mt-16"
       >
-            <div className="flex flex-col w-full mx-auto order-last sm:order-first">
+            <div className="flex flex-col w-full mx-auto mt-5 sm:mt-0 order-last sm:order-first">
               <div className="md:text-left text-center text-xl text-white"
                     style={addressBox}>
                 <p className="mt-2">Defense Unicorns</p>
                 <p className="mt-2">555 E Pikes Peak Ave</p>
                 <p className="mt-2">Colorado Springs, Co 80903</p>
               </div>
-              <div style={socialsBox} className="socialsBox mt-6 flex justify-center text-2xl  sm:justify-start">
+              <div style={socialsBox} className="socialsBox flex justify-center text-2xl  sm:justify-start mt-12 sm:mt-6">
             <button aria-hidden="true" className="">
               <i className="bi bi-twitter mr-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
             </button>
@@ -77,7 +77,7 @@ function Footer({ background }) {
             </div>
           
         
-        <div className="flex flex-row md:mx-12 mx-auto text-white text-2xl w-full justify-around sm:mt-10">
+        <div className="flex flex-row md:mx-12 mx-auto text-white text-2xl w-full justify-around sm:mt-10 font-bold">
               <Link to="/" className="footerLink" style={linkColor}>
                 <p style={menu}>Train</p>
               </Link>

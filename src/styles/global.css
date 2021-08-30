@@ -30,12 +30,9 @@
   }
 }
 
-
-
 /* Box Model Hack */
 * {
   box-sizing: border-box;
-
 }
 
 .flexThisBox {
@@ -80,6 +77,11 @@ body {
   font-family: "Poppins", "Lato", "Garamond";
 }
 
+html,
+body {
+  max-width: 100% !important;
+}
+
 /******************************************
 /* GLOBAL LAYOUT
 /*******************************************/
@@ -118,7 +120,7 @@ body {
   filter: drop-shadow(2px 2px 2px black);
 }
 
-.mobileNav{
+.mobileNav {
   height: 110vh !important;
   width: 100vw !important;
   background-color: blue;
@@ -207,7 +209,6 @@ body {
   background-color: transparent;
 }
 
-
 /* ///////////////////////////////////// */
 
 /* WHAT WE DO SECTION */
@@ -226,7 +227,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 .tabTitles {
   color: rgb(157, 181, 205);
