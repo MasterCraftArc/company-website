@@ -1,4 +1,4 @@
-const path = require(`path`);
+const { G_4_TAG, G_UNIVERSAL } = require("./env.js");
 
 module.exports = {
   siteMetadata: {
@@ -62,12 +62,24 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [G_4_TAG],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: G_UNIVERSAL,
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
