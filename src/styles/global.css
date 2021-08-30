@@ -27,6 +27,14 @@
     .pinMobile{
       max-width: 40px;
     }
+    .footerBackgroundDesktop{
+      background: url('../images/footer.png') no-repeat;
+      background-size: cover;
+    }
+    .footerBackgroundMobile{
+      background: url('../images/mobileFooter.jpg') no-repeat;
+      background-size: cover;
+    }
   }
 }
 
