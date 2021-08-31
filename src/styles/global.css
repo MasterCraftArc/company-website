@@ -21,18 +21,18 @@
       transform: none;
       left: unset;
     }
-    .pinDesktop{
+    .pinDesktop {
       max-width: 60px;
     }
-    .pinMobile{
+    .pinMobile {
       max-width: 40px;
     }
-    .footerBackgroundDesktop{
-      background: url('../images/footer.png') no-repeat;
+    .footerBackgroundDesktop {
+      background: url("../images/footer.jpg") no-repeat fixed;
       background-size: cover;
     }
-    .footerBackgroundMobile{
-      background: url('../images/mobileFooter.jpg') no-repeat;
+    .footerBackgroundMobile {
+      background: url("../images/mobileFooter.jpg") no-repeat fixed;
       background-size: cover;
     }
   }
@@ -324,7 +324,7 @@ body {
 
 .postHeaderContainer {
   height: 100%;
-  background: url(../images/blog/postHero.png) no-repeat;
+  background: url(../images/blog/postHero.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
