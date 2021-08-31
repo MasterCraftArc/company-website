@@ -48,7 +48,7 @@ class Contact extends React.Component {
   render() {
     return (
       <>
-        <StyledBackgroundSection className="min-h-screen">
+        <StyledBackgroundSection className="min-h-screen bg-fixed">
           <SiteHelmet route="Contact" />
           <Header background={contactBg} />
           <main className="contact w-full flex items-center justify-center">
