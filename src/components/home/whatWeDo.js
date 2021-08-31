@@ -16,6 +16,7 @@ const WhatWeDo = () => {
             </svg>
           </div>
           <img
+            loading="lazy"
             src={whatWeDoPng}
             className="absolute blobTop max-w-full pb-24"
             alt="What we do"
@@ -41,6 +42,7 @@ const WhatWeDo = () => {
             software integration.
           </p>
           <img
+            loading="lazy"
             className="caseStudies md:w-full py-5 pt-10"
             src={keyPoints}
             alt="Case Study Icons for Objectives solutions and results"

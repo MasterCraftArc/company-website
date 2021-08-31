@@ -35,7 +35,7 @@ const tagLineItems = [
 
 const HomeHero = () => {
   return (
-    <BackgroundSection className="bg-cover bg-center">
+    <BackgroundSection className="bg-cover bg-center bg-fixed">
       <section className="homeHero min-h-screen py-24 flex flex-col justify-center max-w-full">
         <div className="mb-24 ">
           <h1
@@ -48,8 +48,7 @@ const HomeHero = () => {
             variants={sentenceAnim}
             initial="hidden"
             animate="visible"
-            className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl lg:ml-24 md:ml-16 sm:ml-8 ml-4 text-red-500 font-bold ` }
-            
+            className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl lg:ml-24 md:ml-16 sm:ml-8 ml-4 text-red-500 font-bold `}
           >
             {tagLine.split("").map((char, index) => {
               return (
@@ -58,7 +57,7 @@ const HomeHero = () => {
                 </motion.span>
               );
             })}
-            
+
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -73,8 +72,8 @@ const HomeHero = () => {
         </div>
         <h3 className="border-red-500 text-white border-l-4 ml-4 sm:border-l-8 pl-3 text-2xl md:text-3xl xl:text-4xl xl:pr-16 font-normal sm:text-left lg:ml-24 md:ml-16 sm:ml-8  text-center pr-2 sm:pr-24 mb-8">
           <p className="text-left">
-            We help mission focused heroes connect and integrate modern
-            software products for mission success.
+            We help mission focused heroes connect and integrate modern software
+            products for mission success.
           </p>
         </h3>
 

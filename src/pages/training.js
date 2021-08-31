@@ -7,7 +7,6 @@ import * as qs from "query-string";
 import StyledBackgroundSection from "../components/contactBg";
 import Button from "../components/button";
 import Footer from "../components/footer";
-import contactBg from "../images/contact.png";
 
 const textAreaStyle = {
   height: "200px",
@@ -48,10 +47,10 @@ class Training extends React.Component {
   render() {
     return (
       <>
-        <StyledBackgroundSection className="min-h-screen">
+        <StyledBackgroundSection className="min-h-screen bg-fixed">
           <main className="contact w-full flex items-center justify-center">
             <SiteHelmet route="Training" />
-            <Header background={contactBg} />
+            <Header />
             <section className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 mt-10 opacity-90">
               <h1 className="text-center font-black text-5xl text-white pt-12 pb-6">
                 DevSecOps Training Signup

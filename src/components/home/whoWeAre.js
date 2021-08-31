@@ -1,7 +1,7 @@
 import React from "react";
 import whoWeAre from "../../images/home/whoWeAre.png";
 import Button from "../button";
-import whoBackground from "../../images/contact.png";
+import whoBackground from "../../images/contact.jpg";
 import pin from "../../images/locationPin.png";
 
 const WhoWeAre = () => {
@@ -21,6 +21,7 @@ const WhoWeAre = () => {
             </svg>
           </div>
           <img
+            loading="lazy"
             src={whoWeAre}
             className="absolute blobTop z-10 p-16 lg:p-5"
             alt="unicorn under magnifying glass"
