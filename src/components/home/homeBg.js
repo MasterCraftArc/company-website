@@ -38,8 +38,6 @@ const BackgroundSection = ({ className, children }) => {
       className={className}
       backgroundColor={`#040e18`}
       fluid={sources}
-      critical
-      fadeIn="false"
     >
       {children}
     </BackgroundImage>
