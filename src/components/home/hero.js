@@ -73,7 +73,7 @@ const HomeHero = () => {
         <h3 className="border-red-500 text-white border-l-4 ml-4 sm:border-l-8 pl-3 text-2xl md:text-3xl xl:text-4xl xl:pr-16 font-normal sm:text-left lg:ml-24 md:ml-16 sm:ml-8  text-center pr-2 sm:pr-24 mb-8">
           <p className="text-left">
           We help mission focused unicorns become heroes by
-           enabling continuous software delivery.
+          enabling continuous software delivery.
           </p>
         </h3>
 
