@@ -57,3 +57,15 @@
 ## Creating deploy-previews
 
 In order to create a netlify deploy-preview first create a pull request to main. This will trigger the netlify hooks to deploy the deploy preview. The link to the newly deployed site will be inside of the pull request.
+
+## Handling merge conflicts
+
+If unable to merge with the github ui due to merge conflicts follow these steps:  
+**Ask for help if you are not confident merging**.
+
+1. Ensure you are on the branch you are attempting to merge. for example if merging from feature to main, ensure you are on the feature branch in your local dev environment.
+2. ensure you do not have any uncommitted changes. If you do, stash or commit prior to merging.
+3. run `git merge BRANCH_NAME` for the above example it will be `git merge main`
+4. Handle all merge conflicts.
+5. add and commit changes
+6. push resolved merge.
