@@ -9,7 +9,7 @@ const WhoWeAre = () => {
     <section
       className="md:min-h-screen flex items-center justify-center w-full my-16 md:my-0 py-10 md:py-0"
       style={{
-        background: `url(${whoBackground}) fixed no-repeat`,
+        background: `url(${whoBackground}) no-repeat`,
         backgroundSize: "cover",
       }}
     >

@@ -35,7 +35,7 @@ const tagLineItems = [
 
 const HomeHero = () => {
   return (
-    <BackgroundSection className="bg-cover bg-center bg-fixed">
+    <BackgroundSection className="bg-cover bg-center">
       <section className="homeHero min-h-screen py-24 flex flex-col justify-center max-w-full">
         <div className="mb-24 ">
           <h1
