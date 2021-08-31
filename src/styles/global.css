@@ -28,11 +28,11 @@
       max-width: 40px;
     }
     .footerBackgroundDesktop {
-      background: url("../images/footer.jpg") no-repeat fixed;
+      background: url("../images/footer.jpg") no-repeat;
       background-size: cover;
     }
     .footerBackgroundMobile {
-      background: url("../images/mobileFooter.jpg") no-repeat fixed;
+      background: url("../images/mobileFooter.jpg") no-repeat;
       background-size: cover;
     }
   }

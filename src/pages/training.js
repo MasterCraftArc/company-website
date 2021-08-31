@@ -47,7 +47,7 @@ class Training extends React.Component {
   render() {
     return (
       <>
-        <StyledBackgroundSection className="min-h-screen bg-fixed">
+        <StyledBackgroundSection className="min-h-screen">
           <main className="contact w-full flex items-center justify-center">
             <SiteHelmet route="Training" />
             <Header />
