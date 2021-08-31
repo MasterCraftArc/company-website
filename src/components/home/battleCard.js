@@ -2,8 +2,9 @@ import * as React from "react";
 import { navigate } from "gatsby";
 
 const cardStyle = {
+  minWidth: '300px',
   maxWidth: "355px",
-  maxHeight: "450px",
+  height: "450px",
   borderRadius: "25px",
   backgroundColor: "#F3F3F3",
 };
