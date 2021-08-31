@@ -37,7 +37,7 @@ const Equip = ({ data }) => {
   const cardRefs = posts.map(() => React.createRef());
 
   return (
-    <BackgroundSection className="">
+    <BackgroundSection className="bg-local">
       <div className="h-screen equip blog fontTitle" style={pageStyles}>
         <SiteHelmet route="Equip" description="Defense Unicorns Blog" />
         <Header />

@@ -1,7 +1,7 @@
 import React from "react";
 import whoWeAre from "../../images/home/whoWeAre.png";
 import Button from "../button";
-import whoBackground from "../../images/contact.png";
+import whoBackground from "../../images/contact.jpg";
 import pin from "../../images/locationPin.png";
 
 const WhoWeAre = () => {
@@ -9,7 +9,7 @@ const WhoWeAre = () => {
     <section
       className="md:min-h-screen flex items-center justify-center w-full my-16 md:my-0 py-10 md:py-0"
       style={{
-        background: `url(${whoBackground}) fixed no-repeat`,
+        background: `url(${whoBackground}) no-repeat`,
         backgroundSize: "cover",
       }}
     >
@@ -21,6 +21,7 @@ const WhoWeAre = () => {
             </svg>
           </div>
           <img
+            loading="lazy"
             src={whoWeAre}
             className="absolute blobTop z-10 p-16 lg:p-5"
             alt="unicorn under magnifying glass"
