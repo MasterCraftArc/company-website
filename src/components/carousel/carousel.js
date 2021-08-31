@@ -12,10 +12,10 @@ const settings = {
   slidesToScroll: 1,
   focusOnSelect: true,
   centerMode: true,
-  arrows: true,
+  arrows: false,
   responsive: [
     {
-      breakpoint: 820,
+      breakpoint: 1005,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
