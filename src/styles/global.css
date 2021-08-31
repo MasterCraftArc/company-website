@@ -21,18 +21,18 @@
       transform: none;
       left: unset;
     }
-    .pinDesktop{
+    .pinDesktop {
       max-width: 60px;
     }
-    .pinMobile{
+    .pinMobile {
       max-width: 40px;
     }
-    .footerBackgroundDesktop{
-      background: url('../images/footer.png') no-repeat;
+    .footerBackgroundDesktop {
+      background: url("../images/footer.jpg") no-repeat fixed;
       background-size: cover;
     }
-    .footerBackgroundMobile{
-      background: url('../images/mobileFooter.jpg') no-repeat;
+    .footerBackgroundMobile {
+      background: url("../images/mobileFooter.jpg") no-repeat fixed;
       background-size: cover;
     }
   }
