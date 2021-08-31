@@ -8,16 +8,6 @@
 
 [about] -->
 
-# Installation
-
-1. Clone repo
-2. run `npm install`
-
-# Usage
-
-1. run `npm run start`
-2. Navigate to `localhost:8000`
-
 # Developer Guidelines
 
 ## [Kanban](https://github.com/leapfrogai/website/projects/1)
