@@ -12,7 +12,6 @@ exports.components = {
   "component---src-pages-index-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/pages/index.js")),
   "component---src-pages-thankyou-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/pages/thankyou.js")),
   "component---src-pages-thankyoutraining-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/pages/thankyoutraining.js")),
-  "component---src-pages-training-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/pages/training.js")),
-  "component---src-templates-blog-post-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/templates/blog-post.js"))
+  "component---src-pages-training-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/pages/training.js"))
 }
 
