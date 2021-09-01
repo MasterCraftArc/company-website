@@ -10,8 +10,8 @@ const sentenceAnim = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.2,
-      staggerChildren: 0.1,
+      delay: 0.1,
+      staggerChildren: 0.08,
     },
   },
 };
@@ -66,7 +66,7 @@ const HomeHero = () => {
               }}
               className="block sm:inline-block"
             >
-              <ReactRotatingText items={tagLineItems} />
+              <ReactRotatingText items={tagLineItems} pause={1400} emptyPause={700} typingInterval={20} deletingInterval={40}/>
             </motion.span>
           </motion.h1>
         </div>
