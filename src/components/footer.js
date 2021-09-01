@@ -52,7 +52,7 @@ function Footer({ background }) {
             <a
               aria-hidden="true"
               className=""
-              href="https://github.com/defenseunicorns/zarf"
+              href="https://github.com/defenseunicorns"
             >
               <i className="bi bi-github mr-3 hover:bg-white hover:text-red-500 text-white rounded-full p-2 transition-all"></i>
             </a>
