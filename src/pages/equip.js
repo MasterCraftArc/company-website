@@ -20,7 +20,7 @@ const battleText = {
 };
 
 const unicornStarStyle = {
-  width: "15%",
+  width: "14%",
   position: "absolute",
   right: "0",
   top: "250px",
@@ -81,7 +81,7 @@ const Equip = ({ data }) => {
           className="latestTrained min-h-screen mt-4 relative px-8 sm:px-16 md:px-24 2xl:cardPadding"
         >
           <img
-            className=""
+            className="z-10"
             src={unicornStars}
             style={unicornStarStyle}
             alt="unicorn with star trail"
@@ -102,7 +102,7 @@ const Equip = ({ data }) => {
               </h2>
             </div>
 
-            <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-11 pb-10">
+            <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 pb-10">
               {posts.map((post, i) => {
                 return (
                   <Card
