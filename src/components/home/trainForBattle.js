@@ -29,7 +29,9 @@ const TrainForBattle = () => {
             src={pin}
             alt="Unicorn pin"
           />
-          <span className="w-10/12 ml-4 sm:ml-2">Let us train you for battle</span>
+          <span className="w-10/12 ml-4 sm:ml-2">
+            Let us train you for battle
+          </span>
         </h2>
         <h3 className="mt-0 mb-12 text-blue-900 text-2xl sm:text-3xl pl-4 md:pl-16 lg:pl-32 2xl:pl-44 ">
           Whatever your mission, we the have resources to help <br></br>solve
@@ -55,7 +57,7 @@ const TrainForBattle = () => {
             heading="All Heroes"
             image={devSecOps}
             mainText="Explore Digital Transformation Content"
-            cardLink="/equip"
+            cardLink="/train"
           />
         </Carousel>
       </div>
