@@ -6,8 +6,8 @@
 @layer utilities {
   @variants responsive {
     .cardPadding {
-      padding-left: 18%;
-      padding-right: 18%;
+      padding-left: 12%;
+      padding-right: 12%;
     }
     .centerLogo {
       position: absolute;

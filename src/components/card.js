@@ -23,7 +23,7 @@ const Card = React.forwardRef((props, ref) => (
   <div
     role="none"
     ref={ref}
-    className="borderRadius card rounded-2xl md:mx-16 mt-10 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
+    className="borderRadius card rounded-2xl mx-9 mt-10 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
     style={trainedCardStyle}
     data-category={props.category}
     onClick={() => {
