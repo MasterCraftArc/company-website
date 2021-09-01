@@ -101,7 +101,7 @@ const Equip = ({ data }) => {
               </h2>
             </div>
 
-            <div className="flex justify-center lg:justify-between xl:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-16 pb-10">
+            <div className="flex justify-center lg:justify-between xl:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-10 pb-10">
               {posts.map((post, i) => {
                 return (
                   <Card
