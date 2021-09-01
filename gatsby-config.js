@@ -1,11 +1,11 @@
-const { G_4_TAG, G_UNIVERSAL } = require("./env.js");
+const { G_4_TAG, G_UNIVERSAL, SITEMAP_URL } = require("./env.js");
 
 module.exports = {
   siteMetadata: {
     title: `Defense Unicorns`,
     image: `/img/SocialPreview.png`,
     description: `Become a DevSecOps Hero with Defense Unicorns`,
-    siteUrl: `https://defenseunicorns.com`,
+    siteUrl: SITEMAP_URL,
     keywords: `DevSecOps, DevOps, DefenseUnicorns, Kubernetes, Cloud Native`,
   },
   plugins: [
@@ -144,6 +144,13 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/unicornSingle.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        createLinkInHead: true,
+        exclude: [`/404`, `/thankyou`, `/thankyoutraining`],
       },
     },
     `gatsby-plugin-react-helmet`,
