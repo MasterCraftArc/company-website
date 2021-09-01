@@ -165,7 +165,7 @@ const BlogPost = () => {
         src={unicorn}
         alt="Unicorn with multicolored star trail"
       ></img>
-      <Link to="/equip" className="mx-auto">
+      <Link to="/train" className="mx-auto">
         <button
           className=" bg-red-500 hover:bg-red-700 text-white mr-5 mb-5"
           style={buttonStyle}
