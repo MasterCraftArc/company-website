@@ -150,7 +150,7 @@ module.exports = {
       resolve: `gatsby-plugin-advanced-sitemap`,
       options: {
         createLinkInHead: true,
-        exclude: [`/404`, `/thankyou`, `/thankyoutraining`, `/training`],
+        exclude: [`/404`, `/thankyou`, `/thankyoutraining`],
       },
     },
     `gatsby-plugin-react-helmet`,
