@@ -21,9 +21,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fields {
               slug
             }
-            frontmatter {
-              published
-            }
           }
         }
       }
