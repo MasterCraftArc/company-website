@@ -4,7 +4,6 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/pages/404.js")),
   "component---src-pages-blogpost-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/pages/blogpost.js")),
   "component---src-pages-contact-js": preferDefault(require("/Users/mikewinberry/leapfrog/website/src/pages/contact.js")),
