@@ -77,7 +77,7 @@ const Equip = ({ data }) => {
         </section>
         <section
           id="latestPosts"
-          className="latestTrained min-h-screen mt-4 relative px-8 sm:px-16 md:px-24 2xl:cardPadding"
+          className="latestTrained min-h-screen mt-4 relative px-8 "
         >
           <img
             className="z-10 right-0 2xl:right-24"
@@ -101,7 +101,7 @@ const Equip = ({ data }) => {
               </h2>
             </div>
 
-            <div className="flex justify-center lg:justify-between xl:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-10 pb-10">
+            <div className="flex justify-center lg:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-10 pb-10">
               {posts.map((post, i) => {
                 return (
                   <Card
