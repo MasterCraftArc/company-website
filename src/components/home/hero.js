@@ -34,7 +34,7 @@ const tagLineItems = [
 ];
 
 const DEFAULT_PAUSE = 1000;
-const YOU_PAUSE = 2000;
+const YOU_PAUSE = 3000;
 
 const HomeHero = () => {
   let [heroCount, setHeroCount] = React.useState(0);
