@@ -33,7 +33,25 @@ const tagLineItems = [
   " a Founder",
 ];
 
+const DEFAULT_PAUSE = 1000;
+const YOU_PAUSE = 2000;
+
 const HomeHero = () => {
+  let [heroCount, setHeroCount] = React.useState(0);
+  const [pause, setPause] = React.useState(DEFAULT_PAUSE);
+ 
+ const showYou = () => {
+    if(heroCount === 0) {
+      setPause(DEFAULT_PAUSE); 
+    }
+    if(heroCount === 4) {
+      setHeroCount(0);
+      setPause(YOU_PAUSE)
+    } else {
+      setHeroCount(heroCount + 1);
+    }
+  };
+
   return (
     <BackgroundSection className="bg-cover bg-center">
       <section className="homeHero min-h-screen py-24 flex flex-col justify-center max-w-full">
@@ -66,7 +84,14 @@ const HomeHero = () => {
               }}
               className="block sm:inline-block"
             >
-              <ReactRotatingText items={tagLineItems} pause={1400} emptyPause={700} typingInterval={20} deletingInterval={40}/>
+              <ReactRotatingText 
+                items={tagLineItems} 
+                pause={pause} 
+                emptyPause={700} 
+                typingInterval={20} 
+                deletingInterval={40}
+                onTypingEnd={() => showYou()}
+              />
             </motion.span>
           </motion.h1>
         </div>
