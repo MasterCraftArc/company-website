@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} post={post}>
       <Seo
-        title={post.frontmatter.title}
+        route={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <article
@@ -53,7 +53,7 @@ const BlogPostTemplate = ({ data, location }) => {
           alt="Unicorn with star trail"
         ></img>
         <Button
-          linkTo="/equip"
+          linkTo="/train"
           className=" bg-red-500 hover:bg-red-700 text-white"
           text="See More"
         />
