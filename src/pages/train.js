@@ -1,13 +1,15 @@
-import * as React from "react";
+import React, { useState } from "react";
+import { Listbox } from '@headlessui/react'
 import { graphql } from "gatsby";
-import Card from "../components/card";
 import { motion } from "framer-motion";
+import Card from "../components/card";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import pinBlue from "../images/pinBlue.png";
 import SiteHelmet from "../components/SiteHelmet";
 import unicornStars from "../images/unicornStars.png";
 import BackgroundSection from "../components/equipBg";
+
 
 const pageStyles = {
   color: "black",
@@ -31,9 +33,32 @@ const pinBlueStyle = {
   right: "52px",
 };
 
-const Train = ({ data }) => {
+const categories = [
+  { id: 1, name: 'All Categories', unavailable: false },
+  { id: 2, name: 'DevSecOps', unavailable: false },
+  { id: 3, name: 'Agile Acquisitions', unavailable: false },
+  { id: 4, name: 'Continuous Delivery', unavailable: false },
+]
+
+const Equip = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
   const cardRefs = posts.map(() => React.createRef());
+  const [selectedPerson, setSelectedPerson] = useState(categories[0])
+
+  const updateCards = (evt) => {
+    if(evt.name === 'All Categories'){
+      cardRefs.forEach( card => {
+        card.current.hidden = false
+      })
+    }else{
+      cardRefs.forEach( card => {
+        card.current.hidden = true
+      })
+    }
+    cardRefs.filter( card => card.current.dataset.category === evt.name).forEach(card => {
+      card.current.hidden = false
+    })
+  }
 
   return (
     <BackgroundSection className="bg-local">
@@ -52,10 +77,9 @@ const Train = ({ data }) => {
             </div>
             <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
               This blog is your source for context-first guides, stories and
-              news on the people, process and technology necessary to accelerate
+              news on the categories, process and technology necessary to accelerate
               your mission.
             </p>
-
             <a
               aria-hidden="true"
               href="#latestPosts"
@@ -88,7 +112,7 @@ const Train = ({ data }) => {
           <div className="mt-16 mx-auto relative py-16">
             <div className="md:px-16 sticky top-0 bg-white">
               <h2
-                className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex items-center"
+                className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex items-center relative"
                 style={battleText}
               >
                 <img
@@ -97,7 +121,33 @@ const Train = ({ data }) => {
                   src={pinBlue}
                   alt="Unicorn standing on card"
                 />
-                Latest Posts
+                <span>Latest Posts</span>
+                
+                <div className="w-1/4 borderColor border border-solid h-12 rounded-xl text-normal text-black text-2xl absolute">
+                  <Listbox 
+                    value={selectedPerson} 
+                    onChange={(evt) => {setSelectedPerson(evt); updateCards(evt);} }
+                    >
+                    <Listbox.Button className="w-full h-full p-1">
+                      {selectedPerson.name}
+                      <i className="bi bi-chevron-expand absolute right-0"></i>
+                    </Listbox.Button>
+
+                    <Listbox.Options className="text-normal dropBorder text-center border border-solid mt-2 rounded-xl overflow-hidden">
+                      {categories.map((person) => (
+                        <Listbox.Option
+                        className= 'hover:bg-gray-100 cursor-pointer'
+                        key={person.id}
+                        value={person}
+                        disabled={person.unavailable}
+                        >
+                          {person.name}
+                        </Listbox.Option>
+                      ))}
+                    </Listbox.Options>
+                      
+                  </Listbox>
+                </div>
               </h2>
             </div>
 

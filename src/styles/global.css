@@ -275,6 +275,17 @@ body {
   margin-top: 10%;
 }
 
+/* Category Search Bar */
+
+.borderColor {
+  border-color: rgb(124, 154, 192);
+  position: absolute;
+  right: 9%;
+}
+
+.dropBorder{
+  border-color: rgb(124, 154, 192);
+}
 /* ////////////////////////// */
 
 /* Contact */
