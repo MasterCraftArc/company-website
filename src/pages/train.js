@@ -63,7 +63,7 @@ const Equip = ({ data }) => {
   return (
     <BackgroundSection className="bg-local">
       <div className="h-screen equip blog fontTitle" style={pageStyles}>
-        <SiteHelmet route="Equip" description="Defense Unicorns Blog" />
+        <SiteHelmet route="Train" description="Defense Unicorns Blog" />
         <Header />
         <section className="hero flex flex-col justify-center">
           <div
@@ -177,7 +177,7 @@ const Equip = ({ data }) => {
     </BackgroundSection>
   );
 };
-export default Equip;
+export default Train;
 
 export const pageQuery = graphql`
   query {

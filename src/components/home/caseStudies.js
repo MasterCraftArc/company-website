@@ -25,7 +25,7 @@ const CaseStudies = () => {
           ></img>
 
           <div className="pt-7">
-            <Link to="/equip">
+            <Link to="/train">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white"
                 style={buttonStyle}

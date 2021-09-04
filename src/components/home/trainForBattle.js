@@ -55,7 +55,7 @@ const TrainForBattle = () => {
             heading="All Heroes"
             image={devSecOps}
             mainText="Explore Digital Transformation Content"
-            cardLink="/equip"
+            cardLink="/train"
           />
         </Carousel>
       </div>

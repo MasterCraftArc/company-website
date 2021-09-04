@@ -15,11 +15,11 @@ const pageStyles = {
 };
 
 // markup
-const Train = () => {
+const Home = () => {
   return (
     <div style={pageStyles} className="home flex flex-col bg-top max-w-screen">
       <SiteHelmet
-        route="Train"
+        route="Home"
         description="Become a DevSecOps Hero with Defense Unicorns"
       />
       <Header />
@@ -32,4 +32,4 @@ const Train = () => {
   );
 };
 
-export default Train;
+export default Home;

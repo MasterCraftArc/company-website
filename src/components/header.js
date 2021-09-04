@@ -97,15 +97,15 @@ function Header(props) {
                     className="px-3 text-xl uppercase hover:text-red-600"
                     to="/"
                   >
-                    <span className="mt-2 ml-2 ">Train</span>
+                    <span className="mt-2 ml-2 ">Home</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/equip"
+                    to="/train"
                     className="text-xl flex uppercase hover:text-red-600"
                   >
-                    <span className="ml-5">Equip</span>
+                    <span className="ml-5">Train</span>
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -159,15 +159,15 @@ function Header(props) {
                     className="px-3 text-4xl uppercase text-blue-900"
                     to="/"
                   >
-                    Train
+                    Home
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/equip"
+                    to="/train"
                     className="text-4xl flex uppercase text-blue-900"
                   >
-                    Equip
+                    Train
                   </Link>
                 </li>
                 <li className="nav-item">
