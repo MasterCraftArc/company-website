@@ -40,7 +40,7 @@ const categories = [
   { id: 4, name: 'Continuous Delivery', unavailable: false },
 ]
 
-const Equip = ({ data }) => {
+const Train = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
   const cardRefs = posts.map(() => React.createRef());
   const [selectedPerson, setSelectedPerson] = useState(categories[0])
