@@ -83,6 +83,13 @@ class Contact extends React.Component {
                       type="email"
                       id="exampleInputEmail1"
                     />
+                    <input
+                      ref="entry.192647911"
+                      name="organization"
+                      className="form-control w-full mb-5"
+                      placeholder="Organization"
+                      id="organization"
+                    />
                   </div>
                   <textarea
                     ref="entry.1425002156"

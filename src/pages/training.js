@@ -87,9 +87,16 @@ class Training extends React.Component {
                     <input
                       ref="entry.84539168"
                       name="organization"
-                      className="form-control w-full"
+                      className="form-control w-full mb-5"
                       placeholder="Organization"
                       id="organization"
+                    />
+                   <input
+                      ref="entry.1290040767"
+                      name="Title"
+                      className="form-control w-full mb-3"
+                      placeholder="Title"
+                      id="title"
                     />
                   </div>
                   <textarea
