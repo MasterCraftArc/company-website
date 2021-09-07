@@ -4,7 +4,7 @@ authors:
 author: Defense Unicorns Staff
 slug: what-is-cd
 title: What is CD Really?
-date: 2021-07-29
+date: 2021-09-05T04:00:00.000Z
 description: Continuous delivery (CD) should be the goal for every software
   team. In this post we explore the benefits of CD and illuminate the common
   pitfalls so you and your team can move forward faster.
@@ -12,7 +12,6 @@ category: Continuous Delivery
 published: true
 image: whoweare.png
 ---
-
 ## What is CD?
 
 In modern software development, continuous delivery (CD) refers to the ability to deploy the latest changes on demand. It is common for a single team skilled at CD to deliver changes into production several times per day or week. In organizations using a mature DevSecOps operating model where the whole organization is focused on improving the flow of value delivery, teams can even achieve "continuous deploy." In that practice the pipeline validates individual changes and deploys them directly to production instead of being batched with other changes in a release. Large batches of work are slow to give feedback and contain more defects. In a continuous delivery system, reduced batch size accelerates feedback and significantly improves quality. However, for people accustomed to legacy delivery methods, this can sound terrifying and even unsustainable. When shifting to CD, there is often concern around how to ensure quality and security with the level of confidence the organization has come to accept using less modern, “batched” delivery.  "How can we possibly get our quality assurance processes done that quickly? We'll be breaking things constantly!" In a continuous delivery flow, quality assurance processes are adjusted and integrated into the workflow. Every team is responsible for using feedback from production to continuously improve the quality gates in their pipeline. When done correctly, teams should see their pipeline quality gates as their primary deliverable and use features to validate the quality gates. Because of the focus on improving quality feedback loops, CD is not only safer but also reduces the cost of change and total cost of ownership for product development.
@@ -21,7 +20,7 @@ In modern software development, continuous delivery (CD) refers to the ability t
 
 **In short -- CD is the most effective tool for digital transformation.** The organization is delivering today at the highest level it can with the given structure and goals. Only by discovering what the roadblocks are can the organization improve. CD acts as the engine for broader organizational improvement by exposing opportunities for improvement within the software development lifecycle. When the goal is delivery into production several times a day, the obstacles that prevent frequent delivery are more easily exposed. Those obstacles might be internal to the development team or external, including testing teams and approaches or organizational processes for change and design approvals. CD quickly illuminates unnecessary, dependent workflows and approval processes that create more delivery lag while reducing the safety they are meant to improve.  Importantly, by putting our efforts towards enabling teams to deliver more efficiently, effectively, and sustainably, the entire organization can realign around customer value.
 
-Continuous delivery is the ultimate expression of agile development and is the reason for a DevOps operating model. If you are on the DevOps journey or want to deliver with more agility, focus on continuous delivery. If you’re interested in learning more about DevOps and DevSecOps, don’t forget to check out our DevOps 101 post here.
+Continuous delivery is the ultimate expression of agile development and is the reason for a DevOps operating model. If you are on the DevOps journey or want to deliver with more agility, focus on continuous delivery. If you’re interested in learning more about DevOps and DevSecOps, don’t forget to check out our DevOps 101 post [here](https://www.defenseunicorns.com/blog/20210715-devops-101/).
 
 ## What are the goals of CD?
 
