@@ -323,7 +323,7 @@ body {
 
 .contact input:focus,
 .contact textarea:focus {
-  @apply border-2 border-solid border-blue-900 rounded-xl px-2;
+  @apply border-2 border-solid border-red-500 rounded-xl px-2;
 }
 
 /* Blog */
