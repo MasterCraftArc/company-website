@@ -101,7 +101,7 @@ const Train = ({ data }) => {
         </section>
         <section
           id="latestPosts"
-          className="latestTrained min-h-screen mt-4 relative px-8 "
+          className="latestTrained min-h-screen mt-4 relative px-8"
         >
           <img
             className="z-10 right-0 2xl:right-24"
@@ -109,34 +109,38 @@ const Train = ({ data }) => {
             style={unicornStarStyle}
             alt="unicorn with star trail"
           />
-          <div className="mt-16 mx-auto relative py-16">
-            <div className="md:px-16 sticky top-0 bg-white">
+          <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
+            <div className="md:px-16 sticky top-0 bg-white relative">
               <h2
-                className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex items-center relative"
+                className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex flex-col sm:flex-row items-center w-full justify-between relative h-full"
                 style={battleText}
               >
-                <img
-                  className="justify-self-bottom"
-                  style={{ maxWidth: "70px" }}
-                  src={pinBlue}
-                  alt="Unicorn standing on card"
-                />
-                <span>Latest Posts</span>
+                <div className="flex items-center">
+                  <img
+                    className="justify-self-bottom"
+                    style={{ maxWidth: "70px" }}
+                    src={pinBlue}
+                    alt="Unicorn standing on card"
+                  />
+                  <span>Latest Posts</span>
+                  
+                </div>
                 
-                <div className="w-1/4 borderColor border border-solid h-12 rounded-xl text-normal text-black text-2xl absolute">
+                <div className="w-11/12 sm:w-1/2 md:w-2/5 lg:w-1/4 2xl:w-1/5 borderColor border border-solid border-r-0 h-16 rounded-xl text-normal text-2xl relative">
                   <Listbox 
                     value={selectedPerson} 
                     onChange={(evt) => {setSelectedPerson(evt); updateCards(evt);} }
                     >
-                    <Listbox.Button className="w-full h-full p-1">
+                    <Listbox.Button className="searchText w-full h-full p-1">
                       {selectedPerson.name}
-                      <i className="bi bi-chevron-expand absolute right-0"></i>
+                      <i class="bi bi-caret-down-fill pl-1 text-red-600"></i>
+                      <i className="bi bi-search searchButton"></i>
                     </Listbox.Button>
 
-                    <Listbox.Options className="text-normal dropBorder text-center border border-solid mt-2 rounded-xl overflow-hidden">
+                    <Listbox.Options className="text-lg dropBorder bg-white py-2 text-center border border-solid mt-2 rounded-xl overflow-hidden">
                       {categories.map((person) => (
                         <Listbox.Option
-                        className= 'hover:bg-gray-100 cursor-pointer'
+                        className= 'hover:bg-gray-100 cursor-pointer text-normal text-black text-lg py-1'
                         key={person.id}
                         value={person}
                         disabled={person.unavailable}
@@ -151,7 +155,7 @@ const Train = ({ data }) => {
               </h2>
             </div>
 
-            <div className="flex justify-center lg:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-10 pb-10">
+            <div className="mt-5 pt-28 sm:pt-12 flex justify-center lg:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-10 pb-10">
               {posts.map((post, i) => {
                 return (
                   <Card

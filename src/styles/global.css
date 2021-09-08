@@ -277,15 +277,24 @@ body {
 
 /* Category Search Bar */
 
+.searchButton{
+  color: white;
+  @apply absolute top-0 right-0 p-2 bg-red-500 font-bold text-2xl rounded-xl h-full flex justify-center items-center w-1/6;
+}
 .borderColor {
   border-color: rgb(124, 154, 192);
-  position: absolute;
-  right: 9%;
 }
 
 .dropBorder{
   border-color: rgb(124, 154, 192);
 }
+
+.searchText {
+  font-size: small;
+  color: black
+}
+
+
 /* ////////////////////////// */
 
 /* Contact */
