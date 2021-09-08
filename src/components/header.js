@@ -110,6 +110,14 @@ function Header(props) {
                 </li>
                 <li className="nav-item">
                   <Link
+                    to="/about"
+                    className="text-xl flex uppercase hover:text-red-600"
+                  >
+                    <span className="ml-5">About</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
                     className="px-3 text-xl uppercase hover:text-red-600"
                     to="/contact"
                   >
@@ -168,6 +176,14 @@ function Header(props) {
                     className="text-4xl flex uppercase text-blue-900"
                   >
                     Train
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/about"
+                    className="text-4xl flex uppercase text-blue-900"
+                  >
+                    About
                   </Link>
                 </li>
                 <li className="nav-item">
