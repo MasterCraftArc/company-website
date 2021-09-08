@@ -1,5 +1,4 @@
-
-const pageData = [
+[
     {
       "img" : "valueImg", 
       "title": "Values",
@@ -36,5 +35,3 @@ const pageData = [
       "contentStyle" : ""
     }
   ]
-
-export default pageData

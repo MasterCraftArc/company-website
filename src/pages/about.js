@@ -2,7 +2,7 @@ import * as React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SiteHelmet from "../components/SiteHelmet";
-import pageData from "../components/about/pageData"
+import pageData from "../components/about/pageData.json"
 import Hero from "../components/about/hero"
 import Section from "../components/about/section"
 
@@ -21,9 +21,9 @@ const About = () => {
       <Header />
       <Hero/>
       {
-        pageData.map( (section, i) => {
+        pageData.map( (page, i) => {
           return(
-            <Section title={section.title} subtitle={section.subtitle} text={section.text} img={section.img} contentStyle={section.contentStyle}/>
+            <Section title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} contentStyle={page.contentStyle}/>
           )
         })
       }
