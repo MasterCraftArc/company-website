@@ -27,6 +27,12 @@
     .pinMobile {
       max-width: 40px;
     }
+    .aboutPin {
+      max-width: 80px;
+    }
+    .aboutPinDesktop {
+      max-width: 120px;
+    }
     .footerBackgroundDesktop {
       background: url("../images/footer.jpg") no-repeat;
       background-size: cover;
@@ -275,6 +281,48 @@ body {
   margin-top: 10%;
 }
 
+/* ////////////////////////// */
+
+/* About */
+
+.aboutHero {
+  height: 80vh;
+}
+
+.aboutSection h2 span{
+  /* background: -webkit-linear-gradient( rgba(30, 58, 138), rgba(19, 85, 207, 0.777));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply h-full; */
+}
+
+.valueImg{
+  content: url('../images/about/values.png')
+}
+
+.engineeringImg{
+  content: url('../images/about/engineering.png')
+}
+
+
+.peopleImg{
+  content: url('../images/about/people.png')
+}
+
+.evolutionImg{
+  content: url('../images/about/evolution.png')
+}
+
+.communicationImg{
+  content: url('../images/about/communication.png')
+}
+
+
+@media screen and (max-width: 635px) {
+  /* .imageContainer {
+    @apply px-32;
+  } */
+}
 /* ////////////////////////// */
 
 /* Contact */

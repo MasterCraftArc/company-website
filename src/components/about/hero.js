@@ -1,11 +1,11 @@
 import React from "react";
-import BackgroundSection from "../home/homeBg";
+import BackgroundSection from "./background";
 
 
 const Hero = () => {
   return (
-    <BackgroundSection className="bg-cover bg-center">
-      <section className="homeHero min-h-screen max-w-full">
+    <BackgroundSection className="bg-cover bg-center aboutHero">
+      <section className="homeHero max-w-full">
 
       </section>
     </BackgroundSection>
