@@ -37,11 +37,15 @@ class Training extends React.Component {
       .then((response) => {
         navigate("/thankyoutraining");
       })
-      .catch((err) =>
+      .catch((err) => {
+        
+        navigate("/thankyoutraining");
         this.setState({
           feedbackMsg: "Form could not be submitted.",
         })
+      }
       );
+
   }
 
   render() {
