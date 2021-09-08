@@ -27,21 +27,24 @@ class Contact extends React.Component {
     Object.keys(this.refs).map((key) => (formData[key] = this.refs[key].value));
 
     const axiosOptions = {
-      url: this.props.location.pathname,
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSdtKiyFPqZS7ycB-igr7SIlQxdJstV5UMj8fHdCWbu16yY5rQ/formResponse",
       method: "post",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: qs.stringify(formData),
     };
-
     axios(axiosOptions)
       .then((response) => {
         navigate("/thankyou");
       })
-      .catch((err) =>
+      .catch((err) => {
+        navigate("/thankyou");
         this.setState({
           feedbackMsg: "Form could not be submitted.",
         })
+      }
       );
+
+      
   }
 
   render() {
@@ -63,21 +66,15 @@ class Contact extends React.Component {
                   name="Contact"
                   onSubmit={(event) => this.handleSubmit(event)}
                 >
-                  <input
-                    ref="form-name"
-                    type="hidden"
-                    name="form-name"
-                    value="Contact"
-                  />
                   <div className="m-0">
                     <input
-                      ref="firstName"
+                      ref="entry.1197773672"
                       name="firstName"
                       className="form-control w-full mb-6 text-gray-500"
                       placeholder="First Name"
                     />
                     <input
-                      ref="lastName"
+                      ref="entry.244703714"
                       name="lastName"
                       className="form-control w-full mb-6 text-gray-500"
                       placeholder="Last Name"
@@ -90,9 +87,16 @@ class Contact extends React.Component {
                       type="email"
                       id="exampleInputEmail1"
                     />
+                    <input
+                      ref="entry.192647911"
+                      name="organization"
+                      className="form-control w-full mb-5"
+                      placeholder="Organization"
+                      id="organization"
+                    />
                   </div>
                   <textarea
-                    ref="message"
+                    ref="entry.1425002156"
                     name="message"
                     className="m-0 w-100 form-control bg-transparent text-gray-500"
                     placeholder="Hi, fellow unicorn here! I'm really excited to talk about..."

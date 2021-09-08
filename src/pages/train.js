@@ -1,13 +1,15 @@
-import * as React from "react";
+import React, { useState } from "react";
+import { Listbox } from '@headlessui/react'
 import { graphql } from "gatsby";
-import Card from "../components/card";
 import { motion } from "framer-motion";
+import Card from "../components/card";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import pinBlue from "../images/pinBlue.png";
 import SiteHelmet from "../components/SiteHelmet";
 import unicornStars from "../images/unicornStars.png";
 import BackgroundSection from "../components/equipBg";
+
 
 const pageStyles = {
   color: "black",
@@ -31,9 +33,32 @@ const pinBlueStyle = {
   right: "52px",
 };
 
+const categories = [
+  { id: 1, name: 'All Categories', unavailable: false },
+  { id: 2, name: 'DevSecOps', unavailable: false },
+  { id: 3, name: 'Agile Acquisitions', unavailable: false },
+  { id: 4, name: 'Continuous Delivery', unavailable: false },
+]
+
 const Train = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
   const cardRefs = posts.map(() => React.createRef());
+  const [selectedPerson, setSelectedPerson] = useState(categories[0])
+
+  const updateCards = (evt) => {
+    if(evt.name === 'All Categories'){
+      cardRefs.forEach( card => {
+        card.current.hidden = false
+      })
+    }else{
+      cardRefs.forEach( card => {
+        card.current.hidden = true
+      })
+    }
+    cardRefs.filter( card => card.current.dataset.category === evt.name).forEach(card => {
+      card.current.hidden = false
+    })
+  }
 
   return (
     <BackgroundSection className="bg-local">
@@ -52,10 +77,9 @@ const Train = ({ data }) => {
             </div>
             <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
               This blog is your source for context-first guides, stories and
-              news on the people, process and technology necessary to accelerate
+              news on the categories, process and technology necessary to accelerate
               your mission.
             </p>
-
             <a
               aria-hidden="true"
               href="#latestPosts"
@@ -77,7 +101,7 @@ const Train = ({ data }) => {
         </section>
         <section
           id="latestPosts"
-          className="latestTrained min-h-screen mt-4 relative px-8 "
+          className="latestTrained min-h-screen mt-4 relative px-8"
         >
           <img
             className="z-10 right-0 2xl:right-24"
@@ -85,23 +109,53 @@ const Train = ({ data }) => {
             style={unicornStarStyle}
             alt="unicorn with star trail"
           />
-          <div className="mt-16 mx-auto relative py-16">
-            <div className="md:px-16 sticky top-0 bg-white">
+          <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
+            <div className="md:px-16 sticky top-0 bg-white relative">
               <h2
-                className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex items-center"
+                className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex flex-col sm:flex-row items-center w-full justify-between relative h-full"
                 style={battleText}
               >
-                <img
-                  className="justify-self-bottom"
-                  style={{ maxWidth: "70px" }}
-                  src={pinBlue}
-                  alt="Unicorn standing on card"
-                />
-                Latest Posts
+                <div className="flex items-center">
+                  <img
+                    className="justify-self-bottom"
+                    style={{ maxWidth: "70px" }}
+                    src={pinBlue}
+                    alt="Unicorn standing on card"
+                  />
+                  <span>Latest Posts</span>
+                  
+                </div>
+                
+                <div className="w-11/12 sm:w-1/2 md:w-2/5 lg:w-1/4 2xl:w-1/5 borderColor border border-solid border-r-0 h-16 rounded-xl text-normal text-2xl relative">
+                  <Listbox 
+                    value={selectedPerson} 
+                    onChange={(evt) => {setSelectedPerson(evt); updateCards(evt);} }
+                    >
+                    <Listbox.Button className="searchText w-full h-full p-1">
+                      {selectedPerson.name}
+                      <i class="bi bi-caret-down-fill pl-1 text-red-600"></i>
+                      <i className="bi bi-search searchButton"></i>
+                    </Listbox.Button>
+
+                    <Listbox.Options className="text-lg dropBorder bg-white py-2 text-center border border-solid mt-2 rounded-xl overflow-hidden">
+                      {categories.map((person) => (
+                        <Listbox.Option
+                        className= 'hover:bg-gray-100 cursor-pointer text-normal text-black text-lg py-1'
+                        key={person.id}
+                        value={person}
+                        disabled={person.unavailable}
+                        >
+                          {person.name}
+                        </Listbox.Option>
+                      ))}
+                    </Listbox.Options>
+                      
+                  </Listbox>
+                </div>
               </h2>
             </div>
 
-            <div className="flex justify-center lg:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-10 pb-10">
+            <div className="mt-5 pt-28 sm:pt-12 flex justify-center lg:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-10 pb-10">
               {posts.map((post, i) => {
                 return (
                   <Card
