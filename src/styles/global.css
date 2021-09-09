@@ -35,6 +35,12 @@
       background: url("../images/mobileFooter.jpg") no-repeat;
       background-size: cover;
     }
+    .whoWeAreBgRight{
+      background-position: right !important;
+    }
+    .whoWeAreBgCenter{
+      background-position: center !important;
+    }
   }
 }
 
