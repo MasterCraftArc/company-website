@@ -4,7 +4,7 @@ import unicornPin from "../../images/pinBlue.png"
 
 const Section = (props) => {
   return (
-    <section className="aboutSection max-w-full flex flex-col sm:flex-row p-5 lg:p-11 md:p-24 xl:px-32">
+    <section id={props.sectionId} className="aboutSection max-w-full flex flex-col sm:flex-row px-5 lg:px-11 md:px-24 xl:px-32 mt-24">
         <div className={`h-1/2 sm:h-full sm:w-1/2 p-5 lg:p-12 ${props.contentStyle}`}>
           <h2 className="flex items-center">
             <img

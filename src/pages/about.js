@@ -5,6 +5,7 @@ import SiteHelmet from "../components/SiteHelmet";
 import pageData from "../components/about/pageData.json"
 import Hero from "../components/about/hero"
 import Section from "../components/about/section"
+import SideNav from "../components/about/sideNav";
 
 const pageStyles = {
   color: "#232129",
@@ -13,6 +14,9 @@ const pageStyles = {
 
 // markup
 const About = () => {
+  const sectionRef = React.createRef()
+  const sectionHeights = []
+
   return (
     <div style={pageStyles} className="container flex flex-col bg-top max-w-full">
       <SiteHelmet 
@@ -20,13 +24,20 @@ const About = () => {
       />
       <Header />
       <Hero/>
+
+
       {
         pageData.map( (page, i) => {
           return(
-            <Section title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} contentStyle={page.contentStyle}/>
+            <div key={i + 1} id={`section${i + 1}`} className="pb-5" ref={sectionRef} onLoad={ (test) => { console.log(test.nativeEvent, 'top')}}>
+              <Section title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} contentStyle={page.contentStyle}/>
+            </div>
           )
         })
       }
+
+      <SideNav sectionHeight={sectionRef.current}/>
+
       <Footer />
     </div>
   );
