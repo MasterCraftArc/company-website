@@ -12,12 +12,12 @@ const Section = (props) => {
               src={unicornPin}
               alt="Unicorn standing on card"
             />
-            <span className="text-blue-900 text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold pr-5">{props.title}</span>
+            <span className="text-blue-900 text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold pr-5 sm:overflow-visible  z-10">{props.title}</span>
           </h2>
           <h3 className="text-red-600 text-3xl lg:text-4xl mt-10 ">
             {props.subtitle}
           </h3>
-          <p className="mt-10 text-lg lg:text-2xl 2xl:pr-24 ">
+          <p className="mt-10 text-lg lg:text-2xl 2xl:pr-24 whitespace-normal">
             {props.text}
           </p>
         </div>

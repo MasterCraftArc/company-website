@@ -4,34 +4,34 @@
       "title": "Values",
       "subtitle": "Lorem ipsum dolor sit amet,",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : ""
+      "contentStyle" : "order-last sm:order-first"
     },
     {
       "img" : "engineeringImg", 
       "title": "Engineering",
       "subtitle": "Our Enginering Process: ",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : "sm:order-last"
+      "contentStyle" : "order-last"
     },
     {
       "img" : "peopleImg", 
       "title": "People over everything",
       "subtitle": "Lorem ipsum dolor sit amet,",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : ""
+      "contentStyle" : "order-last sm:order-first"
     },
     {
       "img" : "communicationImg", 
       "title": "Transparent Communication",
       "subtitle": "Lorem ipsum dolor sit amet,",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : "sm:order-last"
+      "contentStyle" : "order-last "
     },
     {
       "img" : "evolutionImg", 
       "title": "Continous evolution, active curiosity",
       "subtitle": "Lorem ipsum dolor sit amet,",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : ""
+      "contentStyle" : "sm:whitespace-nowrap md:whitespace-normal order-last sm:order-first"
     }
   ]

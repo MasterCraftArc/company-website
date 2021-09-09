@@ -29,7 +29,7 @@ const About = () => {
       {
         pageData.map( (page, i) => {
           return(
-            <div key={i + 1} id={`section${i + 1}`} className="pb-5" ref={sectionRef} onLoad={ (test) => { console.log(test.nativeEvent, 'top')}}>
+            <div key={i + 1} id={`section${i + 1}`} className="" ref={sectionRef} onLoad={ (test) => { console.log(test.nativeEvent, 'top')}}>
               <Section title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} contentStyle={page.contentStyle}/>
             </div>
           )
