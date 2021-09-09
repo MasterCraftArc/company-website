@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
-
+import {setRefClassName} from "../utilities/refHelpers";
 const logoStyle = {
   maxWidth: "16vh",
 };
@@ -12,12 +12,6 @@ const popUpStyle = {};
 const setRefFilter = (ref, filter) => {
   if (ref.current) {
     ref.current.style.filter = filter;
-  }
-};
-
-const setRefClassName = (ref, className) => {
-  if (ref.current) {
-    ref.current.className = className;
   }
 };
 

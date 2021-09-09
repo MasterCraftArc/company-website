@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SiteHelmet from "../components/SiteHelmet";
@@ -14,8 +14,7 @@ const pageStyles = {
 
 // markup
 const About = () => {
-  const sectionRef = React.createRef()
-  const sectionHeights = []
+  const refs = pageData.map(() => React.createRef());
 
   return (
     <div style={pageStyles} className="container flex flex-col bg-top max-w-full">
@@ -29,14 +28,17 @@ const About = () => {
       {
         pageData.map( (page, i) => {
           return(
-            <div key={i + 1} id={`section${i + 1}`} className="" ref={sectionRef} onLoad={ (test) => { console.log(test.nativeEvent, 'top')}}>
+            <div ref={refs[i]} key={i + 1} id={`section${i + 1}`} className="" >
               <Section title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} contentStyle={page.contentStyle}/>
             </div>
           )
         })
-      }
 
-      {/* <SideNav sectionHeight={sectionRef.current}/> */}
+      }
+              
+      <SideNav refs={refs} sectionNames={pageData.map(p => p.title)}/>
+
+      
 
       <Footer />
     </div>
