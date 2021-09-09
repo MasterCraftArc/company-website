@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import { setRefClassName} from "../../utilities/refHelpers";
 
 const navStyles = {
@@ -18,7 +19,7 @@ const clearRefs = (refs) => {
 const updateNav = (sectionRefs, refs) => {
     if(refs.length < 1) return;
     const selectedRef = sectionRefs.reduce((previousRef, currentRef, index) => {
-        return refs[index].current && window.scrollY > refs[index].current.offsetTop ? currentRef : previousRef;
+        return refs[index].current && window.scrollY > refs[index].current.offsetTop - 50 ? currentRef : previousRef;
     }, [sectionRefs[0]])
     clearRefs(sectionRefs)
     setRefClassName(selectedRef, "text-red-700 font-bold")
