@@ -36,7 +36,7 @@ const About = () => {
         })
       }
 
-      <SideNav sectionHeight={sectionRef.current}/>
+      {/* <SideNav sectionHeight={sectionRef.current}/> */}
 
       <Footer />
     </div>

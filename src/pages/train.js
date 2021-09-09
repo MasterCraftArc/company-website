@@ -83,7 +83,7 @@ const Train = ({ data }) => {
             <a
               aria-hidden="true"
               href="#latestPosts"
-              className={`text-5xl xl:text-6xl 2xl:text-7xl w-1/12 absolute bottom-5 animate-bounce text-center w-full`}
+              className={`text-5xl xl:text-6xl 2xl:text-7xl absolute bottom-5 animate-bounce text-center w-full`}
               // style={{ left: "50%" }}
             >
               <motion.i
@@ -110,7 +110,7 @@ const Train = ({ data }) => {
             alt="unicorn with star trail"
           />
           <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
-            <div className="md:px-16 sticky top-0 bg-white relative">
+            <div className="md:px-16 top-0 bg-white relative">
               <h2
                 className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex flex-col sm:flex-row items-center w-full justify-between relative h-full"
                 style={battleText}
