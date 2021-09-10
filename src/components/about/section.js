@@ -5,15 +5,14 @@ import unicornPin from "../../images/pinBlue.png"
 const Section = (props) => {
   return (
     <section id={props.sectionId} className="aboutSection max-w-full flex flex-col sm:flex-row px-5 lg:px-11 md:px-24 xl:px-32 mt-24">
-        <div className={`flex flex-col justify-center items-center h-1/2 sm:h-full sm:w-1/2 p-5 lg:p-12 ${props.contentStyle}`}>
-          <h2 className="flex items-center justify-center text-blue-900 text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold sm:pr-5 sm:overflow-visible z-10 p-0 m-0 overflow-hidden">
+        <div className={`flex flex-col justify-center items-center sm:items-start h-1/2 sm:h-full sm:w-1/2 p-5 lg:p-12 ${props.contentStyle}`}>
+          <h2 className="flex items-center justify-center sm:justify-start  text-blue-900 text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold sm:pr-5 sm:overflow-visible z-10">
             <img
               className="self-start aboutPin 2xl:aboutPinDesktop inline"
               src={unicornPin}
               alt="Unicorn standing on card"
             />
             <span className="">
-
               {props.title}
             </span>
           </h2>
