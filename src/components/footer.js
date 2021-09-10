@@ -70,6 +70,9 @@ function Footer({ background }) {
           <Link to="/contact" className="footerLink" style={linkColor}>
             <p>Contact</p>
           </Link>
+          <Link to="/about" className="footerLink" style={linkColor}>
+            <p>About</p>
+          </Link>
         </div>
       </div>
       <p className="mt-12 text-center absolute w-full text-white bottom-7">

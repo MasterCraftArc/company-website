@@ -53,6 +53,11 @@ const WhoWeAre = () => {
               className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5"
               text="Contact Us"
             />
+            <Button
+              linkTo="/about"
+              className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5"
+              text="Learn More"
+            />
           </div>
         </div>
       </div>
