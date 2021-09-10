@@ -9,6 +9,7 @@ import SideNav from "../components/about/sideNav";
 
 const pageStyles = {
   color: "#232129",
+
 };
 
 
@@ -29,7 +30,7 @@ const About = () => {
         pageData.map( (page, i) => {
           return(
             <div ref={refs[i]} key={i + 1} id={`section${i + 1}`} className="" >
-              <Section title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} contentStyle={page.contentStyle}/>
+              <Section title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} titleStyle={page.titleStyle} contentStyle={page.contentStyle}/>
             </div>
           )
         })

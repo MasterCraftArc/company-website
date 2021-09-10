@@ -4,34 +4,40 @@
       "title": "Values",
       "subtitle": "Lorem ipsum dolor sit amet,",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : "order-last sm:order-first"
+      "contentStyle" : "order-last sm:order-first",
+      "titleStyle" : ""
     },
     {
       "img" : "engineeringImg", 
       "title": "Engineering",
       "subtitle": "Our Enginering Process: ",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : "order-last"
+      "contentStyle" : "order-last",
+      "titleStyle" : ""
     },
     {
       "img" : "peopleImg", 
-      "title": "People over everything",
+      "title": "People Over Everything",
       "subtitle": "Lorem ipsum dolor sit amet,",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : "order-last sm:order-first"
+      "contentStyle" : "order-last sm:order-first",
+      "titleStyle" : "w-3/5 lg:w-full"
     },
     {
       "img" : "communicationImg", 
       "title": "Transparent Communication",
       "subtitle": "Lorem ipsum dolor sit amet,",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : "order-last "
+      "contentStyle" : "order-last ",
+      "titleStyle" : ""
+
     },
     {
       "img" : "evolutionImg", 
       "title": "Continous evolution, active curiosity",
       "subtitle": "Lorem ipsum dolor sit amet,",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "contentStyle" : "sm:whitespace-nowrap md:whitespace-normal order-last sm:order-first"
+      "contentStyle" : "order-last sm:order-first",
+      "titleStyle" : ""
     }
   ]
