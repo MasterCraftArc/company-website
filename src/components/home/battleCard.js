@@ -21,7 +21,7 @@ const cardImg = {
 const BattleCard = (props) => {
   return (
     <div
-      className="flex mx-2 battleCard"
+      className="flex mx-2"
       aria-hidden="true"
       onClick={() => {
         navigate(props.cardLink);
@@ -31,7 +31,7 @@ const BattleCard = (props) => {
       }}
     >
       <div
-        className="card 
+        className="card battleCard
           flex flex-col justify-evenly mx-auto p-12"
         style={cardStyle}
       >
