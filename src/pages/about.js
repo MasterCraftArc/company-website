@@ -36,7 +36,7 @@ const About = () => {
 
       }
               
-      <SideNav refs={refs} sectionNames={pageData.map(p => p.title)}/>
+      {/* <SideNav refs={refs} sectionNames={pageData.map(p => p.title)}/> */}
 
       
 

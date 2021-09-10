@@ -312,14 +312,14 @@ body {
 /* About */
 
 .aboutHero {
-  height: 100vh;
+  height: 85vh;
 }
 
-.aboutSection h2 span{
-  /* background: -webkit-linear-gradient( rgba(30, 58, 138), rgba(19, 85, 207, 0.777));
+.aboutSection h2 {
+  background: -webkit-linear-gradient( rgba(30, 58, 138), rgba(19, 85, 207, 0.777));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  @apply h-full; */
+  @apply h-full;
 }
 
 .valueImg{
