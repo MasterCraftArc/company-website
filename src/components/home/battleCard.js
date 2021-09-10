@@ -2,7 +2,7 @@ import * as React from "react";
 import { navigate } from "gatsby";
 
 const cardStyle = {
-  minWidth: '300px',
+  minWidth: "300px",
   maxWidth: "355px",
   height: "450px",
   borderRadius: "25px",
@@ -21,7 +21,7 @@ const cardImg = {
 const BattleCard = (props) => {
   return (
     <div
-      className="flex mx-2"
+      className="flex mx-2 battleCard"
       aria-hidden="true"
       onClick={() => {
         navigate(props.cardLink);
