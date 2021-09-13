@@ -1,6 +1,6 @@
 import React from "react";
 import BackgroundSection from "./background";
-
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -23,6 +23,24 @@ const Hero = () => {
             neccesary to accelerate your mission.
           </span>
         </p>
+
+        <a
+              aria-hidden="true"
+              href="#section1"
+              className={`text-5xl xl:text-6xl 2xl:text-7xl absolute bottom-5 left-0 animate-bounce text-center w-full font-bold`}
+              // style={{ left: "50%" }}
+            >
+              <motion.i
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  delay: 0.5,
+                  default: { duration: 2.5 },
+                }}
+                className=" bi bi-chevron-down hover:text-red-600 cursor-pointer font-bold"
+              ></motion.i>
+            </a>
       </section>
     </BackgroundSection>
   );

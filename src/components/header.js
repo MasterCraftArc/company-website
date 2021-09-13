@@ -52,6 +52,7 @@ function Header(props) {
           zIndex: "15",
           width: "100%",
           top: "0",
+          left: '0',
           position: "fixed",
         }}
       >

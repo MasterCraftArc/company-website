@@ -4,12 +4,10 @@ import Footer from "../components/footer";
 import SiteHelmet from "../components/SiteHelmet";
 import pageData from "../components/about/pageData.json"
 import Hero from "../components/about/hero"
-import Section from "../components/about/section"
-import SideNav from "../components/about/sideNav";
+import AboutSection from "../components/about/section"
 
 const pageStyles = {
   color: "#232129",
-
 };
 
 
@@ -30,7 +28,7 @@ const About = () => {
         pageData.map( (page, i) => {
           return(
             <div ref={refs[i]} key={i + 1} id={`section${i + 1}`} className="" >
-              <Section title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} titleStyle={page.titleStyle} contentStyle={page.contentStyle}/>
+              <AboutSection title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} titleStyle={page.titleStyle} contentStyle={page.contentStyle}/>
             </div>
           )
         })
