@@ -38,7 +38,7 @@
     "gatsby-transformer-remark": "^4.10.0",
     "gatsby-transformer-sharp": "^3.13.0",
     "gbimage-bridge": "^0.1.4",
-    "netlify-cms-app": "^2.15.40",
+    "netlify-cms-app": "^2.15.42",
     "prismjs": "^1.24.1",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
@@ -59,7 +59,7 @@
     "gatsby-plugin-postcss": "^4.13.0",
     "postcss": "^8.3.6",
     "prettier": "2.3.2",
-    "tailwindcss": "^2.2.13"
+    "tailwindcss": "^2.2.15"
   },
   "homepage": "https://github.com/leapfrogai/website#readme",
   "keywords": [
