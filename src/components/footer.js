@@ -37,10 +37,10 @@ function Footer({ background }) {
       />
       <div className="h-5/6 md:h-2/5 flex md:flex-row flex-col mx-auto content-end items-start w-6/12 mt-16">
         <div className="flex flex-col w-full mx-auto mt-5 sm:mt-0 order-last sm:order-first">
-          <div className="pl-3 md:text-left text-center text-xl text-white">
-            <p className="mt-2">Defense Unicorns</p>
-            <p className="mt-2">555 E Pikes Peak Ave</p>
-            <p className="mt-2">Colorado Springs, Co 80903</p>
+          <div className="pl-3 md:text-left text-center text-xl text-white lineHeightBlog">
+            <p className="mt-2 mb-0">Defense Unicorns</p>
+            <p className="mt-2 mb-0">555 E Pikes Peak Ave</p>
+            <p className="mt-2 mb-0">Colorado Springs, Co 80903</p>
           </div>
           <div className="socialsBox text-white flex justify-center text-3xl  md:justify-start mt-12 sm:mt-6 ">
             <a

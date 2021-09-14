@@ -5,6 +5,7 @@ const trainedCardStyle = {
   width: "305px",
   height: "420px",
   backgroundColor: "#F3F3F3",
+  boxShadow: '3px 5px 10px #888888'
 };
 
 const trainedCardText = {
@@ -23,7 +24,7 @@ const Card = React.forwardRef((props, ref) => (
   <div
     role="none"
     ref={ref}
-    className="borderRadius card rounded-2xl mx-9 mt-10 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
+    className="borderRadius card rounded-2xl mx-9 mt-10 border-1 border-gray-100 border-solid overflow-hidden"
     style={trainedCardStyle}
     data-category={props.category}
     onClick={() => {

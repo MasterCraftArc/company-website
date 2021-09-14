@@ -28,7 +28,6 @@ const Hero = () => {
               aria-hidden="true"
               href="#section1"
               className={`text-5xl xl:text-6xl 2xl:text-7xl absolute bottom-5 left-0 animate-bounce text-center w-full font-bold`}
-              // style={{ left: "50%" }}
             >
               <motion.i
                 initial={{ opacity: 0 }}
