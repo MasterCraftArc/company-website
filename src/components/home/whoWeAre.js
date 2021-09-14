@@ -1,7 +1,7 @@
 import React from "react";
 import whoWeAre from "../../images/home/whoWeAre.png";
 import Button from "../button";
-import whoBackground from "../../images/contact.jpg";
+import whoBackground from "../../images/whoBackground.jpg";
 import pin from "../../images/locationPin.png";
 
 const WhoWeAre = () => {

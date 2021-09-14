@@ -133,8 +133,8 @@ const Train = ({ data }) => {
                     >
                     <Listbox.Button className="searchText w-full h-full p-1">
                       {selectedPerson.name}
-                      <i class="bi bi-caret-down-fill pl-1 text-red-600"></i>
-                      <i className="bi bi-search searchButton"></i>
+                      {/* <i class="bi bi-caret-down-fill pl-1 text-red-600"></i> */}
+                      <i className="bi bi-caret-down-fill searchButton"></i>
                     </Listbox.Button>
 
                     <Listbox.Options className="text-lg dropBorder bg-white py-2 text-center border border-solid mt-2 rounded-xl overflow-hidden">
