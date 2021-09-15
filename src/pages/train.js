@@ -9,6 +9,7 @@ import pinBlue from "../images/pinBlue.png";
 import SiteHelmet from "../components/SiteHelmet";
 import unicornStars from "../images/unicornStars.png";
 import BackgroundSection from "../components/equipBg";
+import Button from "../components/button";
 
 
 const pageStyles = {
@@ -32,6 +33,7 @@ const pinBlueStyle = {
   position: "absolute",
   right: "52px",
 };
+
 
 const categories = [
   { id: 1, name: 'All Categories', unavailable: false },
@@ -173,6 +175,16 @@ const Train = ({ data }) => {
                 );
               })}
             </div>
+              <div className= "flex justify-center">
+                <Button
+                  linkTo="/contact"
+                  className=""
+                  text="Contact Us"
+                  width="166px"
+                  height="52px"
+                />
+              </div>
+
           </div>
         </section>
         <img alt="Doug Pin" src={pinBlue} style={pinBlueStyle} className="" />
