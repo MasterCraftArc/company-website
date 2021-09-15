@@ -144,24 +144,5 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [G_4_TAG],
-        pluginConfig: {
-          head: true,
-          respectDNT: true,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: G_UNIVERSAL,
-        head: true,
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
   ],
 };
