@@ -44,6 +44,7 @@ const TrainForBattle = () => {
             image={heroes}
             mainText="Get Support on DoD 21.3 SBIR/STTR"
             cardLink="/contact"
+            gtmLabel="SBIR/STTR Advice"
           />
 
           <BattleCard
@@ -51,6 +52,7 @@ const TrainForBattle = () => {
             image={aquisitions}
             mainText="Attend DevSecOps Training Course"
             cardLink="/training"
+            gtmLabel="DevSecOps training"
           />
 
           <BattleCard
@@ -58,6 +60,7 @@ const TrainForBattle = () => {
             image={devSecOps}
             mainText="Explore Digital Transformation Content"
             cardLink="/train"
+            gtmLabel="Blog"
           />
         </Carousel>
       </div>

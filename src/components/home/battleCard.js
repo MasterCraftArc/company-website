@@ -19,7 +19,11 @@ const cardImg = {
 
 const BattleCard = (props) => {
   return (
-    <a class=".battleCardLink" href={props.cardLink}>
+    <a
+      class=".battleCardLink"
+      href={props.cardLink}
+      data-gtm-label={props.gtmLabel}
+    >
       <div className="flex mx-2 battleCard" aria-hidden="true">
         <div
           className="card
