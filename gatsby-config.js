@@ -137,11 +137,23 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
+    // Ensure that Tag manager stays before the gtag and ua analytics declarations in this file.
+    // per https://www.gatsbyjs.com/plugins/gatsby-plugin-google-tagmanager/
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: TAG_MGR_ID,
         includeInDevelopment: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [G_4_TAG],
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
       },
     },
   ],
