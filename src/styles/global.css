@@ -88,7 +88,7 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: "Poppins", "Lato", "Garamond";
+  font-family: "Poppins";
 }
 
 html,
@@ -113,6 +113,7 @@ body {
   align-items: center;
   margin: 0;
 }
+
 .navClear {
   transition: all 0.5s ease-in;
   mask-image: linear-gradient(
@@ -140,6 +141,7 @@ body {
   background-color: blue;
   flex-direction: column;
 }
+
 @media only screen and (min-width: 768px) {
   .parent:hover .child {
     opacity: 1;

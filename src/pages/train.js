@@ -72,12 +72,10 @@ const Train = ({ data }) => {
             className="pb-8 h-full flex flex-col justify-center"
             style={{ color: "red" }}
           >
-            <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-bold">
+            <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-semibold">
               <p className="">The Defense Unicorns Blog</p>
-              <p className="mt-5 text-red-600">translating thoughts</p>
-              <p className="mt-5 text-red-600">into action</p>
             </div>
-            <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
+            <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-red-500 pl-4 md:pl-6 lg:pl-16">
               This blog is your source for context-first guides, stories and
               news on the categories, process and technology necessary to accelerate
               your mission.
