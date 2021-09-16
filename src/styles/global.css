@@ -284,7 +284,9 @@ body {
 }
 
 /* Category Search Bar */
-
+.searchText:hover i{
+  @apply text-blue-900;
+}
 
 .searchButton{
   color: white;

@@ -81,12 +81,10 @@ Elastic Beanstalk as a platform allows deployment of web applications in several
 
 ### Analytics
 
-#### Netlify Analytics
-
 
 #### Google Analytics 
 
-By integrating Google Analytics 4 and Universal Analytics properties into the Defense Unicorns website workflow,  we are able to track and manage website traffic. These tools will allow us to gather unique data regarding user's visits to our website. Powered by AI, google analytics will give us smart insights and predictions on user interaction on the defense unicorns website and by using both platforms we are able to make 
+By integrating Google Analytics 4 and Universal Analytics properties into the Defense Unicorns website workflow,  we are able to track and manage website traffic. These tools will allow us to gather unique data regarding user's visits to our website. Additionally google analytics will give us smart insights and predictions on user interaction on the defense unicorns website through their machine learning algorithms.
 
 #### Microsoft Clarity 
 
@@ -95,8 +93,3 @@ Clarity easily integrates into our google analytics workflow and provides advanc
 #### Hotjar
 
 Hotjar will also be able to integrate with the google analytics plugin although not as natively as clarity. Hotjar  provides heatmap tooling that will allow us to see which parts of the site attract attention and where users tend to linger. We will be able to differentiate data based on a/b testing and across visits on different devices. Hotjar also provides user playback features as well to allow us to view individual user interactions on our site. This will allow further insight on why some users don't convert. 
-
-
-### Other
-
-#### Zapier

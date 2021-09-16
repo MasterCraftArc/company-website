@@ -2,8 +2,10 @@ import { navigate } from "gatsby";
 import * as React from "react";
 
 const trainedCardStyle = {
-  width: "305px",
+  // width: "305px",
   height: "420px",
+  width: '20%',
+  // height: '92%',
   backgroundColor: "#F3F3F3",
 };
 
@@ -23,7 +25,7 @@ const Card = React.forwardRef((props, ref) => (
   <div
     role="none"
     ref={ref}
-    className="borderRadius card rounded-2xl mx-9 mt-10 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
+    className="inline-block borderRadius card rounded-2xl mx-9 mt-10 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
     style={trainedCardStyle}
     data-category={props.category}
     onClick={() => {
