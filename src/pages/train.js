@@ -15,6 +15,7 @@ import Button from "../components/button";
 const pageStyles = {
   color: "black",
   width: "100%",
+
 };
 
 const battleText = {
@@ -25,7 +26,8 @@ const battleText = {
 const unicornStarStyle = {
   width: "14%",
   position: "absolute",
-  top: "250px",
+  bottom: '29px',
+  right: '23px',
 };
 
 const pinBlueStyle = {
@@ -110,19 +112,19 @@ const Train = ({ data }) => {
             alt="unicorn with star trail"
           />
           <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
-            <div className="md:px-16 sticky top-0 bg-white relative">
+            <div className="md:px-44 sticky top-0 bg-white relative">
               <h2
                 className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex flex-col sm:flex-row items-center w-full justify-between relative h-full"
                 style={battleText}
               >
                 <div className="flex items-center">
                   <img
-                    className="justify-self-bottom"
+                    className="justify-self-bottom absolute left-16"
                     style={{ maxWidth: "70px" }}
                     src={pinBlue}
                     alt="Unicorn standing on card"
                   />
-                  <span>Latest Posts</span>
+                  <span className= 'absolute left-123'>Latest Posts</span>
                   
                 </div>
                 
@@ -155,7 +157,7 @@ const Train = ({ data }) => {
               </h2>
             </div>
 
-            <div className="mt-5 pt-28 sm:pt-12 flex justify-center lg:justify-start flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-10 pb-10">
+            <div className="mt-5 pt-28 sm:pt-12 flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10">
               {posts.map((post, i) => {
                 return (
                   <Card
