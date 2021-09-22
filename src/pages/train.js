@@ -61,17 +61,17 @@ results.map(post => {
 
 
 const Train = ({ data }) => {
-  const cardRefs = posts.map(() => React.createRef());
   const [selectedPerson, setSelectedPerson] = useState(categories[0])
   const searchBar = React.createRef()
-
+  
   const { search } = window.location;
   const query = new URLSearchParams(search).get('s');
   const [searchQuery, setSearchQuery] = useState(query || '');
-  const searchResults = useFlexSearch(searchQuery, index, store);
-  const results = unFlattenResults(results);
-
+  // const searchResults = useFlexSearch(searchQuery, data.localSearchPages.index, data.localSearchPages.store);
+  // const results = unFlattenResults(results);
+  
   const posts = data.allMarkdownRemark.nodes;
+  const cardRefs = posts.map(() => React.createRef());
 
   const updateCards = (evt) => {
     console.log(evt)
