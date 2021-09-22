@@ -37,7 +37,6 @@ const pinBlueStyle = {
 };
 
 const tileBox = {
-  padding: "5%",
 }
 
 const latestPost = {
@@ -85,7 +84,7 @@ const Train = ({ data }) => {
             <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-semibold">
               <p className="">The Defense Unicorns Blog</p>
             </div>
-            <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-red-500 pl-4 md:pl-6 lg:pl-16">
+            <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
               This blog is your source for context-first guides, stories and
               news on the categories, process and technology necessary to accelerate
               your mission.
@@ -127,12 +126,12 @@ const Train = ({ data }) => {
               >
                 <div className="flex items-center">
                   <img
-                    className="justify-self-bottom absolute left-16"
+                    className="justify-self-bottom"
                     style={{ maxWidth: "70px" }}
                     src={pinBlue}
                     alt="Unicorn standing on card"
                   />
-                  <span className= 'absolute left-123' style={latestPost}>Latest Posts</span>
+                  <span className= '' style={latestPost}>Latest Posts</span>
                   
                 </div>
                 
@@ -165,7 +164,7 @@ const Train = ({ data }) => {
               </h2>
             </div>
 
-            <div className="sm:pt-12 flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10"
+            <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10"
             style={tileBox}>
               {posts.map((post, i) => {
                 return (
