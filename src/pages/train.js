@@ -36,6 +36,14 @@ const pinBlueStyle = {
   right: "52px",
 };
 
+const tileBox = {
+  padding: "5%",
+}
+
+const latestPost = {
+
+}
+
 
 const categories = [
   { id: 1, name: 'All Categories', unavailable: false },
@@ -134,6 +142,9 @@ const Train = ({ data }) => {
           />
           <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
             <div className="lg:px-24 xl:px-32 2xl:px-44 top-0 bg-white relative">
+{/*               
+          <div className="mt-2 md:mt-16 mx-auto relative py-16 h-full">
+            <div className="md:px-44 sticky top-0 bg-white relative"> */}
               <h2
                 className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex flex-col sm:flex-row items-center w-full justify-between relative h-full"
                 style={battleText}
@@ -189,8 +200,7 @@ const Train = ({ data }) => {
               </h2>
             </div>
 
-            <div className="mt-5 flex justify-center lg:justify-between flex-wrap min-h-screen lg:px-24 xl:px-32 2xl:px-44 pb-10">
-            {/* <div className="mt-5 pt-28 sm:pt-12 grid grid-flow-col grid-cols-1 grid-rows-2 gap-4 min-h-screen pb-10"> */}
+            <div className="sm:pt-12 flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10" style={tileBox}>
               {posts.map((post, i) => {
                 return (
                   <Card
