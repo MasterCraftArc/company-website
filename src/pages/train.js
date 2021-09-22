@@ -59,16 +59,17 @@ const Train = ({ data }) => {
   const updateCards = (evt) => {
     if(evt.name === 'All Categories'){
       cardRefs.forEach( card => {
-        card.current.hidden = false
+        card.current.style.display = "block"
       })
     }else{
       cardRefs.forEach( card => {
-        card.current.hidden = true
+        card.current.style.display = "hidden"
       })
+      cardRefs.filter( card => card.current.dataset.category === evt.name).forEach(card => {
+        card.current.style.display = "block"
+      })
+
     }
-    cardRefs.filter( card => card.current.dataset.category === evt.name).forEach(card => {
-      card.current.hidden = false
-    })
   }
 
   return (
