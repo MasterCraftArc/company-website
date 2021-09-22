@@ -63,7 +63,7 @@ const Train = ({ data }) => {
       })
     }else{
       cardRefs.forEach( card => {
-        card.current.style.display = "hidden"
+        card.current.style.display = "none"
       })
       cardRefs.filter( card => card.current.dataset.category === evt.name).forEach(card => {
         card.current.style.display = "block"
