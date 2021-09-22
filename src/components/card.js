@@ -4,7 +4,7 @@ import * as React from "react";
 const trainedCardStyle = {
   // width: "305px",
   // height: "420px",
-width: '30%',
+width: '41%',
 height: '600px',
   backgroundColor: "#F3F3F3",
 };

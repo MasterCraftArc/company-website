@@ -36,6 +36,13 @@ const pinBlueStyle = {
   right: "52px",
 };
 
+const tileBox = {
+}
+
+const latestPost = {
+
+}
+
 
 const categories = [
   { id: 1, name: 'All Categories', unavailable: false },
@@ -77,7 +84,7 @@ const Train = ({ data }) => {
             <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-semibold">
               <p className="">The Defense Unicorns Blog</p>
             </div>
-            <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-red-500 pl-4 md:pl-6 lg:pl-16">
+            <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
               This blog is your source for context-first guides, stories and
               news on the categories, process and technology necessary to accelerate
               your mission.
@@ -111,7 +118,7 @@ const Train = ({ data }) => {
             style={unicornStarStyle}
             alt="unicorn with star trail"
           />
-          <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
+          <div className="mt-2 md:mt-16 mx-auto relative py-16 h-full">
             <div className="md:px-44 sticky top-0 bg-white relative">
               <h2
                 className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex flex-col sm:flex-row items-center w-full justify-between relative h-full"
@@ -119,12 +126,12 @@ const Train = ({ data }) => {
               >
                 <div className="flex items-center">
                   <img
-                    className="justify-self-bottom absolute left-16"
+                    className="justify-self-bottom"
                     style={{ maxWidth: "70px" }}
                     src={pinBlue}
                     alt="Unicorn standing on card"
                   />
-                  <span className= 'absolute left-123'>Latest Posts</span>
+                  <span className= '' style={latestPost}>Latest Posts</span>
                   
                 </div>
                 
@@ -157,7 +164,8 @@ const Train = ({ data }) => {
               </h2>
             </div>
 
-            <div className="mt-5 pt-28 sm:pt-12 flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10">
+            <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10"
+            style={tileBox}>
               {posts.map((post, i) => {
                 return (
                   <Card
