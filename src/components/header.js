@@ -94,7 +94,7 @@ function Header(props) {
               <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 ">
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-xl uppercase hover:text-red-600"
+                    className="px-3 text-xl uppercase hover:text-red-600 navLink"
                     to="/"
                   >
                     <span className="mt-2 ml-2 ">Home</span>
@@ -103,14 +103,14 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/train"
-                    className="text-xl flex uppercase hover:text-red-600"
+                    className="text-xl flex uppercase hover:text-red-600 navLink"
                   >
                     <span className="ml-5">Train</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-xl uppercase hover:text-red-600"
+                    className="px-3 text-xl uppercase hover:text-red-600 navLink"
                     to="/contact"
                   >
                     <span className="ml-2">Contact</span>
@@ -156,7 +156,7 @@ function Header(props) {
               >
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-4xl uppercase text-blue-900"
+                    className="px-3 text-4xl uppercase text-blue-900 navLink"
                     to="/"
                   >
                     Home
@@ -165,14 +165,14 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/train"
-                    className="text-4xl flex uppercase text-blue-900"
+                    className="text-4xl flex uppercase text-blue-900 navLink"
                   >
                     Train
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-4xl uppercase text-blue-900"
+                    className="px-3 text-4xl uppercase text-blue-900 navLink"
                     to="/contact"
                   >
                     Contact
