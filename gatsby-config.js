@@ -1,4 +1,4 @@
-const { TAG_MGR_ID, G_4_TAG, G_UNIVERSAL, SITEMAP_URL } = require("./env.js");
+const { TAG_MGR_ID, SITEMAP_URL } = require("./env.js");
 
 module.exports = {
   siteMetadata: {
@@ -146,15 +146,5 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-gtag`,
-    //   options: {
-    //     trackingIds: [G_4_TAG],
-    //     pluginConfig: {
-    //       head: true,
-    //       respectDNT: true,
-    //     },
-    //   },
-    // },
   ],
 };
