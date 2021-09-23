@@ -27,7 +27,7 @@ class Training extends React.Component {
     Object.keys(this.refs).map((key) => (formData[key] = this.refs[key].value));
 
     const axiosOptions = {
-      url: this.props.location.pathname,
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLSc3KONt3qkVLSslYg1u_Eo38m7WfNooK67iNvsIvZhzzWcNNA/formResponse',
       method: "post",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: qs.stringify(formData),
@@ -37,11 +37,15 @@ class Training extends React.Component {
       .then((response) => {
         navigate("/thankyoutraining");
       })
-      .catch((err) =>
+      .catch((err) => {
+        
+        navigate("/thankyoutraining");
         this.setState({
           feedbackMsg: "Form could not be submitted.",
         })
+      }
       );
+
   }
 
   render() {
@@ -63,21 +67,15 @@ class Training extends React.Component {
                   name="Training"
                   onSubmit={(event) => this.handleSubmit(event)}
                 >
-                  <input
-                    ref="form-name"
-                    type="hidden"
-                    name="form-name"
-                    value="Training"
-                  />
                   <div className="m-0">
                     <input
-                      ref="firstName"
+                      ref="entry.1161604118"
                       name="firstName"
                       className="form-control w-full mb-5"
                       placeholder="First Name"
                     ></input>
                     <input
-                      ref="lastName"
+                      ref="entry.1553444879"
                       name="lastName"
                       className="form-control w-full mb-5"
                       placeholder="Last Name"
@@ -91,15 +89,22 @@ class Training extends React.Component {
                       id="exampleInputEmail1"
                     />
                     <input
-                      ref="organization"
+                      ref="entry.84539168"
                       name="organization"
-                      className="form-control w-full"
+                      className="form-control w-full mb-5"
                       placeholder="Organization"
                       id="organization"
                     />
+                   <input
+                      ref="entry.1290040767"
+                      name="Title"
+                      className="form-control w-full mb-3"
+                      placeholder="Title"
+                      id="title"
+                    />
                   </div>
                   <textarea
-                    ref="message"
+                    ref="entry.1098032596"
                     name="message"
                     className="m-0 w-100 mt-2 form-control bg-transparent"
                     placeholder="Why are you interested in a DevSecOps course?"

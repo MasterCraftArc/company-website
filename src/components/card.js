@@ -3,7 +3,9 @@ import * as React from "react";
 
 const trainedCardStyle = {
   width: "305px",
-  height: "420px",
+  height: "450px",
+// width: '41%',
+// height: '600px',
   backgroundColor: "#F3F3F3",
 };
 
@@ -23,7 +25,7 @@ const Card = React.forwardRef((props, ref) => (
   <div
     role="none"
     ref={ref}
-    className="borderRadius card rounded-2xl md:mx-16 mt-10 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
+    className="inline-block borderRadius card rounded-2xl mx-9 mt-16 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
     style={trainedCardStyle}
     data-category={props.category}
     onClick={() => {
@@ -33,7 +35,7 @@ const Card = React.forwardRef((props, ref) => (
       navigate(props.cardLink);
     }}
   >
-    <div className="h-3/6 bg-gray-50 w-full">
+    <div className="h-5/12 bg-gray-50 w-full">
       <img
         src={props.imgDisplay}
         className="card-img-top mx-auto h-full w-auto py-2"

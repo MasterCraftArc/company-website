@@ -6,8 +6,8 @@
 @layer utilities {
   @variants responsive {
     .cardPadding {
-      padding-left: 18%;
-      padding-right: 18%;
+      padding-left: 12%;
+      padding-right: 12%;
     }
     .centerLogo {
       position: absolute;
@@ -34,6 +34,12 @@
     .footerBackgroundMobile {
       background: url("../images/mobileFooter.jpg") no-repeat;
       background-size: cover;
+    }
+    .whoWeAreBgRight{
+      background-position: right !important;
+    }
+    .whoWeAreBgCenter{
+      background-position: center !important;
     }
   }
 }
@@ -82,7 +88,7 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: "Poppins", "Lato", "Garamond";
+  font-family: "Poppins";
 }
 
 html,
@@ -107,6 +113,7 @@ body {
   align-items: center;
   margin: 0;
 }
+
 .navClear {
   transition: all 0.5s ease-in;
   mask-image: linear-gradient(
@@ -134,6 +141,7 @@ body {
   background-color: blue;
   flex-direction: column;
 }
+
 @media only screen and (min-width: 768px) {
   .parent:hover .child {
     opacity: 1;
@@ -275,6 +283,27 @@ body {
   margin-top: 10%;
 }
 
+/* Category Search Bar */
+
+
+.searchButton{
+  color: white;
+  @apply absolute top-0 right-0 p-2 bg-red-500 font-bold text-2xl rounded-xl h-full flex justify-center items-center w-1/6;
+}
+.borderColor {
+  border-color: rgb(124, 154, 192);
+}
+
+.dropBorder{
+  border-color: rgb(124, 154, 192);
+}
+
+.searchText {
+  font-size: small;
+  color: black
+}
+
+
 /* ////////////////////////// */
 
 /* Contact */
@@ -312,7 +341,7 @@ body {
 
 .contact input:focus,
 .contact textarea:focus {
-  @apply border-2 border-solid border-blue-900 rounded-xl px-2;
+  @apply border-2 border-solid border-red-500 rounded-xl px-2;
 }
 
 /* Blog */

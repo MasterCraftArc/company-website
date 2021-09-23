@@ -1,13 +1,13 @@
 import React from "react";
 import whoWeAre from "../../images/home/whoWeAre.png";
 import Button from "../button";
-import whoBackground from "../../images/contact.jpg";
+import whoBackground from "../../images/whoBackground.jpg";
 import pin from "../../images/locationPin.png";
 
 const WhoWeAre = () => {
   return (
     <section
-      className="md:min-h-screen flex items-center justify-center w-full my-16 md:my-0 py-10 md:py-0"
+      className="md:min-h-screen flex items-center justify-center w-full my-16 md:my-0 py-10 md:py-0 whoWeAreBgRight lg:whoWeAreBgCenter"
       style={{
         background: `url(${whoBackground}) no-repeat`,
         backgroundSize: "cover",
@@ -38,7 +38,9 @@ const WhoWeAre = () => {
             />
             Who we are
           </h2>
-          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-5 text-xl xl:pb-16 font-light">
+          <p 
+            className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-5 text-xl xl:pb-16 font-light"   
+          >
             We are innovators, software engineers, and veterans with decades of
             experience delivering technology programs across DoD and the broader
             federal market. Defense Unicorns exists to accelerate the impact of
