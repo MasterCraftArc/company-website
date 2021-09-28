@@ -2,12 +2,12 @@
 title: "Key Terms in Cloud-Native Software Delivery: A Fact Sheet"
 author: Defense Unicorns Staff
 date: 2021-08-30T16:23:03.717Z
-published: true
-tags: Continuous Delivery
 description: Modern software is moving fast. However, while the associated
   lexicon is continuously changing, there are core concepts and...
+published: true
+tags: Continuous Delivery
 category: DevSecOps
-image: monolithic-vs-microservices.png
+image: keyterms.png
 ---
 Modern software is moving fast. However, while the associated lexicon is continuously changing, there are core concepts and key terms that one must be familiar with in order to effectively drive digital transformation in their organization. It can be difficult to find these terms and concepts in one place. What’s more, it can be challenging to determine the connections and interrelationships among the concepts. The below is intended to serve as a living guide for those embarking on their own software transformation journey - especially those with a need for cloud-native capabilities. 
 
