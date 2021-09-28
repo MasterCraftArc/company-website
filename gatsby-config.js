@@ -135,6 +135,39 @@ module.exports = {
         exclude: [`/404`, `/thankyou`, `/thankyoutraining`],
       },
     },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+          name: 'pages',
+          engine: 'flexsearch',
+          query: `
+                query {
+                  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+                    nodes {
+                      excerpt
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        date(formatString: "MMMM DD, YYYY")
+                        title
+                      }
+                    }
+                  }
+                }
+              `,
+          ref: 'slug',
+          index: ['title', 'excerpt'],
+          store: ['title', 'excerpt', 'date', 'slug'],
+          normalizer: ({ data }) =>
+          data.allMarkdownRemark.nodes.map(node => ({
+              title: node.frontmatter.title,
+              excerpt: node.excerpt,
+              date: node.frontmatter.date,
+              slug: node.fields.slug,
+          })),
+      }
+  },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     // Ensure that Tag manager stays before the gtag and ua analytics declarations in this file.

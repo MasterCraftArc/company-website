@@ -4,8 +4,8 @@ import * as React from "react";
 const trainedCardStyle = {
   // width: "305px",
   // height: "420px",
-width: '41%',
-height: '600px',
+width: '40%',
+height: '689px',
   backgroundColor: "#F3F3F3",
 };
 
@@ -25,7 +25,7 @@ const Card = React.forwardRef((props, ref) => (
   <div
     role="none"
     ref={ref}
-    className="inline-block borderRadius card rounded-2xl mx-9 mt-16 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
+    className="inline-block borderRadius card rounded-2xl mt-10 mx-5 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
     style={trainedCardStyle}
     data-category={props.category}
     onClick={() => {
@@ -47,7 +47,7 @@ const Card = React.forwardRef((props, ref) => (
         {props.category}
       </div>
       <h3
-        className="card-title mt-2 mb-3 text-left ml-8 font-bold text-blue-900"
+        className="card-title mt-2 mb-3 text-left ml-8 text-blue-900"
         style={trainedCardTitle}
       >
         {props.title}
