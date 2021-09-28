@@ -158,8 +158,23 @@ module.exports = {
       options: {
           name: 'pages',
           engine: 'flexsearch',
-          // query: /** TODO **/,
-          // ref: /** TODO **/,
+          query: `
+                query {
+                  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+                    nodes {
+                      excerpt
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        date(formatString: "MMMM DD, YYYY")
+                        title
+                      }
+                    }
+                  }
+                }
+              `,
+          ref: 'slug',
           index: ['title', 'excerpt'],
           store: ['title', 'excerpt', 'date', 'slug'],
           normalizer: ({ data }) =>

@@ -284,13 +284,23 @@ body {
 }
 
 /* Category Search Bar */
-.searchText:hover i{
-  @apply text-blue-900;
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.searchText:hover .searchButton{
+  /* @apply bg-blue-900; */
 }
 
 .searchButton{
   color: white;
-  @apply absolute top-0 right-0 p-2 bg-red-500 font-bold text-2xl rounded-xl h-full flex justify-center items-center w-1/3;
+  @apply absolute top-0 right-0 p-2 bg-red-500 font-bold rounded-xl h-full flex justify-center items-center w-1/3;
 }
 .borderColor {
   border-color: rgb(124, 154, 192);

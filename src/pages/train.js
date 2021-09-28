@@ -39,11 +39,6 @@ const pinBlueStyle = {
 const tileBox = {
 }
 
-const latestPost = {
-
-}
-
-
 const categories = [
   { id: 1, name: 'All Categories', unavailable: false },
   { id: 2, name: 'DevSecOps', unavailable: false },
@@ -64,18 +59,18 @@ const Train = ({ data }) => {
   const searchBar = React.createRef()
   
   const { search } = window.location;
-  const query = new URLSearchParams(search).get('s');
+  const query = new URLSearchParams(search).get('search');
   const [searchQuery, setSearchQuery] = useState(query || '');
-  // const searchResults = useFlexSearch(searchQuery, data.localSearchPages.index, data.localSearchPages.store);
-  // const results = unFlattenResults(results);
-  
-  const posts = data.allMarkdownRemark.nodes;
+  // let [posts, updatePosts] = useState(data.allMarkdownRemark.nodes)
+  let posts = data.allMarkdownRemark.nodes;
   const cardRefs = posts.map(() => React.createRef());
 
+  const searchResults = useFlexSearch(searchQuery, data.localSearchPages.index, data.localSearchPages.store);
+  const results = unFlattenResults(searchResults);
+  // posts = searchQuery ? unflattenResults(results) : nodes;
+
   const updateCards = (evt) => {
-    console.log(evt)
     if(evt.name === 'All Categories'){
-      console.log('all cat')
       cardRefs.forEach( card => {
         card.current.style.display = 'block'
       })
@@ -91,6 +86,17 @@ const Train = ({ data }) => {
         card.current.style.display = 'block'
       })
     }
+  }
+
+  const displaySearch = () => {
+    // console.log(posts)
+    posts = posts.filter( post => {
+      return results.some( result => result.slug === post.fields.slug)
+    } )
+    
+    console.log(posts, 'new posts')
+    console.log(searchResults)
+    console.log(results)
   }
 
   return (
@@ -150,24 +156,21 @@ const Train = ({ data }) => {
               >
                 <div className="flex items-center relative">
                   <img
-<<<<<<< HEAD
-                    className="justify-self-bottom left-16"
-=======
                     className="justify-self-bottom"
->>>>>>> e2b6c9dc0b3e4363ef5a99cd5ce807c298a67bdf
                     style={{ maxWidth: "70px" }}
                     src={pinBlue}
                     alt="Unicorn standing on card"
                   />
-<<<<<<< HEAD
-                  <span className=''>Latest Posts</span>
-=======
-                  <span className= '' style={latestPost}>Latest Posts</span>
->>>>>>> e2b6c9dc0b3e4363ef5a99cd5ce807c298a67bdf
+                  <span className='font-bold'>Latest Posts</span>
                   
                 </div>
                 
                 <div className="w-11/12 sm:w-1/2 md:w-2/5 borderColor border-solid border-r-0 h-16 2xl:h-20 rounded-xl text-normal text-2xl flex">
+                  <label htmlFor="header-search">
+                      <span className="visually-hidden">
+                          Search blog posts
+                      </span>
+                  </label>
                   <input 
                     className="w-1/2 px-2 my-2 divide-x divide-light-blue-400 border-r bg-transparent inline-block outline-none"
                     placeholder="Search..."
@@ -175,6 +178,7 @@ const Train = ({ data }) => {
                     type="text"
                     value={searchQuery}
                     onInput={ (evt) => setSearchQuery(evt.target.value) }
+                    onChange={displaySearch}
                     ref={searchBar}
                   />
                   <div className="relative w-1/2">
@@ -184,7 +188,7 @@ const Train = ({ data }) => {
                       >
                       <Listbox.Button className="searchText w-full h-full p-1 text-left">
                         {selectedPerson.name}
-                        <i className="bi bi-caret-down-fill searchButton"></i>
+                        <i className="bi bi-search searchButton text-3xl"></i>
                       </Listbox.Button>
 
                       <Listbox.Options className="text-lg dropBorder bg-white py-2 text-left border border-solid mt-2 rounded-xl overflow-hidden">
@@ -207,12 +211,9 @@ const Train = ({ data }) => {
               </h2>
             </div>
 
-<<<<<<< HEAD
             <div className="sm:pt-12 flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10" style={tileBox}>
-=======
-            <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10"
-            style={tileBox}>
->>>>>>> e2b6c9dc0b3e4363ef5a99cd5ce807c298a67bdf
+            {/* <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10"
+            style={tileBox}> */}
               {posts.map((post, i) => {
                 return (
                   <Card
