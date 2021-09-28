@@ -26,11 +26,11 @@ const WhatWeDo = () => {
           <h2
             className={`text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium md:font-bold text-blue-900 flex items-center`}
           >
-          <img
-            className="pinMobile md:pinDesktop mr-2 md:mr-0"
-            src={pin}
-            alt="Unicorn pin"
-          />
+            <img
+              className="pinMobile md:pinDesktop mr-2 md:mr-0"
+              src={pin}
+              alt="Unicorn pin"
+            />
             What we do
           </h2>
           <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-xl xl:pb-16 font-light">
