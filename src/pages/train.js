@@ -3,7 +3,7 @@ import { useFlexSearch } from 'react-use-flexsearch';
 import { Listbox } from '@headlessui/react'
 import { graphql } from "gatsby";
 import { motion } from "framer-motion";
-import Card from "../components/card";
+
 import Header from "../components/header";
 import Footer from "../components/footer";
 import pinBlue from "../images/pinBlue.png";
@@ -11,11 +11,11 @@ import SiteHelmet from "../components/SiteHelmet";
 import unicornStars from "../images/unicornStars.png";
 import BackgroundSection from "../components/equipBg";
 import Button from "../components/button";
+import PostContainer from "../components/postContainer";
 
 const pageStyles = {
   color: "black",
   width: "100%",
-
 };
 
 const battleText = {
@@ -50,53 +50,44 @@ const unFlattenResults = results =>
 results.map(post => {
   const { date, slug, tags, title } = post;
   return { slug, frontmatter: { title, date, tags } };
-// https://www.emgoto.com/gatsby-search/ 09/22/2021
+      // https://www.emgoto.com/gatsby-search/ 09/22/2021
     });
 
 
 const Train = ({ data }) => {
   const [selectedPerson, setSelectedPerson] = useState(categories[0])
   const searchBar = React.createRef()
-  
   const { search } = window.location;
   const query = new URLSearchParams(search).get('search');
   const [searchQuery, setSearchQuery] = useState(query || '');
-  // let [posts, updatePosts] = useState(data.allMarkdownRemark.nodes)
+  const [searches, updateSearch] = useState(data.allMarkdownRemark.nodes)
   let posts = data.allMarkdownRemark.nodes;
   const cardRefs = posts.map(() => React.createRef());
 
   const searchResults = useFlexSearch(searchQuery, data.localSearchPages.index, data.localSearchPages.store);
   const results = unFlattenResults(searchResults);
-  // posts = searchQuery ? unflattenResults(results) : nodes;
 
   const updateCards = (evt) => {
     if(evt.name === 'All Categories'){
       cardRefs.forEach( card => {
         card.current.style.display = 'block'
       })
-    }else{
-      
-      cardRefs.forEach( card => {
-        console.log('filtering', card.current.style.display)
-        card.current.style.display = 'none'
+    }
+    else{
+      cardRefs.forEach( card => { card.current.style.display = 'none'
       })
-
       cardRefs.filter( card => card.current.dataset.category === evt.name).forEach( (card, i) => {
-        console.log('filter by', card.current.dataset.category, i)
         card.current.style.display = 'block'
       })
     }
   }
 
   const displaySearch = () => {
-    // console.log(posts)
-    posts = posts.filter( post => {
+    let filterSearch = posts.filter( post => {
       return results.some( result => result.slug === post.fields.slug)
     } )
-    
-    console.log(posts, 'new posts')
-    console.log(searchResults)
-    console.log(results)
+
+    filterSearch.length < 1 ? updateSearch(posts) : updateSearch(filterSearch)
   }
 
   return (
@@ -147,9 +138,7 @@ const Train = ({ data }) => {
           />
           <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
             <div className="lg:px-24 xl:px-32 2xl:px-44 top-0 bg-white relative">
-{/*               
-          <div className="mt-2 md:mt-16 mx-auto relative py-16 h-full">
-            <div className="md:px-44 sticky top-0 bg-white relative"> */}
+
               <h2
                 className="fontTitle text-left text-5xl md:text-6xl lg:text-7xl xl:text-7xl mb-16 flex flex-col sm:flex-row items-center w-full justify-between relative h-full"
                 style={battleText}
@@ -210,28 +199,9 @@ const Train = ({ data }) => {
                 </div>
               </h2>
             </div>
+                          
+              <PostContainer posts={searches} ref={cardRefs}/>
 
-            <div className="sm:pt-12 flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10" style={tileBox}>
-            {/* <div className="flex justify-center lg:justify-between flex-wrap min-h-screen sm:px-16 md:px-32 xl:px-44 pb-10"
-            style={tileBox}> */}
-              {posts.map((post, i) => {
-                return (
-                  <Card
-                    key={`${post.fields.slug}-${i}`}
-                    imgDisplay={
-                      post.frontmatter.image.childImageSharp.fluid.src
-                    }
-                    ref={cardRefs[i]}
-                    category={post.frontmatter.category}
-                    title={post.frontmatter.title}
-                    description={post.frontmatter.description}
-                    cardLink={`/blog${post.fields.slug}`}
-                    date={post.frontmatter.date}
-                  />
-                  
-                );
-              })}
-            </div>
               <div className= "flex justify-center">
                 <Button
                   linkTo="/contact"

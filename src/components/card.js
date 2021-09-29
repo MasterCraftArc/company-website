@@ -18,7 +18,9 @@ const trainedCardText = {
 };
 
 const trainedCardTitle = {
-  fontSize: "15px",
+  fontSize: "17px",
+  fontWeight: "600",
+  color: "#154A8F",
 };
 
 const Card = React.forwardRef((props, ref) => (
@@ -47,14 +49,14 @@ const Card = React.forwardRef((props, ref) => (
         {props.category}
       </div>
       <h3
-        className="card-title mt-2 mb-3 text-left ml-8 text-blue-900"
+        className="card-title mt-2 mb-3 tracking-wide font-semibold text-left ml-8"
         style={trainedCardTitle}
       >
         {props.title}
       </h3>
-      <h4 className="mt-2 mb-3 text-left ml-8 text-gray-500">{props.date}</h4>
+      <h4 className="mt-2 mb-3 text-left ml-8 text-xs text-gray-500">{props.date}</h4>
       <p
-        className="card-text pb-2 text-gray-500 text-left ml-8 md:mt-5"
+        className="card-text text-sm pb-2 text-gray-500 text-left ml-8 md:mt-5"
         style={trainedCardText}
       >
         {props.description}
