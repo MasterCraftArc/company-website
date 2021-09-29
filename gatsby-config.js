@@ -1,4 +1,4 @@
-const { G_4_TAG, G_UNIVERSAL, SITEMAP_URL } = require("./env.js");
+const { TAG_MGR_ID, SITEMAP_URL } = require("./env.js");
 
 module.exports = {
   siteMetadata: {
@@ -62,24 +62,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [G_4_TAG],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: G_UNIVERSAL,
-        head: true,
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -188,8 +170,14 @@ module.exports = {
   },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    // Ensure that Tag manager stays before the gtag and ua analytics declarations in this file.
+    // per https://www.gatsbyjs.com/plugins/gatsby-plugin-google-tagmanager/
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: TAG_MGR_ID,
+        includeInDevelopment: false,
+      },
+    },
   ],
 };

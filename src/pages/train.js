@@ -79,6 +79,10 @@ const Train = ({ data }) => {
       cardRefs.filter( card => card.current.dataset.category === evt.name).forEach( (card, i) => {
         card.current.style.display = 'block'
       })
+      cardRefs.filter( card => card.current.dataset.category === evt.name).forEach(card => {
+        card.current.style.display = "block"
+      })
+
     }
   }
 
