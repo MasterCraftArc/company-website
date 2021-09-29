@@ -2,7 +2,7 @@ import { navigate } from "gatsby";
 import * as React from "react";
 
 const trainedCardStyle = {
-width: '37%',
+width: '35%',
 height: '480px',
 backgroundColor: "#F3F3F3",
 };
@@ -21,11 +21,19 @@ const trainedCardTitle = {
   color: "#154A8F",
 };
 
+const trainedImageStyle = {
+  height: "273px",
+}
+
+const textStyle = {
+  
+}
+
 const Card = React.forwardRef((props, ref) => (
   <div
     role="none"
     ref={ref}
-    className="inline-block borderRadius card rounded-2xl mt-10 mx-5 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
+    className="borderRadius card rounded-2xl mt-10 mx-5 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
     style={trainedCardStyle}
     data-category={props.category}
     onClick={() => {
@@ -35,14 +43,16 @@ const Card = React.forwardRef((props, ref) => (
       navigate(props.cardLink);
     }}
   >
-    <div className="h-5/12 bg-gray-50 w-full">
+    <div className="h-6/12 bg-gray-50 w-full">
       <img
         src={props.imgDisplay}
-        className="card-img-top mx-auto h-full w-auto py-2"
+        style={trainedImageStyle}
+        className="card-img-top mx-auto object-contain py-2"
         alt="blogpost thumbnail"
       />
     </div>
-    <div className="h-2/6 card-body text-center p-5">
+    <div className="h-4/12 card-body text-center"
+    style={textStyle}>
       <div className="w-3/5 mx-auto bg-blue-900 mr-0 text-white">
         {props.category}
       </div>

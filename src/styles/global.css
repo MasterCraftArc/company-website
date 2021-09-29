@@ -265,7 +265,7 @@ body {
 }
 
 .card-img-top {
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .readLink {
