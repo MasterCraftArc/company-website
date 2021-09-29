@@ -2,11 +2,9 @@ import { navigate } from "gatsby";
 import * as React from "react";
 
 const trainedCardStyle = {
-  // width: "305px",
-  // height: "420px",
-width: '40%',
-height: '689px',
-  backgroundColor: "#F3F3F3",
+width: '37%',
+height: '480px',
+backgroundColor: "#F3F3F3",
 };
 
 const trainedCardText = {
