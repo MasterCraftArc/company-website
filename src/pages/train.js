@@ -13,6 +13,7 @@ import BackgroundSection from "../components/equipBg";
 import Button from "../components/button";
 import PostContainer from "../components/postContainer";
 
+
 const pageStyles = {
   color: "black",
   width: "100%",
@@ -36,9 +37,6 @@ const pinBlueStyle = {
   right: "52px",
 };
 
-const tileBox = {
-}
-
 const categories = [
   { id: 1, name: 'All Categories', unavailable: false },
   { id: 2, name: 'DevSecOps', unavailable: false },
@@ -55,7 +53,7 @@ results.map(post => {
 
 
 const Train = ({ data }) => {
-  const [selectedPerson, setSelectedPerson] = useState(categories[0])
+  const [selectedCategory, setselectedCategory] = useState(categories[0])
   const searchBar = React.createRef()
   const { search } = window.location;
   const query = new URLSearchParams(search).get('search');
@@ -149,12 +147,11 @@ const Train = ({ data }) => {
               >
                 <div className="flex items-center relative">
                   <img
-                    className="justify-self-bottom"
-                    style={{ maxWidth: "70px" }}
+                    className=" pinMobile md:pinDesktop mr-2"
                     src={pinBlue}
-                    alt="Unicorn standing on card"
+                    alt="Unicorn pin"
                   />
-                  <span className='font-bold'>Latest Posts</span>
+                  <span className='font-bold text-5xl'>Latest Posts</span>
                   
                 </div>
                 
@@ -176,11 +173,12 @@ const Train = ({ data }) => {
                   />
                   <div className="relative w-1/2">
                     <Listbox 
-                      value={selectedPerson} 
-                      onChange={(evt) => {setSelectedPerson(evt); updateCards(evt);} }
+                      value={selectedCategory} 
+                      onChange={(evt) => {setselectedCategory(evt); updateCards(evt);} }
                       >
                       <Listbox.Button className="searchText w-full h-full p-1 text-left">
-                        {selectedPerson.name}
+                        {selectedCategory.name}
+                        <i className="bi bi-chevron-down"></i>
                         <i className="bi bi-search searchButton text-3xl"></i>
                       </Listbox.Button>
 
