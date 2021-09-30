@@ -64,7 +64,7 @@ const Card = React.forwardRef((props, ref) => (
       </p>
       <div className="w-3/5 ml-8 absolute bottom-6 flex items-center">
         <img
-          className="w-24 mr-2 background-transparent"
+          className="w-24 mr-2 background-transparent pinFilter"
           src={categoryPin}
           alt="Doug circle pin"
           style={ {width: '30px'} }
