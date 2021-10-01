@@ -55,8 +55,8 @@ results.map(post => {
 const Train = ({ data }) => {
   const [selectedCategory, setselectedCategory] = useState(categories[0])
   const searchBar = React.createRef()
-  const { search } = window.location;
-  const query = new URLSearchParams(search).get('search');
+
+  const query = new URLSearchParams().get('search');
   const [searchQuery, setSearchQuery] = useState(query || '');
   const [searches, updateSearch] = useState(data.allMarkdownRemark.nodes)
   let posts = data.allMarkdownRemark.nodes;
@@ -66,30 +66,39 @@ const Train = ({ data }) => {
   const results = unFlattenResults(searchResults);
 
   const updateCards = (evt) => {
+
+    let availableCards = cardRefs.filter( card => card.current)
+
     if(evt.name === 'All Categories'){
-      cardRefs.forEach( card => {
+      availableCards.forEach( card => {
         card.current.style.display = 'block'
       })
     }
     else{
-      cardRefs.forEach( card => { card.current.style.display = 'none'
+      availableCards.forEach( card => { card.current.style.display = 'none'
       })
-      cardRefs.filter( card => card.current.dataset.category === evt.name).forEach( (card, i) => {
+      availableCards.filter( card => card.current.dataset.category === evt.name).forEach( (card, i) => {
         card.current.style.display = 'block'
       })
-      cardRefs.filter( card => card.current.dataset.category === evt.name).forEach(card => {
+      availableCards.filter( card => card.current.dataset.category === evt.name).forEach(card => {
         card.current.style.display = "block"
       })
 
     }
+
+    // displaySearch()
   }
 
   const displaySearch = () => {
     let filterSearch = posts.filter( post => {
-      return results.some( result => result.slug === post.fields.slug)
+      if(searchQuery.length > 1){
+        return results.some( result => result.slug === post.fields.slug )
+      }
+      return
     } )
-
     filterSearch.length < 1 ? updateSearch(posts) : updateSearch(filterSearch)
+
+
   }
 
   return (
@@ -167,8 +176,8 @@ const Train = ({ data }) => {
                     name="search"
                     type="text"
                     value={searchQuery}
-                    onInput={ (evt) => setSearchQuery(evt.target.value) }
-                    onChange={displaySearch}
+                    onInput={ (evt) => {setSearchQuery(evt.target.value); displaySearch(); } }
+                    // onChange={}
                     ref={searchBar}
                   />
                   <div className="relative w-1/2">
