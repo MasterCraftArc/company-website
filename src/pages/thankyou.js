@@ -13,15 +13,15 @@ const Thankyou = () => {
         alt="Defense Unicorns Logo"
         className="w-3/4 md:w-1/4 bg-white rounded-xl"
       ></img>
-      <h1 className="mt-16 text-5xl text-black text-center font-bold text-white">
-        <span className="text-red-500">Thank you</span> for contacting us!
+      <h1 className="mt-16 text-5xl text-center font-bold text-white">
+        Thank you for contacting us!
       </h1>
-      <h1 className="mt-6 mb-10 text-5xl text-center font-bold text-blue-900 py-5">
+      <h1 className="mt-6 mb-10 text-5xl text-center font-bold text-white py-5">
         We'll be in touch shortly.
       </h1>
       <Button
         linkTo="/"
-        className="bg-blue-500 hover:bg-blue-400 text-white mr-5 mb-5"
+        className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5"
         text="Home"
       />
     </StyledBackgroundSection>
