@@ -81,12 +81,9 @@ Elastic Beanstalk as a platform allows deployment of web applications in several
 
 ### Analytics
 
-#### Netlify Analytics
-
-
 #### Google Analytics 
 
-Google Analytics will allow us to track unique data regarding user's visits to our website. Powered by AI, google analytics will give us smart insights and predictions on user interaction on the defense unicorns website
+By integrating Google Analytics 4 and Universal Analytics properties into the Defense Unicorns website workflow,  we are able to track and manage website traffic. These tools will allow us to gather unique data regarding user's visits to our website. Additionally google analytics will give us smart insights and predictions on user interaction on the defense unicorns website through their machine learning algorithms.
 
 #### Microsoft Clarity 
 

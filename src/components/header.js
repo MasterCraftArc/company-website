@@ -159,7 +159,7 @@ function Header(props) {
               >
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-4xl uppercase text-blue-900"
+                    className="px-3 text-4xl uppercase text-blue-900 navLink"
                     to="/"
                   >
                     Home
@@ -168,7 +168,7 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/train"
-                    className="text-4xl flex uppercase text-blue-900"
+                    className="text-4xl flex uppercase text-blue-900 navLink"
                   >
                     Train
                   </Link>

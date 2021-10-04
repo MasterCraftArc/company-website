@@ -1,30 +1,36 @@
 import { navigate } from "gatsby";
 import * as React from "react";
+import categoryPin from "../images/blog/categoryPin.png"
 
 const trainedCardStyle = {
-  width: "305px",
-  height: "420px",
-  backgroundColor: "#F3F3F3",
-  boxShadow: '3px 5px 10px #888888'
+height: '620px',
+backgroundColor: "#F3F3F3",
 };
 
 const trainedCardText = {
   fontSize: "12px",
   width: "87%",
-  paddingTop: "5%",
+  paddingTop: "2%",
   marginTop: "auto",
   marginBottom: "4%",
 };
 
 const trainedCardTitle = {
-  fontSize: "15px",
+  // fontSize: "22px",
+  fontWeight: "600",
+  color: "#154A8F",
+  paddingTop: "4%",
 };
+
+const textStyle = {
+
+}
 
 const Card = React.forwardRef((props, ref) => (
   <div
     role="none"
     ref={ref}
-    className="borderRadius card rounded-2xl mx-9 mt-10 border-1 border-gray-100 border-solid overflow-hidden"
+    className="borderRadius card rounded-2xl mt-10 sm:mx-5 shadow-xl border-1 border-gray-100 border-solid overflow-hidden"
     style={trainedCardStyle}
     data-category={props.category}
     onClick={() => {
@@ -34,30 +40,37 @@ const Card = React.forwardRef((props, ref) => (
       navigate(props.cardLink);
     }}
   >
-    <div className="h-3/6 bg-gray-50 w-full">
+    <div className="h-4/6 bg-gray-50 w-full flex justify-center items-center">
       <img
         src={props.imgDisplay}
-        className="card-img-top mx-auto h-full w-auto py-2"
+        className="card-img-top mx-auto object-cover py-2"
         alt="blogpost thumbnail"
       />
     </div>
-    <div className="h-2/6 card-body text-center p-5">
-      <div className="w-3/5 mx-auto bg-blue-900 mr-0 text-white">
-        {props.category}
-      </div>
+    <div className="h-1/3 card-body text-center relative"
+    style={textStyle}>
       <h3
-        className="card-title mt-2 mb-3 text-left ml-8 font-bold text-blue-900"
+        className="card-title mt-2 mb-3 tracking-wide font-semibold text-left ml-8 text-2xl"
         style={trainedCardTitle}
       >
         {props.title}
       </h3>
-      <h4 className="mt-2 mb-3 text-left ml-8 text-gray-500">{props.date}</h4>
+      <h4 className="sm:mt-2 sm:mb-3 text-left ml-8 text-sm text-gray-500">{props.date}</h4>
       <p
-        className="card-text pb-2 text-gray-500 text-left ml-8 md:mt-5"
+        className="card-text text-sm pb-2 text-gray-500 text-left ml-8 md:mt-5"
         style={trainedCardText}
       >
         {props.description}
       </p>
+      <div className="w-3/5 ml-8 absolute bottom-6 flex items-center">
+        <img
+          className="w-24 mr-2 background-transparent pinFilter"
+          src={categoryPin}
+          alt="Doug circle pin"
+          style={ {width: '30px'} }
+        />
+        {props.category}
+      </div>
     </div>
   </div>
 ));

@@ -45,14 +45,16 @@ function Footer({ background }) {
           <div className="socialsBox text-white flex justify-center text-3xl  md:justify-start mt-12 sm:mt-6 ">
             <a
               aria-hidden="true"
-              className=""
+              className="outboundLink"
+              data-gtm-label="LinkedIn"
               href="https://www.linkedin.com/company/defense-unicorns"
             >
               <i className=" bi bi-linkedin hover:bg-white hover:text-red-500 text-white rounded-full transition-all px-3 py-2 "></i>
             </a>
             <a
               aria-hidden="true"
-              className=""
+              className="outboundLink"
+              data-gtm-label="Github"
               href="https://github.com/defenseunicorns"
             >
               <i className="bi bi-github hover:bg-white hover:text-red-500 text-white rounded-full transition-all px-3 py-2"></i>
