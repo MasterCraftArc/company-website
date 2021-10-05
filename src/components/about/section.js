@@ -16,10 +16,13 @@ const Section = (props) => {
               {props.title}
             </span>
           </h2>
+
+
           <h3 className="text-red-600 text-3xl lg:text-4xl mt-10 text-center sm:text-justify whitespace-pre">
             {props.subtitle}
           </h3>
-          <p className="mt-10 text-lg lg:text-2xl 2xl:pr-24 whitespace-normal text-center sm:text-justify">
+
+          <p className=" text-lg lg:text-2xl xl:text-3xl 2xl:pr-24 whitespace-normal text-center sm:text-justify lg:py-5 leading-loose">
             {props.text}
           </p>
         </div>

@@ -1,42 +1,42 @@
 [
     {
       "img" : "valueImg", 
-      "title": "Values",
-      "subtitle": "Lorem ipsum dolor sit amet,",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "title": "Experiment with everything",
+      "subtitle": "",
+      "text": "Lean methodology is an integral part of our culture. Before anything becomes a process or policy, we rigorously test it by establishing success criteria and by collecting and analyzing the data. But evaluation doesn’t stop when a decision is made. We apply a build-measure-learn feedback loop to both our software products and our business decisions.",
       "contentStyle" : "order-last sm:order-first",
       "titleStyle" : ""
     },
     {
       "img" : "engineeringImg", 
-      "title": "Engineering",
-      "subtitle": "Our Enginering Process: ",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "title": "Default to action",
+      "subtitle": "",
+      "text": "When we see a problem we default to action to accelerate the learning cycle. By refusing to ignore challenges and focusing on delivering value quickly, we establish a more comprehensive understanding of the challenges and can refine the solution.",
       "contentStyle" : "order-last",
       "titleStyle" : ""
     },
     {
       "img" : "peopleImg", 
-      "title": "People Over Everything",
-      "subtitle": "Lorem ipsum dolor sit amet,",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "title": "Share insights, considerately",
+      "subtitle": "",
+      "text": "At Defense Unicorns we give and receive direct feedback. We’re committed to delivering actionable insights that allow us to improve personally, professionally, and as a team. We believe feedback is best received when it's given readily, thoughtfully and in a timely manner. ",
       "contentStyle" : "order-last sm:order-first",
       "titleStyle" : "w-3/5 lg:w-full"
     },
     {
       "img" : "communicationImg", 
-      "title": "Transparent Communication",
-      "subtitle": "Lorem ipsum dolor sit amet,",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "title": "Be open-minded but apply focused learning",
+      "subtitle": "",
+      "text": "We believe that growth comes equally from discipline and curiosity. As a company, we champion the exploration of new ideas, concepts, and techniques. We channel this continuous improvement mindset into our work by setting clear and measurable goals for growth and tracking that progress over time. Our growth goals focus our attention on the new concepts or skills most closely tied to desired results.",
       "contentStyle" : "order-last ",
       "titleStyle" : ""
 
     },
     {
       "img" : "evolutionImg", 
-      "title": "Continous evolution, active curiosity",
-      "subtitle": "Lorem ipsum dolor sit amet,",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "title": "Employ positive thinking",
+      "subtitle": "",
+      "text": "Unicorns lead with a positive outlook. We acknowledge challenges, but we focus our energy on the vast potential that lies on the other side of solving them. We also know that positive thinking is a practice and a skill. Every day we take steps to strengthen the bonds on our team so that it may function as a support system - allowing our people to take greater risks, overcome adversity, and continue moving forward.",
       "contentStyle" : "order-last sm:order-first",
       "titleStyle" : ""
     }
