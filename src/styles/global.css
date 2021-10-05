@@ -22,10 +22,10 @@
       left: unset;
     }
     .pinDesktop {
-      max-width: 60px;
+      max-width: 65px;
     }
     .pinMobile {
-      max-width: 40px;
+      max-width: 45px;
     }
     .footerBackgroundDesktop {
       background: url("../images/footer.jpg") no-repeat;
@@ -156,7 +156,6 @@ body {
     transform: translateY(-10%);
   }
 }
-
 
 .navLink-drop {
   color: black;

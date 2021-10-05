@@ -94,7 +94,7 @@ const Train = ({ data }) => {
       if(searchQuery.length > 1){
         return results.some( result => result.slug === post.fields.slug )
       }
-      return
+      return false
     } )
     filterSearch.length < 1 ? updateSearch(posts) : updateSearch(filterSearch)
 

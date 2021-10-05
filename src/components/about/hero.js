@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <BackgroundSection className="bg-cover bg-center aboutHero">
       <section className="h-full flex flex-col justify-center p-10 xl:pl-20  text-white ">
-        <h1 className="font-semi-bold text-3xl sm:text-5xl lg:text-7xl  xl:text-8xl 2xl:text-9xl ">
+        <h1 className="font-semibold text-3xl sm:text-5xl lg:text-7xl  xl:text-8xl 2xl:text-9xl ">
           Our Core Values
         </h1>
         <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl text-red-500">
