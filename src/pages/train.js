@@ -16,7 +16,7 @@ import PostContainer from "../components/postContainer";
 
 const pageStyles = {
   color: "black",
-  width: "100%",
+  maxWidth: "100vw",
 };
 
 const battleText = {
@@ -94,7 +94,7 @@ const Train = ({ data }) => {
       if(searchQuery.length > 1){
         return results.some( result => result.slug === post.fields.slug )
       }
-      return
+      return false
     } )
     filterSearch.length < 1 ? updateSearch(posts) : updateSearch(filterSearch)
 
@@ -103,9 +103,9 @@ const Train = ({ data }) => {
 
   return (
     <BackgroundSection className="bg-local">
-      <div className="h-screen blog fontTitle" style={pageStyles}>
-        <SiteHelmet route="Train" description="Defense Unicorns Blog" />
-        <Header />
+      <SiteHelmet route="Train" description="Defense Unicorns Blog" />
+      <Header /> 
+      <div className="h-screen text-blue-900 max-w-full" style={pageStyles}>
         <section className="hero flex flex-col justify-center">
           <div
             className="pb-8 h-full flex flex-col justify-center"
@@ -122,7 +122,8 @@ const Train = ({ data }) => {
             <a
               aria-hidden="true"
               href="#latestPosts"
-              className={`text-5xl xl:text-6xl 2xl:text-7xl absolute bottom-5 animate-bounce text-center w-full`}
+              className={`text-5xl xl:text-6xl 2xl:text-7xl absolute left-0 bottom-5 animate-bounce text-center w-full`}
+              // style={{ left: "50%" }}
             >
               <motion.i
                 initial={{ opacity: 0 }}
@@ -132,7 +133,7 @@ const Train = ({ data }) => {
                   delay: 0.5,
                   default: { duration: 2.5 },
                 }}
-                className=" bi bi-chevron-down hover:text-blue-700 cursor-pointer"
+                className=" bi bi-chevron-down hover:text-white cursor-pointer"
               ></motion.i>
             </a>
           </div>

@@ -1,34 +1,16 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import Header from "../components/header";
+import GlobalHeader from "../components/header";
 import { createGlobalStyle } from "styled-components";
 import Footer from "./footer";
 
-const Layout = ({ location, title, post, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
-  const isRootPath = location.pathname === rootPath;
-  let header;
-
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    );
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    );
-  }
-
+const Layout = ({post, children }) => {
+  
   return (
-    <div className="blogPage w-full" data-is-root-path={isRootPath}>
+    <div className="blogPage w-full" >
       <GlobalStyle />
       <header className="postHeader">
         <div className="postHeaderContainer flex items-end pb-16">
-          <Header />
+          <GlobalHeader />
           <div className="w-3/4 mx-auto flex">
             <h1 className="text-4xl sm:text-5xl md:text-6xl align-bottom xl:text-7xl 2xl:text-8xl font-bold text-white sm:pr-10 m-0 mt-10">
               {post.frontmatter.title}
