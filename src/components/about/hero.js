@@ -14,10 +14,10 @@ const Hero = () => {
         </h2>
         <p className="mt-4 md:mt-8 text-xl md:text-2xl xl:text-4xl 2xl:text-5xl ">
           <span className="mx:block">
-            At Defense Unicorns we believe that an organizational value stated&nbsp;
+            Defense Unicorns operates with a single belief - that a value&nbsp;
           </span>
           <span className="md:block">
-           but not lived is not a value at all. Our team exercises&nbsp;
+           not lived is not a value at all. Our team exercises&nbsp;
           </span>
           <span className="md:block">
            habits every day that bring our values to life.

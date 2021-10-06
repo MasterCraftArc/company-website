@@ -1,9 +1,9 @@
 [
     {
-      "img" : "valueImg", 
+      "img" : "evolutionImg", 
       "title": "Experiment with everything",
       "subtitle": "",
-      "text": "Lean methodology is an integral part of our culture. Before anything becomes a process or policy, we rigorously test it by establishing success criteria and by collecting and analyzing the data. But evaluation doesn’t stop when a decision is made. We apply a build-measure-learn feedback loop to both our software products and our business decisions.",
+      "text": "Einstein defined insanity as repeating the same thing expecting different results. Henry Ford said failures were merely an opportunity to intelligently begin again. We inform our operations by experiments, applying a build-measure-learn feedback loop in all we do.",
       "contentStyle" : "order-last sm:order-first",
       "titleStyle" : ""
     },
@@ -11,32 +11,32 @@
       "img" : "engineeringImg", 
       "title": "Default to action",
       "subtitle": "",
-      "text": "When we see a problem we default to action to accelerate the learning cycle. By refusing to ignore challenges and focusing on delivering value quickly, we establish a more comprehensive understanding of the challenges and can refine the solution.",
+      "text": "Don’t wait for approval. Don’t get lost in “requirements analysis.” Take action, experiment, and correct.",
       "contentStyle" : "order-last",
       "titleStyle" : ""
     },
     {
       "img" : "peopleImg", 
-      "title": "Share insights, considerately",
+      "title": "We value insights",
       "subtitle": "",
-      "text": "At Defense Unicorns we give and receive direct feedback. We’re committed to delivering actionable insights that allow us to improve personally, professionally, and as a team. We believe feedback is best received when it's given readily, thoughtfully and in a timely manner. ",
+      "text": "We give and receive direct feedback. We’re committed to delivering actionable insights that allow us to improve personally, professionally, and as a team. The feedback we give is respectful, timely, and thoughtful.",
       "contentStyle" : "order-last sm:order-first",
       "titleStyle" : "w-3/5 lg:w-full"
     },
     {
       "img" : "communicationImg", 
-      "title": "Be open-minded but apply focused learning",
+      "title": "Apply focused learning",
       "subtitle": "",
-      "text": "We believe that growth comes equally from discipline and curiosity. As a company, we champion the exploration of new ideas, concepts, and techniques. We channel this continuous improvement mindset into our work by setting clear and measurable goals for growth and tracking that progress over time. Our growth goals focus our attention on the new concepts or skills most closely tied to desired results.",
+      "text": "By focusing our attention on the learning most closely tied to desired results, we maximize our growth.",
       "contentStyle" : "order-last ",
       "titleStyle" : ""
 
     },
     {
-      "img" : "evolutionImg", 
+      "img" : "valueImg", 
       "title": "Employ positive thinking",
       "subtitle": "",
-      "text": "Unicorns lead with a positive outlook. We acknowledge challenges, but we focus our energy on the vast potential that lies on the other side of solving them. We also know that positive thinking is a practice and a skill. Every day we take steps to strengthen the bonds on our team so that it may function as a support system - allowing our people to take greater risks, overcome adversity, and continue moving forward.",
+      "text": "Positive thinking is a practice and a skill. We acknowledge challenges and focus our energy on the vast potential that lies on the other side of solving them.",
       "contentStyle" : "order-last sm:order-first",
       "titleStyle" : ""
     }
