@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
-
+import {setRefClassName} from "../utilities/refHelpers";
 const logoStyle = {
   maxWidth: "16vh",
 };
@@ -12,12 +12,6 @@ const popUpStyle = {};
 const setRefFilter = (ref, filter) => {
   if (ref.current) {
     ref.current.style.filter = filter;
-  }
-};
-
-const setRefClassName = (ref, className) => {
-  if (ref.current) {
-    ref.current.className = className;
   }
 };
 
@@ -58,6 +52,7 @@ function Header(props) {
           zIndex: "15",
           width: "100%",
           top: "0",
+          left: '0',
           position: "fixed",
         }}
       >
@@ -110,6 +105,14 @@ function Header(props) {
                 </li>
                 <li className="nav-item">
                   <Link
+                    to="/about"
+                    className="text-xl flex uppercase hover:text-red-600"
+                  >
+                    <span className="ml-5">About</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
                     className="px-3 text-xl uppercase hover:text-red-600"
                     to="/contact"
                   >
@@ -156,7 +159,7 @@ function Header(props) {
               >
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-4xl uppercase text-blue-900"
+                    className="px-3 text-4xl uppercase text-blue-900 navLink"
                     to="/"
                   >
                     Home
@@ -165,9 +168,17 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/train"
-                    className="text-4xl flex uppercase text-blue-900"
+                    className="text-4xl flex uppercase text-blue-900 navLink"
                   >
                     Train
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/about"
+                    className="text-4xl flex uppercase text-blue-900"
+                  >
+                    About
                   </Link>
                 </li>
                 <li className="nav-item">

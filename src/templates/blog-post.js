@@ -69,14 +69,14 @@ const BlogPostTemplate = ({ data, location }) => {
             padding: 0,
           }}
         >
-          <li>
+          <li className="text-blue-900 hover:text-blue-700">
             {previous && (
               <Link to={`/blog${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li className="text-blue-900 hover:text-blue-700">
             {next && (
               <Link to={`/blog${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
