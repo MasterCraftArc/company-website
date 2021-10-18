@@ -39,9 +39,9 @@ const pinBlueStyle = {
 
 const categories = [
   { id: 1, name: 'All Categories', unavailable: false },
-  { id: 2, name: 'DevSecOps', unavailable: false },
-  { id: 3, name: 'Agile Acquisitions', unavailable: false },
-  { id: 4, name: 'Continuous Delivery', unavailable: false },
+  { id: 2, name: 'People', unavailable: false },
+  { id: 3, name: 'Process', unavailable: false },
+  { id: 4, name: 'Technology', unavailable: false },
 ]
 
 const unFlattenResults = results =>

@@ -12,7 +12,7 @@ tags: DevSecOps
 description: DevOps, DevSecOps, et al are some of the most commonly
   misunderstood terms in the industry. While their usage has become
   ubiquitous...
-category: DevSecOps
+category: People
 image: computer.png
 ---
 

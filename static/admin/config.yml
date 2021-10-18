@@ -25,8 +25,8 @@ collections:
       - label: "Category"
         name: "category"
         widget: "select"
-        options: ["DevSecOps", "Agile Acquisitions", "Continuous Delivery"]
-        default: ["DevSecOps"]
+        options: ["People", "Process", "Technology"]
+        default: ["People"]
       - { label: 'Published', name: 'published', widget: 'boolean', default: true }
       - label: 'Cover Image'
         name: 'image'
