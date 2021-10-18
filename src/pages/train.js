@@ -41,9 +41,9 @@ const tileBox = {
 
 const categories = [
   { id: 1, name: 'All Categories', unavailable: false },
-  { id: 2, name: 'DevSecOps', unavailable: false },
-  { id: 3, name: 'Agile Acquisitions', unavailable: false },
-  { id: 4, name: 'Continuous Delivery', unavailable: false },
+~  { id: 2, name: 'People', unavailable: false },
+  { id: 3, name: 'Process', unavailable: false },
+  { id: 4, name: 'Technology', unavailable: false },
 ]
 
 const unFlattenResults = results =>
@@ -102,7 +102,7 @@ const Train = ({ data }) => {
   return (
     <BackgroundSection className="bg-local">
       <div className="h-screen blog fontTitle" style={pageStyles}>
-        <SiteHelmet route="Train" description="Defense Unicorns Blog" />
+        <SiteHelmet route="Train" description="DevSecOps Starter Pack" />
         <Header />
         <section className="hero flex flex-col justify-center">
           <div
@@ -110,7 +110,7 @@ const Train = ({ data }) => {
             style={{ color: "red" }}
           >
             <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-semibold">
-              <p className="">The Defense Unicorns Blog</p>
+              <p className="">DevSecOps Starter Pack</p>
             </div>
             <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
               This blog is your source for context-first guides, stories and
