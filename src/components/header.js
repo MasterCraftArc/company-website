@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { setRefClassName } from "../utilities/refHelpers";
 const logoStyle = {
   maxWidth: "16vh",
 };
@@ -12,12 +12,6 @@ const popUpStyle = {};
 const setRefFilter = (ref, filter) => {
   if (ref.current) {
     ref.current.style.filter = filter;
-  }
-};
-
-const setRefClassName = (ref, className) => {
-  if (ref.current) {
-    ref.current.className = className;
   }
 };
 
@@ -58,6 +52,7 @@ function Header(props) {
           zIndex: "15",
           width: "100%",
           top: "0",
+          left: "0",
           position: "fixed",
         }}
       >
@@ -110,7 +105,15 @@ function Header(props) {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-xl uppercase hover:text-red-600 navLink"
+                    to="/about"
+                    className="text-xl flex uppercase hover:text-red-600 navLink"
+                  >
+                    <span className="ml-5">About</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="px-3 text-xl uppercase hover:text-red-600"
                     to="/contact"
                   >
                     <span className="ml-2">Contact</span>
@@ -172,7 +175,15 @@ function Header(props) {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-4xl uppercase text-blue-900 navLink"
+                    to="/about"
+                    className="text-4xl flex uppercase text-blue-900"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="px-3 text-4xl uppercase text-blue-900"
                     to="/contact"
                   >
                     Contact

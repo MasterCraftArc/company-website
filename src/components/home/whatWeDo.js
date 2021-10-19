@@ -18,7 +18,7 @@ const WhatWeDo = () => {
           <img
             loading="lazy"
             src={whatWeDoPng}
-            className="absolute blobTop max-w-full pb-24"
+            className="absolute blobTop max-w-full pb-24 mx-auto"
             alt="What we do"
           />
         </div>

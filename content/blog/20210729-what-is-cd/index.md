@@ -8,7 +8,7 @@ date: 2021-09-05T04:00:00.000Z
 description: Continuous delivery (CD) should be the goal for every software
   team. In this post we explore the benefits of CD and illuminate the common
   pitfalls so you and your team can move forward faster.
-category: Continuous Delivery
+category: Technology
 published: true
 image: whoweare.png
 ---

@@ -1,32 +1,25 @@
 import * as React from "react";
+import Card from './card'
 
-const trainedCardStyle = {
-  // width: "305px",
-  // height: "420px",
-width: '40%',
-height: '689px',
-  backgroundColor: "#F3F3F3",
-};
-
-const trainedCardText = {
-  fontSize: "12px",
-  width: "87%",
-  paddingTop: "5%",
-  marginTop: "auto",
-  marginBottom: "4%",
-};
-
-const trainedCardTitle = {
-  fontSize: "15px",
-};
-
-const Card = React.forwardRef((props, ref) => (
-    posts.map((post, i) => {
-        return (
-          <div></div>
-        );
-      })
-  );
+const PostContainer = React.forwardRef((props, ref) => (
+  <div  className="sm:pt-4 flex justify-center xl:justify-between flex-wrap min-h-screen sm:px-16 xl:px-44 pb-10">
+    {props.posts.map((post, i) => {
+      return (
+        <Card
+          key={`${post.fields.slug}-${i}`}
+          imgDisplay={
+            post.frontmatter.image.childImageSharp.fluid.src
+          }
+          ref={ref[i]}
+          category={post.frontmatter.category}
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          cardLink={`/blog${post.fields.slug}`}
+          date={post.frontmatter.date}
+        />
+      );
+    })}
+  </div>
 ));
 
-export default Card;
+export default PostContainer;

@@ -22,10 +22,10 @@
       left: unset;
     }
     .pinDesktop {
-      max-width: 60px;
+      max-width: 65px;
     }
     .pinMobile {
-      max-width: 40px;
+      max-width: 45px;
     }
     .footerBackgroundDesktop {
       background: url("../images/footer.jpg") no-repeat;
@@ -93,7 +93,7 @@ body {
 
 html,
 body {
-  max-width: 100% !important;
+  max-width: 100vw !important;
 }
 
 /******************************************
@@ -157,10 +157,6 @@ body {
   }
 }
 
-.navLink {
-  color: black !important;
-}
-
 .navLink-drop {
   color: black;
 }
@@ -221,17 +217,13 @@ body {
 /* Latest Trained */
 .latestTrained {
   min-height: 70vh;
-  width: 100vw;
+  max-width: 100vw;
   background-color: transparent;
 }
 
 /* ///////////////////////////////////// */
 
 /* WHAT WE DO SECTION */
-
-.blog {
-  color: rgb(25, 76, 142);
-}
 
 .whatWeDo {
   padding-top: 35%;
@@ -260,12 +252,9 @@ body {
   border-bottom-width: 1px;
 }
 
-.fontTitle {
-  font-family: Poppins;
-}
 
 .card-img-top {
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .readLink {
@@ -318,6 +307,41 @@ body {
 }
 
 
+/* ////////////////////////// */
+
+/* About */
+
+.aboutHero {
+  height: 87vh;
+}
+
+.valueImg{
+  content: url('../images/about/values.png')
+}
+
+.engineeringImg{
+  content: url('../images/about/engineering.png')
+}
+
+
+.peopleImg{
+  content: url('../images/about/people.png')
+}
+
+.evolutionImg{
+  content: url('../images/about/evolution.png')
+}
+
+.communicationImg{
+  content: url('../images/about/communication.png')
+}
+
+
+@media screen and (max-width: 635px) {
+  /* .imageContainer {
+    @apply px-32;
+  } */
+}
 /* ////////////////////////// */
 
 /* Contact */
@@ -408,5 +432,27 @@ body {
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 6px rgba(10, 75, 194, 0.4);
+}
+
+.pinFilter{
+  filter: 'drop-shadow: 2px 2px 3px #154A8F'
+}
+
+@media screen and (min-width:500px) {
+  .card{
+    width: 75%;
+  }
+}
+
+@media screen and (min-width:800px) {
+  .card{
+    width: 55%;
+  }
+}
+
+@media screen and (min-width:1100px) {
+  .card{
+    width: 35%;
+  }
 }
