@@ -81,7 +81,7 @@ Elastic Beanstalk as a platform allows deployment of web applications in several
 
 ### Analytics
 
-#### Google Analytics 
+#### Google & Netlify Analytics 
 
 By integrating Google Analytics 4 and Universal Analytics properties into the Defense Unicorns website workflow,  we are able to track and manage website traffic. Unlike netlify's built in analytics which work by parsing server-side, Google's tools will allow us to gather unique data regarding user's visits to our website. Additionally google analytics will give us smart insights and predictions on user interaction on the defense unicorns website through their machine learning algorithms. Also, Netlify may sometimes add bots and count it as an actual visitor whearas Google Analytics would have more accuracy. Its a great benefit to have insights from more than one resource.
 

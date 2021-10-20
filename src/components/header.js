@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {setRefClassName} from "../utilities/refHelpers";
+import { setRefClassName } from "../utilities/refHelpers";
 const logoStyle = {
   maxWidth: "16vh",
 };
@@ -52,7 +52,7 @@ function Header(props) {
           zIndex: "15",
           width: "100%",
           top: "0",
-          left: '0',
+          left: "0",
           position: "fixed",
         }}
       >
@@ -89,7 +89,7 @@ function Header(props) {
               <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 ">
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-xl uppercase hover:text-red-600"
+                    className="px-3 text-xl uppercase hover:text-red-600 navLink"
                     to="/"
                   >
                     <span className="mt-2 ml-2 ">Home</span>
@@ -98,7 +98,7 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/train"
-                    className="text-xl flex uppercase hover:text-red-600"
+                    className="text-xl flex uppercase hover:text-red-600 navLink"
                   >
                     <span className="ml-5">Train</span>
                   </Link>
@@ -106,7 +106,7 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/about"
-                    className="text-xl flex uppercase hover:text-red-600"
+                    className="text-xl flex uppercase hover:text-red-600 navLink"
                   >
                     <span className="ml-5">About</span>
                   </Link>
