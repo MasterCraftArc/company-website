@@ -97,10 +97,10 @@ function Header(props) {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/train"
+                    to="/learn"
                     className="text-xl flex uppercase hover:text-red-600 navLink"
                   >
-                    <span className="ml-5">Train</span>
+                    <span className="ml-5">Learn</span>
                   </Link>
                 </li>
                 <li className="nav-item">

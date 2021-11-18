@@ -67,8 +67,8 @@ function Footer({ background }) {
             <Link to="/" className="footerLink mr-2 " style={linkColor}>
               <p>Home</p>
             </Link>
-            <Link to="/train" className="footerLink mr-2 " style={linkColor}>
-              <p>Train</p>
+            <Link to="/learn" className="footerLink mr-2 " style={linkColor}>
+              <p>Learn</p>
             </Link>
             <Link to="/about" className="footerLink mr-2 " style={linkColor}>
               <p>About</p>

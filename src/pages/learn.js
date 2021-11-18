@@ -49,7 +49,7 @@ const unFlattenResults = (results) =>
     // https://www.emgoto.com/gatsby-search/ 09/22/2021
   });
 
-const Train = ({ data }) => {
+const Learn = ({ data }) => {
   const [selectedCategory, setselectedCategory] = useState(categories[0]);
   const searchBar = React.createRef();
 
@@ -105,7 +105,7 @@ const Train = ({ data }) => {
   return (
     <BackgroundSection className="bg-local">
       <div className="h-screen blog fontTitle" style={pageStyles}>
-        <SiteHelmet route="Train" description="DevSecOps Starter Pack" />
+        <SiteHelmet route="Learn" description="DevSecOps Starter Pack" />
         <Header />
         <section className="hero flex flex-col justify-center">
           <div
@@ -196,14 +196,14 @@ const Train = ({ data }) => {
                       </Listbox.Button>
 
                       <Listbox.Options className="text-lg dropBorder bg-white py-2 text-left border border-solid mt-2 rounded-xl overflow-hidden">
-                        {categories.map((person) => (
+                        {categories.map((category) => (
                           <Listbox.Option
-                            className="hover:bg-gray-100 cursor-pointer text-normal text-black text-lg py-1 text-center sm:text-left"
-                            key={person.id}
-                            value={person}
-                            disabled={person.unavailable}
+                            className="hover:bg-gray-100 cursor-pointer text-normal text-black text-lg py-1 px-1 text-center sm:text-left"
+                            key={category.id}
+                            value={category}
+                            disabled={category.unavailable}
                           >
-                            {person.name}
+                            {category.name}
                           </Listbox.Option>
                         ))}
                       </Listbox.Options>
@@ -232,7 +232,7 @@ const Train = ({ data }) => {
     </BackgroundSection>
   );
 };
-export default Train;
+export default Learn;
 
 export const pageQuery = graphql`
   query {
