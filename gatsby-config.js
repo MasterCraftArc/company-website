@@ -125,7 +125,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/unicornSingle.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     {
