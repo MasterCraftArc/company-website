@@ -89,7 +89,7 @@ function Header(props) {
               <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 ">
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-xl uppercase hover:text-red-600 navLink"
+                    className="px-3 text-xl uppercase navLink"
                     to="/"
                   >
                     <span className="mt-2 ml-2 ">Home</span>
@@ -98,7 +98,7 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/learn"
-                    className="text-xl flex uppercase hover:text-red-600 navLink"
+                    className="text-xl flex uppercase navLink"
                   >
                     <span className="ml-5">Learn</span>
                   </Link>
@@ -106,14 +106,14 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/about"
-                    className="text-xl flex uppercase hover:text-red-600 navLink"
+                    className="text-xl flex uppercase navLink"
                   >
-                    <span className="ml-5">About</span>
+                    <span className="ml-5">Values</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-xl uppercase hover:text-red-600"
+                    className="px-3 text-xl uppercase navLink"
                     to="/contact"
                   >
                     <span className="ml-2">Contact</span>
