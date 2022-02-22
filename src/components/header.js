@@ -108,7 +108,7 @@ function Header(props) {
                     to="/about"
                     className="text-xl flex uppercase navLink"
                   >
-                    <span className="ml-5">Values</span>
+                    <span className="ml-5">About</span>
                   </Link>
                 </li>
                 <li className="nav-item">

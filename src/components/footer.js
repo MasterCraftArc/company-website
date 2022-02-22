@@ -72,7 +72,7 @@ function Footer({ background }) {
               Learn
             </Link>
             <Link to="/about" className="footerLink mr-2 " style={linkColor}>
-              Values
+              About
             </Link>
           </div>
           <hr className="bg-white"/>
