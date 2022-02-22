@@ -35,7 +35,7 @@ function Footer({ background }) {
         style={logoStyle}
         alt="Defense Unicorns logo"
       />
-      <div className="h-5/6 md:h-2/5 flex md:flex-row flex-col mx-auto content-end items-start w-6/12 mt-16">
+      <div className="h-5/6 md:h-2/5 flex md:flex-row flex-col mx-auto content-end items-start w-7/12 mt-16">
         <div className="flex flex-col w-full mx-auto mt-5 sm:mt-0 order-last sm:order-first">
           <div className="pl-3 md:text-left text-center text-xl text-white lineHeightBlog">
             <p className="mt-2 mb-0">Defense Unicorns</p>
@@ -62,27 +62,29 @@ function Footer({ background }) {
           </div>
         </div>
 
-        <div className="flex flex-row md:mx-12 mx-auto text-white text-2xl w-full justify-around sm:mt-10 font-bold">
-
+        <div className="flex flex-row md:mx-12 mx-auto text-white text-3xl w-full justify-around sm:mt-10 font-bold">
             <Link to="/" className="footerLink mr-2 " style={linkColor}>
-              <p>Home</p>
+              Home
             </Link>
             <Link to="/learn" className="footerLink mr-2 " style={linkColor}>
-              <p>Learn</p>
+              Learn
             </Link>
             <Link to="/about" className="footerLink mr-2 " style={linkColor}>
-              <p>About</p>
+              About
             </Link>
             <Link to="/contact" className="footerLink mr-2 " style={linkColor}>
-              <p>Contact</p>
+              Contact
             </Link>
-
         </div>
+
       </div>
-      <p className="mt-12 text-center absolute w-full text-white bottom-7">
+      <p className="mt-12 text-center absolute w-full text-white bottom-12 text-lg">
         Copyright © {new Date().getFullYear()} Defense Unicorns. All rights
         reserved.
       </p>
+      <Link to="/privacypolicy" className="text-white text-center absolute bottom-5 w-full text-lg">
+        <p className="text-center">Privacy Policy</p>
+      </Link>
     </footer>
   );
 }

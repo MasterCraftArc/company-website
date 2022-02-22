@@ -23,7 +23,6 @@ const About = () => {
       <Header />
       <Hero/>
 
-
       {
         pageData.map( (page, i) => {
           return(
@@ -34,10 +33,6 @@ const About = () => {
         })
 
       }
-              
-      {/* <SideNav refs={refs} sectionNames={pageData.map(p => p.title)}/> */}
-
-      
 
       <Footer />
     </div>
