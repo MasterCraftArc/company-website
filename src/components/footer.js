@@ -87,7 +87,7 @@ function Footer({ background }) {
 
         </div>
       </div>
-      <p className="mt-12 text-center absolute w-full text-white bottom-7">
+      <p className="mt-12 text-center absolute w-full text-white bottom-7 text-lg">
         Copyright © {new Date().getFullYear()} Defense Unicorns. All rights
         reserved.
       </p>
