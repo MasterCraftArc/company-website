@@ -413,6 +413,13 @@ body {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.privacyPolicy ul{
+  list-style: inside;
+}
+
+.privacyPolicy p {
+  margin-bottom: 2%;
+}
 .blackBorder {
   border: 2px solid black;
 }
