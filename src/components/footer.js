@@ -62,9 +62,7 @@ function Footer({ background }) {
           </div>
         </div>
 
-        <div className="flex flex-col md:mx-12 mx-auto text-white text-3xl w-full justify-around sm:mt-10 font-bold">
-
-          <div className="flex justify-around items-center">
+        <div className="flex flex-row md:mx-12 mx-auto text-white text-3xl w-full justify-around sm:mt-10 font-bold">
             <Link to="/" className="footerLink mr-2 " style={linkColor}>
               Home
             </Link>
@@ -74,23 +72,19 @@ function Footer({ background }) {
             <Link to="/about" className="footerLink mr-2 " style={linkColor}>
               About
             </Link>
-          </div>
-          <hr className="bg-white"/>
-          <div className="flex justify-around">
             <Link to="/contact" className="footerLink mr-2 " style={linkColor}>
               Contact
             </Link>
-            <Link to="/privacypolicy" className="footerLink mr-2 " style={linkColor}>
-              Privacy Policy
-            </Link>
-          </div>
-
         </div>
+
       </div>
-      <p className="mt-12 text-center absolute w-full text-white bottom-7 text-lg">
+      <p className="mt-12 text-center absolute w-full text-white bottom-12 text-lg">
         Copyright © {new Date().getFullYear()} Defense Unicorns. All rights
         reserved.
       </p>
+      <Link to="/privacypolicy" className="text-white text-center absolute bottom-5 w-full text-lg">
+        <p className="text-center">Privacy Policy</p>
+      </Link>
     </footer>
   );
 }
