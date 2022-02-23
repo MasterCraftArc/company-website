@@ -43,7 +43,7 @@ const PrivacyPolicy = ({ data }) => {
           alt="Unicorn with star trail"
         ></img>
         <Button
-          linkTo="/train"
+          linkTo="/"
           className=" bg-red-500 hover:bg-red-700 text-white"
           text="Home"
         />
