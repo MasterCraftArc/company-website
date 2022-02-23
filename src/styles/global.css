@@ -381,6 +381,10 @@ body {
 /* Blog */
 
 /*** Blog Posts **/
+.blog-post{
+  font-size: 16px !important;
+}
+
 .postHeader {
   height: 35vh;
 }
