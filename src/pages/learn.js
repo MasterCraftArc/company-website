@@ -8,7 +8,6 @@ import { Listbox } from "@headlessui/react";
 import pinBlue from "../images/pinBlue.png";
 import SiteHelmet from "../components/SiteHelmet";
 import { useFlexSearch } from "react-use-flexsearch";
-import unicornStars from "../images/unicornStars.png";
 import BackgroundSection from "../components/equipBg";
 import PostContainer from "../components/postContainer";
 
@@ -20,13 +19,6 @@ const pageStyles = {
 const battleText = {
   color: "#14498e",
   fontWeight: "500",
-};
-
-const unicornStarStyle = {
-  width: "14%",
-  position: "absolute",
-  bottom: "29px",
-  right: "23px",
 };
 
 const pinBlueStyle = {
@@ -143,12 +135,7 @@ const Learn = ({ data }) => {
           id="latestPosts"
           className="latestTrained min-h-screen mt-4 relative px-8"
         >
-          <img
-            className="z-10 right-0 2xl:right-24"
-            src={unicornStars}
-            style={unicornStarStyle}
-            alt="unicorn with star trail"
-          />
+
           <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
             <div className="lg:px-24 xl:px-32 2xl:px-44 top-0 bg-white relative">
               <h2
@@ -178,7 +165,6 @@ const Learn = ({ data }) => {
                       setSearchQuery(evt.target.value);
                       displaySearch();
                     }}
-                    // onChange={}
                     ref={searchBar}
                   />
                   <div className="relative w-1/2">

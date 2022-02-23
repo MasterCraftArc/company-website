@@ -4,7 +4,6 @@ import devSecOps from "../../images/home/card3.png";
 import aquisitions from "../../images/home/card2.png";
 import Carousel from "../carousel/carousel";
 import BattleCard from "./battleCard";
-import unicorn from "../../images/unicornSingle.png";
 import pin from "../../images/locationPin.png";
 
 const TrainForBattle = () => {
@@ -13,12 +12,6 @@ const TrainForBattle = () => {
       id="trainForBattle"
       className="trainForBattle flex flex-col md:min-h-screen md:justify-center md:py-44 relative"
     >
-      <img
-        className="absolute top-7 invisible md:visible"
-        src={unicorn}
-        alt="Unicorn standing on card"
-        style={{ right: "11%", width: "150px", zIndex: "-2", paddingTop: "6%" }}
-      />
 
       <div className="w-11/12 sm:w-5/6  md:w-full mx-auto mt-16 md:mt-10">
         <h2
