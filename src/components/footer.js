@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import verticalLogo from "../images/home/logoV.png";
+import logo from "../images/logo-white.png";
 
 const footerStyle = {
   display: "flex",
@@ -31,7 +31,7 @@ function Footer({ background }) {
     >
       <img
         className="bg-no-repeat bg-cover absolute bottom-32 centerLogo sm:rightLogo"
-        src={verticalLogo}
+        src={logo}
         style={logoStyle}
         alt="Defense Unicorns logo"
       />
