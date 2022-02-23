@@ -3,7 +3,6 @@ import whatWeDoPng from "../../images/home/whatWeDo.png";
 import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
 import pin from "../../images/locationPin.png";
-import unicornStars from "../../images/unicornStars.png";
 
 const WhatWeDo = () => {
   return (
@@ -58,12 +57,6 @@ const WhatWeDo = () => {
         </div>
       </div>
 
-      <img
-        className="absolute bottom-11 right-24 invisible md:visible"
-        src={unicornStars}
-        alt="Unicorn standing on card"
-        style={{ right: "0%", width: "200px", zIndex: "-2" }}
-      />
     </section>
   );
 };
