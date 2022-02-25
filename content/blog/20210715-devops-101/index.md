@@ -13,7 +13,7 @@ description: DevOps, DevSecOps, et al are some of the most commonly
   misunderstood terms in the industry. While their usage has become
   ubiquitous...
 category: People
-image: computer.png
+image: devops.jpeg
 ---
 
 DevOps, DevSecOps, et al are some of the most commonly misunderstood terms in the industry. While their usage has become
