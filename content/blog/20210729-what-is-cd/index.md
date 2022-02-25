@@ -10,7 +10,7 @@ description: Continuous delivery (CD) should be the goal for every software
   pitfalls so you and your team can move forward faster.
 category: Technology
 published: true
-image: whoweare.png
+image: cd.jpeg
 ---
 ## What is CD?
 
