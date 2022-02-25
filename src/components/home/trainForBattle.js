@@ -25,7 +25,7 @@ const TrainForBattle = () => {
           Let us train you for battle
         </h2>
         <h3 className="mt-0 mb-12 text-blue-900 text-2xl sm:text-3xl pl-4 md:pl-16 lg:pl-32  2xl:pl-44 ">
-          Whatever your mission, we the have resources to  
+          Whatever your mission, we have the resources to  
           <span className="md:block xl:inline xl:pr-96 2xl:pr-0"> help solve your software challenge.</span>
         </h3>
 
