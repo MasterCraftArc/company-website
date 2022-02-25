@@ -1,35 +1,32 @@
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
+import logoWhite from "../images/DU_logo_White.png"
+import logoColor from "../images/DU_logo_Color.png"
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { setRefClassName } from "../utilities/refHelpers";
-const logoStyle = {
+
+const logoStyles = {
   maxWidth: "16vh",
-};
-
-const popUpStyle = {};
-
-const setRefFilter = (ref, filter) => {
-  if (ref.current) {
-    ref.current.style.filter = filter;
-  }
+  maxHeight: "48px"
 };
 
 function Header(props) {
   const [navDrawerOpen, setNavDrawerOpen] = React.useState(false);
+  const [logoStyle, setLogoStyle] = React.useState(logoWhite);
   const stickyHeader = React.createRef();
   const logoRef = React.createRef();
   const mobileRef = React.createRef();
 
   const handleScroll = () => {
-    if (!props.background && window.scrollY < 50) {
+    if (!props.background && window.scrollY <= 50) {
       setRefClassName(stickyHeader, "navClear");
-      setRefFilter(logoRef, "drop-shadow(2px 2px 2px black)");
       setRefClassName(mobileRef, "bi bi-list");
+      setLogoStyle(logoWhite)
     } else {
       setRefClassName(stickyHeader, "navBg md:px-24");
-      setRefFilter(logoRef, "none");
       setRefClassName(mobileRef, "bi bi-list text-black");
+      setLogoStyle(logoColor)
     }
   };
 
@@ -64,10 +61,9 @@ function Header(props) {
                 to="/"
               >
                 <img
-                  className="logoShadow"
-                  src={logo}
+                  src={logoStyle}
                   alt="Defense Unicorns Logo"
-                  style={logoStyle}
+                  style={logoStyles}
                   ref={logoRef}
                 />
               </Link>
@@ -84,7 +80,6 @@ function Header(props) {
                 "hidden lg:flex flex-grow items-center lg:bg-transparent py-2"
               }
               id="example-navbar-danger"
-              style={popUpStyle}
             >
               <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 ">
                 <li className="nav-item">

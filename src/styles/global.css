@@ -131,10 +131,6 @@ body {
   border-bottom: 3px solid red;
 }
 
-.logoShadow {
-  filter: drop-shadow(2px 2px 2px black);
-}
-
 .mobileNav {
   height: 110vh !important;
   width: 100vw !important;
