@@ -164,6 +164,14 @@ body {
 .navLink:hover,
 .navLink:active {
   color: salmon;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.activeNav{
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: salmon;
 }
 
 @keyframes gradient {

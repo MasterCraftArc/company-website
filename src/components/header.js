@@ -91,14 +91,16 @@ function Header(props) {
                   <Link
                     className="px-3 text-xl uppercase navLink"
                     to="/"
+                    activeClassName="activeNav"
                   >
-                    <span className="mt-2 ml-2 ">Home</span>
+                    <span className="mt-2 ml-2">Home</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
                     to="/learn"
                     className="text-xl flex uppercase navLink"
+                    activeClassName="activeNav"
                   >
                     <span className="ml-5">Learn</span>
                   </Link>
@@ -107,6 +109,7 @@ function Header(props) {
                   <Link
                     to="/about"
                     className="text-xl flex uppercase navLink"
+                    activeClassName="activeNav"
                   >
                     <span className="ml-5">About</span>
                   </Link>
@@ -115,6 +118,7 @@ function Header(props) {
                   <Link
                     className="px-3 text-xl uppercase navLink"
                     to="/contact"
+                    activeClassName="activeNav"
                   >
                     <span className="ml-2">Contact</span>
                   </Link>
