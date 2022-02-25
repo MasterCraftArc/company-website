@@ -158,12 +158,12 @@ body {
 }
 
 .navLink-drop {
-  color: black;
+  color: red;
 }
 
 .navLink:hover,
 .navLink:active {
-  color: salmon;
+  color: #18A0FB;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -171,7 +171,7 @@ body {
 .activeNav{
   text-decoration: underline;
   text-underline-offset: 2px;
-  color: salmon;
+  color: #18A0FB;
 }
 
 @keyframes gradient {
