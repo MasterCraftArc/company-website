@@ -1,8 +1,11 @@
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
+import logoWhite from "../images/DU_logo_White.png"
+import logoColor from "../images/DU_logo_Color.png"
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { setRefClassName } from "../utilities/refHelpers";
+
 const logoStyle = {
   maxWidth: "16vh",
 };
@@ -17,6 +20,7 @@ const setRefFilter = (ref, filter) => {
 
 function Header(props) {
   const [navDrawerOpen, setNavDrawerOpen] = React.useState(false);
+  const [logoColor, setLogoColor] = React.useState(logoWhite);
   const stickyHeader = React.createRef();
   const logoRef = React.createRef();
   const mobileRef = React.createRef();
@@ -24,12 +28,13 @@ function Header(props) {
   const handleScroll = () => {
     if (!props.background && window.scrollY < 50) {
       setRefClassName(stickyHeader, "navClear");
-      setRefFilter(logoRef, "drop-shadow(2px 2px 2px black)");
+      setLogoColor(logoWhite)
       setRefClassName(mobileRef, "bi bi-list");
     } else {
       setRefClassName(stickyHeader, "navBg md:px-24");
       setRefFilter(logoRef, "none");
       setRefClassName(mobileRef, "bi bi-list text-black");
+      setLogoColor(logoColor)
     }
   };
 
@@ -65,7 +70,7 @@ function Header(props) {
               >
                 <img
                   className="logoShadow"
-                  src={logo}
+                  src={logoColor}
                   alt="Defense Unicorns Logo"
                   style={logoStyle}
                   ref={logoRef}
