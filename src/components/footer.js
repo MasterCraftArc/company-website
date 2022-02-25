@@ -41,7 +41,12 @@ function Footer({ background }) {
             <p className="mt-2 mb-0">Defense Unicorns</p>
             <p className="mt-2 mb-0">555 E Pikes Peak Ave</p>
             <p className="mt-2 mb-0">Colorado Springs, Co 80903</p>
-            <p className="mt-2 mb-0">hello@defenseunicorns.com</p>
+            <a 
+              className="mt-2 mb-0"
+              href="mailto:hello@defenseunicorns.com"
+            >
+                hello@defenseunicorns.com
+            </a>
           </div>
           <div className="socialsBox text-white flex justify-center text-3xl  md:justify-start mt-12 sm:mt-6 ">
             <a

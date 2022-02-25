@@ -49,14 +49,9 @@ const WhoWeAre = () => {
           </p>
           <div className="flex justify-center w-full sm:block">
             <Button
-              linkTo="/contact"
-              className="bg-red-500 hover:bg-red-700 text-white mr-5 mb-5"
-              text="Contact Us"
-            />
-            <Button
               linkTo="/about"
-              className="bg-red-500 hover:bg-red-700 text-white mb-5"
-              text="Learn More"
+              className="bg-red-500 hover:bg-red-700 text-white mb-5 px-4"
+              text="Explore Our Values"
             />
           </div>
         </div>
