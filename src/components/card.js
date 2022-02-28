@@ -91,21 +91,22 @@ const Card = React.forwardRef((props, ref) => {
             className="card-text text-sm text-gray-500 text-left ml-8 md:mt-5"
             style={trainedCardBody}
           >
-            {props.description}
+            {props.description.substring(0, 56)}...
           </p>
         </div>
       </div>
           <i 
             key={props.cardLink}
             role="none"
-            className="bi bi-box-arrow-up absolute right-10 bottom-5 text-2xl cursor-pointer hover:text-blue-600"
+            className="bi bi-box-arrow-up absolute right-12 bottom-7 text-3xl cursor-pointer hover:text-blue-600"
             onClick={() => {
               copyToClipboard("defenseunicorns.com" + props.cardLink)
               copyTimeout(copyButton)
             }}
             ref={copyButton}
             onKeyDown={() => {
-              // navigate(props.cardLink);
+              copyToClipboard("defenseunicorns.com" + props.cardLink)
+              copyTimeout(copyButton)
             }}
           >
           </i>
