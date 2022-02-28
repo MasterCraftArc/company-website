@@ -2,7 +2,7 @@ import * as React from "react";
 import Card from './card'
 
 const PostContainer = React.forwardRef((props, ref) => (
-  <div  className="sm:pt-4 flex justify-center xl:justify-between flex-wrap min-h-screen sm:px-16 xl:px-44 pb-10">
+  <div  className="sm:pt-4 flex justify-center md:justify-between flex-wrap sm:px-4 xl:px-32 2xl:px-56 pb-10">
     {props.posts.map((post, i) => {
       return (
         <Card

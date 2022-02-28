@@ -148,8 +148,7 @@ function Header(props) {
                 className="mt-4 ml-16"
                 src={logo}
                 alt="Defense Unicorns Logo"
-                style={logoStyle}
-                // ref={logoRef}
+                style={logoStyles}
               />
 
               <ul

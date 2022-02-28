@@ -81,7 +81,6 @@ const Learn = ({ data }) => {
         });
     }
 
-    // displaySearch()
   };
 
   const displaySearch = () => {
@@ -116,7 +115,6 @@ const Learn = ({ data }) => {
               aria-hidden="true"
               href="#latestPosts"
               className={`text-5xl xl:text-6xl 2xl:text-7xl absolute left-0 bottom-5 animate-bounce text-center w-full`}
-              // style={{ left: "50%" }}
             >
               <motion.i
                 initial={{ opacity: 0 }}
