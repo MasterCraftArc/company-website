@@ -12,11 +12,12 @@ const trainedCardBody = {
   paddingTop: "2%",
   marginTop: "auto",
   marginBottom: "4%",
-  color: "rgba(0, 0, 0, 0.74)"
+  color: "rgba(0, 0, 0, 0.74)",
+  lineHeight: '24px'
 };
 
 const trainedCardTitle = {
-  fontWeight: "400",
+  fontWeight: "500",
   color: "#154A8F",
   paddingTop: "4%",
   fontSize: "18px"
@@ -36,8 +37,8 @@ const textStyle = {
 
 
 const copyTimeout = (copyButton) => {
-  copyButton.current.className = "bi bi-check-lg absolute right-10 bottom-5 text-2xl text-lime-700"
-  setTimeout(() => copyButton.current.className = "bi bi-box-arrow-up absolute right-10 bottom-5 text-2xl cursor-pointer hover:text-blue-600", 3000)
+  copyButton.current.className = "bi bi-check-lg absolute right-10 bottom-5 text-3xl text-lime-700"
+  setTimeout(() => copyButton.current.className = "bi bi-box-arrow-up absolute right-10 bottom-5 text-3xl cursor-pointer hover:text-blue-600", 3000)
 }
 
 const copyToClipboard = (str) => {
@@ -61,7 +62,7 @@ const Card = React.forwardRef((props, ref) => {
       <div
         role="none"
         ref={ref}
-        className="borderRadius card rounded-2xl mt-10 sm:mx-5 shadow-xl border-1 border-gray-100 border-solid overflow-hidden flex flex-col justify-between"
+        className="borderRadius card rounded-lg mt-10 sm:mx-5 shadow-xl border-1 border-gray-100 border-solid overflow-hidden flex flex-col justify-between"
         style={trainedCardStyle}
         data-category={props.category}
         onClick={() => {
@@ -91,7 +92,7 @@ const Card = React.forwardRef((props, ref) => {
             className="card-text text-sm text-gray-500 text-left ml-8 md:mt-5"
             style={trainedCardBody}
           >
-            {props.description.substring(0, 56)}...
+            {props.description.substring(0, 56)} ...
           </p>
         </div>
       </div>

@@ -9,6 +9,11 @@ const metaStyles = {
   lineHeight: "0.5",
 };
 
+const navigationStyles = {
+  width: '12vw',
+  height: '30vw'
+}
+
 const PrivacyPolicy = ({ data }) => {
   const policyData = data.allMarkdownRemark.nodes[0];
 
@@ -19,6 +24,7 @@ const PrivacyPolicy = ({ data }) => {
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
+        className="relative"
       >
         <div className="metaData mt-10 mb-16 font-sans" style={metaStyles}>
           <p className="text-2xl mb-2">
@@ -26,6 +32,10 @@ const PrivacyPolicy = ({ data }) => {
             {policyData.frontmatter.date}
           </p>
         </div>
+
+        <section className="navigationPange fixed blackBorder left-0 top-96 mt-24" style={navigationStyles}>
+
+        </section>
 
         <section
           dangerouslySetInnerHTML={{ __html: policyData.html }}
