@@ -49,6 +49,7 @@ const Learn = ({ data }) => {
   const [searchQuery, setSearchQuery] = useState(query || "");
   const [searches, updateSearch] = useState(data.allMarkdownRemark.nodes);
   let posts = data.allMarkdownRemark.nodes;
+  console.log(posts)
   const cardRefs = posts.map(() => React.createRef());
 
   const searchResults = useFlexSearch(
@@ -239,7 +240,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "MMM DD, YYYY")
           title
           description
           category
@@ -250,6 +251,11 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
+          }
+        }
+        fields {
+          readingTime {
+            text
           }
         }
       }

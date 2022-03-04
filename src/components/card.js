@@ -1,5 +1,6 @@
 import { navigate } from "gatsby";
 import * as React from "react";
+import Tooltip from '@mui/material/Tooltip'
 
 const trainedCardStyle = {
 height: '386px',
@@ -26,7 +27,6 @@ const trainedCardTitle = {
 const trainedCardDate = {
   color: "rgba(0, 0, 0, 0.6)",
   fontSize: "12px",
-
 }
 
 const textStyle = {
@@ -87,7 +87,7 @@ const Card = React.forwardRef((props, ref) => {
           >
             {props.title}
           </h3>
-          <h4 className="sm:mt-2 sm:mb-3 text-left ml-8 text-sm text-gray-500" style={trainedCardDate}>{props.date} · {props.length} min read</h4>
+          <h4 className="sm:mt-2 sm:mb-3 text-left ml-8 text-sm text-gray-500" style={trainedCardDate}>{props.date} · {props.readTime}</h4>
           <p
             className="card-text text-sm text-gray-500 text-left ml-8 md:mt-5"
             style={trainedCardBody}
@@ -96,6 +96,7 @@ const Card = React.forwardRef((props, ref) => {
           </p>
         </div>
       </div>
+        <Tooltip title="Copy Link">
           <i 
             key={props.cardLink}
             role="none"
@@ -111,6 +112,7 @@ const Card = React.forwardRef((props, ref) => {
             }}
           >
           </i>
+        </Tooltip>
 
     </div>
 

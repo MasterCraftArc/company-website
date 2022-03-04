@@ -456,17 +456,9 @@ body {
   width: 300px
 }
 
-/* @media screen and (min-width:500px) {
-  .card{
-    width: 75%;
-  }
+.MuiTooltip-tooltip{
+  font-size: 12px;
 }
-
-@media screen and (min-width:800px) {
-  .card{
-    width: 55%;
-  }
-} */
 
 @media screen and (min-width:500px) {
   .card{

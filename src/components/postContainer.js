@@ -16,6 +16,7 @@ const PostContainer = React.forwardRef((props, ref) => (
           description={post.frontmatter.description}
           cardLink={`/blog${post.fields.slug}`}
           date={post.frontmatter.date}
+          readTime={post.fields.readingTime.text}
         />
       );
     })}
