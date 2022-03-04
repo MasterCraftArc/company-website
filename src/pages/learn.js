@@ -49,7 +49,6 @@ const Learn = ({ data }) => {
   const [searchQuery, setSearchQuery] = useState(query || "");
   const [searches, updateSearch] = useState(data.allMarkdownRemark.nodes);
   let posts = data.allMarkdownRemark.nodes;
-  console.log(posts)
   const cardRefs = posts.map(() => React.createRef());
 
   const searchResults = useFlexSearch(
