@@ -33,9 +33,9 @@ const PrivacyPolicy = ({ data }) => {
           </p>
         </div>
 
-        <section className="navigationPange fixed blackBorder left-0 top-96 mt-24" style={navigationStyles}>
+        {/* <section className="navigationPange fixed blackBorder left-0 top-96 mt-24" style={navigationStyles}>
 
-        </section>
+        </section> */}
 
         <section
           dangerouslySetInnerHTML={{ __html: policyData.html }}
