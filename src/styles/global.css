@@ -131,10 +131,6 @@ body {
   border-bottom: 3px solid red;
 }
 
-.logoShadow {
-  filter: drop-shadow(2px 2px 2px black);
-}
-
 .mobileNav {
   height: 110vh !important;
   width: 100vw !important;
@@ -158,12 +154,12 @@ body {
 }
 
 .navLink-drop {
-  color: black;
+  color: red;
 }
 
 .navLink:hover,
 .navLink:active {
-  color: salmon;
+  color: #18A0FB;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -171,7 +167,7 @@ body {
 .activeNav{
   text-decoration: underline;
   text-underline-offset: 2px;
-  color: salmon;
+  color: #18A0FB;
 }
 
 @keyframes gradient {
@@ -262,8 +258,9 @@ body {
 
 
 .card-img-top {
-  max-width:100%;
+  min-width:100%;
   min-height:100%;
+  object-fit: cover !important;
 }
 
 .readLink {
@@ -417,7 +414,8 @@ body {
 
 .socialsBox a:hover,
 .footerLink:hover {
-  color: rgb(33, 149, 243);
+  /* color: rgb(33, 149, 243); */
+  @apply text-blue-400;
 }
 
 /******************************************
@@ -456,20 +454,16 @@ body {
   filter: 'drop-shadow: 2px 2px 3px #154A8F'
 }
 
+.card{
+  width: 300px
+}
+
+.MuiTooltip-tooltip{
+  font-size: 12px;
+}
+
 @media screen and (min-width:500px) {
   .card{
-    width: 75%;
-  }
-}
-
-@media screen and (min-width:800px) {
-  .card{
-    width: 55%;
-  }
-}
-
-@media screen and (min-width:1100px) {
-  .card{
-    width: 35%;
+    width: 319px;
   }
 }

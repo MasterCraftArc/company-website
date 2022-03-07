@@ -9,6 +9,11 @@ const metaStyles = {
   lineHeight: "0.5",
 };
 
+// const navigationStyles = {
+//   width: '12vw',
+//   height: '30vw'
+// }
+
 const PrivacyPolicy = ({ data }) => {
   const policyData = data.allMarkdownRemark.nodes[0];
 
@@ -16,7 +21,7 @@ const PrivacyPolicy = ({ data }) => {
     <Layout title={policyData.frontmatter.title}>
       <Seo route="Privacy Policy" description="Privacy Policy" />
       <article
-        className="blog-post"
+        className="blog-post relative"
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -26,6 +31,10 @@ const PrivacyPolicy = ({ data }) => {
             {policyData.frontmatter.date}
           </p>
         </div>
+
+        {/* <section className="navigationPange fixed blackBorder left-0 top-96 mt-24" style={navigationStyles}>
+
+        </section> */}
 
         <section
           dangerouslySetInnerHTML={{ __html: policyData.html }}

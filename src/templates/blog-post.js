@@ -11,11 +11,10 @@ const metaStyles = {
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
   console.log(post.html)
   return (
-    <Layout location={location} title={siteTitle} post={post}>
+    <Layout location={location} post={post}>
       <Seo
         route={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

@@ -42,8 +42,9 @@ function Footer({ background }) {
             <p className="mt-2 mb-0">555 E Pikes Peak Ave</p>
             <p className="mt-2 mb-0">Colorado Springs, Co 80903</p>
             <a 
-              className="mt-2 mb-0"
+              className="mt-2 mb-0 hover:text-blue-400"
               href="mailto:hello@defenseunicorns.com"
+              target="_blank"
             >
                 hello@defenseunicorns.com
             </a>
@@ -88,7 +89,7 @@ function Footer({ background }) {
         Copyright © {new Date().getFullYear()} Defense Unicorns. All rights
         reserved.
       </p>
-      <Link to="/privacypolicy" className="text-white text-center absolute bottom-5 w-full text-lg">
+      <Link to="/privacypolicy" className="text-white text-center absolute bottom-5 w-full text-lg hover:text-blue-400">
         <p className="text-center">Privacy Policy</p>
       </Link>
     </footer>
