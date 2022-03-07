@@ -9,10 +9,10 @@ const metaStyles = {
   lineHeight: "0.5",
 };
 
-const navigationStyles = {
-  width: '12vw',
-  height: '30vw'
-}
+// const navigationStyles = {
+//   width: '12vw',
+//   height: '30vw'
+// }
 
 const PrivacyPolicy = ({ data }) => {
   const policyData = data.allMarkdownRemark.nodes[0];
@@ -21,10 +21,9 @@ const PrivacyPolicy = ({ data }) => {
     <Layout title={policyData.frontmatter.title}>
       <Seo route="Privacy Policy" description="Privacy Policy" />
       <article
-        className="blog-post"
+        className="blog-post relative"
         itemScope
         itemType="http://schema.org/Article"
-        className="relative"
       >
         <div className="metaData mt-10 mb-16 font-sans" style={metaStyles}>
           <p className="text-2xl mb-2">
