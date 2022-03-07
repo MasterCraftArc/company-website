@@ -44,6 +44,7 @@ function Footer({ background }) {
             <a 
               className="mt-2 mb-0 hover:text-blue-400"
               href="mailto:hello@defenseunicorns.com"
+              target="_blank"
             >
                 hello@defenseunicorns.com
             </a>
