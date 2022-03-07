@@ -414,7 +414,8 @@ body {
 
 .socialsBox a:hover,
 .footerLink:hover {
-  color: rgb(33, 149, 243);
+  /* color: rgb(33, 149, 243); */
+  @apply text-blue-400;
 }
 
 /******************************************
