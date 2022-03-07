@@ -72,13 +72,9 @@ const Card = React.forwardRef((props, ref) => {
           navigate(props.cardLink);
         }}
       >
-        <div className="h-2/5 bg-gray-50 w-full flex justify-center items-center">
-          <img
-            src={props.imgDisplay}
-            className="card-img-top mx-auto object-cover py-4"
-            alt="blogpost thumbnail"
-          />
+        <div className="h-1/2 bg-gray-50 w-full flex justify-center items-center bg-cover bg-center" style={{backgroundImage: `url(${props.imgDisplay})`}}>
         </div>
+        
         <div className="h-1/2 card-body text-center relative"
         style={textStyle}>
           <h3
