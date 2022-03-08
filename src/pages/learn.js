@@ -149,7 +149,7 @@ const Learn = ({ data }) => {
                   <span className="font-bold text-5xl">Latest Posts</span>
                 </div>
 
-                <div className="w-11/12 sm:w-1/2 md:w-2/5 borderColor border-solid border-r-0 h-16 2xl:h-20 rounded-xl text-normal text-2xl flex">
+                {/* <div className="w-11/12 sm:w-1/2 md:w-2/5 borderColor border-solid border-r-0 h-16 2xl:h-20 rounded-xl text-normal text-2xl flex">
                   <label htmlFor="header-search">
                     <span className="visually-hidden">Search blog posts</span>
                   </label>
@@ -193,7 +193,7 @@ const Learn = ({ data }) => {
                       </Listbox.Options>
                     </Listbox>
                   </div>
-                </div>
+                </div> */}
               </h2>
             </div>
 
