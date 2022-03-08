@@ -95,7 +95,8 @@ function Header(props) {
                   <Link
                     to="/learn"
                     className="text-xl flex uppercase navLink"
-                    activeClassName="activeNav"
+                    // activeClassName="activeNav"
+                    activeStyle={{ color: "red" }}
                   >
                     <span className="ml-5">Learn</span>
                   </Link>
