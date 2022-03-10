@@ -8,20 +8,24 @@ const metaStyles = {
   lineHeight: "0.5",
 };
 
-// const navigationStyles = {
-//   width: '12vw',
-//   height: '30vw'
-// }
+const navigationStyles = {
+  width: '16vw',
+  height: '36vw'
+}
 
 const PrivacyPolicy = () => {
 
   return (
     <Layout title="Privacy Policy">
       <Seo route="Privacy Policy" description="Privacy Policy" />
+      <section className="navigationPane absolute blackBorder left-0 top-96 mt-24" style={navigationStyles}>
+
+      </section>
       <article
-        className="blog-post relative"
+        className="blog-post relative overflow-y-scroll scroll"
         itemScope
         itemType="http://schema.org/Article"
+        style={ {maxHeight: '65vh'} }
       >
         <div className="metaData mt-10 mb-16 font-sans" style={metaStyles}>
           <p className="text-2xl mb-2">
@@ -30,9 +34,6 @@ const PrivacyPolicy = () => {
           </p>
         </div>
 
-        {/* <section className="navigationPange fixed blackBorder left-0 top-96 mt-24" style={navigationStyles}>
-
-        </section> */}
 
         <main className="privacyPolicy">
           <p>
@@ -192,20 +193,21 @@ const PrivacyPolicy = () => {
         </main>
 
         <hr />
+
+        <div className="flex flex-col justify-center items-center mt-24 mb-5">
+          <img
+            className="w-2/6 xl:w-1/6 mx-auto"
+            src={unicorn}
+            alt="Unicorn with star trail"
+          ></img>
+          <Button
+            linkTo="/"
+            className=" bg-red-500 hover:bg-red-700 text-white"
+            text="Home"
+          />
+        </div>
       </article>
 
-      <div className="flex flex-col justify-center items-center mt-24 mb-5">
-        <img
-          className="w-2/6 xl:w-1/6 mx-auto"
-          src={unicorn}
-          alt="Unicorn with star trail"
-        ></img>
-        <Button
-          linkTo="/"
-          className=" bg-red-500 hover:bg-red-700 text-white"
-          text="Home"
-        />
-      </div>
     </Layout>
   );
 };
