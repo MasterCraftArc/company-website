@@ -45,6 +45,7 @@ function Footer({ background }) {
               className="mt-2 mb-0 hover:text-blue-400"
               href="mailto:hello@defenseunicorns.com"
               target="_blank"
+              rel="noreferrer"
             >
                 hello@defenseunicorns.com
             </a>
@@ -89,9 +90,15 @@ function Footer({ background }) {
         Copyright © {new Date().getFullYear()} Defense Unicorns. All rights
         reserved.
       </p>
-      <Link to="/privacypolicy" className="text-white text-center absolute bottom-5 w-full text-lg hover:text-blue-400">
-        <p className="text-center">Privacy Policy</p>
-      </Link>
+      <div className="flex absolute bottom-5 w-full justify-center">
+        <Link to="/privacypolicy" className="text-white text-center text-lg hover:text-blue-400 mr-2">
+          <p className="text-center">Privacy Policy</p>
+        </Link>
+        
+        <Link to="/termsofservice" className="text-white text-center text-lg hover:text-blue-400 ml-2">
+          <p className="text-center">Terms of Service</p>
+        </Link>
+      </div>
     </footer>
   );
 }

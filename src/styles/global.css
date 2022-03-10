@@ -428,6 +428,11 @@ body {
 .privacyPolicy p {
   margin-bottom: 2%;
 }
+
+.termsOfService p{
+  @apply mb-5;
+}
+
 .blackBorder {
   border: 2px solid black;
 }
