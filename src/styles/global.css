@@ -421,12 +421,8 @@ body {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-.privacyPolicy ul{
-  list-style: inside;
-}
-
 .privacyPolicy p {
-  margin-bottom: 2%;
+  @apply mb-5;
 }
 
 .termsOfService p{

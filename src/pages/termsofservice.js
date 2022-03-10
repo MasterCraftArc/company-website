@@ -1,5 +1,4 @@
 import * as React from "react";
-import { graphql } from "gatsby";
 import Layout from "../components/blogLayout";
 import Seo from "../components/seo";
 import unicorn from "../images/unicornStars.png";
@@ -14,8 +13,7 @@ const metaStyles = {
 //   height: '30vw'
 // }
 
-const TermsOfService = ({ data }) => {
-  const policyData = data.allMarkdownRemark.nodes[0];
+const TermsOfService = () => {
 
   return (
     <Layout title="Terms of Service">
@@ -28,19 +26,13 @@ const TermsOfService = ({ data }) => {
         <div className="metaData mt-10 mb-16 font-sans" style={metaStyles}>
           <p className="text-2xl mb-2">
             <span className="font-black text-blue-900">LAST UPDATED: </span>{" "}
-            {policyData.frontmatter.date}
+            February 22, 2022
           </p>
         </div>
 
         {/* <section className="navigationPange fixed blackBorder left-0 top-96 mt-24" style={navigationStyles}>
 
         </section> */}
-
-        {/* <section
-          dangerouslySetInnerHTML={{ __html: policyData.html }}
-          itemProp="articleBody"
-          className="privacyPolicy"
-        /> */}
 
         <main className="termsOfService">
           <p>
@@ -240,21 +232,3 @@ const TermsOfService = ({ data }) => {
 
 export default TermsOfService;
 
-export const pageQuery = graphql`
-  query TermsOfService {
-    allMarkdownRemark(
-      filter: { frontmatter: { slug: { eq: "privacypolicy" } } }
-    ) {
-      nodes {
-        html
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          date(formatString: "MMMM DD, YYYY")
-        }
-      }
-    }
-  }
-`;
