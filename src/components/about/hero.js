@@ -6,15 +6,15 @@ const Hero = () => {
   return (
     <BackgroundSection className="bg-cover bg-center aboutHero">
       <section className="h-full flex flex-col justify-center p-10 xl:pl-20  text-white ">
-        <h1 className="font-semibold text-3xl sm:text-5xl lg:text-7xl  xl:text-8xl 2xl:text-9xl ">
+        <h1 className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-semibold">
           Our Core Values
         </h1>
         <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl text-red-500">
  
         </h2>
-        <p className="mt-4 md:mt-8 text-xl md:text-2xl xl:text-4xl 2xl:text-5xl ">
+        <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
           <span className="mx:block">
-            Defense Unicorns operates with a single belief - that a value&nbsp;
+          Defense Unicorns operates with a single belief - that a value&nbsp;
           </span>
           <span className="md:block">
            not lived is not a value at all. Our team exercises&nbsp;

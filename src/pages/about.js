@@ -27,7 +27,7 @@ const About = () => {
         pageData.map( (page, i) => {
           return(
             <div ref={refs[i]} key={i + 1} id={`section${i + 1}`} className="" >
-              <AboutSection title={page.title} subtitle={page.subtitle} text={page.text} img={page.img} titleStyle={page.titleStyle} contentStyle={page.contentStyle}/>
+              <AboutSection {...page}/>
             </div>
           )
         })
