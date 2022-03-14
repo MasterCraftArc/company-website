@@ -141,11 +141,7 @@ const Learn = ({ data }) => {
                 style={battleText}
               >
                 <div className="flex items-center relative">
-                  <img
-                    className=" pinMobile md:pinDesktop mr-2"
-                    src={pinBlue}
-                    alt="Unicorn pin"
-                  />
+                
                   <span className="font-bold text-5xl">Latest Posts</span>
                 </div>
 
