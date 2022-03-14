@@ -10,17 +10,51 @@ const metaStyles = {
 
 const navigationStyles = {
   width: '16vw',
-  height: '36vw'
+  height: '36vw',
+  borderRight: '1px solid black',
+  position: 'absolute',
 }
 
 const PrivacyPolicy = () => {
 
-  return (
-    <Layout title="Privacy Policy">
-      <Seo route="Privacy Policy" description="Privacy Policy" />
-      <section className="navigationPane absolute blackBorder left-0 top-96 mt-24" style={navigationStyles}>
+  const refs = []
+  for (let i = 0; i < 22; i++) {
+    refs[i] = React.createRef()
+  }
+  const navRef = React.createRef()
 
+  const scrollToView = (evt, ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'start' });
+    navRef.current.childNodes.forEach( child => {
+      child.className = "selectedNavLink"
+      console.log(child)
+    })
+    // ref.current.className = "selectedNavLink"
+    console.log(ref.current.childNodes)
+  }
+ 
+
+
+  return (
+    <Layout title="Privacy Policy" >
+      <Seo route="Privacy Policy" description="Privacy Policy" />
+
+      <section className="navigationPane absolute left-0 top-96 mt-24 " style={navigationStyles} >
+        <ul className="navigationLinks h-full flex flex-col justify-between text-center py-10 text-2xl" ref={navRef}>
+          <li onClick={(evt) => scrollToView(evt, refs[0])} onKeyDown={(evt) => scrollToView(evt, refs[0])}>Top</li>
+          <li onClick={(evt) => scrollToView(evt, refs[1])} onKeyDown={(evt) => scrollToView(evt, refs[1])}>Your Privacy</li>
+          <li onClick={(evt) => scrollToView(evt, refs[2])} onKeyDown={(evt) => scrollToView(evt, refs[2])}>Definitions</li>
+          <li onClick={(evt) => scrollToView(evt, refs[3])} onKeyDown={(evt) => scrollToView(evt, refs[3])}>Information We Collect</li>
+          <li onClick={(evt) => scrollToView(evt, refs[4])} onKeyDown={(evt) => scrollToView(evt, refs[4])}>Computer Information Collected</li>
+          <li onClick={(evt) => scrollToView(evt, refs[5])} onKeyDown={(evt) => scrollToView(evt, refs[5])}>How We Use Your Information</li>
+          <li onClick={(evt) => scrollToView(evt, refs[6])} onKeyDown={(evt) => scrollToView(evt, refs[6])}>Link to Other Websites</li>
+          <li onClick={(evt) => scrollToView(evt, refs[7])} onKeyDown={(evt) => scrollToView(evt, refs[7])}>Security</li>
+          <li onClick={(evt) => scrollToView(evt, refs[8])} onKeyDown={(evt) => scrollToView(evt, refs[8])}>Privacy Policy Updates</li>
+          <li onClick={(evt) => scrollToView(evt, refs[9])} onKeyDown={(evt) => scrollToView(evt, refs[9])}>Questions About Our Privacy Practices or This Privacy Policy</li>
+          <li onClick={(evt) => scrollToView(evt, refs[10])} onKeyDown={(evt) => scrollToView(evt, refs[10])}>Hotjar</li>
+        </ul>
       </section>
+
       <article
         className="blog-post relative overflow-y-scroll scroll"
         itemScope
@@ -34,9 +68,8 @@ const PrivacyPolicy = () => {
           </p>
         </div>
 
-
-        <main className="privacyPolicy">
-          <p>
+        <main className="privacyPolicy" name="main" id="main" >
+          <p ref={refs[0]}>
             Our Privacy Policy was last updated and posted on February 22, 2022. It governs the privacy terms of our Website, located at https://www.defenseunicorns.com, sub-domains, and any associated web-based and mobile applications (collectively, "Website"), as owned and operated by Defense Unicorns. Any capitalized terms not defined in our Privacy Policy, have the meaning as specified in our Terms of Service.
           </p>
 
@@ -68,7 +101,7 @@ const PrivacyPolicy = () => {
             </li>
           </ul>
 
-          <h3>
+          <h3 ref={refs[1]}>
             Your Privacy
           </h3>
 
@@ -76,7 +109,7 @@ const PrivacyPolicy = () => {
             Defense Unicorns follow all legal requirements to protect your privacy. Our Privacy Policy is a legal   statement that explains how we may collect information from you, how we may share your information, and how you can limit our sharing of your information. We utilize the Personal Data you offer in a way that is consistent with this Personal privacy Policy. If you provide Personal Data for a particular reason, we could make use of the Personal Data in connection with the reason for which it was provided. For example, registration info sent when developing your account, might be used to suggest products to you based on past acquisitions. We might use your Personal Data to offer access to services on the Website and monitor your use of such services. Defense Unicorns may also utilize your Personal Data and various other personally non-identifiable info gathered through the Website to assist us with improving the material and functionality of the Website, to much better comprehend our users, and to improve our services. You will see terms in our Privacy Policy that are capitalized. These terms have meanings as described in the Definitions section below.
           </p>
 
-          <h3>
+          <h3 ref={refs[2]}>
             Definitions
           </h3>
 
@@ -88,7 +121,7 @@ const PrivacyPolicy = () => {
             "Personally Identifiable Information" is non-public information that is personally identifiable to you and obtained in order for us to provide you our Website. Personally Identifiable Information may include information such as your name, email address, and other related information that you provide to us or that we obtain about you.
           </p>
 
-          <h3>
+          <h3 ref={refs[3]}>
             Information We Collect
           </h3>
 
@@ -99,7 +132,7 @@ const PrivacyPolicy = () => {
            As a Visitor, you can browse our website to find out more about our Website. You are not required to provide us with any Personally Identifiable Information as a Visitor.
           </p>
 
-          <h3>
+          <h3 ref={refs[4]}>
             Computer Information Collected
           </h3>
 
@@ -123,7 +156,7 @@ const PrivacyPolicy = () => {
 
           </ul>
 
-          <h3>
+          <h3 ref={refs[5]}>
             How We Use Your Information
           </h3>
 
@@ -151,7 +184,7 @@ const PrivacyPolicy = () => {
 
           </ul>
 
-          <h3>
+          <h3 ref={refs[6]}>
             Links to Other Websites
           </h3>
 
@@ -159,7 +192,7 @@ const PrivacyPolicy = () => {
             Our Website may contain links to other websites that are not under our direct control. These websites may have their own policies regarding privacy. We have no control of or responsibility for linked websites and provide these links solely for the convenience and information of our visitors. You access such linked Websites at your own risk. These websites are not subject to this Privacy Policy. You should check the privacy policies, if any, of those individual websites to see how the operators of those third-party websites will utilize your personal information. In addition, these websites may contain a link to Websites of our affiliates. The websites of our affiliates are not subject to this Privacy Policy, and you should check their individual privacy policies to see how the operators of such websites will utilize your personal information.
           </p>
 
-          <h3>
+          <h3 ref={refs[7]}>
             Security
           </h3>
 
@@ -167,7 +200,7 @@ const PrivacyPolicy = () => {
             The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security. We utilize practical protection measures to safeguard against the loss, abuse, and modification of the Individual Data under our control. Personal Data is kept in a secured database and always sent out by means of an encrypted SSL method when supported by your web browser. No Web or email transmission is ever totally protected or mistake cost-free. 
           </p>
 
-          <h3>
+          <h3 ref={refs[8]}>
             Privacy Policy Updates
           </h3>
 
@@ -175,7 +208,7 @@ const PrivacyPolicy = () => {
            We reserve the right to modify this Privacy Policy at any time. If we make material changes to this policy, we may notify you on our Website, by a blog post, by email, or by any method we determine. The method we chose is at our sole discretion. We will also change the "Last Updated" date at the beginning of this Privacy Policy. Any changes we make to our Privacy Policy are effective as of this Last Updated date and replace any prior Privacy Policies.
           </p>
 
-          <h3>
+          <h3 ref={refs[9]}>
             Questions About Our Privacy Practices or This Privacy Policy
           </h3>
 
@@ -183,7 +216,7 @@ const PrivacyPolicy = () => {
             We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. If you have any questions about our Privacy Practices or this Policy, please contact us.
           </p>
 
-          <h2>
+          <h2 ref={refs[10]}>
             Hotjar
           </h2>
 
@@ -194,7 +227,7 @@ const PrivacyPolicy = () => {
 
         <hr />
 
-        <div className="flex flex-col justify-center items-center mt-24 mb-5">
+        <div className="flex flex-col justify-center items-center mt-24 mb-5" >
           <img
             className="w-2/6 xl:w-1/6 mx-auto"
             src={unicorn}
