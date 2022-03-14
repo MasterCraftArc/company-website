@@ -31,11 +31,6 @@ const WhoWeAre = () => {
           <h2
             className={`text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium md:font-bold flex items-center`}
           >
-            <img
-              className="pinMobile md:pinDesktop mr-2 md:mr-0"
-              src={pin}
-              alt="Unicorn pin"
-            />
             Who we are
           </h2>
           <p 
