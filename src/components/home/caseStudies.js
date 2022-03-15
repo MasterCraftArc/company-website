@@ -18,11 +18,6 @@ const CaseStudies = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             Lorem ipsum dolor sit amet.
           </p>
-          <img
-            className="md:w-full xl:w-1/2 py-5 pt-10"
-            src={keyPoints}
-            alt="Case Study Icons for Objectives solutions and results"
-          ></img>
 
           <div className="pt-7">
             <Link to="/train">
