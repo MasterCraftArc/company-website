@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/blogLayout";
 import Seo from "../components/seo";
 import unicorn from "../images/unicornStars.png";
@@ -18,8 +18,10 @@ const navigationStyles = {
 const PrivacyPolicy = () => {
 
   const refs = []
-  for (let i = 0; i < 22; i++) {
+  const navLinkRefs = []
+  for (let i = 0; i < 11; i++) {
     refs[i] = React.createRef()
+    navLinkRefs[i] = React.createRef()
   }
   const navRef = React.createRef()
 
@@ -32,6 +34,68 @@ const PrivacyPolicy = () => {
     // ref.current.className = "selectedNavLink"
     console.log(ref.current.childNodes)
   }
+
+  const highlightNavLink = (titleRefs, navLinks, tag) => {
+    
+    titleRefs.forEach( (link, i) => {
+      console.log(link, tag)
+      if (link.current == tag){
+        navLinks[i].current.className = "selectedNavLink"
+        console.log('works for: ', tag)
+      }else{
+        try{
+          navLinks[i].current.className = ''
+          console.log('no works for: ', tag)
+
+          //code that causes an error
+          
+          }catch(e){
+          
+          }
+      }
+    })
+  }
+
+  const useIntersection = () => { //https://www.webtips.dev/webtips/react-hooks/element-in-viewport
+      const [isVisible, setState] = useState(false);
+      const rootMargin = '-200px' 
+
+      useEffect(() => {
+          const observer = new IntersectionObserver(
+              ([entry]) => {
+                  console.log('entry', entry)
+                  if(entry.isIntersecting){
+                    // console.log(entry.target)
+                    highlightNavLink(refs, navLinkRefs, entry.target)
+                  }
+                  setState(entry.isIntersecting);
+              }, { rootMargin }
+          );
+          
+          refs.forEach( (ref) => {
+            ref.current && observer.observe(ref.current);
+          })
+          
+          
+          return () => refs.forEach( ref => { observer.unobserve(ref.current) })
+        }, []);
+        
+      // console.log(isVisible, ret) console.log('works for: ', tag)
+      return isVisible;
+  };
+
+  
+  const inViewport = useIntersection(); // Trigger if 200px is visible from the element
+
+  // const inViewport = () => {
+  //   for (let i = 0; i < 11; i++) {
+  //     if (useIntersection(refs[i], '-200px')) {"looking at: ", console.log(i)}
+  //   }
+  // }
+
+  if (inViewport) {
+      console.log('in viewport:', refs[5].current);
+  }
  
 
 
@@ -41,17 +105,17 @@ const PrivacyPolicy = () => {
 
       <section className="navigationPane absolute left-0 top-96 mt-24 " style={navigationStyles} >
         <ul className="navigationLinks h-full flex flex-col justify-between text-center py-10 text-2xl" ref={navRef}>
-          <li onClick={(evt) => scrollToView(evt, refs[0])} onKeyDown={(evt) => scrollToView(evt, refs[0])}>Top</li>
-          <li onClick={(evt) => scrollToView(evt, refs[1])} onKeyDown={(evt) => scrollToView(evt, refs[1])}>Your Privacy</li>
-          <li onClick={(evt) => scrollToView(evt, refs[2])} onKeyDown={(evt) => scrollToView(evt, refs[2])}>Definitions</li>
-          <li onClick={(evt) => scrollToView(evt, refs[3])} onKeyDown={(evt) => scrollToView(evt, refs[3])}>Information We Collect</li>
-          <li onClick={(evt) => scrollToView(evt, refs[4])} onKeyDown={(evt) => scrollToView(evt, refs[4])}>Computer Information Collected</li>
-          <li onClick={(evt) => scrollToView(evt, refs[5])} onKeyDown={(evt) => scrollToView(evt, refs[5])}>How We Use Your Information</li>
-          <li onClick={(evt) => scrollToView(evt, refs[6])} onKeyDown={(evt) => scrollToView(evt, refs[6])}>Link to Other Websites</li>
-          <li onClick={(evt) => scrollToView(evt, refs[7])} onKeyDown={(evt) => scrollToView(evt, refs[7])}>Security</li>
-          <li onClick={(evt) => scrollToView(evt, refs[8])} onKeyDown={(evt) => scrollToView(evt, refs[8])}>Privacy Policy Updates</li>
-          <li onClick={(evt) => scrollToView(evt, refs[9])} onKeyDown={(evt) => scrollToView(evt, refs[9])}>Questions About Our Privacy Practices or This Privacy Policy</li>
-          <li onClick={(evt) => scrollToView(evt, refs[10])} onKeyDown={(evt) => scrollToView(evt, refs[10])}>Hotjar</li>
+          <li ref={navLinkRefs[0]} onClick={(evt) => scrollToView(evt, refs[0])} onKeyDown={(evt) => scrollToView(evt, refs[0])}>Top</li>
+          <li ref={navLinkRefs[1]} onClick={(evt) => scrollToView(evt, refs[1])} onKeyDown={(evt) => scrollToView(evt, refs[1])}>Your Privacy</li>
+          <li ref={navLinkRefs[2]} onClick={(evt) => scrollToView(evt, refs[2])} onKeyDown={(evt) => scrollToView(evt, refs[2])}>Definitions</li>
+          <li ref={navLinkRefs[3]} onClick={(evt) => scrollToView(evt, refs[3])} onKeyDown={(evt) => scrollToView(evt, refs[3])}>Information We Collect</li>
+          <li ref={navLinkRefs[4]} onClick={(evt) => scrollToView(evt, refs[4])} onKeyDown={(evt) => scrollToView(evt, refs[4])}>Computer Information Collected</li>
+          <li ref={navLinkRefs[5]} onClick={(evt) => scrollToView(evt, refs[5])} onKeyDown={(evt) => scrollToView(evt, refs[5])}>How We Use Your Information</li>
+          <li ref={navLinkRefs[6]} onClick={(evt) => scrollToView(evt, refs[6])} onKeyDown={(evt) => scrollToView(evt, refs[6])}>Link to Other Websites</li>
+          <li ref={navLinkRefs[7]} onClick={(evt) => scrollToView(evt, refs[7])} onKeyDown={(evt) => scrollToView(evt, refs[7])}>Security</li>
+          <li ref={navLinkRefs[8]} onClick={(evt) => scrollToView(evt, refs[8])} onKeyDown={(evt) => scrollToView(evt, refs[8])}>Privacy Policy Updates</li>
+          <li ref={navLinkRefs[9]} onClick={(evt) => scrollToView(evt, refs[9])} onKeyDown={(evt) => scrollToView(evt, refs[9])}>Questions About Our Privacy Practices or This Privacy Policy</li>
+          <li ref={navLinkRefs[10]} onClick={(evt) => scrollToView(evt, refs[10])} onKeyDown={(evt) => scrollToView(evt, refs[10])}>Hotjar</li>
         </ul>
       </section>
 
@@ -246,3 +310,4 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+ 
