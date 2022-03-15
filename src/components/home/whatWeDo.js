@@ -2,7 +2,7 @@ import React from "react";
 import whatWeDoPng from "../../images/home/whatWeDo.png";
 import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
-import pin from "../../images/locationPin.png";
+
 
 const WhatWeDo = () => {
   return (

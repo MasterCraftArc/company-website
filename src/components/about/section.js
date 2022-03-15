@@ -1,5 +1,4 @@
 import React from "react";
-import unicornPin from "../../images/pinBlue.png"
 
 
 const Section = (props) => {

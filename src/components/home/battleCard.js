@@ -17,6 +17,10 @@ const cardImg = {
   paddingTop: "3%",
 };
 
+
+
+
+
 const BattleCard = (props) => {
   return (
     <a
@@ -30,7 +34,7 @@ const BattleCard = (props) => {
         flex flex-col justify-evenly mx-auto p-12"
           style={cardStyle}
         >
-          <div className="flex justify-center items-center w-full">
+          <div className="flex justify-center w-full">
             <img
               src={props.image}
               style={cardImg}
@@ -38,6 +42,7 @@ const BattleCard = (props) => {
               alt={props.altText}
             />
           </div>
+
 
           <div className="card-body text-center text-blue-900">
             <h3 className="text-center mt-8 text-3xl">{props.heading}</h3>

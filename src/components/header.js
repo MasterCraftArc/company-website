@@ -1,5 +1,4 @@
 import { Link } from "gatsby";
-import logo from "../images/logo.png";
 import logoWhite from "../images/DU_logo_White.png"
 import logoColor from "../images/DU_logo_Color.png"
 import React, { useEffect } from "react";
@@ -60,12 +59,7 @@ function Header(props) {
                 className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                 to="/"
               >
-                <img
-                  src={logoStyle}
-                  alt="Defense Unicorns Logo"
-                  style={logoStyles}
-                  ref={logoRef}
-                />
+                
               </Link>
               <button
                 className="text-white cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -144,12 +138,12 @@ function Header(props) {
               >
                 <i className="bi bi-x-lg"></i>
               </button>
-              <img
+              {/* <img
                 className="mt-4 ml-16"
                 src={logo}
                 alt="Defense Unicorns Logo"
                 style={logoStyles}
-              />
+              /> */}
 
               <ul
                 className=" text-white w-full flex flex-col justify-around list-none my-auto text-center font-bold pb-44"
