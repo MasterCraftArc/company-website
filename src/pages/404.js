@@ -1,7 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import SiteHelmet from "../components/SiteHelmet";
-import logo from "../images/logo.png";
 import StyledBackgroundSection from "../components/contactBg";
 import Button from "../components/button";
 

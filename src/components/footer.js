@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../images/logo-white.png";
+
 
 const footerStyle = {
   display: "flex",
