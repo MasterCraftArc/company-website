@@ -8,14 +8,11 @@ const metaStyles = {
   lineHeight: "0.5",
 };
 
-const navigationStyles = {
-  width: '16vw',
-  height: '36vw',
-  borderRight: '1px solid black',
-  position: 'absolute',
+let navigationStyles = {
+  position: 'absolute'
 }
 
-const PrivacyPolicy = () => {
+function PrivacyPolicy() {
 
   const refs = []
   const navLinkRefs = []
@@ -24,6 +21,29 @@ const PrivacyPolicy = () => {
     navLinkRefs[i] = React.createRef()
   }
   const navRef = React.createRef()
+  const navSectionRef = React.createRef()
+
+  const handleScroll = (ref) => {
+    console.log('dgfd',ref.current)
+    console.log(navSectionRef)
+    if (window.scrollY < 200){
+      navigationStyles = {
+        position: 'absolute'
+      }
+    }
+    else if (window.scrollY >= 180) {
+      // ref.current.className = ""
+      navigationStyles = {
+        position: 'fixed',
+        left: '0',
+        top: '0px'
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => handleScroll(navSectionRef));
+  });
 
   const scrollToView = (evt, ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'start' });
@@ -100,10 +120,10 @@ const PrivacyPolicy = () => {
 
 
   return (
-    <Layout title="Privacy Policy" >
+    <Layout title="Privacy Policy">
       <Seo route="Privacy Policy" description="Privacy Policy" />
 
-      <section className="navigationPane absolute left-0 top-96 mt-24 " style={navigationStyles} >
+      <section className="navigationPane absolute left-0 top-96 mt-24 z-0 " style={navigationStyles} ref={navSectionRef}>
         <ul className="navigationLinks h-full flex flex-col justify-between text-center py-10 text-2xl" ref={navRef}>
           <li ref={navLinkRefs[0]} onClick={(evt) => scrollToView(evt, refs[0])} onKeyDown={(evt) => scrollToView(evt, refs[0])}>Top</li>
           <li ref={navLinkRefs[1]} onClick={(evt) => scrollToView(evt, refs[1])} onKeyDown={(evt) => scrollToView(evt, refs[1])}>Your Privacy</li>
@@ -120,10 +140,9 @@ const PrivacyPolicy = () => {
       </section>
 
       <article
-        className="blog-post relative overflow-y-scroll scroll"
+        className="blog-post relative"
         itemScope
         itemType="http://schema.org/Article"
-        style={ {maxHeight: '65vh'} }
       >
         <div className="metaData mt-10 mb-16 font-sans" style={metaStyles}>
           <p className="text-2xl mb-2">
@@ -303,6 +322,8 @@ const PrivacyPolicy = () => {
             text="Home"
           />
         </div>
+        {/* <Footer background /> */}
+
       </article>
 
     </Layout>

@@ -449,6 +449,12 @@ body {
   background-color: rgba(29, 65, 122, 0.872);
 }
 
+.navigationPane {
+  width: 16vw;
+  height: 36vw;
+  /* border-right: 1px solid black; */
+  position: absolute;
+}
 .navigationLinks li:hover {
   color: rgba(29, 65, 122, 0.872);
   font-weight: 800;
