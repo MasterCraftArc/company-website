@@ -455,15 +455,19 @@ body {
   /* border-right: 1px solid black; */
   position: absolute;
 }
+.navigationLinks li {
+  @apply p-4;
+  width: 90%;
+}
 .navigationLinks li:hover {
-  color: rgba(29, 65, 122, 0.872);
-  font-weight: 800;
+  border-left: 5px solid rgba(29, 65, 122, 0.872);
   @apply cursor-pointer;
 }
 
 .selectedNavLink {
-  color: rgba(29, 65, 122, 0.872);
-  font-weight: 800;
+  border-left: 5px solid rgba(29, 65, 122, 0.872);
+  /* font-weight: 800; */
+  width: 90%;
   @apply cursor-pointer;
 }
 

@@ -41,7 +41,7 @@ const unFlattenResults = (results) =>
     // https://www.emgoto.com/gatsby-search/ 09/22/2021
   });
 
-const Learn = ({ data }) => {
+const Blog = ({ data }) => {
   const [selectedCategory, setselectedCategory] = useState(categories[0]);
   const searchBar = React.createRef();
 
@@ -216,7 +216,7 @@ const Learn = ({ data }) => {
     </BackgroundSection>
   );
 };
-export default Learn;
+export default Blog;
 
 export const pageQuery = graphql`
   query {
