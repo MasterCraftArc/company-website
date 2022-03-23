@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
 
 @layer utilities {
   @variants responsive {
@@ -232,6 +233,14 @@ body {
 .whatWeDo {
   padding-top: 35%;
   padding-bottom: 30%;
+}
+
+.homeSectionTitle {
+  font-family: 'Teko', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 130%;
 }
 
 .blobTop {
