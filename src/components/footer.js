@@ -89,7 +89,7 @@ function Footer({ background }) {
         <Link to="/privacypolicy" className="text-white text-center text-lg hover:underline mr-2">
           <p className="text-center">Privacy Policy</p>
         </Link>
-        
+        <span className="border-r border-white "></span>
         <Link to="/termsofservice" className="text-white text-center text-lg hover:underline ml-2">
           <p className="text-center">Terms of Service</p>
         </Link>
