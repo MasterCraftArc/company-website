@@ -72,12 +72,14 @@ class Contact extends React.Component {
                       name="firstName"
                       className="form-control w-full mb-6 text-gray-500"
                       placeholder="First Name"
+                      required
                     />
                     <input
                       ref="entry.244703714"
                       name="lastName"
                       className="form-control w-full mb-6 text-gray-500"
                       placeholder="Last Name"
+                      required
                     ></input>
                     <input
                       ref="emailAddress"
@@ -86,6 +88,7 @@ class Contact extends React.Component {
                       placeholder="Email"
                       type="email"
                       id="exampleInputEmail1"
+                      required
                     />
                     <input
                       ref="entry.192647911"
@@ -93,6 +96,7 @@ class Contact extends React.Component {
                       className="form-control w-full mb-5"
                       placeholder="Organization"
                       id="organization"
+                      required
                     />
                   </div>
                   <textarea
@@ -101,6 +105,7 @@ class Contact extends React.Component {
                     className="m-0 w-100 form-control bg-transparent text-gray-500"
                     placeholder="Hi, fellow unicorn here! I'm really excited to talk about..."
                     style={textAreaStyle}
+                    required
                   ></textarea>
                   <Button
                     type="submit"

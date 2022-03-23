@@ -5,7 +5,6 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Button from "../components/button";
 import { Listbox } from "@headlessui/react";
-import pinBlue from "../images/pinBlue.png";
 import SiteHelmet from "../components/SiteHelmet";
 import { useFlexSearch } from "react-use-flexsearch";
 import BackgroundSection from "../components/equipBg";
@@ -21,11 +20,7 @@ const battleText = {
   fontWeight: "500",
 };
 
-const pinBlueStyle = {
-  width: "5%",
-  position: "absolute",
-  right: "52px",
-};
+
 
 const categories = [
   { id: 1, name: "All Categories", unavailable: false },
@@ -141,11 +136,7 @@ const Blog = ({ data }) => {
                 style={battleText}
               >
                 <div className="flex items-center relative">
-                  <img
-                    className=" pinMobile md:pinDesktop mr-2"
-                    src={pinBlue}
-                    alt="Unicorn pin"
-                  />
+                
                   <span className="font-bold text-5xl">Latest Posts</span>
                 </div>
 
@@ -210,7 +201,6 @@ const Blog = ({ data }) => {
             </div>
           </div>
         </section>
-        <img alt="Doug Pin" src={pinBlue} style={pinBlueStyle} className="" />
         <Footer />
       </div>
     </BackgroundSection>

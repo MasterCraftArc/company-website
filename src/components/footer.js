@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../images/logo-white.png";
+
 
 const footerStyle = {
   display: "flex",
@@ -29,12 +29,7 @@ function Footer({ background }) {
       }`}
       style={footerStyle}
     >
-      <img
-        className="bg-no-repeat bg-cover absolute bottom-32 centerLogo sm:rightLogo"
-        src={logo}
-        style={logoStyle}
-        alt="Defense Unicorns logo"
-      />
+     
       <div className="h-5/6 md:h-2/5 flex md:flex-row flex-col mx-auto content-end items-start w-7/12 mt-16">
         <div className="flex flex-col w-full mx-auto mt-5 sm:mt-0 order-last sm:order-first">
           <div className="pl-3 md:text-left text-center text-xl text-white lineHeightBlog">

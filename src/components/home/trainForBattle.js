@@ -4,7 +4,6 @@ import devSecOps from "../../images/home/card3.png";
 import aquisitions from "../../images/home/card2.png";
 import Carousel from "../carousel/carousel";
 import BattleCard from "./battleCard";
-import pin from "../../images/locationPin.png";
 
 const TrainForBattle = () => {
   return (
@@ -17,11 +16,7 @@ const TrainForBattle = () => {
         <h2
           className={`xl:text-6xl text-3xl sm:text-4xl mb-5 sm:pl-4 md:pl-16 lg:pl-32 2xl:pl-44 flex items-center font-medium sm:font-bold text-blue-900 w-full`}
         >
-          <img
-            className=" pinMobile md:pinDesktop mr-2"
-            src={pin}
-            alt="Unicorn pin"
-          />
+          
           Let us train you for battle
         </h2>
         <h3 className="mt-0 mb-12 text-blue-900 text-2xl sm:text-3xl pl-4 md:pl-16 lg:pl-32  2xl:pl-44 ">
