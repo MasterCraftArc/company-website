@@ -1,12 +1,54 @@
 import React from "react";
 import whatWeDoPng from "../../images/home/whatWeDo.png";
-import keyPoints from "../../images/home/keyPoints.png";
 import Button from "../button";
+import whoWeAre from "../../images/home/whoWeAre.png";
 
 
 const WhatWeDo = () => {
   return (
-    <section className="md:py-48 flex items-center justify-center w-full md:my-0 relative">
+    <section className="md:py-16 flex flex-col items-center justify-center w-full md:my-0 relative">
+
+<div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1 ">
+        <div className="w-5/6 md:w-4/6 lg:w-full mx-auto px-16 md:p-16 relative">
+          <div className="tk-blob">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 303.2">
+              <path d="M260.2 41.4c20 29.2 14.6 74.5 7.2 124.4-7.3 49.9-16.6 104.5-49.2 126-32.5 21.6-88.4 10.2-132-15.2s-75-64.7-83.6-107.8C-6.1 125.7 8 79 36.3 47.8 64.5 16.7 107 1.3 150.9.1c43.9-1.1 89.3 12 109.3 41.3z"></path>
+            </svg>
+          </div>
+          <img
+            loading="lazy"
+            src={whoWeAre}
+            className="absolute blobTop z-10 p-16"
+            alt="unicorn under magnifying glass"
+          />
+        </div>
+        <div className="flex flex-col justify-center px-8 md:px-20">
+          <h2
+            className={`homeSectionTitle text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium flex items-center text-blue-900`}
+          >
+            Who we are
+          </h2>
+          <p 
+            className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-5 text-xl xl:pb-16 font-light leading-8"   
+          >
+            We are innovators, software engineers, and veterans with decades of
+            experience delivering technology programs across DoD and the broader
+            federal market. Defense Unicorns exists to accelerate the impact of
+            digital warriors inside and outside the government - enabling their
+            transformation from unicorn to hero.
+          </p>
+          <div className="flex justify-center w-full sm:block">
+            <Button
+              linkTo="/about"
+              className="bg-red-500 hover:bg-red-700 text-white mb-5 px-4"
+              text="EXPLORE OUR VALUES"
+            />
+          </div>
+        </div>
+      </div>
+
+
+
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="w-5/6 md:w-4/6 lg:w-full lg:order-2 p-16 pt-0 mt-16 md:mt-0 mx-auto lg:mx-10 relative">
           <div className="tk-blob">
@@ -17,18 +59,18 @@ const WhatWeDo = () => {
           <img
             loading="lazy"
             src={whatWeDoPng}
-            className="absolute blobTop max-w-full pb-24 mx-auto"
+            className="absolute blobTop max-w-full px-10 pb-24 mx-auto"
             alt="What we do"
           />
         </div>
         <div className="flex flex-col justify-center px-10">
           <h2
-            className={`text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium md:font-bold text-blue-900 flex items-center`}
+            className={`homeSectionTitle text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium text-blue-900 flex items-center`}
           >
       
-            What we do
+              How We Accelerate Missions
           </h2>
-          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-xl xl:pb-16 font-light">
+          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-xl xl:pb-16 font-light leading-8">
             We make it easier for mission-driven organizations to buy, accredit,
             and integrate software solutions. We provide a secure, open source
             and infrastructure agnostic DevSecOps platform while continuously
@@ -36,18 +78,12 @@ const WhatWeDo = () => {
             federal market to create an end-to-end solution for continuous
             software integration.
           </p>
-          <img
-            loading="lazy"
-            className="caseStudies md:w-full py-5 pt-10"
-            src={keyPoints}
-            alt="Case Study Icons for Objectives solutions and results"
-          ></img>
 
           <div className="flex justify-center w-full sm:block pt-7 pb-10 sm:pb-7">
             <Button
               linkTo="/contact"
-              className="bg-red-500 text-white hover:text-white hover:font-bold hover:bg-red-700"
-              text="Contact Us"
+              className="bg-red-500 text-white hover:text-white hover:font-normal f hover:bg-red-700"
+              text="PARTNER WITH US"
             />
           </div>
         </div>

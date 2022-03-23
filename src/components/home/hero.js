@@ -8,7 +8,7 @@ import BackgroundSection from "../home/homeBg";
 const sentenceAnim = {
   hidden: { opacity: 1 },
   visible: {
-    opacity: 1,
+    opacity: 0,
     transition: {
       delay: 0.1,
       staggerChildren: 0.08,
