@@ -86,11 +86,11 @@ function Footer({ background }) {
         reserved.
       </p>
       <div className="flex absolute bottom-5 w-full justify-center">
-        <Link to="/privacypolicy" className="text-white text-center text-lg hover:text-blue-400 mr-2">
+        <Link to="/privacypolicy" className="text-white text-center text-lg hover:underline mr-2">
           <p className="text-center">Privacy Policy</p>
         </Link>
         
-        <Link to="/termsofservice" className="text-white text-center text-lg hover:text-blue-400 ml-2">
+        <Link to="/termsofservice" className="text-white text-center text-lg hover:underline ml-2">
           <p className="text-center">Terms of Service</p>
         </Link>
       </div>
