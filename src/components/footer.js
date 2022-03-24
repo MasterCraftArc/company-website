@@ -81,17 +81,17 @@ function Footer({ background }) {
         </div>
 
       </div>
-      <p className="mt-12 text-center absolute w-full text-white bottom-12 text-lg">
+      <p className="mt-12 text-center absolute w-full text-white bottom-7 mb-0 text-lg">
         Copyright © {new Date().getFullYear()} Defense Unicorns. All rights
         reserved.
       </p>
-      <div className="flex absolute bottom-5 w-full justify-center">
+      <div className="flex absolute bottom-1 w-full justify-center">
         <Link to="/privacypolicy" className="text-white text-center text-lg hover:underline mr-2">
-          <p className="text-center">Privacy Policy</p>
+          <p className="text-center m-0">Privacy Policy</p>
         </Link>
         <span className="border-r border-white "></span>
         <Link to="/termsofservice" className="text-white text-center text-lg hover:underline ml-2">
-          <p className="text-center">Terms of Service</p>
+          <p className="text-center m-0">Terms of Service</p>
         </Link>
       </div>
     </footer>
