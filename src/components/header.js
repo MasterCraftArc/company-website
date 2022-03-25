@@ -88,15 +88,17 @@ function Header(props) {
                     className="px-3 text-xl uppercase navLink"
                     to="/"
                     activeClassName="activeNav"
+                    
                   >
                     <span className="mt-2 ml-2">Home</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/learn"
+                    to="/blog"
                     className="text-xl flex uppercase navLink"
                     activeClassName="activeNav"
+                    partiallyActive={true}
                   >
                     <span className="ml-5">Learn</span>
                   </Link>
@@ -106,6 +108,7 @@ function Header(props) {
                     to="/about"
                     className="text-xl flex uppercase navLink"
                     activeClassName="activeNav"
+                    partiallyActive={true}
                   >
                     <span className="ml-5">About</span>
                   </Link>
@@ -115,6 +118,7 @@ function Header(props) {
                     className="px-3 text-xl uppercase navLink"
                     to="/contact"
                     activeClassName="activeNav"
+                    partiallyActive={true}
                   >
                     <span className="ml-2">Contact</span>
                   </Link>

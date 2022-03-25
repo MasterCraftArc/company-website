@@ -15,7 +15,7 @@ const Section = (props) => {
           </h2>
         
 
-          <p className=" text-lg lg:text-2xl xl:text-xl 2xl:pr-24 whitespace-normal text-center lg:py-5 leading-loose">
+          <p className=" text-lg lg:text-2xl xl:text-xl whitespace-normal text-center lg:py-5 leading-loose">
       
             {props.text}
           </p>
