@@ -38,6 +38,7 @@ class Contact extends React.Component {
       })
       .catch((err) => {
         navigate("/thankyou");
+        console.log(err)
         this.setState({
           feedbackMsg: "Form could not be submitted.",
         })
