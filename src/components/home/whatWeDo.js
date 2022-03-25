@@ -6,9 +6,9 @@ import whoWeAre from "../../images/home/whoWeAre.png";
 
 const WhatWeDo = () => {
   return (
-    <section className="md:py-16 flex flex-col items-center justify-center w-full md:my-0 relative">
+    <section className="flex flex-col items-center justify-center w-full md:my-0 relative mt-10">
 
-<div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1 ">
+<div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="w-5/6 md:w-4/6 lg:w-full mx-auto px-16 md:p-16 relative">
           <div className="tk-blob">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 303.2">
