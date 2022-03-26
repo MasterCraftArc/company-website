@@ -170,10 +170,10 @@ function Header(props) {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/train"
+                    to="/blog"
                     className="text-4xl flex uppercase text-blue-900 navLink"
                   >
-                    Train
+                    Learn
                   </Link>
                 </li>
                 <li className="nav-item">
