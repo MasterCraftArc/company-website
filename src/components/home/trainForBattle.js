@@ -10,7 +10,7 @@ const TrainForBattle = () => {
     <section
       id="trainForBattle"
       className="trainForBattle flex flex-col md:justify-center mb-16 relative md:pt-40"
-    >
+    > 
 
       <div className="w-11/12 sm:w-5/6  md:w-full mx-auto mt-16 md:mt-10">
         <h2
