@@ -12,7 +12,7 @@ const metaStyles = {
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const { previous, next } = data;
-  console.log(post.html)
+
   return (
     <Layout location={location} post={post}>
       <Seo
@@ -32,10 +32,6 @@ const BlogPostTemplate = ({ data, location }) => {
           <p className="text-2xl mb-2">
             <span className="font-black text-blue-900">DATE: </span>{" "}
             {post.frontmatter.date}
-          </p>
-          <p className="text-2xl">
-            <span className="font-black text-blue-900">CATEGORY: </span>{" "}
-            {post.frontmatter.category}
           </p>
         </div>
 
@@ -110,7 +106,6 @@ export const pageQuery = graphql`
         author
         date(formatString: "MMMM DD, YYYY")
         description
-        category
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
