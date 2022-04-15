@@ -11,9 +11,9 @@ image: hope-based-dev.jpeg
 ---
 There are many practices, both technical and procedural, required for a development team to successfully execute continuous delivery (CD) of software. It’s not easy. These practices are often counterintuitive and require a high degree of team organization and discipline. Continuous delivery of software is proven to have a significant positive impact on users, organizations, and development teams.  
 
-Despite the benefits, continuous delivery is still not standard industry practice. While this baffles me, I understand that implementing CD requires a shift in priorities.  I believe the way forward is to shift from hope based development to pessimistic development
+Despite the benefits, continuous delivery is still not standard industry practice. While this baffles me, I understand that implementing CD requires a shift in priorities.  I believe the way forward is to shift from hope based development to pessimistic development. 
 
-## Hope Based Development- Wait and Pray 
+## Hope Based Development- Wait and Pray
 
 Many organizations practice something I like to call hope creep. When talking about delivering software to the end-user,  I often hear comments such as:
 
@@ -29,7 +29,7 @@ I often see teams assume that since something worked in the development environm
 
 Hope creep is the plague of value delivery. By ignoring the challenges of deployment until the very end, we cost ourselves and our users valuable time and resources. The antidote to this problem is to shift to a continuous delivery model;  to have a mindset that embraces the reality of development. Things rarely go as planned so we should approach product development with constructive pessimism.  There are two priority shifts that need to take place in order for this to happen.
 
-## Shifting Operations Left 
+## Shifting Operations Left
 
 Successful adoption of continuous delivery practices requires a shift in how teams prioritize operations. Continuous delivery requires that teams plan for operations first before they begin developing features to ensure that what they are building can actually operate in their environment.
 
@@ -77,7 +77,7 @@ We’ve run afoul of CSP again after adding the MaterialUI component library. We
 
 Imagine if we had assumed everything was fine because it worked on our desktops. We would have happily built the first set of features only to spend an inordinate amount of time solving problems we didn’t know existed and probably had to completely redesign some aspects because production is not the same as our desktops. The habit from waterfall project management is “design, build, test, deploy” followed by failure, pain, blame, cost overruns, and rework. This is the sad result of most “Agile" implementations because they do not practice CD. In a continuous delivery workflow, we assume the code won’t work until we can prove that it does. Everything we do is focused on “how rapidly can we demonstrate that this will work in production and how can we reduce the scope of failure?” We deliver very small things, verify production, rinse and repeat. When we find problems, we inject solutions into the delivery automation to prevent a second occurance. The end result is much faster delivery of higher quality with lower cost, less toil, less stress, and more confidence.
 
-## Be Pessimistic 
+## Be Pessimistic
 
 I’ll never again work on a team that doesn’t practice continuous delivery. Some of you reading this are still working without the ability to verify changes immediately. I have empathy for you because I worked for nearly two decades that way. However, we don’t need to work this way anymore. We shouldn’t pretend we can deliver on time if we don’t know we can deliver at all. We need confidence. Confidence born from pessimism. We need to assume things are broken until we can prove they are not. We need to assume that the ideas or requirements we have for features are wrong until we prove they are not. Building features on hopes and dreams of delivery and correctness is just a waste of time.
 
