@@ -7,7 +7,7 @@ description: "Hope creep is the plague of value delivery. If you want to
 category:
   - People
 published: true
-image: hope-based-dev.jpeg
+image: hope-based-dev.png-2-.png
 ---
 There are many practices, both technical and procedural, required for a development team to successfully execute continuous delivery (CD) of software. It’s not easy. These practices are often counterintuitive and require a high degree of team organization and discipline. Continuous delivery of software is proven to have a significant positive impact on users, organizations, and development teams.  
 
