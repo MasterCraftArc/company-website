@@ -20,7 +20,7 @@ const CaseStudies = () => {
           </p>
 
           <div className="pt-7">
-            <Link to="/train">
+            <Link to="/blog">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white"
                 style={buttonStyle}
