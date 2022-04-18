@@ -9,7 +9,7 @@ const trainedCardStyle = {
 
 const trainedCardBody = {
   fontSize: "16px",
-  width: "87%",
+  width: "319px",
   paddingTop: "2%",
   marginTop: "auto",
   marginBottom: "4%",
@@ -63,7 +63,7 @@ const Card = React.forwardRef((props, ref) => {
       <div
         role="none"
         ref={ref}
-        className="borderRadius card rounded-lg mt-10 sm:mx-5 shadow-xl border-1 border-gray-100 border-solid overflow-hidden flex flex-col justify-between"
+        className="borderRadius card rounded-lg mt-10 shadow-xl border-1 border-gray-100 border-solid overflow-hidden flex flex-col justify-between"
         style={trainedCardStyle}
         data-category={props.category}
         onClick={() => {
@@ -74,8 +74,12 @@ const Card = React.forwardRef((props, ref) => {
         }}
       >
         <div
-          className="h-1/2 bg-gray-50 w-full flex justify-center items-center bg-cover bg-center"
-          style={{ backgroundImage: `url(${props.imgDisplay})` }}
+          className="bg-gray-50 w-full flex justify-center items-center bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${props.imgDisplay})`,
+            height: "193px",
+            width: "319px",
+          }}
         ></div>
 
         <div className="h-1/2 card-body text-center relative" style={textStyle}>
