@@ -5,16 +5,14 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-// import '../styles/reset.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
-// import '../styles/global.css'
 
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Seo = ({ description, lang, meta, title, route }) => {
+const Seo = ({ description, lang, meta, title, url, image, author, route }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -30,16 +28,18 @@ const Seo = ({ description, lang, meta, title, route }) => {
       }
     `
   );
-  const keywords = site.siteMetadata.keywords;
   const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = title || site.siteMetadata.title;
+  const metaTitle = title || site.siteMetadata.title;
+  const metaImage = image || site.siteMetadata.image;
+  const metaUrl = url || site.siteMetadata.url;
+  const metaAuthor = author || site.siteMetadata.social?.twitter;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={defaultTitle}
+      title={metaTitle}
       titleTemplate={`%s | ${route}`}
       link={[
         {
@@ -74,11 +74,11 @@ const Seo = ({ description, lang, meta, title, route }) => {
         },
         {
           name: `keywords`,
-          content: keywords,
+          content: site.siteMetadata.keywords,
         },
         {
           property: `og:title`,
-          content: defaultTitle,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -86,11 +86,11 @@ const Seo = ({ description, lang, meta, title, route }) => {
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.image,
+          content: metaImage,
         },
         {
           property: `og:url`,
-          content: site.siteMetadata.siteUrl,
+          content: metaUrl,
         },
         {
           property: `og:type`,
@@ -102,15 +102,15 @@ const Seo = ({ description, lang, meta, title, route }) => {
         },
         {
           name: `twitter:image`,
-          content: site.siteMetadata.image,
+          content: metaImage,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
+          content: metaAuthor,
         },
         {
           name: `twitter:title`,
-          content: defaultTitle,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
@@ -126,6 +126,9 @@ Seo.defaultProps = {
   meta: [],
   description: ``,
   title: ``,
+  url: ``,
+  img: ``,
+  author: ``,
   route: ``,
 };
 
@@ -134,7 +137,10 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
-  route: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  author: PropTypes.string,
+  route: PropTypes.string,
 };
 
 export default Seo;

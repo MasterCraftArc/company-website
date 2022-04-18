@@ -12,12 +12,15 @@ const metaStyles = {
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const { previous, next } = data;
-
   return (
     <Layout location={location} post={post}>
       <Seo
         route={post.frontmatter.title}
+        title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={post.frontmatter.image.childImageSharp.fluid.src}
+        author={post.frontmatter.author}
+        url={location.href}
       />
       <article
         className="blog-post"
