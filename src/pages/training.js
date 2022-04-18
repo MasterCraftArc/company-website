@@ -27,7 +27,7 @@ class Training extends React.Component {
     Object.keys(this.refs).map((key) => (formData[key] = this.refs[key].value));
 
     const axiosOptions = {
-      url: 'https://docs.google.com/forms/d/e/1FAIpQLSc3KONt3qkVLSslYg1u_Eo38m7WfNooK67iNvsIvZhzzWcNNA/formResponse',
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSc3KONt3qkVLSslYg1u_Eo38m7WfNooK67iNvsIvZhzzWcNNA/formResponse",
       method: "post",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: qs.stringify(formData),
@@ -38,14 +38,11 @@ class Training extends React.Component {
         navigate("/thankyoutraining");
       })
       .catch((err) => {
-        
         navigate("/thankyoutraining");
         this.setState({
           feedbackMsg: "Form could not be submitted.",
-        })
-      }
-      );
-
+        });
+      });
   }
 
   render() {
@@ -89,7 +86,7 @@ class Training extends React.Component {
                       placeholder="Email"
                       type="email"
                       id="exampleInputEmail1"
-                      required  
+                      required
                     />
                     <input
                       ref="entry.84539168"
@@ -99,7 +96,7 @@ class Training extends React.Component {
                       id="organization"
                       required
                     />
-                   <input
+                    <input
                       ref="entry.1290040767"
                       name="Title"
                       className="form-control w-full mb-3"
@@ -113,7 +110,7 @@ class Training extends React.Component {
                     className="m-0 w-100 mt-2 form-control bg-transparent"
                     placeholder="Why are you interested in a DevSecOps course?"
                     style={textAreaStyle}
-                    required  
+                    required
                   ></textarea>
                   <Button
                     type="submit"

@@ -3,10 +3,8 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import HomeHero from "../components/home/hero";
 import SiteHelmet from "../components/SiteHelmet";
-import WhoWeAre from "../components/home/whoWeAre";
 import WhatWeDo from "../components/home/whatWeDo";
 import TrainForBattle from "../components/home/trainForBattle";
-// import headerBackground from "../images/home/hero.jpg";
 import "../styles/blobz.min.css";
 
 const pageStyles = {
@@ -25,7 +23,6 @@ const Home = () => {
       <Header />
       <HomeHero />
       <TrainForBattle />
-      <WhoWeAre />
       <WhatWeDo />
       <Footer />
     </div>

@@ -9,9 +9,10 @@ category:
 published: true
 image: ci-meme.png
 ---
-There are many practices, both technical and procedural, required for a development team to successfully execute continuous delivery (CD) of software. It’s not easy. These practices are often counterintuitive and require a high degree of team organization and discipline. Continuous delivery of software is proven to have a significant positive impact on users, organizations, and development teams.  
 
-Despite the benefits, continuous delivery is still not standard industry practice. While this baffles me, I understand that implementing CD requires a shift in priorities.  I believe the way forward is to shift from hope based development to pessimistic development. 
+There are many practices, both technical and procedural, required for a development team to successfully execute continuous delivery (CD) of software. It’s not easy. These practices are often counterintuitive and require a high degree of team organization and discipline. Continuous delivery of software is proven to have a significant positive impact on users, organizations, and development teams.
+
+Despite the benefits, continuous delivery is still not standard industry practice. While this baffles me, I understand that implementing CD requires a shift in priorities.  I believe the way forward is to shift from hope based development to pessimistic development.
 
 ## Hope Based Development- Wait and Pray
 
@@ -21,11 +22,11 @@ Many organizations practice something I like to call hope creep. When talking ab
 
 “We **hope** we can deliver!”
 
-“We **hope** our technical decision will work in our environment!” 
+“We **hope** our technical decision will work in our environment!”
 
 “We **hope** what we are building is what our end-user actually needs!”
 
-I often see teams assume that since something worked in the development environment that it will work once deployed. There was a strong team bias that what worked in the past would work for our future situations too.  I see teams struggle time again when things are finally deployed to production, they forget all the pain that process caused and repeat the pattern next time. 
+I often see teams assume that since something worked in the development environment that it will work once deployed. There was a strong team bias that what worked in the past would work for our future situations too.  I see teams struggle time again when things are finally deployed to production, they forget all the pain that process caused and repeat the pattern next time.
 
 Hope creep is the plague of value delivery. By ignoring the challenges of deployment until the very end, we cost ourselves and our users valuable time and resources. The antidote to this problem is to shift to a continuous delivery model;  to have a mindset that embraces the reality of development. Things rarely go as planned so we should approach product development with constructive pessimism.  There are two priority shifts that need to take place in order for this to happen.
 
@@ -37,7 +38,7 @@ A typical approach to new development is to build a set of features and then rel
 
 **Feature 0:** Can we get to production or, minimally, a production-like environment? Will our application even run there?
 
-This should block all other feature work. Nothing we do matters if we can't deliver and verify the changes we are making will work in a production-like environment. 
+This should block all other feature work. Nothing we do matters if we can't deliver and verify the changes we are making will work in a production-like environment.
 
 **Feature 1:** KEEP THE PIPELINE GREEN! If anything blocks delivery, stop and fix it. Again, if we cannot deliver changes to validate they are valuable, no other work matters.
 

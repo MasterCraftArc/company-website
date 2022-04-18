@@ -10,7 +10,7 @@ const NotFoundPage = ({ data, location }) => {
   return (
     <StyledBackgroundSection className="min-h-screen flex flex-col md:pt-24 xl:pt-0 justify-center items-center">
       <SiteHelmet route="404" />
-      
+
       <h1 className="mt-16 text-7xl text-black text-center font-bold text-white">
         <span className="text-red-500">404 - Page not found</span>
       </h1>

@@ -9,11 +9,12 @@ tags: Continuous Delivery
 category: People
 image: keyterms.jpeg
 ---
-Modern software is moving fast. However, while the associated lexicon is continuously changing, there are core concepts and key terms that one must be familiar with in order to effectively drive digital transformation in their organization. It can be difficult to find these terms and concepts in one place. What’s more, it can be challenging to determine the connections and interrelationships among the concepts. The below is intended to serve as a living guide for those embarking on their own software transformation journey - especially those with a need for cloud-native capabilities. 
 
-Defense Unicorns works with mission-focused partners across the public and commercial sectors. For our public sector partners - particularly those within the Department of Defense - you’ll notice that where appropriate we include additional explanation on how these concepts interact with the Department’s work and strategic priorities. 
+Modern software is moving fast. However, while the associated lexicon is continuously changing, there are core concepts and key terms that one must be familiar with in order to effectively drive digital transformation in their organization. It can be difficult to find these terms and concepts in one place. What’s more, it can be challenging to determine the connections and interrelationships among the concepts. The below is intended to serve as a living guide for those embarking on their own software transformation journey - especially those with a need for cloud-native capabilities.
 
-**As an organization, we prioritize continuous learning for ourselves and for our partners. Tell us what concepts we’ve missed and we’ll add them here. Get in touch at hello@defenseunicorns.com.** 
+Defense Unicorns works with mission-focused partners across the public and commercial sectors. For our public sector partners - particularly those within the Department of Defense - you’ll notice that where appropriate we include additional explanation on how these concepts interact with the Department’s work and strategic priorities.
+
+**As an organization, we prioritize continuous learning for ourselves and for our partners. Tell us what concepts we’ve missed and we’ll add them here. Get in touch at hello@defenseunicorns.com.**
 
 ### Containers
 
@@ -21,17 +22,17 @@ Containers are packages of software that wrap all dependencies and settings for 
 
 ### Microservices
 
-In a microservice-based approach to software system architecture, the system is decomposed into many individual software applications that each perform discrete tasks or processes. The individual applications communicate via well-defined application programming interfaces (APIs). Known as “microservices,” each application is fully abstractable from the rest of the system. For example, each microservice has its own, isolated business process flow, logic, data access layer, and codebase. Microservices represent an alternative approach to traditional, monolithic architectures for software systems. By decomposing complex software systems into smaller, self-contained functional units, microservices architectures enhance system reliability and limit the scope and scale of impact when an issue is detected. In this same manner, microservices architectures enable wide, cost-effective scalability and limit the amount of overhead or institutional knowledge required by individual developers. Rather than needing to learn the entire system and its dependencies, developers can work more efficiently, on smaller teams, and focus on ensuring the dependability of an individual microservice. 
+In a microservice-based approach to software system architecture, the system is decomposed into many individual software applications that each perform discrete tasks or processes. The individual applications communicate via well-defined application programming interfaces (APIs). Known as “microservices,” each application is fully abstractable from the rest of the system. For example, each microservice has its own, isolated business process flow, logic, data access layer, and codebase. Microservices represent an alternative approach to traditional, monolithic architectures for software systems. By decomposing complex software systems into smaller, self-contained functional units, microservices architectures enhance system reliability and limit the scope and scale of impact when an issue is detected. In this same manner, microservices architectures enable wide, cost-effective scalability and limit the amount of overhead or institutional knowledge required by individual developers. Rather than needing to learn the entire system and its dependencies, developers can work more efficiently, on smaller teams, and focus on ensuring the dependability of an individual microservice.
 
 ![Monolithic vs Microservices](monolithic-vs-microservices.png "Figure I: A visual comparison of monolithic vs. microservices architectures. Image Source: https://www.contentstack.com/cms-guides/decoupled-cms/monolithic-vs-microservices-cms-architectures/")
 
-*Figure I: A visual comparison of monolithic vs. microservices architectures.*
+_Figure I: A visual comparison of monolithic vs. microservices architectures._
 
 Within the Department of Defense, enterprise-wide availability of pre-approved, containerized microservices can significantly accelerate software development efforts by making the building blocks of software systems discoverable, available on-demand, and deployable in any computing environment. Given their decoupled nature (i.e., independent of a single system or workflow), microservices are highly composable. They can be configured with other, independent microservices to support workflows and applications tailored to any unique mission. Moreover, microservices that are containerized, configured and managed as a carefully chosen suite of services and functions can serve as pre-assembled software development pipelines that are infinitely scalable.
 
 ### Container Orchestration
 
-Container orchestrators automate the deployment and management of containers on any infrastructure. This removes the need to redesign or reconfigure an application in order to deploy it to a different environment. Importantly, container orchestration also enables virtualization and scaling of containerized microservices such as storage, networking, and security which are foundational components of cloud-native applications.  Orchestration tools configure containers based on declared states which indicate how the containers should run. Rather than having to manually redesign or reconfigure an application to run in a different environment, container orchestrators standardize deployments.  
+Container orchestrators automate the deployment and management of containers on any infrastructure. This removes the need to redesign or reconfigure an application in order to deploy it to a different environment. Importantly, container orchestration also enables virtualization and scaling of containerized microservices such as storage, networking, and security which are foundational components of cloud-native applications.  Orchestration tools configure containers based on declared states which indicate how the containers should run. Rather than having to manually redesign or reconfigure an application to run in a different environment, container orchestrators standardize deployments.
 
 Within the DoD context, containerized microservices and container orchestration can be used to provide a common, but extensible, platform that mission applications can be developed and run on top of. A common, secure platform would allow for better alignment between platform teams and mission application teams. In other words, creating greater standardization among platforms, while preserving the ability to quickly adapt and integrate new products or capabilities, would create a positive feedback loop between mission application teams and platform teams.
 
@@ -57,11 +58,11 @@ The combination of Infrastructure as Code, Configuration as Code, and containeri
 
 Continuous delivery (CD) means we have the capability of releasing the latest changes validated by the pipeline to production on demand. Continuous deployment means that every change we make will flow directly to production unless the CD pipeline invalidates the delivery. In either case, a true CD flow will have no human intervention between when code is accepted into the trunk and when it is delivered. Very high performing teams will deliver changes as rapidly as possible. Depending on the delivery context, this could be several times an hour, day, or week. The goal of CD is to minimize risk and cost of change by relentlessly driving down the size of change to expose and correct inefficiencies in the process and improve quality feedback loops. CD is not a technology or tool. CD is how we use the tools to improve quality, organizational efficiency, and customer outcomes.
 
-Continuous integration is the practice of a team of continuously making small changes and integrating them with other changes the team is making to verify that the changes work together and to minimize the risk of conflicting changes between developers. This is a core quality control and is a base requirement for CD. 
+Continuous integration is the practice of a team of continuously making small changes and integrating them with other changes the team is making to verify that the changes work together and to minimize the risk of conflicting changes between developers. This is a core quality control and is a base requirement for CD.
 
 ### Software FLOW
 
-Software FLOW is middleware software to connect disparate systems, transforming and restructuring data between these systems. FLOW enables complicated data environments, sources, and destinations to interoperate. 
+Software FLOW is middleware software to connect disparate systems, transforming and restructuring data between these systems. FLOW enables complicated data environments, sources, and destinations to interoperate.
 
 ### DevOps
 
@@ -85,11 +86,11 @@ An “air gap” is a cyber security practice commonly employed to enhance a sys
 
 GitOps automates infrastructure provisioning for DevOps teams by dynamically updating infrastructure as code configuration files based on events in the DevOps workflow (i.e., version control, collaboration, merge requests, etc.). In this way, GitOps changes the declarative state of the infrastructure based on the activity of the real-time system or application and allows elastic infrastructure management based on demand. This level of automation reduces the traditional manual workload of provisioning infrastructure and integrates infrastructure operations into the DevOps cycle.
 
-### DevSecOps within the Department of Defense- a mini guide 
+### DevSecOps within the Department of Defense- a mini guide
 
-*For our partners within DoD, below you’ll find a list of common terms and products within the DevSecOps ecosystem. We’ll be adding to this list over time.*
+_For our partners within DoD, below you’ll find a list of common terms and products within the DevSecOps ecosystem. We’ll be adding to this list over time._
 
-### DoD Iron Bank 
+### DoD Iron Bank
 
 DoD’s Iron Bank repository contains fully accredited container images that are deployable on any infrastructure. Iron Bank makes available industry-leading free and open source software and commercial off the shelf software for DoD customers.
 

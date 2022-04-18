@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap");
 
 @layer utilities {
   @variants responsive {
@@ -36,10 +36,10 @@
       background: url("../images/mobileFooter.jpg") no-repeat;
       background-size: cover;
     }
-    .whoWeAreBgRight{
+    .whoWeAreBgRight {
       background-position: right !important;
     }
-    .whoWeAreBgCenter{
+    .whoWeAreBgCenter {
       background-position: center !important;
     }
   }
@@ -160,15 +160,15 @@ body {
 
 .navLink:hover,
 .navLink:active {
-  color: #18A0FB;
+  color: #18a0fb;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.activeNav{
+.activeNav {
   text-decoration: underline;
   text-underline-offset: 2px;
-  color: #18A0FB;
+  color: #18a0fb;
 }
 
 @keyframes gradient {
@@ -236,7 +236,7 @@ body {
 }
 
 .homeSectionTitle {
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
@@ -265,10 +265,9 @@ body {
   border-bottom-width: 1px;
 }
 
-
 .card-img-top {
-  min-width:100%;
-  min-height:100%;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover !important;
 }
 
@@ -298,11 +297,11 @@ body {
   width: 1px;
 }
 
-.searchText:hover .searchButton{
+.searchText:hover .searchButton {
   /* @apply bg-blue-900; */
 }
 
-.searchButton{
+.searchButton {
   color: white;
   @apply absolute top-0 right-0 p-2 bg-red-500 font-bold rounded-xl h-full flex justify-center items-center w-1/3;
 }
@@ -312,15 +311,14 @@ body {
   border-right: none;
 }
 
-.dropBorder{
+.dropBorder {
   border-color: rgb(124, 154, 192);
 }
 
 .searchText {
   font-size: small;
-  color: black
+  color: black;
 }
-
 
 /* ////////////////////////// */
 
@@ -330,27 +328,25 @@ body {
   height: 87vh;
 }
 
-.valueImg{
-  content: url('../images/about/values.png')
+.valueImg {
+  content: url("../images/about/values.png");
 }
 
-.engineeringImg{
-  content: url('../images/about/engineering.png')
+.engineeringImg {
+  content: url("../images/about/engineering.png");
 }
 
-
-.peopleImg{
-  content: url('../images/about/people.png')
+.peopleImg {
+  content: url("../images/about/people.png");
 }
 
-.evolutionImg{
-  content: url('../images/about/evolution.png')
+.evolutionImg {
+  content: url("../images/about/evolution.png");
 }
 
-.communicationImg{
-  content: url('../images/about/communication.png')
+.communicationImg {
+  content: url("../images/about/communication.png");
 }
-
 
 @media screen and (max-width: 635px) {
   /* .imageContainer {
@@ -438,7 +434,7 @@ body {
   @apply mb-5;
 }
 
-.termsOfService p{
+.termsOfService p {
   @apply mb-5;
 }
 
@@ -448,13 +444,13 @@ body {
 }
 
 .scroll::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 .scroll::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(29, 65, 122, 0.728); 
+  -webkit-box-shadow: inset 0 0 6px rgba(29, 65, 122, 0.728);
   background-color: rgba(29, 65, 122, 0.872);
 }
 
@@ -480,7 +476,7 @@ body {
   @apply cursor-pointer;
 }
 
-.blackBorder{
+.blackBorder {
   border: 2px solid black;
 }
 
@@ -502,20 +498,14 @@ body {
   box-shadow: 0px 4px 6px rgba(10, 75, 194, 0.4);
 }
 
-.pinFilter{
-  filter: 'drop-shadow: 2px 2px 3px #154A8F'
+.pinFilter {
+  filter: "drop-shadow: 2px 2px 3px #154A8F";
 }
 
-.card{
-  width: 300px
+.card {
+  width: 319px;
 }
 
-.MuiTooltip-tooltip{
+.MuiTooltip-tooltip {
   font-size: 12px;
-}
-
-@media screen and (min-width:500px) {
-  .card{
-    width: 319px;
-  }
 }

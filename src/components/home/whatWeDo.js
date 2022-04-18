@@ -3,12 +3,10 @@ import whatWeDoPng from "../../images/home/whatWeDo.png";
 import Button from "../button";
 import whoWeAre from "../../images/home/whoWeAre.png";
 
-
 const WhatWeDo = () => {
   return (
     <section className="flex flex-col items-center justify-center w-full md:my-0 relative mt-30">
-
-<div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
+      <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="w-5/6 md:w-4/6 lg:w-full mx-auto px-16 md:p-16 relative pt-16 mt-16">
           <div className="tk-blob">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 303.2">
@@ -28,9 +26,7 @@ const WhatWeDo = () => {
           >
             Who we are
           </h2>
-          <p 
-            className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-5 text-xl xl:pb-16 font-light leading-8"   
-          >
+          <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-10 xl:pr-5 text-xl xl:pb-16 font-light leading-8">
             We are innovators, software engineers, and veterans with decades of
             experience delivering technology programs across DoD and the broader
             federal market. Defense Unicorns exists to accelerate the impact of
@@ -46,8 +42,6 @@ const WhatWeDo = () => {
           </div>
         </div>
       </div>
-
-
 
       <div className="xl:w-4/5 mx-auto grid lg:grid-cols-2 grid-cols-1">
         <div className="w-5/6 md:w-4/6 lg:w-full lg:order-2 p-16 mt-16 md:mt-0 mx-auto lg:mx-10 relative">
@@ -67,8 +61,7 @@ const WhatWeDo = () => {
           <h2
             className={`homeSectionTitle text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium text-blue-900 flex items-center`}
           >
-      
-              How We Accelerate Missions
+            How We Accelerate Missions
           </h2>
           <p className="pt-5 pb-5 lg:pt-10 lg:pb-32 lg:pr-8 xl:pr-5 text-xl xl:pb-16 font-light leading-8">
             We make it easier for mission-driven organizations to buy, accredit,
@@ -88,7 +81,6 @@ const WhatWeDo = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };

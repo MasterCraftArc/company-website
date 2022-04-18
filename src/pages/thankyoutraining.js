@@ -15,15 +15,13 @@ const Thankyou = () => {
         alt="Defense Unicorns Logo"
         className="w-3/4 md:w-1/4 bg-white rounded-xl"
       ></img>
-    
+
       <h1 className="mt-16 text-6xl text-black text-center font-bold text-white">
         <span className="text-red-500">Thank you</span> for contacting us!
       </h1>
       <h1 className="w-11/12 rounded-2xl mt-24 mb-10 text-4xl md:text-5xl px-3 py-5 font-bold text-center text-white ">
         Thank you for indicating your interest in attending the Defense Unicorns
-        DevSecOps training day. 
-        
-        We are currently confirming dates for fall 2021
+        DevSecOps training day. We are currently confirming dates for fall 2021
         and will be in touch shortly.
       </h1>
       <Button

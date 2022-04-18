@@ -1,14 +1,14 @@
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
-import logoWhite from "../images/DU_logo_White.svg"
-import logoColor from "../images/DU_logo_Color.svg"
+import logoWhite from "../images/DU_logo_White.svg";
+import logoColor from "../images/DU_logo_Color.svg";
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { setRefClassName } from "../utilities/refHelpers";
 
 const logoStyles = {
   maxWidth: "262px",
-  maxHeight: "56px"
+  maxHeight: "56px",
 };
 
 function Header(props) {
@@ -22,11 +22,11 @@ function Header(props) {
     if (!props.background && window.scrollY <= 50) {
       setRefClassName(stickyHeader, "navClear");
       setRefClassName(mobileRef, "bi bi-list");
-      setLogoStyle(logoWhite)
+      setLogoStyle(logoWhite);
     } else {
       setRefClassName(stickyHeader, "navBg md:px-24");
       setRefClassName(mobileRef, "bi bi-list text-black");
-      setLogoStyle(logoColor)
+      setLogoStyle(logoColor);
     }
   };
 
@@ -60,13 +60,12 @@ function Header(props) {
                 className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                 to="/"
               >
-                 <img
+                <img
                   src={logoStyle}
                   alt="Defense Unicorns Logo"
                   style={logoStyles}
                   ref={logoRef}
                 />
-                
               </Link>
               <button
                 className="text-white cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -88,7 +87,6 @@ function Header(props) {
                     className="px-3 text-xl uppercase navLink"
                     to="/"
                     activeClassName="activeNav"
-                    
                   >
                     <span className="mt-2 ml-2">Home</span>
                   </Link>
