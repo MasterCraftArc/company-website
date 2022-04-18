@@ -76,19 +76,18 @@ Heroku is a PaaS that runs on top of AWS. It offers support for several programm
 
 Elastic Beanstalk as a platform allows deployment of web applications in several languages. Unlike Heroku and Netlify, Elastic Beanstalk relies on other AWS services such as code-pipeline and route53 to provide features offered as a single service through Netlify and Heroku. Elastic Beanstalk as a service is completely free and all charges will be based on utilized EC2 instances.
 
-
 ---
 
 ### Analytics
 
-#### Google & Netlify Analytics 
+#### Google & Netlify Analytics
 
-By integrating Google Analytics 4 and Universal Analytics properties into the Defense Unicorns website workflow,  we are able to track and manage website traffic. Unlike netlify's built in analytics which work by parsing server-side, Google's tools will allow us to gather unique data regarding user's visits to our website. Additionally google analytics will give us smart insights and predictions on user interaction on the defense unicorns website through their machine learning algorithms. Also, Netlify may sometimes add bots and count it as an actual visitor whearas Google Analytics would have more accuracy. Its a great benefit to have insights from more than one resource.
+By integrating Google Analytics 4 and Universal Analytics properties into the Defense Unicorns website workflow, we are able to track and manage website traffic. Unlike netlify's built in analytics which work by parsing server-side, Google's tools will allow us to gather unique data regarding user's visits to our website. Additionally google analytics will give us smart insights and predictions on user interaction on the defense unicorns website through their machine learning algorithms. Also, Netlify may sometimes add bots and count it as an actual visitor whearas Google Analytics would have more accuracy. Its a great benefit to have insights from more than one resource.
 
-#### Microsoft Clarity 
+#### Microsoft Clarity
 
 Clarity easily integrates into our google analytics workflow and provides advanced heatmap features like instant heatmap creation, element-level metrics and data segmentation. Clarity records individual user interactions on webpages and also provides click and scroll heatmaps and click insights.
 
 #### Hotjar
 
-Hotjar will also be able to integrate with the google analytics plugin although not as natively as clarity. Hotjar  provides heatmap tooling that will allow us to see which parts of the site attract attention and where users tend to linger. We will be able to differentiate data based on a/b testing and across visits on different devices. Hotjar also provides user playback features as well to allow us to view individual user interactions on our site. This will allow further insight on why some users don't convert. 
+Hotjar will also be able to integrate with the google analytics plugin although not as natively as clarity. Hotjar provides heatmap tooling that will allow us to see which parts of the site attract attention and where users tend to linger. We will be able to differentiate data based on a/b testing and across visits on different devices. Hotjar also provides user playback features as well to allow us to view individual user interactions on our site. This will allow further insight on why some users don't convert.

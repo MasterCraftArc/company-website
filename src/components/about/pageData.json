@@ -1,43 +1,42 @@
 [
-    {
-      "img" : "evolutionImg", 
-      "title": "Experiment with everything",
-      "subtitle": "",
-      "text": "Einstein defined insanity as repeating the same thing expecting different results. Henry Ford said failures were merely an opportunity to intelligently begin again. We inform our operations by experiments, applying a build-measure-learn feedback loop in all we do.",
-      "contentStyle" : "order-last sm:order-first",
-      "titleStyle" : ""
-    },
-    {
-      "img" : "engineeringImg", 
-      "title": "Default to action",
-      "subtitle": "",
-      "text": "Don’t wait for approval. Don’t get lost in “requirements analysis.” Take action, experiment, and correct.",
-      "contentStyle" : "order-last",
-      "titleStyle" : ""
-    },
-    {
-      "img" : "peopleImg", 
-      "title": "We value insights",
-      "subtitle": "",
-      "text": "We give and receive direct feedback. We’re committed to delivering actionable insights that allow us to improve personally, professionally, and as a team. The feedback we give is respectful, timely, and thoughtful.",
-      "contentStyle" : "order-last sm:order-first",
-      "titleStyle" : "w-3/5 lg:w-full"
-    },
-    {
-      "img" : "communicationImg", 
-      "title": "Apply focused learning",
-      "subtitle": "",
-      "text": "By focusing our attention on the learning most closely tied to desired results, we maximize our growth.",
-      "contentStyle" : "order-last ",
-      "titleStyle" : ""
-
-    },
-    {
-      "img" : "valueImg", 
-      "title": "Employ positive thinking",
-      "subtitle": "",
-      "text": "Positive thinking is a practice and a skill. We acknowledge challenges and focus our energy on the vast potential that lies on the other side of solving them.",
-      "contentStyle" : "order-last sm:order-first",
-      "titleStyle" : ""
-    }
-  ]
+  {
+    "img": "evolutionImg",
+    "title": "Experiment with everything",
+    "subtitle": "",
+    "text": "Einstein defined insanity as repeating the same thing expecting different results. Henry Ford said failures were merely an opportunity to intelligently begin again. We inform our operations by experiments, applying a build-measure-learn feedback loop in all we do.",
+    "contentStyle": "order-last sm:order-first",
+    "titleStyle": ""
+  },
+  {
+    "img": "engineeringImg",
+    "title": "Default to action",
+    "subtitle": "",
+    "text": "Don’t wait for approval. Don’t get lost in “requirements analysis.” Take action, experiment, and correct.",
+    "contentStyle": "order-last",
+    "titleStyle": ""
+  },
+  {
+    "img": "peopleImg",
+    "title": "We value insights",
+    "subtitle": "",
+    "text": "We give and receive direct feedback. We’re committed to delivering actionable insights that allow us to improve personally, professionally, and as a team. The feedback we give is respectful, timely, and thoughtful.",
+    "contentStyle": "order-last sm:order-first",
+    "titleStyle": "w-3/5 lg:w-full"
+  },
+  {
+    "img": "communicationImg",
+    "title": "Apply focused learning",
+    "subtitle": "",
+    "text": "By focusing our attention on the learning most closely tied to desired results, we maximize our growth.",
+    "contentStyle": "order-last ",
+    "titleStyle": ""
+  },
+  {
+    "img": "valueImg",
+    "title": "Employ positive thinking",
+    "subtitle": "",
+    "text": "Positive thinking is a practice and a skill. We acknowledge challenges and focus our energy on the vast potential that lies on the other side of solving them.",
+    "contentStyle": "order-last sm:order-first",
+    "titleStyle": ""
+  }
+]

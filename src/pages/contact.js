@@ -40,11 +40,8 @@ class Contact extends React.Component {
         navigate("/thankyou");
         this.setState({
           feedbackMsg: "Form could not be submitted.",
-        })
-      }
-      );
-
-      
+        });
+      });
   }
 
   render() {
