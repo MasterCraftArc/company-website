@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Button from "../components/button";
