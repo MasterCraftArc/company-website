@@ -38,7 +38,7 @@ const TrainForBattle = () => {
             heading="Government"
             image={aquisitions}
             mainText="Attend DevSecOps Training Course"
-            cardLink="/training"
+            cardLink="/contact"
             gtmLabel="DevSecOps training"
           />
 
