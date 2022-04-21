@@ -9,7 +9,6 @@ const Hero = () => {
         <h1 className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-semibold">
           Our Core Values
         </h1>
-        <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl text-red-500"></h2>
         <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
           <span className="mx:block">
             Defense Unicorns operates with a single belief - that a value&nbsp;

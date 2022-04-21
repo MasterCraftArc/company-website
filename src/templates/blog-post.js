@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/blogLayout";
 import Seo from "../components/seo";
 import unicorn from "../images/unicornStars.png";
-import Button from "../components/button";
 
 const metaStyles = {
   lineHeight: "0.5",
@@ -50,11 +49,6 @@ const BlogPostTemplate = ({ data, location }) => {
           src={unicorn}
           alt="Unicorn with star trail"
         ></img>
-        <Button
-          linkTo="/learn"
-          className=" bg-red-500 hover:bg-red-700 text-white"
-          text="See More"
-        />
       </div>
 
       <nav className="blog-post-nav mb-16 pt-5 font-black text-lg sm:text-3xl">

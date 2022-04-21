@@ -4,3 +4,4 @@ extras
 .history
 .DS_Store
 public
+.vscode
