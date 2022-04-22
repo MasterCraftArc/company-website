@@ -8,7 +8,7 @@ import BackgroundSection from "../home/homeBg";
 const sentenceAnim = {
   hidden: { opacity: 1 },
   visible: {
-    opacity: 0,
+    opacity: 1,
     transition: {
       delay: 0.1,
       staggerChildren: 0.08,
@@ -64,7 +64,7 @@ const HomeHero = () => {
           </h1>
           <motion.h1
             variants={sentenceAnim}
-            initial="hidden"
+            initial="invisible"
             animate="visible"
             className={`${TITLE_TEXT} sm:text-7xl xl:text-8xl 2xl:text-9xl lg:ml-24 md:ml-16 sm:ml-8 ml-4 text-red-500 font-bold `}
           >
