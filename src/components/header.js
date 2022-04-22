@@ -1,32 +1,40 @@
-import { Link } from "gatsby";
-import logo from "../images/logo.png";
+import { setRefClassName } from "../utilities/refHelpers";
+import { motion, AnimatePresence } from "framer-motion";
 import logoWhite from "../images/DU_logo_White.svg";
 import logoColor from "../images/DU_logo_Color.svg";
 import React, { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { setRefClassName } from "../utilities/refHelpers";
+import logo from "../images/logo.png";
+import SocialsBox from "./socialsBox";
+import { Link } from "gatsby";
 
 const logoStyles = {
   maxWidth: "262px",
   maxHeight: "56px",
 };
 
+const DEFAULT_SOCIAL_ICON_STYLE = "text-white socialHover";
+const SCROLLED_SOCIAL_ICON_STYLE = "text-blue-900 socialHover";
 function Header(props) {
   const [navDrawerOpen, setNavDrawerOpen] = React.useState(false);
   const [logoStyle, setLogoStyle] = React.useState(logoWhite);
-  const stickyHeader = React.createRef();
+  const [socialIconClass, setSocialIconClass] = React.useState(
+    DEFAULT_SOCIAL_ICON_STYLE
+  );
   const logoRef = React.createRef();
   const mobileRef = React.createRef();
+  const stickyHeader = React.createRef();
 
   const handleScroll = () => {
     if (!props.background && window.scrollY <= 50) {
-      setRefClassName(stickyHeader, "navClear");
-      setRefClassName(mobileRef, "bi bi-list");
       setLogoStyle(logoWhite);
+      setRefClassName(mobileRef, "bi bi-list");
+      setRefClassName(stickyHeader, "navClear");
+      setSocialIconClass(DEFAULT_SOCIAL_ICON_STYLE);
     } else {
-      setRefClassName(stickyHeader, "navBg md:px-24");
-      setRefClassName(mobileRef, "bi bi-list text-black");
       setLogoStyle(logoColor);
+      setRefClassName(mobileRef, "bi bi-list");
+      setSocialIconClass(SCROLLED_SOCIAL_ICON_STYLE);
+      setRefClassName(stickyHeader, "navBg md:px-24 text-blue-900");
     }
   };
 
@@ -84,7 +92,7 @@ function Header(props) {
               <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 ">
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-xl uppercase navLink"
+                    className="text-xl uppercase navLink"
                     to="/"
                     activeClassName="activeNav"
                   >
@@ -122,6 +130,11 @@ function Header(props) {
                   </Link>
                 </li>
               </ul>
+              <SocialsBox
+                wrapperStyle="my-0 py-0 mt-0"
+                githubStyle={`my-0 py-0 rounded-full text-3xl ${socialIconClass}`}
+                linkedInStyle={`my-0 py-0 rounded-full text-3xl ${socialIconClass}`}
+              />
             </div>
           </div>
         </div>
@@ -147,21 +160,18 @@ function Header(props) {
               >
                 <i className="bi bi-x-lg"></i>
               </button>
-              <img
-                className="mt-4 ml-16"
-                src={logo}
-                alt="Defense Unicorns Logo"
-                style={logoStyles}
-              />
-
+              <div style={{ width: "50%" }} className="ml-auto mr-auto">
+                <img src={logo} alt="Defense Unicorns Logo" />
+              </div>
               <ul
                 className=" text-white w-full flex flex-col justify-around list-none my-auto text-center font-bold pb-44"
                 style={{ height: "45vh" }}
               >
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-4xl uppercase text-blue-900 navLink"
+                    className="px-3 py-5 text-4xl uppercase text-blue-900 navLink"
                     to="/"
+                    activeClassName="activeNav"
                   >
                     Home
                   </Link>
@@ -169,7 +179,9 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/blog"
-                    className="text-4xl flex uppercase text-blue-900 navLink"
+                    className="text-4xl py-5 flex uppercase text-blue-900 navLink"
+                    activeClassName="activeNav"
+                    partiallyActive={true}
                   >
                     Learn
                   </Link>
@@ -177,19 +189,28 @@ function Header(props) {
                 <li className="nav-item">
                   <Link
                     to="/about"
-                    className="text-4xl flex uppercase text-blue-900"
+                    className="text-4xl py-5 flex uppercase text-blue-900"
+                    activeClassName="activeNav"
+                    partiallyActive={true}
                   >
                     About
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3 text-4xl uppercase text-blue-900"
+                    className="px-3 py-5 text-4xl uppercase text-blue-900"
                     to="/contact"
+                    activeClassName="activeNav"
+                    partiallyActive={true}
                   >
                     Contact
                   </Link>
                 </li>
+                <SocialsBox
+                  wrapperStyle="mx-auto text-5xl justify-center mt-12 sm:mt-6"
+                  githubStyle="text-blue-900 ml-3"
+                  linkedInStyle="text-blue-900 mr-3"
+                />
               </ul>
             </motion.div>
           )}
