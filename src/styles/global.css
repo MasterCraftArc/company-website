@@ -168,6 +168,10 @@ body {
 .activeNav {
   text-decoration: underline;
   text-underline-offset: 2px;
+  color: hsl(204, 97%, 54%);
+}
+
+.socialHover:hover {
   color: #18a0fb;
 }
 
