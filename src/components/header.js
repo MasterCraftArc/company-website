@@ -76,7 +76,7 @@ function Header(props) {
                 />
               </Link>
               <button
-                className="text-white cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                className="cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                 type="button"
                 onClick={() => setNavDrawerOpen(!navDrawerOpen)}
               >
