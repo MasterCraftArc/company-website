@@ -69,6 +69,10 @@ const Seo = ({ description, lang, meta, title, url, image, author, route }) => {
           content: "width=device-width, initial-scale=1",
         },
         {
+          name: `theme-color`,
+          content: `#ffffff`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
