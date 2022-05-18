@@ -118,6 +118,16 @@ function Header(props) {
                   >
                     <span className="ml-5">About</span>
                   </Link>
+                  <li className="nav-item">
+                    <Link
+                      to="https://defenseunicorns.bamboohr.com/jobs/?source=bamboohr"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="text-xl flex uppercase navLink"
+                    >
+                      <span className="ml-5">Careers</span>
+                    </Link>
+                  </li>
                 </li>
                 <li className="nav-item">
                   <Link
@@ -194,6 +204,16 @@ function Header(props) {
                     partiallyActive={true}
                   >
                     About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="https://defenseunicorns.bamboohr.com/jobs/?source=bamboohr"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="text-4xl py-5 flex uppercase text-blue-900"
+                  >
+                    <span className="ml-5">Careers</span>
                   </Link>
                 </li>
                 <li className="nav-item">
