@@ -122,6 +122,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
+            title: `Defense Unicorns`, // fix for issue @https://github.com/gatsbyjs/gatsby/issues/17100
           },
         ],
       },
