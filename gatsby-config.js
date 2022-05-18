@@ -9,6 +9,8 @@ module.exports = {
     keywords: `DevSecOps, DevOps, DefenseUnicorns, Kubernetes, Cloud Native`,
   },
   plugins: [
+    `gatsby-plugin-top-layout`,
+    `gatsby-plugin-mui-emotion`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -177,7 +179,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
     // Ensure that Tag manager stays before the gtag and ua analytics declarations in this file.
     // per https://www.gatsbyjs.com/plugins/gatsby-plugin-google-tagmanager/
     {
