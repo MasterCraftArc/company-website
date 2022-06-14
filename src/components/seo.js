@@ -33,6 +33,7 @@ const Seo = ({ description, lang, meta, title, url, image, author, route }) => {
   const metaImage = image || site.siteMetadata.image;
   const metaUrl = url || site.siteMetadata.url;
   const metaAuthor = author || site.siteMetadata.social?.twitter;
+  const twitterImage = site.siteMetadata.url + metaImage;
 
   return (
     <Helmet
@@ -102,11 +103,11 @@ const Seo = ({ description, lang, meta, title, url, image, author, route }) => {
         },
         {
           name: `twitter:card`,
-          content: `summary_large_image`,
+          content: `summary`,
         },
         {
           name: `twitter:image`,
-          content: metaImage,
+          content: twitterImage,
         },
         {
           name: `twitter:creator`,
