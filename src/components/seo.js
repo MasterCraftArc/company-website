@@ -31,9 +31,9 @@ const Seo = ({ description, lang, meta, title, url, image, author, route }) => {
   const metaDescription = description || site.siteMetadata.description;
   const metaTitle = title || site.siteMetadata.title;
   const metaImage = image || site.siteMetadata.image;
-  const metaUrl = url || site.siteMetadata.url;
+  const metaUrl = url || site.siteMetadata.siteUrl;
   const metaAuthor = author || site.siteMetadata.social?.twitter;
-  const twitterImage = site.siteMetadata.url + metaImage;
+  const twitterImage = site.siteMetadata.siteUrl + metaImage;
 
   return (
     <Helmet
