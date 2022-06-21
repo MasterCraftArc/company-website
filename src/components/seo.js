@@ -12,7 +12,20 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Seo = ({ description, lang, meta, title, url, image, author, route }) => {
+const TWITTER_IMAGE_URL =
+  "https://www.defenseunicorns.com/icons/icon-96x96.png";
+
+const Seo = ({
+  description,
+  lang,
+  meta,
+  title,
+  url,
+  image,
+  author,
+  route,
+  twitterImage,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -33,7 +46,6 @@ const Seo = ({ description, lang, meta, title, url, image, author, route }) => {
   const metaImage = image || site.siteMetadata.image;
   const metaUrl = url || site.siteMetadata.siteUrl;
   const metaAuthor = author || site.siteMetadata.social?.twitter;
-  const twitterImage = site.siteMetadata.siteUrl + metaImage;
 
   return (
     <Helmet
@@ -107,7 +119,7 @@ const Seo = ({ description, lang, meta, title, url, image, author, route }) => {
         },
         {
           name: `twitter:image`,
-          content: twitterImage,
+          content: twitterImage || TWITTER_IMAGE_URL,
         },
         {
           name: `twitter:creator`,
@@ -135,6 +147,7 @@ Seo.defaultProps = {
   img: ``,
   author: ``,
   route: ``,
+  twitterImage: ``,
 };
 
 Seo.propTypes = {
@@ -144,6 +157,7 @@ Seo.propTypes = {
   title: PropTypes.string,
   url: PropTypes.string.isRequired,
   image: PropTypes.string,
+  twitterImage: PropTypes.string,
   author: PropTypes.string,
   route: PropTypes.string,
 };
