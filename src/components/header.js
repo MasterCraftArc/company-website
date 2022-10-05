@@ -120,7 +120,7 @@ function Header(props) {
                   </Link>
                   <li className="nav-item">
                     <Link
-                      to="https://defenseunicorns.bamboohr.com/jobs/?source=bamboohr"
+                      to="https://defense-unicorns.rippling-ats.com/"
                       rel="noopener noreferrer"
                       target="_blank"
                       className="text-xl flex uppercase navLink"
@@ -208,7 +208,7 @@ function Header(props) {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="https://defenseunicorns.bamboohr.com/jobs/?source=bamboohr"
+                    to="https://defense-unicorns.rippling-ats.com/"
                     rel="noopener noreferrer"
                     target="_blank"
                     className="text-4xl py-5 flex uppercase text-blue-900"
