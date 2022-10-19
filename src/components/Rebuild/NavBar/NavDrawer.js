@@ -2,7 +2,7 @@ import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { Drawer, IconButton } from "@mui/material";
 import DrawerTab, { DrawerTabs } from "./NavDrawerTabs";
-import { createTabPropsFromNavLink } from "../../utilities/navLink";
+import { createTabPropsFromNavLink } from "../../../utilities/navLink";
 
 // Extends the Drawer props so that defaults may still be used.
 function NavDrawer({ children, drawerProps, closeDrawer, navLinks, pathname }) {

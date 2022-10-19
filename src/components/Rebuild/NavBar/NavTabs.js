@@ -1,7 +1,7 @@
 import React from "react";
 import Tab from "@mui/material/Tab";
 import { Link as GatsbyLink } from "gatsby";
-import { isLocalLink } from "../../utilities/navLink";
+import { isLocalLink } from "../../../utilities/navLink";
 
 // MUI Tab Components are not matching the api and are not allowing component in tab to be passed.
 // The unstyled component does not have this issue.

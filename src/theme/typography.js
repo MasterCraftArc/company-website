@@ -13,7 +13,6 @@ const typography = {
   h1: {
     fontFamily: fonts.teko,
     fontSize: 96,
-    lineHeight: "120%",
     letterSpacing: -1.5,
     fontWeight: fontWeights.regular,
   },
@@ -49,8 +48,8 @@ const typography = {
   },
   subtitle1: {
     fontFamily: fonts.poppins,
-    fontSize: 20,
-    lineHeight: 32,
+    fontStyle: "normal",
+    fontSize: "1.25rem",
     letterSpacing: 0.15,
     fontWeight: fontWeights.medium,
   },

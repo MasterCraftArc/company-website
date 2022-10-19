@@ -1,4 +1,5 @@
 import palette from "./palette";
+import typography from "./typography";
 
 const components = {
   MuiSnackbarContent: {
@@ -64,6 +65,7 @@ const components = {
   MuiTab: {
     styleOverrides: {
       root: {
+        ...typography.subtitle1,
         ":hover": {
           backgroundColor: palette.action?.hover,
         },

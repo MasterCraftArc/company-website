@@ -15,6 +15,12 @@ export const namedLinks = {
     rel: "noopener noreferrer",
     url: "https://github.com/defenseunicorns",
   },
+  linkedIn: {
+    text: "LinkedIn",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    url: "https://www.linkedin.com/company/defense-unicorns",
+  },
   zarf: {
     text: "Zarf",
     target: "_blank",

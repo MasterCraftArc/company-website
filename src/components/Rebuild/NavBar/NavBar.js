@@ -1,12 +1,13 @@
 import NavTab from "./NavTabs";
 import NavLogo from "./NavLogo";
 import NavDrawer from "./NavDrawer";
-import onScroll from "../../hooks/onScroll";
+import SocialLinks from "../SocialLinks";
+import onScroll from "../../../hooks/onScroll";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback, useState } from "react";
-import { navLinks } from "../../assets/data/navLinks";
-import { hideSmall, hideLarge } from "../../utilities/display";
-import { createTabPropsFromNavLink } from "../../utilities/navLink";
+import { navLinks } from "../../../assets/data/navLinks";
+import { hideSmall, hideLarge } from "../../../utilities/display";
+import { createTabPropsFromNavLink } from "../../../utilities/navLink";
 import { AppBar, Box, IconButton, Tabs, Toolbar, styled } from "@mui/material";
 
 const TRANSPARENT_ELEVATION = 0;
@@ -64,13 +65,19 @@ function NavBar({ pathname }) {
           <NavLogo />
           <Box
             component="div"
-            sx={{ flexDirection: "row", width: "fit-content", display: "flex" }}
+            sx={{
+              flexDirection: "row",
+              width: "fit-content",
+              display: "flex",
+              alignItems: "center",
+            }}
           >
             <Tabs value={pathname} aria-label="Navigation Tabs" sx={hideSmall}>
               {navLinks.map((l, i) => (
                 <NavTab key={i} {...createTabPropsFromNavLink(l, i)} />
               ))}
             </Tabs>
+            <SocialLinks />
           </Box>
         </Toolbar>
       </StyledAppBar>
@@ -93,7 +100,9 @@ function NavBar({ pathname }) {
             width: "100%",
             justifyContent: "center",
           }}
-        ></Box>
+        >
+          <SocialLinks />
+        </Box>
       </NavDrawer>
     </>
   );

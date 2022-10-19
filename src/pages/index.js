@@ -1,8 +1,5 @@
-import { Paper } from "@mui/material";
 import * as React from "react";
-import ThemeProvider from "@mui/material";
-import { theme } from "../theme/theme";
-import NavBar from "../components/NavBar/NavBar";
+import NavBar from "../components/Rebuild/NavBar/NavBar";
 import SiteHelmet from "../components/SiteHelmet";
 import HomeHero from "../components/home/hero";
 
