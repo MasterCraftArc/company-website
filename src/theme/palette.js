@@ -1,14 +1,9 @@
 const palette = {
   primary: {
-    main: "#68C4FF",
-    dark: "#44A4C2",
-    light: "#B0FFFF",
-    contrastText: "#000000",
+    main: "#EF4444",
   },
   secondary: {
-    main: "#787FF6",
-    dark: "#4053C2",
-    light: "#ADAEFF",
+    main: "#68C4FF",
   },
   background: {
     default: "white",
@@ -27,7 +22,7 @@ const palette = {
     disabledBackground: "#FFFFFF1F",
     focus: "#FFFFFF1F",
   },
-  contrastThreshold: 1,
+  contrastThreshold: 3,
   divider: "#FFFFFF1F",
 };
 

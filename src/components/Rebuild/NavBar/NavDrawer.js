@@ -32,7 +32,7 @@ function NavDrawer({ children, drawerProps, closeDrawer, navLinks, pathname }) {
               {l.menuItems.map((mL, mI) => (
                 <DrawerTab
                   aria-selected={true}
-                  key={l.text}
+                  key={mL.text}
                   {...createTabPropsFromNavLink(mL, mI)}
                 />
               ))}

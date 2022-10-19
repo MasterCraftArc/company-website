@@ -12,7 +12,7 @@ const typography = {
   fontFamily: [fonts.poppins, fonts.teko].join(","),
   h1: {
     fontFamily: fonts.teko,
-    fontSize: 96,
+    fontSize: "10.75rem",
     letterSpacing: -1.5,
     fontWeight: fontWeights.regular,
   },
@@ -29,19 +29,17 @@ const typography = {
     fontWeight: fontWeights.regular,
   },
   h4: {
-    fontFamily: fonts.teko,
-    fontSize: 34,
-    letterSpacing: 0,
+    fontFamily: fonts.poppins,
+    fontSize: "2rem",
     fontWeight: fontWeights.regular,
   },
   h5: {
-    fontFamily: fonts.teko,
-    fontSize: 24,
-    letterSpacing: 0.15,
+    fontFamily: fonts.poppins,
+    fontSize: "1.5rem",
     fontWeight: fontWeights.regular,
   },
   h6: {
-    fontFamily: fonts.teko,
+    fontFamily: fonts.poppins,
     fontSize: 20,
     letterSpacing: 0,
     fontWeight: fontWeights.regular,

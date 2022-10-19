@@ -1,11 +1,12 @@
 import * as React from "react";
 import "../styles/blobz.min.css";
 import Footer from "../components/footer";
-import HomeHero from "../components/home/hero";
 import SiteHelmet from "../components/SiteHelmet";
 import WhatWeDo from "../components/home/whatWeDo";
+import HomeHero from "../components/Rebuild/HomeHero";
 import NavBar from "../components/Rebuild/NavBar/NavBar";
 import TrainForBattle from "../components/home/trainForBattle";
+
 const pageStyles = {
   color: "#232129",
   fontFamily: "Poppins, Roboto, sans-serif, serif",
