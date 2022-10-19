@@ -38,11 +38,33 @@ export const namedLinks = {
     rel: "noopener noreferrer",
     url: "/contact",
   },
+  podcast: {
+    text: "Podcast",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    url: "https://anchor.fm/defenseunicorns",
+  },
+  courses: {
+    text: "Courses",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    url: "https://training.linuxfoundation.org/training/introduction-to-devsecops-for-managers-lfs180x/",
+  },
+  blog: {
+    text: "Blog",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    url: "https://medium.com/@Defense_Unicorns",
+  },
 };
 
 export const navLinks = [
   namedLinks.home,
   namedLinks.zarf,
+  {
+    text: "Learn",
+    menuItems: [namedLinks.podcast, namedLinks.courses, namedLinks.blog],
+  },
   namedLinks.careers,
   namedLinks.contact,
 ];

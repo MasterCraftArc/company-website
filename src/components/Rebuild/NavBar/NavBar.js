@@ -1,7 +1,9 @@
 import NavTab from "./NavTabs";
 import NavLogo from "./NavLogo";
+import NavTabMenu from "./NavMenu";
 import NavDrawer from "./NavDrawer";
 import SocialLinks from "../SocialLinks";
+import palette from "../../../theme/palette";
 import onScroll from "../../../hooks/onScroll";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback, useState } from "react";
@@ -9,7 +11,6 @@ import { navLinks } from "../../../assets/data/navLinks";
 import { hideSmall, hideLarge } from "../../../utilities/display";
 import { createTabPropsFromNavLink } from "../../../utilities/navLink";
 import { AppBar, Box, IconButton, Tabs, Toolbar, styled } from "@mui/material";
-import palette from "../../../theme/palette";
 
 const TRANSPARENT_ELEVATION = 0;
 const TRANSITION_HEIGHT = 70;
@@ -80,9 +81,13 @@ function NavBar({ pathname }) {
             }}
           >
             <Tabs value={pathname} aria-label="Navigation Tabs" sx={hideSmall}>
-              {navLinks.map((l, i) => (
-                <NavTab key={i} {...createTabPropsFromNavLink(l, i)} />
-              ))}
+              {navLinks.map((l, i) =>
+                l.menuItems ? (
+                  <NavTabMenu key={i} tabItem={l} />
+                ) : (
+                  <NavTab key={i} {...createTabPropsFromNavLink(l, i)} />
+                )
+              )}
             </Tabs>
             <SocialLinks />
           </Box>

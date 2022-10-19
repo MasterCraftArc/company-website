@@ -26,13 +26,25 @@ function NavDrawer({ children, drawerProps, closeDrawer, navLinks, pathname }) {
         <CloseIcon />
       </IconButton>
       <DrawerTabs value={pathname}>
-        {navLinks.map((l, i) => (
-          <DrawerTab
-            aria-selected={true}
-            key={l.text}
-            {...createTabPropsFromNavLink(l, i)}
-          />
-        ))}
+        {navLinks.map((l, i) =>
+          l.menuItems ? (
+            <>
+              {l.menuItems.map((mL, mI) => (
+                <DrawerTab
+                  aria-selected={true}
+                  key={l.text}
+                  {...createTabPropsFromNavLink(mL, mI)}
+                />
+              ))}
+            </>
+          ) : (
+            <DrawerTab
+              aria-selected={true}
+              key={l.text}
+              {...createTabPropsFromNavLink(l, i)}
+            />
+          )
+        )}
       </DrawerTabs>
       {children}
     </Drawer>
