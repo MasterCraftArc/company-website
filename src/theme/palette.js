@@ -1,6 +1,6 @@
 const palette = {
   primary: {
-    main: "#4ADEDE",
+    main: "#68C4FF",
     dark: "#44A4C2",
     light: "#B0FFFF",
     contrastText: "#000000",
@@ -11,8 +11,8 @@ const palette = {
     light: "#ADAEFF",
   },
   background: {
-    default: "#0A0E2E",
-    paper: "#002555",
+    default: "white",
+    paper: "#0A0E2E",
   },
   text: {
     primary: "#FFFFFF",

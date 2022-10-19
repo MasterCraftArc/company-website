@@ -11,6 +11,8 @@
     "@emotion/react": "^11.9.0",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/poppins": "^4.5.10",
+    "@fontsource/teko": "^4.5.9",
     "@headlessui/react": "^1.5.0",
     "@mui/icons-material": "^5.8.0",
     "@mui/material": "^5.8.0",

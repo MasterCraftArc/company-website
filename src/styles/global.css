@@ -89,7 +89,6 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: "Poppins";
 }
 
 html,
@@ -212,6 +211,9 @@ body {
 .homeHero {
   background: transparent;
   margin-bottom: "25%";
+}
+.home-hero {
+  position: inherit !important;
 }
 
 .hero {

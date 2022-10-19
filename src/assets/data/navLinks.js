@@ -1,25 +1,7 @@
 export const namedLinks = {
-  product: {
+  home: {
     url: "/",
-    text: "Product",
-  },
-  slack: {
-    url: "/slack",
-    text: "Slack",
-  },
-  installNow: {
-    url: "/install",
-    text: "Install Now",
-  },
-  enterpriseSupport: {
-    text: "Contact an Expert",
-    url: "/enterprise-support",
-  },
-  zarfExamples: {
-    text: "Examples",
-    target: "_blank",
-    rel: "noopener noreferrer",
-    url: "https://docs.zarf.dev/examples/",
+    text: "Home",
   },
   zarfDocs: {
     target: "_self",
@@ -31,42 +13,30 @@ export const namedLinks = {
     text: "Github",
     target: "_blank",
     rel: "noopener noreferrer",
-    url: "https://github.com/defenseunicorns/zarf",
+    url: "https://github.com/defenseunicorns",
   },
-  startContributing: {
+  zarf: {
+    text: "Zarf",
     target: "_blank",
     rel: "noopener noreferrer",
-    text: "view contributor guide",
-    url: "https://docs.zarf.dev/docs/developer-guide/contributor-guide",
+    url: "https://zarf.dev",
   },
-  defenseUnicorns: {
+  careers: {
+    text: "Careers",
     target: "_blank",
-    text: "Defense Unicorns",
     rel: "noopener noreferrer",
-    url: "https://defenseunicorns.com",
+    url: "https://defense-unicorns.rippling-ats.com/",
   },
-  gettingStarted: {
-    target: "_blank",
-    text: "Getting Started",
+  contact: {
+    text: "Contact",
     rel: "noopener noreferrer",
-    url: "https://docs.zarf.dev/docs/getting-started",
-  },
-  userGuide: {
-    target: "_blank",
-    text: "User Guide",
-    rel: "noopener noreferrer",
-    url: "https://docs.zarf.dev/docs/user-guide/the-zarf-cli/the-zarf-cli",
-  },
-  homebrew: {
-    text: "Brew",
-    target: "_blank",
-    url: "https://brew.sh/",
-    rel: "noopener noreferrer",
+    url: "/contact",
   },
 };
 
 export const navLinks = [
-  namedLinks.product,
-  namedLinks.zarfExamples,
-  namedLinks.zarfDocs,
+  namedLinks.home,
+  namedLinks.zarf,
+  namedLinks.careers,
+  namedLinks.contact,
 ];
