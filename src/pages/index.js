@@ -1,19 +1,30 @@
 import * as React from "react";
-import NavBar from "../components/Rebuild/NavBar/NavBar";
-import SiteHelmet from "../components/SiteHelmet";
+import "../styles/blobz.min.css";
+import Footer from "../components/footer";
 import HomeHero from "../components/home/hero";
+import SiteHelmet from "../components/SiteHelmet";
+import WhatWeDo from "../components/home/whatWeDo";
+import NavBar from "../components/Rebuild/NavBar/NavBar";
+import TrainForBattle from "../components/home/trainForBattle";
+const pageStyles = {
+  color: "#232129",
+  fontFamily: "Poppins, Roboto, sans-serif, serif",
+};
 
 // markup
 const Home = () => {
   return (
-    <>
+    <div style={pageStyles}>
       <SiteHelmet
         route="Home"
         description="Become a DevSecOps Hero with Defense Unicorns"
       />
       <NavBar pathname={"/"} />
       <HomeHero />
-    </>
+      <TrainForBattle />
+      <WhatWeDo />
+      <Footer />
+    </div>
   );
 };
 
