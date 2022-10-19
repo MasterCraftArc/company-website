@@ -9,27 +9,29 @@ import { navLinks } from "../../../assets/data/navLinks";
 import { hideSmall, hideLarge } from "../../../utilities/display";
 import { createTabPropsFromNavLink } from "../../../utilities/navLink";
 import { AppBar, Box, IconButton, Tabs, Toolbar, styled } from "@mui/material";
+import palette from "../../../theme/palette";
 
 const TRANSPARENT_ELEVATION = 0;
-const TRANSITION_HEIGHT = 65;
+const TRANSITION_HEIGHT = 70;
 const DEFAULT_ELEVATION = 1;
 
-const ZarfAppBarColor = {
-  SCROLLED: "inherit",
-  TOP: "transparent",
+const AppBarOpacity = {
+  SCROLLED:
+    "linear-gradient(0deg, #163E7B 0%, #1A3873 34%, #252960 75.99%, #2A2153 99.99%)",
+  TOP: "linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,0))",
 };
 
 const StyledAppBar = styled(AppBar)`
   width: 100vw;
   height: 6rem;
   margin: 0;
-  transition: all 0.5s ease-in;
+  transition: background 1s ease-in-out;
 `;
 
 function NavBar({ pathname }) {
   const [showDrawer, setShowDrawer] = useState(false);
   const [navElevation, setNavElevation] = useState(TRANSPARENT_ELEVATION);
-  const [navColor, setNavColor] = useState(ZarfAppBarColor.TOP);
+  const [navColor, setNavColor] = useState(AppBarOpacity.TOP);
 
   const toggleDrawer = useCallback(
     (state) => () => setShowDrawer(state),
@@ -39,10 +41,10 @@ function NavBar({ pathname }) {
   onScroll(
     useCallback(() => {
       if (window.scrollY <= TRANSITION_HEIGHT) {
-        setNavColor(ZarfAppBarColor.TOP);
+        setNavColor(AppBarOpacity.TOP);
         setNavElevation(TRANSPARENT_ELEVATION);
       } else {
-        setNavColor(ZarfAppBarColor.SCROLLED);
+        setNavColor(AppBarOpacity.SCROLLED);
         setNavElevation(DEFAULT_ELEVATION);
       }
     }, [setNavColor])
@@ -50,14 +52,17 @@ function NavBar({ pathname }) {
 
   return (
     <>
-      <StyledAppBar elevation={navElevation} color={navColor} position="sticky">
+      <StyledAppBar
+        elevation={navElevation}
+        sx={{ background: navColor }}
+        position="sticky"
+      >
         <Toolbar sx={{ flexGrow: 1, justifyContent: "space-between" }}>
           {/* Mobile between xs and medium */}
           <IconButton
             size="large"
             aria-label="menu"
-            color="inherit"
-            sx={hideLarge}
+            sx={{ ...hideLarge, color: palette.text.primary }}
             onClick={toggleDrawer(true)}
           >
             <MenuIcon />
@@ -85,7 +90,13 @@ function NavBar({ pathname }) {
         drawerProps={{
           anchor: "left",
           variant: "temporary",
-          PaperProps: { sx: { width: { xs: "100%", sm: "65%" } } },
+          PaperProps: {
+            sx: {
+              width: { xs: "100%", sm: "65%" },
+              background:
+                "linear-gradient(0deg, #163E7B 0%, #1A3873 34%, #252960 75.99%, #2A2153 99.99%)",
+            },
+          },
           open: showDrawer,
         }}
         closeDrawer={toggleDrawer(false)}
