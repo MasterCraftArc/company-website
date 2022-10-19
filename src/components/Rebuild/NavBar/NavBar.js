@@ -14,17 +14,19 @@ import palette from "../../../theme/palette";
 const TRANSPARENT_ELEVATION = 0;
 const TRANSITION_HEIGHT = 70;
 const DEFAULT_ELEVATION = 1;
+const BACKGROUND_GRADIENT =
+  "linear-gradient(0deg, #163E7B 0%, #1A3873 34%, #252960 75.99%, #2A2153 99.99%)";
 
 const AppBarOpacity = {
-  SCROLLED:
-    "linear-gradient(0deg, #163E7B 0%, #1A3873 34%, #252960 75.99%, #2A2153 99.99%)",
-  TOP: "linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,0))",
+  SCROLLED: BACKGROUND_GRADIENT,
+  TOP: "",
 };
 
 const StyledAppBar = styled(AppBar)`
   width: 100vw;
   height: 6rem;
   margin: 0;
+  background-color: transparent;
   transition: background 1s ease-in-out;
 `;
 
@@ -93,8 +95,7 @@ function NavBar({ pathname }) {
           PaperProps: {
             sx: {
               width: { xs: "100%", sm: "65%" },
-              background:
-                "linear-gradient(0deg, #163E7B 0%, #1A3873 34%, #252960 75.99%, #2A2153 99.99%)",
+              background: BACKGROUND_GRADIENT,
             },
           },
           open: showDrawer,
