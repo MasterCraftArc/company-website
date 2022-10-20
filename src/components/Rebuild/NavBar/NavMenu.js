@@ -8,20 +8,19 @@ import NavTab from "./NavTabs";
 import palette from "../../../theme/palette";
 
 export default function NavTabMenu({ tabItem }) {
-  console.log(tabItem);
   return (
-    <PopupState variant="popover" popupId="demo-popup-menu">
+    <PopupState variant="popover" popupId={`${tabItem.text}-popup-menu`}>
       {(popupState) => (
         <React.Fragment>
           <Tab
             {...bindTrigger(popupState)}
+            onMouseOver={popupState.open}
             label={tabItem.text}
             sx={{ color: palette.text.primary }}
           />
-          <Menu {...bindMenu(popupState)}>
+          <Menu {...bindMenu(popupState)} sx={{ textAlign: "left" }}>
             {tabItem.menuItems.map((l, i) => (
               <MenuItem
-                component={NavTab}
                 key={`${tabItem.text}-menu-item-${i}`}
                 onClick={popupState.close}
                 {...createTabPropsFromNavLink(l, i)}
