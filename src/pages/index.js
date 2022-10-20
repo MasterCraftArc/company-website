@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../styles/blobz.min.css";
-import Footer from "../components/footer";
+import Footer from "../components/Rebuild/footer";
 import SiteHelmet from "../components/SiteHelmet";
 import WhatWeDo from "../components/home/whatWeDo";
 import HomeHero from "../components/Rebuild/HomeHero";

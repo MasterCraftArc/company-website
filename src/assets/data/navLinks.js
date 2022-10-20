@@ -68,3 +68,12 @@ export const navLinks = [
   namedLinks.careers,
   namedLinks.contact,
 ];
+
+export const footerLinks = [
+  namedLinks.home,
+  namedLinks.zarf,
+  namedLinks.blog,
+  namedLinks.podcast,
+  namedLinks.careers,
+  namedLinks.contact,
+];

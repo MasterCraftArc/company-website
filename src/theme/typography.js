@@ -50,7 +50,7 @@ const typography = {
   },
   subtitle2: {
     fontFamily: fonts.poppins,
-    fontSize: "1rem",
+    fontSize: 16,
     fontWeight: fontWeights.medium,
   },
   body1: {
