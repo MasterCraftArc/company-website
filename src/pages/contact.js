@@ -1,12 +1,12 @@
-import * as React from "react";
-import SiteHelmet from "../components/SiteHelmet";
-import Header from "../components/header";
-import { navigate } from "gatsby";
 import axios from "axios";
+import * as React from "react";
+import { navigate } from "gatsby";
 import * as qs from "query-string";
-import StyledBackgroundSection from "../components/contactBg";
 import Button from "../components/button";
 import Footer from "../components/footer";
+import SiteHelmet from "../components/SiteHelmet";
+import NavBar from "../components/Rebuild/NavBar/NavBar";
+import StyledBackgroundSection from "../components/contactBg";
 
 const textAreaStyle = {
   height: "200px",
@@ -49,7 +49,7 @@ class Contact extends React.Component {
       <>
         <StyledBackgroundSection className="min-h-screen">
           <SiteHelmet route="Contact" />
-          <Header />
+          <NavBar pathname={"/contact"} />
           <main className="contact w-full flex items-center justify-center">
             <section className="contactCard rounded-2xl w-10/12 sm:w-1/2 lg:w-2/6 mt-10 opacity-90">
               <h1 className="text-center font-black text-5xl text-white pt-12 pb-6">
