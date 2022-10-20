@@ -118,7 +118,7 @@ function Footer() {
         </Box>
       </Box>
       <Divider
-        variant="middle"
+        variant="fullWidth"
         sx={{
           marginTop: { xs: "32px", large: "64px" },
           borderColor: "text.primary",
