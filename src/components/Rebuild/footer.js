@@ -32,12 +32,13 @@ const FooterLink = styled(Link)`
 
 const FooterText = styled(Typography)`
   display: flex;
-  text-align: left;
   color: ${palette.text.primary};
 `;
 
 const footerSx = {
-  padding: `9.625rem 7.0625rem`,
+  justifyContent: { xs: "center", lg: "inherit" },
+  padding: { xs: "4rem", lg: `9.625rem 7.0625rem` },
+  height: { xs: "auto", lg: "41.1875rem" },
 };
 
 function Footer() {
@@ -48,34 +49,39 @@ function Footer() {
         sx={{
           width: "100%",
           display: "flex",
-          alignItems: "end",
+          alignItems: { xs: "center", lg: "end" },
+          flexDirection: { xs: "column", lg: "row" },
+          gap: { xs: "32px", lg: "0" },
         }}
       >
         <Box
           sx={{
             flex: 1,
             display: "flex",
-            height: "110px",
-            gap: "167px",
+            flexDirection: { xs: "column", lg: "row" },
+            alignItems: { xs: "center", lg: "inherit" },
+            height: { xs: "auto", lg: "110px" },
+            gap: { xs: "2rem", lg: "10.4375rem" },
           }}
         >
-          <NavLogo height="100px" width="225.3px" />
+          <Box alignSelf={"start"}>
+            <NavLogo height="100px" width="225.3px" />
+          </Box>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
+              columnGap: { xs: "32px", lg: "12rem" },
               flexWrap: "wrap",
               height: "95px",
-              justifyContent: "space-between",
-              alignSelf: "end",
+              justifyContent: "space-around",
+              alignContent: { xs: "center", lg: "inherit" },
             }}
           >
             {footerLinks.map((l, i) => (
               <FooterLink
                 key={`footer-link-${l.text}-${i}`}
                 variant="subtitle2"
-                marginRight={"2rem"}
-                sx={{ width: "10rem" }}
                 {...createTabPropsFromNavLink(l)}
               >
                 {l.text}
@@ -87,19 +93,24 @@ function Footer() {
           sx={{
             flex: 1,
             display: "flex",
-            // height: "95px",
             flexDirection: "column",
-            alignItems: "end",
+            alignItems: { xs: "center", lg: "end" },
           }}
         >
-          <Box>
-            <FooterText variant="subtitle2">555 Pikes Place Aves</FooterText>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "center", lg: "start" },
+            }}
+          >
+            <FooterText variant="subtitle2">555 Pikes Place Ave</FooterText>
             <FooterText variant="subtitle2">Colorado Springs,</FooterText>
             <FooterText variant="subtitle2">CO, 80903</FooterText>
             <FooterLink
               href={"mailto:hello@defenseunicorns.com"}
               variant="subtitle2"
-              marginTop={"2rem"}
+              marginTop={"1rem"}
             >
               hello@defenseunicorns.com
             </FooterLink>
@@ -108,7 +119,10 @@ function Footer() {
       </Box>
       <Divider
         variant="middle"
-        sx={{ marginTop: "60px", borderColor: "text.primary" }}
+        sx={{
+          marginTop: { xs: "32px", large: "64px" },
+          borderColor: "text.primary",
+        }}
       ></Divider>
     </FooterWrapper>
   );
