@@ -4,8 +4,6 @@ import MenuItem from "@mui/material/MenuItem";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 import { createTabPropsFromNavLink } from "../../../utilities/navLink";
 import { Tab } from "@mui/material";
-import NavTab from "./NavTabs";
-import palette from "../../../theme/palette";
 
 export default function NavTabMenu({ tabItem }) {
   return (
@@ -16,7 +14,7 @@ export default function NavTabMenu({ tabItem }) {
             {...bindTrigger(popupState)}
             onMouseOver={popupState.open}
             label={tabItem.text}
-            sx={{ color: palette.text.primary }}
+            sx={{ color: "text.secondary", opacity: "unset" }}
           />
           <Menu {...bindMenu(popupState)} sx={{ textAlign: "left" }}>
             {tabItem.menuItems.map((l, i) => (

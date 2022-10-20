@@ -80,7 +80,13 @@ function NavBar({ pathname }) {
               alignItems: "center",
             }}
           >
-            <Tabs value={pathname} aria-label="Navigation Tabs" sx={hideSmall}>
+            <Tabs
+              value={pathname}
+              aria-label="Navigation Tabs"
+              textColor={"secondary"}
+              indicatorColor={"secondary"}
+              sx={hideSmall}
+            >
               {navLinks.map((l, i) =>
                 l.menuItems ? (
                   <NavTabMenu key={i} tabItem={l} />

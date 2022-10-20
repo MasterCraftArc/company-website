@@ -24,11 +24,6 @@ const components = {
     },
   },
   MuiButton: {
-    styleOverrides: {
-      root: {
-        borderRadius: "24px",
-      },
-    },
     variants: [
       {
         props: { size: "large" },

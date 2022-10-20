@@ -12,38 +12,33 @@ const typography = {
   fontFamily: [fonts.poppins, fonts.teko].join(","),
   h1: {
     fontFamily: fonts.teko,
-    fontSize: 96,
+    fontSize: "10.75rem",
     letterSpacing: -1.5,
     fontWeight: fontWeights.regular,
   },
   h2: {
     fontFamily: fonts.teko,
-    fontSize: 64,
-    letterSpacing: -0.5,
+    fontSize: "3.75rem",
     fontWeight: fontWeights.regular,
   },
   h3: {
     fontFamily: fonts.teko,
-    fontSize: 48,
-    letterSpacing: -0.25,
-    fontWeight: fontWeights.regular,
+    fontSize: "3rem",
+    fontWeight: fontWeights.medium,
   },
   h4: {
-    fontFamily: fonts.teko,
-    fontSize: 34,
-    letterSpacing: 0,
+    fontFamily: fonts.poppins,
+    fontSize: "2rem",
     fontWeight: fontWeights.regular,
   },
   h5: {
-    fontFamily: fonts.teko,
-    fontSize: 24,
-    letterSpacing: 0.15,
+    fontFamily: fonts.poppins,
+    fontSize: "1.75rem",
     fontWeight: fontWeights.regular,
   },
   h6: {
-    fontFamily: fonts.teko,
-    fontSize: 20,
-    letterSpacing: 0,
+    fontFamily: fonts.poppins,
+    fontSize: "1.5rem",
     fontWeight: fontWeights.regular,
   },
   subtitle1: {
@@ -55,8 +50,7 @@ const typography = {
   },
   subtitle2: {
     fontFamily: fonts.poppins,
-    fontSize: 16,
-    letterSpacing: 0.1,
+    fontSize: "1rem",
     fontWeight: fontWeights.medium,
   },
   body1: {
