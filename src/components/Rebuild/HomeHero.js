@@ -60,11 +60,14 @@ const HomeHero = () => {
       }}
     >
       <Box flexDirection={"column"} display="flex" width="100%" gap={".5rem"}>
-        <Typography variant="h4" color="text.primary">
+        <Typography
+          sx={{ typography: { xs: "h5", md: "h4" } }}
+          color="text.primary"
+        >
           Secure Software Delivery for
         </Typography>
         <Typography
-          variant="h1"
+          sx={{ typography: { xs: "h2", md: "h1" } }}
           color="text.primary"
           component={motion.h1}
           variants={sentenceAnim}
@@ -80,7 +83,6 @@ const HomeHero = () => {
             className="block sm:inline-block"
           >
             <ReactRotatingText
-              cursor={false}
               items={tagLineItems}
               pause={pause}
               emptyPause={700}
@@ -92,12 +94,12 @@ const HomeHero = () => {
         </Typography>
       </Box>
       <Typography
-        variant="h5"
         color="text.secondary"
         sx={{
           borderLeft: `solid 4px ${palette.primary.main}`,
           paddingLeft: ".5rem",
-          width: { xs: "auto", md: "50%" },
+          width: { xs: "auto", md: "70%" },
+          typography: { xs: "subtitle1", md: "h5" },
         }}
       >
         We are a mission-focused, veteran-owned company that makes software
@@ -108,7 +110,7 @@ const HomeHero = () => {
         component={GatsbyLink}
         to="/contact"
         variant="contained"
-        sx={{ width: "149px" }}
+        sx={{ width: "149px", height: "42px" }}
       >
         Get in touch
       </Button>

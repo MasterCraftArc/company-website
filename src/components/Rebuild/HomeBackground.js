@@ -33,6 +33,7 @@ const BackgroundSection = ({ className, children }) => {
         position: "absolute",
         top: 0,
         left: 0,
+        zIndex: -1,
       }}
     >
       {children}

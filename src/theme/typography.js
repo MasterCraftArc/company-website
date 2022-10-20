@@ -18,15 +18,13 @@ const typography = {
   },
   h2: {
     fontFamily: fonts.teko,
-    fontSize: 64,
-    letterSpacing: -0.5,
+    fontSize: "3.75rem",
     fontWeight: fontWeights.regular,
   },
   h3: {
     fontFamily: fonts.teko,
-    fontSize: 48,
-    letterSpacing: -0.25,
-    fontWeight: fontWeights.regular,
+    fontSize: "3rem",
+    fontWeight: fontWeights.medium,
   },
   h4: {
     fontFamily: fonts.poppins,
@@ -35,13 +33,12 @@ const typography = {
   },
   h5: {
     fontFamily: fonts.poppins,
-    fontSize: "1.5rem",
+    fontSize: "1.75rem",
     fontWeight: fontWeights.regular,
   },
   h6: {
     fontFamily: fonts.poppins,
-    fontSize: 20,
-    letterSpacing: 0,
+    fontSize: "1.5rem",
     fontWeight: fontWeights.regular,
   },
   subtitle1: {
@@ -53,8 +50,7 @@ const typography = {
   },
   subtitle2: {
     fontFamily: fonts.poppins,
-    fontSize: 16,
-    letterSpacing: 0.1,
+    fontSize: "1rem",
     fontWeight: fontWeights.medium,
   },
   body1: {
