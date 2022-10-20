@@ -36,9 +36,8 @@ const FooterText = styled(Typography)`
 `;
 
 const footerSx = {
-  justifyContent: { xs: "center", lg: "inherit" },
-  padding: { xs: "4rem", lg: `9.625rem 7.0625rem` },
-  height: { xs: "auto", lg: "41.1875rem" },
+  justifyContent: { xs: "center", md: "inherit" },
+  padding: { xs: "4rem", md: "5rem", lg: `7rem` },
 };
 
 function Footer() {
@@ -49,19 +48,19 @@ function Footer() {
         sx={{
           width: "100%",
           display: "flex",
-          alignItems: { xs: "center", lg: "end" },
-          flexDirection: { xs: "column", lg: "row" },
-          gap: { xs: "32px", lg: "0" },
+          alignItems: { xs: "center", md: "end" },
+          flexDirection: { xs: "column", md: "row" },
+          gap: { xs: "2rem", md: "0" },
         }}
       >
         <Box
           sx={{
             flex: 1,
             display: "flex",
-            flexDirection: { xs: "column", lg: "row" },
-            alignItems: { xs: "center", lg: "inherit" },
-            height: { xs: "auto", lg: "110px" },
-            gap: { xs: "2rem", lg: "10.4375rem" },
+            flexDirection: { xs: "column", md: "row" },
+            alignItems: { xs: "center", md: "inherit" },
+            height: { xs: "auto", md: "110px" },
+            gap: { xs: "3rem", md: "10.4375rem" },
           }}
         >
           <Box alignSelf={"start"}>
@@ -71,11 +70,11 @@ function Footer() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              columnGap: { xs: "32px", lg: "12rem" },
+              columnGap: { xs: "2rem", MozBoxDirection: "12rem" },
               flexWrap: "wrap",
               height: "95px",
               justifyContent: "space-around",
-              alignContent: { xs: "center", lg: "inherit" },
+              alignContent: { xs: "center", md: "inherit" },
             }}
           >
             {footerLinks.map((l, i) => (
@@ -94,14 +93,14 @@ function Footer() {
             flex: 1,
             display: "flex",
             flexDirection: "column",
-            alignItems: { xs: "center", lg: "end" },
+            alignItems: { xs: "center", md: "end" },
           }}
         >
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: { xs: "center", lg: "start" },
+              alignItems: { xs: "center", md: "start" },
             }}
           >
             <FooterText variant="subtitle2">555 Pikes Place Ave</FooterText>
@@ -120,10 +119,11 @@ function Footer() {
       <Divider
         variant="fullWidth"
         sx={{
-          marginTop: { xs: "32px", large: "64px" },
+          marginTop: { xs: "2rem", md: "4rem" },
           borderColor: "text.primary",
         }}
       ></Divider>
+      <Box component="section"></Box>
     </FooterWrapper>
   );
 }
