@@ -100,8 +100,8 @@ const HomeHero = () => {
           width: { xs: "auto", md: "50%" },
         }}
       >
-        We accelerate the success of mission-focused organizations through
-        secure continuous software delivery.
+        We are a mission-focused, veteran-owned company that makes software
+        delivery easy for the most secure systems in the world.
       </Typography>
 
       <Button
