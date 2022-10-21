@@ -60,9 +60,19 @@ const components = {
   MuiTab: {
     styleOverrides: {
       root: {
-        ...typography.subtitle1,
+        ...typography.body1,
         ":hover": {
           backgroundColor: palette.action?.hover,
+        },
+      },
+    },
+  },
+  MuiMenuItem: {
+    styleOverrides: {
+      root: {
+        ...typography.body2,
+        ":hover": {
+          color: palette.secondary.main,
         },
       },
     },
