@@ -3,7 +3,7 @@ const fontWeights = {
   regular: 400,
 };
 
-const fonts = {
+export const fonts = {
   poppins: "Poppins",
   teko: "Teko",
 };
