@@ -15,12 +15,13 @@ function InternalNavTab(props) {
       {...props}
       to={props.href}
       partiallyActive={true}
+      sx={{ typography: "body1" }}
     />
   );
 }
 
 function ExternalNavTab(props) {
-  return <Tab {...props} />;
+  return <Tab {...props} sx={{ typography: "body1" }} />;
 }
 
 function NavTab(props) {
