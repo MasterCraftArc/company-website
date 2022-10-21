@@ -27,8 +27,8 @@ const StyledDrawerTab = styled(TabUnstyled)`
   }
 
   &.${tabUnstyledClasses.selected} {
-    border-bottom: 2px solid ${palette.primary?.main};
-    color: ${palette.primary?.main} !important;
+    border-bottom: 2px solid ${palette.secondary.main};
+    color: ${palette.secondary.main} !important;
   }
 `;
 
