@@ -2,6 +2,8 @@ import React from "react";
 import CardRow from "./CardRow";
 import { Box, Typography } from "@mui/material";
 import { zarfCapabilityCards } from "../../assets/data/cardData";
+import { namedLinks } from "../../assets/data/navLinks";
+import ButtonLink from "./ButtonLink";
 
 function ZarfCapabilities() {
   return (
@@ -28,6 +30,12 @@ function ZarfCapabilities() {
         Deploy Anything - Anywhere
       </Typography>
       <CardRow cards={zarfCapabilityCards} />
+      <ButtonLink
+        variant="outlined"
+        color="secondary"
+        sx={{ mx: "auto", mt: "60px" }}
+        {...namedLinks.zarfInstall}
+      />
     </Box>
   );
 }
