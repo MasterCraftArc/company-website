@@ -1,15 +1,4 @@
 import React from "react";
-import { Box } from "@mui/system";
-import styled from "@emotion/styled";
-import { Divider, IconButton, Link, Typography } from "@mui/material";
-import NavLogo from "./NavBar/NavLogo";
-import { footerLinks, namedLinks } from "../../assets/data/navLinks";
-import {
-  createTabPropsFromNavLink,
-  isLocalLink,
-} from "../../utilities/navLink";
-import palette from "../../theme/palette";
-import { Link as GatsbyLink } from "gatsby";
 import {
   GitHub,
   LinkedIn,
@@ -17,6 +6,17 @@ import {
   Twitter,
   YouTube,
 } from "@mui/icons-material";
+import {
+  createTabPropsFromNavLink,
+  isLocalLink,
+} from "../../utilities/navLink";
+import { Box } from "@mui/system";
+import styled from "@emotion/styled";
+import NavLogo from "./NavBar/NavLogo";
+import palette from "../../theme/palette";
+import { Link as GatsbyLink } from "gatsby";
+import { footerLinks, namedLinks } from "../../assets/data/navLinks";
+import { Divider, IconButton, Link, Typography } from "@mui/material";
 
 const FooterWrapper = styled(Box)`
   height: auto;
