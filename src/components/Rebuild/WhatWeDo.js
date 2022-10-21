@@ -41,10 +41,10 @@ function WhatWeDo() {
         </Typography>
         <Typography
           sx={{
-            typography: "h3",
+            typography: { xs: "h3", lg: "h2" },
             fontFamily: fonts.teko,
             color: "secondary.main",
-            maxWidth: { md: "400px" },
+            maxWidth: { md: "450px" },
           }}
         >
           Develop Mission Focused Open Source Products
