@@ -1,13 +1,13 @@
 import * as React from "react";
 import "../styles/blobz.min.css";
+import palette from "../theme/palette";
+import { Paper, styled } from "@mui/material";
 import Footer from "../components/Rebuild/footer";
 import SiteHelmet from "../components/SiteHelmet";
 import WhatWeDo from "../components/Rebuild/WhatWeDo";
 import HomeHero from "../components/Rebuild/HomeHero";
 import NavBar from "../components/Rebuild/NavBar/NavBar";
-import TrainForBattle from "../components/home/trainForBattle";
-import palette from "../theme/palette";
-import { Paper, styled } from "@mui/material";
+import ZarfCapabilities from "../components/Rebuild/ZarfCapabilities";
 import OpenSourceStats from "../components/Rebuild/OpenSourceStats/StatsCard";
 
 const pageStyles = {
@@ -38,8 +38,8 @@ const Home = () => {
       <HomePaper elevation={0} square>
         <WhatWeDo />
         <OpenSourceStats />
+        <ZarfCapabilities />
       </HomePaper>
-      <TrainForBattle />
       <Footer />
     </div>
   );

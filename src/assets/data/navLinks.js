@@ -39,6 +39,12 @@ export const namedLinks = {
     rel: "noopener noreferrer",
     url: "https://zarf.dev",
   },
+  zarfInstall: {
+    text: "Try Zarf Now",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    url: "https://zarf.dev/install",
+  },
   careers: {
     text: "Careers",
     target: "_blank",

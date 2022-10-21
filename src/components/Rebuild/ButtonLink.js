@@ -38,18 +38,18 @@ function ExternalButtonLink(props) {
   return (
     <>
       <Button
-        variant="contained"
+        variant={props.variant || "contained"}
         size="large"
         href={props.url}
         target={props.target}
         color={props.color}
         rel={props.rel}
-        sx={{ ...hideSmall, width: "fit-content" }}
+        sx={{ ...hideSmall, width: "fit-content", ...props.sx }}
       >
         {props.text}
       </Button>
       <Button
-        variant="contained"
+        variant={props.variant || "contained"}
         size="medium"
         href={props.url}
         target={props.target}
@@ -58,6 +58,7 @@ function ExternalButtonLink(props) {
         sx={{
           ...hideLarge,
           width: "fit-content",
+          ...props.sx,
         }}
       >
         {props.text}

@@ -10,71 +10,65 @@ export const fonts = {
 
 const typography = {
   fontFamily: [fonts.poppins, fonts.teko].join(","),
-  h1: {
-    fontFamily: fonts.teko,
-    fontSize: 172,
-    letterSpacing: -1.5,
-    fontWeight: fontWeights.regular,
-  },
-  h2: {
-    fontFamily: fonts.teko,
-    fontSize: 60,
-    fontWeight: fontWeights.regular,
-  },
-  h3: {
-    fontFamily: fonts.teko,
-    fontSize: 48,
-    fontWeight: fontWeights.medium,
-  },
-  h4: {
-    fontFamily: fonts.poppins,
-    fontSize: 32,
-    fontWeight: fontWeights.regular,
-  },
-  h5: {
-    fontFamily: fonts.poppins,
-    fontSize: 28,
-    fontWeight: fontWeights.regular,
-  },
-  h6: {
-    fontFamily: fonts.poppins,
-    fontSize: 20,
-    fontWeight: fontWeights.regular,
-  },
-  subtitle1: {
-    fontFamily: fonts.poppins,
-    fontStyle: "normal",
-    fontSize: 20,
-    letterSpacing: 0.15,
-    fontWeight: fontWeights.medium,
-  },
-  subtitle2: {
-    fontFamily: fonts.poppins,
-    fontSize: 16,
-    fontWeight: fontWeights.medium,
-  },
   body1: {
     fontFamily: fonts.poppins,
     fontSize: 18,
-    letterSpacing: 0.15,
     fontWeight: fontWeights.regular,
   },
   body2: {
     fontFamily: fonts.poppins,
     fontSize: 16,
-    letterSpacing: 0.15,
     fontWeight: fontWeights.regular,
   },
-  caption: {
+  subtitle1: {
+    fontSize: 18,
     fontFamily: fonts.poppins,
+    fontWeight: fontWeights.medium,
+  },
+  subtitle2: {
+    fontSize: 16,
+    fontFamily: fonts.poppins,
+    fontWeight: fontWeights.medium,
+  },
+  caption: {
     fontSize: 12,
-    letterSpacing: 0.4,
+    fontFamily: fonts.poppins,
     fontWeight: fontWeights.regular,
   },
   overline: {
-    fontFamily: fonts.poppins,
     fontSize: 12,
-    letterSpacing: 1,
+    fontFamily: fonts.poppins,
+    fontWeight: fontWeights.regular,
+  },
+  h1: {
+    fontSize: 96,
+    fontFamily: fonts.teko,
+    fontWeight: fontWeights.medium,
+  },
+  h2: {
+    fontSize: 48,
+    fontFamily: fonts.teko,
+    fontWeight: fontWeights.medium,
+  },
+  h3: {
+    fontSize: 36,
+    fontFamily: fonts.teko,
+    fontWeight: fontWeights.medium,
+  },
+  h4: {
+    fontSize: 24,
+    fontFamily: fonts.poppins,
+    fontWeight: fontWeights.medium,
+  },
+  h5: {
+    fontSize: 20,
+    fontFamily: fonts.poppins,
+    fontWeight: fontWeights.medium,
+  },
+  h6: {
+    fontSize: 20,
+    fontFamily: fonts.poppins,
+    fontWeight: fontWeights.regular,
   },
   button: {
     fontFamily: fonts.poppins,
