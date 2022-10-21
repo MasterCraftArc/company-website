@@ -3,6 +3,18 @@ export const namedLinks = {
     url: "/",
     text: "Home",
   },
+  contact: {
+    text: "Contact",
+    url: "/contact",
+  },
+  termsOfService: {
+    text: "Terms of Service",
+    url: "/termsofservice",
+  },
+  privacyPolicy: {
+    text: "Privacy Policy",
+    url: "/privacypolicy",
+  },
   zarfDocs: {
     target: "_self",
     text: "Docs",
@@ -33,11 +45,6 @@ export const namedLinks = {
     rel: "noopener noreferrer",
     url: "https://defense-unicorns.rippling-ats.com/",
   },
-  contact: {
-    text: "Contact",
-    rel: "noopener noreferrer",
-    url: "/contact",
-  },
   podcast: {
     text: "Podcast",
     target: "_blank",
@@ -55,6 +62,18 @@ export const namedLinks = {
     target: "_blank",
     rel: "noopener noreferrer",
     url: "https://medium.com/@Defense_Unicorns",
+  },
+  twitter: {
+    text: "Twitter",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    url: "https://mobile.twitter.com/defenseunicorns",
+  },
+  youtube: {
+    text: "Youtube",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    url: "https://www.youtube.com/channel/UCWCPckStyw2R0vC4zG68LIg",
   },
 };
 
