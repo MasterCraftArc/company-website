@@ -3,10 +3,10 @@ import { Link } from "gatsby";
 import { Box } from "@mui/material";
 import NavBarLogo from "../../../assets/svg/navbar-logo.svg";
 
-function NavLogo() {
+function NavLogo({ height, width }) {
   return (
     <Link to="/">
-      <Box sx={{ width: "9.025rem", height: "4rem" }}>
+      <Box sx={{ width: width || "9.025rem", height: height || "4rem" }}>
         <NavBarLogo width="inherit" height="inherit" />
       </Box>
     </Link>

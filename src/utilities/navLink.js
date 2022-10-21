@@ -6,6 +6,7 @@ export const createTabPropsFromNavLink = (navLink, index) => {
     target: navLink.target,
     id: `${navLink.text}-${index || ""}`,
     rel: navLink.rel,
+    title: navLink.text,
   };
 };
 
