@@ -155,6 +155,7 @@ function Footer() {
           flexDirection: { xs: "column", md: "row" },
           alignItems: { xs: "center", md: "center" },
           justifyContent: { xs: "center", md: "end" },
+          gap: "4px",
         }}
       >
         <Typography variant="body1" sx={{ color: "text.primary" }}>
