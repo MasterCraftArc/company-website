@@ -1,11 +1,10 @@
 import React from "react";
-import ReactRotatingText from "react-rotating-text";
-import { motion } from "framer-motion";
-import BackgroundSection from "./HomeBackground";
-import { Box, Button, Typography } from "@mui/material";
-import palette from "../../theme/palette";
-import { fontWeights } from "../../theme/typography";
 import GatsbyLink from "gatsby-link";
+import { motion } from "framer-motion";
+import palette from "../../theme/palette";
+import ReactRotatingText from "react-rotating-text";
+import { fontWeights } from "../../theme/typography";
+import { Box, Button, Typography } from "@mui/material";
 import HomeHeroBg from "../../assets/png/home-hero-bg.png";
 
 const sentenceAnim = {
@@ -109,12 +108,12 @@ const HomeHero = () => {
         </Typography>
       </Box>
       <Typography
-        color="text.primary"
         variant="h6"
         sx={{
           typography: { xs: "body2", md: "h6" },
+          fontSize: { md: 26 },
           paddingLeft: ".5rem",
-          width: { xs: "auto", md: "70%" },
+          width: { xs: "auto", md: "75%" },
           borderLeft: `solid 4px ${palette.primary.main}`,
         }}
       >

@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../styles/blobz.min.css";
 import palette from "../theme/palette";
-import { Box, Paper, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import Footer from "../components/Rebuild/footer";
 import SiteHelmet from "../components/SiteHelmet";
 import WhatWeDo from "../components/Rebuild/WhatWeDo";
