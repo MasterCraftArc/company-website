@@ -33,13 +33,13 @@ function WhatWeDo() {
         <Typography
           component="h6"
           sx={{
-            color: "text.secondary",
             typography: { xs: "body1", md: "h6" },
           }}
         >
           WHAT WE DO
         </Typography>
         <Typography
+          component="h2"
           sx={{
             typography: { xs: "h3", lg: "h2" },
             fontFamily: fonts.teko,
@@ -52,7 +52,7 @@ function WhatWeDo() {
         <Typography
           sx={{
             color: "text.secondary",
-            maxWidth: { md: "500px" },
+            maxWidth: { md: "515px" },
             typography: { xs: "body2", md: "body1" },
           }}
         >
