@@ -5,6 +5,7 @@ import palette from "../../../theme/palette";
 import React from "react";
 import { Link as LocalLink } from "gatsby";
 import { TabUnstyled, TabsUnstyled, tabUnstyledClasses } from "@mui/base";
+import { fontWeights } from "../../../theme/typography";
 
 // interface DrawerTabProps extends TabUnstyledProps {
 //   target?: string;
@@ -48,10 +49,11 @@ export function LocalDrawerTab(props) {
     >
       <StyledDrawerTab {...props}>
         <Typography
-          variant="h5"
+          component="h5"
           color="inherit"
           width="100%"
           textAlign="center"
+          sx={{ typography: "h5", fontWeight: fontWeights.regular }}
         >
           {props.label}
         </Typography>
@@ -70,10 +72,11 @@ export function ExternalDrawerTab(props) {
     >
       <StyledDrawerTab {...props}>
         <Typography
-          variant="h5"
+          component="h5"
           color="inherit"
           width="100%"
           textAlign="center"
+          sx={{ typography: "h5", fontWeight: fontWeights.regular }}
         >
           {props.label}
         </Typography>
