@@ -98,8 +98,8 @@ function OpenSourceStats() {
             color="primary.contrastText"
             sx={{
               typography: { xs: "h5", md: "h6" },
+              textTransform: "uppercase",
               mb: "32px",
-              textTransform: "capitalize",
             }}
           >
             OPEN SOURCE PRODUCT

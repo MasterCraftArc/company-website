@@ -21,7 +21,7 @@ const StyledCard = styled(MuiCard)`
   display: flex;
   flex-direction: column;
   justify-items: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem;
 `;
 
 function getVariantStyle(variant) {
@@ -47,25 +47,32 @@ function Card(props) {
       <Box
         component="img"
         src={props.topImage}
-        width={"84px"}
-        height={"84px"}
+        width={"72px"}
+        height={"70px"}
         sx={{ mx: "auto" }}
       />
       <Typography
         variant="h4"
         fontFamily={fonts.poppins}
         textAlign={"center"}
-        marginTop={"14px"}
+        marginTop={"34px"}
+        color="primary.contrastText"
       >
         {props.headerFirstLine}
       </Typography>
-      <Typography variant="h4" fontFamily={fonts.poppins} textAlign={"center"}>
+      <Typography
+        variant="h4"
+        fontFamily={fonts.poppins}
+        textAlign={"center"}
+        color="primary.contrastText"
+      >
         {props.headerSecondLine}
       </Typography>
       <Typography
         variant="body2"
         marginTop={"12px"}
-        color={props.bodyColor || "text.primary"}
+        color={props.bodyColor || "primary.contrastText"}
+        fontSize="15px"
       >
         {props.body}
       </Typography>
