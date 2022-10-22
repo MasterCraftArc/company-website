@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import BackgroundSection from "./HomeBackground";
 import { Box, Button, Typography } from "@mui/material";
 import palette from "../../theme/palette";
+import { fontWeights } from "../../theme/typography";
 import GatsbyLink from "gatsby-link";
+import HomeHeroBg from "../../assets/png/home-hero-bg.png";
 
 const sentenceAnim = {
   hidden: { opacity: 1 },
@@ -47,28 +49,41 @@ const HomeHero = () => {
   return (
     <Box
       component="section"
+      backgroundColor="background.paper"
       sx={{
         // NavBar Height
-        marginTop: "-6rem",
-        display: "flex",
-        flexDirection: "column",
-        height: "100vh",
+        backgroundImage: `url(${HomeHeroBg})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: { xs: "70%", md: "center center" },
+        gap: "2rem",
         width: "100vw",
+        height: "100vh",
+        display: "flex",
+        marginTop: "-6rem",
+        flexDirection: "column",
         justifyContent: "center",
         paddingX: { xs: "2rem", md: "18.563rem" },
-        gap: "2rem",
       }}
     >
       <Box flexDirection={"column"} display="flex" width="100%" gap={".5rem"}>
         <Typography
-          sx={{ typography: { xs: "h5", md: "h4" } }}
-          color="text.primary"
+          variant="h4"
+          sx={{
+            fontSize: { xs: 20, md: 32 },
+            fontWeight: fontWeights.regular,
+          }}
+          color="primary.contrastText"
         >
           Secure Software Delivery for
         </Typography>
         <Typography
-          sx={{ typography: { xs: "h2", md: "h1" } }}
-          color="text.primary"
+          variant="h1"
+          sx={{
+            fontSize: { xs: 72, md: 172 },
+            fontWeight: fontWeights.regular,
+          }}
+          color="primary.contrastText"
           component={motion.h1}
           variants={sentenceAnim}
           initial="hidden"
@@ -94,27 +109,28 @@ const HomeHero = () => {
         </Typography>
       </Box>
       <Typography
-        color="text.secondary"
+        color="text.primary"
+        variant="h6"
         sx={{
-          borderLeft: `solid 4px ${palette.primary.main}`,
+          typography: { xs: "body2", md: "h6" },
           paddingLeft: ".5rem",
           width: { xs: "auto", md: "70%" },
-          typography: { xs: "subtitle1", md: "h5" },
+          borderLeft: `solid 4px ${palette.primary.main}`,
         }}
       >
         We are a mission-focused, veteran-owned company that makes software
         delivery easy for the most secure systems in the world.
       </Typography>
-
       <Button
-        component={GatsbyLink}
         to="/contact"
+        size="large"
         variant="contained"
-        sx={{ width: "149px", height: "42px" }}
+        component={GatsbyLink}
+        sx={{ width: 149, height: 42 }}
       >
         Get in touch
       </Button>
-      <BackgroundSection />
+      {/* <BackgroundSection /> */}
     </Box>
   );
 };

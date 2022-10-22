@@ -29,7 +29,6 @@ const components = {
         props: { size: "large" },
         style: {
           fontSize: 15,
-          letterSpacing: 0.46,
         },
       },
       {
@@ -61,6 +60,7 @@ const components = {
     styleOverrides: {
       root: {
         ...typography.body1,
+        color: palette.text.secondary,
         ":hover": {
           backgroundColor: palette.action?.hover,
         },
