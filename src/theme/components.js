@@ -29,7 +29,6 @@ const components = {
         props: { size: "large" },
         style: {
           fontSize: 15,
-          letterSpacing: 0.46,
         },
       },
       {
@@ -60,9 +59,20 @@ const components = {
   MuiTab: {
     styleOverrides: {
       root: {
-        ...typography.subtitle1,
+        ...typography.body1,
+        color: palette.text.secondary,
         ":hover": {
           backgroundColor: palette.action?.hover,
+        },
+      },
+    },
+  },
+  MuiMenuItem: {
+    styleOverrides: {
+      root: {
+        ...typography.body2,
+        ":hover": {
+          color: palette.secondary.main,
         },
       },
     },

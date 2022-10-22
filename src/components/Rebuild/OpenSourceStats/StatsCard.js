@@ -8,7 +8,7 @@ import { getGithubStats } from "../../../utilities/githubApi";
 import StatsCardPng from "../../../assets/png/stats-card.png";
 import { hideLarge, hideSmall } from "../../../utilities/display";
 import StatsCardSmPng from "../../../assets/png/stats-card-sm.png";
-import { fonts } from "../../../theme/typography";
+import { fonts, fontWeights } from "../../../theme/typography";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
 const StatsCardWrapper = styled(Box)`
@@ -87,20 +87,38 @@ function OpenSourceStats() {
           display="flex"
           flexDirection="column"
           maxWidth="490px"
-          sx={{ my: "90px", px: { xs: "16px", md: "0px" } }}
+          sx={{
+            mt: "90px",
+            mb: { xs: "32px", md: "90px" },
+            px: { xs: "24px", md: "0px" },
+          }}
         >
-          <Typography variant="h6" sx={{ mb: "32px" }}>
+          <Typography
+            component="h6"
+            color="primary.contrastText"
+            sx={{
+              typography: { xs: "h5", md: "h6" },
+              textTransform: "uppercase",
+              mb: "32px",
+            }}
+          >
             OPEN SOURCE PRODUCT
           </Typography>
           <Typography
-            variant="h2"
-            fontSize="64px"
-            fontFamily={fonts.teko}
-            marginBottom="16px"
+            component="h2"
+            sx={{
+              typography: "h2",
+              fontFamily: fonts.teko,
+              mb: "16px",
+              fontSize: { md: "64px" },
+              maxWidth: { md: "351px" },
+              color: "text.primary",
+              fontWeight: fontWeights.regular,
+            }}
           >
             Deliver to Airgap with Zarf
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" color="text.primary">
             Zarf makes modern software capabilities a reality in disconnected
             environments. We aim to deliver secure software to the worlds most
             important environments.{" "}
@@ -109,6 +127,7 @@ function OpenSourceStats() {
             <ButtonLink
               {...namedLinks.zarf}
               text="Learn About Zarf"
+              size="large"
             ></ButtonLink>
           </Box>
         </Box>
@@ -150,6 +169,7 @@ function OpenSourceStats() {
             <ButtonLink
               {...namedLinks.zarf}
               text="Learn About Zarf"
+              size="large"
             ></ButtonLink>
           </Box>
         </Box>

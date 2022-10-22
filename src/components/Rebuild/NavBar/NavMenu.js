@@ -22,7 +22,6 @@ export default function NavTabMenu({ tabItem }) {
                 key={`${tabItem.text}-menu-item-${i}`}
                 onClick={popupState.close}
                 {...createTabPropsFromNavLink(l, i)}
-                sx={{ typography: "subtitle1" }}
               >
                 {l.text}
               </MenuItem>

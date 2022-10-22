@@ -38,7 +38,8 @@ const footerWrapperSx = {
 };
 
 const FooterLink = styled(Link)`
-  color: ${palette.text.primary};
+  color: ${palette.primary.contrastText};
+  font-size: 18;
   text-decoration: none;
   :hover {
     color: ${palette.secondary.main};
@@ -47,11 +48,11 @@ const FooterLink = styled(Link)`
 
 const FooterText = styled(Typography)`
   display: flex;
-  color: ${palette.text.primary};
+  color: ${palette.primary.contrastText};
 `;
 
 const FooterIconButton = styled(IconButton)`
-  color: ${palette.text.primary};
+  color: ${palette.primary.contrastText};
 `;
 
 function Footer() {
@@ -155,15 +156,15 @@ function Footer() {
           flexDirection: { xs: "column", md: "row" },
           alignItems: { xs: "center", md: "center" },
           justifyContent: { xs: "center", md: "end" },
-          gap: "4px",
+          gap: "8px",
         }}
       >
-        <Typography variant="body1" sx={{ color: "text.primary" }}>
+        <Typography variant="body1" sx={{ color: "primary.contrastText" }}>
           Follow us on:
         </Typography>
         <Box>
           <FooterIconButton {...createTabPropsFromNavLink(namedLinks.github)}>
-            <GitHub />
+            <GitHub fontSize="" />
           </FooterIconButton>
           <FooterIconButton {...createTabPropsFromNavLink(namedLinks.linkedIn)}>
             <LinkedIn />
@@ -194,7 +195,7 @@ function Footer() {
       >
         <Typography
           variant="caption"
-          sx={{ color: "text.primary", textAlign: "center" }}
+          sx={{ color: "primary.contrastText", textAlign: "center" }}
         >
           Copyright © 2022 Defense Unicorns. All rights reserved
         </Typography>
@@ -203,18 +204,17 @@ function Footer() {
             display: "flex",
             justifyContent: "center",
             gap: ".5rem",
+            color: "primary.contrastText",
           }}
         >
           <FooterLink
             component={GatsbyLink}
-            sx={{ typography: "caption", color: "text.primary" }}
+            sx={{ typography: "caption" }}
             to={namedLinks.privacyPolicy.url}
           >
             {namedLinks.privacyPolicy.text}
           </FooterLink>
-          <Typography variant="caption" color="text.primary">
-            |
-          </Typography>
+          <Typography variant="caption">|</Typography>
           <FooterLink
             component={GatsbyLink}
             sx={{ typography: "caption" }}

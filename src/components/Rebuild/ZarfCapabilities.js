@@ -4,27 +4,31 @@ import { Box, Typography } from "@mui/material";
 import { zarfCapabilityCards } from "../../assets/data/cardData";
 import { namedLinks } from "../../assets/data/navLinks";
 import ButtonLink from "./ButtonLink";
+import { fontWeights } from "../../theme/typography";
 
 function ZarfCapabilities() {
   return (
     <Box component="section">
       <Typography
-        component="h6"
+        variant="h6"
         sx={{
-          typography: { xs: "h6", md: "h6" },
-          color: "text.secondary",
-          textAlign: "center",
           mb: "12px",
+          textAlign: "center",
+          color: "text.primary",
+          textTransform: "uppercase",
         }}
       >
         ZARF CAPABILITIES
       </Typography>
       <Typography
+        component="h2"
         sx={{
           mb: "60px",
-          typography: { xs: "h2", md: "h2" },
+          typography: "h2",
           textAlign: "center",
+          fontSize: { md: 60 },
           color: "secondary.main",
+          fontWeight: fontWeights.regular,
         }}
       >
         Deploy Anything - Anywhere
@@ -33,7 +37,7 @@ function ZarfCapabilities() {
       <ButtonLink
         variant="outlined"
         color="secondary"
-        sx={{ mx: "auto", mt: "60px" }}
+        sx={{ mx: "auto", mt: "60px", width: "155px", height: "42px" }}
         {...namedLinks.zarfInstall}
       />
     </Box>

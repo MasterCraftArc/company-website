@@ -27,7 +27,7 @@ const BackgroundSection = ({ className, children }) => {
       fluid={sources}
       preserveStackingContext={true}
       style={{
-        backgroundPosition: "70%",
+        // backgroundPosition: "70%",
         height: "100vh",
         width: "100vw",
         position: "absolute",

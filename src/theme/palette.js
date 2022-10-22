@@ -1,18 +1,22 @@
 const palette = {
   primary: {
     main: "#EF4444",
+    contrastText: "#FFFFFF",
   },
   secondary: {
     main: "#68C4FF",
+    contrastText: "#FFFFFF",
   },
   background: {
     default: "white",
     paper: "#0A0E2E",
   },
   text: {
-    primary: "#FFFFFF",
-    secondary: "#FFFFFFB2",
-    disabled: "#FFFFFF80",
+    // High Emphasis
+    primary: "rgba(255, 255, 255, 0.87)",
+    // Medium Emphasis
+    secondary: "rgba(255, 255, 255, 0.74)",
+    disabled: "rgba(255, 255, 255, 0.74)",
   },
   action: {
     active: "#FFFFFF8F",
@@ -22,8 +26,8 @@ const palette = {
     disabledBackground: "#FFFFFF1F",
     focus: "#FFFFFF1F",
   },
-  contrastThreshold: 3,
-  divider: "#FFFFFF1F",
+  // contrastThreshold: 3,
+  divider: "#FFFFFF",
 };
 
 export default Object.freeze(palette);
