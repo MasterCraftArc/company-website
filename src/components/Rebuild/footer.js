@@ -46,11 +46,6 @@ const FooterLink = styled(Link)`
   }
 `;
 
-const FooterText = styled(Typography)`
-  display: flex;
-  color: ${palette.primary.contrastText};
-`;
-
 const FooterIconButton = styled(IconButton)`
   color: ${palette.primary.contrastText};
 `;
@@ -113,7 +108,6 @@ function Footer() {
             )}
           </Box>
         </Box>
-        
       </Box>
       <Divider
         variant="fullWidth"
