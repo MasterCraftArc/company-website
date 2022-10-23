@@ -6,10 +6,11 @@ import Footer from "../components/Rebuild/footer";
 import SiteHelmet from "../components/SiteHelmet";
 import WhatWeDo from "../components/Rebuild/WhatWeDo";
 import HomeHero from "../components/Rebuild/HomeHero";
+import WhoWeAre from "../components/Rebuild/WhoWeAre";
+import OurVision from "../components/Rebuild/OurVision";
 import NavBar from "../components/Rebuild/NavBar/NavBar";
 import ZarfCapabilities from "../components/Rebuild/ZarfCapabilities";
 import OpenSourceStats from "../components/Rebuild/OpenSourceStats/StatsCard";
-import OurVision from "../components/Rebuild/OurVision";
 
 const HomePaper = styled(Box)`
   display: flex;
@@ -38,6 +39,7 @@ const Home = () => {
         <OpenSourceStats />
         <ZarfCapabilities />
         <OurVision />
+        <WhoWeAre />
       </HomePaper>
       <Footer />
     </>
