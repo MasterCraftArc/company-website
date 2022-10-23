@@ -21,7 +21,11 @@ function OurVision() {
   return (
     <OurVisionWrapper
       component="section"
-      sx={{ height: 411 }}
+      sx={{
+        height: { md: "411px" },
+        px: { xs: "32px", md: "383px" },
+        py: "106px",
+      }}
     ></OurVisionWrapper>
   );
 }
