@@ -26,23 +26,26 @@ const tagLineItems = [
   "Your Mission.",
 ];
 
-const DEFAULT_PAUSE = 1000;
-const YOU_PAUSE = 3000;
+const DEFAULT_TAG_LINE_PAUSE = 1000;
+const LAST_TAG_LINE_PAUSE = 3000;
+const LAST_TAG_LINE_ITEM = tagLineItems.length - 1;
+// Change pause on second to last item. So last item lingers
+const INDEX_TO_CHANGE_PAUSE = LAST_TAG_LINE_ITEM-1;
 
 const HomeHero = () => {
   let [heroCount, setHeroCount] = React.useState(0);
-  const [pause, setPause] = React.useState(DEFAULT_PAUSE);
+  const [pause, setPause] = React.useState(DEFAULT_TAG_LINE_PAUSE);
 
   const showYou = () => {
-    if (heroCount === 0) {
-      setPause(DEFAULT_PAUSE);
-    }
-    if (heroCount === 4) {
-      setHeroCount(0);
-      setPause(YOU_PAUSE);
-    } else {
-      setHeroCount(heroCount + 1);
-    }
+      if(heroCount === LAST_TAG_LINE_ITEM) {
+        setHeroCount(0);
+        setPause(DEFAULT_TAG_LINE_PAUSE);
+        return;
+      }
+      if(heroCount === INDEX_TO_CHANGE_PAUSE) {
+        setPause(LAST_TAG_LINE_PAUSE);
+      } 
+      setHeroCount(++heroCount)
   };
 
   return (
@@ -69,7 +72,7 @@ const HomeHero = () => {
         <Typography
           variant="h4"
           sx={{
-            fontSize: { xs: 20, md: 32 },
+            fontSize: { xs: 32, md: 40 },
             fontWeight: fontWeights.regular,
           }}
           color="primary.contrastText"
@@ -102,7 +105,7 @@ const HomeHero = () => {
               emptyPause={700}
               typingInterval={50}
               deletingInterval={50}
-              onTypingEnd={() => showYou()}
+              onTypingEnd={showYou}
             />
           </motion.span>
         </Typography>
