@@ -70,7 +70,7 @@ const WhoWeAre = () => (
     <ButtonLink
       variant="outlined"
       color="secondary"
-      sx={{ mx: "auto", mt: "60px", width: "155px", height: "42px" }}
+      sx={{ mx: "auto", mt: "60px" }}
       {...namedLinks.careers}
       text="Join Our Team"
     />
