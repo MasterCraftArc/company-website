@@ -72,6 +72,7 @@ function OpenSourceStats() {
         position: "relative",
         overflowX: "clip",
         overflowY: "initial",
+        paddingX: "32px",
       }}
     >
       <StatsCardWrapper

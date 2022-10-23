@@ -18,6 +18,7 @@ function WhatWeDo() {
         gap: { xs: 0, lg: "146px" },
         justifyContent: "center",
         alignItems: "center",
+        paddingX: "32px",
       }}
     >
       <Box sx={{ maxWidth: "100%" }}>
