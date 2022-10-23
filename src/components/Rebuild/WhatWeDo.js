@@ -1,5 +1,4 @@
 import React from "react";
-import { fonts } from "../../theme/typography";
 import { Box, styled, Typography } from "@mui/material";
 import DougRocket from "../../assets/svg/doug-rocket.svg";
 
@@ -31,21 +30,15 @@ function WhatWeDo() {
           gap: "12px",
         }}
       >
-        <Typography
-          component="h6"
-          sx={{
-            typography: { xs: "body1", md: "h6" },
-          }}
-        >
+        <Typography variant="h6" sx={{ textTransform: "uppercase" }}>
           WHAT WE DO
         </Typography>
         <Typography
-          component="h2"
+          variant="h2"
+          color="secondary"
           sx={{
-            typography: { xs: "h3", lg: "h2" },
-            fontFamily: fonts.teko,
-            color: "secondary.main",
-            maxWidth: { md: "450px" },
+            fontSize: { md: "60px" },
+            maxWidth: { md: "515px" },
           }}
         >
           Develop Mission Focused Open Source Products
