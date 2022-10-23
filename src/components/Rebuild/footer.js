@@ -113,33 +113,7 @@ function Footer() {
             )}
           </Box>
         </Box>
-        <Box
-          sx={{
-            flex: 1,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: { xs: "center", md: "end" },
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: { xs: "center", md: "start" },
-            }}
-          >
-            <FooterText variant="subtitle2">555 Pikes Place Ave</FooterText>
-            <FooterText variant="subtitle2">Colorado Springs,</FooterText>
-            <FooterText variant="subtitle2">CO, 80903</FooterText>
-            <FooterLink
-              href={"mailto:hello@defenseunicorns.com"}
-              variant="subtitle2"
-              marginTop={"1rem"}
-            >
-              hello@defenseunicorns.com
-            </FooterLink>
-          </Box>
-        </Box>
+        
       </Box>
       <Divider
         variant="fullWidth"
