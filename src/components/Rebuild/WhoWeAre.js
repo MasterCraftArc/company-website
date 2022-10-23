@@ -1,5 +1,7 @@
 import React from "react";
+import ButtonLink from "./ButtonLink";
 import { Box, styled, Typography } from "@mui/material";
+import { namedLinks } from "../../assets/data/navLinks";
 import ImageLeft from "../../assets/png/who-we-are/who-we-are-left.png";
 import ImageRight from "../../assets/png/who-we-are/who-we-are-right.png";
 import ImageCenter from "../../assets/png/who-we-are/who-we-are-center.png";
@@ -65,6 +67,13 @@ const WhoWeAre = () => (
         alt="HR retreat"
       />
     </Frame>
+    <ButtonLink
+      variant="outlined"
+      color="secondary"
+      sx={{ mx: "auto", mt: "60px", width: "155px", height: "42px" }}
+      {...namedLinks.careers}
+      text="Join Our Team"
+    />
   </WhoWeAreWrapper>
 );
 
