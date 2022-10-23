@@ -36,7 +36,7 @@ const HomeHero = () => {
   let [heroCount, setHeroCount] = React.useState(0);
   const [pause, setPause] = React.useState(DEFAULT_TAG_LINE_PAUSE);
 
-  const showYou = () => {
+  const onHeaderTypingEnd = () => {
       if(heroCount === LAST_TAG_LINE_ITEM) {
         setHeroCount(0);
         setPause(DEFAULT_TAG_LINE_PAUSE);
@@ -104,7 +104,7 @@ const HomeHero = () => {
               pause={pause}
               typingInterval={50}
               deletingInterval={50}
-              onTypingEnd={showYou}
+              onTypingEnd={onHeaderTypingEnd}
             />
           </motion.span>
         </Typography>

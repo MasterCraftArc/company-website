@@ -8,7 +8,7 @@ import { fontWeights } from "../../theme/typography";
 
 function ZarfCapabilities() {
   return (
-    <Box component="section">
+    <Box component="section" sx={{ px: "32px" }}>
       <Typography
         variant="h6"
         sx={{

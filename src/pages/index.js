@@ -9,12 +9,13 @@ import HomeHero from "../components/Rebuild/HomeHero";
 import NavBar from "../components/Rebuild/NavBar/NavBar";
 import ZarfCapabilities from "../components/Rebuild/ZarfCapabilities";
 import OpenSourceStats from "../components/Rebuild/OpenSourceStats/StatsCard";
+import OurVision from "../components/Rebuild/OurVision";
 
 const HomePaper = styled(Box)`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  padding: 150px 32px;
+  padding: 150px 0;
   z-index: -1;
   gap: 170px;
 `;
@@ -36,6 +37,7 @@ const Home = () => {
         <WhatWeDo />
         <OpenSourceStats />
         <ZarfCapabilities />
+        <OurVision />
       </HomePaper>
       <Footer />
     </>
