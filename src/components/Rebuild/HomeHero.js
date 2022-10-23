@@ -95,14 +95,13 @@ const HomeHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              delay: 1,
+              delay: .25,
             }}
             className="block sm:inline-block"
           >
             <ReactRotatingText
               items={tagLineItems}
               pause={pause}
-              emptyPause={700}
               typingInterval={50}
               deletingInterval={50}
               onTypingEnd={showYou}
