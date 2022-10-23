@@ -114,9 +114,7 @@ const HomeHero = () => {
         variant="h6"
         sx={{
           typography: { xs: "body2", md: "h6" },
-          fontSize: { md: 26 },
           paddingLeft: ".5rem",
-          width: { xs: "auto", md: "75%" },
           borderLeft: `solid 4px ${palette.primary.main}`,
         }}
       >
