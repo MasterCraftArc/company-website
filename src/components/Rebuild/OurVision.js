@@ -1,11 +1,11 @@
-import { styled } from "@mui/material";
-import { Box } from "@mui/system";
 import React from "react";
+import palette from "../../theme/palette";
+import { styled, Box, Typography } from "@mui/material";
 
 const OurVisionWrapper = styled(Box)`
+  gap: 10px;
   width: 100vw;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
   background: linear-gradient(
@@ -26,7 +26,31 @@ function OurVision() {
         px: { xs: "32px", md: "383px" },
         py: "106px",
       }}
-    ></OurVisionWrapper>
+    >
+      <Typography
+        component="h3"
+        sx={{
+          typography: "h2",
+        }}
+      >
+        Our Vision
+      </Typography>
+      <Typography
+        component="h4"
+        sx={{
+          pl: "22px",
+          lineHeight: "36px",
+          fontStyle: "italic",
+          flexDirection: "row",
+          letterSpacing: ".18px",
+          fontSize: "30px",
+          borderLeft: `solid 6px ${palette.primary.main}`,
+        }}
+      >
+        "We envision a free and secure world that{" "}
+        <strong>enables progress and innovation.</strong>"
+      </Typography>
+    </OurVisionWrapper>
   );
 }
 
