@@ -120,8 +120,7 @@ const HomeHero = () => {
           borderLeft: `solid 4px ${palette.primary.main}`,
         }}
       >
-        We are a mission-focused, veteran-owned company that makes software
-        delivery easy for the most secure systems in the world.
+        We make software delivery easier for the most secure systems in the world
       </Typography>
       <Button
         to="/contact"
