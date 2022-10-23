@@ -30,22 +30,22 @@ const DEFAULT_TAG_LINE_PAUSE = 1000;
 const LAST_TAG_LINE_PAUSE = 3000;
 const LAST_TAG_LINE_ITEM = tagLineItems.length - 1;
 // Change pause on second to last item. So last item lingers
-const INDEX_TO_CHANGE_PAUSE = LAST_TAG_LINE_ITEM-1;
+const INDEX_TO_CHANGE_PAUSE = LAST_TAG_LINE_ITEM - 1;
 
 const HomeHero = () => {
   let [heroCount, setHeroCount] = React.useState(0);
   const [pause, setPause] = React.useState(DEFAULT_TAG_LINE_PAUSE);
 
   const onHeaderTypingEnd = () => {
-      if(heroCount === LAST_TAG_LINE_ITEM) {
-        setHeroCount(0);
-        setPause(DEFAULT_TAG_LINE_PAUSE);
-        return;
-      }
-      if(heroCount === INDEX_TO_CHANGE_PAUSE) {
-        setPause(LAST_TAG_LINE_PAUSE);
-      } 
-      setHeroCount(++heroCount)
+    if (heroCount === LAST_TAG_LINE_ITEM) {
+      setHeroCount(0);
+      setPause(DEFAULT_TAG_LINE_PAUSE);
+      return;
+    }
+    if (heroCount === INDEX_TO_CHANGE_PAUSE) {
+      setPause(LAST_TAG_LINE_PAUSE);
+    }
+    setHeroCount(++heroCount);
   };
 
   return (
@@ -95,7 +95,7 @@ const HomeHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              delay: .25,
+              delay: 0.25,
             }}
             className="block sm:inline-block"
           >
@@ -117,7 +117,7 @@ const HomeHero = () => {
           borderLeft: `solid 4px ${palette.primary.main}`,
         }}
       >
-        We make software delivery easier for the most secure systems in the world
+        We make software delivery easy for the most secure systems in the world
       </Typography>
       <Button
         to="/contact"
