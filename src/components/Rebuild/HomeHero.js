@@ -118,7 +118,7 @@ const HomeHero = () => {
           borderLeft: `solid 4px ${palette.primary.main}`,
         }}
       >
-        We make software delivery easy for the most secure systems in the world
+        We make software delivery easy for the most secure systems in the world.
       </Typography>
       <Button
         to="/contact"
