@@ -1,10 +1,10 @@
 import React from "react";
-import CardRow from "./CardRow";
+import CapabilitiesCardRow from "./CapabilitiesCardRow";
 import { Box, Typography } from "@mui/material";
-import { zarfCapabilityCards } from "../../assets/data/cardData";
-import { namedLinks } from "../../assets/data/navLinks";
-import ButtonLink from "./ButtonLink";
-import { fontWeights } from "../../theme/typography";
+import { zarfCapabilityCards } from "../../../assets/data/cardData";
+import { namedLinks } from "../../../assets/data/navLinks";
+import ButtonLink from "../ButtonLink";
+import { fontWeights } from "../../../theme/typography";
 
 function ZarfCapabilities() {
   return (
@@ -33,7 +33,7 @@ function ZarfCapabilities() {
       >
         Deploy Anything - Anywhere
       </Typography>
-      <CardRow cards={zarfCapabilityCards} />
+      <CapabilitiesCardRow cards={zarfCapabilityCards} />
       <ButtonLink
         variant="outlined"
         color="secondary"

@@ -9,7 +9,7 @@ import HomeHero from "../components/Rebuild/HomeHero";
 import WhoWeAre from "../components/Rebuild/WhoWeAre";
 import OurVision from "../components/Rebuild/OurVision";
 import NavBar from "../components/Rebuild/NavBar/NavBar";
-import ZarfCapabilities from "../components/Rebuild/ZarfCapabilities";
+import ZarfCapabilities from "../components/Rebuild/ZarfCapabilities/ZarfCapabilities";
 import OpenSourceStats from "../components/Rebuild/OpenSourceStats/StatsCard";
 
 const HomePaper = styled(Box)`
