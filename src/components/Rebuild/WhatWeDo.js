@@ -20,8 +20,8 @@ function WhatWeDo() {
         paddingX: "32px",
       }}
     >
-      <Box sx={{ maxWidth: "100%" }}>
-        <DougRocket width="100%" height="100%" />
+      <Box>
+        <DougRocket />
       </Box>
       <Box
         sx={{
