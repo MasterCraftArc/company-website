@@ -40,8 +40,8 @@ const Home = () => {
         <OpenSourceStats />
         <ZarfCapabilities />
         <OurVision />
-        <LearnWithUs />
         <WhoWeAre />
+        <LearnWithUs />
       </HomePaper>
       <Footer />
     </>
