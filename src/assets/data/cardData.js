@@ -31,7 +31,8 @@ export const LearnWithUsCards = [
     link: { ...namedLinks.podcast, text: "Listen Now" },
   },
   {
-    title: "DevSecOps Blog",
+    title: "DevSecOps",
+    titleLineTwo: "Blog",
     body: "Insights from industry experts on the processes and technology necessary to accelerate your mission.",
     link: { ...namedLinks.blog, text: "Read Now" },
   },

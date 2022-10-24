@@ -9,7 +9,7 @@ import HomeHero from "../components/Rebuild/HomeHero";
 import WhoWeAre from "../components/Rebuild/WhoWeAre";
 import OurVision from "../components/Rebuild/OurVision";
 import NavBar from "../components/Rebuild/NavBar/NavBar";
-import LearnWithUs from "../components/Rebuild/LearnWithUs/LearnWithUs";
+import LearnWithUs from "../components/Rebuild/LearnWithUs";
 import OpenSourceStats from "../components/Rebuild/OpenSourceStats/StatsCard";
 import ZarfCapabilities from "../components/Rebuild/ZarfCapabilities/ZarfCapabilities";
 
