@@ -20,11 +20,7 @@ const Frame = styled(Box)`
   gap: 32px;
   margin-top: 36px;
 `;
-const Image = styled(Box)`
-  flex: 1;
-  height: auto;
-  width: auto;
-`;
+const Image = styled(Box)``;
 const WhoWeAre = () => (
   <Section sx={{ textAlign: "center" }}>
     <SectionTitle>Who We Are</SectionTitle>
