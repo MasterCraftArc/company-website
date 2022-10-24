@@ -104,7 +104,8 @@ const HomeHero = () => {
               pause={pause}
               typingInterval={50}
               deletingInterval={50}
-              onTypingEnd={onHeaderTypingEnd}
+              // Throws a console warning but is clearly in the documentation.
+              onTypingEnd={() => onHeaderTypingEnd}
             />
           </motion.span>
         </Typography>

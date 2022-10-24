@@ -36,8 +36,11 @@ function LearnWithUs() {
       <SectionTitle>Learn With Us</SectionTitle>
       <SectionDescription>Free DevSecOps Resources</SectionDescription>
       <ResourceRow sx={resourceRowSx}>
-        {LearnWithUsCards.map((card) => (
-          <StyledCard sx={{ color: "primary.contrastText" }}>
+        {LearnWithUsCards.map((card, index) => (
+          <StyledCard
+            sx={{ color: "primary.contrastText" }}
+            key={`learn-with-us-card-${index}`}
+          >
             <Typography variant="h4">{card.title}</Typography>
             <Typography variant="h4">{card.titleLineTwo}</Typography>
             <Typography variant="body2" sx={{ marginTop: "12px" }}>

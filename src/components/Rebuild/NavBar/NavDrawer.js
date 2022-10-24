@@ -28,19 +28,19 @@ function NavDrawer({ children, drawerProps, closeDrawer, navLinks, pathname }) {
       <DrawerTabs value={pathname}>
         {navLinks.map((l, i) =>
           l.menuItems ? (
-            <>
+            <React.Fragment key={`menu-item-${l.text}-${i}`}>
               {l.menuItems.map((mL, mI) => (
                 <DrawerTab
                   aria-selected={true}
-                  key={mL.text}
+                  key={`drawer-tab-${mL.text}-${i}-${mI}`}
                   {...createTabPropsFromNavLink(mL, mI)}
                 />
               ))}
-            </>
+            </React.Fragment>
           ) : (
             <DrawerTab
               aria-selected={true}
-              key={l.text}
+              key={`drawer-tab-${l.text}-${i}`}
               {...createTabPropsFromNavLink(l, i)}
             />
           )
