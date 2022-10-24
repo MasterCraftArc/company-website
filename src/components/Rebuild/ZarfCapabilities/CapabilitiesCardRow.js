@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import CapabilitiesCard from "./CapabilitiesCard";
 import { Box } from "@mui/material";
 
 // export interface ZarfCardRowProps {
@@ -14,16 +14,17 @@ const cardRowSx = {
   gap: { xs: "50px", sm: "25px", md: "50px" },
   width: { xs: "100%", lg: "80%", xl: "65%" },
   mx: "auto",
+  mt: "48px",
 };
 
-function CardRow({ cards }) {
+function CapabilitiesCardRow({ cards }) {
   return (
     <Box sx={cardRowSx}>
       {cards.map((c, index) => (
-        <Card key={`zarfcard-${index}`} {...c} />
+        <CapabilitiesCard key={`zarfcard-${index}`} {...c} />
       ))}
     </Box>
   );
 }
 
-export default CardRow;
+export default CapabilitiesCardRow;

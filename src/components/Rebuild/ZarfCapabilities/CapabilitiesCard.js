@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Card as MuiCard, Typography, styled } from "@mui/material";
-import CardBackground from "../../assets/png/capabilities-card-bg.png";
-import { fonts } from "../../theme/typography";
+import CardBackground from "../../../assets/png/capabilities-card-bg.png";
+import { fonts } from "../../../theme/typography";
 // type ZarfCardVariant = "nocard" | "card";
 // type BodyColor = "text.primary" | "text.secondary";
 
@@ -40,7 +40,7 @@ function getVariantStyle(variant) {
   return sxProps;
 }
 
-function Card(props) {
+function CapabilitiesCard(props) {
   const variantStyle = getVariantStyle(props.variant);
   return (
     <StyledCard sx={variantStyle} elevation={0}>
@@ -80,4 +80,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default CapabilitiesCard;
