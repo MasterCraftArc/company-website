@@ -49,6 +49,9 @@
 * {
   box-sizing: border-box;
 }
+.blogPage {
+  margin-top: -6rem;
+}
 
 .flexThisBox {
   display: flex;
@@ -89,7 +92,6 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: "Poppins";
 }
 
 html,
@@ -191,7 +193,7 @@ body {
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
     infinite;
-  color: black;
+  color: transparent;
   font-weight: 200;
 }
 
@@ -212,6 +214,9 @@ body {
 .homeHero {
   background: transparent;
   margin-bottom: "25%";
+}
+.home-hero {
+  position: inherit !important;
 }
 
 .hero {

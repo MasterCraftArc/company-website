@@ -48,6 +48,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `png`,
+        path: `${__dirname}/src/assets/png`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -187,6 +194,14 @@ module.exports = {
       options: {
         id: TAG_MGR_ID,
         includeInDevelopment: false,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets\/svg/,
+        },
       },
     },
   ],
