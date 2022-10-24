@@ -22,6 +22,8 @@ const Frame = styled(Box)`
 `;
 const Image = styled(Box)`
   flex: 1;
+  height: auto;
+  width: auto;
 `;
 const WhoWeAre = () => (
   <Section sx={{ textAlign: "center" }}>
