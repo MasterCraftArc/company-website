@@ -43,7 +43,10 @@ function LearnWithUs() {
           >
             <Typography variant="h4">{card.title}</Typography>
             <Typography variant="h4">{card.titleLineTwo}</Typography>
-            <Typography variant="body2" sx={{ marginTop: "12px" }}>
+            <Typography
+              variant="body2"
+              sx={{ marginTop: "12px", textAlign: "left" }}
+            >
               {card.body}
             </Typography>
             <ButtonLink
