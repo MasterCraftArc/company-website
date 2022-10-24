@@ -37,8 +37,9 @@ export const LearnWithUsCards = [
     link: { ...namedLinks.blog, text: "Read Now" },
   },
   {
-    title: "Free DevSecOps Course",
-    body: "An overview of the history, terminology, processes, and tools used to adopt Continuous Delivery and DevSecOps.",
+    title: "Intro to",
+    titleLineTwo: "DevSecOps",
+    body: "A Defense Unicorns and Linux Foundation overview of the history and processes used to adopt Continuous Delivery and DevSecOps.",
     link: { ...namedLinks.courses, text: "Enroll Now" },
   },
 ];
