@@ -86,10 +86,6 @@ export const namedLinks = {
 export const navLinks = [
   namedLinks.home,
   namedLinks.zarf,
-  {
-    text: "Learn",
-    menuItems: [namedLinks.podcast, namedLinks.courses, namedLinks.blog],
-  },
   namedLinks.careers,
   namedLinks.contact,
 ];
