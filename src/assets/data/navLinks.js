@@ -1,3 +1,5 @@
+import * as SocialIcons from "../svg/social-icons";
+
 export const namedLinks = {
   home: {
     url: "/",
@@ -26,12 +28,14 @@ export const namedLinks = {
     target: "_blank",
     rel: "noopener noreferrer",
     url: "https://github.com/defenseunicorns",
+    icon: SocialIcons.Github,
   },
   linkedIn: {
     text: "LinkedIn",
     target: "_blank",
     rel: "noopener noreferrer",
     url: "https://www.linkedin.com/company/defense-unicorns",
+    icon: SocialIcons.LinkedIn,
   },
   zarf: {
     text: "Zarf",
@@ -56,6 +60,7 @@ export const namedLinks = {
     target: "_blank",
     rel: "noopener noreferrer",
     url: "https://anchor.fm/defenseunicorns",
+    icon: SocialIcons.Podcast,
   },
   courses: {
     text: "Courses",
@@ -74,12 +79,14 @@ export const namedLinks = {
     target: "_blank",
     rel: "noopener noreferrer",
     url: "https://mobile.twitter.com/defenseunicorns",
+    icon: SocialIcons.Twitter,
   },
   youtube: {
     text: "Youtube",
     target: "_blank",
     rel: "noopener noreferrer",
     url: "https://www.youtube.com/channel/UCWCPckStyw2R0vC4zG68LIg",
+    icon: SocialIcons.Youtube,
   },
 };
 
@@ -97,4 +104,12 @@ export const footerLinks = [
   namedLinks.podcast,
   namedLinks.careers,
   namedLinks.contact,
+];
+
+export const socialsBarLinks = [
+  namedLinks.github,
+  namedLinks.linkedIn,
+  namedLinks.twitter,
+  namedLinks.podcast,
+  namedLinks.youtube,
 ];
