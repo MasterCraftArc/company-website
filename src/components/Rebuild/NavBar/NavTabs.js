@@ -16,12 +16,13 @@ function InternalNavTab(props) {
       {...props}
       to={props.href}
       partiallyActive={true}
+      tabIndex={0}
     />
   );
 }
 
 function ExternalNavTab(props) {
-  return <Tab aria-label={props.label} {...props} />;
+  return <Tab aria-label={props.label} {...props} tabIndex={0} />;
 }
 
 function NavTab(props) {
