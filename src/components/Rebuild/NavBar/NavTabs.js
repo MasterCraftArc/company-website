@@ -11,6 +11,7 @@ import { isLocalLink } from "../../../utilities/navLink";
 function InternalNavTab(props) {
   return (
     <Tab
+      aria-label={props.label}
       component={GatsbyLink}
       {...props}
       to={props.href}
@@ -20,7 +21,7 @@ function InternalNavTab(props) {
 }
 
 function ExternalNavTab(props) {
-  return <Tab {...props} />;
+  return <Tab aria-label={props.label} {...props} />;
 }
 
 function NavTab(props) {

@@ -93,6 +93,7 @@ function Footer() {
                   key={`footer-link-${l.text}-${i}`}
                   variant="subtitle2"
                   to={l.url}
+                  id={`footer-link-${l.text}-${i}`}
                 >
                   {l.text}
                 </FooterLink>
@@ -101,6 +102,7 @@ function Footer() {
                   key={`footer-link-${l.text}-${i}`}
                   variant="subtitle2"
                   {...createTabPropsFromNavLink(l)}
+                  id={`footer-link-${l.text}-${i}`}
                 >
                   {l.text}
                 </FooterLink>

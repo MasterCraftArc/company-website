@@ -174,8 +174,18 @@ function OpenSourceStats() {
             ></ButtonLink>
           </Box>
         </Box>
-        <CardBackground component="img" src={StatsCardPng} sx={hideSmall} />
-        <CardBackground component="img" src={StatsCardSmPng} sx={hideLarge} />
+        <CardBackground
+          component="img"
+          alt="An underwater landscape that represents an Airgap environment."
+          src={StatsCardPng}
+          sx={hideSmall}
+        />
+        <CardBackground
+          component="img"
+          alt="Stats Card Backdrop"
+          src={StatsCardSmPng}
+          sx={hideLarge}
+        />
       </StatsCardWrapper>
       <ZarfBox leftAlignRef={prRef} />
     </Box>

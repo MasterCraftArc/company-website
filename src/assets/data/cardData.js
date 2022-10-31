@@ -6,18 +6,21 @@ import { namedLinks } from "./navLinks";
 export const zarfCapabilityCards = [
   {
     topImage: WebSecurity,
+    alt: "A folder with a padlock in the center.",
     headerFirstLine: "Package Apps &",
     headerSecondLine: "Resources",
     body: "Provides the ability to package a chunk of the internet and securely deliver all of the files and dependencies needed to run an application in a disconnected environment.",
   },
   {
     topImage: WirelessCloud,
+    alt: "A cloud with a check mark and connected pipelines.",
     headerFirstLine: "Deploy Cloud Apps",
     headerSecondLine: "Disconnected",
     body: "Provides the ability to deploy apps declaratively and without internet connectivity. This opens the door for modern cloud capabilities to be deployed in disconnected environments.",
   },
   {
     topImage: Server,
+    alt: "A server overlaying a cloud.",
     headerFirstLine: "Easily Maintain",
     headerSecondLine: "Apps Disconnected",
     body: "Zarf reduces the skills and resources needed to manage and update applications in disconnected environments, ensuring no downtime or data loss when updating software.",
