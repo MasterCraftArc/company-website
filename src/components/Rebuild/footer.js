@@ -132,7 +132,7 @@ function Footer() {
         </Typography>
         <Box>
           <FooterIconButton {...createTabPropsFromNavLink(namedLinks.github)}>
-            <GitHub fontSize="" />
+            <GitHub  />
           </FooterIconButton>
           <FooterIconButton {...createTabPropsFromNavLink(namedLinks.linkedIn)}>
             <LinkedIn />

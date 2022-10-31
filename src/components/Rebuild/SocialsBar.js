@@ -1,10 +1,15 @@
-import { styled } from "@mui/material";
+import { IconButton, styled, SvgIcon, Box } from "@mui/material";
 import React from "react";
 import { hideSmall } from "../../utilities/display";
+import {socialsBarLinks} from '../../assets/data/navLinks';
+import { createTabPropsFromNavLink } from "../../utilities/navLink";
 
 const SocialsBarWrapper = styled("section")`
   width: 100vw;
   height: 160px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   background: linear-gradient(
     90deg,
     #002555 0%,
@@ -16,7 +21,21 @@ const SocialsBarWrapper = styled("section")`
 `;
 
 function SocialsBar() {
-  return <SocialsBarWrapper sx={{ ...hideSmall }}></SocialsBarWrapper>;
+  return <SocialsBarWrapper sx={{ ...hideSmall }}>
+    {socialsBarLinks.map((link, index) => {
+    const uniqueId = `socials-bar-${link.text}-${index}`; 
+      return (
+        <Box key={uniqueId} >
+          <IconButton aria-labelledby={uniqueId} size="large" {...createTabPropsFromNavLink(link)}>
+            <SvgIcon component={link.icon} inheritViewBox></SvgIcon>
+          </IconButton>
+          <span aria-label={link.text} id={uniqueId}>
+            {link.text}
+          </span>
+        </Box>
+      )
+    })}
+  </SocialsBarWrapper>;
 }
 
 export default SocialsBar;
