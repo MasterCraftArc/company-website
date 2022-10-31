@@ -15,8 +15,8 @@ import styled from "@emotion/styled";
 import NavLogo from "./NavBar/NavLogo";
 import palette from "../../theme/palette";
 import { Link as GatsbyLink } from "gatsby";
-import { footerLinks, namedLinks } from "../../assets/data/navLinks";
-import { Divider, IconButton, Link, Typography } from "@mui/material";
+import { footerLinks, namedLinks, socialsBarLinks } from "../../assets/data/navLinks";
+import { Divider, IconButton, Link, SvgIcon, Typography } from "@mui/material";
 
 const FooterWrapper = styled(Box)`
   height: auto;
@@ -131,21 +131,14 @@ function Footer() {
           Follow us on:
         </Typography>
         <Box>
-          <FooterIconButton {...createTabPropsFromNavLink(namedLinks.github)}>
-            <GitHub  />
-          </FooterIconButton>
-          <FooterIconButton {...createTabPropsFromNavLink(namedLinks.linkedIn)}>
-            <LinkedIn />
-          </FooterIconButton>
-          <FooterIconButton {...createTabPropsFromNavLink(namedLinks.twitter)}>
-            <Twitter />
-          </FooterIconButton>
-          <FooterIconButton {...createTabPropsFromNavLink(namedLinks.podcast)}>
-            <Podcasts />
-          </FooterIconButton>
-          <FooterIconButton {...createTabPropsFromNavLink(namedLinks.youtube)}>
-            <YouTube />
-          </FooterIconButton>
+          {socialsBarLinks.map((link, index) => {
+            let key=`footer-social-link-${link.text}-${index}`
+            return (
+              <FooterIconButton {...createTabPropsFromNavLink(link)} key={key} aria-label={link.text}>
+                <SvgIcon component={link.icon} inheritViewBox />
+              </FooterIconButton>
+            )
+          })}
         </Box>
       </Box>
       <Box
