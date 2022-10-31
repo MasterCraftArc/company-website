@@ -1,4 +1,4 @@
-import { IconButton, styled, SvgIcon, Box } from "@mui/material";
+import { IconButton, styled, SvgIcon, Box, Typography } from "@mui/material";
 import React from "react";
 import { hideSmall } from "../../utilities/display";
 import {socialsBarLinks} from '../../assets/data/navLinks';
@@ -20,19 +20,25 @@ const SocialsBarWrapper = styled("section")`
   );
 `;
 
+const IconButtonWithLabel = styled(Box) `
+    display: flex;
+    align-items: center;
+    gap: 8px;
+`
+
 function SocialsBar() {
   return <SocialsBarWrapper sx={{ ...hideSmall }}>
     {socialsBarLinks.map((link, index) => {
     const uniqueId = `socials-bar-${link.text}-${index}`; 
       return (
-        <Box key={uniqueId} >
-          <IconButton aria-labelledby={uniqueId} size="large" {...createTabPropsFromNavLink(link)}>
-            <SvgIcon component={link.icon} inheritViewBox></SvgIcon>
+        <IconButtonWithLabel  >
+          <IconButton size="large" aria-labelledby={uniqueId}  {...createTabPropsFromNavLink(link)}>
+            <SvgIcon fontSize="large" component={link.icon} inheritViewBox></SvgIcon>
           </IconButton>
-          <span aria-label={link.text} id={uniqueId}>
+          <Typography variant="h6" color='primary.contrastText' id={uniqueId}>
             {link.text}
-          </span>
-        </Box>
+          </Typography>
+        </IconButtonWithLabel>
       )
     })}
   </SocialsBarWrapper>;
