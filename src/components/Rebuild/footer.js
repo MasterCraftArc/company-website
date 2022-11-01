@@ -1,12 +1,5 @@
 import React from "react";
 import {
-  GitHub,
-  LinkedIn,
-  Podcasts,
-  Twitter,
-  YouTube,
-} from "@mui/icons-material";
-import {
   createTabPropsFromNavLink,
   isLocalLink,
 } from "../../utilities/navLink";

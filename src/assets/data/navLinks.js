@@ -107,8 +107,8 @@ export const footerLinks = [
 ];
 
 export const socialsBarLinks = [
-  namedLinks.linkedIn,
   namedLinks.github,
+  namedLinks.linkedIn,
   namedLinks.twitter,
   namedLinks.podcast,
   namedLinks.youtube,

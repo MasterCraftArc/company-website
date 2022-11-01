@@ -1,10 +1,7 @@
 import {
-  IconButton,
   styled,
   SvgIcon,
-  Box,
   Typography,
-  Button,
   MenuItem,
   ListItemIcon,
 } from "@mui/material";
@@ -43,10 +40,12 @@ function SocialsBar() {
         const uniqueId = `socials-bar-${link.text}-${index}`;
         return (
           <IconButtonWithLabel
+            key={uniqueId}
             component="a"
+            aria-label={link.text}
             {...createTabPropsFromNavLink(link)}
           >
-            <ListItemIcon size="large" aria-aria-labelledby={uniqueId}>
+            <ListItemIcon size="large">
               <SvgIcon
                 fontSize="large"
                 component={link.icon}
