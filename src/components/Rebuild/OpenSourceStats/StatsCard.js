@@ -176,12 +176,14 @@ function OpenSourceStats() {
         </Box>
         <CardBackground
           component="img"
+          loading="lazy"
           alt="An underwater landscape that represents an Airgap environment."
           src={StatsCardPng}
           sx={hideSmall}
         />
         <CardBackground
           component="img"
+          loading="lazy"
           alt="Stats Card Backdrop"
           src={StatsCardSmPng}
           sx={hideLarge}

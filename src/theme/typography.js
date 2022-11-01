@@ -4,8 +4,8 @@ export const fontWeights = {
 };
 
 export const fonts = {
-  poppins: "Poppins",
-  teko: "Teko",
+  poppins: "Poppins, Verndana",
+  teko: "Teko, impact",
 };
 
 const typography = {

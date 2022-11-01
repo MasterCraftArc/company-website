@@ -48,6 +48,7 @@ function CapabilitiesCard(props) {
         component="img"
         alt={props.alt}
         src={props.topImage}
+        loading="lazy"
         width={"72px"}
         height={"70px"}
         sx={{ mx: "auto" }}

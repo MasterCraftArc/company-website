@@ -5,7 +5,7 @@ import palette from "../../theme/palette";
 import ReactRotatingText from "react-rotating-text";
 import { fontWeights } from "../../theme/typography";
 import { Box, Button, Typography } from "@mui/material";
-import HomeHeroBg from "../../assets/png/home-hero-bg.png";
+import HomeHeroBg from "../../assets/jpg/home-hero-bg.jpg";
 
 const sentenceAnim = {
   hidden: { opacity: 1 },
