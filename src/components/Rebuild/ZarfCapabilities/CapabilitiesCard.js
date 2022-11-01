@@ -46,6 +46,7 @@ function CapabilitiesCard(props) {
     <StyledCard sx={variantStyle} elevation={0}>
       <Box
         component="img"
+        alt={props.alt}
         src={props.topImage}
         loading="lazy"
         width={"72px"}
