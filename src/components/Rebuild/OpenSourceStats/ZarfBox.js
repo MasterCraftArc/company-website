@@ -25,7 +25,7 @@ function ZarfBox(props) {
       ref={selfRef}
       component="img"
       src={ZarfBubbles}
-      alt="Zarf Bubbles"
+      alt="Zarf a light blue and purple axolotle"
       sx={{
         ...hideSmall,
         width: "262px",

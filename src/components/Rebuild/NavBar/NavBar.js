@@ -10,7 +10,15 @@ import React, { useCallback, useState } from "react";
 import { navLinks } from "../../../assets/data/navLinks";
 import { hideSmall, hideLarge } from "../../../utilities/display";
 import { createTabPropsFromNavLink } from "../../../utilities/navLink";
-import { AppBar, Box, IconButton, Tabs, Toolbar, styled } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  IconButton,
+  Tabs,
+  Toolbar,
+  styled,
+  SvgIcon,
+} from "@mui/material";
 
 const TRANSPARENT_ELEVATION = 0;
 const TRANSITION_HEIGHT = 70;
@@ -70,7 +78,11 @@ function NavBar({ pathname }) {
           >
             <MenuIcon />
           </IconButton>
-          <NavLogo />
+          <SvgIcon
+            component={NavLogo}
+            inheritViewBox
+            aria-label="Navigate Home"
+          />
           <Box
             component="div"
             sx={{
