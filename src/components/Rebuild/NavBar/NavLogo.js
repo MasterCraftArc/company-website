@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Box } from "@mui/material";
 import NavBarLogo from "../../../assets/svg/navbar-logo.svg";
 
 function NavLogo({ height, width }) {

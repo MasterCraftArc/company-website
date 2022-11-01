@@ -12,6 +12,7 @@ import NavBar from "../components/Rebuild/NavBar/NavBar";
 import LearnWithUs from "../components/Rebuild/LearnWithUs";
 import OpenSourceStats from "../components/Rebuild/OpenSourceStats/StatsCard";
 import ZarfCapabilities from "../components/Rebuild/ZarfCapabilities/ZarfCapabilities";
+import SocialsBar from "../components/Rebuild/SocialsBar";
 
 const HomePaper = styled(Box)`
   display: flex;
@@ -41,6 +42,7 @@ const Home = () => {
         <ZarfCapabilities />
         <OurVision />
         <WhoWeAre />
+        <SocialsBar />
         <LearnWithUs />
       </HomePaper>
       <Footer />
