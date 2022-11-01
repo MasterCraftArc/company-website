@@ -15,7 +15,11 @@ import styled from "@emotion/styled";
 import NavLogo from "./NavBar/NavLogo";
 import palette from "../../theme/palette";
 import { Link as GatsbyLink } from "gatsby";
-import { footerLinks, namedLinks, socialsBarLinks } from "../../assets/data/navLinks";
+import {
+  footerLinks,
+  namedLinks,
+  socialsBarLinks,
+} from "../../assets/data/navLinks";
 import { Divider, IconButton, Link, SvgIcon, Typography } from "@mui/material";
 
 const FooterWrapper = styled(Box)`
@@ -132,12 +136,21 @@ function Footer() {
         </Typography>
         <Box>
           {socialsBarLinks.map((link, index) => {
-            let key=`footer-social-link-${link.text}-${index}`
+            let key = `footer-social-link-${link.text}-${index}`;
             return (
-              <FooterIconButton {...createTabPropsFromNavLink(link)} key={key} aria-label={link.text}>
-                <SvgIcon component={link.icon} inheritViewBox />
+              <FooterIconButton
+                size="large"
+                {...createTabPropsFromNavLink(link)}
+                key={key}
+                aria-label={link.text}
+              >
+                <SvgIcon
+                  fontSize="large"
+                  component={link.icon}
+                  inheritViewBox
+                />
               </FooterIconButton>
-            )
+            );
           })}
         </Box>
       </Box>

@@ -1,7 +1,16 @@
-import { IconButton, styled, SvgIcon, Box, Typography } from "@mui/material";
+import {
+  IconButton,
+  styled,
+  SvgIcon,
+  Box,
+  Typography,
+  Button,
+  MenuItem,
+  ListItemIcon,
+} from "@mui/material";
 import React from "react";
 import { hideSmall } from "../../utilities/display";
-import {socialsBarLinks} from '../../assets/data/navLinks';
+import { socialsBarLinks } from "../../assets/data/navLinks";
 import { createTabPropsFromNavLink } from "../../utilities/navLink";
 
 const SocialsBarWrapper = styled("section")`
@@ -20,28 +29,38 @@ const SocialsBarWrapper = styled("section")`
   );
 `;
 
-const IconButtonWithLabel = styled(Box) `
-    display: flex;
-    align-items: center;
-    gap: 8px;
-`
+const IconButtonWithLabel = styled(MenuItem)`
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+`;
 
 function SocialsBar() {
-  return <SocialsBarWrapper sx={{ ...hideSmall }}>
-    {socialsBarLinks.map((link, index) => {
-    const uniqueId = `socials-bar-${link.text}-${index}`; 
-      return (
-        <IconButtonWithLabel  >
-          <IconButton size="large" aria-labelledby={uniqueId}  {...createTabPropsFromNavLink(link)}>
-            <SvgIcon fontSize="large" component={link.icon} inheritViewBox></SvgIcon>
-          </IconButton>
-          <Typography variant="h6" color='primary.contrastText' id={uniqueId}>
-            {link.text}
-          </Typography>
-        </IconButtonWithLabel>
-      )
-    })}
-  </SocialsBarWrapper>;
+  return (
+    <SocialsBarWrapper sx={{ ...hideSmall }}>
+      {socialsBarLinks.map((link, index) => {
+        const uniqueId = `socials-bar-${link.text}-${index}`;
+        return (
+          <IconButtonWithLabel
+            component="a"
+            {...createTabPropsFromNavLink(link)}
+          >
+            <ListItemIcon size="large" aria-aria-labelledby={uniqueId}>
+              <SvgIcon
+                fontSize="large"
+                component={link.icon}
+                inheritViewBox
+              ></SvgIcon>
+            </ListItemIcon>
+            <Typography variant="h6" color="primary.contrastText" id={uniqueId}>
+              {link.text}
+            </Typography>
+          </IconButtonWithLabel>
+        );
+      })}
+    </SocialsBarWrapper>
+  );
 }
 
 export default SocialsBar;
