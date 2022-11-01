@@ -47,6 +47,7 @@ function CapabilitiesCard(props) {
       <Box
         component="img"
         src={props.topImage}
+        loading="lazy"
         width={"72px"}
         height={"70px"}
         sx={{ mx: "auto" }}

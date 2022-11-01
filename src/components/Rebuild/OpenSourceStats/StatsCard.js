@@ -174,8 +174,18 @@ function OpenSourceStats() {
             ></ButtonLink>
           </Box>
         </Box>
-        <CardBackground component="img" src={StatsCardPng} sx={hideSmall} />
-        <CardBackground component="img" src={StatsCardSmPng} sx={hideLarge} />
+        <CardBackground
+          component="img"
+          loading="lazy"
+          src={StatsCardPng}
+          sx={hideSmall}
+        />
+        <CardBackground
+          component="img"
+          loading="lazy"
+          src={StatsCardSmPng}
+          sx={hideLarge}
+        />
       </StatsCardWrapper>
       <ZarfBox leftAlignRef={prRef} />
     </Box>

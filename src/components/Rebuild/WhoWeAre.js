@@ -36,16 +36,19 @@ const WhoWeAre = () => (
         component="img"
         sx={{ maxWidth: { md: "30%" } }}
         src={ImageLeft}
+        loading="lazy"
         alt="Unicorns And Flag"
       />
       <Image
         component="img"
         sx={{ maxWidth: { md: "30%" } }}
         src={ImageCenter}
+        loading="lazy"
         alt="San Diego retreat."
       />
       <Image
         component="img"
+        loading="lazy"
         sx={{ maxWidth: { md: "30%" } }}
         src={ImageRight}
         alt="HR retreat"
