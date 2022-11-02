@@ -12,6 +12,7 @@ import LearnWithUs from "../components/Rebuild/LearnWithUs";
 import OpenSourceStats from "../components/Rebuild/OpenSourceStats/StatsCard";
 import ZarfCapabilities from "../components/Rebuild/ZarfCapabilities/ZarfCapabilities";
 import SocialsBar from "../components/Rebuild/SocialsBar";
+import useDarkBackground from "../hooks/useDarkBackground";
 
 const HomePaper = styled(Box)`
   display: flex;
@@ -24,9 +25,7 @@ const HomePaper = styled(Box)`
 
 // markup
 const Home = () => {
-  React.useEffect(() => {
-    document.body.style.background = palette.background.paper;
-  }, []);
+  useDarkBackground();
   return (
     <>
       <SiteHelmet

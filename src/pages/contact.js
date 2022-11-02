@@ -7,6 +7,7 @@ import NavBar from "../components/Rebuild/NavBar/NavBar";
 import SocialsBar from "../components/Rebuild/SocialsBar";
 import ContactHero from "../components/Rebuild/ContactHero";
 import WhereToFindUs from "../components/Rebuild/WhereToFindUs";
+import useDarkBackground from "../hooks/useDarkBackground";
 
 const ContactPaper = styled(Box)`
   display: flex;
@@ -17,9 +18,7 @@ const ContactPaper = styled(Box)`
 `;
 
 function Contact() {
-  React.useEffect(() => {
-    document.body.style.background = palette.background.paper;
-  }, []);
+  useDarkBackground();
   return (
     <>
       <SiteHelmet route="Contact" />
