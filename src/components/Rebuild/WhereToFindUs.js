@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, styled, Typography } from "@mui/material";
+import { Box, ListItemIcon, MenuItem, styled, Typography } from "@mui/material";
 import WhereToFindUsImg from "../../assets/jpg/where-to-find-us.jpg";
+import { Mail } from "@mui/icons-material";
 
 const Section = styled(Box)`
   display: flex;
@@ -48,10 +49,33 @@ function WhereToFindUs() {
             typography: { xs: "body2", md: "body1" },
           }}
         >
-          Our unicorns are fully remote and work from locations all across the
-          United States. We spend most of our day collaborating in our virtual
-          office on gather.
+          Looking for a Unicorn? You can find us in our virtual office on
+          Gather. We are a fully remote company with Unicorns who work all
+          across the United States. Our virtual office space keeps us connected
+          no matter where we are located.
         </Typography>
+        <Typography
+          sx={{
+            color: "text.secondary",
+            maxWidth: { md: "515px" },
+            typography: { xs: "body2", md: "body1" },
+          }}
+        >
+          If you want to contact the very real team behind Defense Unicorns,
+          email us at:
+        </Typography>
+        <Box>
+          <Mail />
+          <Typography
+            component="a"
+            href={"mailto: hello@defenseunicorns.com"}
+            variant="body2"
+            color="text.secondary"
+            marginLeft="20px"
+          >
+            hello@defenseunicorns.com
+          </Typography>
+        </Box>
       </Box>
       <Image
         component="img"
