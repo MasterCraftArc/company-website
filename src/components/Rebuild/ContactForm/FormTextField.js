@@ -13,6 +13,7 @@ function FormTextField(props) {
       size="small"
       error={initialized && !props.queryValue}
       onBlur={() => setInitialized(true)}
+      color="secondary"
       name={props.fieldType}
       variant="outlined"
       onChange={props.onChange}
