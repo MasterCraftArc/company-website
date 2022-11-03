@@ -1,11 +1,11 @@
 import React from "react";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "../ButtonLink";
 import {
   Section,
   SectionTitle,
   SectionDescription,
   SectionBody,
-} from "./Section";
+} from "../Section";
 import { Box, styled } from "@mui/material";
 import { namedLinks } from "../../assets/data/navLinks";
 import ImageLeft from "../../assets/png/who-we-are/who-we-are-left.png";

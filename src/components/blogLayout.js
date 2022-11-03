@@ -1,7 +1,7 @@
 import * as React from "react";
-import NavBar from "../components/Rebuild/NavBar/NavBar";
+import NavBar from "./sections/NavBar/NavBar";
 import BlogStyles from "./blogStyles";
-import Footer from "./Rebuild/footer";
+import Footer from "./sections/Footer";
 
 const Layout = (props) => {
   return (

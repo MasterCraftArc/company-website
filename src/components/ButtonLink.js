@@ -1,30 +1,8 @@
-import { hideLarge, hideSmall } from "../../utilities/display";
-import { isLocalLink } from "../../utilities/navLink";
 import React from "react";
-import { Link as GatsbyLink } from "gatsby";
 import Button from "@mui/material/Button";
-
-// type LinkVariant = 'local' | 'external';
-
-// type ButtonColor =
-//   | 'inherit'
-//   | 'primary'
-//   | 'secondary'
-//   | 'success'
-//   | 'error'
-//   | 'info'
-//   | 'warning'
-//   | undefined;
-
-// export interface ButtonLinkProps {
-//   text: string;
-//   url: string;
-//   target?: string;
-//   color?: ButtonColor;
-//   rel?: string;
-//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-//   linkComponent?: LinkVariant;
-// }
+import { Link as GatsbyLink } from "gatsby";
+import { isLocalLink } from "../utilities/navLink";
+import { hideLarge, hideSmall } from "../utilities/display";
 
 function ButtonLink(props) {
   return isLocalLink(props.url) ? (

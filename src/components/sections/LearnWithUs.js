@@ -1,8 +1,8 @@
 import React from "react";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "../ButtonLink";
 import { Box, styled, Card, Typography } from "@mui/material";
 import { LearnWithUsCards } from "../../assets/data/cardData";
-import { Section, SectionTitle, SectionDescription } from "./Section";
+import { Section, SectionTitle, SectionDescription } from "../Section";
 import CardBackground from "../../assets/png/resource-card-bg.png";
 
 const ResourceRow = styled(Box)``;

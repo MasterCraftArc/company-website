@@ -2,11 +2,6 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { fontWeights } from "../../../theme/typography";
 
-// interface StatProps {
-//   title: string | number;
-//   subtitle: string;
-//   boxRef?: MutableRefObject<HTMLDivElement | undefined>;
-// }
 function Stat({ title, subtitle, boxRef }) {
   return (
     <Box textAlign={"center"} minWidth="90px" ref={boxRef}>
