@@ -4,11 +4,6 @@ import { namedLinks } from "../../assets/data/navLinks";
 import { IconButton } from "@mui/material";
 import palette from "../../theme/palette";
 
-// interface SocialLinksProps extends PathOptional {
-//   slackSx?: SxProps<Theme>;
-//   githubSx?: SxProps<Theme>;
-// }
-
 function SocialLinks({ linkedInSx, githubSx }) {
   return (
     <>
