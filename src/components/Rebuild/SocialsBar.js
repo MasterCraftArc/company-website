@@ -41,9 +41,12 @@ function SocialsBar() {
         return (
           <IconButtonWithLabel
             key={uniqueId}
+            {...createTabPropsFromNavLink(link)}
+            id={uniqueId}
             component="a"
             aria-label={link.text}
-            {...createTabPropsFromNavLink(link)}
+            tabIndex="0"
+            role="link"
           >
             <ListItemIcon size="large">
               <SvgIcon
@@ -52,7 +55,7 @@ function SocialsBar() {
                 inheritViewBox
               ></SvgIcon>
             </ListItemIcon>
-            <Typography variant="h6" color="primary.contrastText" id={uniqueId}>
+            <Typography variant="h6" color="primary.contrastText">
               {link.text}
             </Typography>
           </IconButtonWithLabel>
