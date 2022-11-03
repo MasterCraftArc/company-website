@@ -1,23 +1,28 @@
 import { clearQuery, postContactForm, FieldType } from "./utils";
 import { Box, Button, Modal, Typography, styled } from "@mui/material";
 import React, { useEffect } from "react";
+import DougPng from "../../../assets/png/contact-modal-doug.png";
 import FormTextField from "./FormTextField";
+import { fontWeights } from "../../../theme/typography";
 
 const modalStyle = {
-  position: "absolute",
   top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
   width: 400,
-  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.07) 100%), #0D133D`,
-  boxShadow: `0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12)`,
-  p: 4,
+  left: "50%",
+  gap: "16px",
+  width: "342px",
+  height: "358px",
   display: "flex",
-  flexDirection: "column",
-  gap: "28px",
-  justifyContent: "center",
-  alignItems: "center",
+  borderRadius: "8px",
+  p: "32px 48px 24px",
   textAlign: "center",
+  position: "absolute",
+  alignItems: "center",
+  flexDirection: "column",
+  justifyContent: "center",
+  transform: "translate(-50%, -50%)",
+  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.12) 100%), #0D133D;`,
+  boxShadow: `0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)`,
 };
 
 const FormCard = styled(Box)`
@@ -44,14 +49,14 @@ const errorModalProps = {
 
 const successModalProps = {
   title: "Thank you!",
-  body: `We'll be in touch shortly`,
+  body: "Our team will personally review your request and match you with the unicorn who can best assist you.",
 };
 
 function ContactForm() {
   const [query, setQuery] = React.useState(clearQuery());
   const [canSubmit, setCanSubmit] = React.useState(false);
-  const [openModal, setOpenModal] = React.useState(false);
-  const [modalProps, setModalProps] = React.useState(successModalProps);
+  const [openModal, setOpenModal] = React.useState(true);
+  const [modalProps, setModalProps] = React.useState(errorModalProps);
 
   const handleSubmit = React.useCallback(
     async (event) => {
@@ -105,17 +110,24 @@ function ContactForm() {
     >
       <Modal open={openModal} onClose={closeModal}>
         <Box sx={modalStyle}>
-          <Typography variant="h4" marginTop={"4px"}>
+          <Box component="img" alt="Doug the Unicorn" src={DougPng} />
+          <Typography
+            variant="h5"
+            color="secondary"
+            sx={{ fontSize: "30px", fontWeight: fontWeights.regular }}
+          >
             {modalProps.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary" textAlign={"left"}>
+          <Typography variant="body2" color="text.secondary">
             {modalProps.body}
           </Typography>
           <Button
-            variant="contained"
-            color="secondary"
             onClick={closeModal}
-            sx={{ width: "50%" }}
+            color="inherit"
+            sx={{
+              alignSelf: "end",
+              // color: "primary.contrastText",
+            }}
           >
             Close
           </Button>
