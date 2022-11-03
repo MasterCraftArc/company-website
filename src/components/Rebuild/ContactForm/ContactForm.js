@@ -7,7 +7,6 @@ import { fontWeights } from "../../../theme/typography";
 
 const modalStyle = {
   top: "50%",
-  width: 400,
   left: "50%",
   gap: "16px",
   width: "342px",

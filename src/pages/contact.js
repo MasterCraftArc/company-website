@@ -1,5 +1,4 @@
 import React from "react";
-import palette from "../theme/palette";
 import { Box, styled } from "@mui/material";
 import SiteHelmet from "../components/SiteHelmet";
 import Footer from "../components/Rebuild/footer";

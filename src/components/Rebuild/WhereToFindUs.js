@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, ListItemIcon, MenuItem, styled, Typography } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import WhereToFindUsImg from "../../assets/jpg/where-to-find-us.jpg";
 import { Mail } from "@mui/icons-material";
 
