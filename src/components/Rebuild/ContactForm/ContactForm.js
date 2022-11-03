@@ -55,8 +55,8 @@ const successModalProps = {
 function ContactForm() {
   const [query, setQuery] = React.useState(clearQuery());
   const [canSubmit, setCanSubmit] = React.useState(false);
-  const [openModal, setOpenModal] = React.useState(true);
-  const [modalProps, setModalProps] = React.useState(errorModalProps);
+  const [openModal, setOpenModal] = React.useState(false);
+  const [modalProps, setModalProps] = React.useState(successModalProps);
 
   const handleSubmit = React.useCallback(
     async (event) => {
