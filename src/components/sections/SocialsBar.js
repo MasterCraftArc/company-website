@@ -45,7 +45,7 @@ function SocialsBar() {
             id={uniqueId}
             component="a"
             aria-label={link.text}
-            tabIndex="0"
+            tabIndex={0}
             role="link"
           >
             <ListItemIcon size="large">

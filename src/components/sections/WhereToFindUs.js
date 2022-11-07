@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, styled, Typography } from "@mui/material";
-import WhereToFindUsImg from "../../assets/jpg/where-to-find-us.jpg";
+import WhereToFindUsImg from "../../assets/png/where-to-find-us.png";
 import { Mail } from "@mui/icons-material";
 
 const Section = styled(Box)`
