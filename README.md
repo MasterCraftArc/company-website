@@ -27,22 +27,11 @@
 
 ## Branches
 
-- Individual story branches are encouraged but not a requirement. With the exception of Special Requests individual story branches should be merged, via pull request, into the "feature" or "bug" branches depending on their label and never into "main". Individual story branches should be prefixed with their label followed by a dash and the story number. Examples: `feature-434`, `chore-122`, `bug-172`, `documentation-132`
-
-### Feature
-
-- Sprint stories are to be committed to the feature branch for weekly review and release.
-- Single pull request to be merged at the end of the week.
-
-### Bug
-
-- bugs of high priority should be committed to the bug branch for review and immediate release.
-- documentation/chores/ui tweaks that need immediate release or do not effect the rendered site itself.
+- Branches should be created for an issue. Related issues may be added if they share overlapping work and may be merged into one issue.  
 
 ### Special Requests
 
 - Special requests are high priority stories from Business Operations and leadership
-- Individual branches should be created with the prefix SR followed by a dash and the story number `SR-122`.
 - Should be reviewed ASAP on completion and released.
 
 ## Commits
