@@ -12,6 +12,7 @@ import useDarkBackground from "../hooks/useDarkBackground";
 import LearnWithUs from "../components/sections/LearnWithUs";
 import OpenSourceStats from "../components/sections/OpenSourceStats/StatsCard";
 import ZarfCapabilities from "../components/sections/ZarfCapabilities/ZarfCapabilities";
+import OurCulture from "../components/sections/OurCulture/OurCulture";
 
 const HomePaper = styled(Box)`
   display: flex;
@@ -41,6 +42,7 @@ const Home = () => {
         <WhoWeAre />
         <SocialsBar />
         <LearnWithUs />
+        <OurCulture />
       </HomePaper>
       <Footer />
     </>
