@@ -57,13 +57,10 @@ function ContactForm() {
   const [openModal, setOpenModal] = React.useState(false);
   const [modalProps, setModalProps] = React.useState(successModalProps);
 
-  const handleSubmit = React.useCallback(
-    async (event) => {
-      event.preventDefault();
-      await postContactForm(query, handleSuccess, handleFailure);
-    },
-    [query]
-  );
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await postContactForm(query, handleSuccess, handleFailure);
+  };
 
   function handleSuccess() {
     setModalProps(successModalProps);

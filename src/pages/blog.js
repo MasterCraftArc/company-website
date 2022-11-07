@@ -1,12 +1,12 @@
 import { graphql } from "gatsby";
 import { motion } from "framer-motion";
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Footer from "../components/sections/Footer";
 import Button from "../components/button";
 import SiteHelmet from "../components/SiteHelmet";
 import BackgroundSection from "../components/equipBg";
 import PostContainer from "../components/postContainer";
+import NavBar from "../components/sections/NavBar/NavBar";
 
 const pageStyles = {
   color: "black",
@@ -26,7 +26,7 @@ const Blog = ({ data }) => {
     <BackgroundSection className="bg-local">
       <div className="h-screen blog fontTitle" style={pageStyles}>
         <SiteHelmet route="Learn" description="DevSecOps Starter Pack" />
-        <Header />
+        <NavBar />
         <section className="hero flex flex-col justify-center">
           <div
             className="pb-8 h-full flex flex-col justify-center"

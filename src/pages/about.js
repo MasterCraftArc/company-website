@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import NavBar from "../components/sections/NavBar/NavBar";
+import Footer from "../components/sections/Footer";
 import SiteHelmet from "../components/SiteHelmet";
 import pageData from "../components/about/pageData.json";
 import Hero from "../components/about/hero";
@@ -8,6 +8,7 @@ import AboutSection from "../components/about/section";
 
 const pageStyles = {
   color: "#232129",
+  marginTop: "-6rem",
 };
 
 // markup
@@ -20,7 +21,7 @@ const About = () => {
       className="container flex flex-col bg-top max-w-full"
     >
       <SiteHelmet route="About" />
-      <Header />
+      <NavBar pathname="/about" />
       <Hero />
 
       {pageData.map((page, i) => {
