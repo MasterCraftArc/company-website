@@ -2,7 +2,7 @@ import NavTab from "./NavTabs";
 import NavLogo from "./NavLogo";
 import NavTabMenu from "./NavMenu";
 import NavDrawer from "./NavDrawer";
-import SocialLinks from "../SocialLinks";
+import SocialLinks from "./SocialLinks";
 import palette from "../../../theme/palette";
 import onScroll from "../../../hooks/onScroll";
 import MenuIcon from "@mui/icons-material/Menu";

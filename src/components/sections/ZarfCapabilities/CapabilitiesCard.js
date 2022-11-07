@@ -2,17 +2,6 @@ import React from "react";
 import { Box, Card as MuiCard, Typography, styled } from "@mui/material";
 import CardBackground from "../../../assets/png/capabilities-card-bg.png";
 import { fonts } from "../../../theme/typography";
-// type ZarfCardVariant = "nocard" | "card";
-// type BodyColor = "text.primary" | "text.secondary";
-
-// export interface ZarfCardProps {
-//   topImage: string;
-//   headerFirstLine: string;
-//   headerSecondLine: string;
-//   body: string;
-//   variant?: ZarfCardVariant;
-//   bodyColor?: BodyColor;
-// }
 
 const StyledCard = styled(MuiCard)`
   border-radius: 24px;

@@ -1,6 +1,6 @@
 import Stat from "./Stat";
 import ZarfBox from "./ZarfBox";
-import ButtonLink from "../ButtonLink";
+import ButtonLink from "../../ButtonLink";
 import useResize from "../../../hooks/onResize";
 import { Box, styled, Typography } from "@mui/material";
 import { namedLinks } from "../../../assets/data/navLinks";

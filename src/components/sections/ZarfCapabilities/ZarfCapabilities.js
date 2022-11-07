@@ -1,9 +1,9 @@
 import React from "react";
-import ButtonLink from "../ButtonLink";
+import ButtonLink from "../../ButtonLink";
 import CapabilitiesCardRow from "./CapabilitiesCardRow";
 import { namedLinks } from "../../../assets/data/navLinks";
 import { zarfCapabilityCards } from "../../../assets/data/cardData";
-import { Section, SectionTitle, SectionDescription } from "../Section";
+import { Section, SectionTitle, SectionDescription } from "../../Section";
 
 function ZarfCapabilities() {
   return (
