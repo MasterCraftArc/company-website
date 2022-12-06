@@ -29,7 +29,7 @@ function ValueIcon(value) {
         <Box
           component="img"
           src={value.icon}
-          sx={{ height: "84px", width: "84px" }}
+          sx={{ height: "80px", width: "80px" }}
           alt={value.alt}
         />
       </Box>
