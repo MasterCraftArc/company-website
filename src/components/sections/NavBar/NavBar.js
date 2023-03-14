@@ -7,7 +7,7 @@ import palette from "../../../theme/palette";
 import onScroll from "../../../hooks/onScroll";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback, useState } from "react";
-import { navLinks } from "../../../assets/data/navLinks";
+import { navLinks, namedLinks } from "../../../assets/data/navLinks";
 import { hideSmall, hideLarge } from "../../../utilities/display";
 import { createTabPropsFromNavLink } from "../../../utilities/navLink";
 import {
@@ -18,6 +18,7 @@ import {
   Toolbar,
   styled,
   SvgIcon,
+  Typography,
 } from "@mui/material";
 
 const TRANSPARENT_ELEVATION = 0;
@@ -33,11 +34,21 @@ const AppBarOpacity = {
 
 const StyledAppBar = styled(AppBar)`
   width: 100vw;
-  height: 6rem;
   margin: 0;
   background-color: transparent;
   transition: background 1s ease-in-out;
+  border-radius: none;
 `;
+
+const StyledAnnouncement = styled(Typography)`
+  border-radius: 0px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  color: rgba(0, 0, 0, 0.87);
+`
+
 
 function NavBar({ pathname }) {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -65,10 +76,10 @@ function NavBar({ pathname }) {
     <>
       <StyledAppBar
         elevation={navElevation}
-        sx={{ background: navColor }}
         position="sticky"
       >
-        <Toolbar sx={{ flexGrow: 1, justifyContent: "space-between" }}>
+        <StyledAnnouncement component="div" backgroundColor={palette.secondary.main} color="black" variant="subtitle2">⭐️ Show Doug some love, follow us on&nbsp;<Typography component={'a'} variant="subtitle2" href={namedLinks.twitter.url} sx={{textDecoration: 'underline'}}>Twitter</Typography></StyledAnnouncement>
+        <Toolbar sx={{ flexGrow: 1, justifyContent: "space-between", background: navColor, height: '6rem' }}>
           {/* Mobile between xs and medium */}
           <IconButton
             size="large"
