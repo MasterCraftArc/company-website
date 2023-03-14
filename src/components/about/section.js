@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Section = (props) => {
   return (
@@ -21,10 +21,7 @@ const Section = (props) => {
       </div>
 
       <div className="imageContainer h-1/2 sm:h-full sm:w-1/2 flex justify-center items-center p-14 sm:p-5 xl:p-16 my-auto">
-        <img
-          className={`${props.img} w-2/3 sm:h-auto mx-auto`}
-          alt="section thumbnail"
-        />
+        <img className={`${props.img} w-2/3 sm:h-auto mx-auto`} alt="section thumbnail" />
       </div>
     </section>
   );

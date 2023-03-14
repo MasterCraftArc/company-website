@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, styled } from "@mui/material";
+import React from 'react';
+import { Box, styled } from '@mui/material';
 
 export const SectionWrapper = styled(Box)`
   display: flex;
@@ -9,7 +9,7 @@ export const SectionWrapper = styled(Box)`
   gap: 12px;
 `;
 
-export const sectionSx = { px: "32px" };
+export const sectionSx = { px: '32px' };
 
 function Section({ sx, children }) {
   return (

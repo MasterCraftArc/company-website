@@ -1,11 +1,11 @@
-import { isLocalLink } from "../../../utilities/navLink";
-import { Link, Typography } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import palette from "../../../theme/palette";
-import React from "react";
-import { Link as LocalLink } from "gatsby";
-import { TabUnstyled, TabsUnstyled, tabUnstyledClasses } from "@mui/base";
-import { fontWeights } from "../../../theme/typography";
+import { isLocalLink } from '../../../utilities/navLink';
+import { Link, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import palette from '../../../theme/palette';
+import React from 'react';
+import { Link as LocalLink } from 'gatsby';
+import { TabUnstyled, TabsUnstyled, tabUnstyledClasses } from '@mui/base';
+import { fontWeights } from '../../../theme/typography';
 
 // interface DrawerTabProps extends TabUnstyledProps {
 //   target?: string;
@@ -43,17 +43,14 @@ export const DrawerTabs = styled(TabsUnstyled)`
 
 export function LocalDrawerTab(props) {
   return (
-    <LocalLink
-      to={props.href}
-      style={{ textDecoration: "none", width: "100%" }}
-    >
+    <LocalLink to={props.href} style={{ textDecoration: 'none', width: '100%' }}>
       <StyledDrawerTab {...props}>
         <Typography
           component="h5"
           color="inherit"
           width="100%"
           textAlign="center"
-          sx={{ typography: "h5", fontWeight: fontWeights.regular }}
+          sx={{ typography: 'h5', fontWeight: fontWeights.regular }}
         >
           {props.label}
         </Typography>
@@ -64,19 +61,14 @@ export function LocalDrawerTab(props) {
 
 export function ExternalDrawerTab(props) {
   return (
-    <Link
-      sx={{ width: "100%" }}
-      underline="none"
-      href={props.href}
-      target={props.target}
-    >
+    <Link sx={{ width: '100%' }} underline="none" href={props.href} target={props.target}>
       <StyledDrawerTab {...props}>
         <Typography
           component="h5"
           color="inherit"
           width="100%"
           textAlign="center"
-          sx={{ typography: "h5", fontWeight: fontWeights.regular }}
+          sx={{ typography: 'h5', fontWeight: fontWeights.regular }}
         >
           {props.label}
         </Typography>
@@ -86,11 +78,7 @@ export function ExternalDrawerTab(props) {
 }
 
 function DrawerTab(props) {
-  return isLocalLink(props.href) ? (
-    <LocalDrawerTab {...props} />
-  ) : (
-    <ExternalDrawerTab {...props} />
-  );
+  return isLocalLink(props.href) ? <LocalDrawerTab {...props} /> : <ExternalDrawerTab {...props} />;
 }
 
 export default DrawerTab;

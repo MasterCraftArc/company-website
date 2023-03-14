@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-import Seo from "./seo";
+import Seo from './seo';
 
 function SiteHelmet(props) {
   return (

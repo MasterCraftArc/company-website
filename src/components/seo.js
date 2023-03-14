@@ -5,27 +5,16 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import "bootstrap-icons/font/bootstrap-icons.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
-const TWITTER_IMAGE_URL =
-  "https://www.defenseunicorns.com/icons/icon-96x96.png";
+const TWITTER_IMAGE_URL = 'https://www.defenseunicorns.com/icons/icon-96x96.png';
 
-const Seo = ({
-  description,
-  lang,
-  meta,
-  title,
-  url,
-  image,
-  author,
-  route,
-  twitterImage,
-}) => {
+const Seo = ({ description, lang, meta, title, url, image, author, route, twitterImage }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -50,75 +39,75 @@ const Seo = ({
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       title={metaTitle}
       titleTemplate={`%s | ${route}`}
       link={[]}
       meta={[
         {
-          charSet: "utf-8",
+          charSet: 'utf-8'
         },
         {
-          name: "robots",
-          content: "index, follow",
+          name: 'robots',
+          content: 'index, follow'
         },
         {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1",
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
         },
         {
           name: `theme-color`,
-          content: `#ffffff`,
+          content: `#ffffff`
         },
         {
           name: `description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           name: `keywords`,
-          content: site.siteMetadata.keywords,
+          content: site.siteMetadata.keywords
         },
         {
           property: `og:title`,
-          content: metaTitle,
+          content: metaTitle
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           property: `og:image`,
-          content: metaImage,
+          content: metaImage
         },
         {
           property: `og:url`,
-          content: metaUrl,
+          content: metaUrl
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: `website`
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary`
         },
         {
           name: `twitter:image`,
-          content: twitterImage || TWITTER_IMAGE_URL,
+          content: twitterImage || TWITTER_IMAGE_URL
         },
         {
           name: `twitter:creator`,
-          content: metaAuthor,
+          content: metaAuthor
         },
         {
           name: `twitter:title`,
-          content: metaTitle,
+          content: metaTitle
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
-        },
+          content: metaDescription
+        }
       ].concat(meta)}
     />
   );
@@ -133,7 +122,7 @@ Seo.defaultProps = {
   img: ``,
   author: ``,
   route: ``,
-  twitterImage: ``,
+  twitterImage: ``
 };
 
 Seo.propTypes = {
@@ -145,7 +134,7 @@ Seo.propTypes = {
   image: PropTypes.string,
   twitterImage: PropTypes.string,
   author: PropTypes.string,
-  route: PropTypes.string,
+  route: PropTypes.string
 };
 
 export default Seo;

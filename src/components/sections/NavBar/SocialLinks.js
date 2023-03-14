@@ -1,8 +1,8 @@
-import React from "react";
-import { GitHub, LinkedIn } from "@mui/icons-material";
-import { namedLinks } from "../../../assets/data/navLinks";
-import { IconButton } from "@mui/material";
-import palette from "../../../theme/palette";
+import React from 'react';
+import { GitHub, LinkedIn } from '@mui/icons-material';
+import { namedLinks } from '../../../assets/data/navLinks';
+import { IconButton } from '@mui/material';
+import palette from '../../../theme/palette';
 
 function SocialLinks({ linkedInSx, githubSx }) {
   return (
@@ -11,7 +11,7 @@ function SocialLinks({ linkedInSx, githubSx }) {
         size="large"
         sx={{
           ...linkedInSx,
-          padding: "12px",
+          padding: '12px'
         }}
         href={namedLinks.linkedIn.url}
         title={namedLinks.linkedIn.text}
@@ -24,7 +24,7 @@ function SocialLinks({ linkedInSx, githubSx }) {
         size="large"
         sx={{
           ...githubSx,
-          padding: "12px",
+          padding: '12px'
         }}
         href={namedLinks.github.url}
         title={namedLinks.github.text}

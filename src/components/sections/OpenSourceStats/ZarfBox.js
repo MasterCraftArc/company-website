@@ -1,8 +1,8 @@
-import Box from "@mui/material/Box";
-import React, { useState } from "react";
-import useResize from "../../../hooks/onResize";
-import { hideSmall } from "../../../utilities/display";
-import ZarfBubbles from "../../../assets/png/zarf-bubbles.png";
+import Box from '@mui/material/Box';
+import React, { useState } from 'react';
+import useResize from '../../../hooks/onResize';
+import { hideSmall } from '../../../utilities/display';
+import ZarfBubbles from '../../../assets/png/zarf-bubbles.png';
 
 function ZarfBox(props) {
   const [zarfTop, setZarfTop] = useState();
@@ -28,12 +28,12 @@ function ZarfBox(props) {
       alt="Zarf a light blue and purple axolotle"
       sx={{
         ...hideSmall,
-        width: "262px",
-        height: "260px",
-        position: "absolute",
+        width: '262px',
+        height: '260px',
+        position: 'absolute',
         top: zarfTop,
         left: zarfLeft,
-        zIndex: 1,
+        zIndex: 1
       }}
     />
   );

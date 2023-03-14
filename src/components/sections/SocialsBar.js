@@ -1,16 +1,10 @@
-import {
-  styled,
-  SvgIcon,
-  Typography,
-  MenuItem,
-  ListItemIcon,
-} from "@mui/material";
-import React from "react";
-import { hideSmall } from "../../utilities/display";
-import { socialsBarLinks } from "../../assets/data/navLinks";
-import { createTabPropsFromNavLink } from "../../utilities/navLink";
+import { styled, SvgIcon, Typography, MenuItem, ListItemIcon } from '@mui/material';
+import React from 'react';
+import { hideSmall } from '../../utilities/display';
+import { socialsBarLinks } from '../../assets/data/navLinks';
+import { createTabPropsFromNavLink } from '../../utilities/navLink';
 
-const SocialsBarWrapper = styled("section")`
+const SocialsBarWrapper = styled('section')`
   width: 100vw;
   height: 160px;
   flex-direction: row;
@@ -49,11 +43,7 @@ function SocialsBar() {
             role="link"
           >
             <ListItemIcon size="large">
-              <SvgIcon
-                fontSize="large"
-                component={link.icon}
-                inheritViewBox
-              ></SvgIcon>
+              <SvgIcon fontSize="large" component={link.icon} inheritViewBox></SvgIcon>
             </ListItemIcon>
             <Typography variant="h6" color="primary.contrastText">
               {link.text}

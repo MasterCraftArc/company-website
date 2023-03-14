@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 function useResize(listener) {
   useEffect(() => {
     listener();
-    window.addEventListener("resize", listener);
+    window.addEventListener('resize', listener);
     return () => {
-      window.removeEventListener("resize", listener);
+      window.removeEventListener('resize', listener);
     };
   }, [listener]);
 }

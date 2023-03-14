@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
 
-import { convertToBgImage } from "gbimage-bridge";
-import BackgroundImage from "gatsby-background-image";
+import { convertToBgImage } from 'gbimage-bridge';
+import BackgroundImage from 'gatsby-background-image';
 
 const BackgroundSection = ({ className, children }) => {
   const { placeholderImage } = useStaticQuery(
@@ -11,11 +11,7 @@ const BackgroundSection = ({ className, children }) => {
       query {
         placeholderImage: file(relativePath: { eq: "about/background.jpg" }) {
           childImageSharp {
-            gatsbyImageData(
-              width: 3840
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(width: 3840, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
         }
       }
