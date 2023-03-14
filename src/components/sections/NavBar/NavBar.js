@@ -11,7 +11,7 @@ import { navLinks, namedLinks } from '../../../assets/data/navLinks';
 import { hideSmall, hideLarge } from '../../../utilities/display';
 import { createTabPropsFromNavLink } from '../../../utilities/navLink';
 import { AppBar, Box, IconButton, Tabs, Toolbar, styled, SvgIcon, Typography } from '@mui/material';
-
+import Twitter from '@mui/icons-material/Twitter';
 const TRANSPARENT_ELEVATION = 0;
 const TRANSITION_HEIGHT = 70;
 const DEFAULT_ELEVATION = 1;
@@ -32,12 +32,20 @@ const StyledAppBar = styled(AppBar)`
 `;
 
 const StyledAnnouncement = styled(Typography)`
+  background: linear-gradient(
+    90deg,
+    #002555 0%,
+    #244a8f 25.83%,
+    #42447f 48.95%,
+    #6c3b69 73.64%,
+    #eb2126 100%
+  );
   border-radius: 0px !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 24px;
-  color: rgba(0, 0, 0, 0.87);
+  padding-top: 8px;
+  padding-bottom: 8px;
 `;
 
 function NavBar({ pathname }) {
@@ -62,13 +70,9 @@ function NavBar({ pathname }) {
   return (
     <>
       <StyledAppBar elevation={navElevation} position="sticky">
-        <StyledAnnouncement
-          component="div"
-          backgroundColor={palette.secondary.main}
-          color="black"
-          variant="subtitle2"
-        >
-          ⭐️ Show Doug some love, follow us on&nbsp;
+        <StyledAnnouncement component="div" variant="subtitle2">
+          <Twitter sx={{ color: 'secondary.main' }} />
+          &nbsp;Show Doug some love, follow us on&nbsp;
           <Typography
             component={'a'}
             variant="subtitle2"
