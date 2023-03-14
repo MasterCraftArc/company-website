@@ -69,19 +69,19 @@ function NavBar({ pathname }) {
 
   return (
     <>
+      <StyledAnnouncement component="div" variant="subtitle2">
+        <Twitter sx={{ color: 'secondary.main' }} />
+        &nbsp;Show Doug some love. Follow us on&nbsp;
+        <Typography
+          component={'a'}
+          variant="subtitle2"
+          href={namedLinks.twitter.url}
+          sx={{ textDecoration: 'underline' }}
+        >
+          Twitter!
+        </Typography>
+      </StyledAnnouncement>
       <StyledAppBar elevation={navElevation} position="sticky">
-        <StyledAnnouncement component="div" variant="subtitle2">
-          <Twitter sx={{ color: 'secondary.main' }} />
-          &nbsp;Show Doug some love, follow us on&nbsp;
-          <Typography
-            component={'a'}
-            variant="subtitle2"
-            href={namedLinks.twitter.url}
-            sx={{ textDecoration: 'underline' }}
-          >
-            Twitter
-          </Typography>
-        </StyledAnnouncement>
         <Toolbar
           sx={{
             flexGrow: 1,
