@@ -1,56 +1,55 @@
-import { navigate } from "gatsby";
-import * as React from "react";
-import Tooltip from "@mui/material/Tooltip";
+import { navigate } from 'gatsby';
+import * as React from 'react';
+import Tooltip from '@mui/material/Tooltip';
 
 const trainedCardStyle = {
-  height: "386px",
-  backgroundColor: "#F3F3F3",
+  height: '386px',
+  backgroundColor: '#F3F3F3'
 };
 
 const trainedCardBody = {
-  fontSize: "16px",
-  width: "319px",
-  paddingTop: "2%",
-  marginTop: "auto",
-  marginBottom: "4%",
-  color: "rgba(0, 0, 0, 0.74)",
-  lineHeight: "24px",
+  fontSize: '16px',
+  width: '319px',
+  paddingTop: '2%',
+  marginTop: 'auto',
+  marginBottom: '4%',
+  color: 'rgba(0, 0, 0, 0.74)',
+  lineHeight: '24px'
 };
 
 const trainedCardTitle = {
-  fontWeight: "500",
-  color: "#154A8F",
-  paddingTop: "4%",
-  fontSize: "18px",
+  fontWeight: '500',
+  color: '#154A8F',
+  paddingTop: '4%',
+  fontSize: '18px'
 };
 
 const trainedCardDate = {
-  color: "rgba(0, 0, 0, 0.6)",
-  fontSize: "12px",
+  color: 'rgba(0, 0, 0, 0.6)',
+  fontSize: '12px'
 };
 
 const textStyle = {};
 
 const copyTimeout = (copyButton) => {
-  copyButton.current.className =
-    "bi bi-check-lg absolute right-10 bottom-5 text-3xl text-lime-700";
+  copyButton.current.className = 'bi bi-check-lg absolute right-10 bottom-5 text-3xl text-lime-700';
   setTimeout(
     () =>
       (copyButton.current.className =
-        "bi bi-box-arrow-up absolute right-10 bottom-5 text-3xl cursor-pointer hover:text-blue-600"),
+        'bi bi-box-arrow-up absolute right-10 bottom-5 text-3xl cursor-pointer hover:text-blue-600'),
     3000
   );
 };
 
 const copyToClipboard = (str) => {
-  const el = document.createElement("textarea");
+  const el = document.createElement('textarea');
   el.value = str;
-  el.setAttribute("readonly", "");
-  el.style.position = "absolute";
-  el.style.left = "-9999px";
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
   document.body.appendChild(el);
   el.select();
-  document.execCommand("copy");
+  document.execCommand('copy');
   document.body.removeChild(el);
   //https://raptis.wtf/blog/gatsby-mdx-copy-code-button-with-confetti/
 };
@@ -77,8 +76,8 @@ const Card = React.forwardRef((props, ref) => {
           className="bg-gray-50 w-full flex justify-center items-center bg-cover bg-center"
           style={{
             backgroundImage: `url(${props.imgDisplay})`,
-            height: "193px",
-            width: "319px",
+            height: '193px',
+            width: '319px'
           }}
         ></div>
 
@@ -109,12 +108,12 @@ const Card = React.forwardRef((props, ref) => {
           role="none"
           className="bi bi-box-arrow-up absolute right-12 bottom-7 text-3xl cursor-pointer hover:text-blue-600"
           onClick={() => {
-            copyToClipboard("defenseunicorns.com" + props.cardLink);
+            copyToClipboard('defenseunicorns.com' + props.cardLink);
             copyTimeout(copyButton);
           }}
           ref={copyButton}
           onKeyDown={() => {
-            copyToClipboard("defenseunicorns.com" + props.cardLink);
+            copyToClipboard('defenseunicorns.com' + props.cardLink);
             copyTimeout(copyButton);
           }}
         ></i>

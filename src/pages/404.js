@@ -1,8 +1,8 @@
-import * as React from "react";
-import { graphql } from "gatsby";
-import SiteHelmet from "../components/SiteHelmet";
-import StyledBackgroundSection from "../components/contactBg";
-import Button from "../components/button";
+import * as React from 'react';
+import { graphql } from 'gatsby';
+import SiteHelmet from '../components/SiteHelmet';
+import StyledBackgroundSection from '../components/contactBg';
+import Button from '../components/button';
 
 const NotFoundPage = ({ data, location }) => {
   // const siteTitle = data.site.siteMetadata.title

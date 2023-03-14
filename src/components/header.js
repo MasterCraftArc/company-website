@@ -1,25 +1,23 @@
-import { setRefClassName } from "../utilities/refHelpers";
-import { motion, AnimatePresence } from "framer-motion";
-import logoWhite from "../images/DU_logo_White.svg";
-import logoColor from "../images/DU_logo_Color.svg";
-import React, { useEffect } from "react";
-import logo from "../images/logo.png";
-import SocialsBox from "./socialsBox";
-import { Link } from "gatsby";
+import { setRefClassName } from '../utilities/refHelpers';
+import { motion, AnimatePresence } from 'framer-motion';
+import logoWhite from '../images/DU_logo_White.svg';
+import logoColor from '../images/DU_logo_Color.svg';
+import React, { useEffect } from 'react';
+import logo from '../images/logo.png';
+import SocialsBox from './socialsBox';
+import { Link } from 'gatsby';
 
 const logoStyles = {
-  maxWidth: "262px",
-  maxHeight: "56px",
+  maxWidth: '262px',
+  maxHeight: '56px'
 };
 
-const DEFAULT_SOCIAL_ICON_STYLE = "text-white socialHover";
-const SCROLLED_SOCIAL_ICON_STYLE = "text-blue-900 socialHover";
+const DEFAULT_SOCIAL_ICON_STYLE = 'text-white socialHover';
+const SCROLLED_SOCIAL_ICON_STYLE = 'text-blue-900 socialHover';
 function Header(props) {
   const [navDrawerOpen, setNavDrawerOpen] = React.useState(false);
   const [logoStyle, setLogoStyle] = React.useState(logoWhite);
-  const [socialIconClass, setSocialIconClass] = React.useState(
-    DEFAULT_SOCIAL_ICON_STYLE
-  );
+  const [socialIconClass, setSocialIconClass] = React.useState(DEFAULT_SOCIAL_ICON_STYLE);
   const logoRef = React.createRef();
   const mobileRef = React.createRef();
   const stickyHeader = React.createRef();
@@ -27,25 +25,25 @@ function Header(props) {
   const handleScroll = () => {
     if (!props.background && window.scrollY <= 50) {
       setLogoStyle(logoWhite);
-      setRefClassName(mobileRef, "bi bi-list");
-      setRefClassName(stickyHeader, "navClear");
+      setRefClassName(mobileRef, 'bi bi-list');
+      setRefClassName(stickyHeader, 'navClear');
       setSocialIconClass(DEFAULT_SOCIAL_ICON_STYLE);
     } else {
       setLogoStyle(logoColor);
-      setRefClassName(mobileRef, "bi bi-list");
+      setRefClassName(mobileRef, 'bi bi-list');
       setSocialIconClass(SCROLLED_SOCIAL_ICON_STYLE);
-      setRefClassName(stickyHeader, "navBg md:px-24 text-blue-900");
+      setRefClassName(stickyHeader, 'navBg md:px-24 text-blue-900');
     }
   };
 
   useEffect(() => {
-    setRefClassName(stickyHeader, "navClear");
-    window.addEventListener("scroll", () => handleScroll());
+    setRefClassName(stickyHeader, 'navClear');
+    window.addEventListener('scroll', () => handleScroll());
   });
 
   useEffect(() => {
-    if (navDrawerOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "auto";
+    if (navDrawerOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'auto';
   }, [navDrawerOpen]);
 
   return (
@@ -54,11 +52,11 @@ function Header(props) {
       <nav
         className=""
         style={{
-          zIndex: "15",
-          width: "100%",
-          top: "0",
-          left: "0",
-          position: "fixed",
+          zIndex: '15',
+          width: '100%',
+          top: '0',
+          left: '0',
+          position: 'fixed'
         }}
       >
         <div className="w-full" ref={stickyHeader}>
@@ -68,12 +66,7 @@ function Header(props) {
                 className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                 to="/"
               >
-                <img
-                  src={logoStyle}
-                  alt="Defense Unicorns Logo"
-                  style={logoStyles}
-                  ref={logoRef}
-                />
+                <img src={logoStyle} alt="Defense Unicorns Logo" style={logoStyles} ref={logoRef} />
               </Link>
               <button
                 className="cursor-pointer text-4xl leading-none px-1 py-0 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -84,18 +77,12 @@ function Header(props) {
               </button>
             </div>
             <div
-              className={
-                "hidden lg:flex flex-grow items-center lg:bg-transparent py-2"
-              }
+              className={'hidden lg:flex flex-grow items-center lg:bg-transparent py-2'}
               id="example-navbar-danger"
             >
               <ul className="navMenu flex flex-col lg:flex-row list-none lg:ml-auto m-0 ">
                 <li className="nav-item">
-                  <Link
-                    className="text-xl uppercase navLink"
-                    to="/"
-                    activeClassName="activeNav"
-                  >
+                  <Link className="text-xl uppercase navLink" to="/" activeClassName="activeNav">
                     <span className="mt-2 ml-2">Home</span>
                   </Link>
                 </li>
@@ -155,12 +142,12 @@ function Header(props) {
               initial={{ x: -1000 }}
               animate={{ x: 0 }}
               transition={{
-                type: "tween",
+                type: 'tween'
               }}
               exit={{ x: -1000 }}
               className={
-                "z-20 min-h-screen w-screen bg-white fixed top-0 left-0 overflow-y-hidden" +
-                (navDrawerOpen ? " flex flex-col" : " hidden")
+                'z-20 min-h-screen w-screen bg-white fixed top-0 left-0 overflow-y-hidden' +
+                (navDrawerOpen ? ' flex flex-col' : ' hidden')
               }
             >
               <button
@@ -170,12 +157,12 @@ function Header(props) {
               >
                 <i className="bi bi-x-lg"></i>
               </button>
-              <div style={{ width: "50%" }} className="ml-auto mr-auto">
+              <div style={{ width: '50%' }} className="ml-auto mr-auto">
                 <img src={logo} alt="Defense Unicorns Logo" />
               </div>
               <ul
                 className=" text-white w-full flex flex-col justify-around list-none my-auto text-center font-bold pb-44"
-                style={{ height: "45vh" }}
+                style={{ height: '45vh' }}
               >
                 <li className="nav-item">
                   <Link

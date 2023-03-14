@@ -1,8 +1,8 @@
-import React from "react";
-import CloseIcon from "@mui/icons-material/Close";
-import { Drawer, IconButton } from "@mui/material";
-import DrawerTab, { DrawerTabs } from "./NavDrawerTabs";
-import { createTabPropsFromNavLink } from "../../../utilities/navLink";
+import React from 'react';
+import CloseIcon from '@mui/icons-material/Close';
+import { Drawer, IconButton } from '@mui/material';
+import DrawerTab, { DrawerTabs } from './NavDrawerTabs';
+import { createTabPropsFromNavLink } from '../../../utilities/navLink';
 
 // Extends the Drawer props so that defaults may still be used.
 function NavDrawer({ children, drawerProps, closeDrawer, navLinks, pathname }) {
@@ -14,12 +14,12 @@ function NavDrawer({ children, drawerProps, closeDrawer, navLinks, pathname }) {
       <IconButton
         color="inherit"
         sx={{
-          mt: "1.563rem",
-          mb: "1.063rem",
-          ml: "1.813rem",
-          width: "3rem",
-          height: "3rem",
-          justifyContent: "center",
+          mt: '1.563rem',
+          mb: '1.063rem',
+          ml: '1.813rem',
+          width: '3rem',
+          height: '3rem',
+          justifyContent: 'center'
         }}
         onClick={closeDrawer}
       >

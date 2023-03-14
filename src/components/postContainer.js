@@ -1,5 +1,5 @@
-import * as React from "react";
-import Card from "./card";
+import * as React from 'react';
+import Card from './card';
 
 const PostContainer = React.forwardRef((props, ref) => (
   <div className="sm:pt-1 flex justify-center md:justify-between flex-wrap sm:px-4 xl:px-32 2xl:px-56 pb-10">

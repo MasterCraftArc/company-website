@@ -4,11 +4,11 @@ export const createTabPropsFromNavLink = (navLink, index) => {
     label: navLink.text,
     href: navLink.url,
     target: navLink.target,
-    id: `${navLink.text}-${index || ""}`,
+    id: `${navLink.text}-${index || ''}`,
     rel: navLink.rel,
     title: navLink.text,
-    "aria-label": navLink.text,
+    'aria-label': navLink.text
   };
 };
 
-export const isLocalLink = (url) => url.startsWith("/");
+export const isLocalLink = (url) => url.startsWith('/');

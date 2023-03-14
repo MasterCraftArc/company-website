@@ -1,21 +1,21 @@
-import { graphql } from "gatsby";
-import { motion } from "framer-motion";
-import React from "react";
-import Footer from "../components/sections/Footer";
-import Button from "../components/button";
-import SiteHelmet from "../components/SiteHelmet";
-import BackgroundSection from "../components/equipBg";
-import PostContainer from "../components/postContainer";
-import NavBar from "../components/sections/NavBar/NavBar";
+import { graphql } from 'gatsby';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Footer from '../components/sections/Footer';
+import Button from '../components/button';
+import SiteHelmet from '../components/SiteHelmet';
+import BackgroundSection from '../components/equipBg';
+import PostContainer from '../components/postContainer';
+import NavBar from '../components/sections/NavBar/NavBar';
 
 const pageStyles = {
-  color: "black",
-  maxWidth: "100vw",
+  color: 'black',
+  maxWidth: '100vw'
 };
 
 const battleText = {
-  color: "#14498e",
-  fontWeight: "500",
+  color: '#14498e',
+  fontWeight: '500'
 };
 
 const Blog = ({ data }) => {
@@ -28,17 +28,13 @@ const Blog = ({ data }) => {
         <SiteHelmet route="Learn" description="DevSecOps Starter Pack" />
         <NavBar />
         <section className="hero flex flex-col justify-center">
-          <div
-            className="pb-8 h-full flex flex-col justify-center"
-            style={{ color: "red" }}
-          >
+          <div className="pb-8 h-full flex flex-col justify-center" style={{ color: 'red' }}>
             <div className="pl-4 md:pl-6 lg:pl-16 pb-8 text-white text-4xl sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl flex flex-col font-semibold">
               <p className="">DevSecOps Starter Pack</p>
             </div>
             <p className="heroText md:text-3xl text-2xl md:w-1/2 w-full text-white pl-4 md:pl-6 lg:pl-16">
-              This blog is your source for context-first guides, stories and
-              news on the categories, process and technology necessary to
-              accelerate your mission.
+              This blog is your source for context-first guides, stories and news on the categories,
+              process and technology necessary to accelerate your mission.
             </p>
             <a
               aria-hidden="true"
@@ -49,19 +45,16 @@ const Blog = ({ data }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  type: "spring",
+                  type: 'spring',
                   delay: 0.5,
-                  default: { duration: 2.5 },
+                  default: { duration: 2.5 }
                 }}
                 className=" bi bi-chevron-down hover:text-white cursor-pointer"
               ></motion.i>
             </a>
           </div>
         </section>
-        <section
-          id="latestPosts"
-          className="latestTrained min-h-screen mt-4 relative px-8"
-        >
+        <section id="latestPosts" className="latestTrained min-h-screen mt-4 relative px-8">
           <div className="mt-5 md:mt-16 mx-auto relative py-16 h-full">
             <div className="lg:px-24 xl:px-32 2xl:px-44 top-0 bg-white relative">
               <h2

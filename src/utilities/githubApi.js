@@ -1,4 +1,4 @@
-import { Octokit } from "octokit";
+import { Octokit } from 'octokit';
 
 // export interface GithubStats {
 //   stars: number;
@@ -9,7 +9,7 @@ import { Octokit } from "octokit";
 const TOKEN = process.env.GATSBY_GH_TOKEN;
 
 const octokit = new Octokit({
-  auth: TOKEN,
+  auth: TOKEN
 });
 
 // Counts octokit response paginated resources.
@@ -29,10 +29,10 @@ async function iterableItemCount(
 async function getNumContributors() {
   return iterableItemCount(
     octokit.paginate.iterator(octokit.rest.repos.listContributors, {
-      owner: "defenseunicorns",
-      repo: "zarf",
+      owner: 'defenseunicorns',
+      repo: 'zarf',
       per_page: 100,
-      anon: "true",
+      anon: 'true'
     })
   );
 }
@@ -40,9 +40,8 @@ async function getNumContributors() {
 // GH Rest api for stargazers
 // Fall back method for dev or if access token is not passed.
 async function getNumStars() {
-  return (
-    await octokit.rest.repos.get({ owner: "defenseunicorns", repo: "zarf" })
-  ).data.stargazers_count;
+  return (await octokit.rest.repos.get({ owner: 'defenseunicorns', repo: 'zarf' })).data
+    .stargazers_count;
 }
 
 // GH Rest api for counting prs.
@@ -50,10 +49,10 @@ async function getNumStars() {
 async function getNumPullRequests() {
   return iterableItemCount(
     octokit.paginate.iterator(octokit.rest.pulls.list, {
-      owner: "defenseunicorns",
-      repo: "zarf",
+      owner: 'defenseunicorns',
+      repo: 'zarf',
       per_page: 100,
-      state: "all",
+      state: 'all'
     })
   );
 }
@@ -64,8 +63,8 @@ async function graphStarsAndPrs() {
   const {
     repository: {
       pullRequests: { totalCount: prs },
-      stargazerCount: stars,
-    },
+      stargazerCount: stars
+    }
   } = await octokit.graphql(`{
     repository(name: "zarf", owner: "defenseunicorns") {
       pullRequests {
@@ -90,11 +89,11 @@ async function getStarsAndPrs() {
 export async function getGithubStats() {
   const [contributors, [stars, pullRequests]] = await Promise.all([
     getNumContributors(),
-    getStarsAndPrs(),
+    getStarsAndPrs()
   ]);
   return {
     contributors,
     stars,
-    pullRequests,
+    pullRequests
   };
 }

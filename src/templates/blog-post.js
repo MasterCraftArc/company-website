@@ -1,11 +1,11 @@
-import * as React from "react";
-import { Link, graphql } from "gatsby";
-import Layout from "../components/blogLayout";
-import Seo from "../components/seo";
-import unicorn from "../images/unicornStars.png";
+import * as React from 'react';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/blogLayout';
+import Seo from '../components/seo';
+import unicorn from '../images/unicornStars.png';
 
 const metaStyles = {
-  lineHeight: "0.5",
+  lineHeight: '0.5'
 };
 
 const BlogPostTemplate = ({ data, location }) => {
@@ -21,34 +21,21 @@ const BlogPostTemplate = ({ data, location }) => {
         author={post.frontmatter.author}
         url={location.href}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <div className="metaData mt-10 font-sans" style={metaStyles}>
           <p className="text-2xl mb-2">
-            <span className="font-black text-blue-900">AUTHOR: </span>{" "}
-            {post.frontmatter.author}
+            <span className="font-black text-blue-900">AUTHOR: </span> {post.frontmatter.author}
           </p>
           <p className="text-2xl mb-2">
-            <span className="font-black text-blue-900">DATE: </span>{" "}
-            {post.frontmatter.date}
+            <span className="font-black text-blue-900">DATE: </span> {post.frontmatter.date}
           </p>
         </div>
 
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
         <hr />
       </article>
       <div className="flex flex-col justify-center items-center mt-24 mb-5">
-        <img
-          className="w-2/6 xl:w-1/6 mx-auto"
-          src={unicorn}
-          alt="Unicorn with star trail"
-        ></img>
+        <img className="w-2/6 xl:w-1/6 mx-auto" src={unicorn} alt="Unicorn with star trail"></img>
       </div>
 
       <nav className="blog-post-nav mb-16 pt-5 font-black text-lg sm:text-3xl">
@@ -58,7 +45,7 @@ const BlogPostTemplate = ({ data, location }) => {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: 0
           }}
         >
           <li className="text-blue-900 hover:text-blue-700">
@@ -84,11 +71,7 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
     site {
       siteMetadata {
         title

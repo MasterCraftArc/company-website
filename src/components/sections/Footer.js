@@ -1,19 +1,12 @@
-import React from "react";
-import {
-  createTabPropsFromNavLink,
-  isLocalLink,
-} from "../../utilities/navLink";
-import { Box } from "@mui/system";
-import styled from "@emotion/styled";
-import NavLogo from "./NavBar/NavLogo";
-import palette from "../../theme/palette";
-import { Link as GatsbyLink } from "gatsby";
-import {
-  footerLinks,
-  namedLinks,
-  socialsBarLinks,
-} from "../../assets/data/navLinks";
-import { Divider, IconButton, Link, SvgIcon, Typography } from "@mui/material";
+import React from 'react';
+import { createTabPropsFromNavLink, isLocalLink } from '../../utilities/navLink';
+import { Box } from '@mui/system';
+import styled from '@emotion/styled';
+import NavLogo from './NavBar/NavLogo';
+import palette from '../../theme/palette';
+import { Link as GatsbyLink } from 'gatsby';
+import { footerLinks, namedLinks, socialsBarLinks } from '../../assets/data/navLinks';
+import { Divider, IconButton, Link, SvgIcon, Typography } from '@mui/material';
 
 const FooterWrapper = styled(Box)`
   height: auto;
@@ -30,8 +23,8 @@ const FooterWrapper = styled(Box)`
 `;
 
 const footerWrapperSx = {
-  justifyContent: { xs: "center", md: "inherit" },
-  padding: { xs: "4rem", md: "5rem", lg: `7rem` },
+  justifyContent: { xs: 'center', md: 'inherit' },
+  padding: { xs: '4rem', md: '5rem', lg: `7rem` }
 };
 
 const FooterLink = styled(Link)`
@@ -53,34 +46,34 @@ function Footer() {
       <Box
         component="section"
         sx={{
-          display: "flex",
-          gap: { xs: "2rem", md: "0" },
-          alignItems: { xs: "center", md: "end" },
-          flexDirection: { xs: "column", md: "row" },
+          display: 'flex',
+          gap: { xs: '2rem', md: '0' },
+          alignItems: { xs: 'center', md: 'end' },
+          flexDirection: { xs: 'column', md: 'row' }
         }}
       >
         <Box
           sx={{
             flex: 1,
-            display: "flex",
-            height: { xs: "auto", md: "110px" },
-            gap: { xs: "3rem", md: "10.4375rem" },
-            flexDirection: { xs: "column", md: "row" },
-            alignItems: { xs: "center", md: "start" },
+            display: 'flex',
+            height: { xs: 'auto', md: '110px' },
+            gap: { xs: '3rem', md: '10.4375rem' },
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: { xs: 'center', md: 'start' }
           }}
         >
-          <Box alignSelf={"start"}>
+          <Box alignSelf={'start'}>
             <NavLogo height="100px" width="225.3px" />
           </Box>
           <Box
             sx={{
-              height: "95px",
-              display: "flex",
-              flexWrap: "wrap",
-              flexDirection: "column",
-              justifyContent: "space-around",
-              columnGap: { xs: "2rem", lg: "12rem" },
-              alignContent: { xs: "center", md: "inherit" },
+              height: '95px',
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              justifyContent: 'space-around',
+              columnGap: { xs: '2rem', lg: '12rem' },
+              alignContent: { xs: 'center', md: 'inherit' }
             }}
           >
             {footerLinks.map((l, i) =>
@@ -111,22 +104,22 @@ function Footer() {
       <Divider
         variant="fullWidth"
         sx={{
-          marginTop: { xs: "2rem", md: "4rem" },
-          borderColor: "text.primary",
+          marginTop: { xs: '2rem', md: '4rem' },
+          borderColor: 'text.primary'
         }}
       ></Divider>
       <Box
         component="section"
         sx={{
-          display: "flex",
-          marginTop: "1rem",
-          flexDirection: { xs: "column", md: "row" },
-          alignItems: { xs: "center", md: "center" },
-          justifyContent: { xs: "center", md: "end" },
-          gap: "8px",
+          display: 'flex',
+          marginTop: '1rem',
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: { xs: 'center', md: 'center' },
+          justifyContent: { xs: 'center', md: 'end' },
+          gap: '8px'
         }}
       >
-        <Typography variant="body1" sx={{ color: "primary.contrastText" }}>
+        <Typography variant="body1" sx={{ color: 'primary.contrastText' }}>
           Follow us on:
         </Typography>
         <Box>
@@ -139,11 +132,7 @@ function Footer() {
                 key={key}
                 aria-label={link.text}
               >
-                <SvgIcon
-                  fontSize="large"
-                  component={link.icon}
-                  inheritViewBox
-                />
+                <SvgIcon fontSize="large" component={link.icon} inheritViewBox />
               </FooterIconButton>
             );
           })}
@@ -153,32 +142,29 @@ function Footer() {
         component="section"
         sx={{
           flexGrow: 1,
-          gap: "1rem",
-          width: "100%",
-          display: "flex",
-          marginTop: "2rem",
-          alignItems: "center",
-          justifyContent: "end",
-          flexDirection: "column",
+          gap: '1rem',
+          width: '100%',
+          display: 'flex',
+          marginTop: '2rem',
+          alignItems: 'center',
+          justifyContent: 'end',
+          flexDirection: 'column'
         }}
       >
-        <Typography
-          variant="caption"
-          sx={{ color: "primary.contrastText", textAlign: "center" }}
-        >
+        <Typography variant="caption" sx={{ color: 'primary.contrastText', textAlign: 'center' }}>
           Copyright © 2022 Defense Unicorns. All rights reserved
         </Typography>
         <Box
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            gap: ".5rem",
-            color: "primary.contrastText",
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '.5rem',
+            color: 'primary.contrastText'
           }}
         >
           <FooterLink
             component={GatsbyLink}
-            sx={{ typography: "caption" }}
+            sx={{ typography: 'caption' }}
             to={namedLinks.privacyPolicy.url}
           >
             {namedLinks.privacyPolicy.text}
@@ -186,7 +172,7 @@ function Footer() {
           <Typography variant="caption">|</Typography>
           <FooterLink
             component={GatsbyLink}
-            sx={{ typography: "caption" }}
+            sx={{ typography: 'caption' }}
             to={namedLinks.termsOfService.url}
           >
             {namedLinks.termsOfService.text}
