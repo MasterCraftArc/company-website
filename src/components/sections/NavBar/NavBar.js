@@ -71,7 +71,7 @@ function NavBar({ pathname }) {
     <>
       <StyledAnnouncement component="div" variant="subtitle2">
         <Twitter sx={{ color: 'secondary.main' }} />
-        &nbsp;&nbsp;Show Doug some love. Follow us on&nbsp;
+        &nbsp;&nbsp;Show Defense Unicorns some love. Follow us on&nbsp;
         <Typography
           component={'a'}
           variant="subtitle2"
