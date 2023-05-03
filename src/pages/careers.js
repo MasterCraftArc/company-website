@@ -6,7 +6,7 @@ import { fontWeights, fonts } from '../theme/typography';
 import Footer from '../components/sections/Footer';
 import SiteHelmet from '../components/SiteHelmet';
 import { Box, styled } from '@mui/material';
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 
 const CareersPaper = styled(Box)`
   display: flex;
@@ -68,15 +68,23 @@ function Careers() {
   useDarkBackground();
 
   useEffect(() => {
-    const applyLinks = document.getElementsByClassName('ht-apply-link');
-    const dividers = document.getElementsByClassName('ht-divider');
-    if (dividers.length === 0 && applyLinks.length > 0) {
-      for (const applyLink of applyLinks) {
-        const divider = document.createElement('div');
-        divider.setAttribute('class', 'ht-divider');
-        applyLink.insertAdjacentElement('afterend', divider);
+    const jobsRef = document.getElementById('hiringthing-jobs');
+    const mutationObserver = new MutationObserver(() => {
+      const applyLinks = jobsRef.getElementsByClassName('ht-apply-link');
+      const dividers = jobsRef.getElementsByClassName('ht-divider');
+      if (dividers.length === 0 && applyLinks.length > 0) {
+        for (const applyLink of applyLinks) {
+          const divider = document.createElement('div');
+          divider.setAttribute('class', 'ht-aNWQdivider');
+          applyLink.insertAdjacentElement('afterend', divider);
+        }
       }
-    }
+    });
+
+    mutationObserver.observe(jobsRef, { childList: true });
+    return () => {
+      mutationObserver.disconnect();
+    };
   });
 
   return (
@@ -100,7 +108,8 @@ function Careers() {
             type: 'text/javascript',
             innerHTML: `var ht_settings = ( ht_settings || new Object() ); 
               ht_settings.site_url = "defense-unicorns"; 
-              ht_settings.open_jobs_in_new_tab = true;`
+              ht_settings.open_jobs_in_new_tab = true;
+              `
           }
         ]}
       />
