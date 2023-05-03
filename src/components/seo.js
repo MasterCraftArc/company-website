@@ -14,7 +14,19 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const TWITTER_IMAGE_URL = 'https://www.defenseunicorns.com/icons/icon-96x96.png';
 
-const Seo = ({ description, lang, meta, title, url, image, author, route, twitterImage }) => {
+const Seo = ({
+  description,
+  lang,
+  meta,
+  title,
+  url,
+  image,
+  author,
+  route,
+  twitterImage,
+  script,
+  link
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -43,7 +55,8 @@ const Seo = ({ description, lang, meta, title, url, image, author, route, twitte
       }}
       title={metaTitle}
       titleTemplate={`%s | ${route}`}
-      link={[]}
+      link={link}
+      script={script}
       meta={[
         {
           charSet: 'utf-8'
@@ -122,7 +135,9 @@ Seo.defaultProps = {
   img: ``,
   author: ``,
   route: ``,
-  twitterImage: ``
+  twitterImage: ``,
+  link: [],
+  script: []
 };
 
 Seo.propTypes = {
@@ -134,7 +149,9 @@ Seo.propTypes = {
   image: PropTypes.string,
   twitterImage: PropTypes.string,
   author: PropTypes.string,
-  route: PropTypes.string
+  route: PropTypes.string,
+  link: PropTypes.arrayOf(PropTypes.object),
+  script: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default Seo;
