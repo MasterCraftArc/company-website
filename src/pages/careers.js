@@ -6,7 +6,7 @@ import { fontWeights, fonts } from '../theme/typography';
 import Footer from '../components/sections/Footer';
 import SiteHelmet from '../components/SiteHelmet';
 import { Box, styled } from '@mui/material';
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const CareersPaper = styled(Box)`
   display: flex;
@@ -32,6 +32,7 @@ const CareersPaper = styled(Box)`
     font-weight: ${fontWeights.medium};
     color: ${({ theme }) => theme.palette.secondary.main};
   }
+
   .ht-apply-link {
     :hover {
       background-color: rgba(255, 255, 255, 0.1);
@@ -62,30 +63,35 @@ const CareersPaper = styled(Box)`
     width: 155px;
     height: 42px;
   }
+
+  .ht-no-positions {
+    color: ${({ theme }) => theme.palette.text.primary};
+  }
 `;
 
 function Careers() {
   useDarkBackground();
 
   useEffect(() => {
-    const jobsRef = document.getElementById('hiringthing-jobs');
+    const jobsElement = document.getElementById('hiringthing-jobs');
     const mutationObserver = new MutationObserver(() => {
-      const applyLinks = jobsRef.getElementsByClassName('ht-apply-link');
-      const dividers = jobsRef.getElementsByClassName('ht-divider');
+      const applyLinks = jobsElement.getElementsByClassName('ht-apply-link');
+      const dividers = jobsElement.getElementsByClassName('ht-divider');
+      console.log('pastLinks');
       if (dividers.length === 0 && applyLinks.length > 0) {
         for (const applyLink of applyLinks) {
           const divider = document.createElement('div');
-          divider.setAttribute('class', 'ht-aNWQdivider');
+          divider.setAttribute('class', 'ht-divider');
           applyLink.insertAdjacentElement('afterend', divider);
         }
       }
     });
 
-    mutationObserver.observe(jobsRef, { childList: true });
+    mutationObserver.observe(jobsElement, { childList: true });
     return () => {
       mutationObserver.disconnect();
     };
-  });
+  }, []);
 
   return (
     <>
