@@ -1,6 +1,61 @@
 import React, { useEffect } from 'react';
-import { Box } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import { Section, SectionBody, SectionDescription, SectionTitle } from '../../Section';
+import { fontWeights, fonts } from '../../../theme/typography';
+
+const JobListings = styled(Box)`
+  .ht-divider {
+    :not(:last-child) {
+      margin-bottom: 16px;
+    }
+    height: 1px;
+    width: 100%;
+    background-color: ${({ theme }) => theme.palette.text.secondary};
+  }
+
+  .ht-title-link {
+    font-size: 36;
+    width: fit-content;
+    font-family: ${fonts.poppins};
+    font-weight: ${fontWeights.medium};
+    color: ${({ theme }) => theme.palette.secondary.main};
+  }
+
+  .ht-apply-link {
+    :hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    text-align: center;
+    margin: 16px 0;
+    color: ${({ theme }) => theme.palette.secondary.main};
+    border: 1px solid ${({ theme }) => theme.palette.secondary.main};
+    cursor: pointer;
+    font-family: Poppins, Verndana;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    text-transform: uppercase;
+    min-width: 64px;
+    padding: 7px 21px;
+    border-radius: 4px;
+    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: #68c4ff;
+    font-size: 15px;
+    width: 155px;
+    height: 42px;
+  }
+
+  .ht-no-positions {
+    color: ${({ theme }) => theme.palette.text.primary};
+  }
+`;
 
 function CurrentOpenings() {
   useEffect(() => {
@@ -31,7 +86,7 @@ function CurrentOpenings() {
         If you don't see a current opening that matches your interests please check back in this
         future.  We are routinely reviewing our resource plans and hiring needs.
       </SectionBody>
-      <Box
+      <JobListings
         sx={{
           marginTop: '48px',
           display: 'flex',
@@ -39,7 +94,7 @@ function CurrentOpenings() {
           flexDirection: 'column'
         }}
         id="hiringthing-jobs"
-      ></Box>
+      ></JobListings>
     </Section>
   );
 }
