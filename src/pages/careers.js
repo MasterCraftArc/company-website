@@ -1,12 +1,13 @@
-import { Section, SectionBody, SectionDescription, SectionTitle } from '../components/Section';
-import CareersHero from '../components/sections/CareersHero';
+import CurrentOpenings from '../components/sections/Careers/CurrentOpenings';
+import CareersCollage from '../components/sections/Careers/CareersCollage';
+import CareersHero from '../components/sections/Careers/CareersHero';
+import CareersHelmet from '../components/sections/Careers/CareersHelmet';
 import useDarkBackground from '../hooks/useDarkBackground';
 import NavBar from '../components/sections/NavBar/NavBar';
 import { fontWeights, fonts } from '../theme/typography';
 import Footer from '../components/sections/Footer';
-import SiteHelmet from '../components/SiteHelmet';
 import { Box, styled } from '@mui/material';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const CareersPaper = styled(Box)`
   display: flex;
@@ -72,73 +73,14 @@ const CareersPaper = styled(Box)`
 function Careers() {
   useDarkBackground();
 
-  useEffect(() => {
-    const jobsElement = document.getElementById('hiringthing-jobs');
-    const mutationObserver = new MutationObserver(() => {
-      const applyLinks = jobsElement.getElementsByClassName('ht-apply-link');
-      const dividers = jobsElement.getElementsByClassName('ht-divider');
-      console.log('pastLinks');
-      if (dividers.length === 0 && applyLinks.length > 0) {
-        for (const applyLink of applyLinks) {
-          const divider = document.createElement('div');
-          divider.setAttribute('class', 'ht-divider');
-          applyLink.insertAdjacentElement('afterend', divider);
-        }
-      }
-    });
-
-    mutationObserver.observe(jobsElement, { childList: true });
-    return () => {
-      mutationObserver.disconnect();
-    };
-  }, []);
-
   return (
     <>
-      <SiteHelmet
-        route="Careers"
-        link={[
-          {
-            rel: 'stylesheet',
-            type: 'text/css',
-            media: 'all',
-            href: 'https://assets.rippling-ats.com/stylesheets/embed.css'
-          }
-        ]}
-        script={[
-          {
-            src: 'https://assets.rippling-ats.com/javascripts/embed.js',
-            type: 'text/javascript'
-          },
-          {
-            type: 'text/javascript',
-            innerHTML: `var ht_settings = ( ht_settings || new Object() ); 
-              ht_settings.site_url = "defense-unicorns"; 
-              ht_settings.open_jobs_in_new_tab = true;
-              `
-          }
-        ]}
-      />
+      <CareersHelmet />
       <NavBar pathname={'/careers'} />
       <CareersHero />
       <CareersPaper>
-        <Section>
-          <SectionTitle>CURRENT OPENINGS</SectionTitle>
-          <SectionDescription>Find Your Next Career</SectionDescription>
-          <SectionBody sx={{ textAlign: 'center' }}>
-            If you don't see a current opening that matches your interests please check back in this
-            future.  We are routinely reviewing our resource plans and hiring needs.
-          </SectionBody>
-          <Box
-            sx={{
-              marginTop: '48px',
-              display: 'flex',
-              gap: '1rem',
-              flexDirection: 'column'
-            }}
-            id="hiringthing-jobs"
-          ></Box>
-        </Section>
+        <CurrentOpenings />
+        <CareersCollage />
       </CareersPaper>
       <Footer />
     </>

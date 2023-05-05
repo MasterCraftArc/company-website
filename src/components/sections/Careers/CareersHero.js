@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import CareerHeroBg from '../../assets/jpg/careers-hero-bg.jpeg';
-import palette from '../../theme/palette';
+import CareerHeroBg from '../../../assets/jpg/careers-hero-bg.jpeg';
+import palette from '../../../theme/palette';
 
 function CareersHero() {
   return (
