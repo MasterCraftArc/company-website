@@ -80,8 +80,8 @@ function Careers() {
       <CareersHero />
       <CareersPaper>
         <CurrentOpenings />
-        <CareersCollage />
       </CareersPaper>
+      <CareersCollage />
       <Footer />
     </>
   );
