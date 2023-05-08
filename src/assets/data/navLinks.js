@@ -9,6 +9,10 @@ export const namedLinks = {
     text: 'Contact',
     url: '/contact'
   },
+  careers: {
+    text: 'Careers',
+    url: '/careers'
+  },
   termsOfService: {
     text: 'Terms of Service',
     url: '/termsofservice'
@@ -48,12 +52,6 @@ export const namedLinks = {
     target: '_blank',
     rel: 'noopener noreferrer',
     url: 'https://zarf.dev/install'
-  },
-  careers: {
-    text: 'Careers',
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    url: 'https://defense-unicorns.rippling-ats.com/'
   },
   podcast: {
     text: 'Podcast',
