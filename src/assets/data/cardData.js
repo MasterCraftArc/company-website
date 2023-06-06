@@ -46,3 +46,34 @@ export const LearnWithUsCards = [
     link: { ...namedLinks.courses, text: 'Enroll Now' }
   }
 ];
+
+export const BenefitsCards = [{
+  title: "Work From Anywhere",
+  body: "We are fully remote, with Unicorns living all over the country. We empower Unicorns to work where they work best and we provide support for their remote office setup.",
+},
+{
+  title: "Family Oriented",
+  titleLineTwo: "Environment",
+  body: "We support Unicorns making sure their work-life compliments their home-life. We offer 16 weeks of paid parental leave plus 8 weeks of part-time leave."
+},
+{
+  title: "Work/Life",
+  titleLineTwo: "Balance",
+  body: "We support Unicorns making sure their work-life compliments their home-life. We offer 16 weeks of paid parental leave plus 8 weeks of part-time leave."
+},
+{
+  title: "Fully Covered",
+  titleLineTwo: "Medical",
+  body: "We care about the health of our Unicorns. We cover Medical, Dental, Vision for Unicorns and their families, including 100% of in-network covered services and 100% of premiums."
+},
+{
+  title: "Wealth & Financial",
+  titleLineTwo: "Resources",
+  body: "We offer all full-time Unicorns company equity options, 401k retirement plan with $20k employer contribution, life and disability insurance, and access to financial advisors."
+},
+{
+  title: "Career Growth",
+  titleLineTwo: "& Learning",
+  body: "We want all our Unicorns to continue to grow in their careers. We offer financial support for trainings, conferences, and professional  subscriptions."
+},
+]
