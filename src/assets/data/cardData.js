@@ -60,7 +60,7 @@ export const BenefitsCards = [
   {
     title: 'Work/Life',
     titleLineTwo: 'Balance',
-    body: 'We offer our all full-time Unicorns unlimited PTO (minimum 10 Days) plus all Federal Holidays,  1 week for Thanksgiving, and two weeks for Christmas and New Years.'
+    body: 'We offer all full-time Unicorns unlimited PTO (minimum 10 Days) plus all Federal Holidays,  1 week for Thanksgiving, and two weeks for Christmas and New Years.'
   },
   {
     title: 'Fully Covered',
@@ -75,6 +75,6 @@ export const BenefitsCards = [
   {
     title: 'Career Growth',
     titleLineTwo: '& Learning',
-    body: 'We want all our Unicorns to continue to grow in their careers. We offer financial support for trainings, conferences, and professional  subscriptions.'
+    body: 'We want all Unicorns to continue to grow in their careers. We offer financial support for trainings, conferences, and professional  subscriptions.'
   }
 ];
