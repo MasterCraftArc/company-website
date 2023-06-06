@@ -37,7 +37,7 @@ function Benefits() {
       <SectionDescription>Life of a Defense Unicorn</SectionDescription>
       <ResourceRow sx={benefitRowSx}>
         {BenefitsCards.map((card, index) => (
-            <StyledCard sx={{ color: 'primary.contrastText' }} key={`learn-with-us-card-${index}`}>
+          <StyledCard sx={{ color: 'primary.contrastText' }} key={`learn-with-us-card-${index}`}>
             <Typography variant="h4">{card.title}</Typography>
             <Typography variant="h4">{card.titleLineTwo}</Typography>
             <Typography variant="body2" sx={{ marginTop: '12px', textAlign: 'left' }}>

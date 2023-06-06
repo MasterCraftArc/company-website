@@ -31,8 +31,7 @@ function Careers() {
       </CareersPaper>
       <CareersCollage />
       <CareersPaper>
-      <Benefits />
-
+        <Benefits />
       </CareersPaper>
       <Footer />
     </>
