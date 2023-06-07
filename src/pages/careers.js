@@ -1,13 +1,13 @@
-import CurrentOpenings from '../components/sections/Careers/CurrentOpenings';
-import CareersCollage from '../components/sections/Careers/CareersCollage';
+import React from 'react';
+import { Box, styled } from '@mui/material';
+import Footer from '../components/sections/Footer';
+import NavBar from '../components/sections/NavBar/NavBar';
+import useDarkBackground from '../hooks/useDarkBackground';
+import Benefits from '../components/sections/Careers/Benefits';
 import CareersHero from '../components/sections/Careers/CareersHero';
 import CareersHelmet from '../components/sections/Careers/CareersHelmet';
-import useDarkBackground from '../hooks/useDarkBackground';
-import NavBar from '../components/sections/NavBar/NavBar';
-import { fontWeights, fonts } from '../theme/typography';
-import Footer from '../components/sections/Footer';
-import { Box, styled } from '@mui/material';
-import React from 'react';
+import CareersCollage from '../components/sections/Careers/CareersCollage';
+import CurrentOpenings from '../components/sections/Careers/CurrentOpenings';
 
 const CareersPaper = styled(Box)`
   display: flex;
@@ -30,6 +30,9 @@ function Careers() {
         <CurrentOpenings />
       </CareersPaper>
       <CareersCollage />
+      <CareersPaper>
+        <Benefits />
+      </CareersPaper>
       <Footer />
     </>
   );
