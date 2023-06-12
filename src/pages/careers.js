@@ -8,6 +8,7 @@ import CareersHero from '../components/sections/Careers/CareersHero';
 import CareersHelmet from '../components/sections/Careers/CareersHelmet';
 import CareersCollage from '../components/sections/Careers/CareersCollage';
 import CurrentOpenings from '../components/sections/Careers/CurrentOpenings';
+import OurDNA from '../components/sections/Careers/OurDNA';
 
 const CareersPaper = styled(Box)`
   display: flex;
@@ -28,6 +29,7 @@ function Careers() {
       <CareersHero />
       <CareersPaper>
         <CurrentOpenings />
+        <OurDNA />
       </CareersPaper>
       <CareersCollage />
       <CareersPaper>
