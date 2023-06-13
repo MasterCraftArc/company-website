@@ -31,11 +31,11 @@ function OurDNA() {
               alignItems: 'center',
               justifyContent: { xs: 'center', lg: 'start' },
               width: { xs: '100%', md: '38.5%' },
-              padding: '24px 0',
-              gap: '48px',
+              padding: '24px 16px',
+              gap: '32px',
             }}
           >
-            <img src={card.img} alt={card.alt} width="152.97px" height="150.55px" />
+            <img src={card.img} alt={card.alt} height="120px" width="120px" />
             <Box
               sx={{
                 display: 'flex',
