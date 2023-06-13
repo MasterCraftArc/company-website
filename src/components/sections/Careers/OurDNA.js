@@ -15,11 +15,10 @@ function OurDNA() {
       <SectionDescription>What Makes Unicorns Sparkle</SectionDescription>
       <Box
         sx={{
-          width: '77%',
+          maxWidth: '1000px',
           display: 'flex',
-          flexWrap: 'wrap',
-          ml: { md: 'auto' },
-          justifyContent: 'start',
+          flexWrap: { md: 'wrap' },
+          flexDirection: { xs: 'column', md: 'row' },
         }}
       >
         {dnaCards.map((card, index) => (
@@ -27,10 +26,10 @@ function OurDNA() {
             key={`dna-card-${index}`}
             sx={{
               display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
+              // flexDirection: { xs: 'column', md: 'row' },
               alignItems: 'center',
-              justifyContent: { xs: 'center', lg: 'start' },
-              width: { xs: '100%', md: '38.5%' },
+              justifyContent: 'start',
+              width: { xs: 'auto', md: '500px' },
               padding: '24px 16px',
               gap: '32px',
             }}
@@ -41,7 +40,7 @@ function OurDNA() {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '12px',
-                alignItems: { xs: 'center', md: 'start' },
+                alignItems: 'start',
               }}
             >
               <Typography>We Are</Typography>
