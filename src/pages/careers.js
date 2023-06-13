@@ -29,8 +29,8 @@ function Careers() {
       <CareersHero />
       <CareersPaper>
         <CurrentOpenings />
-        <OurDNA />
       </CareersPaper>
+      <OurDNA />
       <CareersCollage />
       <CareersPaper>
         <Benefits />
