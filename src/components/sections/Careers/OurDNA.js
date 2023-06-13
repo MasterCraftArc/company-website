@@ -26,7 +26,6 @@ function OurDNA() {
             key={`dna-card-${index}`}
             sx={{
               display: 'flex',
-              // flexDirection: { xs: 'column', md: 'row' },
               alignItems: 'center',
               justifyContent: 'start',
               width: { xs: 'auto', md: '500px' },
