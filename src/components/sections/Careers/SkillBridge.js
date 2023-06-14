@@ -9,8 +9,7 @@ function SkillBridge() {
       sx={{
         flexDirection: { xs: 'column-reverse', lg: 'row' },
         my: '160px',
-        mx: { xs: '32px', md: '64px', lg: '160px', xl: '240px' },
-        gap: { xs: '24px', md: '32px', lg: '60px' },
+        gap: { xs: '24px', md: '32px', lg: '60px', xl: '125px' },
       }}
     >
       <Section
