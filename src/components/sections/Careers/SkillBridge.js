@@ -20,7 +20,6 @@ function SkillBridge() {
           display: 'flex',
           flexDirection: 'column',
           gap: '12px',
-          maxWidth: { md: '40%' },
           textAlign: 'left',
           maxWidth: { md: '515px' },
         }}
