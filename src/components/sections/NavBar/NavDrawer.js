@@ -19,7 +19,7 @@ function NavDrawer({ children, drawerProps, closeDrawer, navLinks, pathname }) {
           ml: '1.813rem',
           width: '3rem',
           height: '3rem',
-          justifyContent: 'center'
+          justifyContent: 'center',
         }}
         onClick={closeDrawer}
       >
@@ -43,7 +43,7 @@ function NavDrawer({ children, drawerProps, closeDrawer, navLinks, pathname }) {
               key={`drawer-tab-${l.text}-${i}`}
               {...createTabPropsFromNavLink(l, i)}
             />
-          )
+          ),
         )}
       </DrawerTabs>
       {children}

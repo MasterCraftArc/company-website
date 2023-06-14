@@ -36,7 +36,7 @@ function ExternalButtonLink(props) {
         sx={{
           ...hideLarge,
           width: 'fit-content',
-          ...props.sx
+          ...props.sx,
         }}
       >
         {props.text}
@@ -67,7 +67,7 @@ function LocalButtonLink(props) {
         color={props.color}
         sx={{
           ...hideLarge,
-          width: 'fit-content'
+          width: 'fit-content',
         }}
       >
         {props.text}

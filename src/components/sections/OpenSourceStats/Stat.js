@@ -10,7 +10,7 @@ function Stat({ title, subtitle, boxRef }) {
         sx={{
           fontSize: 64,
           fontWeight: fontWeights.regular,
-          color: 'primary.contrastText'
+          color: 'primary.contrastText',
         }}
       >
         {title}
@@ -20,7 +20,7 @@ function Stat({ title, subtitle, boxRef }) {
         sx={{
           fontSize: 18,
           fontWeight: fontWeights.medium,
-          color: 'primary.contrastText'
+          color: 'primary.contrastText',
         }}
       >
         {subtitle}

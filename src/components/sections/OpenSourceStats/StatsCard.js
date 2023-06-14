@@ -72,7 +72,7 @@ function OpenSourceStats() {
         position: 'relative',
         overflowX: 'clip',
         overflowY: 'initial',
-        paddingX: '32px'
+        paddingX: '32px',
       }}
     >
       <StatsCardWrapper
@@ -81,7 +81,7 @@ function OpenSourceStats() {
           flexDirection: { xs: 'column', md: 'row' },
           width: { xs: 'fit-content', md: '100%' },
           gap: { xs: '16px', md: '80px' },
-          height: { md: cardHeight }
+          height: { md: cardHeight },
         }}
       >
         <Box
@@ -91,7 +91,7 @@ function OpenSourceStats() {
           sx={{
             mt: '90px',
             mb: { xs: '32px', md: '90px' },
-            px: { xs: '24px', md: '0px' }
+            px: { xs: '24px', md: '0px' },
           }}
         >
           <Typography
@@ -100,7 +100,7 @@ function OpenSourceStats() {
             sx={{
               typography: { xs: 'h5', md: 'h6' },
               textTransform: 'uppercase',
-              mb: '32px'
+              mb: '32px',
             }}
           >
             OPEN SOURCE PRODUCT
@@ -114,7 +114,7 @@ function OpenSourceStats() {
               fontSize: { md: '64px' },
               maxWidth: { md: '351px' },
               color: 'text.primary',
-              fontWeight: fontWeights.regular
+              fontWeight: fontWeights.regular,
             }}
           >
             Deliver to Airgap with Zarf
@@ -131,7 +131,7 @@ function OpenSourceStats() {
           display="flex"
           sx={{
             flexDirection: { xs: 'column', md: 'row' },
-            gap: { xs: '16px', md: '80px' }
+            gap: { xs: '16px', md: '80px' },
           }}
           justifyContent="space-evenly"
         >
@@ -139,7 +139,7 @@ function OpenSourceStats() {
             display="flex"
             sx={{
               flexDirection: 'column',
-              gap: { xs: '16px', md: '40px' }
+              gap: { xs: '16px', md: '40px' },
             }}
           >
             <Stat title={githubStats?.stars || ''} subtitle="Stars" />
@@ -149,7 +149,7 @@ function OpenSourceStats() {
             display="flex"
             sx={{
               flexDirection: 'column',
-              position: 'relative'
+              position: 'relative',
             }}
             ref={prRef}
           >

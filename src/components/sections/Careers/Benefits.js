@@ -15,7 +15,7 @@ const benefitRowSx = {
   gap: { xs: '50px', sm: '25px', md: '50px' },
   width: { xs: '100%', lg: '80%', xl: '65%' },
   mx: 'auto',
-  mt: '48px'
+  mt: '48px',
 };
 
 const StyledCard = styled(Card)`

@@ -5,7 +5,7 @@ import Seo from '../components/seo';
 import unicorn from '../images/unicornStars.png';
 
 const metaStyles = {
-  lineHeight: '0.5'
+  lineHeight: '0.5',
 };
 
 const BlogPostTemplate = ({ data, location }) => {
@@ -45,7 +45,7 @@ const BlogPostTemplate = ({ data, location }) => {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0
+            padding: 0,
           }}
         >
           <li className="text-blue-900 hover:text-blue-700">

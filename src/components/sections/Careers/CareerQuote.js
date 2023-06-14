@@ -49,9 +49,9 @@ function CareerQuote() {
       <Box
         component="img"
         sx={{
-          display: {xs: 'none', md: 'flex'},
-          width:"150.48px",
-          height:"218.64px",
+          display: { xs: 'none', md: 'flex' },
+          width: '150.48px',
+          height: '218.64px',
         }}
         src={Doug}
         alt="Doug, the Defense Unicorns spokes-unicorn"

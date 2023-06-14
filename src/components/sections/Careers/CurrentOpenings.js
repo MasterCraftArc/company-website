@@ -91,7 +91,7 @@ function CurrentOpenings() {
           marginTop: '48px',
           display: 'flex',
           gap: '1rem',
-          flexDirection: 'column'
+          flexDirection: 'column',
         }}
         id="hiringthing-jobs"
       ></JobListings>

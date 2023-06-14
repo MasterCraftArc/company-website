@@ -21,7 +21,7 @@ const modalStyle = {
   justifyContent: 'center',
   transform: 'translate(-50%, -50%)',
   background: `linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.12) 100%), #0D133D;`,
-  boxShadow: `0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)`
+  boxShadow: `0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)`,
 };
 
 const FormCard = styled(Box)`
@@ -39,12 +39,12 @@ const FormCard = styled(Box)`
 
 const errorModalProps = {
   title: 'Oops!',
-  body: 'Something went wrong. Please refresh the page and try again.'
+  body: 'Something went wrong. Please refresh the page and try again.',
 };
 
 const successModalProps = {
   title: 'Thank you!',
-  body: 'Our team will personally review your request and match you with the unicorn who can best assist you.'
+  body: 'Our team will personally review your request and match you with the unicorn who can best assist you.',
 };
 
 function ContactForm() {
@@ -97,7 +97,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
       sx={{
         width: { xs: '360px', md: '480px' },
-        marginTop: { xs: '6rem', md: '0' }
+        marginTop: { xs: '6rem', md: '0' },
       }}
     >
       <Modal open={openModal} onClose={closeModal}>
@@ -117,7 +117,7 @@ function ContactForm() {
             onClick={closeModal}
             color="inherit"
             sx={{
-              alignSelf: 'end'
+              alignSelf: 'end',
               // color: "primary.contrastText",
             }}
           >

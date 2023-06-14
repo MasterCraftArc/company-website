@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{
               type: 'spring',
               delay: 0.5,
-              default: { duration: 2.5 }
+              default: { duration: 2.5 },
             }}
             className=" bi bi-chevron-down hover:text-red-600 cursor-pointer font-bold"
           ></motion.i>

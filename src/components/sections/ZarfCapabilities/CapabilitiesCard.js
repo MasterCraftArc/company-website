@@ -18,12 +18,12 @@ function getVariantStyle(variant) {
   switch (variant) {
     case 'nocard':
       sxProps = {
-        background: 'transparent'
+        background: 'transparent',
       };
       break;
     default:
       sxProps = {
-        backgroundImage: `url(${CardBackground})`
+        backgroundImage: `url(${CardBackground})`,
       };
   }
   return sxProps;

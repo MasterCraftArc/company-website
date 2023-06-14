@@ -30,13 +30,13 @@ SocialsBox.defaultProps = {
   linkedInStyle:
     'hover:bg-white hover:text-red-500 text-white rounded-full transition-all hover:bg-white',
   githubStyle: 'hover:bg-white hover:text-red-500 text-white rounded-full',
-  wrapperStyle: 'text-white mt-12 sm:mt-6'
+  wrapperStyle: 'text-white mt-12 sm:mt-6',
 };
 
 SocialsBox.propTypes = {
   linkedInStyle: PropTypes.string,
   githubStyle: PropTypes.string,
-  wrapperStyle: PropTypes.string
+  wrapperStyle: PropTypes.string,
 };
 
 export default SocialsBox;

@@ -4,7 +4,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 const trainedCardStyle = {
   height: '386px',
-  backgroundColor: '#F3F3F3'
+  backgroundColor: '#F3F3F3',
 };
 
 const trainedCardBody = {
@@ -14,19 +14,19 @@ const trainedCardBody = {
   marginTop: 'auto',
   marginBottom: '4%',
   color: 'rgba(0, 0, 0, 0.74)',
-  lineHeight: '24px'
+  lineHeight: '24px',
 };
 
 const trainedCardTitle = {
   fontWeight: '500',
   color: '#154A8F',
   paddingTop: '4%',
-  fontSize: '18px'
+  fontSize: '18px',
 };
 
 const trainedCardDate = {
   color: 'rgba(0, 0, 0, 0.6)',
-  fontSize: '12px'
+  fontSize: '12px',
 };
 
 const textStyle = {};
@@ -37,7 +37,7 @@ const copyTimeout = (copyButton) => {
     () =>
       (copyButton.current.className =
         'bi bi-box-arrow-up absolute right-10 bottom-5 text-3xl cursor-pointer hover:text-blue-600'),
-    3000
+    3000,
   );
 };
 
@@ -77,7 +77,7 @@ const Card = React.forwardRef((props, ref) => {
           style={{
             backgroundImage: `url(${props.imgDisplay})`,
             height: '193px',
-            width: '319px'
+            width: '319px',
           }}
         ></div>
 

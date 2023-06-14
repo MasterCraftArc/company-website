@@ -8,7 +8,7 @@ export function clearQuery() {
     name: '',
     email: '',
     organization: '',
-    message: ''
+    message: '',
   };
 }
 
@@ -26,7 +26,7 @@ export function createQueryString(query) {
     // G-form organization field id
     'entry.192647911': query.organization,
     // G-form message field id
-    'entry.1425002156': query.message
+    'entry.1425002156': query.message,
   });
 }
 
@@ -35,7 +35,7 @@ export async function postContactForm(formQuery, successHandler?, errorHandler?)
     await fetch(FORM_URL + createQueryString(formQuery), {
       method: 'POST',
       mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     });
     successHandler && successHandler();
   } catch {
@@ -47,5 +47,5 @@ export const FieldType = Object.freeze({
   NAME: 'name',
   EMAIL: 'email',
   ORG: 'organization',
-  MESSAGE: 'message'
+  MESSAGE: 'message',
 });

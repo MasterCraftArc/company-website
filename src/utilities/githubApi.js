@@ -9,13 +9,13 @@ import { Octokit } from 'octokit';
 const TOKEN = process.env.GATSBY_GH_TOKEN;
 
 const octokit = new Octokit({
-  auth: TOKEN
+  auth: TOKEN,
 });
 
 // Counts octokit response paginated resources.
 async function iterableItemCount(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  iterator
+  iterator,
 ) {
   let count = 0;
   for await (const { data: items } of iterator) {
@@ -32,8 +32,8 @@ async function getNumContributors() {
       owner: 'defenseunicorns',
       repo: 'zarf',
       per_page: 100,
-      anon: 'true'
-    })
+      anon: 'true',
+    }),
   );
 }
 
@@ -52,8 +52,8 @@ async function getNumPullRequests() {
       owner: 'defenseunicorns',
       repo: 'zarf',
       per_page: 100,
-      state: 'all'
-    })
+      state: 'all',
+    }),
   );
 }
 
@@ -63,8 +63,8 @@ async function graphStarsAndPrs() {
   const {
     repository: {
       pullRequests: { totalCount: prs },
-      stargazerCount: stars
-    }
+      stargazerCount: stars,
+    },
   } = await octokit.graphql(`{
     repository(name: "zarf", owner: "defenseunicorns") {
       pullRequests {
@@ -89,11 +89,11 @@ async function getStarsAndPrs() {
 export async function getGithubStats() {
   const [contributors, [stars, pullRequests]] = await Promise.all([
     getNumContributors(),
-    getStarsAndPrs()
+    getStarsAndPrs(),
   ]);
   return {
     contributors,
     stars,
-    pullRequests
+    pullRequests,
   };
 }

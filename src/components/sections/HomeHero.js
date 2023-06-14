@@ -13,9 +13,9 @@ const sentenceAnim = {
     opacity: 1,
     transition: {
       delay: 0.1,
-      staggerChildren: 0.08
-    }
-  }
+      staggerChildren: 0.08,
+    },
+  },
 };
 
 const tagLineItems = ['Aerospace', 'Defense', 'Healthcare', 'Finance', 'Your Mission.'];
@@ -60,7 +60,7 @@ const HomeHero = () => {
         marginTop: '-6rem',
         flexDirection: 'column',
         justifyContent: 'center',
-        paddingX: { xs: '2rem', md: '18.563rem' }
+        paddingX: { xs: '2rem', md: '18.563rem' },
       }}
     >
       <Box flexDirection={'column'} display="flex" width="100%" gap={'.5rem'}>
@@ -68,7 +68,7 @@ const HomeHero = () => {
           variant="h4"
           sx={{
             fontSize: { xs: 32, md: 40 },
-            fontWeight: fontWeights.regular
+            fontWeight: fontWeights.regular,
           }}
           color="primary.contrastText"
         >
@@ -78,7 +78,7 @@ const HomeHero = () => {
           variant="h1"
           sx={{
             fontSize: { xs: 72, md: 172 },
-            fontWeight: fontWeights.regular
+            fontWeight: fontWeights.regular,
           }}
           color="primary.contrastText"
           component={motion.h1}
@@ -90,7 +90,7 @@ const HomeHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              delay: 0.25
+              delay: 0.25,
             }}
             className="block sm:inline-block"
           >
@@ -110,7 +110,7 @@ const HomeHero = () => {
         sx={{
           typography: { xs: 'body2', md: 'h6' },
           paddingLeft: '.5rem',
-          borderLeft: `solid 4px ${palette.primary.main}`
+          borderLeft: `solid 4px ${palette.primary.main}`,
         }}
       >
         We make software delivery easy for the most secure systems in the world.

@@ -33,7 +33,7 @@ function ZarfBox(props) {
         position: 'absolute',
         top: zarfTop,
         left: zarfLeft,
-        zIndex: 1
+        zIndex: 1,
       }}
     />
   );

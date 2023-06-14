@@ -9,31 +9,31 @@ export const values = [
   {
     title: 'Mission Impact',
     icon: MissionImpact,
-    alt: 'Mission Impact'
+    alt: 'Mission Impact',
   },
   {
     title: 'Focused Learning',
     icon: FocusedLearning,
-    alt: 'Focused Learning'
+    alt: 'Focused Learning',
   },
   {
     title: 'Experimentation',
     icon: Experimentation,
-    alt: 'Experimentation'
+    alt: 'Experimentation',
   },
   {
     title: 'Positive Thinking',
     icon: PositiveThinking,
-    alt: 'Positive Thinking'
+    alt: 'Positive Thinking',
   },
   {
     title: 'Share Insights',
     icon: ShareInsights,
-    alt: 'Share Insights'
+    alt: 'Share Insights',
   },
   {
     title: 'Ownership',
     icon: Ownership,
-    alt: 'Ownership'
-  }
+    alt: 'Ownership',
+  },
 ];

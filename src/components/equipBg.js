@@ -21,15 +21,15 @@ const BackgroundSection = ({ className, children }) => {
           }
         }
       }
-    `
+    `,
   );
 
   const sources = [
     mobileImage.childImageSharp.fluid,
     {
       ...desktopImage.childImageSharp.fluid,
-      media: `(min-width: 600px)`
-    }
+      media: `(min-width: 600px)`,
+    },
   ];
 
   return (
