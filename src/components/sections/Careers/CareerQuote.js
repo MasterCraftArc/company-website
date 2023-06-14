@@ -46,11 +46,15 @@ function CareerQuote() {
         </Typography>
         <Typography variant="inherit">- Andrew Greene</Typography>
       </Typography>
-      <img
+      <Box
+        component="img"
+        sx={{
+          display: {xs: 'none', md: 'flex'},
+          width:"150.48px",
+          height:"218.64px",
+        }}
         src={Doug}
         alt="Doug, the Defense Unicorns spokes-unicorn"
-        width="150.48px"
-        height="218.64px"
       />
     </BannerWrapper>
   );
