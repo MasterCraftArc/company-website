@@ -10,12 +10,12 @@ import NavBar from '../components/sections/NavBar/NavBar';
 
 const pageStyles = {
   color: 'black',
-  maxWidth: '100vw'
+  maxWidth: '100vw',
 };
 
 const battleText = {
   color: '#14498e',
-  fontWeight: '500'
+  fontWeight: '500',
 };
 
 const Blog = ({ data }) => {
@@ -47,7 +47,7 @@ const Blog = ({ data }) => {
                 transition={{
                   type: 'spring',
                   delay: 0.5,
-                  default: { duration: 2.5 }
+                  default: { duration: 2.5 },
                 }}
                 className=" bi bi-chevron-down hover:text-white cursor-pointer"
               ></motion.i>

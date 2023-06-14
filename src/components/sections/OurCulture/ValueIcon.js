@@ -12,7 +12,7 @@ function ValueIcon(value) {
         justifyContent: 'center',
         alignItems: 'center',
         width: '240px',
-        height: '240px'
+        height: '240px',
       }}
     >
       <Box
@@ -23,7 +23,7 @@ function ValueIcon(value) {
           borderRadius: 100,
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
         }}
       >
         <Box
@@ -38,7 +38,7 @@ function ValueIcon(value) {
         sx={{
           fontFamily: fonts.teko,
           textAlign: 'center',
-          fontSize: '34px'
+          fontSize: '34px',
         }}
       >
         {value.title}

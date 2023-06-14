@@ -5,7 +5,7 @@ import unicorn from '../images/unicornStars.png';
 import Button from '../components/button';
 
 const metaStyles = {
-  lineHeight: '0.5'
+  lineHeight: '0.5',
 };
 
 // const navigationStyles = {

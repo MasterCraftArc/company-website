@@ -18,13 +18,13 @@ function OurVision() {
       sx={{
         height: { md: '411px' },
         px: { xs: '32px', md: '383px' },
-        py: '106px'
+        py: '106px',
       }}
     >
       <Typography
         component="h3"
         sx={{
-          typography: 'h2'
+          typography: 'h2',
         }}
       >
         Our Vision
@@ -38,7 +38,7 @@ function OurVision() {
           flexDirection: 'row',
           letterSpacing: '.18px',
           fontSize: '30px',
-          borderLeft: `solid 6px ${palette.primary.main}`
+          borderLeft: `solid 6px ${palette.primary.main}`,
         }}
       >
         "We envision a free and secure world that <strong>enables progress and innovation.</strong>"

@@ -9,7 +9,7 @@ function Button(props) {
     fontSize: '16px',
     fontWeight: '400',
     fontFamily: 'poppins',
-    width: '205px'
+    width: '205px',
   };
 
   return (

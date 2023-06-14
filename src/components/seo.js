@@ -25,7 +25,7 @@ const Seo = ({
   route,
   twitterImage,
   script,
-  link
+  link,
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -40,7 +40,7 @@ const Seo = ({
           }
         }
       }
-    `
+    `,
   );
   const metaDescription = description || site.siteMetadata.description;
   const metaTitle = title || site.siteMetadata.title;
@@ -51,7 +51,7 @@ const Seo = ({
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang,
       }}
       title={metaTitle}
       titleTemplate={`%s | ${route}`}
@@ -59,68 +59,68 @@ const Seo = ({
       script={script}
       meta={[
         {
-          charSet: 'utf-8'
+          charSet: 'utf-8',
         },
         {
           name: 'robots',
-          content: 'index, follow'
+          content: 'index, follow',
         },
         {
           name: 'viewport',
-          content: 'width=device-width, initial-scale=1'
+          content: 'width=device-width, initial-scale=1',
         },
         {
           name: `theme-color`,
-          content: `#ffffff`
+          content: `#ffffff`,
         },
         {
           name: `description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           name: `keywords`,
-          content: site.siteMetadata.keywords
+          content: site.siteMetadata.keywords,
         },
         {
           property: `og:title`,
-          content: metaTitle
+          content: metaTitle,
         },
         {
           property: `og:description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: `og:image`,
-          content: metaImage
+          content: metaImage,
         },
         {
           property: `og:url`,
-          content: metaUrl
+          content: metaUrl,
         },
         {
           property: `og:type`,
-          content: `website`
+          content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`
+          content: `summary`,
         },
         {
           name: `twitter:image`,
-          content: twitterImage || TWITTER_IMAGE_URL
+          content: twitterImage || TWITTER_IMAGE_URL,
         },
         {
           name: `twitter:creator`,
-          content: metaAuthor
+          content: metaAuthor,
         },
         {
           name: `twitter:title`,
-          content: metaTitle
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
-          content: metaDescription
-        }
+          content: metaDescription,
+        },
       ].concat(meta)}
     />
   );
@@ -137,7 +137,7 @@ Seo.defaultProps = {
   route: ``,
   twitterImage: ``,
   link: [],
-  script: []
+  script: [],
 };
 
 Seo.propTypes = {
@@ -151,7 +151,7 @@ Seo.propTypes = {
   author: PropTypes.string,
   route: PropTypes.string,
   link: PropTypes.arrayOf(PropTypes.object),
-  script: PropTypes.arrayOf(PropTypes.object)
+  script: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Seo;

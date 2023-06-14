@@ -17,7 +17,7 @@ function WhatWeDo() {
         gap: { xs: 0, lg: '146px' },
         justifyContent: 'center',
         alignItems: 'center',
-        paddingX: '32px'
+        paddingX: '32px',
       }}
     >
       <Box>
@@ -27,7 +27,7 @@ function WhatWeDo() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '12px'
+          gap: '12px',
         }}
       >
         <Typography variant="h6" sx={{ textTransform: 'uppercase' }}>
@@ -38,7 +38,7 @@ function WhatWeDo() {
           color="secondary"
           sx={{
             fontSize: { md: '60px' },
-            maxWidth: { md: '515px' }
+            maxWidth: { md: '515px' },
           }}
         >
           Develop Mission Focused Open Source Products
@@ -47,7 +47,7 @@ function WhatWeDo() {
           sx={{
             color: 'text.secondary',
             maxWidth: { md: '515px' },
-            typography: { xs: 'body2', md: 'body1' }
+            typography: { xs: 'body2', md: 'body1' },
           }}
         >
           We provide secure, open source and infrastructure agnostic applications and tools that

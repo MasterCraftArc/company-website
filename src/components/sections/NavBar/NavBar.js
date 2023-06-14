@@ -20,7 +20,7 @@ const BACKGROUND_GRADIENT =
 
 const AppBarOpacity = {
   SCROLLED: BACKGROUND_GRADIENT,
-  TOP: ''
+  TOP: '',
 };
 
 const StyledAppBar = styled(AppBar)`
@@ -64,7 +64,7 @@ function NavBar({ pathname }) {
         setNavColor(AppBarOpacity.SCROLLED);
         setNavElevation(DEFAULT_ELEVATION);
       }
-    }, [setNavColor])
+    }, [setNavColor]),
   );
 
   return (
@@ -87,7 +87,7 @@ function NavBar({ pathname }) {
             flexGrow: 1,
             justifyContent: 'space-between',
             background: navColor,
-            height: '6rem'
+            height: '6rem',
           }}
         >
           {/* Mobile between xs and medium */}
@@ -106,7 +106,7 @@ function NavBar({ pathname }) {
               flexDirection: 'row',
               width: 'fit-content',
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <Tabs
@@ -121,7 +121,7 @@ function NavBar({ pathname }) {
                   <NavTabMenu key={i} tabItem={l} />
                 ) : (
                   <NavTab key={i} {...createTabPropsFromNavLink(l, i)} />
-                )
+                ),
               )}
             </Tabs>
             <SocialLinks />
@@ -135,10 +135,10 @@ function NavBar({ pathname }) {
           PaperProps: {
             sx: {
               width: { xs: '100%', sm: '65%' },
-              background: BACKGROUND_GRADIENT
-            }
+              background: BACKGROUND_GRADIENT,
+            },
           },
-          open: showDrawer
+          open: showDrawer,
         }}
         closeDrawer={toggleDrawer(false)}
         navLinks={navLinks}
@@ -150,7 +150,7 @@ function NavBar({ pathname }) {
             display: 'flex',
             flexDirection: 'row',
             width: '100%',
-            justifyContent: 'center'
+            justifyContent: 'center',
           }}
         >
           <SocialLinks />

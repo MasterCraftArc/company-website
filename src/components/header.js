@@ -9,7 +9,7 @@ import { Link } from 'gatsby';
 
 const logoStyles = {
   maxWidth: '262px',
-  maxHeight: '56px'
+  maxHeight: '56px',
 };
 
 const DEFAULT_SOCIAL_ICON_STYLE = 'text-white socialHover';
@@ -56,7 +56,7 @@ function Header(props) {
           width: '100%',
           top: '0',
           left: '0',
-          position: 'fixed'
+          position: 'fixed',
         }}
       >
         <div className="w-full" ref={stickyHeader}>
@@ -142,7 +142,7 @@ function Header(props) {
               initial={{ x: -1000 }}
               animate={{ x: 0 }}
               transition={{
-                type: 'tween'
+                type: 'tween',
               }}
               exit={{ x: -1000 }}
               className={

@@ -15,7 +15,7 @@ const BackgroundSection = ({ className, children }) => {
           }
         }
       }
-    `
+    `,
   );
 
   const image = getImage(placeholderImage);

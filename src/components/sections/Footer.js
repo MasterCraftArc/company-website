@@ -24,7 +24,7 @@ const FooterWrapper = styled(Box)`
 
 const footerWrapperSx = {
   justifyContent: { xs: 'center', md: 'inherit' },
-  padding: { xs: '4rem', md: '5rem', lg: `7rem` }
+  padding: { xs: '4rem', md: '5rem', lg: `7rem` },
 };
 
 const FooterLink = styled(Link)`
@@ -49,7 +49,7 @@ function Footer() {
           display: 'flex',
           gap: { xs: '2rem', md: '0' },
           alignItems: { xs: 'center', md: 'end' },
-          flexDirection: { xs: 'column', md: 'row' }
+          flexDirection: { xs: 'column', md: 'row' },
         }}
       >
         <Box
@@ -59,7 +59,7 @@ function Footer() {
             height: { xs: 'auto', md: '110px' },
             gap: { xs: '3rem', md: '10.4375rem' },
             flexDirection: { xs: 'column', md: 'row' },
-            alignItems: { xs: 'center', md: 'start' }
+            alignItems: { xs: 'center', md: 'start' },
           }}
         >
           <Box alignSelf={'start'}>
@@ -73,7 +73,7 @@ function Footer() {
               flexDirection: 'column',
               justifyContent: 'space-around',
               columnGap: { xs: '2rem', lg: '12rem' },
-              alignContent: { xs: 'center', md: 'inherit' }
+              alignContent: { xs: 'center', md: 'inherit' },
             }}
           >
             {footerLinks.map((l, i) =>
@@ -96,7 +96,7 @@ function Footer() {
                 >
                   {l.text}
                 </FooterLink>
-              )
+              ),
             )}
           </Box>
         </Box>
@@ -105,7 +105,7 @@ function Footer() {
         variant="fullWidth"
         sx={{
           marginTop: { xs: '2rem', md: '4rem' },
-          borderColor: 'text.primary'
+          borderColor: 'text.primary',
         }}
       ></Divider>
       <Box
@@ -116,7 +116,7 @@ function Footer() {
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: { xs: 'center', md: 'center' },
           justifyContent: { xs: 'center', md: 'end' },
-          gap: '8px'
+          gap: '8px',
         }}
       >
         <Typography variant="body1" sx={{ color: 'primary.contrastText' }}>
@@ -148,7 +148,7 @@ function Footer() {
           marginTop: '2rem',
           alignItems: 'center',
           justifyContent: 'end',
-          flexDirection: 'column'
+          flexDirection: 'column',
         }}
       >
         <Typography variant="caption" sx={{ color: 'primary.contrastText', textAlign: 'center' }}>
@@ -159,7 +159,7 @@ function Footer() {
             display: 'flex',
             justifyContent: 'center',
             gap: '.5rem',
-            color: 'primary.contrastText'
+            color: 'primary.contrastText',
           }}
         >
           <FooterLink

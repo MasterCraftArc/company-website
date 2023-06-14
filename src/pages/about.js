@@ -8,7 +8,7 @@ import AboutSection from '../components/about/section';
 
 const pageStyles = {
   color: '#232129',
-  marginTop: '-6rem'
+  marginTop: '-6rem',
 };
 
 // markup

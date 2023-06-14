@@ -9,7 +9,7 @@ function OurCulture() {
       sx={{
         flexDirection: { xs: 'column', md: 'row' },
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}
     >
       <Section sx={{ textAlign: 'left', alignItems: 'start', width: { md: '515px' } }}>
@@ -27,7 +27,7 @@ function OurCulture() {
           flexDirection: { xs: 'row', md: 'column' },
           flexWrap: 'wrap',
           width: { xs: '100%', md: '800px' },
-          height: { xs: 'auto', md: '520px' }
+          height: { xs: 'auto', md: '520px' },
         }}
       >
         {values.map((value, idx) => (

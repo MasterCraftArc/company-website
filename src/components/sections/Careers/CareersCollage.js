@@ -8,7 +8,7 @@ function CareersCollage() {
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
-        flexGrow: '0'
+        flexGrow: '0',
       }}
     >
       {careersCollageImages.map((image, index) => (
@@ -19,7 +19,7 @@ function CareersCollage() {
           alt={image.alt}
           sx={{
             width: { xs: '100%', sm: image.width },
-            height: 'auto'
+            height: 'auto',
           }}
         />
       ))}

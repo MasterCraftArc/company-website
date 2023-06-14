@@ -22,7 +22,7 @@ function CareersHero() {
         marginTop: '-6rem',
         flexDirection: 'column',
         justifyContent: 'center',
-        paddingX: { xs: '2rem', md: '18.563rem' }
+        paddingX: { xs: '2rem', md: '18.563rem' },
       }}
     >
       <Typography variant="h1" color="text.primary">
@@ -34,7 +34,7 @@ function CareersHero() {
         sx={{
           typography: { xs: 'body2', md: 'h6' },
           paddingLeft: '.5rem',
-          borderLeft: `solid 4px ${palette.primary.main}`
+          borderLeft: `solid 4px ${palette.primary.main}`,
         }}
       >
         Together, we can make the world more free and secure through the power of open source

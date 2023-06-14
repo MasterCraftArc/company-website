@@ -19,14 +19,14 @@ function WhereToFindUs() {
         gap: { xs: '60px', md: '120px' },
         justifyContent: 'center',
         alignItems: 'center',
-        paddingX: '32px'
+        paddingX: '32px',
       }}
     >
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '12px'
+          gap: '12px',
         }}
       >
         <Typography variant="h6" sx={{ textTransform: 'uppercase' }}>
@@ -37,7 +37,7 @@ function WhereToFindUs() {
           color="secondary"
           sx={{
             fontSize: { md: '60px' },
-            maxWidth: { md: '515px' }
+            maxWidth: { md: '515px' },
           }}
         >
           Our Virtual Office
@@ -46,7 +46,7 @@ function WhereToFindUs() {
           sx={{
             color: 'text.secondary',
             maxWidth: { md: '515px' },
-            typography: { xs: 'body2', md: 'body1' }
+            typography: { xs: 'body2', md: 'body1' },
           }}
         >
           Looking for a Unicorn? You can find us in our virtual office on Gather. We are a fully
@@ -57,7 +57,7 @@ function WhereToFindUs() {
           sx={{
             color: 'text.secondary',
             maxWidth: { md: '515px' },
-            typography: { xs: 'body2', md: 'body1' }
+            typography: { xs: 'body2', md: 'body1' },
           }}
         >
           If you want to contact the very real team behind Defense Unicorns, email us at:

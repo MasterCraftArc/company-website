@@ -7,7 +7,7 @@ const navStyles = {
   top: '20%',
   height: '220px',
   width: '190px',
-  backgroundColor: '#F3F3F3'
+  backgroundColor: '#F3F3F3',
 };
 
 const clearRefs = (refs) => {
@@ -24,7 +24,7 @@ const updateNav = (sectionRefs, refs) => {
         ? currentRef
         : previousRef;
     },
-    [sectionRefs[0]]
+    [sectionRefs[0]],
   );
   clearRefs(sectionRefs);
   setRefClassName(selectedRef, 'text-red-700 font-bold');
