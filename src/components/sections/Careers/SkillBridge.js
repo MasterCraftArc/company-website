@@ -1,6 +1,6 @@
 import React from 'react';
 import { Section, SectionBody, SectionTitle, SectionDescription } from '../../Section';
-import { Button } from '@mui/material';
+import { Button, Box } from '@mui/material';
 import skillbrigeImage from '../../../assets/png/skillbridge.png';
 
 function SkillBridge() {
@@ -20,6 +20,8 @@ function SkillBridge() {
           alignItems: 'start',
           textAlign: 'left',
           maxWidth: '720px',
+          mx: '0',
+          px: '0',
         }}
       >
         <SectionTitle sx={{ textAlign: 'inherit' }}>SKILL BRIDGE OPPORTUNITY</SectionTitle>
@@ -41,9 +43,9 @@ function SkillBridge() {
         >
           Learn More
         </Button>
-      </Section>
-      <Section sx={{ maxWidth: '720px', height: '388.54px' }}>
-        <img src={skillbrigeImage} alt="Skill Bridge" width="100%" />
+      </Section >
+      <Section sx={{maxWidth: {xs: '100vw', md: "720px"}, mx: '0', px: '0'}}>
+          <Box component="img" sx={{width: {xs: '100vw', md: 'auto'}}}  src={skillbrigeImage} alt="Skill Bridge" />
       </Section>
     </Section>
   );
