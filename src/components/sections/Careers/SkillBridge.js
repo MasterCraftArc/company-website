@@ -7,7 +7,7 @@ function SkillBridge() {
   return (
     <Section
       sx={{
-        flexDirection: { xs: 'column-reverse', lg: 'row' },
+        flexDirection: { xs: 'column', lg: 'row' },
         my: '160px',
         gap: { xs: '24px', md: '32px', lg: '60px', xl: '125px' },
       }}
