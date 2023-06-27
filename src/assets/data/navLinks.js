@@ -70,7 +70,7 @@ export const namedLinks = {
     text: 'Blog',
     target: '_blank',
     rel: 'noopener noreferrer',
-    url: 'https://medium.com/@Defense_Unicorns',
+    url: 'https://medium.com/defense-unicorns',
   },
   twitter: {
     text: 'Twitter',

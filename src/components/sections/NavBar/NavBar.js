@@ -46,6 +46,7 @@ const StyledAnnouncement = styled(Typography)`
   align-items: center;
   padding-top: 8px;
   padding-bottom: 8px;
+  gap: 1ch;
 `;
 
 function NavBar({ pathname }) {
@@ -69,16 +70,18 @@ function NavBar({ pathname }) {
 
   return (
     <>
-      <StyledAnnouncement component="div" variant="subtitle2">
-        <Twitter sx={{ color: 'secondary.main' }} />
-        &nbsp;&nbsp;Show Defense Unicorns some love. Follow us on&nbsp;
-        <Typography
-          component={'a'}
-          variant="subtitle2"
-          href={namedLinks.twitter.url}
-          sx={{ textDecoration: 'underline' }}
-        >
-          Twitter!
+      <StyledAnnouncement sx={{ px: { xs: '8px' } }} component="div" variant="subtitle2">
+        <Twitter sx={{ color: 'secondary.main', height: '100%' }} />
+        <Typography variant="inherit" component="span">
+          Show Defense Unicorns some love. Follow us on&nbsp;
+          <Typography
+            component={'a'}
+            variant="subtitle2"
+            href={namedLinks.twitter.url}
+            sx={{ textDecoration: 'underline' }}
+          >
+            Twitter!
+          </Typography>
         </Typography>
       </StyledAnnouncement>
       <StyledAppBar elevation={navElevation} position="sticky">
