@@ -50,7 +50,7 @@ function LocalButtonLink(props) {
     <>
       <Button
         component={GatsbyLink}
-        variant="contained"
+        variant={props.variant || 'contained'}
         size="large"
         to={props.url}
         target={props.target}
@@ -61,7 +61,7 @@ function LocalButtonLink(props) {
       </Button>
       <Button
         component={GatsbyLink}
-        variant="contained"
+        variant={props.variant || 'contained'}
         size={'medium'}
         to={props.url}
         color={props.color}

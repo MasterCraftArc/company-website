@@ -1,35 +1,29 @@
 import Ownership from '../../../assets/png/our-culture/ownership.png';
-import MissionImpact from '../../../assets/png/our-culture/mission-impact.png';
-import ShareInsights from '../../../assets/png/our-culture/share-insights.png';
 import Experimentation from '../../../assets/png/our-culture/experimentation.png';
-import FocusedLearning from '../../../assets/png/our-culture/focused-learning.png';
-import PositiveThinking from '../../../assets/png/our-culture/positive-thinking.png';
+import Velocity from '../../../assets/png/our-culture/velocity.png';
+import Fun from '../../../assets/png/our-culture/fun.png';
+import ClarityIsKindness from '../../../assets/png/our-culture/clarify-is-kindness.png';
 
 export const values = [
-  {
-    title: 'Mission Impact',
-    icon: MissionImpact,
-    alt: 'Mission Impact',
-  },
-  {
-    title: 'Focused Learning',
-    icon: FocusedLearning,
-    alt: 'Focused Learning',
-  },
   {
     title: 'Experimentation',
     icon: Experimentation,
     alt: 'Experimentation',
   },
   {
-    title: 'Positive Thinking',
-    icon: PositiveThinking,
-    alt: 'Positive Thinking',
+    title: 'Clarity is Kindness',
+    icon: ClarityIsKindness,
+    alt: 'Clarity is Kindness',
   },
   {
-    title: 'Share Insights',
-    icon: ShareInsights,
-    alt: 'Share Insights',
+    title: 'Velocity',
+    icon: Velocity,
+    alt: 'Velocity',
+  },
+  {
+    title: 'Fun',
+    icon: Fun,
+    alt: 'Fun',
   },
   {
     title: 'Ownership',

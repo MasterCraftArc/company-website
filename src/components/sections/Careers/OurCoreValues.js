@@ -8,10 +8,10 @@ const sectionSx = {
   padding: '120px 0',
 };
 
-function OurDNA() {
+function OurCoreValues() {
   return (
     <Section sx={sectionSx}>
-      <SectionTitle>Our DNA</SectionTitle>
+      <SectionTitle>Our Core Values</SectionTitle>
       <SectionDescription>What Makes Unicorns Sparkle</SectionDescription>
       <Box
         sx={{
@@ -52,4 +52,4 @@ function OurDNA() {
   );
 }
 
-export default OurDNA;
+export default OurCoreValues;

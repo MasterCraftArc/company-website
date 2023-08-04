@@ -49,7 +49,6 @@ const WhoWeAre = () => (
       />
     </Frame>
     <ButtonLink
-      variant="outlined"
       color="secondary"
       sx={{ mx: 'auto', mt: '60px' }}
       {...namedLinks.careers}

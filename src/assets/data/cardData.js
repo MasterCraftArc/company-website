@@ -12,42 +12,43 @@ export const zarfCapabilityCards = [
   {
     topImage: WebSecurity,
     alt: 'A folder with a padlock in the center.',
-    headerFirstLine: 'Package Apps &',
-    headerSecondLine: 'Resources',
+    headerFirstLine: 'Package Cloud',
+    headerSecondLine: 'Apps & Resources',
     body: 'Provides the ability to package a chunk of the internet and securely deliver all of the files and dependencies needed to run an application in a disconnected environment.',
   },
   {
     topImage: WirelessCloud,
     alt: 'A cloud with a check mark and connected pipelines.',
-    headerFirstLine: 'Deploy Cloud Apps',
-    headerSecondLine: 'Disconnected',
-    body: 'Provides the ability to deploy apps declaratively and without internet connectivity. This opens the door for modern cloud capabilities to be deployed in disconnected environments.',
+    headerFirstLine: 'Declaratively Deploy',
+    headerSecondLine: 'Packages',
+    body: 'Zarf deploys apps with or without internet connectivity. This opens the door for modern cloud capabilities to be deployed on teh worlds most secure systems.',
   },
   {
     topImage: Server,
     alt: 'A server overlaying a cloud.',
-    headerFirstLine: 'Easily Maintain',
-    headerSecondLine: 'Apps Disconnected',
-    body: 'Zarf reduces the skills and resources needed to manage and update applications in disconnected environments, ensuring no downtime or data loss when updating software.',
+    headerFirstLine: 'Update Regardless',
+    headerSecondLine: 'of Connection',
+    body: 'Zarf reduces the skills and resources needed to manage and update applications in any environment. Reducing downtime or data loss when updating software.',
   },
 ];
 
 export const LearnWithUsCards = [
   {
-    title: 'Defense Unicorns Podcast',
+    title: 'Defense Unicorns',
+    titleLineTwo: 'A Podcast',
     body: "We educate mission heroes with DevSecOps and cybersecurity stories from the world's leading problem solvers.",
     link: { ...namedLinks.podcast, text: 'Listen Now' },
   },
   {
     title: 'DevSecOps',
     titleLineTwo: 'Blog',
-    body: 'Insights from industry experts on the processes and technology necessary to accelerate your mission.',
+    body: 'Insights from industry experts on the processes and technology necessary to accelerate secure software delivery and your mission.',
     link: { ...namedLinks.blog, text: 'Read Now' },
   },
   {
-    title: 'Intro to',
-    titleLineTwo: 'DevSecOps',
-    body: 'A Defense Unicorns and Linux Foundation overview of the history and processes used to adopt Continuous Delivery and DevSecOps.',
+    title: 'Free DevSecOps',
+    titleLineTwo: 'Course',
+    body: 'An overview of the history, terminology, processes, and tools used to adopt Continuous Delivery and DevSecOps.',
     link: { ...namedLinks.courses, text: 'Enroll Now' },
   },
 ];

@@ -36,9 +36,9 @@ const Home = () => {
         <OpenSourceStats />
         <ZarfCapabilities />
         <OurVision />
-        <WhoWeAre />
-        <SocialsBar />
         <LearnWithUs />
+        <SocialsBar />
+        <WhoWeAre />
         <OurCulture />
       </HomePaper>
       <Footer />

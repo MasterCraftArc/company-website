@@ -2,6 +2,8 @@ import React from 'react';
 import { Section, SectionBody, SectionDescription, SectionTitle } from '../../Section';
 import { values } from './values';
 import ValueIcon from './ValueIcon';
+import ButtonLink from '../../ButtonLink';
+import { namedLinks } from '../../../assets/data/navLinks';
 
 function OurCulture() {
   return (
@@ -15,12 +17,19 @@ function OurCulture() {
       <Section sx={{ textAlign: 'left', alignItems: 'start', width: { md: '515px' } }}>
         <SectionTitle>our culture</SectionTitle>
         <SectionDescription sx={{ textAlign: 'left' }}>
-          Values that Drive Innovation
+          Principles that Drive Innovation
         </SectionDescription>
         <SectionBody>
           Defense Unicorns operates with a single belief; that a value not lived is not a value at
           all. Our team exercises habits every day that bring our values to life.
         </SectionBody>
+        <ButtonLink
+          variant="outlined"
+          color="secondary"
+          sx={{ mx: 'auto', mt: '60px', width: '155px', height: '42px' }}
+          {...namedLinks.careers}
+          text="View Our Values"
+        /> 
       </Section>
       <Section
         sx={{

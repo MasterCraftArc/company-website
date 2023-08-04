@@ -3,7 +3,7 @@ import { Box, styled } from '@mui/material';
 import Footer from '../components/sections/Footer';
 import NavBar from '../components/sections/NavBar/NavBar';
 import useDarkBackground from '../hooks/useDarkBackground';
-import OurDNA from '../components/sections/Careers/OurDNA';
+import OurCoreValues from '../components/sections/Careers/OurCoreValues';
 import Benefits from '../components/sections/Careers/Benefits';
 import CareersHero from '../components/sections/Careers/CareersHero';
 import CareerQuote from '../components/sections/Careers/CareerQuote';
@@ -32,7 +32,7 @@ function Careers() {
       <CareersPaper>
         <CurrentOpenings />
       </CareersPaper>
-      <OurDNA />
+      <OurCoreValues />
       <CareersCollage />
       <CareersPaper>
         <Benefits />

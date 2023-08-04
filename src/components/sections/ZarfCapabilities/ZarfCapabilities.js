@@ -9,7 +9,7 @@ function ZarfCapabilities() {
   return (
     <Section>
       <SectionTitle>ZARF CAPABILITIES</SectionTitle>
-      <SectionDescription>Deploy Anything - Anywhere</SectionDescription>
+      <SectionDescription>Deploy Anywhere - Regardless of Connection</SectionDescription>
       <CapabilitiesCardRow cards={zarfCapabilityCards} />
       <ButtonLink
         variant="outlined"
