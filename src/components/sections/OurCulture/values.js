@@ -30,4 +30,6 @@ export const values = [
     icon: Ownership,
     alt: 'Ownership',
   },
+  {
+  },
 ];

@@ -3,6 +3,20 @@ import { Box, Typography } from '@mui/material';
 import { fonts } from '../../../theme/typography';
 
 function ValueIcon(value) {
+  if (value.icon == null) 
+    return (
+      <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '16px',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '240px',
+              height: '240px',
+            }}
+          />
+      )
   return (
     <Box
       sx={{
