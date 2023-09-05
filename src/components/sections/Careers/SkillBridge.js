@@ -39,7 +39,7 @@ function SkillBridge() {
           sx={{ mt: '24px', mr: 'auto' }}
           variant="contained"
           color="primary"
-          href="https://www.dodskillbridge.us/"
+          href="https://skillbridge.osd.mil/"
         >
           Learn More
         </Button>

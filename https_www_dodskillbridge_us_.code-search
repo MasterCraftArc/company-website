@@ -1,9 +1,0 @@
-# Query: https://www.dodskillbridge.us/
-# ContextLines: 1
-
-1 result - 1 file
-
-src/components/sections/Careers/SkillBridge.js:
-  41            color="primary"
-  42:           href="https://skillbridge.osd.mil/"
-  43          >
