@@ -2,7 +2,7 @@ import React from 'react';
 import palette from '../../theme/palette';
 import { styled, Box, Typography } from '@mui/material';
 
-const OurVisionWrapper = styled(Box)`
+const OurMissionWrapper = styled(Box)`
   gap: 10px;
   width: 100vw;
   display: flex;
@@ -11,9 +11,9 @@ const OurVisionWrapper = styled(Box)`
   background: linear-gradient(0deg, #163e7b 0%, #1a3873 34%, #252960 75.99%, #2a2153 99.99%);
 `;
 
-function OurVision() {
+function OurMission() {
   return (
-    <OurVisionWrapper
+    <OurMissionWrapper
       component="section"
       sx={{
         height: { md: '411px' },
@@ -27,7 +27,7 @@ function OurVision() {
           typography: 'h2',
         }}
       >
-        Our Vision
+        Our Mission
       </Typography>
       <Typography
         component="h4"
@@ -41,10 +41,10 @@ function OurVision() {
           borderLeft: `solid 6px ${palette.primary.main}`,
         }}
       >
-        "We envision a free and secure world that <strong>enables progress and innovation.</strong>"
+        "Transform how the U.S. defense apparatus buys, builds, delivers, and sustains <strong>mission capabilities.</strong>"
       </Typography>
-    </OurVisionWrapper>
+    </OurMissionWrapper>
   );
 }
 
-export default OurVision;
+export default OurMission;
