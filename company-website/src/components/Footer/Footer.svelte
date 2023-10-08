@@ -1,51 +1,52 @@
 <script>
 	import doug from '../../images/svg/doug.svg';
-	import github from '../../images/svg/github.svg';
-	import linkden from '../../images/svg/linkden.svg';
-	import twitter from '../../images/svg/twitter.svg';
-	import rss from '../../images/svg/rss.svg';
 	import blueGlow from '../../images/svg/section-3-glow.svg';
 	import map from '../../images/svg/worldmap.svg';
 	import MobileFooter from './MobileFooter.svelte';
-	import MobileNav from '../Nav/MobileNav.svelte';
-	$: innerWidth = 0
+	import GithubButton from '../GithubButton.svelte';
+	import LinkedinButton from '../LinkedinButton.svelte';
+	import Twitter from '../Twitter.svelte';
+	import Spotify from '../Spotify.svelte';
+	$: innerWidth = 0;
 </script>
-<svelte:window bind:innerWidth/>
-  {#if innerWidth < 1200}
-  <MobileFooter/>
-  {:else}
-<section>
-	<img src={map} alt="" class="map" />
-	<div class="section-container">
-		<div class="section1">
-			<img src={doug} alt="doug" loading="lazy" class="doug" />
-			<div class="icons">
-				<img src={github} alt="github icon" loading="lazy" class="icon" />
-				<img src={linkden} alt="linkden icon" loading="lazy" class="icon" />
-				<img src={twitter} alt="twitter icon" loading="lazy" class="icon" />
-				<img src={rss} alt="rss icon" loading="lazy" class="icon" />
+
+<svelte:window bind:innerWidth />
+{#if innerWidth < 1200}
+	<MobileFooter />
+{:else}
+	<section>
+		<img src={map} alt="" class="map" />
+		<div class="section-container">
+			<div class="section1">
+				<img src={doug} alt="doug" loading="lazy" class="doug" />
+				<div class="icons">
+					<GithubButton />
+					<LinkedinButton />
+					<Twitter />
+					<Spotify />
+				</div>
+			</div>
+			<div class="section2">
+				<a href="/">Products</a>
+				<a href="/">Projects</a>
+				<a href="/">Contracts</a>
+				<a href="/">Case Studies</a>
+				<a href="/">Unicorns Academy</a>
+				<a href="/">Contact</a>
+			</div>
+			<div class="section3">
+				<a href="/">Github</a>
+				<a href="/">Blogs</a>
+				<a href="/">Careers</a>
+				<a href="/">Terms of Service</a>
+				<a href="/">Privacy Policy</a>
 			</div>
 		</div>
-		<div class="section2">
-			<a href="/">Products</a>
-			<a href="/">Projects</a>
-			<a href="/">Contracts</a>
-			<a href="/">Case Studies</a>
-			<a href="/">Unicorns Academy</a>
-			<a href="/">Contact</a>
-		</div>
-		<div class="section3">
-			<a href="/">Github</a>
-			<a href="/">Blogs</a>
-			<a href="/">Careers</a>
-			<a href="/">Terms of Service</a>
-			<a href="/">Privacy Policy</a>
-		</div>
-	</div>
-	<p>Defense Unicorns, Inc</p>
-	<img src={blueGlow} alt="" class="blue-glow" loading="lazy" />
-</section>
+		<p>Defense Unicorns, Inc</p>
+		<img src={blueGlow} alt="" class="blue-glow" loading="lazy" />
+	</section>
 {/if}
+
 <style>
 	.section-container {
 		position: relative;

@@ -1,72 +1,52 @@
 <script>
-	import Button from '../Button.svelte';
-	import badges from '../../images/svg/company-badges.svg';
-	import glow from '../../images/svg/section-3-glow.svg';
-	import mobileBadges from '../../images/svg/mobile-badges.svg'
-
-	$: innerWidth = 0
+	import Card from './Card.svelte';
+	import CardGlow from '../Home/CardGlow.svelte';
 </script>
-<svelte:window bind:innerWidth/>
-{#if innerWidth < 1200}
-<section class="mobile-section">
-	<div class="text-container-mobile">
 
-		<h1 class="mobile">Trusted by The Most</h1>
-		<h1 class="mobile"><span>Critical Systems</span></h1>
-		<h1 class="mobile">in the world</h1>
-	<p>
-		Most IT companies use the same set of tools and technology. Why settle for an IT provider that's
-		boring, unclear, and intimidating? At Parried we approach IT support with a passion for <span
-			>helping businesses succeed</span
-		>
-	</p>
-	<Button link="/" text="Learn More" />
-</div>
-	<img src={mobileBadges} alt="mobile-badges" loading="lazy" class="mobile-badges" />
+<section class="section4">
+	<div class="card-glow"><CardGlow /></div>
+	<Card
+		title="Rapid ATO"
+		text="It all starts with a free 30 minute conversation to save your life and use our software so please do that."
+		check1="ya buy our software"
+		check2="please do that"
+	/>
+	<Card
+		title="Rapid ATO"
+		text="It all starts with a free 30 minute conversation to save your life and use our software so please do that."
+		check1="ya buy our software"
+		check2="please do that"
+	/>
+	<Card
+		title="Rapid ATO"
+		text="It all starts with a free 30 minute conversation to save your life and use our software so please do that."
+		check1="ya buy our software"
+		check2="please do that"
+	/>
 </section>
-{:else}
-<section class="section">
-	<div class="h1-Container">
-		<img src={glow} alt="" loading="lazy" class="glow" />
-		<h1>Trusted by The Most <span>Critical </span>Systems in The World</h1>
-	</div>
-	<p>
-		Most IT companies use the same set of tools and technology. Why settle for an IT provider that's
-		boring, unclear, and intimidating? At Parried we approach IT support with a passion for <span
-			>helping businesses succeed</span
-		>
-	</p>
-	<Button link="/" text="Learn More" />
-	<img src={badges} alt="badges" loading="lazy" />
-</section>
-{/if}
+
 <style>
-
-	.mobile-badges{
-		max-width: 300px;
-		width: 100vw;
-		height: auto;
-	}
-
-	.section {
-		gap: 2rem;
+	.section4 {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: row;
 		position: relative;
 	}
-	img {
-		width: 100%;
-	}
 
-	img {
-		width: 800px;
-		height: 300px;
-	}
-
-	.glow {
-		width: 100%;
-		height: auto;
+	.card-glow {
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: 100%;
+		height: 100%;
 		z-index: -1;
+	}
+
+	@media (max-width: 1200px) {
+		.section4 {
+			flex-direction: column;
+			gap: 3rem;
+		}
 	}
 </style>

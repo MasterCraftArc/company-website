@@ -34,5 +34,11 @@
 		.glow-container {
 			flex-direction: column;
 		}
+
+		.yellow img,
+		.blue img {
+			min-width: 100vw;
+			height: 1200px;
+		}
 	}
 </style>

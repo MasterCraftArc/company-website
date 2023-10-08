@@ -1,115 +1,89 @@
 <script>
-	import Section5Text from './Section5Text.svelte';
-	import Hero from '../../images/png/Hero.png';
-	import blueGlow from '../../images/svg/blue-glow.svg';
-	import Section5Cards from './Section5Cards.svelte';
-	let currentImage = Hero;
+	import server from '../../images/svg/server.svg';
+	import CardGlow from './CardGlow.svelte';
+	import glow from '../../images/svg/section-3-glow.svg';
 
-	function handleSectionClick(event) {
-		const targetId = event.detail.id;
-		if (targetId === 'image1') {
-			currentImage = blueGlow;
-		} else if (targetId === 'image2') {
-			currentImage = Hero;
-		} else if (targetId === 'image3') {
-			currentImage = Hero;
-		} else if (targetId === 'image4') {
-			currentImage = Hero;
-		}
-	}
-
-	$: innerWidth = 0
+	$: innerWidth = 0;
 </script>
-<svelte:window bind:innerWidth/>
+
+<svelte:window bind:innerWidth />
 {#if innerWidth < 1200}
-<div class="mobile-cards">
-<Section5Cards
-title="Software Factory"
-text = "As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
-img = {Hero}
-/>
-<Section5Cards
-title="Software Factory"
-text = "As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
-img = {Hero}
-/>
-<Section5Cards
-title="Software Factory"
-text = "As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
-img = {Hero}
-/>
-<Section5Cards
-title="Software Factory"
-text = "As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
-img = {Hero}
-/>
-</div>
+	<section>
+		<div class="container">
+			<div class="h1-container">
+				<h1>Our <span>Mission</span></h1>
+			</div>
+			<p>
+				Transform how the U.S. defense apparatus buys,builds,delivers,and sustains mission
+				capabilities
+			</p>
+			<img src={server} alt="server" loading="lazy" />
+		</div>
+	</section>
 {:else}
-<section>
-	<h1>What <span>Defense Unicorns</span> Offers</h1>
-	<div class="container">
-		<div class="left">
-			<Section5Text
-				on:click={handleSectionClick}
-				id="image1"
-				title="hello my friend"
-				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
-			/>
-			<Section5Text
-				on:click={handleSectionClick}
-				id="image2"
-				title="hello my friend"
-				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
-			/>
-			<Section5Text
-				on:click={handleSectionClick}
-				id="image3"
-				title="hello my friend"
-				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
-			/>
-			<Section5Text
-				on:click={handleSectionClick}
-				id="image4"
-				title="hello my friend"
-				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
-			/>
+	<section>
+		<div class="card-glow"><CardGlow /></div>
+		<div class="container">
+			<div class="h1-container">
+				<img src={glow} alt="" loading="lazy" class="header" />
+				<h1>Our <span>Mission</span></h1>
+			</div>
+			<p>
+				Transform how the U.S. defense apparatus buys,builds,delivers,and sustains mission
+				capabilities
+			</p>
+			<img src={server} alt="server" loading="lazy" />
 		</div>
-		<div class="right">
-			<img src={currentImage} alt="current" loading="lazy" />
-		</div>
-	</div>
-</section>
+	</section>
 {/if}
+
 <style>
-
-	.mobile-cards{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		gap: 2rem;
-	}
-
-	section {
-		gap: 2rem;
-	}
-
 	.container {
 		display: flex;
-		gap: 2rem;
-	}
-
-	.left {
-		width: 50%;
-		display: flex;
-		gap: 2rem;
 		flex-direction: column;
-	}
-	.right {
-		width: 50%;
+		gap: 2rem;
+		align-items: center;
 	}
 
 	img {
+		width: 400px;
+		height: auto;
+	}
+
+	section {
+		position: relative;
+		background-image: url('../../images/svg/waves.svg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	.container {
+		z-index: 1;
+	}
+
+	.card-glow {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	.header {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	@media (max-width: 1200px) {
+		section {
+			background-image: none;
+		}
+
+		h1 {
+			font-size: 36px;
+		}
 	}
 </style>

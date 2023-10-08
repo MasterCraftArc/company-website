@@ -3,30 +3,27 @@
 	import Button from '../Button.svelte';
 	import MobileNav from './MobileNav.svelte';
 
-	$: innerWidth = 0
+	$: innerWidth = 0;
+</script>
 
-
-  </script>
-<svelte:window bind:innerWidth/>
-  {#if innerWidth < 1200}
+<svelte:window bind:innerWidth />
+{#if innerWidth < 1200}
 	<MobileNav />
-  {:else}
+{:else}
 	<nav>
-	  <img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" />
-	  <div class="links">
-		<a href="/">Products</a>
-		<a href="/">Projects</a>
-		<a href="/">Contracts</a>
-		<a href="/">Case Studies</a>
-		<a href="/">Unicorn Academy</a>
-		<Button link="/" text="Request Demo" />
-	  </div>
+		<img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" />
+		<div class="links">
+			<a href="/">Products</a>
+			<a href="/">Projects</a>
+			<a href="/">Contracts</a>
+			<a href="/">Case Studies</a>
+			<a href="/">Unicorn Academy</a>
+			<Button link="/" text="Request Demo" />
+		</div>
 	</nav>
-  {/if}
+{/if}
 
 <style>
-
-
 	nav {
 		overflow: hidden;
 		margin: 0 auto;

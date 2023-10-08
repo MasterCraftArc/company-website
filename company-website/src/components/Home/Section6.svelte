@@ -1,62 +1,70 @@
 <script>
-	import server from '../../images/svg/server.svg';
-	import CardGlow from './CardGlow.svelte';
-	import glow from '../../images/svg/section-3-glow.svg';
+	import Button from '../Button.svelte';
 </script>
 
 <section>
-	<div class="card-glow"><CardGlow /></div>
 	<div class="container">
-		<div class="h1-container">
-			<img src={glow} alt="" loading="lazy" class="header" />
-			<h1>Our <span>Mission</span></h1>
+		<div class="text-background">
+			<div>
+				<h1>
+					Deploy your
+					<span>Mission </span>Applications
+				</h1>
+				<h1>
+					where your
+					<span>Mission </span> Demands are
+				</h1>
+			</div>
+
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque
+				repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis,
+				maxime laboriosam fugiat? Voluptatem, autem.
+			</p>
+
+			<Button text="Request Demo" />
 		</div>
-		<p>
-			Transform how the U.S. defense apparatus buys,builds,delivers,and sustains mission
-			capabilities
-		</p>
-		<img src={server} alt="server" loading="lazy" />
 	</div>
 </section>
 
 <style>
-	.container {
+	section {
 		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+	.text-background {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		flex-direction: column;
 		gap: 2rem;
-		align-items: center;
-	}
+		background: linear-gradient(to top, black, #1f202f);
+		padding: 2rem;
+		border-radius: 25px;
 
-	img {
-		width: 400px;
-		height: auto;
-	}
-
-	section {
+		box-shadow: 0 10px 80px -10px rgb(0, 119, 255), 0 -10px 80px -10px rgb(0, 231, 166);
 		position: relative;
-		background-image: url('../../images/svg/waves.svg');
-		background-size: cover;
-		background-position: center;
-	}
-
-	.container {
 		z-index: 1;
 	}
 
-	.card-glow {
-		position: absolute;
-		top: 0;
-		left: 0;
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
 		width: 100%;
-		height: 100%;
-		z-index: -1;
 	}
-	.header {
-		width: 100%;
-		height: auto;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
+
+	@media (max-width: 1200px) {
+		.text-background {
+			padding: 3rem;
+		}
+		h1 {
+			font-size: 36px;
+		}
 	}
 </style>
