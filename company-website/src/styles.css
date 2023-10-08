@@ -23,9 +23,37 @@ p {
 	max-width: 600px;
 }
 
+.doug {
+	width: 100px;
+	height: 150px;
+}
+
 a {
 	font-family: 'montserrat', sans-serif;
 	color: white;
+}
+
+.text-container-mobile{
+	max-width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: .75rem;
+}
+
+.icon {
+	width: 35px;
+	height: 35px;
+}
+
+.mobile-section{
+	padding: 0 2rem;
+}
+
+
+.icon:hover {
+	cursor: pointer;
 }
 
 section {
@@ -46,6 +74,20 @@ h1 span {
 	color: #a5bdfc;
 	font-weight: 900;
 	text-shadow: 0 0 5px rgba(165, 189, 252, 1);
+}
+
+.mobile{
+	font-size: 36px;
+}
+
+
+
+.text-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 p span {

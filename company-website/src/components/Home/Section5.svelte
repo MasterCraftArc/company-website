@@ -2,12 +2,11 @@
 	import Section5Text from './Section5Text.svelte';
 	import Hero from '../../images/png/Hero.png';
 	import blueGlow from '../../images/svg/blue-glow.svg';
+	import Section5Cards from './Section5Cards.svelte';
 	let currentImage = Hero;
 
 	function handleSectionClick(event) {
 		const targetId = event.detail.id;
-		// Logic to determine which image corresponds to the clicked section
-		// For example:
 		if (targetId === 'image1') {
 			currentImage = blueGlow;
 		} else if (targetId === 'image2') {
@@ -18,8 +17,34 @@
 			currentImage = Hero;
 		}
 	}
-</script>
 
+	$: innerWidth = 0
+</script>
+<svelte:window bind:innerWidth/>
+{#if innerWidth < 1200}
+<div class="mobile-cards">
+<Section5Cards
+title="Software Factory"
+text = "As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
+img = {Hero}
+/>
+<Section5Cards
+title="Software Factory"
+text = "As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
+img = {Hero}
+/>
+<Section5Cards
+title="Software Factory"
+text = "As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
+img = {Hero}
+/>
+<Section5Cards
+title="Software Factory"
+text = "As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
+img = {Hero}
+/>
+</div>
+{:else}
 <section>
 	<h1>What <span>Defense Unicorns</span> Offers</h1>
 	<div class="container">
@@ -50,12 +75,21 @@
 			/>
 		</div>
 		<div class="right">
-			<img src={currentImage} alt="current" loading="lazy"/>
+			<img src={currentImage} alt="current" loading="lazy" />
 		</div>
 	</div>
 </section>
-
+{/if}
 <style>
+
+	.mobile-cards{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
 	section {
 		gap: 2rem;
 	}

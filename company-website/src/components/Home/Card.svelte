@@ -30,7 +30,7 @@
 <style>
 	.check {
 		width: 30px;
-        height: 30px;
+		height: 30px;
 	}
 
 	.checkmark {

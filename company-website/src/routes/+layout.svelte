@@ -6,12 +6,11 @@
 	import Nav from '../components/Nav/Nav.svelte';
 	import Announcement from '../components/Home/Announcement.svelte';
 	import Footer from '../components/Footer/Footer.svelte';
-
 </script>
 
 <svelte:head>
-  <title>Defense Unicorns</title>
-  <meta name="description" content="defense unicorns landing page">
+	<title>Defense Unicorns</title>
+	<meta name="description" content="defense unicorns landing page" />
 </svelte:head>
 <Announcement />
 <Nav />

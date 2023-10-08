@@ -5,11 +5,11 @@
 
 <div class="glow-container">
 	<div class="yellow pulse">
-		<img src={yellowGlow} alt="yellow glow" loading="lazy"/>
+		<img src={yellowGlow} alt="yellow glow" loading="lazy" />
 	</div>
 	<slot />
 	<div class="blue glow">
-		<img src={blueGlow} alt="blue glow"  loading="lazy" />
+		<img src={blueGlow} alt="blue glow" loading="lazy" />
 	</div>
 </div>
 

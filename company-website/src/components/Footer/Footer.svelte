@@ -6,8 +6,14 @@
 	import rss from '../../images/svg/rss.svg';
 	import blueGlow from '../../images/svg/section-3-glow.svg';
 	import map from '../../images/svg/worldmap.svg';
+	import MobileFooter from './MobileFooter.svelte';
+	import MobileNav from '../Nav/MobileNav.svelte';
+	$: innerWidth = 0
 </script>
-
+<svelte:window bind:innerWidth/>
+  {#if innerWidth < 1200}
+  <MobileFooter/>
+  {:else}
 <section>
 	<img src={map} alt="" class="map" />
 	<div class="section-container">
@@ -37,21 +43,12 @@
 		</div>
 	</div>
 	<p>Defense Unicorns, Inc</p>
-	<img src={blueGlow} alt="" class="blue-glow" loading="lazy"/>
+	<img src={blueGlow} alt="" class="blue-glow" loading="lazy" />
 </section>
-
+{/if}
 <style>
 	.section-container {
 		position: relative;
-	}
-
-	.icon {
-		width: 35px;
-        height: 35px;
-	}
-
-	.icon:hover {
-		cursor: pointer;
 	}
 
 	.map {
@@ -66,11 +63,6 @@
 		z-index: -1;
 		overflow: hidden;
 		width: 100vw;
-	}
-
-	.doug {
-		width: 100px;
-        height: 150px;
 	}
 
 	.icons {

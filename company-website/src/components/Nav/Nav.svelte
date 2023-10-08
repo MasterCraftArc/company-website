@@ -1,37 +1,31 @@
 <script>
 	import defenseUnicornsLogo from '../../images/svg/defense-unicorns-logo.svg';
 	import Button from '../Button.svelte';
-	let scrolled = false;
+	import MobileNav from './MobileNav.svelte';
 
-	function handleScroll() {
-		scrolled = window.scrollY > 0;
-		if (window.scrollY == 0) {
-			scrolled = false;
-		}
-	}
-</script>
+	$: innerWidth = 0
 
-<svelte:window on:scroll={handleScroll} />
 
-<nav class:scrolled>
-	<img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy"/>
-	<div class="links">
+  </script>
+<svelte:window bind:innerWidth/>
+  {#if innerWidth < 1200}
+	<MobileNav />
+  {:else}
+	<nav>
+	  <img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" />
+	  <div class="links">
 		<a href="/">Products</a>
 		<a href="/">Projects</a>
 		<a href="/">Contracts</a>
 		<a href="/">Case Studies</a>
 		<a href="/">Unicorn Academy</a>
 		<Button link="/" text="Request Demo" />
-	</div>
-</nav>
+	  </div>
+	</nav>
+  {/if}
 
 <style>
-	.scrolled {
-		backdrop-filter: blur(10px);
-		transition: background-color 0.5s ease-in-out;
-		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-		z-index: 100;
-	}
+
 
 	nav {
 		overflow: hidden;
@@ -67,7 +61,6 @@
 	}
 
 	a::before {
-		content: '';
 		position: absolute;
 		width: 100%;
 		height: 3px;
@@ -79,7 +72,7 @@
 		transition: all 0.3s ease-in-out;
 	}
 
-	.logo{
+	.logo {
 		padding-left: 2rem;
 		height: 72.29px;
 		width: 338px;

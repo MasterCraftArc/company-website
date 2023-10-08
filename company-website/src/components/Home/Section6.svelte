@@ -15,7 +15,7 @@
 			Transform how the U.S. defense apparatus buys,builds,delivers,and sustains mission
 			capabilities
 		</p>
-		<img src={server} alt="server" loading="lazy"/>
+		<img src={server} alt="server" loading="lazy" />
 	</div>
 </section>
 
@@ -29,7 +29,7 @@
 
 	img {
 		width: 400px;
-        height: auto;
+		height: auto;
 	}
 
 	section {
