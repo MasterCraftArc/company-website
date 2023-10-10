@@ -47,7 +47,7 @@
 
 	img {
 		width: 400px;
-		height: auto;
+		height: 500px;
 	}
 
 	section {

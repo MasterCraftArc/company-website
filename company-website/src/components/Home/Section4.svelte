@@ -3,6 +3,7 @@
 	import Hero from '../../images/png/Hero.png';
 	import blueGlow from '../../images/svg/blue-glow.svg';
 	import Section5Cards from './ImgCards.svelte';
+	import doug from '../../images/svg/doug.svg';
 	let currentImage = Hero;
 
 	function handleSectionClick(event) {
@@ -12,7 +13,7 @@
 		} else if (targetId === 'image2') {
 			currentImage = Hero;
 		} else if (targetId === 'image3') {
-			currentImage = Hero;
+			currentImage = doug;
 		} else if (targetId === 'image4') {
 			currentImage = Hero;
 		}
@@ -55,25 +56,25 @@
 		<div class="container">
 			<div class="left">
 				<Section5Text
-					on:click={handleSectionClick}
+					on:hover={handleSectionClick}
 					id="image1"
 					title="hello my friend"
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
 				/>
 				<Section5Text
-					on:click={handleSectionClick}
+					on:hover={handleSectionClick}
 					id="image2"
 					title="hello my friend"
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
 				/>
 				<Section5Text
-					on:click={handleSectionClick}
+					on:hover={handleSectionClick}
 					id="image3"
 					title="hello my friend"
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
 				/>
 				<Section5Text
-					on:click={handleSectionClick}
+					on:hover={handleSectionClick}
 					id="image4"
 					title="hello my friend"
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
@@ -119,9 +120,12 @@
 		align-items: center;
 		justify-content: center;
 		max-height: 744px;
+		position: relative;
+		overflow: hidden;
 	}
 
 	img {
-		width: 100%;
+		max-width: 100%;
+		max-height: 100%;
 	}
 </style>

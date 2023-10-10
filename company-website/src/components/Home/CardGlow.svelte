@@ -1,15 +1,15 @@
 <script>
-	import yellowGlow from '../../images/svg/yellow-glow.svg';
-	import blueGlow from '../../images/svg/blue-glow.svg';
+	export let glowRight;
+	export let glowLeft;
 </script>
 
 <div class="glow-container">
 	<div class="yellow pulse">
-		<img src={yellowGlow} alt="yellow glow" loading="lazy" />
+		<img src={glowLeft} alt="yellow glow" loading="lazy" />
 	</div>
 	<slot />
 	<div class="blue glow">
-		<img src={blueGlow} alt="blue glow" loading="lazy" />
+		<img src={glowRight} alt="blue glow" loading="lazy" />
 	</div>
 </div>
 

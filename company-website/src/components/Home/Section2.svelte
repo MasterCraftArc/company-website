@@ -11,9 +11,11 @@
 {#if innerWidth < 1200}
 	<section class="mobile-section">
 		<div class="text-container-mobile">
-			<h1 class="mobile">Trusted by The Most</h1>
-			<h1 class="mobile"><span>Critical Systems</span></h1>
-			<h1 class="mobile">in the world</h1>
+			<div>
+				<h1 class="mobile">Trusted by The Most</h1>
+				<h1 class="mobile"><span>Critical Systems</span></h1>
+				<h1 class="mobile">in the world</h1>
+			</div>
 			<p>
 				Most IT companies use the same set of tools and technology. Why settle for an IT provider
 				that's boring, unclear, and intimidating? At Parried we approach IT support with a passion
@@ -44,7 +46,7 @@
 	.mobile-badges {
 		max-width: 300px;
 		width: 100vw;
-		height: auto;
+		height: 528px;
 	}
 
 	.section {

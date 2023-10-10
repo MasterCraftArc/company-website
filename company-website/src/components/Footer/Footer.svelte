@@ -28,10 +28,10 @@
 			</div>
 			<div class="section2">
 				<a href="/">Products</a>
-				<a href="/">Projects</a>
-				<a href="/">Contracts</a>
-				<a href="/">Case Studies</a>
-				<a href="/">Unicorns Academy</a>
+				<a href="/Projects">Projects</a>
+				<a href="/Contracts">Contracts</a>
+				<a href="/CaseStudies">Case Studies</a>
+				<a href="/UnicornAcademy">Unicorn Academy</a>
 				<a href="/">Contact</a>
 			</div>
 			<div class="section3">
@@ -103,15 +103,15 @@
 		display: flex;
 		align-items: center;
 		padding: 0 1.5rem;
-		color: #545454;
+		color: white;
 	}
 
 	a:hover {
-		color: #fff;
+		color: #ffd700;
 	}
 
 	p {
-		color: #545454;
+		color: white;
 		padding-top: 5rem;
 	}
 </style>

@@ -26,7 +26,7 @@
 	<div class="container">
 		<img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" />
 		<button on:click|stopPropagation={handleButtonClick} class="icon-button">
-			<img src={hamburger} alt="hamburger" class="hamburger" />
+			<img src={hamburger} alt="hamburger" class="hamburger" loading="lazy" />
 		</button>
 	</div>
 
@@ -35,10 +35,10 @@
 		<div class="menu">
 			<div class="links">
 				<a href="/">Products</a>
-				<a href="/">Projects</a>
-				<a href="/">Contracts</a>
-				<a href="/">Case Studies</a>
-				<a href="/">Unicorn Academy</a>
+				<a href="/Projects">Projects</a>
+				<a href="/Contracts">Contracts</a>
+				<a href="/CaseStudies">Case Studies</a>
+				<a href="/UnicornAcademy">Unicorn Academy</a>
 			</div>
 		</div>
 	{/if}
@@ -86,6 +86,11 @@
 	.logo {
 		width: 173px;
 		height: 37px;
+	}
+
+	.hamburger {
+		width: 30px;
+		height: 30px;
 	}
 
 	.hamburger:hover {

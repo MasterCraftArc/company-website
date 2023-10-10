@@ -7,19 +7,20 @@
 
 	const dispatch = createEventDispatcher();
 
-	function handleClick() {
-		dispatch('click', { id });
+	function handleHover() {
+		dispatch('hover', { id });
 	}
 
 	function handleKeyPress(event) {
 		if (event.key === 'Enter' || event.key === 'Space') {
-			dispatch('click', { id });
+			dispatch('hover', { id });
 		}
 	}
 </script>
 
 <div
-	on:click={handleClick}
+	on:mouseover={handleHover}
+	on:focus={handleHover}
 	on:keydown={handleKeyPress}
 	tabindex="0"
 	role="button"
@@ -40,7 +41,8 @@
 		cursor: pointer;
 	}
 
-	div:hover {
+	div:hover,
+	div:focus {
 		box-shadow: 0 0 10px 5px #3498db;
 		background-color: #292a3c;
 		border: none;

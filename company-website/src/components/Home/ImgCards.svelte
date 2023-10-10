@@ -42,6 +42,6 @@
 	img {
 		background-color: blue;
 		width: 350px;
-		height: auto;
+		height: 250px;
 	}
 </style>
