@@ -3,10 +3,9 @@
 	import checkMark from '../../images/svg/check-mark.svg';
 	import Cards from './Cards.svelte';
 	import eclipse from '../../images/svg/eclipse.svg';
-	import Imgs from './imgs.svelte';
+	import Imgs from './img-orientation/imgs.svelte';
 	import CardGlow from '../Home/CardGlow.svelte';
-	import redGlow from '../../images/svg/red-glow.svg';
-	import blueGlow from '../../images/svg/blue-glow.svg';
+	import greenGlow from '../../images/svg/product-glows/leapfrog-card-glow.svg';
 	import Button from '../Button.svelte';
 	import GithubButton from '../GithubButton.svelte';
 	import Star from '../../images/svg/star.svg';
@@ -14,89 +13,119 @@
 	import ai from '../../images/svg/leapfrog-card-imgs/ai.svg';
 	import computer from '../../images/svg/leapfrog-card-imgs/computer.svg';
 	import cube from '../../images/svg/leapfrog-card-imgs/cube.svg';
+	import leapfrogGlow from '../../images/svg/product-glows/leapfrog-header-glow.svg';
+	import MobileSection3 from './mobile/MobileSection3.svelte';
+	$: innerWidth = 0;
 </script>
 
-<section class="section3">
-	<div>
-		<h1><span>LeapfrogAI</span> - Generative AI for National Security</h1>
-		<LeftRight>
-			<div slot="left" class="left">
-				<img src={Leapfrog} alt="leapfrog" loading="lazy" class="leapfrog" />
+<svelte:window bind:innerWidth />
+{#if innerWidth < 1200}
+	<MobileSection3 />
+{:else}
+	<section class="section3">
+		<div>
+			<div class="h1-container">
+				<img src={leapfrogGlow} alt="header-glow" loading="lazy" class="glow" />
+				<h1><span>LeapfrogAI</span> - Generative AI for National Security</h1>
 			</div>
-			<div slot="right" class="right">
-				<div class="text-div">
-					<img src={checkMark} alt="" loading="lazy" class="check-mark" />
-					<h3>Package and deploy to airgap systems</h3>
+			<LeftRight>
+				<div slot="left" class="left">
+					<img src={Leapfrog} alt="leapfrog" loading="lazy" class="leapfrog" />
 				</div>
-				<div class="text-div">
-					<img src={checkMark} alt="" loading="lazy" class="check-mark" />
-					<h3>Package and deploy to airgap systems</h3>
+				<div slot="right" class="right">
+					<div class="text-div">
+						<img src={checkMark} alt="" loading="lazy" class="check-mark" />
+						<h3>ChatGPT type capabilties for secure, local, air gapped systems</h3>
+					</div>
+					<div class="text-div">
+						<img src={checkMark} alt="" loading="lazy" class="check-mark" />
+						<h3>Generative AI leveraging your data</h3>
+					</div>
+					<div class="text-div">
+						<img src={checkMark} alt="" loading="lazy" class="check-mark" />
+						<h3>Local deployments, not internet required</h3>
+					</div>
+					<div class="text-div">
+						<img src={checkMark} alt="" loading="lazy" class="check-mark" />
+						<h3>Works on ships, tanks, planes, on-prem and in the cloud</h3>
+					</div>
 				</div>
-				<div class="text-div">
-					<img src={checkMark} alt="" loading="lazy" class="check-mark" />
-					<h3>Package and deploy to airgap systems</h3>
-				</div>
-				<div class="text-div">
-					<img src={checkMark} alt="" loading="lazy" class="check-mark" />
-					<h3>Package and deploy to airgap systems</h3>
+			</LeftRight>
+		</div>
+		<div>
+			<div class="h1-container">
+				<img src={leapfrogGlow} alt="header-glow" loading="lazy" class="glow" />
+				<h1>Use <span>LeapfrogAI</span> for</h1>
+			</div>
+			<div class="cards">
+				<div class="card-glow"><CardGlow glowLeft={greenGlow} glowRight={greenGlow} /></div>
+				<div class="card">
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs background={eclipse} img={ai} /></span>
+						<span slot="title"><h3>Generative AI for Airgapped Systems</h3></span>
+						<span slot="text"
+							><p>
+								LeapfrogAI mirrors OpenAI and Hugging Face API surface so secure and disconnected
+								enviroments can have a ChatGPT like experience while fully disconnected from the
+								internet.
+							</p></span
+						>
+					</Cards>
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs background={eclipse} img={computer} /></span>
+						<span slot="title"><h3>Vector Databases & Embedding Creation</h3></span>
+						<span slot="text"
+							><p>
+								LeapfrogAI has efficent similarity searches on large scale databases and generative
+								embeddings which can be used for semantic similarity, clustering and more.
+							</p></span
+						>
+					</Cards>
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs background={eclipse} img={cube} /></span>
+						<span slot="title"><h3>Fine Tune Custom Models</h3></span>
+						<span slot="text"
+							><p>
+								LeapfrogAI has the ability to l everage customer specific data to fine-tune models
+								that enable the AI to better understand your domain and provide more accurate
+								contextual outputs.
+							</p></span
+						>
+					</Cards>
 				</div>
 			</div>
-		</LeftRight>
-	</div>
-	<div>
-		<h1 class="card-header">Use <span>LeapfrogAI</span> for</h1>
-		<div class="cards">
-			<div class="card-glow"><CardGlow glowLeft={redGlow} glowRight={blueGlow} /></div>
-			<div class="card">
-				<Cards>
-					<span slot="img1" class="eclipse"><Imgs background={eclipse} img={ai} /></span>
-					<span slot="title"><h3>hello</h3></span>
-					<span slot="text"
-						><p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
-							quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
-							tempore! Neque nobis perspiciatis cupiditate.
-						</p></span
+			<div />
+			<div class="links">
+				<div class="a-tag">
+					<GithubButton />
+					<a href="https://github.com/defenseunicorns" target="_blank">
+						Docs <img src={Star} alt="" loading="lazy" class="star" /> Star us on Github</a
 					>
-				</Cards>
-				<Cards>
-					<span slot="img1" class="eclipse"><Imgs background={eclipse} img={computer} /></span>
-					<span slot="title"><h3>hello</h3></span>
-					<span slot="text"
-						><p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
-							quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
-							tempore! Neque nobis perspiciatis cupiditate.
-						</p></span
-					>
-				</Cards>
-				<Cards>
-					<span slot="img1" class="eclipse"><Imgs background={eclipse} img={cube} /></span>
-					<span slot="title"><h3>hello</h3></span>
-					<span slot="text"
-						><p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
-							quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
-							tempore! Neque nobis perspiciatis cupiditate.
-						</p></span
-					>
-				</Cards>
+				</div>
+				<Button text="Join the community" />
 			</div>
 		</div>
-		<div />
-		<div class="links">
-			<Button text="Join the community" />
-			<div class="a-tag">
-				<GithubButton />
-				<a href="https://github.com/defenseunicorns" target="_blank">
-					Docs <img src={Star} alt="" loading="lazy" class="star" /> Star us on Github</a
-				>
-			</div>
-		</div>
-	</div>
-</section>
+	</section>
+{/if}
 
 <style>
+	.h1-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.glow {
+		position: absolute;
+		z-index: -1;
+	}
+
+	.h1-container h1 {
+		position: relative;
+		z-index: 1;
+		padding-bottom: 7rem;
+	}
+
 	h1 span {
 		color: #9acc5b;
 		text-shadow: 0 0 5px #9acc5b;
@@ -120,7 +149,7 @@
 	.text-div {
 		display: flex;
 		justify-content: center;
-		align-items: flex-end;
+		align-items: center;
 		gap: 1rem;
 	}
 
@@ -129,6 +158,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-direction: column;
 		gap: 2rem;
 	}
 
@@ -163,7 +193,9 @@
 	.right {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		gap: 2rem;
+		max-width: 45vw;
 	}
 
 	.left {
@@ -175,6 +207,7 @@
 
 	.leapfrog {
 		width: 300px;
+		height: 300px;
 	}
 
 	h3 {
@@ -200,6 +233,14 @@
 		.check-mark {
 			width: 25px;
 			height: 25px;
+		}
+
+		.card {
+			flex-direction: column;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			gap: 3rem;
 		}
 	}
 </style>

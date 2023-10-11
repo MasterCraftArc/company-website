@@ -3,10 +3,9 @@
 	import checkMark from '../../images/svg/check-mark.svg';
 	import Cards from './Cards.svelte';
 	import eclipse from '../../images/svg/eclipse.svg';
-	import Imgs from './imgs.svelte';
+	import Imgs from './img-orientation/imgs.svelte';
 	import CardGlow from '../Home/CardGlow.svelte';
-	import redGlow from '../../images/svg/red-glow.svg';
-	import blueGlow from '../../images/svg/blue-glow.svg';
+	import blueGlow from '../../images/svg/product-glows/lula-card-glow.svg';
 	import Button from '../Button.svelte';
 	import GithubButton from '../GithubButton.svelte';
 	import Star from '../../images/svg/star.svg';
@@ -15,90 +14,122 @@
 	import card1 from '../../images/svg/lula-card-imgs/card1.svg';
 	import card2 from '../../images/svg/lula-card-imgs/card2.svg';
 	import card3 from '../../images/svg/lula-card-imgs/card3.svg';
+	import lulaGlow from '../../images/svg/product-glows/lula-header-glow.svg';
+	import Imgs2 from './img-orientation/imgs2.svelte';
+	import Imgs3 from './img-orientation/imgs3.svelte';
+	import Imgs4 from './img-orientation/imgs4.svelte';
+	import MobileSection5 from './mobile/MobileSection5.svelte';
+	$: innerWidth = 0;
 </script>
 
-<section class="section3">
-	<div>
-		<h1><span>LeapfrogAI</span> - Generative AI for National Security</h1>
-		<LeftRight>
-			<div slot="left" class="left">
-				<img src={lula} alt="leapfrog" loading="lazy" class="leapfrog" />
-				<img src={lulaPlatform} alt="leapfrog" loading="lazy" class="leapfrog" />
+<svelte:window bind:innerWidth />
+{#if innerWidth < 1200}
+	<MobileSection5 />
+{:else}
+	<section class="section3">
+		<div>
+			<div class="h1-container">
+				<img src={lulaGlow} alt="header-glow" loading="lazy" class="glow" />
+				<h1><span>Lula</span> - Kubernetes Compliance Engine</h1>
 			</div>
-			<div slot="right" class="right">
-				<div class="text-div">
-					<img src={checkMark} alt="" loading="lazy" class="check-mark" />
-					<h3>Package and deploy to airgap systems</h3>
+			<LeftRight>
+				<div slot="left" class="left">
+					<img src={lula} alt="lula" loading="lazy" class="lula" />
+					<img src={lulaPlatform} alt="lula-platform" loading="lazy" class="lula-platform" />
 				</div>
-				<div class="text-div">
-					<img src={checkMark} alt="" loading="lazy" class="check-mark" />
-					<h3>Package and deploy to airgap systems</h3>
+				<div slot="right" class="right">
+					<div class="text-div">
+						<img src={checkMark} alt="" loading="lazy" class="check-mark" />
+						<h3>Turn your configuration into NIST control verification</h3>
+					</div>
+					<div class="text-div">
+						<img src={checkMark} alt="" loading="lazy" class="check-mark" />
+						<h3>Automate SCA and AO enforcement</h3>
+					</div>
+					<div class="text-div">
+						<img src={checkMark} alt="" loading="lazy" class="check-mark" />
+						<h3>Accelerate your ATO timelines</h3>
+					</div>
+					<div class="text-div">
+						<img src={checkMark} alt="" loading="lazy" class="check-mark" />
+						<h3>Turn compliance as spreadsheet into Compliance as code</h3>
+					</div>
 				</div>
-				<div class="text-div">
-					<img src={checkMark} alt="" loading="lazy" class="check-mark" />
-					<h3>Package and deploy to airgap systems</h3>
-				</div>
-				<div class="text-div">
-					<img src={checkMark} alt="" loading="lazy" class="check-mark" />
-					<h3>Package and deploy to airgap systems</h3>
+			</LeftRight>
+		</div>
+		<div>
+			<div class="h1-container">
+				<img src={lulaGlow} alt="header-glow" loading="lazy" class="glow" />
+				<h1>Use<span> Lula</span> for</h1>
+			</div>
+			<div class="cards">
+				<div class="card-glow"><CardGlow glowLeft={blueGlow} glowRight={blueGlow} /></div>
+				<div class="card">
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs3 background={eclipse} img={card1} /></span>
+						<span slot="title"><h3>generate controls from config</h3></span>
+						<span slot="text"
+							><p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
+								quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
+								tempore! Neque nobis perspiciatis cupiditate.
+							</p></span
+						>
+					</Cards>
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs2 background={eclipse} img={card2} /></span>
+						<span slot="title"><h3>Validate Controls in runtime</h3></span>
+						<span slot="text"
+							><p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
+								quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
+								tempore! Neque nobis perspiciatis cupiditate.
+							</p></span
+						>
+					</Cards>
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs4 background={eclipse} img={card3} /></span>
+						<span slot="title"><h3>Automate Your ATOs</h3></span>
+						<span slot="text"
+							><p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
+								quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
+								tempore! Neque nobis perspiciatis cupiditate.
+							</p></span
+						>
+					</Cards>
 				</div>
 			</div>
-		</LeftRight>
-	</div>
-	<div>
-		<h1 class="card-header">Use <span>Lula</span> for</h1>
-		<div class="cards">
-			<div class="card-glow"><CardGlow glowLeft={redGlow} glowRight={blueGlow} /></div>
-			<div class="card">
-				<Cards>
-					<span slot="img1" class="eclipse"><Imgs background={eclipse} img={card1} /></span>
-					<span slot="title"><h3>hello</h3></span>
-					<span slot="text"
-						><p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
-							quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
-							tempore! Neque nobis perspiciatis cupiditate.
-						</p></span
+			<div />
+			<div class="links">
+				<div class="a-tag">
+					<GithubButton />
+					<a href="https://github.com/defenseunicorns" target="_blank">
+						Docs <img src={Star} alt="" loading="lazy" class="star" /> Star us on Github</a
 					>
-				</Cards>
-				<Cards>
-					<span slot="img1" class="eclipse"><Imgs background={eclipse} img={card2} /></span>
-					<span slot="title"><h3>hello</h3></span>
-					<span slot="text"
-						><p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
-							quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
-							tempore! Neque nobis perspiciatis cupiditate.
-						</p></span
-					>
-				</Cards>
-				<Cards>
-					<span slot="img1" class="eclipse"><Imgs background={eclipse} img={card3} /></span>
-					<span slot="title"><h3>hello</h3></span>
-					<span slot="text"
-						><p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque quaerat,
-							quo, tempora ea quam autem placeat harum fuga quia nam enim, eligendi rem illum
-							tempore! Neque nobis perspiciatis cupiditate.
-						</p></span
-					>
-				</Cards>
+				</div>
+				<Button text="Join the community" />
 			</div>
 		</div>
-		<div />
-		<div class="links">
-			<Button text="Join the community" />
-			<div class="a-tag">
-				<GithubButton />
-				<a href="https://github.com/defenseunicorns" target="_blank">
-					Docs <img src={Star} alt="" loading="lazy" class="star" /> Star us on Github</a
-				>
-			</div>
-		</div>
-	</div>
-</section>
+	</section>
+{/if}
 
 <style>
+	.h1-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.glow {
+		position: absolute;
+		z-index: -1;
+	}
+
+	.h1-container h1 {
+		position: relative;
+		z-index: 1;
+	}
 	h1 span {
 		color: #61afb1;
 		text-shadow: 0 0 5px #61afb1;
@@ -122,7 +153,7 @@
 	.text-div {
 		display: flex;
 		justify-content: center;
-		align-items: flex-end;
+		align-items: center;
 		gap: 1rem;
 	}
 
@@ -131,6 +162,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-direction: column;
 		gap: 2rem;
 	}
 
@@ -165,6 +197,8 @@
 	.right {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
+		max-width: 45vw;
 		gap: 2rem;
 	}
 
@@ -175,8 +209,14 @@
 		flex-direction: column;
 	}
 
-	.leapfrog {
+	.lula {
+		width: 250px;
+		height: 250px;
+	}
+
+	.lula-platform {
 		width: 300px;
+		height: auto;
 	}
 
 	h3 {
@@ -202,6 +242,13 @@
 		.check-mark {
 			width: 25px;
 			height: 25px;
+		}
+		.card {
+			flex-direction: column;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			gap: 3rem;
 		}
 	}
 </style>

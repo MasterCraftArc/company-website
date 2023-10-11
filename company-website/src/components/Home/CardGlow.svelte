@@ -25,8 +25,8 @@
 	.yellow img,
 	.blue img {
 		max-width: 100%;
-		width: 900px;
-		height: auto;
+		width: 1200px;
+		height: 1200px;
 		max-height: 900px;
 	}
 

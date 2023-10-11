@@ -32,4 +32,10 @@
 		justify-content: center;
 		align-items: center;
 	}
+
+	@media (max-width: 1200px) {
+		.container {
+			flex-direction: column;
+		}
+	}
 </style>

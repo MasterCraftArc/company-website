@@ -39,7 +39,7 @@
 				<a href="/">Blogs</a>
 				<a href="/">Careers</a>
 				<a href="/">Terms of Service</a>
-				<a href="/">Privacy Policy</a>
+				<a href="/PrivacyPolicy">Privacy Policy</a>
 			</div>
 		</div>
 		<p>Defense Unicorns, Inc</p>
