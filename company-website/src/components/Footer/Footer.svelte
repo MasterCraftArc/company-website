@@ -32,13 +32,13 @@
 				<a href="/Contracts">Contracts</a>
 				<a href="/CaseStudies">Case Studies</a>
 				<a href="/UnicornAcademy">Unicorn Academy</a>
-				<a href="/">Contact</a>
+				<a href="/ContactUs">Contact</a>
 			</div>
 			<div class="section3">
 				<a href="/">Github</a>
 				<a href="/">Blogs</a>
 				<a href="/">Careers</a>
-				<a href="/">Terms of Service</a>
+				<a href="/TermsOfService">Terms of Service</a>
 				<a href="/PrivacyPolicy">Privacy Policy</a>
 			</div>
 		</div>

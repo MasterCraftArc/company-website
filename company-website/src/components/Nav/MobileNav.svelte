@@ -1,5 +1,5 @@
 <script>
-	import defenseUnicornsLogo from '../../images/svg/defense-unicorns-logo.svg';
+	import defenseUnicornsLogo from '../../images/svg/doug.svg';
 	import hamburger from '../../images/svg/hamburger.svg';
 
 	let isMenuOpen = false;
@@ -34,11 +34,13 @@
 		<div class="overlay" />
 		<div class="menu">
 			<div class="links">
-				<a href="/">Products</a>
+				<a href="/">Home</a>
 				<a href="/Projects">Projects</a>
 				<a href="/Contracts">Contracts</a>
 				<a href="/CaseStudies">Case Studies</a>
+				<a href="/SoftwareFactory">SoftwareFactory</a>
 				<a href="/UnicornAcademy">Unicorn Academy</a>
+				<a href="/AiForNationalSecurity">AI For National Security</a>
 			</div>
 		</div>
 	{/if}
@@ -84,8 +86,7 @@
 	}
 
 	.logo {
-		width: 173px;
-		height: 37px;
+		width: 50px;
 	}
 
 	.hamburger {

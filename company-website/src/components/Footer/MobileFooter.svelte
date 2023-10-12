@@ -13,15 +13,15 @@
 		</div>
 		<div class="mobile-section1">
 			<a href="/">Products</a>
-			<a href="/">Projects</a>
-			<a href="/">Contracts</a>
-			<a href="/">Case Studies</a>
-			<a href="/">Unicorns Academy</a>
-			<a href="/">Contact</a>
-			<a href="/">Github</a>
+			<a href="/Projects">Projects</a>
+			<a href="/Contracts">Contracts</a>
+			<a href="/CaseStudies">Case Studies</a>
+			<a href="/UnicornAcademy">Unicorns Academy</a>
+			<a href="/ContactUs">Contact</a>
+			<a target="_blank" href="https://github.com/defenseunicorns">Github</a>
 			<a href="/">Blogs</a>
 			<a href="/">Careers</a>
-			<a href="/">Terms of Service</a>
+			<a href="/TermsOfService">Terms of Service</a>
 			<a href="/PrivacyPolicy">Privacy Policy</a>
 		</div>
 		<div class="section3">

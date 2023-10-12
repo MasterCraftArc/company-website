@@ -1,8 +1,8 @@
 <script>
-	import defenseUnicornsLogo from '../../images/svg/defense-unicorns-logo.svg';
+	import defenseUnicornsLogo from '../../images/svg/doug.svg';
 	import Button from '../Button.svelte';
 	import Mobile from './MobileNav.svelte';
-
+	import Dropdown from './Dropdown.svelte';
 	$: innerWidth = 0;
 </script>
 
@@ -13,51 +13,49 @@
 	<nav>
 		<img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" />
 		<div class="links">
-			<a href="/">Products</a>
+			<Dropdown />
 			<a href="/Projects">Projects</a>
 			<a href="/Contracts">Contracts</a>
 			<a href="/CaseStudies">Case Studies</a>
 			<a href="/UnicornAcademy">Unicorn Academy</a>
-			<Button link="/" text="Request Demo" />
 		</div>
+		<Button link="/ContactUs" text="Request Demo" />
 	</nav>
 {/if}
 
 <style>
 	nav {
-		overflow: hidden;
 		margin: 0 auto;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 		width: 100%;
-		height: 4rem;
+		height: 5rem;
 		z-index: 1;
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 	}
 
 	.links {
-		width: 75%;
 		display: flex;
-		justify-content: flex-end;
-		padding-right: 0.75rem;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.logo {
-		padding-left: 2rem;
-		height: 72.29px;
-		width: 338px;
+		width: 60px;
 	}
 
 	a {
+		padding: 0 1rem;
 		text-decoration: none;
 		cursor: pointer;
 		position: relative;
 		display: flex;
 		align-items: center;
-		padding: 1rem 1.5rem;
 		color: white;
+		font-size: 24px;
+		white-space: nowrap;
 	}
 
 	a:hover {

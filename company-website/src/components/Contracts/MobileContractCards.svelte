@@ -1,54 +1,20 @@
 <script>
-	import CardGlow from '../Home/CardGlow.svelte';
-	import zarfGlow from '../../images/svg/product-glows/zarf-header-glow.svg';
-	import zarfCardGlow from '../../images/svg/product-glows/zarf-card-glow.svg';
 </script>
 
 <section>
-	<div class="foreground">
-		<div class="h1-container">
-			<img src={zarfGlow} alt="header-glow" loading="lazy" class="head" />
-
-			<h1><slot name="header" /></h1>
-		</div>
-	</div>
+	<h1><slot name="header" /></h1>
 	<div class="container">
 		<div class="left"><slot name="left" /></div>
 		<div class="right"><slot name="right" /></div>
 	</div>
 	<slot name="button" />
-	<div class="card-glow"><CardGlow glowLeft={zarfCardGlow} glowRight={zarfCardGlow} /></div>
 </section>
 
 <style>
-	.card-glow {
-		margin-top: -50rem;
-		z-index: -1;
-	}
-
-	section {
-		padding-top: 0rem;
-		padding-bottom: 0rem;
-	}
-
-	.foreground {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
 	.left,
 	.right {
 		background-color: black;
 		padding: 2rem;
-	}
-
-	.head {
-		margin-bottom: -15rem;
-		z-index: -1;
-		width: 100%;
-		height: auto;
 	}
 
 	.container {
@@ -60,6 +26,7 @@
 
 	section {
 		gap: 5rem;
+		padding-top: 2rem;
 	}
 
 	.left {
@@ -90,6 +57,13 @@
 		.left,
 		.right {
 			width: 350px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.left,
+		.right {
+			width: 300px;
 		}
 	}
 </style>

@@ -5,7 +5,11 @@ html {
 }
 
 body {
-	font-family: 'Roboto', 'Monsterrat';
+	font-family: 'Monsterrat';
+}
+
+button {
+	font-family: 'Monsterrat';
 }
 
 h1,
