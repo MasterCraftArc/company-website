@@ -1,17 +1,17 @@
 <script>
 	import LeftRight from '../LeftRight.svelte';
-	import leapfrog from '../../images/svg/leapfrog.svg';
+	import ai from '../../images/svg//ai-for-national-security/ai-for-national-security.svg';
 	import Button from '../../components/Button.svelte';
 	import CardGlow from '../Home/CardGlow.svelte';
-	import leapfrogGlow from '../../images/svg/product-glows/leapfrog-card-glow.svg';
-	import leapfrogheader from '../../images/svg/product-glows/leapfrog-header-glow.svg';
+	import headerGlow from '../../images/svg/product-glows/zarf-header-glow.svg'
+	import blueGlow from '../../images/svg/product-glows/zarf-card-glow.svg'
 </script>
 
 <section>
 	<div>
 		<div class="foreground">
 			<div class="h1-container">
-				<img src={leapfrogheader} alt="header-glow" loading="lazy" class="glow" />
+				<img src={headerGlow} alt="header-glow" loading="lazy" class="glow" />
 				<h1>Defense Unicorns Has A Number of</h1>
 				<h1><span>Sole Source Options</span> Available</h1>
 			</div>
@@ -19,7 +19,7 @@
 	</div>
 	<LeftRight>
 		<div slot="left">
-			<img src={leapfrog} alt="" />
+			<img src={ai} alt="" />
 		</div>
 		<div slot="right">
 			<div class="right">
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 	</LeftRight>
-	<div class="card-glow"><CardGlow glowLeft={leapfrogGlow} glowRight={leapfrogGlow} /></div>
+	<div class="card-glow"><CardGlow glowLeft={blueGlow} glowRight={blueGlow} /></div>
 </section>
 
 <style>
@@ -46,13 +46,9 @@
 		position: absolute;
 		top: -10rem;
 		left: -20rem;
-		z-index: -1; /* Set a negative z-index value */
+		z-index: -1;
 	}
 
-	h1 span {
-		color: #9acc5b;
-		text-shadow: 0 0 5px #9acc5b;
-	}
 	.card-glow {
 		position: absolute;
 		top: 0;

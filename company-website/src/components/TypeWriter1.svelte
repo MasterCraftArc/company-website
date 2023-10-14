@@ -1,16 +1,49 @@
 <script>
 	import Typewriter from 'svelte-typewriter';
 
-	// Exported variables
 	export let headings = [''];
 	export let glowHeader = '';
 
-	// Typewriter properties
-	let typewriterProps = {
-		mode: 'loopOnce',
-		interval: 200,
-		cursor: true
-	};
+    let typewriterProps = {
+        mode: 'scramble',
+        interval: 200,
+        scrambleDuration: 3000,
+        scrambleSlowdown: true,
+    }
+
+    let isVisible = false;
+
+    let observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    isVisible = true;
+                    observer.disconnect();
+                }
+            });
+        },
+        {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
+        }
+    );
+
+    let target;
+
+    function startObserver() {
+        target = document.querySelector('.container');
+        if (target) {
+            observer.observe(target);
+        }
+    }
+
+    $: {
+        if (!isVisible) {
+            startObserver();
+        }
+    }
+
 </script>
 
 <Typewriter {...typewriterProps}>

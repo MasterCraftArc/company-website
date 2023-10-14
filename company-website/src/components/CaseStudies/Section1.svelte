@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<div class="img-holder">
-			<img src={mobileBadges} alt="" />
+			<img src={mobileBadges} alt="mobile-badges" loading="lazy"/>
 		</div>
 	</section>
 {:else}
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<div class="img-holder">
-			<img src={badges} alt="" />
+			<img src={badges} alt="badges" loading="lazy"/>
 		</div>
 	</section>
 {/if}

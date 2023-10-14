@@ -16,7 +16,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 5rem;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.left,
