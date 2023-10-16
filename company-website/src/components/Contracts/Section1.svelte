@@ -2,7 +2,7 @@
 	import gsa from '../../images/svg/contract-imgs/gsa.svg';
 	import sbsir from '../../images/svg/contract-imgs/sbir.svg';
 	import sdvosb from '../../images/svg/contract-imgs/sdvosb.svg';
-	import headerGlow from '../../images/svg/product-glows/header-glow.svg';
+	import headerGlow from '../../images/svg/product-glows/zarf-header-glow.svg';
 </script>
 
 <section>

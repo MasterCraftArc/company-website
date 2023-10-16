@@ -24,7 +24,10 @@
 <svelte:document on:click={closeMenu} />
 <nav>
 	<div class="container">
-		<img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" />
+		<a href="/" class="logo">
+			<img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" /></a>
+
+
 		<button on:click|stopPropagation={handleButtonClick} class="icon-button">
 			<img src={hamburger} alt="hamburger" class="hamburger" loading="lazy" />
 		</button>
@@ -34,19 +37,26 @@
 		<div class="overlay" />
 		<div class="menu">
 			<div class="links">
-				<a href="/">Home</a>
-				<a href="/Projects">Projects</a>
-				<a href="/Contracts">Contracts</a>
-				<a href="/CaseStudies">Case Studies</a>
-				<a href="/SoftwareFactory">SoftwareFactory</a>
-				<a href="/UnicornAcademy">Unicorn Academy</a>
-				<a href="/AiForNationalSecurity">AI For National Security</a>
+				<a class="link" href="/Projects">Projects</a>
+				<a class="link" href="/Contracts">Contracts</a>
+				<a class="link" href="/CaseStudies">Case Studies</a>
+				<a class="link" href="/SoftwareFactory">SoftwareFactory</a>
+				<a class="link" href="/UnicornAcademy">Unicorn Academy</a>
+				<a class="link" href="/AiForNationalSecurity">AI For National Security</a>
 			</div>
 		</div>
 	{/if}
 </nav>
 
 <style>
+		.logo:hover{
+		width: 65px;
+	}
+
+	.logo {
+		width: 60px;
+		transition: all 0.3s ease-in-out;
+	}
 	.overlay {
 		display: block;
 		position: fixed;
@@ -98,7 +108,7 @@
 		cursor: pointer;
 	}
 
-	a {
+	.link {
 		text-decoration: none;
 		cursor: pointer;
 		position: relative;
@@ -108,12 +118,12 @@
 		color: white;
 	}
 
-	a:hover {
+	.link:hover {
 		text-decoration: none;
 		color: #ffd700;
 	}
 
-	a::before {
+	.link::before {
 		content: '';
 		position: absolute;
 		width: 100%;
@@ -126,7 +136,7 @@
 		transition: all 0.3s ease-in-out;
 	}
 
-	a:hover::before {
+	.link:hover::before {
 		visibility: visible;
 		transform: scaleX(1);
 	}

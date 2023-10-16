@@ -22,7 +22,6 @@
 >
 	<button aria-expanded={isOpen}>Products</button>
 	<div class="dropdown-content" role="menu">
-		<a href="/" role="menuitem">Home</a>
 		<a href="/SoftwareFactory" role="menuitem">Software Factory</a>
 		<a href="/AiForNationalSecurity" role="menuitem">AI For National Security</a>
 	</div>

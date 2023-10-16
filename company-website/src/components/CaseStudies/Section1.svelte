@@ -1,6 +1,7 @@
 <script>
 	import badges from '../../images/svg/company-badges.svg';
 	import mobileBadges from '../../images/svg/mobile-badges.svg';
+	import headerGlow from '../../images/svg/product-glows/zarf-header-glow.svg';
 	$: innerWidth = 0;
 </script>
 
@@ -24,6 +25,7 @@
 		<div>
 			<div class="foreground">
 				<div class="h1-container">
+					<img src={headerGlow} alt="header-glow" loading="lazy" class="glow" />
 					<h1>Defense Unicorns Is Trusted By the Most</h1>
 					<h1><span>Critical Systems</span> in the World</h1>
 				</div>
@@ -36,8 +38,21 @@
 {/if}
 
 <style>
+
+.glow {
+		position: absolute;
+		top: -15rem;
+		left: -30rem;
+		z-index: -1;
+		width: 200%;
+		height: auto;
+	}
 	img {
 		width: 100%;
+	}
+	.h1-container {
+		position: relative;
+		display: inline-block;
 	}
 
 	section {

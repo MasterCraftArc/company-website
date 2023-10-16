@@ -2,7 +2,8 @@
 	import server from '../../images/svg/server.svg';
 	import CardGlow from './CardGlow.svelte';
 	import glow from '../../images/svg/section-3-glow.svg';
-
+	import yellowGlow from '../../images/svg/yellow-glow.svg'
+	import blueGlow from '../../images/svg/blue-glow.svg'
 	$: innerWidth = 0;
 </script>
 
@@ -22,7 +23,7 @@
 	</section>
 {:else}
 	<section>
-		<div class="card-glow"><CardGlow /></div>
+		<div class="card-glow"><CardGlow glowLeft={yellowGlow} glowRight={blueGlow}/></div>
 		<div class="container">
 			<div class="h1-container">
 				<img src={glow} alt="" loading="lazy" class="header" />

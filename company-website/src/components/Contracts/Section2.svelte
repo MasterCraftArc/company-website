@@ -45,6 +45,10 @@
 		line-height: normal;
 	}
 
+	section{
+		padding-bottom: 0;
+	}
+
 	.img {
 		width: 100%;
 	}

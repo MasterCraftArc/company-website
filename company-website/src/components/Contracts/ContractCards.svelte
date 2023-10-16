@@ -1,5 +1,6 @@
 <script>
 	import CardGlow from '../Home/CardGlow.svelte';
+
 	import zarfGlow from '../../images/svg/product-glows/zarf-header-glow.svg';
 	import zarfCardGlow from '../../images/svg/product-glows/zarf-card-glow.svg';
 </script>
@@ -21,6 +22,12 @@
 </section>
 
 <style>
+	.h1-container{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.card-glow {
 		margin-top: -50rem;
 		z-index: -1;
@@ -45,9 +52,10 @@
 	}
 
 	.head {
-		margin-bottom: -15rem;
+		position: absolute;
+
 		z-index: -1;
-		width: 100%;
+		width: 2000px;
 		height: auto;
 	}
 

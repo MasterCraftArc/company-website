@@ -38,7 +38,7 @@
 			>
 		</p>
 		<Button link="/" text="Learn More" />
-		<img src={badges} alt="badges" loading="lazy" />
+		<img src={badges} alt="badges" loading="lazy" class="badges"/>
 	</section>
 {/if}
 
@@ -51,16 +51,21 @@
 
 	.section {
 		gap: 2rem;
+		padding-bottom: 0rem;
 		position: relative;
 	}
 	img {
 		width: 100%;
+		margin-top: -6rem;
+		z-index: -1;
+	}
+	.badges{
+		width: 100%;
+		padding-top: 5rem;
+		margin: 0;
 	}
 
-	img {
-		width: 800px;
-		height: 300px;
-	}
+
 
 	.glow {
 		width: 100%;

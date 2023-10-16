@@ -2,6 +2,7 @@
     import LeftRight from "../LeftRight.svelte";
     import Cards from "../Projects/Cards.svelte";
     import Button from "../Button.svelte";
+    import office from "../../images/svg/software-factory/office.svg"
     import leapFrog from '../../images/svg/leapfrog.svg'
     import eclipse from '../../images/svg/eclipse.svg';
     import Imgs from "../Projects/img-orientation/imgs.svelte";
@@ -41,14 +42,14 @@
             </div>
             <div slot="right" class="right">
                 <div class="img-holder">
-                    <img src="{leapFrog}" alt="leapfrog" loading="lazy">
+                    <img src="{office}" alt="office" loading="lazy">
                 </div>
             </div>
         </LeftRight>
     </div>
     <div>
         <div class="h1-container">
-            <h1 class="header">Use <span>Zarf</span> To</h1>
+            <h1 class="header">Use <span>Software Factory</span> for</h1>
         </div>
             <div class="cards">
                 <Cards>
@@ -142,7 +143,7 @@
         }
 
         img{
-            width: 300px;
+            width: 500px;
         }
         .img-holder{
             display: flex;

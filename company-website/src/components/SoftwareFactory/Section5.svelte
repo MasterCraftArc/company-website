@@ -85,7 +85,7 @@ p {
 }
 
 .h1-container {
-    background-color: #9ACC5B;
+    background-color: #a5bdfc;
     width: 100%;
     height: 200px;
     display: flex;

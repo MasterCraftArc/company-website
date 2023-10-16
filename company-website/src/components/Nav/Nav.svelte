@@ -11,19 +11,31 @@
 	<Mobile />
 {:else}
 	<nav>
-		<img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" />
+		<a href="/" class="logo">
+		<img class="logo" src={defenseUnicornsLogo} alt="logo" loading="lazy" /></a>
+
 		<div class="links">
 			<Dropdown />
-			<a href="/Projects">Projects</a>
-			<a href="/Contracts">Contracts</a>
-			<a href="/CaseStudies">Case Studies</a>
-			<a href="/UnicornAcademy">Unicorn Academy</a>
+			<a class="link" href="/Projects">Open Source</a>
+			<a class="link" href="/Contracts">Contracts</a>
+			<a class="link" href="/CaseStudies">Case Studies</a>
+			<a class="link" href="/UnicornAcademy">Unicorn Academy</a>
 		</div>
 		<Button link="/ContactUs" text="Request Demo" />
 	</nav>
 {/if}
 
 <style>
+	.logo:hover{
+		width: 65px;
+	}
+
+	.logo {
+		width: 60px;
+		transition: all 0.3s ease-in-out;
+	}
+
+
 	nav {
 		margin: 0 auto;
 		display: flex;
@@ -38,32 +50,28 @@
 
 	.links {
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		padding-left: 8rem;
 	}
 
-	.logo {
-		width: 60px;
-	}
 
-	a {
-		padding: 0 1rem;
+	.link {
+		padding: 0 .5rem;
 		text-decoration: none;
 		cursor: pointer;
 		position: relative;
 		display: flex;
 		align-items: center;
 		color: white;
-		font-size: 24px;
+		font-size: 22px;
 		white-space: nowrap;
 	}
 
-	a:hover {
+	.link:hover {
 		text-decoration: none;
 		color: #ffd700;
 	}
 
-	a::before {
+	.link::before {
 		content: '';
 		position: absolute;
 		width: 100%;
@@ -76,7 +84,7 @@
 		transition: all 0.3s ease-in-out;
 	}
 
-	a:hover::before {
+	.link:hover::before {
 		visibility: visible;
 		transform: scaleX(1);
 	}

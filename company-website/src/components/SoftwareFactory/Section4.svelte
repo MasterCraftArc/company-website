@@ -2,17 +2,17 @@
     import LeftRight from "../LeftRight.svelte";
     import pepr from '../../images/svg/pepr.svg'
     import peprPlatform from '../../images/svg/pepr-platform.svg'
+    import api from '../../images/svg/software-factory/api.svg'
     import Button from "../Button.svelte";
     </script>
 
     <section>
-        <h1>Software Factory For National Security</h1>
+        <h1>Software Factory <span>Use Cases</span></h1>
         <div class="container">
             <LeftRight>
                 <div slot="left" class="left">
                     <div class="img-holder">
-                    <img src="{pepr}" alt="zarf" loading="lazy">
-                    <img src="{peprPlatform}" alt="zarf-platform" loading="lazy">
+                    <img src="{api}" alt="api" loading="lazy">
                 </div>
                 </div>
                 <div slot="right" class="right">
@@ -48,7 +48,7 @@
     }
 
     img{
-        width: 200px;
+        width: 100%;
     }
     .img-holder{
         display: flex;

@@ -1,21 +1,24 @@
 <script>
 	import Section5Text from './Section4TextBox.svelte';
 	import Hero from '../../images/png/Hero.png';
-	import blueGlow from '../../images/svg/blue-glow.svg';
 	import Section5Cards from './ImgCards.svelte';
 	import doug from '../../images/svg/doug.svg';
-	let currentImage = Hero;
+	import AI from '../../images/svg/ai-for-national-security/ai-for-national-security.svg'
+	import security from '../../images/svg/software-factory/secure.svg'
+	import office from '../../images/svg/software-factory/office.svg'
+	import api from '../../images/svg/software-factory/api.svg'
+	let currentImage = security;
 
 	function handleSectionClick(event) {
 		const targetId = event.detail.id;
 		if (targetId === 'image1') {
-			currentImage = blueGlow;
+			currentImage = security;
 		} else if (targetId === 'image2') {
-			currentImage = Hero;
+			currentImage = AI;
 		} else if (targetId === 'image3') {
-			currentImage = doug;
+			currentImage = office;
 		} else if (targetId === 'image4') {
-			currentImage = Hero;
+			currentImage = api;
 		}
 	}
 
@@ -35,17 +38,17 @@
 			img={Hero}
 		/>
 		<Section5Cards
-			title="Software Factory"
+			title="AI For National Security"
 			text="As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
 			img={Hero}
 		/>
 		<Section5Cards
-			title="Software Factory"
+			title="Your Mission App, Your Environment"
 			text="As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
 			img={Hero}
 		/>
 		<Section5Cards
-			title="Software Factory"
+			title="Discovery & Framing"
 			text="As an extension of your business, have confidence that your clients receive the highest level of quality and simplicity construction management app."
 			img={Hero}
 		/>
@@ -58,25 +61,25 @@
 				<Section5Text
 					on:hover={handleSectionClick}
 					id="image1"
-					title="hello my friend"
+					title="Software Factory"
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
 				/>
 				<Section5Text
 					on:hover={handleSectionClick}
 					id="image2"
-					title="hello my friend"
+					title="AI For National Security"
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
 				/>
 				<Section5Text
 					on:hover={handleSectionClick}
 					id="image3"
-					title="hello my friend"
+					title="Your Mission App, Your Environment"
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
 				/>
 				<Section5Text
 					on:hover={handleSectionClick}
 					id="image4"
-					title="hello my friend"
+					title="Discovery & Framing"
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quo sapiente atque repellat a tempora incidunt dolorum eum officiis iusto nemo optio neque maiores nobis, maxime laboriosam fugiat? Voluptatem, autem."
 				/>
 			</div>
@@ -99,6 +102,7 @@
 
 	section {
 		gap: 2rem;
+		padding-bottom: 0rem;
 	}
 
 	.container {
@@ -119,7 +123,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		max-height: 744px;
 		position: relative;
 		overflow: hidden;
 	}

@@ -14,13 +14,13 @@
 		check2="please do that"
 	/>
 	<Card
-		title="Rapid ATO"
+		title="Deploy Anywhere"
 		text="It all starts with a free 30 minute conversation to save your life and use our software so please do that."
 		check1="ya buy our software"
 		check2="please do that"
 	/>
 	<Card
-		title="Rapid ATO"
+		title="No Vendor Lock In"
 		text="It all starts with a free 30 minute conversation to save your life and use our software so please do that."
 		check1="ya buy our software"
 		check2="please do that"
@@ -34,6 +34,7 @@
 		align-items: center;
 		flex-direction: row;
 		position: relative;
+		padding-bottom: 0rem;
 	}
 
 	.card-glow {

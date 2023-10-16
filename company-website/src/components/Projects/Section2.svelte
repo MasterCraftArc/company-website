@@ -10,7 +10,6 @@
 	import CardGlow from '../Home/CardGlow.svelte';
 	import zarfGlow from '../../images/svg/product-glows/zarf-card-glow.svg';
 	import Button from '../Button.svelte';
-	import GithubButton from '../GithubButton.svelte';
 	import Star from '../../images/svg/star.svg';
 	import chip from '../../images/svg/zarf-card-imgs/chip.svg';
 	import server from '../../images/svg/zarf-card-imgs/server.svg';
@@ -97,9 +96,9 @@
 			</div>
 			<div class="links">
 				<div class="a-tag">
-					<GithubButton />
-					<a href="https://github.com/defenseunicorns" target="_blank">
-						Docs <img src={Star} alt="" loading="lazy" class="star" /> Star us on Github</a
+
+					<a href="https://github.com/defenseunicorns/zarf" target="_blank">
+						Docs <img src={Star} alt="star" loading="lazy" class="star" /> Star us on Github</a
 					>
 				</div>
 				<Button text="Join the community" />
@@ -109,6 +108,11 @@
 {/if}
 
 <style>
+
+h3{
+	text-align: left;
+}
+
 	.h1-container {
 		display: flex;
 		justify-content: center;
@@ -165,7 +169,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0.2rem;
+		padding: 1rem;
 	}
 
 	.a-tag:hover {

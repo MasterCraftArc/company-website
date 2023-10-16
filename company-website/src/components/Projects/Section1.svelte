@@ -67,9 +67,8 @@
 
 	section {
 		padding: 5rem 0;
-
-		gap: 10rem;
-		padding-bottom: 1rem;
+		gap: 5rem;
+		padding-bottom: 0;
 	}
 
 	.foreground {

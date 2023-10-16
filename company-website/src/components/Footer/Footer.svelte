@@ -18,7 +18,8 @@
 		<img src={map} alt="" class="map" />
 		<div class="section-container">
 			<div class="section1">
-				<img src={doug} alt="doug" loading="lazy" class="doug" />
+				<a href="/" class="logo">
+					<img class="logo" src={doug} alt="logo" loading="lazy" /></a>
 				<div class="icons">
 					<GithubButton />
 					<LinkedinButton />
@@ -27,19 +28,19 @@
 				</div>
 			</div>
 			<div class="section2">
-				<a href="/">Products</a>
-				<a href="/Projects">Projects</a>
-				<a href="/Contracts">Contracts</a>
-				<a href="/CaseStudies">Case Studies</a>
-				<a href="/UnicornAcademy">Unicorn Academy</a>
-				<a href="/ContactUs">Contact</a>
+				<a class="link" href="/">Products</a>
+				<a class="link" href="/Projects">Projects</a>
+				<a class="link" href="/Contracts">Contracts</a>
+				<a class="link" href="/CaseStudies">Case Studies</a>
+				<a class="link" href="/UnicornAcademy">Unicorn Academy</a>
+				<a class="link" href="/ContactUs">Contact</a>
 			</div>
 			<div class="section3">
-				<a href="/">Github</a>
-				<a href="/">Blogs</a>
-				<a href="/">Careers</a>
-				<a href="/TermsOfService">Terms of Service</a>
-				<a href="/PrivacyPolicy">Privacy Policy</a>
+				<a class="link" href="/">Github</a>
+				<a class="link" href="/">Blogs</a>
+				<a class="link" href="/Careers">Careers</a>
+				<a class="link" href="/TermsOfService">Terms of Service</a>
+				<a class="link" href="/PrivacyPolicy">Privacy Policy</a>
 			</div>
 		</div>
 		<p>Defense Unicorns, Inc</p>
@@ -48,6 +49,16 @@
 {/if}
 
 <style>
+	.logo:hover{
+		width: 120px;
+	}
+
+	.logo {
+		width: 110px;
+		transition: all 0.3s ease-in-out;
+	}
+
+
 	.section-container {
 		position: relative;
 	}
@@ -92,11 +103,12 @@
 	.section1 {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		gap: 2rem;
 		width: 296px;
 	}
 
-	a {
+	.link {
 		text-decoration: none;
 		cursor: pointer;
 		position: relative;
@@ -106,7 +118,7 @@
 		color: white;
 	}
 
-	a:hover {
+	.link:hover {
 		color: #ffd700;
 	}
 

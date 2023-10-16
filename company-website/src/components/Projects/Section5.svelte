@@ -60,7 +60,7 @@
 		<div>
 			<div class="h1-container">
 				<img src={lulaGlow} alt="header-glow" loading="lazy" class="glow" />
-				<h1>Use<span> Lula</span> for</h1>
+				<h1>Use <span> Lula</span> for</h1>
 			</div>
 			<div class="cards">
 				<div class="card-glow"><CardGlow glowLeft={blueGlow} glowRight={blueGlow} /></div>
@@ -103,8 +103,7 @@
 			<div />
 			<div class="links">
 				<div class="a-tag">
-					<GithubButton />
-					<a href="https://github.com/defenseunicorns" target="_blank">
+					<a href="https://github.com/defenseunicorns/lula" target="_blank">
 						Docs <img src={Star} alt="" loading="lazy" class="star" /> Star us on Github</a
 					>
 				</div>
@@ -115,6 +114,11 @@
 {/if}
 
 <style>
+
+
+h3{
+	text-align: left;
+}
 	.h1-container {
 		display: flex;
 		justify-content: center;
@@ -179,8 +183,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0.2rem;
+		padding: 1rem;
 	}
+
 
 	.a-tag:hover {
 		border-radius: 25px;

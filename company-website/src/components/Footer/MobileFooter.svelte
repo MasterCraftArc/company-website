@@ -20,7 +20,7 @@
 			<a href="/ContactUs">Contact</a>
 			<a target="_blank" href="https://github.com/defenseunicorns">Github</a>
 			<a href="/">Blogs</a>
-			<a href="/">Careers</a>
+			<a href="/Careers">Careers</a>
 			<a href="/TermsOfService">Terms of Service</a>
 			<a href="/PrivacyPolicy">Privacy Policy</a>
 		</div>

@@ -1,18 +1,17 @@
 <script>
 import LeftRight from "../LeftRight.svelte";
-import zarf from '../../images/svg/zarf.svg'
-import zarfPlatform from '../../images/svg/zarf-platform.svg'
+import secure from  '../../images/svg/software-factory/secure.svg'
+
 import Button from "../Button.svelte";
 </script>
 
 <section>
-    <h1>Software Factory For National Security</h1>
+    <h1> <span>Software Factory</span> For National Security</h1>
     <div class="container">
         <LeftRight>
             <div slot="left" class="left">
                 <div class="img-holder">
-                <img src="{zarf}" alt="zarf" loading="lazy">
-                <img src="{zarfPlatform}" alt="zarf-platform" loading="lazy">
+                <img src="{secure}" alt="secure" loading="lazy">
             </div>
             </div>
             <div slot="right" class="right">
@@ -48,7 +47,7 @@ import Button from "../Button.svelte";
     }
 
     img{
-        width: 200px;
+        width: 100%;
     }
     .img-holder{
         display: flex;

@@ -20,7 +20,7 @@
 	</MobileContractCards>
 {:else}
 	<ContractCards>
-		<h1 slot="header">DoD Wide <span>GSA</span> IDIQ</h1>
+		<h1 slot="header">Defense Unicorns is a <span>SDVOSB</span></h1>
 		<div slot="left">
 			<img src={SDVOSB} alt="SDVOSB" loading="lazy" class="SDVOSB" />
 		</div>

@@ -57,7 +57,8 @@
 	}
 
 	section {
-		padding: 5rem 0;
+		padding-top: 5rem;
+		padding-bottom: 0rem;
 		background-image: url('../../images/png/Hero.png');
 		background-size: cover;
 		background-repeat: no-repeat;

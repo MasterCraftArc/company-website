@@ -56,7 +56,7 @@
 	}
 
 	.card {
-		padding: 1.5rem;
+		padding:3rem 1.5rem;
 		height: 300px;
 		width: 300px;
 		background-color: black;
